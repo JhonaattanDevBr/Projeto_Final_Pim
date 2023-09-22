@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5DFCBBF-67CE-4B4B-B2EB-590733AD25E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InterfacesDoSistemaDesktop</RootNamespace>
+    <AssemblyName>InterfacesDoSistemaDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Intercafes_Folha\Form_AdiantamentoQuinzenal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_AdiantamentoQuinzenal.Designer.cs">
+      <DependentUpon>Form_AdiantamentoQuinzenal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_AdicionalNotruno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_AdicionalNotruno.Designer.cs">
+      <DependentUpon>Form_AdicionalNotruno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Atrasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Atrasos.Designer.cs">
+      <DependentUpon>Form_Atrasos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Acesso\Form_Acesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Acesso\Form_Acesso.Designer.cs">
+      <DependentUpon>Form_Acesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Acesso\Form_Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Acesso\Form_Ajuda.Designer.cs">
+      <DependentUpon>Form_Ajuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_CalculosFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_CalculosFerias.Designer.cs">
+      <DependentUpon>Form_CalculosFerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ConvenioMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ConvenioMedico.Designer.cs">
+      <DependentUpon>Form_ConvenioMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ConvenioOdontologico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ConvenioOdontologico.Designer.cs">
+      <DependentUpon>Form_ConvenioOdontologico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Decimo\Form_DecimoTerceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Decimo\Form_DecimoTerceiro.Designer.cs">
+      <DependentUpon>Form_DecimoTerceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Dependentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Dependentes.Designer.cs">
+      <DependentUpon>Form_Dependentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_FaltasInjustificadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_FaltasInjustificadas.Designer.cs">
+      <DependentUpon>Form_FaltasInjustificadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Fgts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Fgts.Designer.cs">
+      <DependentUpon>Form_Fgts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_HorasExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_HorasExtras.Designer.cs">
+      <DependentUpon>Form_HorasExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Inss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Inss.Designer.cs">
+      <DependentUpon>Form_Inss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_AtrasosFaltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_AtrasosFaltas.Designer.cs">
+      <DependentUpon>Form_AtrasosFaltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Irrf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Irrf.Designer.cs">
+      <DependentUpon>Form_Irrf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Pensao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Pensao.Designer.cs">
+      <DependentUpon>Form_Pensao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Periculosidade_Insalubridade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_Periculosidade_Insalubridade.Designer.cs">
+      <DependentUpon>Form_Periculosidade_Insalubridade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_PeriodoCompleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_PeriodoCompleto.Designer.cs">
+      <DependentUpon>Form_PeriodoCompleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_DoisPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_DoisPeriodos.Designer.cs">
+      <DependentUpon>Form_DoisPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ValeAlimentacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ValeAlimentacao.Designer.cs">
+      <DependentUpon>Form_ValeAlimentacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ValeTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_ValeTransporte.Designer.cs">
+      <DependentUpon>Form_ValeTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_AgendarFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_AgendarFerias.Designer.cs">
+      <DependentUpon>Form_AgendarFerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Acesso\Form_AreaRestrita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Acesso\Form_AreaRestrita.Designer.cs">
+      <DependentUpon>Form_AreaRestrita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Intercafes_Folha\Form_AdiantamentoQuinzenal.resx">
+      <DependentUpon>Form_AdiantamentoQuinzenal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_AdicionalNotruno.resx">
+      <DependentUpon>Form_AdicionalNotruno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Atrasos.resx">
+      <DependentUpon>Form_Atrasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_CalculosFerias.resx">
+      <DependentUpon>Form_CalculosFerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_ConvenioMedico.resx">
+      <DependentUpon>Form_ConvenioMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_ConvenioOdontologico.resx">
+      <DependentUpon>Form_ConvenioOdontologico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Decimo\Form_DecimoTerceiro.resx">
+      <DependentUpon>Form_DecimoTerceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Dependentes.resx">
+      <DependentUpon>Form_Dependentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_DoisPeriodos.resx">
+      <DependentUpon>Form_DoisPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_FaltasInjustificadas.resx">
+      <DependentUpon>Form_FaltasInjustificadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Fgts.resx">
+      <DependentUpon>Form_Fgts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_HorasExtras.resx">
+      <DependentUpon>Form_HorasExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Inss.resx">
+      <DependentUpon>Form_Inss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_AtrasosFaltas.resx">
+      <DependentUpon>Form_AtrasosFaltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Irrf.resx">
+      <DependentUpon>Form_Irrf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Pensao.resx">
+      <DependentUpon>Form_Pensao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_Periculosidade_Insalubridade.resx">
+      <DependentUpon>Form_Periculosidade_Insalubridade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_PeriodoCompleto.resx">
+      <DependentUpon>Form_PeriodoCompleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_ValeAlimentacao.resx">
+      <DependentUpon>Form_ValeAlimentacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_ValeTransporte.resx">
+      <DependentUpon>Form_ValeTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_AgendarFerias.resx">
+      <DependentUpon>Form_AgendarFerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Acesso\Form_AreaRestrita.resx">
+      <DependentUpon>Form_AreaRestrita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeneficioDasFerias\BeneficioDasFerias.csproj">
+      <Project>{efbd6b3d-b1e6-4157-a815-29033744836f}</Project>
+      <Name>BeneficioDasFerias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
+      <Project>{c87b4bb1-ebf0-48cc-a842-b80c2e4be3c3}</Project>
+      <Name>DecimoTerceiroSalario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FolhaDePagamento\FolhaDePagamento.csproj">
+      <Project>{8eab9188-d295-4ca5-b00f-2dd61279e3b0}</Project>
+      <Name>FolhaDePagamento</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

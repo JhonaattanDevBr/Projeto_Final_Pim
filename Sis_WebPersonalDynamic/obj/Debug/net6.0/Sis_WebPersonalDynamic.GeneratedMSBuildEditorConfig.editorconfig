@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Sis_WebPersonalDynamic
+build_property.RootNamespace = Sis_WebPersonalDynamic
+build_property.ProjectDir = C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\Sis_WebPersonalDynamic\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\Sis_WebPersonalDynamic
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/AcessoUsuario/FolhaPag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xGb2xoYVBhZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/AcessoUsuario/Holerite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xIb2xlcml0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/AcessoUsuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/AcessoUsuario/Inicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xJbmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/AcessoUsuario/Salario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xTYWxhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Cadastro/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Cadastro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Cadastro/NovoCadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cTm92b0NhZGFzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jho/Documents/Facudade ADS/4º Semestre/Sistemas/Sistema Final PIM/ProjetoContaPersonal/Sis_WebPersonalDynamic/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9197lg0oh9

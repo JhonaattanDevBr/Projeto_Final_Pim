@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Sis_WebPersonalDynamic/1.0.0": {
+        "runtime": {
+          "Sis_WebPersonalDynamic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sis_WebPersonalDynamic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

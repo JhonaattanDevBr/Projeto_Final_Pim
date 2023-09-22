@@ -1,0 +1,114 @@
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.exe.config
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.exe
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Properties.Resources.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.GenerateResource.cache
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.exe
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DoisPeriodos.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_PeriodoCompleto.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\bin\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\bin\Debug\FolhaDePagamento.pdb
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeTransporte.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CopyComplete
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeAlimentacao.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AdiantamentoQuinzenal.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioMedico.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioOdontologico.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Dependentes.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Pensao.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Fgts.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Inss.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Irrf.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_HorasExtras.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Periculosidade_Insalubridade.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AdicionalNotruno.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_InterfaceAtrasos.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_InterfacePrincipal.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Atrasos.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_FaltasInjustificadas.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_InterfaceDecimoTerceiro.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_InterfaceAgendarFerias.resources
+C:\Users\Jho\Documents\Facudade ADS\Sistemas Final do Curso\Desktop\SistemaParaDesktop\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DecimoTerceiroSalario.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.exe.config
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.exe
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\FolhaDePagamento.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AdiantamentoQuinzenal.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AdicionalNotruno.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Atrasos.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioMedico.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioOdontologico.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Dependentes.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DoisPeriodos.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_FaltasInjustificadas.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Fgts.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_HorasExtras.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Inss.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Irrf.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Pensao.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Periculosidade_Insalubridade.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_PeriodoCompleto.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeAlimentacao.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeTransporte.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_InterfacePrincipal.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Properties.Resources.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.GenerateResource.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CopyComplete
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.exe
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\DecimoTerceiroSalario.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\DecimoTerceiroSalario.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DecimoTerceiro.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AtrasosFaltas.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AgendarFerias.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\DecimoTerceiroSalario.dll.config
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\BeneficioDasFerias.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\bin\Debug\BeneficioDasFerias.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Desktop, Web e Mobile\Sistema_ContabilPersonalDynamic\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_CalculosFerias.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.exe.config
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.exe
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\BeneficioDasFerias.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\DecimoTerceiroSalario.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\BeneficioDasFerias.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\DecimoTerceiroSalario.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\FolhaDePagamento.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AdiantamentoQuinzenal.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AdicionalNotruno.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Atrasos.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_CalculosFerias.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioMedico.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioOdontologico.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DecimoTerceiro.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Dependentes.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DoisPeriodos.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_FaltasInjustificadas.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Fgts.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_HorasExtras.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Inss.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AtrasosFaltas.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Irrf.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Pensao.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Periculosidade_Insalubridade.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_PeriodoCompleto.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeAlimentacao.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeTransporte.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AgendarFerias.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AreaRestrita.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Properties.Resources.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.GenerateResource.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CopyComplete
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.exe
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.pdb

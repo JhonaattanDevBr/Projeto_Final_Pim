@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Novo Cadastro";
+}
+<!--Todos os novos cadastros vai estar vai estar nessa página-->
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Personal Dynamic RH & DP</a> <!--Nome do cabeçalho-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Página inicial</a> <!--Referente a página de inicio-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Cadastro" asp-action="NovoCadastro">Novo Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="text-center">
+
+    <h1 class="display-4">Novo Cadastro</h1>  <!--Utilizaremos bootstrap-->
+
+</div>
+
+<form>
+  
+    <div class="col">
+                <label for="inputName">Nome: </label>
+      <input type="text" class="form-control" id="inputName" placeholder="Nome">
+    </div>
+        <br>
+    <div class="col">
+      <label for="inputSobrenome">Sobrenome: </label>
+      <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+    </div>
+        <br>
+    <div class="form-group">
+        <label for="idade">Idade: </label>
+        <input type="number" class="form-control">
+    </div>
+        <br>
+    <div>
+        <label for="sexo">Sexo:  </label>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+        <label class="form-check-label" for="inlineRadio1">Feminino</label>
+    </div>
+        
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+        <label class="form-check-label" for="inlineRadio2">Masculino</label>
+    </div>
+        <br>
+    </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="text" class="form-control" placeholder="Informe o email">
+        </div>
+            <br>
+        <div class="form-group">
+             <label for="emailsecundario">Email de Recuperação: </label>
+          <input type="text" class="form-control" placeholder="Informe o email">
+         </div>
+            <br>
+        <div class="form-group">
+            <label for="senha">Senha: </label>
+            <input type="text" class="form-control" placeholder="Informe uma senha">
+        </div>
+            <br>
+        <div class="form-group">
+             <label for="confirmarsenha">Confirmar senha: </label>
+          <input type="text" class="form-control" placeholder="confirmar senha senha">
+         </div>
+            <br>
+
+        <div class="form-group">
+            <label for="empregador">Empregador: </label>
+            <input type="text" class="form-control" id="empregador" placeholder="unip">
+        </div>
+            <br>
+        <div class="form-group">
+            <label for="cargo">Cargo: </label>
+            <input type="text" class="form-control" id="cargo" placeholder="informe seu cargo">
+        </div>
+            <br>
+
+         <!--------------Botão--------------->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" asp-controller="Cadastro" asp-action="Criar">Cadastar</button>
+            <br>
+        <<a class="bnt bnt-secondary bnt-block" role="button" aria-pressed="true" asp-controller="Home" asp-action="Index" role="button">voltar</a>
+        
+        </div>
+
+</form>
+
+

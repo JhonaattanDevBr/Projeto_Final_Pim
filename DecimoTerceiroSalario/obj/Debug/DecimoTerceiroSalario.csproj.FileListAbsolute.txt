@@ -1,0 +1,9 @@
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\bin\Debug\DecimoTerceiroSalario.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\bin\Debug\DecimoTerceiroSalario.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\bin\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\bin\Debug\FolhaDePagamento.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.CopyComplete
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.pdb

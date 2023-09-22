@@ -1,0 +1,6 @@
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\FolhaDePagamento\bin\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\FolhaDePagamento\bin\Debug\FolhaDePagamento.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\FolhaDePagamento\obj\Debug\FolhaDePagamento.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\FolhaDePagamento\obj\Debug\FolhaDePagamento.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\FolhaDePagamento\obj\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\FolhaDePagamento\obj\Debug\FolhaDePagamento.pdb

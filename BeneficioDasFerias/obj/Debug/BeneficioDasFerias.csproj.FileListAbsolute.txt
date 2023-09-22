@@ -1,0 +1,9 @@
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\bin\Debug\BeneficioDasFerias.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\bin\Debug\BeneficioDasFerias.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\bin\Debug\FolhaDePagamento.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\bin\Debug\FolhaDePagamento.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.CopyComplete
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.pdb
