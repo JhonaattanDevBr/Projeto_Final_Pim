@@ -67,6 +67,7 @@
             this.rdbTresPeriodos = new System.Windows.Forms.RadioButton();
             this.rdbDoisPeriodos = new System.Windows.Forms.RadioButton();
             this.rdbPeriodoCompleto = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gpbEnquete.SuspendLayout();
             this.SuspendLayout();
@@ -335,6 +336,7 @@
             // gpbEnquete
             // 
             this.gpbEnquete.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbEnquete.Controls.Add(this.button1);
             this.gpbEnquete.Controls.Add(this.rdbTresPeriodos);
             this.gpbEnquete.Controls.Add(this.rdbDoisPeriodos);
             this.gpbEnquete.Controls.Add(this.rdbPeriodoCompleto);
@@ -378,6 +380,15 @@
             this.rdbPeriodoCompleto.TabStop = true;
             this.rdbPeriodoCompleto.Text = "Período completo";
             this.rdbPeriodoCompleto.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(517, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form_AgendarFerias
             // 
@@ -446,5 +457,6 @@
         private System.Windows.Forms.RadioButton rdbTresPeriodos;
         private System.Windows.Forms.RadioButton rdbDoisPeriodos;
         private System.Windows.Forms.RadioButton rdbPeriodoCompleto;
+        private System.Windows.Forms.Button button1;
     }
 }
