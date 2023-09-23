@@ -28,6 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.gpbDoisPeriodos = new System.Windows.Forms.GroupBox();
+            this.txtSegundoPeriodoDias = new System.Windows.Forms.TextBox();
+            this.txtPrimeiroPeriodoDias = new System.Windows.Forms.TextBox();
+            this.lblSegundoPeriodoDias = new System.Windows.Forms.Label();
+            this.lblPrimeiroPeriodoDias = new System.Windows.Forms.Label();
+            this.cmbSegundoPeriodo = new System.Windows.Forms.ComboBox();
+            this.cmbPrimeiroPeriodo = new System.Windows.Forms.ComboBox();
+            this.btnAgendar = new System.Windows.Forms.Button();
+            this.lblSegundoPeriodo = new System.Windows.Forms.Label();
+            this.lblPrimeiroPeriodo = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.rdbNao = new System.Windows.Forms.RadioButton();
+            this.rdbSim = new System.Windows.Forms.RadioButton();
+            this.lblVenda = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoArquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,14 +77,220 @@
             this.gerarNovoReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarBenefícioDeFériasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAvancar = new System.Windows.Forms.Button();
-            this.gpbEnquete = new System.Windows.Forms.GroupBox();
-            this.rdbTresPeriodos = new System.Windows.Forms.RadioButton();
-            this.rdbDoisPeriodos = new System.Windows.Forms.RadioButton();
-            this.rdbPeriodoCompleto = new System.Windows.Forms.RadioButton();
+            this.agendarFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.períodoCompletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doisPeríodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trêsPeríodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConcluir = new System.Windows.Forms.Button();
+            this.lblTerceiroPeriodo = new System.Windows.Forms.Label();
+            this.lblTerceiroPeriodoDias = new System.Windows.Forms.Label();
+            this.txtTerceiroPeriodoDias = new System.Windows.Forms.TextBox();
+            this.cmbTerceiroPeriodo = new System.Windows.Forms.ComboBox();
+            this.gpbDoisPeriodos.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.gpbEnquete.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // gpbDoisPeriodos
+            // 
+            this.gpbDoisPeriodos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbDoisPeriodos.Controls.Add(this.cmbTerceiroPeriodo);
+            this.gpbDoisPeriodos.Controls.Add(this.txtTerceiroPeriodoDias);
+            this.gpbDoisPeriodos.Controls.Add(this.lblTerceiroPeriodoDias);
+            this.gpbDoisPeriodos.Controls.Add(this.lblTerceiroPeriodo);
+            this.gpbDoisPeriodos.Controls.Add(this.txtSegundoPeriodoDias);
+            this.gpbDoisPeriodos.Controls.Add(this.txtPrimeiroPeriodoDias);
+            this.gpbDoisPeriodos.Controls.Add(this.lblSegundoPeriodoDias);
+            this.gpbDoisPeriodos.Controls.Add(this.lblPrimeiroPeriodoDias);
+            this.gpbDoisPeriodos.Controls.Add(this.cmbSegundoPeriodo);
+            this.gpbDoisPeriodos.Controls.Add(this.cmbPrimeiroPeriodo);
+            this.gpbDoisPeriodos.Controls.Add(this.btnAgendar);
+            this.gpbDoisPeriodos.Controls.Add(this.lblSegundoPeriodo);
+            this.gpbDoisPeriodos.Controls.Add(this.lblPrimeiroPeriodo);
+            this.gpbDoisPeriodos.Controls.Add(this.txtQuantidade);
+            this.gpbDoisPeriodos.Controls.Add(this.lblQuantidade);
+            this.gpbDoisPeriodos.Controls.Add(this.rdbNao);
+            this.gpbDoisPeriodos.Controls.Add(this.rdbSim);
+            this.gpbDoisPeriodos.Controls.Add(this.lblVenda);
+            this.gpbDoisPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gpbDoisPeriodos.ForeColor = System.Drawing.Color.Black;
+            this.gpbDoisPeriodos.Location = new System.Drawing.Point(12, 45);
+            this.gpbDoisPeriodos.Name = "gpbDoisPeriodos";
+            this.gpbDoisPeriodos.Size = new System.Drawing.Size(960, 586);
+            this.gpbDoisPeriodos.TabIndex = 0;
+            this.gpbDoisPeriodos.TabStop = false;
+            this.gpbDoisPeriodos.Text = "Férias em dois períodos";
+            this.gpbDoisPeriodos.Enter += new System.EventHandler(this.gpbDoisPeriodos_Enter);
+            // 
+            // txtSegundoPeriodoDias
+            // 
+            this.txtSegundoPeriodoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtSegundoPeriodoDias.Location = new System.Drawing.Point(368, 139);
+            this.txtSegundoPeriodoDias.Name = "txtSegundoPeriodoDias";
+            this.txtSegundoPeriodoDias.Size = new System.Drawing.Size(46, 20);
+            this.txtSegundoPeriodoDias.TabIndex = 13;
+            // 
+            // txtPrimeiroPeriodoDias
+            // 
+            this.txtPrimeiroPeriodoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtPrimeiroPeriodoDias.Location = new System.Drawing.Point(368, 101);
+            this.txtPrimeiroPeriodoDias.Name = "txtPrimeiroPeriodoDias";
+            this.txtPrimeiroPeriodoDias.Size = new System.Drawing.Size(46, 20);
+            this.txtPrimeiroPeriodoDias.TabIndex = 12;
+            // 
+            // lblSegundoPeriodoDias
+            // 
+            this.lblSegundoPeriodoDias.AutoSize = true;
+            this.lblSegundoPeriodoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblSegundoPeriodoDias.Location = new System.Drawing.Point(330, 142);
+            this.lblSegundoPeriodoDias.Name = "lblSegundoPeriodoDias";
+            this.lblSegundoPeriodoDias.Size = new System.Drawing.Size(32, 15);
+            this.lblSegundoPeriodoDias.TabIndex = 11;
+            this.lblSegundoPeriodoDias.Text = "Dias";
+            // 
+            // lblPrimeiroPeriodoDias
+            // 
+            this.lblPrimeiroPeriodoDias.AutoSize = true;
+            this.lblPrimeiroPeriodoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblPrimeiroPeriodoDias.Location = new System.Drawing.Point(330, 104);
+            this.lblPrimeiroPeriodoDias.Name = "lblPrimeiroPeriodoDias";
+            this.lblPrimeiroPeriodoDias.Size = new System.Drawing.Size(32, 15);
+            this.lblPrimeiroPeriodoDias.TabIndex = 10;
+            this.lblPrimeiroPeriodoDias.Text = "Dias";
+            // 
+            // cmbSegundoPeriodo
+            // 
+            this.cmbSegundoPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbSegundoPeriodo.FormattingEnabled = true;
+            this.cmbSegundoPeriodo.Items.AddRange(new object[] {
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"});
+            this.cmbSegundoPeriodo.Location = new System.Drawing.Point(187, 139);
+            this.cmbSegundoPeriodo.Name = "cmbSegundoPeriodo";
+            this.cmbSegundoPeriodo.Size = new System.Drawing.Size(121, 21);
+            this.cmbSegundoPeriodo.TabIndex = 9;
+            this.cmbSegundoPeriodo.Text = "Informe o mês";
+            // 
+            // cmbPrimeiroPeriodo
+            // 
+            this.cmbPrimeiroPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbPrimeiroPeriodo.FormattingEnabled = true;
+            this.cmbPrimeiroPeriodo.Items.AddRange(new object[] {
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"});
+            this.cmbPrimeiroPeriodo.Location = new System.Drawing.Point(187, 101);
+            this.cmbPrimeiroPeriodo.Name = "cmbPrimeiroPeriodo";
+            this.cmbPrimeiroPeriodo.Size = new System.Drawing.Size(121, 21);
+            this.cmbPrimeiroPeriodo.TabIndex = 8;
+            this.cmbPrimeiroPeriodo.Text = "Informe o mês";
+            // 
+            // btnAgendar
+            // 
+            this.btnAgendar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAgendar.Location = new System.Drawing.Point(9, 214);
+            this.btnAgendar.Name = "btnAgendar";
+            this.btnAgendar.Size = new System.Drawing.Size(75, 30);
+            this.btnAgendar.TabIndex = 7;
+            this.btnAgendar.Text = "Agendar";
+            this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
+            // 
+            // lblSegundoPeriodo
+            // 
+            this.lblSegundoPeriodo.AutoSize = true;
+            this.lblSegundoPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblSegundoPeriodo.Location = new System.Drawing.Point(6, 142);
+            this.lblSegundoPeriodo.Name = "lblSegundoPeriodo";
+            this.lblSegundoPeriodo.Size = new System.Drawing.Size(174, 15);
+            this.lblSegundoPeriodo.TabIndex = 6;
+            this.lblSegundoPeriodo.Text = "Informe o 2º periodo das férias";
+            // 
+            // lblPrimeiroPeriodo
+            // 
+            this.lblPrimeiroPeriodo.AutoSize = true;
+            this.lblPrimeiroPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblPrimeiroPeriodo.Location = new System.Drawing.Point(6, 104);
+            this.lblPrimeiroPeriodo.Name = "lblPrimeiroPeriodo";
+            this.lblPrimeiroPeriodo.Size = new System.Drawing.Size(174, 15);
+            this.lblPrimeiroPeriodo.TabIndex = 5;
+            this.lblPrimeiroPeriodo.Text = "Informe o 1º periodo das férias";
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Enabled = false;
+            this.txtQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtQuantidade.Location = new System.Drawing.Point(178, 68);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(38, 20);
+            this.txtQuantidade.TabIndex = 4;
+            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Enabled = false;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblQuantidade.Location = new System.Drawing.Point(6, 69);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(166, 15);
+            this.lblQuantidade.TabIndex = 3;
+            this.lblQuantidade.Text = "Quantidade de dias vendidos";
+            // 
+            // rdbNao
+            // 
+            this.rdbNao.AutoSize = true;
+            this.rdbNao.Checked = true;
+            this.rdbNao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.rdbNao.Location = new System.Drawing.Point(307, 30);
+            this.rdbNao.Name = "rdbNao";
+            this.rdbNao.Size = new System.Drawing.Size(55, 21);
+            this.rdbNao.TabIndex = 2;
+            this.rdbNao.TabStop = true;
+            this.rdbNao.Text = "Não";
+            this.rdbNao.UseVisualStyleBackColor = true;
+            // 
+            // rdbSim
+            // 
+            this.rdbSim.AutoSize = true;
+            this.rdbSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.rdbSim.Location = new System.Drawing.Point(249, 30);
+            this.rdbSim.Name = "rdbSim";
+            this.rdbSim.Size = new System.Drawing.Size(52, 21);
+            this.rdbSim.TabIndex = 1;
+            this.rdbSim.Text = "Sim";
+            this.rdbSim.UseVisualStyleBackColor = true;
+            this.rdbSim.CheckedChanged += new System.EventHandler(this.rdbSim_CheckedChanged);
+            // 
+            // lblVenda
+            // 
+            this.lblVenda.AutoSize = true;
+            this.lblVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblVenda.Location = new System.Drawing.Point(6, 34);
+            this.lblVenda.Name = "lblVenda";
+            this.lblVenda.Size = new System.Drawing.Size(237, 15);
+            this.lblVenda.TabIndex = 0;
+            this.lblVenda.Text = "O funcionário solicitou a venda das férias?";
             // 
             // menuStrip1
             // 
@@ -79,7 +300,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
-            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // arquivoToolStripMenuItem
@@ -297,7 +518,8 @@
             this.gerarReciboDeFériasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gerarNovoReciboDeFériasToolStripMenuItem,
             this.visualizarReciboDeFériasToolStripMenuItem,
-            this.consultarBenefícioDeFériasToolStripMenuItem1});
+            this.consultarBenefícioDeFériasToolStripMenuItem1,
+            this.agendarFériasToolStripMenuItem});
             this.gerarReciboDeFériasToolStripMenuItem1.Name = "gerarReciboDeFériasToolStripMenuItem1";
             this.gerarReciboDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.gerarReciboDeFériasToolStripMenuItem1.Text = "Férias";
@@ -320,64 +542,83 @@
             this.consultarBenefícioDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
             this.consultarBenefícioDeFériasToolStripMenuItem1.Text = "Consultar benefício de férias";
             // 
-            // btnAvancar
+            // agendarFériasToolStripMenuItem
             // 
-            this.btnAvancar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAvancar.Location = new System.Drawing.Point(895, 637);
-            this.btnAvancar.Name = "btnAvancar";
-            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
-            this.btnAvancar.TabIndex = 6;
-            this.btnAvancar.Text = "Avançar";
-            this.btnAvancar.UseVisualStyleBackColor = false;
+            this.agendarFériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.períodoCompletoToolStripMenuItem,
+            this.doisPeríodosToolStripMenuItem,
+            this.trêsPeríodosToolStripMenuItem});
+            this.agendarFériasToolStripMenuItem.Name = "agendarFériasToolStripMenuItem";
+            this.agendarFériasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.agendarFériasToolStripMenuItem.Text = "Agendar férias";
             // 
-            // gpbEnquete
+            // períodoCompletoToolStripMenuItem
             // 
-            this.gpbEnquete.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gpbEnquete.Controls.Add(this.rdbTresPeriodos);
-            this.gpbEnquete.Controls.Add(this.rdbDoisPeriodos);
-            this.gpbEnquete.Controls.Add(this.rdbPeriodoCompleto);
-            this.gpbEnquete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.gpbEnquete.ForeColor = System.Drawing.Color.Black;
-            this.gpbEnquete.Location = new System.Drawing.Point(12, 45);
-            this.gpbEnquete.Name = "gpbEnquete";
-            this.gpbEnquete.Size = new System.Drawing.Size(960, 586);
-            this.gpbEnquete.TabIndex = 7;
-            this.gpbEnquete.TabStop = false;
-            this.gpbEnquete.Text = "Como o funcionário optou pelo benefício das férias?";
+            this.períodoCompletoToolStripMenuItem.Name = "períodoCompletoToolStripMenuItem";
+            this.períodoCompletoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.períodoCompletoToolStripMenuItem.Text = "Período completo";
             // 
-            // rdbTresPeriodos
+            // doisPeríodosToolStripMenuItem
             // 
-            this.rdbTresPeriodos.AutoSize = true;
-            this.rdbTresPeriodos.Location = new System.Drawing.Point(296, 34);
-            this.rdbTresPeriodos.Name = "rdbTresPeriodos";
-            this.rdbTresPeriodos.Size = new System.Drawing.Size(127, 21);
-            this.rdbTresPeriodos.TabIndex = 8;
-            this.rdbTresPeriodos.Text = "Três períodos";
-            this.rdbTresPeriodos.UseVisualStyleBackColor = true;
+            this.doisPeríodosToolStripMenuItem.Name = "doisPeríodosToolStripMenuItem";
+            this.doisPeríodosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.doisPeríodosToolStripMenuItem.Text = "Dois períodos";
             // 
-            // rdbDoisPeriodos
+            // trêsPeríodosToolStripMenuItem
             // 
-            this.rdbDoisPeriodos.AutoSize = true;
-            this.rdbDoisPeriodos.Location = new System.Drawing.Point(164, 34);
-            this.rdbDoisPeriodos.Name = "rdbDoisPeriodos";
-            this.rdbDoisPeriodos.Size = new System.Drawing.Size(126, 21);
-            this.rdbDoisPeriodos.TabIndex = 7;
-            this.rdbDoisPeriodos.Text = "Dois períodos";
-            this.rdbDoisPeriodos.UseVisualStyleBackColor = true;
+            this.trêsPeríodosToolStripMenuItem.Name = "trêsPeríodosToolStripMenuItem";
+            this.trêsPeríodosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.trêsPeríodosToolStripMenuItem.Text = "Três períodos";
             // 
-            // rdbPeriodoCompleto
+            // btnConcluir
             // 
-            this.rdbPeriodoCompleto.AutoSize = true;
-            this.rdbPeriodoCompleto.Checked = true;
-            this.rdbPeriodoCompleto.Location = new System.Drawing.Point(6, 34);
-            this.rdbPeriodoCompleto.Name = "rdbPeriodoCompleto";
-            this.rdbPeriodoCompleto.Size = new System.Drawing.Size(152, 21);
-            this.rdbPeriodoCompleto.TabIndex = 6;
-            this.rdbPeriodoCompleto.TabStop = true;
-            this.rdbPeriodoCompleto.Text = "Período completo";
-            this.rdbPeriodoCompleto.UseVisualStyleBackColor = true;
+            this.btnConcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnConcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConcluir.Location = new System.Drawing.Point(895, 637);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(75, 30);
+            this.btnConcluir.TabIndex = 4;
+            this.btnConcluir.Text = "Concluir";
+            this.btnConcluir.UseVisualStyleBackColor = false;
+            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
+            // 
+            // lblTerceiroPeriodo
+            // 
+            this.lblTerceiroPeriodo.AutoSize = true;
+            this.lblTerceiroPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblTerceiroPeriodo.Location = new System.Drawing.Point(6, 178);
+            this.lblTerceiroPeriodo.Name = "lblTerceiroPeriodo";
+            this.lblTerceiroPeriodo.Size = new System.Drawing.Size(174, 15);
+            this.lblTerceiroPeriodo.TabIndex = 14;
+            this.lblTerceiroPeriodo.Text = "Informe o 3º periodo das férias";
+            // 
+            // lblTerceiroPeriodoDias
+            // 
+            this.lblTerceiroPeriodoDias.AutoSize = true;
+            this.lblTerceiroPeriodoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblTerceiroPeriodoDias.Location = new System.Drawing.Point(330, 178);
+            this.lblTerceiroPeriodoDias.Name = "lblTerceiroPeriodoDias";
+            this.lblTerceiroPeriodoDias.Size = new System.Drawing.Size(32, 15);
+            this.lblTerceiroPeriodoDias.TabIndex = 15;
+            this.lblTerceiroPeriodoDias.Text = "Dias";
+            // 
+            // txtTerceiroPeriodoDias
+            // 
+            this.txtTerceiroPeriodoDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtTerceiroPeriodoDias.Location = new System.Drawing.Point(368, 178);
+            this.txtTerceiroPeriodoDias.Name = "txtTerceiroPeriodoDias";
+            this.txtTerceiroPeriodoDias.Size = new System.Drawing.Size(46, 20);
+            this.txtTerceiroPeriodoDias.TabIndex = 17;
+            // 
+            // cmbTerceiroPeriodo
+            // 
+            this.cmbTerceiroPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbTerceiroPeriodo.FormattingEnabled = true;
+            this.cmbTerceiroPeriodo.Location = new System.Drawing.Point(187, 176);
+            this.cmbTerceiroPeriodo.Name = "cmbTerceiroPeriodo";
+            this.cmbTerceiroPeriodo.Size = new System.Drawing.Size(121, 21);
+            this.cmbTerceiroPeriodo.TabIndex = 18;
+            this.cmbTerceiroPeriodo.Text = "Informe o mês";
             // 
             // Form_AgendarFerias
             // 
@@ -386,20 +627,20 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(984, 681);
             this.ControlBox = false;
-            this.Controls.Add(this.gpbEnquete);
-            this.Controls.Add(this.btnAvancar);
+            this.Controls.Add(this.btnConcluir);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.gpbDoisPeriodos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_AgendarFerias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InterfaceAgendarFerias";
+            this.Text = "Form_Agendar_Férias";
+            this.gpbDoisPeriodos.ResumeLayout(false);
+            this.gpbDoisPeriodos.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.gpbEnquete.ResumeLayout(false);
-            this.gpbEnquete.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,6 +648,7 @@
 
         #endregion
 
+        private System.Windows.Forms.GroupBox gpbDoisPeriodos;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoArquivoToolStripMenuItem;
@@ -441,10 +683,28 @@
         private System.Windows.Forms.ToolStripMenuItem gerarNovoReciboDeFériasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarReciboDeFériasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarBenefícioDeFériasToolStripMenuItem1;
-        private System.Windows.Forms.Button btnAvancar;
-        private System.Windows.Forms.GroupBox gpbEnquete;
-        private System.Windows.Forms.RadioButton rdbTresPeriodos;
-        private System.Windows.Forms.RadioButton rdbDoisPeriodos;
-        private System.Windows.Forms.RadioButton rdbPeriodoCompleto;
+        private System.Windows.Forms.ToolStripMenuItem agendarFériasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem períodoCompletoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doisPeríodosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trêsPeríodosToolStripMenuItem;
+        private System.Windows.Forms.Label lblVenda;
+        private System.Windows.Forms.RadioButton rdbNao;
+        private System.Windows.Forms.RadioButton rdbSim;
+        private System.Windows.Forms.TextBox txtQuantidade;
+        private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.Label lblSegundoPeriodo;
+        private System.Windows.Forms.Label lblPrimeiroPeriodo;
+        private System.Windows.Forms.Button btnAgendar;
+        private System.Windows.Forms.Button btnConcluir;
+        private System.Windows.Forms.ComboBox cmbSegundoPeriodo;
+        private System.Windows.Forms.ComboBox cmbPrimeiroPeriodo;
+        private System.Windows.Forms.TextBox txtSegundoPeriodoDias;
+        private System.Windows.Forms.TextBox txtPrimeiroPeriodoDias;
+        private System.Windows.Forms.Label lblSegundoPeriodoDias;
+        private System.Windows.Forms.Label lblPrimeiroPeriodoDias;
+        private System.Windows.Forms.TextBox txtTerceiroPeriodoDias;
+        private System.Windows.Forms.Label lblTerceiroPeriodoDias;
+        private System.Windows.Forms.Label lblTerceiroPeriodo;
+        private System.Windows.Forms.ComboBox cmbTerceiroPeriodo;
     }
 }

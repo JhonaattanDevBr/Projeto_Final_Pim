@@ -154,17 +154,11 @@
     <Compile Include="Intercafes_Folha\Form_Periculosidade_Insalubridade.Designer.cs">
       <DependentUpon>Form_Periculosidade_Insalubridade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Ferias\Form_PeriodoCompleto.cs">
+    <Compile Include="Interfaces_Ferias\Form_AgendarFerias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces_Ferias\Form_PeriodoCompleto.Designer.cs">
-      <DependentUpon>Form_PeriodoCompleto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces_Ferias\Form_DoisPeriodos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Ferias\Form_DoisPeriodos.Designer.cs">
-      <DependentUpon>Form_DoisPeriodos.cs</DependentUpon>
+    <Compile Include="Interfaces_Ferias\Form_AgendarFerias.Designer.cs">
+      <DependentUpon>Form_AgendarFerias.cs</DependentUpon>
     </Compile>
     <Compile Include="Intercafes_Folha\Form_ValeAlimentacao.cs">
       <SubType>Form</SubType>
@@ -177,12 +171,6 @@
     </Compile>
     <Compile Include="Intercafes_Folha\Form_ValeTransporte.Designer.cs">
       <DependentUpon>Form_ValeTransporte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces_Ferias\Form_AgendarFerias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Ferias\Form_AgendarFerias.Designer.cs">
-      <DependentUpon>Form_AgendarFerias.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces_Acesso\Form_AreaRestrita.cs">
       <SubType>Form</SubType>
@@ -216,8 +204,8 @@
     <EmbeddedResource Include="Intercafes_Folha\Form_Dependentes.resx">
       <DependentUpon>Form_Dependentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Ferias\Form_DoisPeriodos.resx">
-      <DependentUpon>Form_DoisPeriodos.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_AgendarFerias.resx">
+      <DependentUpon>Form_AgendarFerias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Intercafes_Folha\Form_FaltasInjustificadas.resx">
       <DependentUpon>Form_FaltasInjustificadas.cs</DependentUpon>
@@ -243,17 +231,11 @@
     <EmbeddedResource Include="Intercafes_Folha\Form_Periculosidade_Insalubridade.resx">
       <DependentUpon>Form_Periculosidade_Insalubridade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Ferias\Form_PeriodoCompleto.resx">
-      <DependentUpon>Form_PeriodoCompleto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Intercafes_Folha\Form_ValeAlimentacao.resx">
       <DependentUpon>Form_ValeAlimentacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Intercafes_Folha\Form_ValeTransporte.resx">
       <DependentUpon>Form_ValeTransporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Ferias\Form_AgendarFerias.resx">
-      <DependentUpon>Form_AgendarFerias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Acesso\Form_AreaRestrita.resx">
       <DependentUpon>Form_AreaRestrita.cs</DependentUpon>

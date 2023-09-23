@@ -31,15 +31,9 @@ namespace InterfacesDoSistemaDesktop
             txtRetorno.Text = retorno.ToString();
         }
 
-        private void períodoCompletoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_PeriodoCompleto ObjForm_PeriodoCompleto = new Form_PeriodoCompleto();
-            ObjForm_PeriodoCompleto.Show();
-        }
-
         private void doisPeríodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_DoisPeriodos objForm_DoisPeriodos = new Form_DoisPeriodos();
+            Form_AgendarFerias objForm_DoisPeriodos = new Form_AgendarFerias();
             objForm_DoisPeriodos.Show();
         }
 

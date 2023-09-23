@@ -92,7 +92,6 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ConvenioOdontologico.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DecimoTerceiro.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Dependentes.resources
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_DoisPeriodos.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_FaltasInjustificadas.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Fgts.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_HorasExtras.resources
@@ -101,10 +100,8 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Irrf.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Pensao.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_Periculosidade_Insalubridade.resources
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_PeriodoCompleto.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeAlimentacao.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_ValeTransporte.resources
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AgendarFerias.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AreaRestrita.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Properties.Resources.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.GenerateResource.cache
@@ -112,3 +109,4 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CopyComplete
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.exe
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Form_AgendarFerias.resources

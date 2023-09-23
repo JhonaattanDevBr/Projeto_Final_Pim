@@ -345,10 +345,7 @@
             // 
             // períodoCompletoToolStripMenuItem
             // 
-            this.períodoCompletoToolStripMenuItem.Name = "períodoCompletoToolStripMenuItem";
-            this.períodoCompletoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.períodoCompletoToolStripMenuItem.Text = "Período completo";
-            this.períodoCompletoToolStripMenuItem.Click += new System.EventHandler(this.períodoCompletoToolStripMenuItem_Click);
+          
             // 
             // doisPeríodosToolStripMenuItem
             // 
