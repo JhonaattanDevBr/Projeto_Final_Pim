@@ -33,5 +33,27 @@ namespace InterfacesDoSistemaDesktop.Properties {
                 return ((string)(this["PersonalConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-AF6EDUF\\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Dynam" +
+            "ic;Integrated Security=True")]
+        public string Base_Dados_Personal_DynamicConnectionString {
+            get {
+                return ((string)(this["Base_Dados_Personal_DynamicConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-AF6EDUF\\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste" +
+            ";Integrated Security=True")]
+        public string Base_Dados_Personal_TesteConnectionString {
+            get {
+                return ((string)(this["Base_Dados_Personal_TesteConnectionString"]));
+            }
+        }
     }
 }
