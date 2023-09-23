@@ -31,23 +31,6 @@ namespace InterfacesDoSistemaDesktop
             
         }
 
-        private void períodoCompletoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_PeriodoCompleto form_PeriodoCompleto = new Form_PeriodoCompleto();
-            form_PeriodoCompleto.Show();
-        }
-
-        private void doisPeríodosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_DoisPeriodos form_DoisPeriodos = new Form_DoisPeriodos();
-            form_DoisPeriodos.Show();
-        }
-
-        private void trêsPeríodosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void calcularValeTransporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_ValeTransporte form_ValeTransporte = new Form_ValeTransporte();

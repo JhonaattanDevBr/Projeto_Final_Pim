@@ -77,9 +77,6 @@
             this.visualizarReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarBenefícioDeFériasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agendarFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.períodoCompletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doisPeríodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trêsPeríodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calcularFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décimoTerceiroSalárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -451,35 +448,10 @@
             // 
             // agendarFériasToolStripMenuItem
             // 
-            this.agendarFériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.períodoCompletoToolStripMenuItem,
-            this.doisPeríodosToolStripMenuItem,
-            this.trêsPeríodosToolStripMenuItem});
             this.agendarFériasToolStripMenuItem.Name = "agendarFériasToolStripMenuItem";
             this.agendarFériasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.agendarFériasToolStripMenuItem.Text = "Agendar férias";
             this.agendarFériasToolStripMenuItem.Click += new System.EventHandler(this.agendarFériasToolStripMenuItem_Click);
-            // 
-            // períodoCompletoToolStripMenuItem
-            // 
-            this.períodoCompletoToolStripMenuItem.Name = "períodoCompletoToolStripMenuItem";
-            this.períodoCompletoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.períodoCompletoToolStripMenuItem.Text = "Período completo";
-            this.períodoCompletoToolStripMenuItem.Click += new System.EventHandler(this.períodoCompletoToolStripMenuItem_Click);
-            // 
-            // doisPeríodosToolStripMenuItem
-            // 
-            this.doisPeríodosToolStripMenuItem.Name = "doisPeríodosToolStripMenuItem";
-            this.doisPeríodosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.doisPeríodosToolStripMenuItem.Text = "Dois períodos";
-            this.doisPeríodosToolStripMenuItem.Click += new System.EventHandler(this.doisPeríodosToolStripMenuItem_Click);
-            // 
-            // trêsPeríodosToolStripMenuItem
-            // 
-            this.trêsPeríodosToolStripMenuItem.Name = "trêsPeríodosToolStripMenuItem";
-            this.trêsPeríodosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.trêsPeríodosToolStripMenuItem.Text = "Três períodos";
-            this.trêsPeríodosToolStripMenuItem.Click += new System.EventHandler(this.trêsPeríodosToolStripMenuItem_Click);
             // 
             // calcularFériasToolStripMenuItem
             // 
@@ -495,7 +467,7 @@
             this.décimoTerceiroSalárioToolStripMenuItem.Text = "Décimo terceiro salário";
             this.décimoTerceiroSalárioToolStripMenuItem.Click += new System.EventHandler(this.décimoTerceiroSalárioToolStripMenuItem_Click);
             // 
-            // Form_InterfacePrincipal
+            // Form_AreaRestrita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -507,7 +479,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_InterfacePrincipal";
+            this.Name = "Form_AreaRestrita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InterfacePrincipal";
             this.menuStrip1.ResumeLayout(false);
@@ -554,9 +526,6 @@
         private System.Windows.Forms.ToolStripMenuItem visualizarReciboDeFériasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarBenefícioDeFériasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem agendarFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem períodoCompletoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem doisPeríodosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trêsPeríodosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calcularValeTransporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calcularValeAlimentaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calcularAdiantamentoQuinzenalToolStripMenuItem;
