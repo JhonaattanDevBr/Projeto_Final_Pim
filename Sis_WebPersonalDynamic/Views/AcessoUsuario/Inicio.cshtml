@@ -24,6 +24,9 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Holerite">Holerite</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-asp-controller="AcessoUsuario" asp-action="EnviarAtestado">Enviar atestado</a>
+                    </li>
                         <li class="nav-item">
                             <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Home" asp-action="Index">Sair</a>
                         </li>
@@ -37,58 +40,74 @@
 
 <div class="container">
   <div class="row">
-
     <div class="col-sm">
         <p class="display-5">Bem-vindo, Nome</p>
         <p class="fs-5">Área do Usúario</p>
             <!-- Empilhe as colunas, em dispositivos móveis, fazendo com que uma tenha largura total e a outra só metade -->
-            <div class="container">
-                    <div class="col">
-                        <label>Nome: </label>
-                        nome completo
+            <div class="card">
+                <div class="card-header">Meus Dados</div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="col">
+                            <label>Nome: </label>
+
+                        </div>
+                        <br />
+                        <div class="col">
+                            <label>Cargo: </label>
+                           
+                        </div>
+                        <br />
+                        <div class="col">
+                            <label>Empregador: </label>
+                            
+                        </div>
+                        <br />
+                        <div class="col">
+                            <label>Inicio na organização: </label>
+                            
+                        </div>
                     </div>
-                    <br />
-                    <div class="col">
-                         <label >Cargo: </label>
-                         cargo do empregado
-                    </div>
-                    <br />
-                    <div class="col">
-                        <label>Empregador: </label>
-                        nome empresa
-                    </div>
-                    <br />
-                    <div class="col">
-                        <label>Inicio: </label>
-                        00/00/0000
-                    </div>
+                </div>
             </div>
+
         </div>
     <div class="col-sm">
-        <br />
-      
-       <p class="display-6">Linha do Tempo</p>
-            <div class="col">
-                <label>Informe do último salário: </label>
-                R$
-            </div>
-            <br>
-            <div class="col">
-                <label>Férias: </label>
-                Status não definido
-            </div>
-            <br />
-            <div class="col">
-                <label>Faltas: </label>
-                
-            </div>
-            <br />
-            <div class="col">
-                <label>Adiantamento quinzenal: </label>
-                R$
-            </div>
-    </div>
+       <br />
+       <br /> 
+       <br />
+       <div class="card">
+           <div class="card-header">Linha do Tempo</div>
+           <div class="card-body">
+                    <div class="col">
+                        <label>Informe do último salário: </label>
+                        
+                    </div>
+                    <br>
+                    <div class="col">
+                        <label>Liberação de férias: </label>
+                        Status não definido
+                    </div>
+                    <br/>
+                    <div class="col">
+                        <label>Férias: </label>
+                        Status não definido
+                    </div>
+                    <br />
+                    <div class="col">
+                        <label>Faltas: </label>
 
+                    </div>
+                    <br />
+                    <div class="col">
+                        <label>Adiantamento quinzenal: </label>
+                        
+                    </div>
+           </div>
+       </div>
+
+    </div>
+    <br />
   </div>
 </div>
 
