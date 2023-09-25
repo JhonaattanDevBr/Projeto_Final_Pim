@@ -178,11 +178,15 @@
     <Compile Include="Interfaces_Acesso\Form_AreaRestrita.Designer.cs">
       <DependentUpon>Form_AreaRestrita.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Acesso\Form_Accesskey.cs" />
+    <Compile Include="Interfaces_Acesso\Form_Accesskey.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces_Acesso\Form_Accesskey.Designer.cs">
       <DependentUpon>Form_Accesskey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.cs" />
+    <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
