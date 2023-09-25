@@ -178,6 +178,14 @@
     <Compile Include="Interfaces_Acesso\Form_AreaRestrita.Designer.cs">
       <DependentUpon>Form_AreaRestrita.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_Acesso\Form_Accesskey.cs" />
+    <Compile Include="Interfaces_Acesso\Form_Accesskey.Designer.cs">
+      <DependentUpon>Form_Accesskey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.cs" />
+    <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
+      <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Intercafes_Folha\Form_AdiantamentoQuinzenal.resx">
@@ -188,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Intercafes_Folha\Form_Atrasos.resx">
       <DependentUpon>Form_Atrasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Acesso\Form_Acesso.resx">
+      <DependentUpon>Form_Acesso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Ferias\Form_CalculosFerias.resx">
       <DependentUpon>Form_CalculosFerias.cs</DependentUpon>
@@ -240,6 +251,12 @@
     <EmbeddedResource Include="Interfaces_Acesso\Form_AreaRestrita.resx">
       <DependentUpon>Form_AreaRestrita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Acesso\Form_Accesskey.resx">
+      <DependentUpon>Form_Accesskey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.resx">
+      <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -263,9 +280,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AcessoPersonalD\AcessoPersonalD.csproj">
+      <Project>{7064411d-3425-41c7-b60c-f4a657f2e10e}</Project>
+      <Name>AcessoPersonalD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeneficioDasFerias\BeneficioDasFerias.csproj">
       <Project>{efbd6b3d-b1e6-4157-a815-29033744836f}</Project>
       <Name>BeneficioDasFerias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConexaoBaseDados\ConexaoBaseDados.csproj">
+      <Project>{364e34f6-1dc5-44ab-903b-7a3fb269aca6}</Project>
+      <Name>ConexaoBaseDados</Name>
     </ProjectReference>
     <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
       <Project>{c87b4bb1-ebf0-48cc-a842-b80c2e4be3c3}</Project>
