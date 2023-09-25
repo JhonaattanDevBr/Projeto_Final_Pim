@@ -23,10 +23,6 @@ namespace Sis_WebPersonalDynamic.Controllers
             return View();
         }
          
-        public IActionResult EnviarAtestado()
-        {
-            return View();
-        }   
 
         public IActionResult SolicitaFerias()
         {

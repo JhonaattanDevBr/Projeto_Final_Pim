@@ -1,7 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "Página do Holerite";
+    ViewData["Title"] = "Página de Faltas";
 }
 
+<!DOCTYPE html>
+<html lang="py-br">
+    <head>
+        <title>Faltas</title>
+    </head>
+    <body>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -19,7 +25,7 @@
                         <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Salario">Salário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="FolhaPag">Pagamento</a>
+                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="FolhaPag"> Folha de Pagamento</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Holerite">Holerite</a>
@@ -35,3 +41,11 @@
         </div>
     </nav>
 </header>
+
+<h2>Faltas do funcionário</h2>
+<br />
+    <a type="button" class="btn btn-outline-primary" role="button" aria-pressed="true" asp-controller="Faltas" asp-action="SolicitarFaltas">Solicitar falta</a>
+    <a type="button" class="btn btn-outline-primary" role="button" aria-pressed="true" asp-controller="Faltas" asp-action="EnviarAtestado">Atestado</a>
+<br />
+</body>
+</html>

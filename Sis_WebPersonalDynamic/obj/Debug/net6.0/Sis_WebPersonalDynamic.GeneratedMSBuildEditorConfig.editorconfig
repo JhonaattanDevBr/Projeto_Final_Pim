@@ -24,10 +24,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xIb2xlcml0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/AcessoUsuario/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/AcessoUsuario/Inicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNlc3NvVXN1YXJpb1xJbmljaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +42,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Cadastro/NovoCadastro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cTm92b0NhZGFzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Faltas/EnviarAtestado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFsdGFzXEVudmlhckF0ZXN0YWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Faltas/Falta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFsdGFzXEZhbHRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Faltas/SolicitarFaltas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFsdGFzXFNvbGljaXRhckZhbHRhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Home/Index.cshtml]
