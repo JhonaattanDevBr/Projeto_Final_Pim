@@ -4,7 +4,7 @@ namespace Sis_WebPersonalDynamic.Controllers
 {
     public class FeriasController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Ferias()
         {
             return View();
         }
