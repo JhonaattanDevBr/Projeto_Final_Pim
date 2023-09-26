@@ -42,10 +42,39 @@
     </nav>
 </header>
 
-<h2>Faltas do funcionário</h2>
+<h2>Histórico de faltas do mês</h2>
 <br />
-    <a type="button" class="btn btn-outline-primary" role="button" aria-pressed="true" asp-controller="Faltas" asp-action="SolicitarFaltas">Solicitar falta</a>
-    <a type="button" class="btn btn-outline-primary" role="button" aria-pressed="true" asp-controller="Faltas" asp-action="EnviarAtestado">Atestado</a>
+<table class="table table-bordered  table-striped">
+    <thead>
+            <tr class="table-secondary">
+            <th scope="col">Abonos</th>
+            <th scope="col">Atestados</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </tbody>
+</table>
 <br />
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Enviar arquivo atestado</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </form>
 </body>
 </html>
