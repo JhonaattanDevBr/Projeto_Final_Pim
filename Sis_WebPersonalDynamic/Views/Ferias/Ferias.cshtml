@@ -2,6 +2,19 @@
     ViewData["Title"] = "Página de ferias";
 }
 
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
+          rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js">
+    </script>
+</head>
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -39,7 +52,58 @@
     </nav>
 </header>
 
+<div class="alert alert-success" role="alert">
+    <strong>Férias disponivel!</strong> Solicite um agendamento!
+</div>
 <h1 class="display-5"> Informações de férias</h1>
-<p class="display-4">Status de férias</p>
+<br />
+
+<fieldset class="form-group">
+    <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Período de Férias</legend>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="opcao1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                    1 período
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="opcao2">
+                <label class="form-check-label" for="gridRadios2">
+                    2 períodos
+                </label>
+            </div>
+            <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="opcao3" checked>
+                <label class="form-check-label" for="gridRadios3">
+                    3 períodos
+                </label>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+
+<label class="form-control-label">Data inicio</label>
+<input type="text" class="date form-control" style="width: 200px" />
+<script type="text/javascript">
+    $(".date").datepicker({
+        format: "dd-mm-yyyy",
+    });
+</script>
+
+<label class="form-control-label">Data final</label>
+<input type="text" class="date form-control" style="width: 200px" />
+<script type="text/javascript">
+    $(".date").datepicker({
+        format: "dd-mm-yyyy",
+    });
+</script>
+<br />
+    <div class="align-items-center">
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+
 
                         <!--Aqui vou adicionar o status das férias e as opções para agendar e venda delas-->
