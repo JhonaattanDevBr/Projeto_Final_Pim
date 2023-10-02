@@ -46,10 +46,6 @@
     </div>
     <br>
 
-    <!--Botão com action de acesso as paginas do sistema 
-        Definir um contoller "AcessoUsuarioController.cs"
-        Definir uma view, asp-action="AcessoPrincipal.cshtml" onde vai ter a primeira pág quando acessa sistemas
-    -->
         <button type="submit" asp-controller="Login" asp-action="ValidaUsuario" class="btn btn-primary">Entrar</button>
 </form>
     @if (TempData["MensagemErro"] != null)
