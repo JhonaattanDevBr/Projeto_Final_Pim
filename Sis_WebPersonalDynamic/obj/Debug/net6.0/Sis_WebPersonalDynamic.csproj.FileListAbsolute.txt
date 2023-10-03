@@ -60,3 +60,11 @@ C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Si
 C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\obj\Debug\net6.0\Sis_WebPersonalDynamic.pdb
 C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\obj\Debug\net6.0\Sis_WebPersonalDynamic.genruntimeconfig.cache
 C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\obj\Debug\net6.0\ref\Sis_WebPersonalDynamic.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\obj\Debug\net6.0\Sis_WebPersonalDynamic.csproj.CopyComplete
+C:\Users\iaram\OneDrive\Área de Trabalho\Projeto Final PIM\Projeto_Final_Pim\Sis_WebPersonalDynamic\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutDeslogada.cshtml.rz.scp.css

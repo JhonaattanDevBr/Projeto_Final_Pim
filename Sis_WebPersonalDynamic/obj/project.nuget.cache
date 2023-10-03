@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "6h5Zz0eQj+s+T1TOiSlUc6yRfen0ys+4bfCXNZnsCUu/Aanu63NyRD6dzdxE2ih98MjsAMOTqi/M6KryiH+43w==",
+  "dgSpecHash": "g0/MA3NZgdRJ8ow6moJ6EK1kZDjHFtX9dy4zJ4mhyjmVnjYleVketAWmNOmooHKaNZejxbnyB5O+3JBRgr08Dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\iaram\\OneDrive\\Área de Trabalho\\Projeto Final PIM\\Projeto_Final_Pim\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\iaram\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\iaram\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

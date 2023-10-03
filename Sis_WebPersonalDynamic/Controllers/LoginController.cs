@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sis_WebPersonalDynamic.Models;
+using System.Data.SqlClient;
+
 
 namespace Sis_WebPersonalDynamic.Controllers
 {
@@ -10,20 +12,20 @@ namespace Sis_WebPersonalDynamic.Controllers
             return View();
         }
 
-        public IActionResult ValidaUsuario (LoginModel login)
+        public IActionResult ValidandoUsuario(LoginModel login)
         {
             if (Validacao(login))
             {
-                return RedirectToAction("PagInicio", "Inicio");
+                return RedirectToAction("Index", "Home");
             }
-            return View("Index");  
+            return View("Index"); 
         }
 
         protected bool Validacao(LoginModel login)
         {
             //Fazer conexão com Banco de Dadoss
-            var conexaoSQL = @"Data";
-            SqlConnection conexaoDB = SqlConnection(conexaoSQL);
+            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True";
+            SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
 
             conexaoDB.Open();
 
@@ -33,7 +35,7 @@ namespace Sis_WebPersonalDynamic.Controllers
                 return false;
             }
 
-            string query = $"";//Query para logar no sistema
+            string query = $"SELECT Email, Senha FROM Acesso_funcionarios WHERE Email  = { login.Email} AND Senha = {login.Senha}";
             SqlCommand command = new SqlCommand(query, conexaoDB);
             SqlDataReader reader = command.ExecuteReader();
 
@@ -43,10 +45,11 @@ namespace Sis_WebPersonalDynamic.Controllers
                 TempData["MensagemErro"] = "Email ou senha incorreta";
                 return false;
             }
-
-
-
+            else
+            {
+               login.Valido = true;
+                return true;
+            }
         }
-
     }
 }

@@ -36,12 +36,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/PagHolerite/Holerite.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnSG9sZXJpdGVcSG9sZXJpdGUuY3NodG1s
+[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/PagInicio/Inicio.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnSW5pY2lvXEluaWNpby5jc2h0bWw=
+[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/PagHolerite/Holerite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnSG9sZXJpdGVcSG9sZXJpdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/PagSalario/Salario.cshtml]
@@ -67,3 +67,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9197lg0oh9
+
+[C:/Users/iaram/OneDrive/Área de Trabalho/Projeto Final PIM/Projeto_Final_Pim/Sis_WebPersonalDynamic/Views/Shared/_LayoutDeslogada.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dhmeop5jy7

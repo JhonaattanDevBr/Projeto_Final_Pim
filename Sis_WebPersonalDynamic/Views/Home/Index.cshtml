@@ -1,13 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Página Login";
+    ViewData["Title"] = "Página Home";
 }
 
-@model LoginModel
-<body>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Personal Dynamic RH & DP</a> <!--Nome do cabeçalho-->
+            <a class="navbar-brand" asp-area="" asp-controller="AcessoUsuario" asp-action="Index">Personal Dynamic RH & DP</a> <!--Nome do cabeçalho-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -15,10 +13,25 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item active">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">Página inicial</a> <!--Referente a página de inicio-->
+                        <a class="nav-link" asp-controller="PagInicio" asp-action="Inicio">Início</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Cadastro" asp-action="NovoCadastro">Novo Cadastro</a>
+                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Salario">Salário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento">Folha de Pagamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="PagHolerite" asp-action="Holerite">Holerite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Faltas" asp-action="Falta">Faltas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Home" asp-action="Index">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -26,33 +39,81 @@
     </nav>
 </header>
 
-<div class="text-center">
-    <h1 class="display-4">Bem vindo</h1>
-    <h2 class="display-4">Consulte suas informações de forma <br> rápida e simples</h2>
+<!--Aqui vou criara uma controller somente para a página de inicio do meu sistema para gerenciar as ações dessa pág-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p class="display-5">Bem-vindo, Nome</p>
+            <p class="fs-5">Área do Usúario</p>
+            <!-- Empilhe as colunas, em dispositivos móveis, fazendo com que uma tenha largura total e a outra só metade -->
+            <div class="card">
+                <div class="card-header">Meus Dados</div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="col">
+                            <label>Nome: </label>
+
+                        </div>
+                        <br />
+                        <div class="col">
+                            <label>Cargo: </label>
+
+                        </div>
+                        <br />
+                        <div class="col">
+                            <label>Empregador: </label>
+
+                        </div>
+                        <br />
+                        <div class="col">
+                            <label>Inicio na organização: </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+            <br />
+            <br />
+            <br />
+            <div class="card">
+                <div class="card-header">Linha do Tempo</div>
+                <div class="card-body">
+                    <div class="col">
+                        <label>Informe do último salário: </label>
+
+                    </div>
+                    <br>
+                    <div class="col">
+                        <label>Liberação de férias: </label>
+                        Status não definido
+                    </div>
+                    <br />
+                    <div class="col">
+                        <label>Férias: </label>
+                        Status não definido
+                    </div>
+                    <br />
+                    <div class="col">
+                        <label>Faltas: </label>
+
+                    </div>
+                    <br />
+                    <div class="col">
+                        <label>Adiantamento quinzenal: </label>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+    </div>
 </div>
 
-<form class="px-4 py-3"> <!--form-group-->
-    
-    <div class="form-group">
-        <label for="exEmail">Email</label>
-        <input type="text" asp-for="Email" class="form-control" id="exEmail" aria-describedby="emailHelp" placeholder="Informe seu email">
-        <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seus dados com ninguém.</small>
-    </div>
-    <br>
 
-    <div class="form-group">
-        <label for="exemploSenha">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control" id="exemploSenha" placeholder="Informe sua senha">
-    </div>
-    <br>
 
-        <button type="submit" asp-controller="Login" asp-action="ValidaUsuario" class="btn btn-primary">Entrar</button>
-</form>
-    @if (TempData["MensagemErro"] != null)
-    {
-        <div class="alert alert-danger" role="alert" style="margin-top: 15px">
-            @TempData["MensagemErro"]
-        </div>
-    }
 
-</body>

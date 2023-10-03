@@ -26,16 +26,16 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item active">
-                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Inicio">Início</a> <!--Referente a página de inicio-->
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Salario">Salário</a>
+                        <a class="nav-link" asp-controller="PagSalario" asp-action="Salario">Salário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="FolhaPag"> folha de Pagamento</a>
+                        <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento"> folha de Pagamento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Holerite">Holerite</a>
+                        <a class="nav-link" asp-controller="PagHolerite" asp-action="Holerite">Holerite</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Faltas" asp-action="Falta">Faltas</a>
@@ -44,7 +44,7 @@
                         <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Home" asp-action="Index">Sair</a>
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Login" asp-action="Index">Sair</a>
                     </li>
                 </ul>
             </div>
