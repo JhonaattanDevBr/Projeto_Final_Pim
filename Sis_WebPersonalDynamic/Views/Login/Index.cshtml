@@ -1,6 +1,5 @@
 ﻿@model LoginModel
 @{
-    Layout = "_LayoutDeslogada";
     ViewData["Title"] = "Página Login";
 }
 
@@ -41,8 +40,8 @@
         <!--form-group-->
 
         <div class="form-group">
-            <label for="exEmail">Email</label>
-            <input type="text" asp-for="Email" name="Email" class="form-control" id="exEmail" aria-describedby="emailHelp" placeholder="Informe seu email">
+            <label for="Email">Email</label>
+            <input type="text" asp-for="Email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Informe seu email">
             @Html.ValidationMessageFor(x => x.Email)
             <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seus dados com ninguém.</small>
         </div>
@@ -55,6 +54,6 @@
         </div>
         <br>
 
-        <button type="submit" asp-controller="Login" asp-action="ValidandoUsuario" class="btn btn-primary">Entrar</button>
+        <button type="submit" asp-controller="Login" asp-action="CadastraFuncionario" class="btn btn-primary">Entrar</button>
     </form>
 </body>
