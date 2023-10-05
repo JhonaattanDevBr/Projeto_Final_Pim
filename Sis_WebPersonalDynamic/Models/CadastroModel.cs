@@ -4,10 +4,8 @@ namespace Sis_WebPersonalDynamic.Models
 {
     public class CadastroModel
     {
-        public bool Valido { get; internal set; }
-
-        //Vou precisar criara tabela de cadastro no BD
         public int Id_funcionario { get; set; }
+
         [Required(ErrorMessage = "Campo obrigatório! informe seu nome")]
         public string Nome { get; set; }
 
@@ -16,10 +14,6 @@ namespace Sis_WebPersonalDynamic.Models
 
         [Required(ErrorMessage = "Campo obrigatório! informe sua idade")]
         public int Idade { get; set; }
-
-        //defini char no bd preciso arrumar
-        [Required(ErrorMessage = "Campo obrigatório! informe seu sexo")]
-        public bool Sexo { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório! informe seu email")]
         public string Email { get; set; }
@@ -31,7 +25,7 @@ namespace Sis_WebPersonalDynamic.Models
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório!")]
-        public string Confirmacao_Senha { get; set; }
+        public string Confirmacao_senha { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório! informe seu Empregador")]
         public string Empregador { get; set; }

@@ -16,9 +16,9 @@ namespace Sis_WebPersonalDynamic.Controllers
              if (CadastraFuncionario(cadastro))
              {
                  TempData["MensagemSucesso"] = "Cadastro concluido com sucesso, acesse o sistema";
-                 return RedirectToAction("Login", "Index");
+                 return RedirectToAction("Index", "Login");
              }
-             return View("Index");
+             return View("NovoCadastro");
          }
         protected bool CadastraFuncionario(CadastroModel cadastro)
         {
@@ -29,8 +29,8 @@ namespace Sis_WebPersonalDynamic.Controllers
             {
                 conexaoDB.Open();
 
-                string query = $"INSERT INTO Cadastro (Nome, Sobrenome, Idade, Sexo, Email,Email_secundario,Senha, Confirmacao_senha, Empregador, Cargo) " +
-                    "VALUES (@nome,@sobrenome, @idade, @sexo, @email, @email_secundario, @senha, @confirmacao_senha, @empregador, @cargo)"; 
+                string query = $"INSERT INTO Cadastro (Nome, Sobrenome, Idade, Email,Email_secundario,Senha, Confirmacao_senha, Empregador, Cargo) " +
+                    "VALUES (@nome,@sobrenome, @idade, @email, @email_secundario, @senha, @confirmacao_senha, @empregador, @cargo)"; 
                 SqlCommand command = new SqlCommand(query, conexaoDB);
 
                 //SqlDataReader reader = command.ExecuteReader();
@@ -53,12 +53,6 @@ namespace Sis_WebPersonalDynamic.Controllers
                 parametroIdade.Value = cadastro.Idade;
                 command.Parameters.Add(parametroIdade);
 
-                var parametroSexo = command.CreateParameter();
-                parametroSexo.ParameterName = "@sexo";
-                parametroSexo.DbType = DbType.Boolean;
-                parametroSexo.Value = cadastro.Sexo;
-                command.Parameters.Add(parametroSexo);
-
                 var parametroEmail = command.CreateParameter();
                 parametroEmail.ParameterName = "@email";
                 parametroEmail.DbType = DbType.String;
@@ -80,7 +74,7 @@ namespace Sis_WebPersonalDynamic.Controllers
                 var parametroconfirmacao_Senha = command.CreateParameter();
                 parametroconfirmacao_Senha.ParameterName = "@confirmacao_senha";
                 parametroconfirmacao_Senha.DbType = DbType.String;
-                parametroconfirmacao_Senha.Value = cadastro.Confirmacao_Senha;
+                parametroconfirmacao_Senha.Value = cadastro.Confirmacao_senha;
                 command.Parameters.Add(parametroconfirmacao_Senha);
 
                 var parametroEmpregador = command.CreateParameter();

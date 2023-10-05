@@ -41,19 +41,20 @@
 
         <div class="form-group">
             <label for="Email">Email</label>
-            <input type="text" asp-for="Email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Informe seu email">
+            <!--placeholder="Informe seu email"-->
+            <input type="text" asp-for="Email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" >
             @Html.ValidationMessageFor(x => x.Email)
             <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seus dados com ninguém.</small>
         </div>
         <br>
-
         <div class="form-group">
             <label for="exemploSenha">Senha</label>
-            <input type="password" asp-for="Senha" name="Senha" class="form-control" id="exemploSenha" placeholder="Informe sua senha">
+            <!--placeholder="Informe sua senha"-->
+            <input type="password" asp-for="Senha" name="Senha" class="form-control" id="Senha">
             @Html.ValidationMessageFor(x => x.Senha)
         </div>
         <br>
 
-        <button type="submit" asp-controller="Login" asp-action="CadastraFuncionario" class="btn btn-primary">Entrar</button>
+        <button type="submit" asp-controller="Login" asp-action="Login" class="btn btn-primary">Entrar</button>
     </form>
 </body>
