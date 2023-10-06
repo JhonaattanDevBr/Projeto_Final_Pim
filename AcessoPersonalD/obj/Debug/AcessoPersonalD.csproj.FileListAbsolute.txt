@@ -1,10 +1,10 @@
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\AcessoPersonalD.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\AcessoPersonalD.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.AssemblyReference.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CoreCompileInputs.cache
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\ConexaoBaseDados.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\ConexaoBaseDados.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\ConexaoBaseDados.dll.config
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.AssemblyReference.cache
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CoreCompileInputs.cache
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CopyComplete
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.dll
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.pdb

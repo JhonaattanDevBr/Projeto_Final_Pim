@@ -1,5 +1,5 @@
 ﻿using AcessoPersonalD;
-using ConexaoBaseDados;
+using ProjetoContaPersonal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +16,10 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 {
     public partial class Form_CadUsuarioPersonalD : Form
     {
-        ConexaoDeDados cnnDados = new ConexaoDeDados();
+        
         ContaPersonalD personalD = new ContaPersonalD();
+
+        Controle controleReq = new Controle();
 
         public Form_CadUsuarioPersonalD()
         {
@@ -27,30 +29,24 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         private void btnCriarUsuario_Click(object sender, EventArgs e)
         {
             bool retornoCadastro;
+            personalD.Nome = txtNome.Text;
+            personalD.Setor = txtSetor.Text;
+            personalD.Cargo = txtCargo.Text;
+            personalD.Usuario = txtUsuario.Text;
+            personalD.Senha = txtSenha.Text;
+            personalD.ConfirmacaoSenha = txtConfirmacaoSenha.Text;
             
-            /*
-            retornoCadastro = cnnDados.CadastrarFuncPersonalD(txtNome.Text, txtCargo.Text, txtSetor.Text, txtUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text);
-            if(retornoCadastro == true)
+            retornoCadastro = personalD.PegarValoresParaValidarCadastro();
+
+            if (retornoCadastro == true)
             {
                 MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
                 Close();
             }
-            else if (retornoCadastro == false)
+            else
             {
-                MessageBox.Show("Não foi possivel realizar o cadastro.", "Falha na operação!");
-                Close();
-            }*/
-
-            
-            retornoCadastro = personalD.PegarValoresParaValidarCadastro(txtNome.Text, txtCargo.Text, txtSetor.Text, txtUsuario.Text, txtSenha.Text, txtConfirmacaoSenha.Text);
-                if (retornoCadastro == true)
-                {
-                    MessageBox.Show("Parabens todos os dados estão corretos.", "Operação concluida!");
-                }
-                else
-                {
-                    MessageBox.Show(personalD.MensagemErro, "Falha na operação!");
-                }
+                MessageBox.Show(personalD.MensagemErro, "Falha na operação!");
+            }
             
         }
     }

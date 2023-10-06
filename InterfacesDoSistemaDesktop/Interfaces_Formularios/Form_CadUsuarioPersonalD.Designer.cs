@@ -115,7 +115,7 @@
             this.btnCriarUsuario.Name = "btnCriarUsuario";
             this.btnCriarUsuario.Size = new System.Drawing.Size(101, 30);
             this.btnCriarUsuario.TabIndex = 6;
-            this.btnCriarUsuario.Text = "Criar usuario";
+            this.btnCriarUsuario.Text = "Criar Usuário";
             this.btnCriarUsuario.UseVisualStyleBackColor = false;
             this.btnCriarUsuario.Click += new System.EventHandler(this.btnCriarUsuario_Click);
             // 
@@ -217,7 +217,7 @@
             this.MaximizeBox = false;
             this.Name = "Form_CadUsuarioPersonalD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_CadUsuarioPersonalD";
+            this.Text = "Cadastro de Usuários Personal Dynamic";
             this.gpbCadUsuarioPersonalD.ResumeLayout(false);
             this.gpbCadUsuarioPersonalD.PerformLayout();
             this.ResumeLayout(false);

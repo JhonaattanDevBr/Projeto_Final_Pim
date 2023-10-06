@@ -16,6 +16,9 @@ namespace InterfacesDoSistemaDesktop
         // Provavelment nessa tela não vou precisar fazer calculo apenas fazer uma consulta no banco de dados e buscar qual o convenio do funcionario
         // e exibir em tela a o convenio e qual o valor cobrado pelo convenio.
         // A tela tera de ser repensada quando eu fizer a conexao com o BD já que não havera calculo.
+        // Aqui eu vou precisar criar uma condição onde se o convenio tem um valor fixo ele ja seja atribuido diretamente
+        // Caso ele cobre uma porcentagem eu vou precisar realizar um calculoe voltar em tela
+
         public Form_ConvenioOdontologico()
         {
             InitializeComponent();
