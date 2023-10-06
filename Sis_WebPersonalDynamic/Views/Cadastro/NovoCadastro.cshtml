@@ -1,8 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Novo Cadastro";
 }
-<!--Todos os novos cadastros vai estar vai estar nessa página-->
 
+@model CadastroModel
+
+<body>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -14,7 +16,7 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item active">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">Página inicial</a> <!--Referente a página de inicio-->
+                        <a class="nav-link" asp-controller="Login" asp-action="Index">Página inicial</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Cadastro" asp-action="NovoCadastro">Novo Cadastro</a>
@@ -30,77 +32,95 @@
     <h1 class="display-4">Novo Cadastro</h1>  <!--Utilizaremos bootstrap-->
 
 </div>
-
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert-danger" role="alert" style="margin-top: 15px">
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+        @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert-danger" role="alert" style="margin-top: 15px">
+            @TempData["MensagemErro"]
+        </div>
+    }
 <form>
   
     <div class="col">
-                <label for="inputName">Nome: </label>
-      <input type="text" class="form-control" id="inputName" placeholder="Nome">
+      <label for="nome">Nome: </label>
+      <input type="text" asp-for="Nome" class="form-control" id="inputName" placeholder="Nome">
+      @Html.ValidationMessageFor(x => x.Nome)
     </div>
         <br>
     <div class="col">
       <label for="inputSobrenome">Sobrenome: </label>
-      <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-    </div>
+      <input type="text" asp-for="Sobrenome" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+      @Html.ValidationMessageFor(x => x.Sobrenome)  
+  </div>
         <br>
     <div class="form-group">
         <label for="idade">Idade: </label>
-        <input type="number" class="form-control">
-    </div>
-        <br>
-    <div>
+        <input type="number" asp-for="Idade" class="form-control">
+        @Html.ValidationMessageFor(x => x.Idade)
+        </div>
+    <!--<div>
         <label for="sexo">Sexo:  </label>
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                <input type="radio" asp-for="Sexo" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
         <label class="form-check-label" for="inlineRadio1">Feminino</label>
     </div>
         
     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+        <input type="radio" asp-for="Sexo" class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
         <label class="form-check-label" for="inlineRadio2">Masculino</label>
-    </div>
+    </div>-->
         <br>
     </div>
         <div class="form-group">
             <label for="email">Email: </label>
-            <input type="text" class="form-control" placeholder="Informe o email">
+            <input type="text" asp-for="Email" class="form-control" placeholder="Informe o email">
+            @Html.ValidationMessageFor(x => x.Email)
         </div>
             <br>
         <div class="form-group">
              <label for="emailsecundario">Email de Recuperação: </label>
-          <input type="text" class="form-control" placeholder="Informe o email">
-         </div>
+          <input type="text" asp-for="Email_Secundario" class="form-control" placeholder="Informe o email">
+            @Html.ValidationMessageFor(x => x.Email_Secundario)
+        </div>
             <br>
         <div class="form-group">
             <label for="senha">Senha: </label>
-            <input type="text" class="form-control" placeholder="Informe uma senha">
+            <input type="text" asp-for="Senha" class="form-control" placeholder="Informe uma senha">
+            @Html.ValidationMessageFor(x => x.Senha)
         </div>
             <br>
         <div class="form-group">
              <label for="confirmarsenha">Confirmar senha: </label>
-          <input type="text" class="form-control" placeholder="confirmar senha senha">
+            <input type="text" asp-for="Confirmacao_senha" class="form-control" placeholder="confirmar senha senha">
+            @Html.ValidationMessageFor(x => x.Senha)
          </div>
             <br>
 
         <div class="form-group">
             <label for="empregador">Empregador: </label>
-            <input type="text" class="form-control" id="empregador" placeholder="unip">
+            <input type="text" asp-for="Empregador" class="form-control" id="empregador" placeholder="unip">
+            @Html.ValidationMessageFor(x => x.Empregador)
         </div>
             <br>
         <div class="form-group">
             <label for="cargo">Cargo: </label>
-            <input type="text" class="form-control" id="cargo" placeholder="informe seu cargo">
+            <input type="text" asp-for="Cargo" class="form-control" id="cargo" placeholder="informe seu cargo">
+            @Html.ValidationMessageFor(x => x.Cargo)
         </div>
             <br>
 
          <!--------------Botão--------------->
         <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" asp-controller="Cadastro" asp-action="Criar">Cadastar</button>
+            <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" asp-controller="Login" asp-action="ValidandoUsuario">Cadastar</button>
             <br>
-        <<a class="bnt bnt-secondary bnt-block" role="button" aria-pressed="true" asp-controller="Home" asp-action="Index" role="button">voltar</a>
+        <a class="bnt bnt-secondary bnt-block" role="button" aria-pressed="true" asp-controller="Login" asp-action="Index" role="button">voltar</a>
         
         </div>
 
 </form>
-
-
+</body>
