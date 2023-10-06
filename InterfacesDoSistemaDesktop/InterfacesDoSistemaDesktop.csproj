@@ -184,19 +184,27 @@
     <Compile Include="Interfaces_Acesso\Form_Accesskey.Designer.cs">
       <DependentUpon>Form_Accesskey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Formularios\Form_CadConvMedico.cs" />
+    <Compile Include="Interfaces_Formularios\Form_CadConvMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadConvMedico.Designer.cs">
       <DependentUpon>Form_CadConvMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Formularios\Form_CadConvOdontologico.cs" />
+    <Compile Include="Interfaces_Formularios\Form_CadConvOdontologico.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadConvOdontologico.Designer.cs">
       <DependentUpon>Form_CadConvOdontologico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Formularios\Form_CadEmpresas.cs" />
+    <Compile Include="Interfaces_Formularios\Form_CadEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadEmpresas.Designer.cs">
       <DependentUpon>Form_CadEmpresas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Formularios\Form_CadFuncionarios.cs" />
+    <Compile Include="Interfaces_Formularios\Form_CadFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadFuncionarios.Designer.cs">
       <DependentUpon>Form_CadFuncionarios.cs</DependentUpon>
     </Compile>
