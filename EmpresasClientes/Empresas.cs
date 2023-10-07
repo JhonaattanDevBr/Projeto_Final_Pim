@@ -52,9 +52,9 @@ namespace EmpresasClientes
                                 if(auten6 == true)
                                 {
                                     if(auten7 == true)
-                                    {
+                                    {/* Vou comentar esse trexo para teste a forma de persistencia de dados da maneira que o professor passou se nao funcionar vou voltar para esse metodo
                                         Fundacao =  FormatarData();
-                                        Email = MesclarEmailDominio();
+                                        Email = MesclarEmailDominio();*/
                                         return true;
                                     }
                                     else
@@ -136,6 +136,7 @@ namespace EmpresasClientes
 
             if (autenticacaoTelefone.Length == 10)
             {
+                Telefone = autenticacaoTelefone;
                 return true;
             }
             else { return false; }

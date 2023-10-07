@@ -91,5 +91,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmpresasClientes\EmpresasClientes.csproj">
+      <Project>{2da1744f-4b4e-4e55-9c6c-2e1020163e25}</Project>
+      <Name>EmpresasClientes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
