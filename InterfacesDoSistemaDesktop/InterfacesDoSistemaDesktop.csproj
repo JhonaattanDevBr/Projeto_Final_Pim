@@ -328,6 +328,10 @@
       <Project>{efbd6b3d-b1e6-4157-a815-29033744836f}</Project>
       <Name>BeneficioDasFerias</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConexaoBaseDados\ConexaoBaseDados.csproj">
+      <Project>{364e34f6-1dc5-44ab-903b-7a3fb269aca6}</Project>
+      <Name>ConexaoBaseDados</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
       <Project>{c87b4bb1-ebf0-48cc-a842-b80c2e4be3c3}</Project>
       <Name>DecimoTerceiroSalario</Name>

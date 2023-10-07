@@ -4,7 +4,3 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\obj\Debug\PlanoSaude.csproj.CoreCompileInputs.cache
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\obj\Debug\PlanoSaude.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\obj\Debug\PlanoSaude.pdb
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\bin\Debug\ConexaoBaseDados.dll
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\bin\Debug\ConexaoBaseDados.pdb
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\bin\Debug\ConexaoBaseDados.dll.config
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoSaude\obj\Debug\PlanoSaude.csproj.CopyComplete

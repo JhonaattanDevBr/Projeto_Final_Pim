@@ -8,3 +8,9 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\ConexaoBaseDados.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\ConexaoBaseDados.dll.config
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CopyComplete
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\EmpresasClientes.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\EmpresasClientes.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\PlanoOdontologico.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\PlanoSaude.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\PlanoOdontologico.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\PlanoSaude.pdb

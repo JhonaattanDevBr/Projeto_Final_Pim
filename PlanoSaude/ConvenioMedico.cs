@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
-using ConexaoBaseDados;
 
 namespace PlanoSaude
 {
@@ -15,69 +15,93 @@ namespace PlanoSaude
         public string PorcentagemConvMedico { get; set; }
         public string MensagemErro { get; set; }
 
-        Crud_PlanoSaude cnnPlanoSaude = new Crud_PlanoSaude();
-
         public bool AutenticarCadConvMedico()
         {
-            bool teste1, teste2, teste3, teste4;
+            bool auten1, auten2, auten3, auten4, auten5, auten6;
 
-            teste1 = TesteCaixaBaixa();
-            teste2 = TesteApenasLetras();
-            teste3 = TesteEspacosEmBranco();
-            teste4 = TesteCamposVaziosCnpjCaracteres();
-            
-            if (teste1 == true &&
-                teste1 == true &&
-                teste2 == true &&
-                teste3 == true &&
-                teste4 == true)
+            auten1 = AutenticarCamposVazios();
+            auten2 = AutenticarCnpj();
+            auten3 = AutenticarEspacosEmBranco();
+            auten4 = AutenticarApenasLetras();
+            auten5 = AutenticarApenasNumeros();
+            auten6 = AutenticarCaixaBaixa();
+
+            if (auten1 == true)
             {
-                bool retornoCad = cnnPlanoSaude.CadastrarConvMedico(NomeConvMedico, CnpjConvMedico, ValorConvMedico, PorcentagemConvMedico);
-                return true;
+                if (auten2 == true)
+                {
+                    if (auten3 == true)
+                    {
+                        if (auten4 == true)
+                        {
+                            if(auten5 == true)
+                            {
+                                if(auten6 == true)
+                                {
+                                    return true;
+                                }
+                                else
+                                {
+                                    MensagemErro = "Os campos não podem conter letras em caixa alta.";
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter letras ou caracteres.";
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            MensagemErro = "O campo NOME não pode conter números ou caracteres especiais.";
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter espaços em branco.";
+                        return false;
+                    }
+                } 
+                else
+                {
+                    MensagemErro = "Informme todos os dígitos do CNPJ.";
+                    return false;
+                }
             }
             else
             {
-                if (teste1 == false)
-                {
-                    MensagemErro = "Os campos não podem conter letras em caixa alta.";
-                    return false;
-                }
-                else if (teste2 == false)
-                {
-                    MensagemErro = "O campo NOME não pode conter números ou caracteres especiais.";
-                    return false;
-                }
-                else if (teste3 == false)
-                {
-                    MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter espaços em branco.";
-                    return false;
-                }
-                else
-                {
-                    return false;
-                }
+                MensagemErro = "Todos os campos devem estar preenchidos.";
+                return false;
             }
         }
 
-        private bool TesteCaixaBaixa()
+        private bool AutenticarCamposVazios()
         {
-            if (NomeConvMedico.ToLower() == NomeConvMedico)
+            if (!string.IsNullOrEmpty(NomeConvMedico) &&
+               !string.IsNullOrEmpty(CnpjConvMedico) &&
+               !string.IsNullOrEmpty(ValorConvMedico) &&
+               !string.IsNullOrEmpty(PorcentagemConvMedico))
             {
                 return true;
             }
             else { return false; }
         }
 
-        private bool TesteApenasLetras()
+        private bool AutenticarCnpj()
         {
-            if (NomeConvMedico.Any(char.IsLetter))
+            string autenticacaoCnpj = CnpjConvMedico;
+            autenticacaoCnpj = autenticacaoCnpj.Replace(".", "").Replace("/", "").Replace("-", "");
+
+            if (autenticacaoCnpj.Length == 14)
             {
                 return true;
             }
             else { return false; }
         }
 
-        private bool TesteEspacosEmBranco()
+        private bool AutenticarEspacosEmBranco()
         {
             string texto1 = CnpjConvMedico.Replace(" ", ""),
                    texto2 = ValorConvMedico.Replace(" ", ""),
@@ -91,41 +115,39 @@ namespace PlanoSaude
             else { return false; }
         }
 
-        private bool TesteCamposVaziosCnpjCaracteres()
+        private bool AutenticarApenasLetras()
         {
-            if(!string.IsNullOrEmpty(NomeConvMedico) &&
-               !string.IsNullOrEmpty(CnpjConvMedico) &&
-               !string.IsNullOrEmpty(ValorConvMedico) &&
-               !string.IsNullOrEmpty(PorcentagemConvMedico))
+            if (NomeConvMedico.Any(char.IsLetter))
             {
-                string valorDeTeste = CnpjConvMedico;
-                valorDeTeste = valorDeTeste.Replace(".", "").Replace("/", "").Replace("-", "");
-               
-                double alterar = double.Parse(ValorConvMedico);
+                return true;
+            }
+            else { return false; }
+        }
 
-                if (valorDeTeste.Length == 14)
-                {
-                    if (valorDeTeste.All(char.IsDigit) && PorcentagemConvMedico.All(char.IsDigit))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter letras ou caracteres.";
-                        return false;
-                    }
-                }
-                else
-                {
-                    MensagemErro = "Informme todos os dígitos do CNPJ.";
-                    return false;
-                }
+        private bool AutenticarApenasNumeros()
+        {
+            string valorDeTeste = CnpjConvMedico;
+            valorDeTeste = valorDeTeste.Replace(".", "").Replace("/", "").Replace("-", "");
+
+            if (valorDeTeste.All(char.IsDigit) && ValorConvMedico.All(char.IsDigit) && PorcentagemConvMedico.All(char.IsDigit)) // vou ter q permitir que usuario possa digitar . no valor
+            {
+                return true;
             }
             else
             {
-                MensagemErro = "Todos os campos devem estar preenchidos.";
-                return false; 
+                MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter letras ou caracteres.";
+                return false;
             }
         }
+
+        private bool AutenticarCaixaBaixa()
+        {
+            if (NomeConvMedico.ToLower() == NomeConvMedico)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+        
     }
 }
