@@ -34,12 +34,12 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             retornoCadastro = conMedico.AutenticarCadConvMedico();
             if (retornoCadastro)
             {
-                bool incluirConvMedico = _crud_PlanoSaude.CadastrarConvMedico(conMedico);
-                if (incluirConvMedico)
-                {
+                //bool incluirConvMedico = _crud_PlanoSaude.CadastrarConvMedico(conMedico);
+                //if (incluirConvMedico)
+                //{
                     MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
                     Close();
-                }
+                //}
             }
             else
             {
@@ -54,6 +54,11 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtValorConvMedico_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

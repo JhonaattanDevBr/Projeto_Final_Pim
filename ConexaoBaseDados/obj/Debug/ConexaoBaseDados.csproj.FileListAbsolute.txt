@@ -12,3 +12,17 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\PlanoSaude.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\PlanoOdontologico.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\PlanoSaude.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\ConexaoBaseDados.dll.config
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\ConexaoBaseDados.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\ConexaoBaseDados.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\EmpresasClientes.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\PlanoOdontologico.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\PlanoSaude.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\EmpresasClientes.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\PlanoOdontologico.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\PlanoSaude.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.csproj.CopyComplete
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.pdb

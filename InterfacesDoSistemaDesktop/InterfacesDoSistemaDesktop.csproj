@@ -344,6 +344,10 @@
       <Project>{8eab9188-d295-4ca5-b00f-2dd61279e3b0}</Project>
       <Name>FolhaDePagamento</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FuncionariosEmpresas\FuncionariosEmpresas.csproj">
+      <Project>{3750cde9-e095-4aae-bdaa-28b0a662f70a}</Project>
+      <Name>FuncionariosEmpresas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlanoOdontologico\PlanoOdontologico.csproj">
       <Project>{fbab88da-e044-4dac-880f-43427b86700c}</Project>
       <Name>PlanoOdontologico</Name>
