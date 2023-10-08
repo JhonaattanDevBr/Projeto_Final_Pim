@@ -11,15 +11,59 @@ namespace ConexaoBaseDados
 {
     public class crud_Empresas
     {
-        public bool CadastrarEmpresa(string razaoSocia, string nomeFantasia, string nascionalidade, string cnpj, string email, string telefone, string ceo, string fundacao,
-            string segmento, string cidade, string estado, string bairro, string rua, string numero)
+        public bool incluirEnderecoEmpresa(Empresas _empresa)
         {
             string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
-            // Amanha vou incluir o codigo do crud
             try
             {
+                conexaoDb.Open();
+
+                string querry = "INSERT INTO ENDERECO (Cidade, Estado, Bairro, Rua, Numero) VALUES (@cidade, @estado, @bairro, @rua, @numero)";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+
+                var pmtCidade = cmd.CreateParameter();
+                pmtCidade.ParameterName = "@cidade";
+                pmtCidade.DbType = DbType.String;
+                pmtCidade.Value = _empresa.Cidade;
+                cmd.Parameters.Add(pmtCidade);
+
+                var pmtEstado = cmd.CreateParameter();
+                pmtEstado.ParameterName = "@estado";
+                pmtEstado.DbType = DbType.String;
+                pmtEstado.Value = _empresa.Estado;
+                cmd.Parameters.Add(pmtEstado);
+
+                var pmtBairro = cmd.CreateParameter();
+                pmtBairro.ParameterName = "@bairro";
+                pmtBairro.DbType = DbType.String;
+                pmtBairro.Value = _empresa.Bairro;
+                cmd.Parameters.Add(pmtBairro);
+
+                var pmtRua = cmd.CreateParameter();
+                pmtRua.ParameterName = "@rua";
+                pmtRua.DbType = DbType.String;
+                pmtRua.Value = _empresa.Rua;
+                cmd.Parameters.Add(pmtRua);
+
+                var pmtNumero = cmd.CreateParameter();
+                pmtNumero.ParameterName = "@numero";
+                pmtNumero.DbType = DbType.Int32;
+                pmtNumero.Value = _empresa.Numero;
+                cmd.Parameters.Add(pmtNumero);
+
+                if(cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+
 
             }
             catch (Exception)
@@ -27,17 +71,13 @@ namespace ConexaoBaseDados
 
                 throw;
             }
-            return true;
         }
-
-
 
         public bool incluirEmpresa (Empresas _empresa)
         {
             string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
-            // Amanha vou incluir o codigo do crud
             try
             {
                 conexaoDb.Open();
@@ -98,6 +138,18 @@ namespace ConexaoBaseDados
                 pmtSegmento.ParameterName = "@segmento";
                 pmtSegmento.DbType = DbType.String;
                 pmtSegmento.Value = _empresa.Segmento;
+                cmd.Parameters.Add (pmtSegmento);
+
+                if(cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
 
             }
             catch (Exception)
@@ -105,7 +157,6 @@ namespace ConexaoBaseDados
 
                 throw;
             }
-            return true;
         }
     }
 }

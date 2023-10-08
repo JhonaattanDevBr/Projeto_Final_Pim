@@ -32,13 +32,13 @@
             this.gpbConvMedico = new System.Windows.Forms.GroupBox();
             this.btnCadastrarConvMedico = new System.Windows.Forms.Button();
             this.txtPorcentagemConvMedico = new System.Windows.Forms.TextBox();
-            this.txtValorConvMedico = new System.Windows.Forms.TextBox();
             this.mskCnpjConvMedico = new System.Windows.Forms.MaskedTextBox();
             this.txtNomeConvMedico = new System.Windows.Forms.TextBox();
             this.lblPorcentagemConvMedico = new System.Windows.Forms.Label();
             this.lblValorConvMedico = new System.Windows.Forms.Label();
             this.lblCnpjConvMedico = new System.Windows.Forms.Label();
             this.lblNomeConvMedico = new System.Windows.Forms.Label();
+            this.txtValorConvMedico = new System.Windows.Forms.TextBox();
             this.gpbConvMedico.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,16 +82,6 @@
             this.txtPorcentagemConvMedico.Name = "txtPorcentagemConvMedico";
             this.txtPorcentagemConvMedico.Size = new System.Drawing.Size(100, 20);
             this.txtPorcentagemConvMedico.TabIndex = 7;
-            // 
-            // txtValorConvMedico
-            // 
-            this.txtValorConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtValorConvMedico.Location = new System.Drawing.Point(9, 170);
-            this.txtValorConvMedico.Name = "txtValorConvMedico";
-            this.txtValorConvMedico.Size = new System.Drawing.Size(150, 20);
-            this.txtValorConvMedico.TabIndex = 6;
-            this.txtValorConvMedico.Tag = "";
-            this.txtValorConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorConvMedico_KeyPress);
             // 
             // mskCnpjConvMedico
             // 
@@ -152,6 +142,18 @@
             this.lblNomeConvMedico.TabIndex = 0;
             this.lblNomeConvMedico.Text = "Nome do convênio médico";
             // 
+            // txtValorConvMedico
+            // 
+            this.txtValorConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtValorConvMedico.Location = new System.Drawing.Point(9, 170);
+            this.txtValorConvMedico.MaxLength = 5;
+            this.txtValorConvMedico.Name = "txtValorConvMedico";
+            this.txtValorConvMedico.Size = new System.Drawing.Size(150, 20);
+            this.txtValorConvMedico.TabIndex = 6;
+            this.txtValorConvMedico.Tag = "";
+            this.txtValorConvMedico.TextChanged += new System.EventHandler(this.txtValorConvMedico_TextChanged);
+            this.txtValorConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorConvMedico_KeyPress);
+            // 
             // Form_CadConvMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,8 +183,8 @@
         private System.Windows.Forms.Label lblNomeConvMedico;
         private System.Windows.Forms.TextBox txtNomeConvMedico;
         private System.Windows.Forms.MaskedTextBox mskCnpjConvMedico;
-        private System.Windows.Forms.TextBox txtValorConvMedico;
         private System.Windows.Forms.TextBox txtPorcentagemConvMedico;
         private System.Windows.Forms.Button btnCadastrarConvMedico;
+        private System.Windows.Forms.TextBox txtValorConvMedico;
     }
 }

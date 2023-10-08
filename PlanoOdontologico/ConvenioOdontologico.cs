@@ -1,5 +1,4 @@
-﻿using ConexaoBaseDados;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,103 +14,52 @@ namespace PlanoOdontologico
         public string PorcentagemConvOdonto { get; set; }
         public string MensagemErro { get; set; }
         
-        Crud_PlanoOdontologico conPlanoOdonto = new Crud_PlanoOdontologico();
-
         public bool AutenticarCadConvOdontologico()
         {
-            bool teste1, teste2, teste3, teste4;
+            bool auten1, auten2, auten3, auten4, auten5, auten6;
 
-            teste1 = TesteCaixaBaixa();
-            teste2 = TesteApenasLetras();
-            teste3 = TesteEspacosEmBranco();
-            teste4 = TesteCamposVaziosCnpjCaracteres();
+            auten1 = AutenticarCamposVazios();
+            auten2 = AutenticarCnpj();
+            auten3 = AutenticarEspacosEmBranco();
+            auten4 = AutenticarApenasLetras();
+            auten5 = AutenticarApenasNumeros();
+            auten6 = AutenticarCaixaBaixa();
 
-            if (teste1 == true &&
-                teste1 == true &&
-                teste2 == true &&
-                teste3 == true &&
-                teste4 == true)
+            if (auten1 == false)
             {
-                bool retornoCad = conPlanoOdonto.CadastrarConvOdontologico(NomeConvOdonto, CnpjConvOdonto, ValorConvOdonto, PorcentagemConvOdonto);
-                return true;
-            }
-            else
-            {
-                if (teste1 == false)
+                if (auten2 == false)
                 {
-                    MensagemErro = "Os campos não podem conter letras em caixa alta.";
-                    return false;
-                }
-                else if (teste2 == false)
-                {
-                    MensagemErro = "O campo NOME não pode conter números ou caracteres especiais.";
-                    return false;
-                }
-                else if (teste3 == false)
-                {
-                    MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter espaços em branco.";
-                    return false;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-
-        private bool TesteCaixaBaixa()
-        {
-            if (NomeConvOdonto.ToLower() == NomeConvOdonto)
-            {
-                return true;
-            }
-            else { return false; }
-        }
-
-        private bool TesteApenasLetras()
-        {
-            if (NomeConvOdonto.Any(char.IsLetter))
-            {
-                return true;
-            }
-            else { return false; }
-        }
-
-        private bool TesteEspacosEmBranco()
-        {
-            string texto1 = CnpjConvOdonto.Replace(" ", ""),
-                   texto2 = ValorConvOdonto.Replace(" ", ""),
-                   texto3 = PorcentagemConvOdonto.Replace(" ", "");
-
-            if (!(ValorConvOdonto != texto2) &&
-                !(PorcentagemConvOdonto != texto3))
-            {
-                return true;
-            }
-            else { return false; }
-        }
-
-        private bool TesteCamposVaziosCnpjCaracteres()
-        {
-            if (!string.IsNullOrEmpty(NomeConvOdonto) &&
-               !string.IsNullOrEmpty(CnpjConvOdonto) &&
-               !string.IsNullOrEmpty(ValorConvOdonto) &&
-               !string.IsNullOrEmpty(PorcentagemConvOdonto))
-            {
-                string valorDeTeste = CnpjConvOdonto;
-                valorDeTeste = valorDeTeste.Replace(".", "").Replace("/", "").Replace("-", "");
-
-                double alterar = double.Parse(ValorConvOdonto);
-
-                if (valorDeTeste.Length == 14)
-                {
-                    if (valorDeTeste.All(char.IsDigit) && PorcentagemConvOdonto.All(char.IsDigit))
+                    if (auten3 == false)
                     {
-                        return true;
+                        if (auten4 == false)
+                        {
+                            if (auten5 == false)
+                            {
+                                if (auten6 == false)
+                                {
+                                    return true;
+                                }
+                                else
+                                {
+                                    MensagemErro = "Os campos não podem conter letras em caixa alta.";
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter letras ou caracteres.";
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            MensagemErro = "O campo NOME não pode conter números ou caracteres especiais.";
+                            return false;
+                        }
                     }
                     else
                     {
-                        MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter letras ou caracteres.";
+                        MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter espaços em branco.";
                         return false;
                     }
                 }
@@ -127,5 +75,78 @@ namespace PlanoOdontologico
                 return false;
             }
         }
+
+        private bool AutenticarCamposVazios()
+        {
+            if (!string.IsNullOrEmpty(NomeConvOdonto) &&
+               !string.IsNullOrEmpty(CnpjConvOdonto) &&
+               !string.IsNullOrEmpty(ValorConvOdonto) &&
+               !string.IsNullOrEmpty(PorcentagemConvOdonto))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarCnpj()
+        {
+            string autenticacaoCnpj = CnpjConvOdonto;
+            autenticacaoCnpj = autenticacaoCnpj.Replace(".", "").Replace("/", "").Replace("-", "");
+
+            if (autenticacaoCnpj.Length == 14)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarEspacosEmBranco()
+        {
+            string texto1 = CnpjConvOdonto.Replace(" ", ""),
+                   texto2 = ValorConvOdonto.Replace(" ", ""),
+                   texto3 = PorcentagemConvOdonto.Replace(" ", "");
+
+            if (!(ValorConvOdonto != texto2) &&
+                !(PorcentagemConvOdonto != texto3))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarApenasLetras()
+        {
+            if (NomeConvOdonto.Any(char.IsLetter))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarApenasNumeros()
+        {
+            string valorDeTeste = CnpjConvOdonto;
+            valorDeTeste = valorDeTeste.Replace(".", "").Replace("/", "").Replace("-", "");
+
+            if (valorDeTeste.All(char.IsDigit) && ValorConvOdonto.All(char.IsDigit) && PorcentagemConvOdonto.All(char.IsDigit))
+            {
+                return true;
+            }
+            else
+            {
+                MensagemErro = "Os campos CNPJ, VALOR e DESCONTO não podem conter letras ou caracteres.";
+                return false;
+            }
+        }
+
+        private bool AutenticarCaixaBaixa()
+        {
+            if (NomeConvOdonto.ToLower() == NomeConvOdonto)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
     }
 }

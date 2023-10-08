@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PlanoSaude;
+using ConexaoBaseDados;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
@@ -15,6 +16,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
     public partial class Form_CadConvMedico : Form
     {
         ConvenioMedico conMedico = new ConvenioMedico();
+        crud_PlanoSaude _crud_PlanoSaude = new crud_PlanoSaude();
+
         public Form_CadConvMedico()
         {
             InitializeComponent();
@@ -29,15 +32,18 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             conMedico.PorcentagemConvMedico = txtPorcentagemConvMedico.Text;
 
             retornoCadastro = conMedico.AutenticarCadConvMedico();
-            if (retornoCadastro == true)
+            if (retornoCadastro)
             {
-                MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
-                Close();
+                //bool incluirConvMedico = _crud_PlanoSaude.CadastrarConvMedico(conMedico);
+                //if (incluirConvMedico)
+                //{
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
+                    Close();
+                //}
             }
             else
             {
                 MessageBox.Show(conMedico.MensagemErro, "Falha na operação!");
-
             }
         }
 
@@ -48,6 +54,11 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtValorConvMedico_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

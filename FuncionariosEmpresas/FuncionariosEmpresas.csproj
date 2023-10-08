@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FBAB88DA-E044-4DAC-880F-43427B86700C}</ProjectGuid>
+    <ProjectGuid>{3750CDE9-E095-4AAE-BDAA-28B0A662F70A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlanoOdontologico</RootNamespace>
-    <AssemblyName>PlanoOdontologico</AssemblyName>
+    <RootNamespace>FuncionariosEmpresas</RootNamespace>
+    <AssemblyName>FuncionariosEmpresas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConvenioOdontologico.cs" />
+    <Compile Include="Funcionarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

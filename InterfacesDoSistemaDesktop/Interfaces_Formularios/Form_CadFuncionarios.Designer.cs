@@ -38,7 +38,7 @@
             this.txtSalarioFunc = new System.Windows.Forms.TextBox();
             this.mskDataAdmissaoFunc = new System.Windows.Forms.MaskedTextBox();
             this.txtCargoFunc = new System.Windows.Forms.TextBox();
-            this.cmbEmpresaFunc = new System.Windows.Forms.ComboBox();
+            this.cmbEmpregadorFunc = new System.Windows.Forms.ComboBox();
             this.txtRegistroFunc = new System.Windows.Forms.TextBox();
             this.lblDependentesFunc = new System.Windows.Forms.Label();
             this.lblSalarioFunc = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.lblCidadeFunc = new System.Windows.Forms.Label();
             this.gpbContato = new System.Windows.Forms.GroupBox();
             this.mskCelularSecundarioFunc = new System.Windows.Forms.MaskedTextBox();
-            this.mskNumeroPrincipalFunc = new System.Windows.Forms.MaskedTextBox();
+            this.mskCelularPrincipalFunc = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefoneFunc = new System.Windows.Forms.MaskedTextBox();
             this.txtEmailSecundarioFunc = new System.Windows.Forms.TextBox();
             this.txtEmailFunc = new System.Windows.Forms.TextBox();
@@ -118,6 +118,7 @@
             this.btnCadMuitoVeiculo.TabIndex = 4;
             this.btnCadMuitoVeiculo.Text = "Cadastrar Funcionário";
             this.btnCadMuitoVeiculo.UseVisualStyleBackColor = false;
+            this.btnCadMuitoVeiculo.Click += new System.EventHandler(this.btnCadMuitoVeiculo_Click);
             // 
             // gpbInfoContratuais
             // 
@@ -127,7 +128,7 @@
             this.gpbInfoContratuais.Controls.Add(this.txtSalarioFunc);
             this.gpbInfoContratuais.Controls.Add(this.mskDataAdmissaoFunc);
             this.gpbInfoContratuais.Controls.Add(this.txtCargoFunc);
-            this.gpbInfoContratuais.Controls.Add(this.cmbEmpresaFunc);
+            this.gpbInfoContratuais.Controls.Add(this.cmbEmpregadorFunc);
             this.gpbInfoContratuais.Controls.Add(this.txtRegistroFunc);
             this.gpbInfoContratuais.Controls.Add(this.lblDependentesFunc);
             this.gpbInfoContratuais.Controls.Add(this.lblSalarioFunc);
@@ -201,14 +202,14 @@
             this.txtCargoFunc.Size = new System.Drawing.Size(150, 20);
             this.txtCargoFunc.TabIndex = 10;
             // 
-            // cmbEmpresaFunc
+            // cmbEmpregadorFunc
             // 
-            this.cmbEmpresaFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.cmbEmpresaFunc.FormattingEnabled = true;
-            this.cmbEmpresaFunc.Location = new System.Drawing.Point(146, 49);
-            this.cmbEmpresaFunc.Name = "cmbEmpresaFunc";
-            this.cmbEmpresaFunc.Size = new System.Drawing.Size(121, 21);
-            this.cmbEmpresaFunc.TabIndex = 9;
+            this.cmbEmpregadorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbEmpregadorFunc.FormattingEnabled = true;
+            this.cmbEmpregadorFunc.Location = new System.Drawing.Point(146, 49);
+            this.cmbEmpregadorFunc.Name = "cmbEmpregadorFunc";
+            this.cmbEmpregadorFunc.Size = new System.Drawing.Size(121, 21);
+            this.cmbEmpregadorFunc.TabIndex = 9;
             // 
             // txtRegistroFunc
             // 
@@ -419,7 +420,7 @@
             // gpbContato
             // 
             this.gpbContato.Controls.Add(this.mskCelularSecundarioFunc);
-            this.gpbContato.Controls.Add(this.mskNumeroPrincipalFunc);
+            this.gpbContato.Controls.Add(this.mskCelularPrincipalFunc);
             this.gpbContato.Controls.Add(this.mskTelefoneFunc);
             this.gpbContato.Controls.Add(this.txtEmailSecundarioFunc);
             this.gpbContato.Controls.Add(this.txtEmailFunc);
@@ -444,14 +445,14 @@
             this.mskCelularSecundarioFunc.Size = new System.Drawing.Size(120, 20);
             this.mskCelularSecundarioFunc.TabIndex = 9;
             // 
-            // mskNumeroPrincipalFunc
+            // mskCelularPrincipalFunc
             // 
-            this.mskNumeroPrincipalFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskNumeroPrincipalFunc.Location = new System.Drawing.Point(9, 96);
-            this.mskNumeroPrincipalFunc.Mask = "(00) 00000-0000";
-            this.mskNumeroPrincipalFunc.Name = "mskNumeroPrincipalFunc";
-            this.mskNumeroPrincipalFunc.Size = new System.Drawing.Size(120, 20);
-            this.mskNumeroPrincipalFunc.TabIndex = 8;
+            this.mskCelularPrincipalFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCelularPrincipalFunc.Location = new System.Drawing.Point(9, 96);
+            this.mskCelularPrincipalFunc.Mask = "(00) 00000-0000";
+            this.mskCelularPrincipalFunc.Name = "mskCelularPrincipalFunc";
+            this.mskCelularPrincipalFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskCelularPrincipalFunc.TabIndex = 8;
             // 
             // mskTelefoneFunc
             // 
@@ -752,7 +753,7 @@
         private System.Windows.Forms.TextBox txtEmailFunc;
         private System.Windows.Forms.TextBox txtEmailSecundarioFunc;
         private System.Windows.Forms.MaskedTextBox mskTelefoneFunc;
-        private System.Windows.Forms.MaskedTextBox mskNumeroPrincipalFunc;
+        private System.Windows.Forms.MaskedTextBox mskCelularPrincipalFunc;
         private System.Windows.Forms.MaskedTextBox mskCelularSecundarioFunc;
         private System.Windows.Forms.TextBox txtRegistroFunc;
         private System.Windows.Forms.TextBox txtCidadeFunc;
@@ -760,7 +761,7 @@
         private System.Windows.Forms.TextBox txtBairroFunc;
         private System.Windows.Forms.TextBox txtRuaFunc;
         private System.Windows.Forms.TextBox txtNumeroFunc;
-        private System.Windows.Forms.ComboBox cmbEmpresaFunc;
+        private System.Windows.Forms.ComboBox cmbEmpregadorFunc;
         private System.Windows.Forms.TextBox txtCargoFunc;
         private System.Windows.Forms.MaskedTextBox mskDataAdmissaoFunc;
         private System.Windows.Forms.TextBox txtSalarioFunc;
