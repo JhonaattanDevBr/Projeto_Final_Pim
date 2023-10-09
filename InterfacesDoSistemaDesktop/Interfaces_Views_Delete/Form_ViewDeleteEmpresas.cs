@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
+namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 {
-    public partial class Form_CadFuncionarios : Form
+    public partial class Form_ViewDeleteEmpresas : Form
     {
-        public Form_CadFuncionarios()
+        public Form_ViewDeleteEmpresas()
         {
             InitializeComponent();
         }
