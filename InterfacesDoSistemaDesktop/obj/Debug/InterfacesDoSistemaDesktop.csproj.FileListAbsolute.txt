@@ -123,7 +123,6 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\ProjetoContaPersonal.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Formularios.Form_CadConvMedico.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Formularios.Form_CadConvOdontologico.resources
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Formularios.Form_CadFuncionarios.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\PlanoSaude.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\PlanoSaude.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\PlanoOdontologico.dll
@@ -186,3 +185,7 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistema
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.csproj.CopyComplete
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.exe
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\FuncionariosEmpresas.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\FuncionariosEmpresas.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteEmpresas.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Formularios.Form_CadFuncionarios.resources
