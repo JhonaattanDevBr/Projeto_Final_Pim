@@ -2,6 +2,7 @@
     ViewData["Title"] = "Página Home";
 }
 
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -13,10 +14,10 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item active">
-                        <a class="nav-link" asp-controller="PagInicio" asp-action="Inicio">Início</a> <!--Referente a página de inicio-->
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="AcessoUsuario" asp-action="Salario">Salário</a>
+                        <a class="nav-link" asp-controller="PagSalario" asp-action="Salario">Salário</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento">Folha de Pagamento</a>
@@ -31,20 +32,20 @@
                         <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Home" asp-action="Index">Sair</a>
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Login" asp-action="Index">Sair</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-
-<!--Aqui vou criara uma controller somente para a página de inicio do meu sistema para gerenciar as ações dessa pág-->
-
-<div class="container">
-    <div class="row">
+@if (Model != null && Model.Any<FuncionarioModel>())
+{
+    foreach (FuncionarioModel funcionario in Model)
+    {
+        <div class="row">
         <div class="col-sm">
-            <p class="display-5">Bem-vindo, Nome</p>
+            <p class="display-5">Bem-vindo, </p>
             <p class="fs-5">Área do Usúario</p>
             <!-- Empilhe as colunas, em dispositivos móveis, fazendo com que uma tenha largura total e a outra só metade -->
             <div class="card">
@@ -52,23 +53,19 @@
                 <div class="card-body">
                     <div class="container">
                         <div class="col">
-                            <label>Nome: </label>
-
+                            Nome: 
                         </div>
                         <br />
                         <div class="col">
-                            <label>Cargo: </label>
-
+                            Cargo: 
                         </div>
                         <br />
                         <div class="col">
-                            <label>Empregador: </label>
-
+                            Empregador: 
                         </div>
                         <br />
                         <div class="col">
-                            <label>Inicio na organização: </label>
-
+                            Data Admissão: 
                         </div>
                     </div>
                 </div>
@@ -83,36 +80,27 @@
                 <div class="card-header">Linha do Tempo</div>
                 <div class="card-body">
                     <div class="col">
-                        <label>Informe do último salário: </label>
-
+                        Informe do último salário: 
                     </div>
                     <br>
                     <div class="col">
-                        <label>Liberação de férias: </label>
-                        Status não definido
-                    </div>
+                            Férias: Status não definido
+                    </div>                  
                     <br />
                     <div class="col">
-                        <label>Férias: </label>
-                        Status não definido
+                        Faltas:
                     </div>
                     <br />
-                    <div class="col">
-                        <label>Faltas: </label>
-
-                    </div>
-                    <br />
-                    <div class="col">
-                        <label>Adiantamento quinzenal: </label>
-
-                    </div>
                 </div>
             </div>
 
         </div>
         <br />
     </div>
-</div>
+    }
+}
+
+    
 
 
 
