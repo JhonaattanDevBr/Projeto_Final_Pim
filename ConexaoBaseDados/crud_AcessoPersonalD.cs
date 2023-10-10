@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConexaoBaseDados
 {
-    public class ConexaoDeDados
+    public class crud_AcessoPersonalD
     {
-        public bool CadastrarFuncPersonalD(string nome, string cargo, string setor, string usuario, string senha, string confSenha)
+        public bool CadastrarFuncPersonalD(string nome,
+                                           string cargo,
+                                           string setor,
+                                           string usuario,
+                                           string senha,
+                                           string confirmacaoSenha)
         {
             string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -55,7 +61,7 @@ namespace ConexaoBaseDados
                 var pmtConfSenha = cmd.CreateParameter();
                 pmtConfSenha.ParameterName = "@confSenha";
                 pmtConfSenha.DbType= DbType.String;
-                pmtConfSenha.Value = confSenha;
+                pmtConfSenha.Value = confirmacaoSenha;
                 cmd.Parameters.Add(pmtConfSenha);
 
                 if(cmd.ExecuteNonQuery() > 0)

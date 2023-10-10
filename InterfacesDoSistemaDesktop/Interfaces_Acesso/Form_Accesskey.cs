@@ -38,7 +38,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             }
             else
             {
-                MessageBox.Show("Access Key invalida!");
+                MessageBox.Show("Access Key invalida.", "Falha na operação!");
                 txtAccessKey.Clear();
                 txtAccessKey.Focus();
             }

@@ -9,26 +9,19 @@ namespace AcessoPersonalD
 {
     public class ContaPersonalD
     {
-        ConexaoDeDados cnnDados = new ConexaoDeDados();
-        
-        private string Nome { get; set; }
-        private string Cargo { get; set; }
-        private string Setor { get; set; }
-        private string Usuario { get; set; }
-        private string Senha { get; set; }
-        private string ConfirmacaoSenha { get; set; }
+        crud_AcessoPersonalD cnnDados = new crud_AcessoPersonalD();
+
+        public string Nome { get; set; }
+        public string Cargo { get; set; }
+        public string Setor { get; set; }
+        public string Usuario { get; set; }
+        public string Senha { get; set; }
+        public string ConfirmacaoSenha { get; set; }
         public string MensagemErro { get; set; }
 
-        public bool PegarValoresParaValidarCadastro(string nome, string cargo, string setor, string usuario, string senha, string confSenha)
+        public bool PegarValoresParaValidarCadastro()
         {
             bool teste1, teste2, teste3, teste4;
-
-            Nome = nome;
-            Cargo = cargo;
-            Setor = setor;
-            Usuario = usuario;
-            Senha = senha;
-            ConfirmacaoSenha = confSenha;
 
             teste1 = TesteCaixaBaixa();
             teste2 = TesteApenasLetras();
@@ -41,7 +34,7 @@ namespace AcessoPersonalD
                teste3 == true &&
                teste4 == true)
             {
-                bool retornoCad = cnnDados.CadastrarFuncPersonalD(nome, cargo, setor, usuario, senha, confSenha);
+                bool retornoCad = cnnDados.CadastrarFuncPersonalD(Nome, Cargo, Setor, Usuario, Senha, ConfirmacaoSenha);
                 return true;
             }
             else
@@ -117,11 +110,11 @@ namespace AcessoPersonalD
         private bool TesteAutenticacaoSenha()
         {
             if (!string.IsNullOrEmpty(Nome) &&
-               !string.IsNullOrEmpty(Cargo) &&
-               !string.IsNullOrEmpty(Setor) &&
-               !string.IsNullOrEmpty(Usuario) &&
-               !string.IsNullOrEmpty(Senha) &&
-               !string.IsNullOrEmpty(ConfirmacaoSenha))
+                !string.IsNullOrEmpty(Cargo) &&
+                !string.IsNullOrEmpty(Setor) &&
+                !string.IsNullOrEmpty(Usuario) &&
+                !string.IsNullOrEmpty(Senha) &&
+                !string.IsNullOrEmpty(ConfirmacaoSenha))
             {
                 if (Senha.Length >= 8 && ConfirmacaoSenha.Length >= 8)
                 {

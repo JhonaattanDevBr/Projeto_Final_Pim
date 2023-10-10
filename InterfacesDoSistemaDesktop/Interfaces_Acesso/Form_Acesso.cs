@@ -32,5 +32,12 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Acesso
             Form_Accesskey form_Accesskey = new Form_Accesskey();
             form_Accesskey.ShowDialog();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            // Vou testar as interfaces de cadastrro aqui, depois eu ajusto nos lugares certos
+            Form_CadEmpresas form_CadEmpresas = new Form_CadEmpresas();
+            form_CadEmpresas.ShowDialog();
+        }
     }
 }
