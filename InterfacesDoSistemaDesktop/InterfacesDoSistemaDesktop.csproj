@@ -214,6 +214,12 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.Designer.cs">
+      <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.resx">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.resx">
+      <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.resx">
       <DependentUpon>Form_ViewDeleteEmpresas.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +379,8 @@
       <Name>ProjetoContaPersonal</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interfaces_Updates\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

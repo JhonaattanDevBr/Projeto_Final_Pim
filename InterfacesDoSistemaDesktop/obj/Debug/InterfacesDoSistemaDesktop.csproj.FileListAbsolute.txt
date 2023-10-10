@@ -189,3 +189,4 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\bin\Debug\FuncionariosEmpresas.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteEmpresas.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Formularios.Form_CadFuncionarios.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteConvenioMedico.resources
