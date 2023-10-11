@@ -30,7 +30,43 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CadFuncionarios));
             this.gpbCadastroFuncionarios = new System.Windows.Forms.GroupBox();
+            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
+            this.gpbEndereco = new System.Windows.Forms.GroupBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtRuaFunc = new System.Windows.Forms.TextBox();
+            this.txtBairroFunc = new System.Windows.Forms.TextBox();
+            this.txtEstadoFunc = new System.Windows.Forms.TextBox();
+            this.txtCidadeFunc = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblRua = new System.Windows.Forms.Label();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.gpbContrato = new System.Windows.Forms.GroupBox();
+            this.txtDependentesFunc = new System.Windows.Forms.TextBox();
+            this.cmbConvOdontoFunc = new System.Windows.Forms.ComboBox();
+            this.cmbConvMedico = new System.Windows.Forms.ComboBox();
+            this.txtSalarioFunc = new System.Windows.Forms.TextBox();
+            this.mskDataAdmissaoFunc = new System.Windows.Forms.DateTimePicker();
+            this.txtCargoFunc = new System.Windows.Forms.TextBox();
+            this.cmbEmpregadorFunc = new System.Windows.Forms.ComboBox();
+            this.txtRegistroFunc = new System.Windows.Forms.TextBox();
+            this.lblDependentes = new System.Windows.Forms.Label();
+            this.lblConvenioOdontologico = new System.Windows.Forms.Label();
+            this.lblConvenioMedico = new System.Windows.Forms.Label();
+            this.lblSalario = new System.Windows.Forms.Label();
+            this.lblDataAdmissao = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblEmpregador = new System.Windows.Forms.Label();
+            this.lblNumeroRegistro = new System.Windows.Forms.Label();
             this.gpbContato = new System.Windows.Forms.GroupBox();
+            this.mskCelularSecundarioFunc = new System.Windows.Forms.MaskedTextBox();
+            this.mskCelularPrincipalFunc = new System.Windows.Forms.MaskedTextBox();
+            this.mskTelefoneFunc = new System.Windows.Forms.MaskedTextBox();
+            this.cmbDominioCaixaSecundaria = new System.Windows.Forms.ComboBox();
+            this.txtEmailSecundarioFunc = new System.Windows.Forms.TextBox();
+            this.cmbDominioCaixaPrincipal = new System.Windows.Forms.ComboBox();
+            this.txtEmailFunc = new System.Windows.Forms.TextBox();
             this.lblCelularSecundario = new System.Windows.Forms.Label();
             this.lblCelularPrincipal = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -39,27 +75,22 @@
             this.lblDominio = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.gpbInfoFuncionario = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.mskCpfFunc = new System.Windows.Forms.MaskedTextBox();
+            this.mskRgFunc = new System.Windows.Forms.MaskedTextBox();
+            this.rdbSexoFeminino = new System.Windows.Forms.RadioButton();
             this.rdbSexoMasculino = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdadeFunc = new System.Windows.Forms.TextBox();
+            this.txtSobrenomeFunc = new System.Windows.Forms.TextBox();
+            this.txtNomeFunc = new System.Windows.Forms.TextBox();
             this.lblCpf = new System.Windows.Forms.Label();
             this.lblRg = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.gpbCadastroFuncionarios.SuspendLayout();
+            this.gpbEndereco.SuspendLayout();
+            this.gpbContrato.SuspendLayout();
             this.gpbContato.SuspendLayout();
             this.gpbInfoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -67,25 +98,345 @@
             // gpbCadastroFuncionarios
             // 
             this.gpbCadastroFuncionarios.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbCadastroFuncionarios.Controls.Add(this.btnCadastrarFuncionario);
+            this.gpbCadastroFuncionarios.Controls.Add(this.gpbEndereco);
+            this.gpbCadastroFuncionarios.Controls.Add(this.gpbContrato);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbContato);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbInfoFuncionario);
             this.gpbCadastroFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbCadastroFuncionarios.Location = new System.Drawing.Point(12, 12);
             this.gpbCadastroFuncionarios.Name = "gpbCadastroFuncionarios";
-            this.gpbCadastroFuncionarios.Size = new System.Drawing.Size(960, 657);
+            this.gpbCadastroFuncionarios.Size = new System.Drawing.Size(611, 697);
             this.gpbCadastroFuncionarios.TabIndex = 0;
             this.gpbCadastroFuncionarios.TabStop = false;
             this.gpbCadastroFuncionarios.Text = "Cadastro de funcionários";
             // 
+            // btnCadastrarFuncionario
+            // 
+            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(236, 650);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(144, 30);
+            this.btnCadastrarFuncionario.TabIndex = 4;
+            this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
+            // 
+            // gpbEndereco
+            // 
+            this.gpbEndereco.Controls.Add(this.textBox14);
+            this.gpbEndereco.Controls.Add(this.txtRuaFunc);
+            this.gpbEndereco.Controls.Add(this.txtBairroFunc);
+            this.gpbEndereco.Controls.Add(this.txtEstadoFunc);
+            this.gpbEndereco.Controls.Add(this.txtCidadeFunc);
+            this.gpbEndereco.Controls.Add(this.lblNumero);
+            this.gpbEndereco.Controls.Add(this.lblRua);
+            this.gpbEndereco.Controls.Add(this.lblBairro);
+            this.gpbEndereco.Controls.Add(this.lblEstado);
+            this.gpbEndereco.Controls.Add(this.lblCidade);
+            this.gpbEndereco.Location = new System.Drawing.Point(6, 492);
+            this.gpbEndereco.Name = "gpbEndereco";
+            this.gpbEndereco.Size = new System.Drawing.Size(598, 135);
+            this.gpbEndereco.TabIndex = 3;
+            this.gpbEndereco.TabStop = false;
+            this.gpbEndereco.Text = "Informações de endereço";
+            // 
+            // textBox14
+            // 
+            this.textBox14.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.textBox14.Location = new System.Drawing.Point(230, 99);
+            this.textBox14.MaxLength = 5;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(80, 20);
+            this.textBox14.TabIndex = 9;
+            // 
+            // txtRuaFunc
+            // 
+            this.txtRuaFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtRuaFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtRuaFunc.Location = new System.Drawing.Point(9, 99);
+            this.txtRuaFunc.MaxLength = 100;
+            this.txtRuaFunc.Name = "txtRuaFunc";
+            this.txtRuaFunc.Size = new System.Drawing.Size(200, 20);
+            this.txtRuaFunc.TabIndex = 8;
+            // 
+            // txtBairroFunc
+            // 
+            this.txtBairroFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtBairroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtBairroFunc.Location = new System.Drawing.Point(284, 48);
+            this.txtBairroFunc.MaxLength = 50;
+            this.txtBairroFunc.Name = "txtBairroFunc";
+            this.txtBairroFunc.Size = new System.Drawing.Size(150, 20);
+            this.txtBairroFunc.TabIndex = 7;
+            // 
+            // txtEstadoFunc
+            // 
+            this.txtEstadoFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtEstadoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEstadoFunc.Location = new System.Drawing.Point(147, 48);
+            this.txtEstadoFunc.MaxLength = 40;
+            this.txtEstadoFunc.Name = "txtEstadoFunc";
+            this.txtEstadoFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtEstadoFunc.TabIndex = 6;
+            // 
+            // txtCidadeFunc
+            // 
+            this.txtCidadeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtCidadeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCidadeFunc.Location = new System.Drawing.Point(9, 48);
+            this.txtCidadeFunc.MaxLength = 40;
+            this.txtCidadeFunc.Name = "txtCidadeFunc";
+            this.txtCidadeFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtCidadeFunc.TabIndex = 5;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblNumero.Location = new System.Drawing.Point(227, 81);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(52, 15);
+            this.lblNumero.TabIndex = 4;
+            this.lblNumero.Text = "Número";
+            // 
+            // lblRua
+            // 
+            this.lblRua.AutoSize = true;
+            this.lblRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblRua.Location = new System.Drawing.Point(6, 81);
+            this.lblRua.Name = "lblRua";
+            this.lblRua.Size = new System.Drawing.Size(30, 15);
+            this.lblRua.TabIndex = 3;
+            this.lblRua.Text = "Rua";
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblBairro.Location = new System.Drawing.Point(281, 30);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(40, 15);
+            this.lblBairro.TabIndex = 2;
+            this.lblBairro.Text = "Bairro";
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblEstado.Location = new System.Drawing.Point(144, 30);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(45, 15);
+            this.lblEstado.TabIndex = 1;
+            this.lblEstado.Text = "Estado";
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblCidade.Location = new System.Drawing.Point(6, 30);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(46, 15);
+            this.lblCidade.TabIndex = 0;
+            this.lblCidade.Text = "Cidade";
+            // 
+            // gpbContrato
+            // 
+            this.gpbContrato.Controls.Add(this.txtDependentesFunc);
+            this.gpbContrato.Controls.Add(this.cmbConvOdontoFunc);
+            this.gpbContrato.Controls.Add(this.cmbConvMedico);
+            this.gpbContrato.Controls.Add(this.txtSalarioFunc);
+            this.gpbContrato.Controls.Add(this.mskDataAdmissaoFunc);
+            this.gpbContrato.Controls.Add(this.txtCargoFunc);
+            this.gpbContrato.Controls.Add(this.cmbEmpregadorFunc);
+            this.gpbContrato.Controls.Add(this.txtRegistroFunc);
+            this.gpbContrato.Controls.Add(this.lblDependentes);
+            this.gpbContrato.Controls.Add(this.lblConvenioOdontologico);
+            this.gpbContrato.Controls.Add(this.lblConvenioMedico);
+            this.gpbContrato.Controls.Add(this.lblSalario);
+            this.gpbContrato.Controls.Add(this.lblDataAdmissao);
+            this.gpbContrato.Controls.Add(this.lblCargo);
+            this.gpbContrato.Controls.Add(this.lblEmpregador);
+            this.gpbContrato.Controls.Add(this.lblNumeroRegistro);
+            this.gpbContrato.Location = new System.Drawing.Point(6, 335);
+            this.gpbContrato.Name = "gpbContrato";
+            this.gpbContrato.Size = new System.Drawing.Size(598, 142);
+            this.gpbContrato.TabIndex = 2;
+            this.gpbContrato.TabStop = false;
+            this.gpbContrato.Text = "Informações contratuais";
+            // 
+            // txtDependentesFunc
+            // 
+            this.txtDependentesFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtDependentesFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtDependentesFunc.Location = new System.Drawing.Point(490, 108);
+            this.txtDependentesFunc.MaxLength = 10;
+            this.txtDependentesFunc.Name = "txtDependentesFunc";
+            this.txtDependentesFunc.Size = new System.Drawing.Size(80, 20);
+            this.txtDependentesFunc.TabIndex = 15;
+            // 
+            // cmbConvOdontoFunc
+            // 
+            this.cmbConvOdontoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbConvOdontoFunc.FormattingEnabled = true;
+            this.cmbConvOdontoFunc.Location = new System.Drawing.Point(318, 107);
+            this.cmbConvOdontoFunc.Name = "cmbConvOdontoFunc";
+            this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 21);
+            this.cmbConvOdontoFunc.TabIndex = 14;
+            this.cmbConvOdontoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvOdontoFunc_KeyPress);
+            // 
+            // cmbConvMedico
+            // 
+            this.cmbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbConvMedico.FormattingEnabled = true;
+            this.cmbConvMedico.Location = new System.Drawing.Point(147, 107);
+            this.cmbConvMedico.Name = "cmbConvMedico";
+            this.cmbConvMedico.Size = new System.Drawing.Size(150, 21);
+            this.cmbConvMedico.TabIndex = 13;
+            this.cmbConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvMedico_KeyPress);
+            // 
+            // txtSalarioFunc
+            // 
+            this.txtSalarioFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtSalarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtSalarioFunc.Location = new System.Drawing.Point(9, 107);
+            this.txtSalarioFunc.Name = "txtSalarioFunc";
+            this.txtSalarioFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtSalarioFunc.TabIndex = 12;
+            // 
+            // mskDataAdmissaoFunc
+            // 
+            this.mskDataAdmissaoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.mskDataAdmissaoFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.mskDataAdmissaoFunc.Location = new System.Drawing.Point(400, 48);
+            this.mskDataAdmissaoFunc.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.mskDataAdmissaoFunc.Name = "mskDataAdmissaoFunc";
+            this.mskDataAdmissaoFunc.Size = new System.Drawing.Size(118, 23);
+            this.mskDataAdmissaoFunc.TabIndex = 11;
+            this.mskDataAdmissaoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskDataAdmissaoFunc_KeyPress);
+            // 
+            // txtCargoFunc
+            // 
+            this.txtCargoFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtCargoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCargoFunc.Location = new System.Drawing.Point(258, 48);
+            this.txtCargoFunc.MaxLength = 100;
+            this.txtCargoFunc.Name = "txtCargoFunc";
+            this.txtCargoFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtCargoFunc.TabIndex = 10;
+            // 
+            // cmbEmpregadorFunc
+            // 
+            this.cmbEmpregadorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbEmpregadorFunc.FormattingEnabled = true;
+            this.cmbEmpregadorFunc.Location = new System.Drawing.Point(109, 48);
+            this.cmbEmpregadorFunc.Name = "cmbEmpregadorFunc";
+            this.cmbEmpregadorFunc.Size = new System.Drawing.Size(129, 21);
+            this.cmbEmpregadorFunc.TabIndex = 9;
+            this.cmbEmpregadorFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEmpregadorFunc_KeyPress);
+            // 
+            // txtRegistroFunc
+            // 
+            this.txtRegistroFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtRegistroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtRegistroFunc.Location = new System.Drawing.Point(9, 48);
+            this.txtRegistroFunc.MaxLength = 1000;
+            this.txtRegistroFunc.Name = "txtRegistroFunc";
+            this.txtRegistroFunc.Size = new System.Drawing.Size(80, 20);
+            this.txtRegistroFunc.TabIndex = 8;
+            // 
+            // lblDependentes
+            // 
+            this.lblDependentes.AutoSize = true;
+            this.lblDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblDependentes.Location = new System.Drawing.Point(487, 90);
+            this.lblDependentes.Name = "lblDependentes";
+            this.lblDependentes.Size = new System.Drawing.Size(81, 15);
+            this.lblDependentes.TabIndex = 7;
+            this.lblDependentes.Text = "Dependentes";
+            // 
+            // lblConvenioOdontologico
+            // 
+            this.lblConvenioOdontologico.AutoSize = true;
+            this.lblConvenioOdontologico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblConvenioOdontologico.Location = new System.Drawing.Point(315, 89);
+            this.lblConvenioOdontologico.Name = "lblConvenioOdontologico";
+            this.lblConvenioOdontologico.Size = new System.Drawing.Size(132, 15);
+            this.lblConvenioOdontologico.TabIndex = 6;
+            this.lblConvenioOdontologico.Text = "Convênio odontológico";
+            // 
+            // lblConvenioMedico
+            // 
+            this.lblConvenioMedico.AutoSize = true;
+            this.lblConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblConvenioMedico.Location = new System.Drawing.Point(144, 89);
+            this.lblConvenioMedico.Name = "lblConvenioMedico";
+            this.lblConvenioMedico.Size = new System.Drawing.Size(102, 15);
+            this.lblConvenioMedico.TabIndex = 5;
+            this.lblConvenioMedico.Text = "Convênio médico";
+            // 
+            // lblSalario
+            // 
+            this.lblSalario.AutoSize = true;
+            this.lblSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblSalario.Location = new System.Drawing.Point(6, 89);
+            this.lblSalario.Name = "lblSalario";
+            this.lblSalario.Size = new System.Drawing.Size(46, 15);
+            this.lblSalario.TabIndex = 4;
+            this.lblSalario.Text = "Salário";
+            // 
+            // lblDataAdmissao
+            // 
+            this.lblDataAdmissao.AutoSize = true;
+            this.lblDataAdmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblDataAdmissao.Location = new System.Drawing.Point(397, 29);
+            this.lblDataAdmissao.Name = "lblDataAdmissao";
+            this.lblDataAdmissao.Size = new System.Drawing.Size(107, 15);
+            this.lblDataAdmissao.TabIndex = 3;
+            this.lblDataAdmissao.Text = "Data de admissão";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblCargo.Location = new System.Drawing.Point(255, 30);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(40, 15);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.Text = "Cargo";
+            // 
+            // lblEmpregador
+            // 
+            this.lblEmpregador.AutoSize = true;
+            this.lblEmpregador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblEmpregador.Location = new System.Drawing.Point(106, 30);
+            this.lblEmpregador.Name = "lblEmpregador";
+            this.lblEmpregador.Size = new System.Drawing.Size(76, 15);
+            this.lblEmpregador.TabIndex = 1;
+            this.lblEmpregador.Text = "Empregador";
+            // 
+            // lblNumeroRegistro
+            // 
+            this.lblNumeroRegistro.AutoSize = true;
+            this.lblNumeroRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblNumeroRegistro.Location = new System.Drawing.Point(6, 30);
+            this.lblNumeroRegistro.Name = "lblNumeroRegistro";
+            this.lblNumeroRegistro.Size = new System.Drawing.Size(81, 15);
+            this.lblNumeroRegistro.TabIndex = 0;
+            this.lblNumeroRegistro.Text = "Nº de registro";
+            // 
             // gpbContato
             // 
-            this.gpbContato.Controls.Add(this.maskedTextBox5);
-            this.gpbContato.Controls.Add(this.maskedTextBox4);
-            this.gpbContato.Controls.Add(this.maskedTextBox3);
-            this.gpbContato.Controls.Add(this.comboBox2);
-            this.gpbContato.Controls.Add(this.textBox5);
-            this.gpbContato.Controls.Add(this.comboBox1);
-            this.gpbContato.Controls.Add(this.textBox4);
+            this.gpbContato.Controls.Add(this.mskCelularSecundarioFunc);
+            this.gpbContato.Controls.Add(this.mskCelularPrincipalFunc);
+            this.gpbContato.Controls.Add(this.mskTelefoneFunc);
+            this.gpbContato.Controls.Add(this.cmbDominioCaixaSecundaria);
+            this.gpbContato.Controls.Add(this.txtEmailSecundarioFunc);
+            this.gpbContato.Controls.Add(this.cmbDominioCaixaPrincipal);
+            this.gpbContato.Controls.Add(this.txtEmailFunc);
             this.gpbContato.Controls.Add(this.lblCelularSecundario);
             this.gpbContato.Controls.Add(this.lblCelularPrincipal);
             this.gpbContato.Controls.Add(this.lblTelefone);
@@ -95,16 +446,105 @@
             this.gpbContato.Controls.Add(this.lblEmail);
             this.gpbContato.Location = new System.Drawing.Point(6, 172);
             this.gpbContato.Name = "gpbContato";
-            this.gpbContato.Size = new System.Drawing.Size(901, 182);
+            this.gpbContato.Size = new System.Drawing.Size(598, 144);
             this.gpbContato.TabIndex = 1;
             this.gpbContato.TabStop = false;
             this.gpbContato.Text = "Informações de contato";
+            // 
+            // mskCelularSecundarioFunc
+            // 
+            this.mskCelularSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCelularSecundarioFunc.Location = new System.Drawing.Point(295, 107);
+            this.mskCelularSecundarioFunc.Mask = "(00) 00000-0000";
+            this.mskCelularSecundarioFunc.Name = "mskCelularSecundarioFunc";
+            this.mskCelularSecundarioFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskCelularSecundarioFunc.TabIndex = 13;
+            // 
+            // mskCelularPrincipalFunc
+            // 
+            this.mskCelularPrincipalFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCelularPrincipalFunc.Location = new System.Drawing.Point(152, 107);
+            this.mskCelularPrincipalFunc.Mask = "(00) 00000-0000";
+            this.mskCelularPrincipalFunc.Name = "mskCelularPrincipalFunc";
+            this.mskCelularPrincipalFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskCelularPrincipalFunc.TabIndex = 12;
+            // 
+            // mskTelefoneFunc
+            // 
+            this.mskTelefoneFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskTelefoneFunc.Location = new System.Drawing.Point(9, 107);
+            this.mskTelefoneFunc.Mask = "(00) 0000-0000";
+            this.mskTelefoneFunc.Name = "mskTelefoneFunc";
+            this.mskTelefoneFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskTelefoneFunc.TabIndex = 11;
+            // 
+            // cmbDominioCaixaSecundaria
+            // 
+            this.cmbDominioCaixaSecundaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbDominioCaixaSecundaria.FormattingEnabled = true;
+            this.cmbDominioCaixaSecundaria.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@outlook.com",
+            "@hotmail.com",
+            "@bol.com",
+            "@yahoo.com",
+            "@oul.com",
+            "@terra.com",
+            "@gmx.com",
+            "@icload.com",
+            "@zoho.com"});
+            this.cmbDominioCaixaSecundaria.Location = new System.Drawing.Point(455, 47);
+            this.cmbDominioCaixaSecundaria.Name = "cmbDominioCaixaSecundaria";
+            this.cmbDominioCaixaSecundaria.Size = new System.Drawing.Size(114, 21);
+            this.cmbDominioCaixaSecundaria.TabIndex = 10;
+            this.cmbDominioCaixaSecundaria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominioCaixaSecundaria_KeyPress);
+            // 
+            // txtEmailSecundarioFunc
+            // 
+            this.txtEmailSecundarioFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtEmailSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEmailSecundarioFunc.Location = new System.Drawing.Point(299, 47);
+            this.txtEmailSecundarioFunc.MaxLength = 150;
+            this.txtEmailSecundarioFunc.Name = "txtEmailSecundarioFunc";
+            this.txtEmailSecundarioFunc.Size = new System.Drawing.Size(150, 20);
+            this.txtEmailSecundarioFunc.TabIndex = 9;
+            // 
+            // cmbDominioCaixaPrincipal
+            // 
+            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
+            this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@outlook.com",
+            "@hotmail.com",
+            "@bol.com",
+            "@yahoo.com",
+            "@oul.com",
+            "@terra.com",
+            "@gmx.com",
+            "@icload.com",
+            "@zoho.com"});
+            this.cmbDominioCaixaPrincipal.Location = new System.Drawing.Point(165, 46);
+            this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
+            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 21);
+            this.cmbDominioCaixaPrincipal.TabIndex = 8;
+            this.cmbDominioCaixaPrincipal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominioCaixaPrincipal_KeyPress);
+            // 
+            // txtEmailFunc
+            // 
+            this.txtEmailFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtEmailFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEmailFunc.Location = new System.Drawing.Point(9, 47);
+            this.txtEmailFunc.MaxLength = 150;
+            this.txtEmailFunc.Name = "txtEmailFunc";
+            this.txtEmailFunc.Size = new System.Drawing.Size(150, 20);
+            this.txtEmailFunc.TabIndex = 7;
             // 
             // lblCelularSecundario
             // 
             this.lblCelularSecundario.AutoSize = true;
             this.lblCelularSecundario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCelularSecundario.Location = new System.Drawing.Point(462, 103);
+            this.lblCelularSecundario.Location = new System.Drawing.Point(292, 89);
             this.lblCelularSecundario.Name = "lblCelularSecundario";
             this.lblCelularSecundario.Size = new System.Drawing.Size(110, 15);
             this.lblCelularSecundario.TabIndex = 6;
@@ -114,7 +554,7 @@
             // 
             this.lblCelularPrincipal.AutoSize = true;
             this.lblCelularPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCelularPrincipal.Location = new System.Drawing.Point(159, 103);
+            this.lblCelularPrincipal.Location = new System.Drawing.Point(149, 89);
             this.lblCelularPrincipal.Name = "lblCelularPrincipal";
             this.lblCelularPrincipal.Size = new System.Drawing.Size(96, 15);
             this.lblCelularPrincipal.TabIndex = 5;
@@ -124,7 +564,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblTelefone.Location = new System.Drawing.Point(6, 103);
+            this.lblTelefone.Location = new System.Drawing.Point(6, 89);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(55, 15);
             this.lblTelefone.TabIndex = 4;
@@ -134,7 +574,7 @@
             // 
             this.lblDominioSecundario.AutoSize = true;
             this.lblDominioSecundario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblDominioSecundario.Location = new System.Drawing.Point(551, 29);
+            this.lblDominioSecundario.Location = new System.Drawing.Point(452, 29);
             this.lblDominioSecundario.Name = "lblDominioSecundario";
             this.lblDominioSecundario.Size = new System.Drawing.Size(54, 15);
             this.lblDominioSecundario.TabIndex = 3;
@@ -144,7 +584,7 @@
             // 
             this.lblEmailSecundario.AutoSize = true;
             this.lblEmailSecundario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblEmailSecundario.Location = new System.Drawing.Point(371, 29);
+            this.lblEmailSecundario.Location = new System.Drawing.Point(296, 29);
             this.lblEmailSecundario.Name = "lblEmailSecundario";
             this.lblEmailSecundario.Size = new System.Drawing.Size(107, 15);
             this.lblEmailSecundario.TabIndex = 2;
@@ -154,7 +594,7 @@
             // 
             this.lblDominio.AutoSize = true;
             this.lblDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblDominio.Location = new System.Drawing.Point(201, 29);
+            this.lblDominio.Location = new System.Drawing.Point(162, 28);
             this.lblDominio.Name = "lblDominio";
             this.lblDominio.Size = new System.Drawing.Size(54, 15);
             this.lblDominio.TabIndex = 1;
@@ -172,13 +612,13 @@
             // 
             // gpbInfoFuncionario
             // 
-            this.gpbInfoFuncionario.Controls.Add(this.maskedTextBox2);
-            this.gpbInfoFuncionario.Controls.Add(this.maskedTextBox1);
-            this.gpbInfoFuncionario.Controls.Add(this.radioButton2);
+            this.gpbInfoFuncionario.Controls.Add(this.mskCpfFunc);
+            this.gpbInfoFuncionario.Controls.Add(this.mskRgFunc);
+            this.gpbInfoFuncionario.Controls.Add(this.rdbSexoFeminino);
             this.gpbInfoFuncionario.Controls.Add(this.rdbSexoMasculino);
-            this.gpbInfoFuncionario.Controls.Add(this.textBox3);
-            this.gpbInfoFuncionario.Controls.Add(this.textBox2);
-            this.gpbInfoFuncionario.Controls.Add(this.textBox1);
+            this.gpbInfoFuncionario.Controls.Add(this.txtIdadeFunc);
+            this.gpbInfoFuncionario.Controls.Add(this.txtSobrenomeFunc);
+            this.gpbInfoFuncionario.Controls.Add(this.txtNomeFunc);
             this.gpbInfoFuncionario.Controls.Add(this.lblCpf);
             this.gpbInfoFuncionario.Controls.Add(this.lblRg);
             this.gpbInfoFuncionario.Controls.Add(this.lblSexo);
@@ -187,40 +627,41 @@
             this.gpbInfoFuncionario.Controls.Add(this.lblNome);
             this.gpbInfoFuncionario.Location = new System.Drawing.Point(6, 22);
             this.gpbInfoFuncionario.Name = "gpbInfoFuncionario";
-            this.gpbInfoFuncionario.Size = new System.Drawing.Size(449, 135);
+            this.gpbInfoFuncionario.Size = new System.Drawing.Size(598, 135);
             this.gpbInfoFuncionario.TabIndex = 0;
             this.gpbInfoFuncionario.TabStop = false;
             this.gpbInfoFuncionario.Text = "Informações pessoais";
             // 
-            // maskedTextBox2
+            // mskCpfFunc
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(127, 98);
-            this.maskedTextBox2.Mask = "000.000.000-00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 12;
+            this.mskCpfFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCpfFunc.Location = new System.Drawing.Point(127, 98);
+            this.mskCpfFunc.Mask = "000.000.000-00";
+            this.mskCpfFunc.Name = "mskCpfFunc";
+            this.mskCpfFunc.Size = new System.Drawing.Size(100, 20);
+            this.mskCpfFunc.TabIndex = 12;
             // 
-            // maskedTextBox1
+            // mskRgFunc
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.maskedTextBox1.HideSelection = false;
-            this.maskedTextBox1.Location = new System.Drawing.Point(9, 98);
-            this.maskedTextBox1.Mask = "00.000.000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 11;
+            this.mskRgFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskRgFunc.HideSelection = false;
+            this.mskRgFunc.Location = new System.Drawing.Point(9, 98);
+            this.mskRgFunc.Mask = "00.000.000-0";
+            this.mskRgFunc.Name = "mskRgFunc";
+            this.mskRgFunc.Size = new System.Drawing.Size(100, 20);
+            this.mskRgFunc.TabIndex = 11;
             // 
-            // radioButton2
+            // rdbSexoFeminino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(401, 47);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(35, 21);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "F";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbSexoFeminino.AutoSize = true;
+            this.rdbSexoFeminino.Location = new System.Drawing.Point(401, 47);
+            this.rdbSexoFeminino.Name = "rdbSexoFeminino";
+            this.rdbSexoFeminino.Size = new System.Drawing.Size(35, 21);
+            this.rdbSexoFeminino.TabIndex = 10;
+            this.rdbSexoFeminino.TabStop = true;
+            this.rdbSexoFeminino.Text = "F";
+            this.rdbSexoFeminino.UseVisualStyleBackColor = true;
+            this.rdbSexoFeminino.CheckedChanged += new System.EventHandler(this.rdbSexoFeminino_CheckedChanged);
             // 
             // rdbSexoMasculino
             // 
@@ -233,34 +674,35 @@
             this.rdbSexoMasculino.Text = "M";
             this.rdbSexoMasculino.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtIdadeFunc
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox3.Location = new System.Drawing.Point(284, 48);
-            this.textBox3.MaxLength = 2;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtIdadeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtIdadeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtIdadeFunc.Location = new System.Drawing.Point(284, 48);
+            this.txtIdadeFunc.MaxLength = 2;
+            this.txtIdadeFunc.Name = "txtIdadeFunc";
+            this.txtIdadeFunc.Size = new System.Drawing.Size(50, 20);
+            this.txtIdadeFunc.TabIndex = 8;
             // 
-            // textBox2
+            // txtSobrenomeFunc
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox2.Location = new System.Drawing.Point(147, 48);
-            this.textBox2.MaxLength = 150;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtSobrenomeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtSobrenomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtSobrenomeFunc.Location = new System.Drawing.Point(147, 48);
+            this.txtSobrenomeFunc.MaxLength = 150;
+            this.txtSobrenomeFunc.Name = "txtSobrenomeFunc";
+            this.txtSobrenomeFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtSobrenomeFunc.TabIndex = 7;
             // 
-            // textBox1
+            // txtNomeFunc
             // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox1.Location = new System.Drawing.Point(9, 48);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNomeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtNomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtNomeFunc.Location = new System.Drawing.Point(9, 48);
+            this.txtNomeFunc.MaxLength = 30;
+            this.txtNomeFunc.Name = "txtNomeFunc";
+            this.txtNomeFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtNomeFunc.TabIndex = 6;
             // 
             // lblCpf
             // 
@@ -322,63 +764,12 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(9, 60);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(204, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(374, 60);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 9;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(554, 59);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 10;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(9, 131);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox3.TabIndex = 11;
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(162, 131);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox4.TabIndex = 12;
-            // 
-            // maskedTextBox5
-            // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(465, 133);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox5.TabIndex = 13;
-            // 
             // Form_CadFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(984, 681);
+            this.ClientSize = new System.Drawing.Size(635, 721);
             this.Controls.Add(this.gpbCadastroFuncionarios);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -388,6 +779,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionarios";
             this.gpbCadastroFuncionarios.ResumeLayout(false);
+            this.gpbEndereco.ResumeLayout(false);
+            this.gpbEndereco.PerformLayout();
+            this.gpbContrato.ResumeLayout(false);
+            this.gpbContrato.PerformLayout();
             this.gpbContato.ResumeLayout(false);
             this.gpbContato.PerformLayout();
             this.gpbInfoFuncionario.ResumeLayout(false);
@@ -406,13 +801,13 @@
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.Label lblSobrenome;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.MaskedTextBox mskCpfFunc;
+        private System.Windows.Forms.MaskedTextBox mskRgFunc;
+        private System.Windows.Forms.RadioButton rdbSexoFeminino;
         private System.Windows.Forms.RadioButton rdbSexoMasculino;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdadeFunc;
+        private System.Windows.Forms.TextBox txtSobrenomeFunc;
+        private System.Windows.Forms.TextBox txtNomeFunc;
         private System.Windows.Forms.GroupBox gpbContato;
         private System.Windows.Forms.Label lblCelularSecundario;
         private System.Windows.Forms.Label lblCelularPrincipal;
@@ -421,12 +816,41 @@
         private System.Windows.Forms.Label lblEmailSecundario;
         private System.Windows.Forms.Label lblDominio;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.MaskedTextBox mskCelularSecundarioFunc;
+        private System.Windows.Forms.MaskedTextBox mskCelularPrincipalFunc;
+        private System.Windows.Forms.MaskedTextBox mskTelefoneFunc;
+        private System.Windows.Forms.ComboBox cmbDominioCaixaSecundaria;
+        private System.Windows.Forms.TextBox txtEmailSecundarioFunc;
+        private System.Windows.Forms.ComboBox cmbDominioCaixaPrincipal;
+        private System.Windows.Forms.TextBox txtEmailFunc;
+        private System.Windows.Forms.GroupBox gpbContrato;
+        private System.Windows.Forms.Label lblDependentes;
+        private System.Windows.Forms.Label lblConvenioOdontologico;
+        private System.Windows.Forms.Label lblConvenioMedico;
+        private System.Windows.Forms.Label lblSalario;
+        private System.Windows.Forms.Label lblDataAdmissao;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblEmpregador;
+        private System.Windows.Forms.Label lblNumeroRegistro;
+        private System.Windows.Forms.GroupBox gpbEndereco;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblRua;
+        private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.TextBox txtDependentesFunc;
+        private System.Windows.Forms.ComboBox cmbConvOdontoFunc;
+        private System.Windows.Forms.ComboBox cmbConvMedico;
+        private System.Windows.Forms.TextBox txtSalarioFunc;
+        private System.Windows.Forms.DateTimePicker mskDataAdmissaoFunc;
+        private System.Windows.Forms.TextBox txtCargoFunc;
+        private System.Windows.Forms.ComboBox cmbEmpregadorFunc;
+        private System.Windows.Forms.TextBox txtRegistroFunc;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtRuaFunc;
+        private System.Windows.Forms.TextBox txtBairroFunc;
+        private System.Windows.Forms.TextBox txtEstadoFunc;
+        private System.Windows.Forms.TextBox txtCidadeFunc;
+        private System.Windows.Forms.Button btnCadastrarFuncionario;
     }
 }
