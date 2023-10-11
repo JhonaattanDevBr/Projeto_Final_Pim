@@ -6,6 +6,7 @@
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public int Idade { get; set; }
+        public string Sexo { get; set; }
         public int Id_endereco { get; set; }
         public int Registro { get; set; }
         public string Cpf { get; set; }

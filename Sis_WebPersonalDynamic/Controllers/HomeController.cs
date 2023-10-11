@@ -7,11 +7,7 @@ namespace Sis_WebPersonalDynamic.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index() 
-        {
-            return View();
-        }
-        /*public IActionResult Index()
+        public IActionResult Index()
         {
             List<FuncionarioModel> ListasFuncionarios = ListaFuncionario();
 
@@ -30,7 +26,7 @@ namespace Sis_WebPersonalDynamic.Controllers
 
             conexaoDB.Open();
 
-            string query = "SELECT Nome, Cargo, Data_admissao, Salario FROM Funcionario"; 
+            string query = "SELECT * FROM Funcionarios"; 
 
             SqlCommand command = new SqlCommand(query, conexaoDB);
             SqlDataReader reader = command.ExecuteReader();
@@ -38,10 +34,26 @@ namespace Sis_WebPersonalDynamic.Controllers
 
             while (reader.Read())
             {
-                funcionario.Nome = reader.GetString(0);
-                funcionario.Cargo = reader.GetString(1);
-                funcionario.Data_admissao = reader.GetDateTime(2);
-                funcionario.Salario = reader.GetFloat(3);
+                funcionario.Nome = reader.GetString(1);
+                funcionario.Sobrenome = reader.GetString(2);
+                funcionario.Idade = reader.GetInt32(3);
+                funcionario.Sexo = reader.GetString(4);               
+                funcionario.Id_endereco = reader.GetInt32(5);
+                funcionario.Registro = reader.GetInt32(6);
+                funcionario.Cpf = reader.GetString(7);
+                funcionario.Rg = reader.GetString(8);
+                funcionario.Email = reader.GetString(9);
+                funcionario.Email_secundario= reader.GetString(10);
+                funcionario.Telefone = reader.GetInt32(11);
+                funcionario.Celular_1 = reader.GetInt32(12);
+                funcionario.Celular_2 = reader.GetInt32(13);
+                funcionario.Num_dependentes = reader.GetInt32(14);
+                funcionario.Id_planos_saude = reader.GetInt32(15);
+                funcionario.Id_planos_odontologicos = reader.GetInt32(16);
+                funcionario.Id_empresas = reader.GetInt32(16);
+                funcionario.Cargo = reader.GetString(18);
+                funcionario.Salario = reader.GetFloat(19);
+                funcionario.Data_admissao = reader.GetDateTime(20);
 
                 lista.Add(funcionario);
             }
@@ -61,6 +73,6 @@ namespace Sis_WebPersonalDynamic.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }*/
+        }
     }
 }

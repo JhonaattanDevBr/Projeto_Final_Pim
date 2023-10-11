@@ -2,6 +2,7 @@
     ViewData["Title"] = "Página Home";
 }
 
+@model List<FuncionarioModel>
 
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -16,18 +17,21 @@
                     <li class="nav-item active">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Ponto" asp-action="Index">Apontamento</a> <!--Referente a página de inicio-->
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="PagSalario" asp-action="Salario">Salário</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento">Folha de Pagamento</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="PagHolerite" asp-action="Holerite">Holerite</a>
-                    </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
+                         <a class="nav-link" asp-controller="PagHolerite" asp-action="Holerite">Holerite</a>
+                    </li>-->
+                    <!--<li class="nav-item">
                         <a class="nav-link" asp-controller="Faltas" asp-action="Falta">Faltas</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
                     </li>
@@ -39,13 +43,14 @@
         </div>
     </nav>
 </header>
+
 @if (Model != null && Model.Any<FuncionarioModel>())
 {
     foreach (FuncionarioModel funcionario in Model)
     {
         <div class="row">
         <div class="col-sm">
-            <p class="display-5">Bem-vindo, </p>
+            <p class="display-5">Bem-vindo,@funcionario.Nome </p>
             <p class="fs-5">Área do Usúario</p>
             <!-- Empilhe as colunas, em dispositivos móveis, fazendo com que uma tenha largura total e a outra só metade -->
             <div class="card">
@@ -53,19 +58,19 @@
                 <div class="card-body">
                     <div class="container">
                         <div class="col">
-                            Nome: 
+                            Nome: @funcionario.Nome
                         </div>
                         <br />
                         <div class="col">
-                            Cargo: 
+                            Cargo: @funcionario.Cargo
                         </div>
                         <br />
                         <div class="col">
-                            Empregador: 
+                            Data Admissão: @funcionario.Data_admissao
                         </div>
                         <br />
                         <div class="col">
-                            Data Admissão: 
+                            Salário: R$ @funcionario.Salario
                         </div>
                     </div>
                 </div>
