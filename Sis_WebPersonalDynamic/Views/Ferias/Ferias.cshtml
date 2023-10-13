@@ -15,6 +15,10 @@
     </script>
 </head>
 
+@{
+    ViewData["Title"] = "Controle de Ponto";
+}
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -26,20 +30,23 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item active">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
+                        <a class="nav-link" asp-controller= "Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Ponto" asp-action="Index">Apontamento</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="PagSalario" asp-action="Salario">Salário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento"> folha de Pagamento</a>
+                        <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento">Folha de Pagamento</a>
                     </li>
-                    <li class="nav-item">
+                   <!-- <li class="nav-item">
                         <a class="nav-link" asp-controller="PagHolerite" asp-action="Holerite">Holerite</a>
-                    </li>
-                    <li class="nav-item">
+                     </li>-->
+                    <!--<li class="nav-item">
                         <a class="nav-link" asp-controller="Faltas" asp-action="Falta">Faltas</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
                     </li>
@@ -51,6 +58,9 @@
         </div>
     </nav>
 </header>
+
+
+
 
 <div class="alert alert-success" role="alert">
     <strong>Férias disponivel!</strong> Solicite um agendamento!

@@ -8,5 +8,6 @@ namespace Sis_WebPersonalDynamic.Controllers
         {
             return View();
         }
+        public List<>
     }
 }

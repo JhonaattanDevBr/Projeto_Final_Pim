@@ -13,14 +13,14 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item active">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
+                        <a class="nav-link" asp-controller= "Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" asp-controller="Ponto" asp-action="Index">Apontamento</a> <!--Referente a página de inicio-->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="PagSalario" asp-action="Salario">Salário</a>
-                    </li>
+                    </li> 
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento">Folha de Pagamento</a>
                     </li>
@@ -41,3 +41,31 @@
         </div>
     </nav>
 </header>
+
+<div class="display-5">
+        Meus Apontamentos 
+</div>
+<div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Dia</td>
+                    <td>Entrada</td>
+                    <td>Saida</td>
+                    <td>Entrada</td>
+                    <td>Saida</td>
+                    <td>Horas totais</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
