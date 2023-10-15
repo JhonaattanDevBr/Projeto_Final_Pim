@@ -214,6 +214,24 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
+      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.Designer.cs">
+      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.Designer.cs">
+      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +249,12 @@
     </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.Designer.cs">
       <DependentUpon>Form_ViewDeleteEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.Designer.cs">
+      <DependentUpon>Form_ViewDeleteFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -315,6 +339,15 @@
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.resx">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioMedico.resx">
+      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.resx">
+      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateEmpresas.resx">
+      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.resx">
       <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.resx">
       <DependentUpon>Form_ViewDeleteEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.resx">
+      <DependentUpon>Form_ViewDeleteFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -388,8 +424,6 @@
       <Name>ProjetoContaPersonal</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces_Updates\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

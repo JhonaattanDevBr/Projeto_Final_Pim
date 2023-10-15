@@ -8,12 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConexaoBaseDados;
 
 namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 {
     public partial class Form_CadFuncionarios : Form
     {
         Funcionarios _funcionarios = new Funcionarios();
+        crud_Funcionarios _crud_Funcionarios = new crud_Funcionarios();
+
         public Form_CadFuncionarios()
         {
             InitializeComponent();
@@ -38,7 +41,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             _funcionarios.Cargo = txtCargoFunc.Text;
             _funcionarios.DataAdmisao = mskDataAdmissaoFunc.Text;
             _funcionarios.Salario = txtSalarioFunc.Text;
-            _funcionarios.ConvenioMedico = cmbConvMedico.Text;
+            _funcionarios.ConvenioMedico = cmbConvMedico.ValueMember;
             _funcionarios.ConvenioOdontologico = cmbConvOdontoFunc.Text;
             _funcionarios.Dependentes = txtDependentesFunc.Text;
             _funcionarios.Cidade = txtCidadeFunc.Text;
@@ -103,6 +106,40 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         private void cmbConvOdontoFunc_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void Form_CadFuncionarios_Load(object sender, EventArgs e)
+        {
+            Dictionary<int, string> popularComboBox = _crud_Funcionarios.PopularCaixaConvenioMedico();
+            Dictionary<int, string> popularComboBoxOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
+
+            // Limpar os itens existentes no ComboBox
+            cmbConvMedico.Items.Clear();
+            cmbConvOdontoFunc.Items.Clear();
+
+            // Adicionar os valores ao ComboBox
+            foreach (var item in popularComboBox)
+            {
+                cmbConvMedico.Items.Add(item);
+            }
+
+            foreach (var item in popularComboBoxOdontologico)
+            {
+                cmbConvOdontoFunc.Items.Add(item);
+            }
+
+            // Definir a propriedade ValueMember para a chave (Id_saude)
+            cmbConvMedico.ValueMember = "Key";
+            cmbConvOdontoFunc.ValueMember = "key";
+
+            // Definir a propriedade DisplayMember para o nome
+            cmbConvMedico.DisplayMember = "Value";
+            cmbConvOdontoFunc.DisplayMember = "Value";
+
+            // Selecionar o primeiro item no ComboBox
+            cmbConvMedico.SelectedIndex = 0;
+            cmbConvOdontoFunc.SelectedIndex = 0;
+
         }
     }
 }

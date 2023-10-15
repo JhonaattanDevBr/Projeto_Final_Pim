@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gpbConvenioMedico = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ViewDeleteConvenioOdontologico));
+            this.gpbConvenioOdonto = new System.Windows.Forms.GroupBox();
             this.gpbFiltro = new System.Windows.Forms.GroupBox();
             this.btnLimparFiltro = new System.Windows.Forms.Button();
-            this.rdbCnpj = new System.Windows.Forms.RadioButton();
-            this.rdbNomeConvenioMedico = new System.Windows.Forms.RadioButton();
+            this.rdbCnpjConvOdonto = new System.Windows.Forms.RadioButton();
+            this.rdbNomeConvenioOdonto = new System.Windows.Forms.RadioButton();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
             this.mskPesquisaCnpj = new System.Windows.Forms.MaskedTextBox();
             this.lblCnpj = new System.Windows.Forms.Label();
-            this.lblNomeConvenioMedico = new System.Windows.Forms.Label();
-            this.txtPesquisaConvenioMedico = new System.Windows.Forms.TextBox();
-            this.cmbCampoPesquisa = new System.Windows.Forms.ComboBox();
+            this.lblNomeConvenioOdonto = new System.Windows.Forms.Label();
+            this.txtPesquisaConvenioOdonto = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluirRegistro = new System.Windows.Forms.Button();
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.dgvVisualizarEmpresa = new System.Windows.Forms.DataGridView();
-            this.gpbConvenioMedico.SuspendLayout();
+            this.dgvVisualizarConvOdonto = new System.Windows.Forms.DataGridView();
+            this.gpbConvenioOdonto.SuspendLayout();
             this.gpbFiltro.SuspendLayout();
             this.gpbPesquisa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarConvOdonto)).BeginInit();
             this.SuspendLayout();
             // 
-            // gpbConvenioMedico
+            // gpbConvenioOdonto
             // 
-            this.gpbConvenioMedico.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gpbConvenioMedico.Controls.Add(this.gpbFiltro);
-            this.gpbConvenioMedico.Controls.Add(this.gpbPesquisa);
-            this.gpbConvenioMedico.Controls.Add(this.btnSair);
-            this.gpbConvenioMedico.Controls.Add(this.btnExcluirRegistro);
-            this.gpbConvenioMedico.Controls.Add(this.btnAlterarDados);
-            this.gpbConvenioMedico.Controls.Add(this.btnPesquisar);
-            this.gpbConvenioMedico.Controls.Add(this.dgvVisualizarEmpresa);
-            this.gpbConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.gpbConvenioMedico.Location = new System.Drawing.Point(13, 12);
-            this.gpbConvenioMedico.Name = "gpbConvenioMedico";
-            this.gpbConvenioMedico.Size = new System.Drawing.Size(959, 657);
-            this.gpbConvenioMedico.TabIndex = 2;
-            this.gpbConvenioMedico.TabStop = false;
-            this.gpbConvenioMedico.Text = "Convênio odontológico";
+            this.gpbConvenioOdonto.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbConvenioOdonto.Controls.Add(this.gpbFiltro);
+            this.gpbConvenioOdonto.Controls.Add(this.gpbPesquisa);
+            this.gpbConvenioOdonto.Controls.Add(this.btnSair);
+            this.gpbConvenioOdonto.Controls.Add(this.btnExcluirRegistro);
+            this.gpbConvenioOdonto.Controls.Add(this.btnAlterarDados);
+            this.gpbConvenioOdonto.Controls.Add(this.btnPesquisar);
+            this.gpbConvenioOdonto.Controls.Add(this.dgvVisualizarConvOdonto);
+            this.gpbConvenioOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gpbConvenioOdonto.Location = new System.Drawing.Point(13, 12);
+            this.gpbConvenioOdonto.Name = "gpbConvenioOdonto";
+            this.gpbConvenioOdonto.Size = new System.Drawing.Size(959, 657);
+            this.gpbConvenioOdonto.TabIndex = 2;
+            this.gpbConvenioOdonto.TabStop = false;
+            this.gpbConvenioOdonto.Text = "Convênio odontológico";
             // 
             // gpbFiltro
             // 
             this.gpbFiltro.Controls.Add(this.btnLimparFiltro);
-            this.gpbFiltro.Controls.Add(this.rdbCnpj);
-            this.gpbFiltro.Controls.Add(this.rdbNomeConvenioMedico);
-            this.gpbFiltro.Location = new System.Drawing.Point(723, 159);
+            this.gpbFiltro.Controls.Add(this.rdbCnpjConvOdonto);
+            this.gpbFiltro.Controls.Add(this.rdbNomeConvenioOdonto);
+            this.gpbFiltro.Location = new System.Drawing.Point(723, 138);
             this.gpbFiltro.Name = "gpbFiltro";
             this.gpbFiltro.Size = new System.Drawing.Size(230, 113);
             this.gpbFiltro.TabIndex = 6;
@@ -92,38 +92,37 @@
             this.btnLimparFiltro.Text = "Limpar filtro";
             this.btnLimparFiltro.UseVisualStyleBackColor = false;
             // 
-            // rdbCnpj
+            // rdbCnpjConvOdonto
             // 
-            this.rdbCnpj.AutoSize = true;
-            this.rdbCnpj.Location = new System.Drawing.Point(6, 50);
-            this.rdbCnpj.Name = "rdbCnpj";
-            this.rdbCnpj.Size = new System.Drawing.Size(65, 21);
-            this.rdbCnpj.TabIndex = 2;
-            this.rdbCnpj.TabStop = true;
-            this.rdbCnpj.Text = "CNPJ";
-            this.rdbCnpj.UseVisualStyleBackColor = true;
+            this.rdbCnpjConvOdonto.AutoSize = true;
+            this.rdbCnpjConvOdonto.Location = new System.Drawing.Point(6, 50);
+            this.rdbCnpjConvOdonto.Name = "rdbCnpjConvOdonto";
+            this.rdbCnpjConvOdonto.Size = new System.Drawing.Size(65, 21);
+            this.rdbCnpjConvOdonto.TabIndex = 2;
+            this.rdbCnpjConvOdonto.TabStop = true;
+            this.rdbCnpjConvOdonto.Text = "CNPJ";
+            this.rdbCnpjConvOdonto.UseVisualStyleBackColor = true;
             // 
-            // rdbNomeConvenioMedico
+            // rdbNomeConvenioOdonto
             // 
-            this.rdbNomeConvenioMedico.AutoSize = true;
-            this.rdbNomeConvenioMedico.Location = new System.Drawing.Point(7, 23);
-            this.rdbNomeConvenioMedico.Name = "rdbNomeConvenioMedico";
-            this.rdbNomeConvenioMedico.Size = new System.Drawing.Size(67, 21);
-            this.rdbNomeConvenioMedico.TabIndex = 0;
-            this.rdbNomeConvenioMedico.TabStop = true;
-            this.rdbNomeConvenioMedico.Text = "Nome";
-            this.rdbNomeConvenioMedico.UseVisualStyleBackColor = true;
+            this.rdbNomeConvenioOdonto.AutoSize = true;
+            this.rdbNomeConvenioOdonto.Location = new System.Drawing.Point(7, 23);
+            this.rdbNomeConvenioOdonto.Name = "rdbNomeConvenioOdonto";
+            this.rdbNomeConvenioOdonto.Size = new System.Drawing.Size(67, 21);
+            this.rdbNomeConvenioOdonto.TabIndex = 0;
+            this.rdbNomeConvenioOdonto.TabStop = true;
+            this.rdbNomeConvenioOdonto.Text = "Nome";
+            this.rdbNomeConvenioOdonto.UseVisualStyleBackColor = true;
             // 
             // gpbPesquisa
             // 
             this.gpbPesquisa.Controls.Add(this.mskPesquisaCnpj);
             this.gpbPesquisa.Controls.Add(this.lblCnpj);
-            this.gpbPesquisa.Controls.Add(this.lblNomeConvenioMedico);
-            this.gpbPesquisa.Controls.Add(this.txtPesquisaConvenioMedico);
-            this.gpbPesquisa.Controls.Add(this.cmbCampoPesquisa);
+            this.gpbPesquisa.Controls.Add(this.lblNomeConvenioOdonto);
+            this.gpbPesquisa.Controls.Add(this.txtPesquisaConvenioOdonto);
             this.gpbPesquisa.Location = new System.Drawing.Point(723, 22);
             this.gpbPesquisa.Name = "gpbPesquisa";
-            this.gpbPesquisa.Size = new System.Drawing.Size(230, 118);
+            this.gpbPesquisa.Size = new System.Drawing.Size(230, 98);
             this.gpbPesquisa.TabIndex = 5;
             this.gpbPesquisa.TabStop = false;
             this.gpbPesquisa.Text = "Pesquisa rápida";
@@ -131,7 +130,7 @@
             // mskPesquisaCnpj
             // 
             this.mskPesquisaCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskPesquisaCnpj.Location = new System.Drawing.Point(100, 87);
+            this.mskPesquisaCnpj.Location = new System.Drawing.Point(53, 64);
             this.mskPesquisaCnpj.Mask = "00,000,000/0000-00";
             this.mskPesquisaCnpj.Name = "mskPesquisaCnpj";
             this.mskPesquisaCnpj.Size = new System.Drawing.Size(124, 20);
@@ -141,41 +140,29 @@
             // 
             this.lblCnpj.AutoSize = true;
             this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCnpj.Location = new System.Drawing.Point(56, 90);
+            this.lblCnpj.Location = new System.Drawing.Point(9, 67);
             this.lblCnpj.Name = "lblCnpj";
             this.lblCnpj.Size = new System.Drawing.Size(38, 15);
             this.lblCnpj.TabIndex = 3;
             this.lblCnpj.Text = "CNPJ";
             // 
-            // lblNomeConvenioMedico
+            // lblNomeConvenioOdonto
             // 
-            this.lblNomeConvenioMedico.AutoSize = true;
-            this.lblNomeConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblNomeConvenioMedico.Location = new System.Drawing.Point(7, 56);
-            this.lblNomeConvenioMedico.Name = "lblNomeConvenioMedico";
-            this.lblNomeConvenioMedico.Size = new System.Drawing.Size(87, 15);
-            this.lblNomeConvenioMedico.TabIndex = 2;
-            this.lblNomeConvenioMedico.Text = "Nome fantasia";
+            this.lblNomeConvenioOdonto.AutoSize = true;
+            this.lblNomeConvenioOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblNomeConvenioOdonto.Location = new System.Drawing.Point(6, 33);
+            this.lblNomeConvenioOdonto.Name = "lblNomeConvenioOdonto";
+            this.lblNomeConvenioOdonto.Size = new System.Drawing.Size(41, 15);
+            this.lblNomeConvenioOdonto.TabIndex = 2;
+            this.lblNomeConvenioOdonto.Text = "Nome";
             // 
-            // txtPesquisaConvenioMedico
+            // txtPesquisaConvenioOdonto
             // 
-            this.txtPesquisaConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtPesquisaConvenioMedico.Location = new System.Drawing.Point(100, 56);
-            this.txtPesquisaConvenioMedico.Name = "txtPesquisaConvenioMedico";
-            this.txtPesquisaConvenioMedico.Size = new System.Drawing.Size(124, 20);
-            this.txtPesquisaConvenioMedico.TabIndex = 1;
-            // 
-            // cmbCampoPesquisa
-            // 
-            this.cmbCampoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbCampoPesquisa.FormattingEnabled = true;
-            this.cmbCampoPesquisa.Items.AddRange(new object[] {
-            "Nome",
-            "CNPJ"});
-            this.cmbCampoPesquisa.Location = new System.Drawing.Point(7, 23);
-            this.cmbCampoPesquisa.Name = "cmbCampoPesquisa";
-            this.cmbCampoPesquisa.Size = new System.Drawing.Size(217, 24);
-            this.cmbCampoPesquisa.TabIndex = 0;
+            this.txtPesquisaConvenioOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtPesquisaConvenioOdonto.Location = new System.Drawing.Point(53, 33);
+            this.txtPesquisaConvenioOdonto.Name = "txtPesquisaConvenioOdonto";
+            this.txtPesquisaConvenioOdonto.Size = new System.Drawing.Size(124, 20);
+            this.txtPesquisaConvenioOdonto.TabIndex = 1;
             // 
             // btnSair
             // 
@@ -225,14 +212,14 @@
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
-            // dgvVisualizarEmpresa
+            // dgvVisualizarConvOdonto
             // 
-            this.dgvVisualizarEmpresa.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvVisualizarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisualizarEmpresa.Location = new System.Drawing.Point(6, 22);
-            this.dgvVisualizarEmpresa.Name = "dgvVisualizarEmpresa";
-            this.dgvVisualizarEmpresa.Size = new System.Drawing.Size(711, 629);
-            this.dgvVisualizarEmpresa.TabIndex = 0;
+            this.dgvVisualizarConvOdonto.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvVisualizarConvOdonto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisualizarConvOdonto.Location = new System.Drawing.Point(6, 22);
+            this.dgvVisualizarConvOdonto.Name = "dgvVisualizarConvOdonto";
+            this.dgvVisualizarConvOdonto.Size = new System.Drawing.Size(711, 629);
+            this.dgvVisualizarConvOdonto.TabIndex = 0;
             // 
             // Form_ViewDeleteConvenioOdontologico
             // 
@@ -240,40 +227,40 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(984, 681);
-            this.Controls.Add(this.gpbConvenioMedico);
+            this.Controls.Add(this.gpbConvenioOdonto);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_ViewDeleteConvenioOdontologico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Convenio odontologico";
-            this.gpbConvenioMedico.ResumeLayout(false);
+            this.Text = "Convênio Oodontológico";
+            this.gpbConvenioOdonto.ResumeLayout(false);
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarConvOdonto)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gpbConvenioMedico;
+        private System.Windows.Forms.GroupBox gpbConvenioOdonto;
         private System.Windows.Forms.GroupBox gpbFiltro;
         private System.Windows.Forms.Button btnLimparFiltro;
-        private System.Windows.Forms.RadioButton rdbCnpj;
-        private System.Windows.Forms.RadioButton rdbNomeConvenioMedico;
+        private System.Windows.Forms.RadioButton rdbCnpjConvOdonto;
+        private System.Windows.Forms.RadioButton rdbNomeConvenioOdonto;
         private System.Windows.Forms.GroupBox gpbPesquisa;
         private System.Windows.Forms.MaskedTextBox mskPesquisaCnpj;
         private System.Windows.Forms.Label lblCnpj;
-        private System.Windows.Forms.Label lblNomeConvenioMedico;
-        private System.Windows.Forms.TextBox txtPesquisaConvenioMedico;
-        private System.Windows.Forms.ComboBox cmbCampoPesquisa;
+        private System.Windows.Forms.Label lblNomeConvenioOdonto;
+        private System.Windows.Forms.TextBox txtPesquisaConvenioOdonto;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluirRegistro;
         private System.Windows.Forms.Button btnAlterarDados;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.DataGridView dgvVisualizarEmpresa;
+        private System.Windows.Forms.DataGridView dgvVisualizarConvOdonto;
     }
 }

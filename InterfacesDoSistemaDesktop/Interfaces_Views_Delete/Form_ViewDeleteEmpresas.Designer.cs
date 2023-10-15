@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ViewDeleteEmpresas));
             this.gpbEmpresas = new System.Windows.Forms.GroupBox();
-            this.dgvVisualizarEmpresa = new System.Windows.Forms.DataGridView();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnAlterarDados = new System.Windows.Forms.Button();
-            this.btnExcluirRegistro = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
             this.gpbFiltro = new System.Windows.Forms.GroupBox();
-            this.cmbCampoPesquisa = new System.Windows.Forms.ComboBox();
-            this.txtPesquisaNomeFantasia = new System.Windows.Forms.TextBox();
-            this.lblNomeFantasia = new System.Windows.Forms.Label();
-            this.lblCnpj = new System.Windows.Forms.Label();
-            this.mskPesquisaCnpj = new System.Windows.Forms.MaskedTextBox();
-            this.rdbRazaoSocial = new System.Windows.Forms.RadioButton();
-            this.rdbSegmento = new System.Windows.Forms.RadioButton();
-            this.rdbCnpj = new System.Windows.Forms.RadioButton();
             this.btnLimparFiltro = new System.Windows.Forms.Button();
+            this.rdbCnpj = new System.Windows.Forms.RadioButton();
+            this.rdbSegmento = new System.Windows.Forms.RadioButton();
+            this.rdbRazaoSocial = new System.Windows.Forms.RadioButton();
+            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
+            this.mskPesquisaCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.lblCnpj = new System.Windows.Forms.Label();
+            this.lblNomeFantasia = new System.Windows.Forms.Label();
+            this.txtPesquisaNomeFantasia = new System.Windows.Forms.TextBox();
+            this.cmbCampoPesquisa = new System.Windows.Forms.ComboBox();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnExcluirRegistro = new System.Windows.Forms.Button();
+            this.btnAlterarDados = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.dgvVisualizarEmpresa = new System.Windows.Forms.DataGridView();
             this.gpbEmpresas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).BeginInit();
-            this.gpbPesquisa.SuspendLayout();
             this.gpbFiltro.SuspendLayout();
+            this.gpbPesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbEmpresas
@@ -70,62 +70,63 @@
             this.gpbEmpresas.TabStop = false;
             this.gpbEmpresas.Text = "Empresas";
             // 
-            // dgvVisualizarEmpresa
+            // gpbFiltro
             // 
-            this.dgvVisualizarEmpresa.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvVisualizarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisualizarEmpresa.Location = new System.Drawing.Point(6, 22);
-            this.dgvVisualizarEmpresa.Name = "dgvVisualizarEmpresa";
-            this.dgvVisualizarEmpresa.Size = new System.Drawing.Size(711, 629);
-            this.dgvVisualizarEmpresa.TabIndex = 0;
+            this.gpbFiltro.Controls.Add(this.btnLimparFiltro);
+            this.gpbFiltro.Controls.Add(this.rdbCnpj);
+            this.gpbFiltro.Controls.Add(this.rdbSegmento);
+            this.gpbFiltro.Controls.Add(this.rdbRazaoSocial);
+            this.gpbFiltro.Location = new System.Drawing.Point(723, 159);
+            this.gpbFiltro.Name = "gpbFiltro";
+            this.gpbFiltro.Size = new System.Drawing.Size(230, 137);
+            this.gpbFiltro.TabIndex = 6;
+            this.gpbFiltro.TabStop = false;
+            this.gpbFiltro.Text = "Filtro";
             // 
-            // btnPesquisar
+            // btnLimparFiltro
             // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnPesquisar.Location = new System.Drawing.Point(782, 369);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(108, 30);
-            this.btnPesquisar.TabIndex = 1;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnLimparFiltro.BackColor = System.Drawing.Color.LightBlue;
+            this.btnLimparFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimparFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnLimparFiltro.Location = new System.Drawing.Point(133, 104);
+            this.btnLimparFiltro.Name = "btnLimparFiltro";
+            this.btnLimparFiltro.Size = new System.Drawing.Size(91, 27);
+            this.btnLimparFiltro.TabIndex = 3;
+            this.btnLimparFiltro.Text = "Limpar filtro";
+            this.btnLimparFiltro.UseVisualStyleBackColor = false;
             // 
-            // btnAlterarDados
+            // rdbCnpj
             // 
-            this.btnAlterarDados.BackColor = System.Drawing.Color.LightBlue;
-            this.btnAlterarDados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlterarDados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAlterarDados.Location = new System.Drawing.Point(782, 416);
-            this.btnAlterarDados.Name = "btnAlterarDados";
-            this.btnAlterarDados.Size = new System.Drawing.Size(108, 30);
-            this.btnAlterarDados.TabIndex = 2;
-            this.btnAlterarDados.Text = "Alterar Dados";
-            this.btnAlterarDados.UseVisualStyleBackColor = false;
+            this.rdbCnpj.AutoSize = true;
+            this.rdbCnpj.Location = new System.Drawing.Point(7, 79);
+            this.rdbCnpj.Name = "rdbCnpj";
+            this.rdbCnpj.Size = new System.Drawing.Size(65, 21);
+            this.rdbCnpj.TabIndex = 2;
+            this.rdbCnpj.TabStop = true;
+            this.rdbCnpj.Text = "CNPJ";
+            this.rdbCnpj.UseVisualStyleBackColor = true;
             // 
-            // btnExcluirRegistro
+            // rdbSegmento
             // 
-            this.btnExcluirRegistro.BackColor = System.Drawing.Color.LightBlue;
-            this.btnExcluirRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExcluirRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnExcluirRegistro.Location = new System.Drawing.Point(782, 463);
-            this.btnExcluirRegistro.Name = "btnExcluirRegistro";
-            this.btnExcluirRegistro.Size = new System.Drawing.Size(108, 30);
-            this.btnExcluirRegistro.TabIndex = 3;
-            this.btnExcluirRegistro.Text = "Excluir Registro";
-            this.btnExcluirRegistro.UseVisualStyleBackColor = false;
+            this.rdbSegmento.AutoSize = true;
+            this.rdbSegmento.Location = new System.Drawing.Point(7, 51);
+            this.rdbSegmento.Name = "rdbSegmento";
+            this.rdbSegmento.Size = new System.Drawing.Size(98, 21);
+            this.rdbSegmento.TabIndex = 1;
+            this.rdbSegmento.TabStop = true;
+            this.rdbSegmento.Text = "Segmento";
+            this.rdbSegmento.UseVisualStyleBackColor = true;
             // 
-            // btnSair
+            // rdbRazaoSocial
             // 
-            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnSair.Location = new System.Drawing.Point(782, 513);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(108, 30);
-            this.btnSair.TabIndex = 4;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
+            this.rdbRazaoSocial.AutoSize = true;
+            this.rdbRazaoSocial.Location = new System.Drawing.Point(7, 23);
+            this.rdbRazaoSocial.Name = "rdbRazaoSocial";
+            this.rdbRazaoSocial.Size = new System.Drawing.Size(119, 21);
+            this.rdbRazaoSocial.TabIndex = 0;
+            this.rdbRazaoSocial.TabStop = true;
+            this.rdbRazaoSocial.Text = "Razao social";
+            this.rdbRazaoSocial.UseVisualStyleBackColor = true;
             // 
             // gpbPesquisa
             // 
@@ -141,18 +142,42 @@
             this.gpbPesquisa.TabStop = false;
             this.gpbPesquisa.Text = "Pesquisa rápida";
             // 
-            // gpbFiltro
+            // mskPesquisaCnpj
             // 
-            this.gpbFiltro.Controls.Add(this.btnLimparFiltro);
-            this.gpbFiltro.Controls.Add(this.rdbCnpj);
-            this.gpbFiltro.Controls.Add(this.rdbSegmento);
-            this.gpbFiltro.Controls.Add(this.rdbRazaoSocial);
-            this.gpbFiltro.Location = new System.Drawing.Point(723, 159);
-            this.gpbFiltro.Name = "gpbFiltro";
-            this.gpbFiltro.Size = new System.Drawing.Size(230, 137);
-            this.gpbFiltro.TabIndex = 6;
-            this.gpbFiltro.TabStop = false;
-            this.gpbFiltro.Text = "Filtro";
+            this.mskPesquisaCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskPesquisaCnpj.Location = new System.Drawing.Point(100, 87);
+            this.mskPesquisaCnpj.Mask = "00,000,000/0000-00";
+            this.mskPesquisaCnpj.Name = "mskPesquisaCnpj";
+            this.mskPesquisaCnpj.Size = new System.Drawing.Size(124, 20);
+            this.mskPesquisaCnpj.TabIndex = 4;
+            // 
+            // lblCnpj
+            // 
+            this.lblCnpj.AutoSize = true;
+            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblCnpj.Location = new System.Drawing.Point(56, 90);
+            this.lblCnpj.Name = "lblCnpj";
+            this.lblCnpj.Size = new System.Drawing.Size(38, 15);
+            this.lblCnpj.TabIndex = 3;
+            this.lblCnpj.Text = "CNPJ";
+            // 
+            // lblNomeFantasia
+            // 
+            this.lblNomeFantasia.AutoSize = true;
+            this.lblNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblNomeFantasia.Location = new System.Drawing.Point(7, 56);
+            this.lblNomeFantasia.Name = "lblNomeFantasia";
+            this.lblNomeFantasia.Size = new System.Drawing.Size(87, 15);
+            this.lblNomeFantasia.TabIndex = 2;
+            this.lblNomeFantasia.Text = "Nome fantasia";
+            // 
+            // txtPesquisaNomeFantasia
+            // 
+            this.txtPesquisaNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtPesquisaNomeFantasia.Location = new System.Drawing.Point(100, 56);
+            this.txtPesquisaNomeFantasia.Name = "txtPesquisaNomeFantasia";
+            this.txtPesquisaNomeFantasia.Size = new System.Drawing.Size(124, 20);
+            this.txtPesquisaNomeFantasia.TabIndex = 1;
             // 
             // cmbCampoPesquisa
             // 
@@ -166,87 +191,62 @@
             this.cmbCampoPesquisa.Size = new System.Drawing.Size(217, 24);
             this.cmbCampoPesquisa.TabIndex = 0;
             // 
-            // txtPesquisaNomeFantasia
+            // btnSair
             // 
-            this.txtPesquisaNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtPesquisaNomeFantasia.Location = new System.Drawing.Point(100, 56);
-            this.txtPesquisaNomeFantasia.Name = "txtPesquisaNomeFantasia";
-            this.txtPesquisaNomeFantasia.Size = new System.Drawing.Size(124, 20);
-            this.txtPesquisaNomeFantasia.TabIndex = 1;
+            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnSair.Location = new System.Drawing.Point(782, 513);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(108, 30);
+            this.btnSair.TabIndex = 4;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
             // 
-            // lblNomeFantasia
+            // btnExcluirRegistro
             // 
-            this.lblNomeFantasia.AutoSize = true;
-            this.lblNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblNomeFantasia.Location = new System.Drawing.Point(7, 56);
-            this.lblNomeFantasia.Name = "lblNomeFantasia";
-            this.lblNomeFantasia.Size = new System.Drawing.Size(87, 15);
-            this.lblNomeFantasia.TabIndex = 2;
-            this.lblNomeFantasia.Text = "Nome fantasia";
+            this.btnExcluirRegistro.BackColor = System.Drawing.Color.LightBlue;
+            this.btnExcluirRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcluirRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnExcluirRegistro.Location = new System.Drawing.Point(782, 463);
+            this.btnExcluirRegistro.Name = "btnExcluirRegistro";
+            this.btnExcluirRegistro.Size = new System.Drawing.Size(108, 30);
+            this.btnExcluirRegistro.TabIndex = 3;
+            this.btnExcluirRegistro.Text = "Excluir Registro";
+            this.btnExcluirRegistro.UseVisualStyleBackColor = false;
             // 
-            // lblCnpj
+            // btnAlterarDados
             // 
-            this.lblCnpj.AutoSize = true;
-            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCnpj.Location = new System.Drawing.Point(56, 90);
-            this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(38, 15);
-            this.lblCnpj.TabIndex = 3;
-            this.lblCnpj.Text = "CNPJ";
+            this.btnAlterarDados.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAlterarDados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlterarDados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAlterarDados.Location = new System.Drawing.Point(782, 416);
+            this.btnAlterarDados.Name = "btnAlterarDados";
+            this.btnAlterarDados.Size = new System.Drawing.Size(108, 30);
+            this.btnAlterarDados.TabIndex = 2;
+            this.btnAlterarDados.Text = "Alterar Dados";
+            this.btnAlterarDados.UseVisualStyleBackColor = false;
             // 
-            // mskPesquisaCnpj
+            // btnPesquisar
             // 
-            this.mskPesquisaCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskPesquisaCnpj.Location = new System.Drawing.Point(100, 87);
-            this.mskPesquisaCnpj.Mask = "00,000,000/0000-00";
-            this.mskPesquisaCnpj.Name = "mskPesquisaCnpj";
-            this.mskPesquisaCnpj.Size = new System.Drawing.Size(124, 20);
-            this.mskPesquisaCnpj.TabIndex = 4;
+            this.btnPesquisar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnPesquisar.Location = new System.Drawing.Point(782, 369);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(108, 30);
+            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
-            // rdbRazaoSocial
+            // dgvVisualizarEmpresa
             // 
-            this.rdbRazaoSocial.AutoSize = true;
-            this.rdbRazaoSocial.Location = new System.Drawing.Point(7, 23);
-            this.rdbRazaoSocial.Name = "rdbRazaoSocial";
-            this.rdbRazaoSocial.Size = new System.Drawing.Size(119, 21);
-            this.rdbRazaoSocial.TabIndex = 0;
-            this.rdbRazaoSocial.TabStop = true;
-            this.rdbRazaoSocial.Text = "Razao social";
-            this.rdbRazaoSocial.UseVisualStyleBackColor = true;
-            // 
-            // rdbSegmento
-            // 
-            this.rdbSegmento.AutoSize = true;
-            this.rdbSegmento.Location = new System.Drawing.Point(7, 51);
-            this.rdbSegmento.Name = "rdbSegmento";
-            this.rdbSegmento.Size = new System.Drawing.Size(98, 21);
-            this.rdbSegmento.TabIndex = 1;
-            this.rdbSegmento.TabStop = true;
-            this.rdbSegmento.Text = "Segmento";
-            this.rdbSegmento.UseVisualStyleBackColor = true;
-            // 
-            // rdbCnpj
-            // 
-            this.rdbCnpj.AutoSize = true;
-            this.rdbCnpj.Location = new System.Drawing.Point(7, 79);
-            this.rdbCnpj.Name = "rdbCnpj";
-            this.rdbCnpj.Size = new System.Drawing.Size(65, 21);
-            this.rdbCnpj.TabIndex = 2;
-            this.rdbCnpj.TabStop = true;
-            this.rdbCnpj.Text = "CNPJ";
-            this.rdbCnpj.UseVisualStyleBackColor = true;
-            // 
-            // btnLimparFiltro
-            // 
-            this.btnLimparFiltro.BackColor = System.Drawing.Color.LightBlue;
-            this.btnLimparFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimparFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnLimparFiltro.Location = new System.Drawing.Point(133, 104);
-            this.btnLimparFiltro.Name = "btnLimparFiltro";
-            this.btnLimparFiltro.Size = new System.Drawing.Size(91, 27);
-            this.btnLimparFiltro.TabIndex = 3;
-            this.btnLimparFiltro.Text = "Limpar filtro";
-            this.btnLimparFiltro.UseVisualStyleBackColor = false;
+            this.dgvVisualizarEmpresa.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvVisualizarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisualizarEmpresa.Location = new System.Drawing.Point(0, 22);
+            this.dgvVisualizarEmpresa.Name = "dgvVisualizarEmpresa";
+            this.dgvVisualizarEmpresa.Size = new System.Drawing.Size(711, 629);
+            this.dgvVisualizarEmpresa.TabIndex = 0;
             // 
             // Form_ViewDeleteEmpresas
             // 
@@ -263,11 +263,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minhas Empresas";
             this.gpbEmpresas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).EndInit();
-            this.gpbPesquisa.ResumeLayout(false);
-            this.gpbPesquisa.PerformLayout();
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();
+            this.gpbPesquisa.ResumeLayout(false);
+            this.gpbPesquisa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarEmpresa)).EndInit();
             this.ResumeLayout(false);
 
         }
