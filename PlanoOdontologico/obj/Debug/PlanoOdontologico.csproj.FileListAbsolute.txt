@@ -1,10 +1,6 @@
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\bin\Debug\PlanoOdontologico.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\bin\Debug\PlanoOdontologico.pdb
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\bin\Debug\ConexaoBaseDados.dll
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\bin\Debug\ConexaoBaseDados.pdb
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\bin\Debug\ConexaoBaseDados.dll.config
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.AssemblyReference.cache
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CoreCompileInputs.cache
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CopyComplete
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb

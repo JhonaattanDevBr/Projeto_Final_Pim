@@ -53,8 +53,9 @@
     </Compile>
     <Compile Include="crud_AcessoPersonalD.cs" />
     <Compile Include="crud_Empresas.cs" />
-    <Compile Include="Crud_PlanoOdontologico.cs" />
-    <Compile Include="Crud_PlanoSaude.cs" />
+    <Compile Include="crud_Funcionarios.cs" />
+    <Compile Include="crud_PlanoOdontologico.cs" />
+    <Compile Include="crud_PlanoSaude.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -90,6 +91,23 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmpresasClientes\EmpresasClientes.csproj">
+      <Project>{2da1744f-4b4e-4e55-9c6c-2e1020163e25}</Project>
+      <Name>EmpresasClientes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlanoOdontologico\PlanoOdontologico.csproj">
+      <Project>{fbab88da-e044-4dac-880f-43427b86700c}</Project>
+      <Name>PlanoOdontologico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlanoSaude\PlanoSaude.csproj">
+      <Project>{f88ded36-c8a0-4463-a6bc-59b07243be23}</Project>
+      <Name>PlanoSaude</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

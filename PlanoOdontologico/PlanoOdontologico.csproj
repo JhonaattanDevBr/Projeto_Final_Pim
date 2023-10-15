@@ -44,11 +44,5 @@
     <Compile Include="ConvenioOdontologico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConexaoBaseDados\ConexaoBaseDados.csproj">
-      <Project>{364e34f6-1dc5-44ab-903b-7a3fb269aca6}</Project>
-      <Name>ConexaoBaseDados</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

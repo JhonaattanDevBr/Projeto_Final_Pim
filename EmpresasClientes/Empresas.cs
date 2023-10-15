@@ -136,6 +136,7 @@ namespace EmpresasClientes
 
             if (autenticacaoTelefone.Length == 10)
             {
+                Telefone = autenticacaoTelefone;
                 return true;
             }
             else { return false; }
