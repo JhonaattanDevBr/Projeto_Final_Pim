@@ -49,7 +49,7 @@ namespace ConexaoBaseDados
             try
             {
                 conexaoDb.Open();
-<<<<<<< HEAD
+
 
                 string query = "SELECT id_odonto, Nome FROM Planos_odontologicos ORDER BY id_odonto";
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
@@ -72,20 +72,6 @@ namespace ConexaoBaseDados
                 conexaoDb.Close();
                 return dados;
 
-=======
-                string query = "SELECT Id_odonto, Nome FROM Planos_odontologicos ORDER BY Id_odonto";
-                SqlCommand cmd = new SqlCommand(query, conexaoDb);
-                SqlDataReader leitura = cmd.ExecuteReader();
-                Dictionary<int, string> dados = new Dictionary<int, string>();
-                while (leitura.Read())
-                {
-                    int idOdonto = leitura.GetInt32(0); 
-                    string nome = leitura.GetString(1);
-
-                    dados[idOdonto] = nome;
-                }
-                conexaoDb.Close();
-                return dados;
             }
             catch (Exception)
             {
@@ -116,7 +102,7 @@ namespace ConexaoBaseDados
                 }
                 conexaoDb.Close();
                 return dados;
->>>>>>> 3b71e34739114b321fc3bd8126412ef93d7e46cb
+
             }
             catch (Exception)
             {
@@ -124,9 +110,5 @@ namespace ConexaoBaseDados
                 throw;
             }
         }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 3b71e34739114b321fc3bd8126412ef93d7e46cb
     }
 }

@@ -110,8 +110,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 
         private void Form_CadFuncionarios_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            Dictionary<int, string> popularComboBox = _crud_Funcionarios.PopularCaixaConvenioMedico();
+
+            Dictionary<int, string> popularComboBoxConvenioMedico = _crud_Funcionarios.PopularCaixaConvenioMedico();
             Dictionary<int, string> popularComboBoxOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
 
             // Limpar os itens existentes no ComboBox
@@ -119,13 +119,12 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             cmbConvOdontoFunc.Items.Clear();
 
             // Adicionar os valores ao ComboBox
-            foreach (var item in popularComboBox)
-=======
-            Dictionary<int, string> popularComboBoxConvenioMedico = _crud_Funcionarios.PopularCaixaConvenioMedico();
+            foreach (var item in popularComboBoxConvenioMedico)
+
             cmbConvMedico.Items.Clear(); // Limpar os itens existentes no ComboBox
 
             foreach (var convMedico in popularComboBoxConvenioMedico) // Adicionar os valores ao ComboBox
->>>>>>> 3b71e34739114b321fc3bd8126412ef93d7e46cb
+
             {
                 cmbConvMedico.Items.Add(convMedico);
             }
@@ -133,7 +132,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             cmbConvMedico.DisplayMember = "Value"; // Definir a propriedade DisplayMember para o nome
             cmbConvMedico.SelectedIndex = 0; // Selecionar o primeiro item no ComboBox
 
-<<<<<<< HEAD
+
             foreach (var item in popularComboBoxOdontologico)
             {
                 cmbConvOdontoFunc.Items.Add(item);
@@ -150,7 +149,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             // Selecionar o primeiro item no ComboBox
             cmbConvMedico.SelectedIndex = 0;
             cmbConvOdontoFunc.SelectedIndex = 0;
-=======
+
             Dictionary<int, string> popularComboBoxConvenioOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
             cmbConvOdontoFunc.Items.Clear();
 
@@ -164,7 +163,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 
             Dictionary<int, string> polularComboBoxEmpregador = _crud_Funcionarios.PopularCaixaEmpregador();
             cmbEmpregadorFunc.Items.Clear();
->>>>>>> 3b71e34739114b321fc3bd8126412ef93d7e46cb
+
 
             foreach(var empregador in polularComboBoxEmpregador)
             {
