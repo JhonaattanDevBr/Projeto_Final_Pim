@@ -15,13 +15,14 @@ namespace Sis_WebPersonalDynamic.Controllers
         public ActionResult Login(LoginModel login)
         {
             // Verifique se o email e a senha correspondem a um registro válido no banco de dados
-            string suaConsultaSQL = "SELECT COUNT(*) FROM Acesso_funcionario WHERE Email = @email AND Senha = @senha";
+            string query = "SELECT COUNT(*) FROM Acesso_funcionario WHERE Email = @email AND Senha = @senha";
             int count = 0;
 
             using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True"))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand(suaConsultaSQL, connection))
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@email", login.Email);
                     command.Parameters.AddWithValue("@senha", login.Senha);
@@ -29,9 +30,14 @@ namespace Sis_WebPersonalDynamic.Controllers
                 }
             }
 
+            /*if (login.Email == null || login.Senha == null)
+            {
+                TempData["MensagemErro"] = "Não foi possível logar no sistema";
+                return View(login);
+            }*/
             if (count == 1)
             {
-                // Credenciais válidas, redirecione para a página inicial
+                // Credenciais válidas, redirecione para a página Index
                 return RedirectToAction("Index", "Home");
             }
             else
