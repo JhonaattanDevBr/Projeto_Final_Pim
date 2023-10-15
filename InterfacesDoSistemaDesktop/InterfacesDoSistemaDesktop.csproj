@@ -214,6 +214,34 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs" />
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
+      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs" />
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.Designer.cs">
+      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.cs" />
+    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.Designer.cs">
+      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.cs" />
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.Designer.cs">
+      <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioOdontologico.cs" />
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioOdontologico.Designer.cs">
+      <DependentUpon>Form_ViewDeleteConvenioOdontologico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.cs" />
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.Designer.cs">
+      <DependentUpon>Form_ViewDeleteEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.cs" />
+    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.Designer.cs">
+      <DependentUpon>Form_ViewDeleteFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Intercafes_Folha\Form_AdiantamentoQuinzenal.resx">
@@ -297,6 +325,27 @@
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.resx">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioMedico.resx">
+      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.resx">
+      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateEmpresas.resx">
+      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.resx">
+      <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioOdontologico.resx">
+      <DependentUpon>Form_ViewDeleteConvenioOdontologico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteEmpresas.resx">
+      <DependentUpon>Form_ViewDeleteEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.resx">
+      <DependentUpon>Form_ViewDeleteFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -328,6 +377,10 @@
       <Project>{efbd6b3d-b1e6-4157-a815-29033744836f}</Project>
       <Name>BeneficioDasFerias</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConexaoBaseDados\ConexaoBaseDados.csproj">
+      <Project>{364e34f6-1dc5-44ab-903b-7a3fb269aca6}</Project>
+      <Name>ConexaoBaseDados</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
       <Project>{c87b4bb1-ebf0-48cc-a842-b80c2e4be3c3}</Project>
       <Name>DecimoTerceiroSalario</Name>
@@ -339,6 +392,10 @@
     <ProjectReference Include="..\FolhaDePagamento\FolhaDePagamento.csproj">
       <Project>{8eab9188-d295-4ca5-b00f-2dd61279e3b0}</Project>
       <Name>FolhaDePagamento</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FuncionariosEmpresas\FuncionariosEmpresas.csproj">
+      <Project>{3750cde9-e095-4aae-bdaa-28b0a662f70a}</Project>
+      <Name>FuncionariosEmpresas</Name>
     </ProjectReference>
     <ProjectReference Include="..\PlanoOdontologico\PlanoOdontologico.csproj">
       <Project>{fbab88da-e044-4dac-880f-43427b86700c}</Project>
