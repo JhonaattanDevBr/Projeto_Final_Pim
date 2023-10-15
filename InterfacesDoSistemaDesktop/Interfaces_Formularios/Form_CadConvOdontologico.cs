@@ -25,10 +25,20 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         private void btnCadastrarConvOdonto_Click(object sender, EventArgs e)
         {
             bool retornoCadastro;
+            
+            // Preciso replicar isso no CadConvenioMedico
+            if (txtValorConvOdonto.Text == "")
+            {
+                conOdonto.ValorConvOdonto = "0";
+                conOdonto.PorcentagemConvOdonto = txtPorcentagemConvOdonto.Text;
+            }
+            else
+            {
+                conOdonto.PorcentagemConvOdonto = "0";
+                conOdonto.ValorConvOdonto = txtValorConvOdonto.Text;
+            }
             conOdonto.NomeConvOdonto = txtNomeConvOdonto.Text;
             conOdonto.CnpjConvOdonto = mskCnpjConvOdonto.Text;
-            conOdonto.ValorConvOdonto = txtValorConvOdonto.Text;
-            conOdonto.PorcentagemConvOdonto = txtPorcentagemConvOdonto.Text;
 
             retornoCadastro = conOdonto.AutenticarCadConvOdontologico();
             if (retornoCadastro)
@@ -43,7 +53,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             else
             {
                 MessageBox.Show(conOdonto.MensagemErro, "Falha na operação!");
-
             }
         }
 
@@ -53,6 +62,32 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             if (!char.IsDigit(e.KeyChar) && valorDigitado != 08 && valorDigitado != 46 && valorDigitado != 44)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void rdbValorFixado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbValorFixado.Checked)
+            {
+                txtPorcentagemConvOdonto.Clear();
+                lblvalorFixado.Enabled = true;
+                txtValorConvOdonto.Enabled = true;
+                lblPercentual.Enabled = false;
+                txtPorcentagemConvOdonto.Enabled = false;
+                //txtPorcentagemConvOdonto.Text = "0";
+            }
+        }
+
+        private void rdbPercentual_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbPercentual.Checked)
+            {
+                txtValorConvOdonto.Clear();
+                lblPercentual.Enabled = true;
+                txtPorcentagemConvOdonto.Enabled = true;
+                lblvalorFixado.Enabled = false;
+                txtValorConvOdonto.Enabled = false;
+                //txtValorConvOdonto.Text = "0";
             }
         }
     }

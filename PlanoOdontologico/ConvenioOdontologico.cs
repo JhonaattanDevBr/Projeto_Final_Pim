@@ -25,17 +25,17 @@ namespace PlanoOdontologico
             auten5 = AutenticarApenasNumeros();
             auten6 = AutenticarCaixaBaixa();
 
-            if (auten1 == false)
+            if (auten1)
             {
-                if (auten2 == false)
+                if (auten2)
                 {
-                    if (auten3 == false)
+                    if (auten3)
                     {
-                        if (auten4 == false)
+                        if (auten4)
                         {
-                            if (auten5 == false)
+                            if (auten5)
                             {
-                                if (auten6 == false)
+                                if (auten6)
                                 {
                                     return true;
                                 }

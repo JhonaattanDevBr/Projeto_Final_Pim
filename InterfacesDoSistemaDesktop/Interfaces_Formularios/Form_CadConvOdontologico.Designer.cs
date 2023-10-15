@@ -35,29 +35,35 @@
             this.txtValorConvOdonto = new System.Windows.Forms.TextBox();
             this.mskCnpjConvOdonto = new System.Windows.Forms.MaskedTextBox();
             this.txtNomeConvOdonto = new System.Windows.Forms.TextBox();
-            this.lblPorcentagemConvOdonto = new System.Windows.Forms.Label();
-            this.lblPrecoConvOdonto = new System.Windows.Forms.Label();
+            this.lblPercentual = new System.Windows.Forms.Label();
+            this.lblvalorFixado = new System.Windows.Forms.Label();
             this.lblCnpjConvOdonto = new System.Windows.Forms.Label();
             this.lblNomeConvOdonto = new System.Windows.Forms.Label();
+            this.lblModoDesconto = new System.Windows.Forms.Label();
+            this.rdbValorFixado = new System.Windows.Forms.RadioButton();
+            this.rdbPercentual = new System.Windows.Forms.RadioButton();
             this.gpbConvenioOdontologico.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbConvenioOdontologico
             // 
             this.gpbConvenioOdontologico.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbConvenioOdontologico.Controls.Add(this.rdbPercentual);
+            this.gpbConvenioOdontologico.Controls.Add(this.rdbValorFixado);
+            this.gpbConvenioOdontologico.Controls.Add(this.lblModoDesconto);
             this.gpbConvenioOdontologico.Controls.Add(this.btnCadastrarConvOdonto);
             this.gpbConvenioOdontologico.Controls.Add(this.txtPorcentagemConvOdonto);
             this.gpbConvenioOdontologico.Controls.Add(this.txtValorConvOdonto);
             this.gpbConvenioOdontologico.Controls.Add(this.mskCnpjConvOdonto);
             this.gpbConvenioOdontologico.Controls.Add(this.txtNomeConvOdonto);
-            this.gpbConvenioOdontologico.Controls.Add(this.lblPorcentagemConvOdonto);
-            this.gpbConvenioOdontologico.Controls.Add(this.lblPrecoConvOdonto);
+            this.gpbConvenioOdontologico.Controls.Add(this.lblPercentual);
+            this.gpbConvenioOdontologico.Controls.Add(this.lblvalorFixado);
             this.gpbConvenioOdontologico.Controls.Add(this.lblCnpjConvOdonto);
             this.gpbConvenioOdontologico.Controls.Add(this.lblNomeConvOdonto);
             this.gpbConvenioOdontologico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbConvenioOdontologico.Location = new System.Drawing.Point(12, 12);
             this.gpbConvenioOdontologico.Name = "gpbConvenioOdontologico";
-            this.gpbConvenioOdontologico.Size = new System.Drawing.Size(304, 331);
+            this.gpbConvenioOdontologico.Size = new System.Drawing.Size(328, 371);
             this.gpbConvenioOdontologico.TabIndex = 0;
             this.gpbConvenioOdontologico.TabStop = false;
             this.gpbConvenioOdontologico.Text = "Cadastro de convênio odontológico";
@@ -67,7 +73,7 @@
             this.btnCadastrarConvOdonto.BackColor = System.Drawing.Color.LightBlue;
             this.btnCadastrarConvOdonto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarConvOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarConvOdonto.Location = new System.Drawing.Point(42, 278);
+            this.btnCadastrarConvOdonto.Location = new System.Drawing.Point(42, 327);
             this.btnCadastrarConvOdonto.Name = "btnCadastrarConvOdonto";
             this.btnCadastrarConvOdonto.Size = new System.Drawing.Size(220, 30);
             this.btnCadastrarConvOdonto.TabIndex = 8;
@@ -77,8 +83,9 @@
             // 
             // txtPorcentagemConvOdonto
             // 
+            this.txtPorcentagemConvOdonto.Enabled = false;
             this.txtPorcentagemConvOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtPorcentagemConvOdonto.Location = new System.Drawing.Point(9, 228);
+            this.txtPorcentagemConvOdonto.Location = new System.Drawing.Point(9, 277);
             this.txtPorcentagemConvOdonto.MaxLength = 2;
             this.txtPorcentagemConvOdonto.Name = "txtPorcentagemConvOdonto";
             this.txtPorcentagemConvOdonto.Size = new System.Drawing.Size(100, 20);
@@ -87,7 +94,7 @@
             // txtValorConvOdonto
             // 
             this.txtValorConvOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtValorConvOdonto.Location = new System.Drawing.Point(9, 170);
+            this.txtValorConvOdonto.Location = new System.Drawing.Point(9, 219);
             this.txtValorConvOdonto.Name = "txtValorConvOdonto";
             this.txtValorConvOdonto.Size = new System.Drawing.Size(150, 20);
             this.txtValorConvOdonto.TabIndex = 6;
@@ -112,25 +119,26 @@
             this.txtNomeConvOdonto.Size = new System.Drawing.Size(200, 20);
             this.txtNomeConvOdonto.TabIndex = 4;
             // 
-            // lblPorcentagemConvOdonto
+            // lblPercentual
             // 
-            this.lblPorcentagemConvOdonto.AutoSize = true;
-            this.lblPorcentagemConvOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblPorcentagemConvOdonto.Location = new System.Drawing.Point(6, 210);
-            this.lblPorcentagemConvOdonto.Name = "lblPorcentagemConvOdonto";
-            this.lblPorcentagemConvOdonto.Size = new System.Drawing.Size(94, 15);
-            this.lblPorcentagemConvOdonto.TabIndex = 3;
-            this.lblPorcentagemConvOdonto.Text = "Desconto em %";
+            this.lblPercentual.AutoSize = true;
+            this.lblPercentual.Enabled = false;
+            this.lblPercentual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblPercentual.Location = new System.Drawing.Point(6, 259);
+            this.lblPercentual.Name = "lblPercentual";
+            this.lblPercentual.Size = new System.Drawing.Size(94, 15);
+            this.lblPercentual.TabIndex = 3;
+            this.lblPercentual.Text = "Desconto em %";
             // 
-            // lblPrecoConvOdonto
+            // lblvalorFixado
             // 
-            this.lblPrecoConvOdonto.AutoSize = true;
-            this.lblPrecoConvOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblPrecoConvOdonto.Location = new System.Drawing.Point(6, 152);
-            this.lblPrecoConvOdonto.Name = "lblPrecoConvOdonto";
-            this.lblPrecoConvOdonto.Size = new System.Drawing.Size(83, 15);
-            this.lblPrecoConvOdonto.TabIndex = 2;
-            this.lblPrecoConvOdonto.Text = "Valor cobrado";
+            this.lblvalorFixado.AutoSize = true;
+            this.lblvalorFixado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblvalorFixado.Location = new System.Drawing.Point(6, 201);
+            this.lblvalorFixado.Name = "lblvalorFixado";
+            this.lblvalorFixado.Size = new System.Drawing.Size(71, 15);
+            this.lblvalorFixado.TabIndex = 2;
+            this.lblvalorFixado.Text = "Valor fixado";
             // 
             // lblCnpjConvOdonto
             // 
@@ -152,12 +160,46 @@
             this.lblNomeConvOdonto.TabIndex = 0;
             this.lblNomeConvOdonto.Text = "Nome do convênio odontológico";
             // 
+            // lblModoDesconto
+            // 
+            this.lblModoDesconto.AutoSize = true;
+            this.lblModoDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblModoDesconto.Location = new System.Drawing.Point(6, 150);
+            this.lblModoDesconto.Name = "lblModoDesconto";
+            this.lblModoDesconto.Size = new System.Drawing.Size(227, 15);
+            this.lblModoDesconto.TabIndex = 9;
+            this.lblModoDesconto.Text = "Selecione a forma de desconto aplicada";
+            // 
+            // rdbValorFixado
+            // 
+            this.rdbValorFixado.AutoSize = true;
+            this.rdbValorFixado.Checked = true;
+            this.rdbValorFixado.Location = new System.Drawing.Point(9, 168);
+            this.rdbValorFixado.Name = "rdbValorFixado";
+            this.rdbValorFixado.Size = new System.Drawing.Size(73, 21);
+            this.rdbValorFixado.TabIndex = 10;
+            this.rdbValorFixado.TabStop = true;
+            this.rdbValorFixado.Text = "Fixado";
+            this.rdbValorFixado.UseVisualStyleBackColor = true;
+            this.rdbValorFixado.CheckedChanged += new System.EventHandler(this.rdbValorFixado_CheckedChanged);
+            // 
+            // rdbPercentual
+            // 
+            this.rdbPercentual.AutoSize = true;
+            this.rdbPercentual.Location = new System.Drawing.Point(88, 168);
+            this.rdbPercentual.Name = "rdbPercentual";
+            this.rdbPercentual.Size = new System.Drawing.Size(104, 21);
+            this.rdbPercentual.TabIndex = 11;
+            this.rdbPercentual.Text = "Percentual";
+            this.rdbPercentual.UseVisualStyleBackColor = true;
+            this.rdbPercentual.CheckedChanged += new System.EventHandler(this.rdbPercentual_CheckedChanged);
+            // 
             // Form_CadConvOdontologico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(328, 355);
+            this.ClientSize = new System.Drawing.Size(352, 395);
             this.Controls.Add(this.gpbConvenioOdontologico);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -175,8 +217,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpbConvenioOdontologico;
-        private System.Windows.Forms.Label lblPorcentagemConvOdonto;
-        private System.Windows.Forms.Label lblPrecoConvOdonto;
+        private System.Windows.Forms.Label lblPercentual;
+        private System.Windows.Forms.Label lblvalorFixado;
         private System.Windows.Forms.Label lblCnpjConvOdonto;
         private System.Windows.Forms.Label lblNomeConvOdonto;
         private System.Windows.Forms.TextBox txtNomeConvOdonto;
@@ -184,5 +226,8 @@
         private System.Windows.Forms.TextBox txtValorConvOdonto;
         private System.Windows.Forms.TextBox txtPorcentagemConvOdonto;
         private System.Windows.Forms.Button btnCadastrarConvOdonto;
+        private System.Windows.Forms.RadioButton rdbPercentual;
+        private System.Windows.Forms.RadioButton rdbValorFixado;
+        private System.Windows.Forms.Label lblModoDesconto;
     }
 }
