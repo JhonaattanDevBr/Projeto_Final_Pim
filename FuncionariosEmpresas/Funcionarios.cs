@@ -139,10 +139,6 @@ namespace FuncionariosEmpresas
             }
         }
 
-
-
-
-
         private bool AutenticarCamposVazios()
         {
             if(!string.IsNullOrEmpty(Nome) &&

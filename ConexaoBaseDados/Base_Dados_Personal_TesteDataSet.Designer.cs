@@ -24,11 +24,13 @@ namespace ConexaoBaseDados {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Base_Dados_Personal_TesteDataSet : global::System.Data.DataSet {
         
-        private Acesso_funcionarioDataTable tableAcesso_funcionario;
-        
         private Acesso_personalDDataTable tableAcesso_personalD;
         
         private Agendamento_feriasDataTable tableAgendamento_ferias;
+        
+        private ApontamentoDataTable tableApontamento;
+        
+        private CadastroDataTable tableCadastro;
         
         private Decimo_terceiro_salarioDataTable tableDecimo_terceiro_salario;
         
@@ -46,7 +48,9 @@ namespace ConexaoBaseDados {
         
         private Planos_saudeDataTable tablePlanos_saude;
         
-        private global::System.Data.DataRelation relationFK__Acesso_fu__Id_fu__76969D2E;
+        private global::System.Data.DataRelation relationFK__Apontamen__Id_fu__73BA3083;
+        
+        private global::System.Data.DataRelation relationFK__Cadastro__Id_fun__787EE5A0;
         
         private global::System.Data.DataRelation relationFK__Decimo_te__Id_ag__656C112C;
         
@@ -104,14 +108,17 @@ namespace ConexaoBaseDados {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Acesso_funcionario"] != null)) {
-                    base.Tables.Add(new Acesso_funcionarioDataTable(ds.Tables["Acesso_funcionario"]));
-                }
                 if ((ds.Tables["Acesso_personalD"] != null)) {
                     base.Tables.Add(new Acesso_personalDDataTable(ds.Tables["Acesso_personalD"]));
                 }
                 if ((ds.Tables["Agendamento_ferias"] != null)) {
                     base.Tables.Add(new Agendamento_feriasDataTable(ds.Tables["Agendamento_ferias"]));
+                }
+                if ((ds.Tables["Apontamento"] != null)) {
+                    base.Tables.Add(new ApontamentoDataTable(ds.Tables["Apontamento"]));
+                }
+                if ((ds.Tables["Cadastro"] != null)) {
+                    base.Tables.Add(new CadastroDataTable(ds.Tables["Cadastro"]));
                 }
                 if ((ds.Tables["Decimo_terceiro_salario"] != null)) {
                     base.Tables.Add(new Decimo_terceiro_salarioDataTable(ds.Tables["Decimo_terceiro_salario"]));
@@ -159,16 +166,6 @@ namespace ConexaoBaseDados {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Acesso_funcionarioDataTable Acesso_funcionario {
-            get {
-                return this.tableAcesso_funcionario;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public Acesso_personalDDataTable Acesso_personalD {
             get {
                 return this.tableAcesso_personalD;
@@ -182,6 +179,26 @@ namespace ConexaoBaseDados {
         public Agendamento_feriasDataTable Agendamento_ferias {
             get {
                 return this.tableAgendamento_ferias;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ApontamentoDataTable Apontamento {
+            get {
+                return this.tableApontamento;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CadastroDataTable Cadastro {
+            get {
+                return this.tableCadastro;
             }
         }
         
@@ -332,14 +349,17 @@ namespace ConexaoBaseDados {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Acesso_funcionario"] != null)) {
-                    base.Tables.Add(new Acesso_funcionarioDataTable(ds.Tables["Acesso_funcionario"]));
-                }
                 if ((ds.Tables["Acesso_personalD"] != null)) {
                     base.Tables.Add(new Acesso_personalDDataTable(ds.Tables["Acesso_personalD"]));
                 }
                 if ((ds.Tables["Agendamento_ferias"] != null)) {
                     base.Tables.Add(new Agendamento_feriasDataTable(ds.Tables["Agendamento_ferias"]));
+                }
+                if ((ds.Tables["Apontamento"] != null)) {
+                    base.Tables.Add(new ApontamentoDataTable(ds.Tables["Apontamento"]));
+                }
+                if ((ds.Tables["Cadastro"] != null)) {
+                    base.Tables.Add(new CadastroDataTable(ds.Tables["Cadastro"]));
                 }
                 if ((ds.Tables["Decimo_terceiro_salario"] != null)) {
                     base.Tables.Add(new Decimo_terceiro_salarioDataTable(ds.Tables["Decimo_terceiro_salario"]));
@@ -398,12 +418,6 @@ namespace ConexaoBaseDados {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAcesso_funcionario = ((Acesso_funcionarioDataTable)(base.Tables["Acesso_funcionario"]));
-            if ((initTable == true)) {
-                if ((this.tableAcesso_funcionario != null)) {
-                    this.tableAcesso_funcionario.InitVars();
-                }
-            }
             this.tableAcesso_personalD = ((Acesso_personalDDataTable)(base.Tables["Acesso_personalD"]));
             if ((initTable == true)) {
                 if ((this.tableAcesso_personalD != null)) {
@@ -414,6 +428,18 @@ namespace ConexaoBaseDados {
             if ((initTable == true)) {
                 if ((this.tableAgendamento_ferias != null)) {
                     this.tableAgendamento_ferias.InitVars();
+                }
+            }
+            this.tableApontamento = ((ApontamentoDataTable)(base.Tables["Apontamento"]));
+            if ((initTable == true)) {
+                if ((this.tableApontamento != null)) {
+                    this.tableApontamento.InitVars();
+                }
+            }
+            this.tableCadastro = ((CadastroDataTable)(base.Tables["Cadastro"]));
+            if ((initTable == true)) {
+                if ((this.tableCadastro != null)) {
+                    this.tableCadastro.InitVars();
                 }
             }
             this.tableDecimo_terceiro_salario = ((Decimo_terceiro_salarioDataTable)(base.Tables["Decimo_terceiro_salario"]));
@@ -464,7 +490,8 @@ namespace ConexaoBaseDados {
                     this.tablePlanos_saude.InitVars();
                 }
             }
-            this.relationFK__Acesso_fu__Id_fu__76969D2E = this.Relations["FK__Acesso_fu__Id_fu__76969D2E"];
+            this.relationFK__Apontamen__Id_fu__73BA3083 = this.Relations["FK__Apontamen__Id_fu__73BA3083"];
+            this.relationFK__Cadastro__Id_fun__787EE5A0 = this.Relations["FK__Cadastro__Id_fun__787EE5A0"];
             this.relationFK__Decimo_te__Id_ag__656C112C = this.Relations["FK__Decimo_te__Id_ag__656C112C"];
             this.relationFK__Empresas__Id_end__5629CD9C = this.Relations["FK__Empresas__Id_end__5629CD9C"];
             this.relationFK__Ferias__Id_agend__70DDC3D8 = this.Relations["FK__Ferias__Id_agend__70DDC3D8"];
@@ -489,12 +516,14 @@ namespace ConexaoBaseDados {
             this.Namespace = "http://tempuri.org/Base_Dados_Personal_TesteDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAcesso_funcionario = new Acesso_funcionarioDataTable();
-            base.Tables.Add(this.tableAcesso_funcionario);
             this.tableAcesso_personalD = new Acesso_personalDDataTable();
             base.Tables.Add(this.tableAcesso_personalD);
             this.tableAgendamento_ferias = new Agendamento_feriasDataTable();
             base.Tables.Add(this.tableAgendamento_ferias);
+            this.tableApontamento = new ApontamentoDataTable();
+            base.Tables.Add(this.tableApontamento);
+            this.tableCadastro = new CadastroDataTable();
+            base.Tables.Add(this.tableCadastro);
             this.tableDecimo_terceiro_salario = new Decimo_terceiro_salarioDataTable();
             base.Tables.Add(this.tableDecimo_terceiro_salario);
             this.tableEmpresas = new EmpresasDataTable();
@@ -511,10 +540,14 @@ namespace ConexaoBaseDados {
             base.Tables.Add(this.tablePlanos_odontologicos);
             this.tablePlanos_saude = new Planos_saudeDataTable();
             base.Tables.Add(this.tablePlanos_saude);
-            this.relationFK__Acesso_fu__Id_fu__76969D2E = new global::System.Data.DataRelation("FK__Acesso_fu__Id_fu__76969D2E", new global::System.Data.DataColumn[] {
+            this.relationFK__Apontamen__Id_fu__73BA3083 = new global::System.Data.DataRelation("FK__Apontamen__Id_fu__73BA3083", new global::System.Data.DataColumn[] {
                         this.tableFuncionarios.Id_funcionarioColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAcesso_funcionario.Id_funcionariosColumn}, false);
-            this.Relations.Add(this.relationFK__Acesso_fu__Id_fu__76969D2E);
+                        this.tableApontamento.Id_funcionarioColumn}, false);
+            this.Relations.Add(this.relationFK__Apontamen__Id_fu__73BA3083);
+            this.relationFK__Cadastro__Id_fun__787EE5A0 = new global::System.Data.DataRelation("FK__Cadastro__Id_fun__787EE5A0", new global::System.Data.DataColumn[] {
+                        this.tableFuncionarios.Id_funcionarioColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCadastro.Id_funcionarioColumn}, false);
+            this.Relations.Add(this.relationFK__Cadastro__Id_fun__787EE5A0);
             this.relationFK__Decimo_te__Id_ag__656C112C = new global::System.Data.DataRelation("FK__Decimo_te__Id_ag__656C112C", new global::System.Data.DataColumn[] {
                         this.tableAgendamento_ferias.Id_agendamentoColumn}, new global::System.Data.DataColumn[] {
                         this.tableDecimo_terceiro_salario.Id_agendamento_feriasColumn}, false);
@@ -575,12 +608,6 @@ namespace ConexaoBaseDados {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAcesso_funcionario() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeAcesso_personalD() {
             return false;
         }
@@ -588,6 +615,18 @@ namespace ConexaoBaseDados {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeAgendamento_ferias() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeApontamento() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeCadastro() {
             return false;
         }
         
@@ -695,13 +734,16 @@ namespace ConexaoBaseDados {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Acesso_funcionarioRowChangeEventHandler(object sender, Acesso_funcionarioRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Acesso_personalDRowChangeEventHandler(object sender, Acesso_personalDRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Agendamento_feriasRowChangeEventHandler(object sender, Agendamento_feriasRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void ApontamentoRowChangeEventHandler(object sender, ApontamentoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void CadastroRowChangeEventHandler(object sender, CadastroRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Decimo_terceiro_salarioRowChangeEventHandler(object sender, Decimo_terceiro_salarioRowChangeEvent e);
@@ -726,366 +768,6 @@ namespace ConexaoBaseDados {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Planos_saudeRowChangeEventHandler(object sender, Planos_saudeRowChangeEvent e);
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Acesso_funcionarioDataTable : global::System.Data.TypedTableBase<Acesso_funcionarioRow> {
-            
-            private global::System.Data.DataColumn columnId_acesso;
-            
-            private global::System.Data.DataColumn columnUsuario;
-            
-            private global::System.Data.DataColumn columnEmail;
-            
-            private global::System.Data.DataColumn columnEmail_verificacao;
-            
-            private global::System.Data.DataColumn columnSenha;
-            
-            private global::System.Data.DataColumn columnConfirmacao_senha;
-            
-            private global::System.Data.DataColumn columnId_funcionarios;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioDataTable() {
-                this.TableName = "Acesso_funcionario";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Acesso_funcionarioDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Acesso_funcionarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_acessoColumn {
-                get {
-                    return this.columnId_acesso;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UsuarioColumn {
-                get {
-                    return this.columnUsuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
-                get {
-                    return this.columnEmail;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Email_verificacaoColumn {
-                get {
-                    return this.columnEmail_verificacao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SenhaColumn {
-                get {
-                    return this.columnSenha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Confirmacao_senhaColumn {
-                get {
-                    return this.columnConfirmacao_senha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_funcionariosColumn {
-                get {
-                    return this.columnId_funcionarios;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRow this[int index] {
-                get {
-                    return ((Acesso_funcionarioRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Acesso_funcionarioRowChangeEventHandler Acesso_funcionarioRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Acesso_funcionarioRowChangeEventHandler Acesso_funcionarioRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Acesso_funcionarioRowChangeEventHandler Acesso_funcionarioRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Acesso_funcionarioRowChangeEventHandler Acesso_funcionarioRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAcesso_funcionarioRow(Acesso_funcionarioRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRow AddAcesso_funcionarioRow(string Usuario, string Email, string Email_verificacao, string Senha, string Confirmacao_senha, FuncionariosRow parentFuncionariosRowByFK__Acesso_fu__Id_fu__76969D2E) {
-                Acesso_funcionarioRow rowAcesso_funcionarioRow = ((Acesso_funcionarioRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Usuario,
-                        Email,
-                        Email_verificacao,
-                        Senha,
-                        Confirmacao_senha,
-                        null};
-                if ((parentFuncionariosRowByFK__Acesso_fu__Id_fu__76969D2E != null)) {
-                    columnValuesArray[6] = parentFuncionariosRowByFK__Acesso_fu__Id_fu__76969D2E[0];
-                }
-                rowAcesso_funcionarioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAcesso_funcionarioRow);
-                return rowAcesso_funcionarioRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRow FindById_acesso(int Id_acesso) {
-                return ((Acesso_funcionarioRow)(this.Rows.Find(new object[] {
-                            Id_acesso})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Acesso_funcionarioDataTable cln = ((Acesso_funcionarioDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Acesso_funcionarioDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnId_acesso = base.Columns["Id_acesso"];
-                this.columnUsuario = base.Columns["Usuario"];
-                this.columnEmail = base.Columns["Email"];
-                this.columnEmail_verificacao = base.Columns["Email_verificacao"];
-                this.columnSenha = base.Columns["Senha"];
-                this.columnConfirmacao_senha = base.Columns["Confirmacao_senha"];
-                this.columnId_funcionarios = base.Columns["Id_funcionarios"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnId_acesso = new global::System.Data.DataColumn("Id_acesso", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_acesso);
-                this.columnUsuario = new global::System.Data.DataColumn("Usuario", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUsuario);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnEmail_verificacao = new global::System.Data.DataColumn("Email_verificacao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail_verificacao);
-                this.columnSenha = new global::System.Data.DataColumn("Senha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSenha);
-                this.columnConfirmacao_senha = new global::System.Data.DataColumn("Confirmacao_senha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnConfirmacao_senha);
-                this.columnId_funcionarios = new global::System.Data.DataColumn("Id_funcionarios", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_funcionarios);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId_acesso}, true));
-                this.columnId_acesso.AutoIncrement = true;
-                this.columnId_acesso.AutoIncrementSeed = -1;
-                this.columnId_acesso.AutoIncrementStep = -1;
-                this.columnId_acesso.AllowDBNull = false;
-                this.columnId_acesso.ReadOnly = true;
-                this.columnId_acesso.Unique = true;
-                this.columnUsuario.AllowDBNull = false;
-                this.columnUsuario.MaxLength = 40;
-                this.columnEmail.AllowDBNull = false;
-                this.columnEmail.MaxLength = 100;
-                this.columnEmail_verificacao.AllowDBNull = false;
-                this.columnEmail_verificacao.MaxLength = 100;
-                this.columnSenha.AllowDBNull = false;
-                this.columnSenha.MaxLength = 15;
-                this.columnConfirmacao_senha.AllowDBNull = false;
-                this.columnConfirmacao_senha.MaxLength = 15;
-                this.columnId_funcionarios.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRow NewAcesso_funcionarioRow() {
-                return ((Acesso_funcionarioRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Acesso_funcionarioRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Acesso_funcionarioRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Acesso_funcionarioRowChanged != null)) {
-                    this.Acesso_funcionarioRowChanged(this, new Acesso_funcionarioRowChangeEvent(((Acesso_funcionarioRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Acesso_funcionarioRowChanging != null)) {
-                    this.Acesso_funcionarioRowChanging(this, new Acesso_funcionarioRowChangeEvent(((Acesso_funcionarioRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Acesso_funcionarioRowDeleted != null)) {
-                    this.Acesso_funcionarioRowDeleted(this, new Acesso_funcionarioRowChangeEvent(((Acesso_funcionarioRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Acesso_funcionarioRowDeleting != null)) {
-                    this.Acesso_funcionarioRowDeleting(this, new Acesso_funcionarioRowChangeEvent(((Acesso_funcionarioRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAcesso_funcionarioRow(Acesso_funcionarioRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Base_Dados_Personal_TesteDataSet ds = new Base_Dados_Personal_TesteDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Acesso_funcionarioDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1801,6 +1483,764 @@ namespace ConexaoBaseDados {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Agendamento_feriasDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ApontamentoDataTable : global::System.Data.TypedTableBase<ApontamentoRow> {
+            
+            private global::System.Data.DataColumn columnId_apontamento;
+            
+            private global::System.Data.DataColumn columnPrimeiraBatida;
+            
+            private global::System.Data.DataColumn columnSegundaBatida;
+            
+            private global::System.Data.DataColumn columnTerceiraBatida;
+            
+            private global::System.Data.DataColumn columnQuartaBatida;
+            
+            private global::System.Data.DataColumn columnId_funcionario;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoDataTable() {
+                this.TableName = "Apontamento";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ApontamentoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected ApontamentoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Id_apontamentoColumn {
+                get {
+                    return this.columnId_apontamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PrimeiraBatidaColumn {
+                get {
+                    return this.columnPrimeiraBatida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SegundaBatidaColumn {
+                get {
+                    return this.columnSegundaBatida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TerceiraBatidaColumn {
+                get {
+                    return this.columnTerceiraBatida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn QuartaBatidaColumn {
+                get {
+                    return this.columnQuartaBatida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Id_funcionarioColumn {
+                get {
+                    return this.columnId_funcionario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoRow this[int index] {
+                get {
+                    return ((ApontamentoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ApontamentoRowChangeEventHandler ApontamentoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ApontamentoRowChangeEventHandler ApontamentoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ApontamentoRowChangeEventHandler ApontamentoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event ApontamentoRowChangeEventHandler ApontamentoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddApontamentoRow(ApontamentoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoRow AddApontamentoRow(System.TimeSpan PrimeiraBatida, System.TimeSpan SegundaBatida, System.TimeSpan TerceiraBatida, System.TimeSpan QuartaBatida, FuncionariosRow parentFuncionariosRowByFK__Apontamen__Id_fu__73BA3083) {
+                ApontamentoRow rowApontamentoRow = ((ApontamentoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        PrimeiraBatida,
+                        SegundaBatida,
+                        TerceiraBatida,
+                        QuartaBatida,
+                        null};
+                if ((parentFuncionariosRowByFK__Apontamen__Id_fu__73BA3083 != null)) {
+                    columnValuesArray[5] = parentFuncionariosRowByFK__Apontamen__Id_fu__73BA3083[0];
+                }
+                rowApontamentoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowApontamentoRow);
+                return rowApontamentoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoRow FindById_apontamento(int Id_apontamento) {
+                return ((ApontamentoRow)(this.Rows.Find(new object[] {
+                            Id_apontamento})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ApontamentoDataTable cln = ((ApontamentoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ApontamentoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnId_apontamento = base.Columns["Id_apontamento"];
+                this.columnPrimeiraBatida = base.Columns["PrimeiraBatida"];
+                this.columnSegundaBatida = base.Columns["SegundaBatida"];
+                this.columnTerceiraBatida = base.Columns["TerceiraBatida"];
+                this.columnQuartaBatida = base.Columns["QuartaBatida"];
+                this.columnId_funcionario = base.Columns["Id_funcionario"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnId_apontamento = new global::System.Data.DataColumn("Id_apontamento", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_apontamento);
+                this.columnPrimeiraBatida = new global::System.Data.DataColumn("PrimeiraBatida", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrimeiraBatida);
+                this.columnSegundaBatida = new global::System.Data.DataColumn("SegundaBatida", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSegundaBatida);
+                this.columnTerceiraBatida = new global::System.Data.DataColumn("TerceiraBatida", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTerceiraBatida);
+                this.columnQuartaBatida = new global::System.Data.DataColumn("QuartaBatida", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuartaBatida);
+                this.columnId_funcionario = new global::System.Data.DataColumn("Id_funcionario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_funcionario);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId_apontamento}, true));
+                this.columnId_apontamento.AutoIncrement = true;
+                this.columnId_apontamento.AutoIncrementSeed = -1;
+                this.columnId_apontamento.AutoIncrementStep = -1;
+                this.columnId_apontamento.AllowDBNull = false;
+                this.columnId_apontamento.ReadOnly = true;
+                this.columnId_apontamento.Unique = true;
+                this.columnId_funcionario.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoRow NewApontamentoRow() {
+                return ((ApontamentoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ApontamentoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ApontamentoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ApontamentoRowChanged != null)) {
+                    this.ApontamentoRowChanged(this, new ApontamentoRowChangeEvent(((ApontamentoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ApontamentoRowChanging != null)) {
+                    this.ApontamentoRowChanging(this, new ApontamentoRowChangeEvent(((ApontamentoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ApontamentoRowDeleted != null)) {
+                    this.ApontamentoRowDeleted(this, new ApontamentoRowChangeEvent(((ApontamentoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ApontamentoRowDeleting != null)) {
+                    this.ApontamentoRowDeleting(this, new ApontamentoRowChangeEvent(((ApontamentoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveApontamentoRow(ApontamentoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Base_Dados_Personal_TesteDataSet ds = new Base_Dados_Personal_TesteDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ApontamentoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CadastroDataTable : global::System.Data.TypedTableBase<CadastroRow> {
+            
+            private global::System.Data.DataColumn columnId_cadastro;
+            
+            private global::System.Data.DataColumn columnNome;
+            
+            private global::System.Data.DataColumn columnSobrenome;
+            
+            private global::System.Data.DataColumn columnIdade;
+            
+            private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnEmail_secundario;
+            
+            private global::System.Data.DataColumn columnSenha;
+            
+            private global::System.Data.DataColumn columnConfirmacao_senha;
+            
+            private global::System.Data.DataColumn columnEmpregador;
+            
+            private global::System.Data.DataColumn columnCargo;
+            
+            private global::System.Data.DataColumn columnId_funcionario;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroDataTable() {
+                this.TableName = "Cadastro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CadastroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected CadastroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Id_cadastroColumn {
+                get {
+                    return this.columnId_cadastro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeColumn {
+                get {
+                    return this.columnNome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SobrenomeColumn {
+                get {
+                    return this.columnSobrenome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IdadeColumn {
+                get {
+                    return this.columnIdade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EmailColumn {
+                get {
+                    return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Email_secundarioColumn {
+                get {
+                    return this.columnEmail_secundario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SenhaColumn {
+                get {
+                    return this.columnSenha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Confirmacao_senhaColumn {
+                get {
+                    return this.columnConfirmacao_senha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EmpregadorColumn {
+                get {
+                    return this.columnEmpregador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CargoColumn {
+                get {
+                    return this.columnCargo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Id_funcionarioColumn {
+                get {
+                    return this.columnId_funcionario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRow this[int index] {
+                get {
+                    return ((CadastroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CadastroRowChangeEventHandler CadastroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CadastroRowChangeEventHandler CadastroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CadastroRowChangeEventHandler CadastroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CadastroRowChangeEventHandler CadastroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddCadastroRow(CadastroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRow AddCadastroRow(string Nome, string Sobrenome, int Idade, string Email, string Email_secundario, string Senha, string Confirmacao_senha, string Empregador, string Cargo, FuncionariosRow parentFuncionariosRowByFK__Cadastro__Id_fun__787EE5A0) {
+                CadastroRow rowCadastroRow = ((CadastroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Nome,
+                        Sobrenome,
+                        Idade,
+                        Email,
+                        Email_secundario,
+                        Senha,
+                        Confirmacao_senha,
+                        Empregador,
+                        Cargo,
+                        null};
+                if ((parentFuncionariosRowByFK__Cadastro__Id_fun__787EE5A0 != null)) {
+                    columnValuesArray[10] = parentFuncionariosRowByFK__Cadastro__Id_fun__787EE5A0[0];
+                }
+                rowCadastroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCadastroRow);
+                return rowCadastroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRow FindById_cadastro(int Id_cadastro) {
+                return ((CadastroRow)(this.Rows.Find(new object[] {
+                            Id_cadastro})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CadastroDataTable cln = ((CadastroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CadastroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnId_cadastro = base.Columns["Id_cadastro"];
+                this.columnNome = base.Columns["Nome"];
+                this.columnSobrenome = base.Columns["Sobrenome"];
+                this.columnIdade = base.Columns["Idade"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnEmail_secundario = base.Columns["Email_secundario"];
+                this.columnSenha = base.Columns["Senha"];
+                this.columnConfirmacao_senha = base.Columns["Confirmacao_senha"];
+                this.columnEmpregador = base.Columns["Empregador"];
+                this.columnCargo = base.Columns["Cargo"];
+                this.columnId_funcionario = base.Columns["Id_funcionario"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnId_cadastro = new global::System.Data.DataColumn("Id_cadastro", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_cadastro);
+                this.columnNome = new global::System.Data.DataColumn("Nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNome);
+                this.columnSobrenome = new global::System.Data.DataColumn("Sobrenome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSobrenome);
+                this.columnIdade = new global::System.Data.DataColumn("Idade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdade);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnEmail_secundario = new global::System.Data.DataColumn("Email_secundario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail_secundario);
+                this.columnSenha = new global::System.Data.DataColumn("Senha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSenha);
+                this.columnConfirmacao_senha = new global::System.Data.DataColumn("Confirmacao_senha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnConfirmacao_senha);
+                this.columnEmpregador = new global::System.Data.DataColumn("Empregador", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmpregador);
+                this.columnCargo = new global::System.Data.DataColumn("Cargo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCargo);
+                this.columnId_funcionario = new global::System.Data.DataColumn("Id_funcionario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_funcionario);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId_cadastro}, true));
+                this.columnId_cadastro.AutoIncrement = true;
+                this.columnId_cadastro.AutoIncrementSeed = -1;
+                this.columnId_cadastro.AutoIncrementStep = -1;
+                this.columnId_cadastro.AllowDBNull = false;
+                this.columnId_cadastro.ReadOnly = true;
+                this.columnId_cadastro.Unique = true;
+                this.columnNome.AllowDBNull = false;
+                this.columnNome.MaxLength = 80;
+                this.columnSobrenome.AllowDBNull = false;
+                this.columnSobrenome.MaxLength = 80;
+                this.columnIdade.AllowDBNull = false;
+                this.columnEmail.MaxLength = 90;
+                this.columnEmail_secundario.AllowDBNull = false;
+                this.columnEmail_secundario.MaxLength = 90;
+                this.columnSenha.AllowDBNull = false;
+                this.columnSenha.MaxLength = 30;
+                this.columnConfirmacao_senha.AllowDBNull = false;
+                this.columnConfirmacao_senha.MaxLength = 30;
+                this.columnEmpregador.AllowDBNull = false;
+                this.columnEmpregador.MaxLength = 80;
+                this.columnCargo.AllowDBNull = false;
+                this.columnCargo.MaxLength = 80;
+                this.columnId_funcionario.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRow NewCadastroRow() {
+                return ((CadastroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CadastroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CadastroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CadastroRowChanged != null)) {
+                    this.CadastroRowChanged(this, new CadastroRowChangeEvent(((CadastroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CadastroRowChanging != null)) {
+                    this.CadastroRowChanging(this, new CadastroRowChangeEvent(((CadastroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CadastroRowDeleted != null)) {
+                    this.CadastroRowDeleted(this, new CadastroRowChangeEvent(((CadastroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CadastroRowDeleting != null)) {
+                    this.CadastroRowDeleting(this, new CadastroRowChangeEvent(((CadastroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveCadastroRow(CadastroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Base_Dados_Personal_TesteDataSet ds = new Base_Dados_Personal_TesteDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CadastroDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -5291,109 +5731,6 @@ namespace ConexaoBaseDados {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Acesso_funcionarioRow : global::System.Data.DataRow {
-            
-            private Acesso_funcionarioDataTable tableAcesso_funcionario;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Acesso_funcionarioRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableAcesso_funcionario = ((Acesso_funcionarioDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_acesso {
-                get {
-                    return ((int)(this[this.tableAcesso_funcionario.Id_acessoColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.Id_acessoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Usuario {
-                get {
-                    return ((string)(this[this.tableAcesso_funcionario.UsuarioColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.UsuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Email {
-                get {
-                    return ((string)(this[this.tableAcesso_funcionario.EmailColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Email_verificacao {
-                get {
-                    return ((string)(this[this.tableAcesso_funcionario.Email_verificacaoColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.Email_verificacaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Senha {
-                get {
-                    return ((string)(this[this.tableAcesso_funcionario.SenhaColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.SenhaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Confirmacao_senha {
-                get {
-                    return ((string)(this[this.tableAcesso_funcionario.Confirmacao_senhaColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.Confirmacao_senhaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_funcionarios {
-                get {
-                    return ((int)(this[this.tableAcesso_funcionario.Id_funcionariosColumn]));
-                }
-                set {
-                    this[this.tableAcesso_funcionario.Id_funcionariosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FuncionariosRow FuncionariosRow {
-                get {
-                    return ((FuncionariosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Acesso_fu__Id_fu__76969D2E"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Acesso_fu__Id_fu__76969D2E"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class Acesso_personalDRow : global::System.Data.DataRow {
             
             private Acesso_personalDDataTable tableAcesso_personalD;
@@ -5695,6 +6032,330 @@ namespace ConexaoBaseDados {
                 else {
                     return ((FeriasRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Ferias__Id_agend__70DDC3D8"])));
                 }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ApontamentoRow : global::System.Data.DataRow {
+            
+            private ApontamentoDataTable tableApontamento;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal ApontamentoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableApontamento = ((ApontamentoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Id_apontamento {
+                get {
+                    return ((int)(this[this.tableApontamento.Id_apontamentoColumn]));
+                }
+                set {
+                    this[this.tableApontamento.Id_apontamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.TimeSpan PrimeiraBatida {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableApontamento.PrimeiraBatidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrimeiraBatida\' in table \'Apontamento\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableApontamento.PrimeiraBatidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.TimeSpan SegundaBatida {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableApontamento.SegundaBatidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SegundaBatida\' in table \'Apontamento\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableApontamento.SegundaBatidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.TimeSpan TerceiraBatida {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableApontamento.TerceiraBatidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TerceiraBatida\' in table \'Apontamento\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableApontamento.TerceiraBatidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.TimeSpan QuartaBatida {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableApontamento.QuartaBatidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QuartaBatida\' in table \'Apontamento\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableApontamento.QuartaBatidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Id_funcionario {
+                get {
+                    return ((int)(this[this.tableApontamento.Id_funcionarioColumn]));
+                }
+                set {
+                    this[this.tableApontamento.Id_funcionarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FuncionariosRow FuncionariosRow {
+                get {
+                    return ((FuncionariosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Apontamen__Id_fu__73BA3083"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Apontamen__Id_fu__73BA3083"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPrimeiraBatidaNull() {
+                return this.IsNull(this.tableApontamento.PrimeiraBatidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPrimeiraBatidaNull() {
+                this[this.tableApontamento.PrimeiraBatidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSegundaBatidaNull() {
+                return this.IsNull(this.tableApontamento.SegundaBatidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSegundaBatidaNull() {
+                this[this.tableApontamento.SegundaBatidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTerceiraBatidaNull() {
+                return this.IsNull(this.tableApontamento.TerceiraBatidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTerceiraBatidaNull() {
+                this[this.tableApontamento.TerceiraBatidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsQuartaBatidaNull() {
+                return this.IsNull(this.tableApontamento.QuartaBatidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetQuartaBatidaNull() {
+                this[this.tableApontamento.QuartaBatidaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CadastroRow : global::System.Data.DataRow {
+            
+            private CadastroDataTable tableCadastro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CadastroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCadastro = ((CadastroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Id_cadastro {
+                get {
+                    return ((int)(this[this.tableCadastro.Id_cadastroColumn]));
+                }
+                set {
+                    this[this.tableCadastro.Id_cadastroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nome {
+                get {
+                    return ((string)(this[this.tableCadastro.NomeColumn]));
+                }
+                set {
+                    this[this.tableCadastro.NomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Sobrenome {
+                get {
+                    return ((string)(this[this.tableCadastro.SobrenomeColumn]));
+                }
+                set {
+                    this[this.tableCadastro.SobrenomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Idade {
+                get {
+                    return ((int)(this[this.tableCadastro.IdadeColumn]));
+                }
+                set {
+                    this[this.tableCadastro.IdadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Email {
+                get {
+                    try {
+                        return ((string)(this[this.tableCadastro.EmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Cadastro\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCadastro.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Email_secundario {
+                get {
+                    return ((string)(this[this.tableCadastro.Email_secundarioColumn]));
+                }
+                set {
+                    this[this.tableCadastro.Email_secundarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Senha {
+                get {
+                    return ((string)(this[this.tableCadastro.SenhaColumn]));
+                }
+                set {
+                    this[this.tableCadastro.SenhaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Confirmacao_senha {
+                get {
+                    return ((string)(this[this.tableCadastro.Confirmacao_senhaColumn]));
+                }
+                set {
+                    this[this.tableCadastro.Confirmacao_senhaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Empregador {
+                get {
+                    return ((string)(this[this.tableCadastro.EmpregadorColumn]));
+                }
+                set {
+                    this[this.tableCadastro.EmpregadorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Cargo {
+                get {
+                    return ((string)(this[this.tableCadastro.CargoColumn]));
+                }
+                set {
+                    this[this.tableCadastro.CargoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Id_funcionario {
+                get {
+                    return ((int)(this[this.tableCadastro.Id_funcionarioColumn]));
+                }
+                set {
+                    this[this.tableCadastro.Id_funcionarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FuncionariosRow FuncionariosRow {
+                get {
+                    return ((FuncionariosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Cadastro__Id_fun__787EE5A0"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Cadastro__Id_fun__787EE5A0"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableCadastro.EmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEmailNull() {
+                this[this.tableCadastro.EmailColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6935,12 +7596,23 @@ namespace ConexaoBaseDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRow[] GetAcesso_funcionarioRows() {
-                if ((this.Table.ChildRelations["FK__Acesso_fu__Id_fu__76969D2E"] == null)) {
-                    return new Acesso_funcionarioRow[0];
+            public ApontamentoRow[] GetApontamentoRows() {
+                if ((this.Table.ChildRelations["FK__Apontamen__Id_fu__73BA3083"] == null)) {
+                    return new ApontamentoRow[0];
                 }
                 else {
-                    return ((Acesso_funcionarioRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Acesso_fu__Id_fu__76969D2E"])));
+                    return ((ApontamentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Apontamen__Id_fu__73BA3083"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRow[] GetCadastroRows() {
+                if ((this.Table.ChildRelations["FK__Cadastro__Id_fun__787EE5A0"] == null)) {
+                    return new CadastroRow[0];
+                }
+                else {
+                    return ((CadastroRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Cadastro__Id_fun__787EE5A0"])));
                 }
             }
             
@@ -7155,40 +7827,6 @@ namespace ConexaoBaseDados {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Acesso_funcionarioRowChangeEvent : global::System.EventArgs {
-            
-            private Acesso_funcionarioRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRowChangeEvent(Acesso_funcionarioRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Acesso_funcionarioRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class Acesso_personalDRowChangeEvent : global::System.EventArgs {
             
             private Acesso_personalDRow eventRow;
@@ -7239,6 +7877,74 @@ namespace ConexaoBaseDados {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Agendamento_feriasRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class ApontamentoRowChangeEvent : global::System.EventArgs {
+            
+            private ApontamentoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoRowChangeEvent(ApontamentoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ApontamentoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class CadastroRowChangeEvent : global::System.EventArgs {
+            
+            private CadastroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRowChangeEvent(CadastroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CadastroRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7528,448 +8234,6 @@ namespace ConexaoBaseDados {
 }
 namespace ConexaoBaseDados.Base_Dados_Personal_TesteDataSetTableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Acesso_funcionarioTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Acesso_funcionarioTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Acesso_funcionario";
-            tableMapping.ColumnMappings.Add("Id_acesso", "Id_acesso");
-            tableMapping.ColumnMappings.Add("Usuario", "Usuario");
-            tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("Email_verificacao", "Email_verificacao");
-            tableMapping.ColumnMappings.Add("Senha", "Senha");
-            tableMapping.ColumnMappings.Add("Confirmacao_senha", "Confirmacao_senha");
-            tableMapping.ColumnMappings.Add("Id_funcionarios", "Id_funcionarios");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Acesso_funcionario] WHERE (([Id_acesso] = @Original_Id_acesso) AND ([Usuario] = @Original_Usuario) AND ([Email] = @Original_Email) AND ([Email_verificacao] = @Original_Email_verificacao) AND ([Senha] = @Original_Senha) AND ([Confirmacao_senha] = @Original_Confirmacao_senha) AND ([Id_funcionarios] = @Original_Id_funcionarios))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_acesso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_acesso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email_verificacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_verificacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_funcionarios", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionarios", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Acesso_funcionario] ([Usuario], [Email], [Email_verificacao], [Senha], [Confirmacao_senha], [Id_funcionarios]) VALUES (@Usuario, @Email, @Email_verificacao, @Senha, @Confirmacao_senha, @Id_funcionarios);
-SELECT Id_acesso, Usuario, Email, Email_verificacao, Senha, Confirmacao_senha, Id_funcionarios FROM Acesso_funcionario WHERE (Id_acesso = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_verificacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_verificacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_funcionarios", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionarios", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Acesso_funcionario] SET [Usuario] = @Usuario, [Email] = @Email, [Email_verificacao] = @Email_verificacao, [Senha] = @Senha, [Confirmacao_senha] = @Confirmacao_senha, [Id_funcionarios] = @Id_funcionarios WHERE (([Id_acesso] = @Original_Id_acesso) AND ([Usuario] = @Original_Usuario) AND ([Email] = @Original_Email) AND ([Email_verificacao] = @Original_Email_verificacao) AND ([Senha] = @Original_Senha) AND ([Confirmacao_senha] = @Original_Confirmacao_senha) AND ([Id_funcionarios] = @Original_Id_funcionarios));
-SELECT Id_acesso, Usuario, Email, Email_verificacao, Senha, Confirmacao_senha, Id_funcionarios FROM Acesso_funcionario WHERE (Id_acesso = @Id_acesso)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_verificacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_verificacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_funcionarios", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionarios", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_acesso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_acesso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email_verificacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_verificacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_funcionarios", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionarios", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_acesso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_acesso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ConexaoBaseDados.Properties.Settings.Default.Base_Dados_Personal_TesteConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_acesso, Usuario, Email, Email_verificacao, Senha, Confirmacao_senha, Id" +
-                "_funcionarios FROM dbo.Acesso_funcionario";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Base_Dados_Personal_TesteDataSet.Acesso_funcionarioDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Base_Dados_Personal_TesteDataSet.Acesso_funcionarioDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            Base_Dados_Personal_TesteDataSet.Acesso_funcionarioDataTable dataTable = new Base_Dados_Personal_TesteDataSet.Acesso_funcionarioDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Base_Dados_Personal_TesteDataSet.Acesso_funcionarioDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Base_Dados_Personal_TesteDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Acesso_funcionario");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_acesso, string Original_Usuario, string Original_Email, string Original_Email_verificacao, string Original_Senha, string Original_Confirmacao_senha, int Original_Id_funcionarios) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_acesso));
-            if ((Original_Usuario == null)) {
-                throw new global::System.ArgumentNullException("Original_Usuario");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Usuario));
-            }
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Email));
-            }
-            if ((Original_Email_verificacao == null)) {
-                throw new global::System.ArgumentNullException("Original_Email_verificacao");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Email_verificacao));
-            }
-            if ((Original_Senha == null)) {
-                throw new global::System.ArgumentNullException("Original_Senha");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Senha));
-            }
-            if ((Original_Confirmacao_senha == null)) {
-                throw new global::System.ArgumentNullException("Original_Confirmacao_senha");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Confirmacao_senha));
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Id_funcionarios));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Usuario, string Email, string Email_verificacao, string Senha, string Confirmacao_senha, int Id_funcionarios) {
-            if ((Usuario == null)) {
-                throw new global::System.ArgumentNullException("Usuario");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Usuario));
-            }
-            if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Email));
-            }
-            if ((Email_verificacao == null)) {
-                throw new global::System.ArgumentNullException("Email_verificacao");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Email_verificacao));
-            }
-            if ((Senha == null)) {
-                throw new global::System.ArgumentNullException("Senha");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Senha));
-            }
-            if ((Confirmacao_senha == null)) {
-                throw new global::System.ArgumentNullException("Confirmacao_senha");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Confirmacao_senha));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Id_funcionarios));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Usuario, string Email, string Email_verificacao, string Senha, string Confirmacao_senha, int Id_funcionarios, int Original_Id_acesso, string Original_Usuario, string Original_Email, string Original_Email_verificacao, string Original_Senha, string Original_Confirmacao_senha, int Original_Id_funcionarios, int Id_acesso) {
-            if ((Usuario == null)) {
-                throw new global::System.ArgumentNullException("Usuario");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Usuario));
-            }
-            if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Email));
-            }
-            if ((Email_verificacao == null)) {
-                throw new global::System.ArgumentNullException("Email_verificacao");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Email_verificacao));
-            }
-            if ((Senha == null)) {
-                throw new global::System.ArgumentNullException("Senha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Senha));
-            }
-            if ((Confirmacao_senha == null)) {
-                throw new global::System.ArgumentNullException("Confirmacao_senha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Confirmacao_senha));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Id_funcionarios));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id_acesso));
-            if ((Original_Usuario == null)) {
-                throw new global::System.ArgumentNullException("Original_Usuario");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Usuario));
-            }
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Email));
-            }
-            if ((Original_Email_verificacao == null)) {
-                throw new global::System.ArgumentNullException("Original_Email_verificacao");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Email_verificacao));
-            }
-            if ((Original_Senha == null)) {
-                throw new global::System.ArgumentNullException("Original_Senha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Senha));
-            }
-            if ((Original_Confirmacao_senha == null)) {
-                throw new global::System.ArgumentNullException("Original_Confirmacao_senha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Confirmacao_senha));
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Id_funcionarios));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id_acesso));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Usuario, string Email, string Email_verificacao, string Senha, string Confirmacao_senha, int Id_funcionarios, int Original_Id_acesso, string Original_Usuario, string Original_Email, string Original_Email_verificacao, string Original_Senha, string Original_Confirmacao_senha, int Original_Id_funcionarios) {
-            return this.Update(Usuario, Email, Email_verificacao, Senha, Confirmacao_senha, Id_funcionarios, Original_Id_acesso, Original_Usuario, Original_Email, Original_Email_verificacao, Original_Senha, Original_Confirmacao_senha, Original_Id_funcionarios, Original_Id_acesso);
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -8773,6 +9037,1030 @@ SELECT Id_agendamento, Primeiro_periodo, Primeiro_mes, Segundo_periodo, Segundo_
                     int Original_Dias_vendidos, 
                     bool Original_Primeira_parcela_decimo) {
             return this.Update(Primeiro_periodo, Primeiro_mes, Segundo_periodo, Segundo_mes, Terceiro_periodo, Terceiro_mes, Dias_restantes, Dias_vendidos, Primeira_parcela_decimo, Original_Id_agendamento, Original_Primeiro_periodo, Original_Primeiro_mes, Original_Segundo_periodo, Original_Segundo_mes, Original_Terceiro_periodo, Original_Terceiro_mes, Original_Dias_restantes, Original_Dias_vendidos, Original_Primeira_parcela_decimo, Original_Id_agendamento);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ApontamentoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public ApontamentoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Apontamento";
+            tableMapping.ColumnMappings.Add("Id_apontamento", "Id_apontamento");
+            tableMapping.ColumnMappings.Add("PrimeiraBatida", "PrimeiraBatida");
+            tableMapping.ColumnMappings.Add("SegundaBatida", "SegundaBatida");
+            tableMapping.ColumnMappings.Add("TerceiraBatida", "TerceiraBatida");
+            tableMapping.ColumnMappings.Add("QuartaBatida", "QuartaBatida");
+            tableMapping.ColumnMappings.Add("Id_funcionario", "Id_funcionario");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Apontamento] WHERE (([Id_apontamento] = @Original_Id_apontamento) AND ((@IsNull_PrimeiraBatida = 1 AND [PrimeiraBatida] IS NULL) OR ([PrimeiraBatida] = @Original_PrimeiraBatida)) AND ((@IsNull_SegundaBatida = 1 AND [SegundaBatida] IS NULL) OR ([SegundaBatida] = @Original_SegundaBatida)) AND ((@IsNull_TerceiraBatida = 1 AND [TerceiraBatida] IS NULL) OR ([TerceiraBatida] = @Original_TerceiraBatida)) AND ((@IsNull_QuartaBatida = 1 AND [QuartaBatida] IS NULL) OR ([QuartaBatida] = @Original_QuartaBatida)) AND ([Id_funcionario] = @Original_Id_funcionario))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_apontamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_apontamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrimeiraBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimeiraBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrimeiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimeiraBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SegundaBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SegundaBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SegundaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SegundaBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TerceiraBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TerceiraBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TerceiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TerceiraBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QuartaBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuartaBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QuartaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuartaBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Apontamento] ([PrimeiraBatida], [SegundaBatida], [TerceiraBatida], [QuartaBatida], [Id_funcionario]) VALUES (@PrimeiraBatida, @SegundaBatida, @TerceiraBatida, @QuartaBatida, @Id_funcionario);
+SELECT Id_apontamento, PrimeiraBatida, SegundaBatida, TerceiraBatida, QuartaBatida, Id_funcionario FROM Apontamento WHERE (Id_apontamento = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrimeiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimeiraBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SegundaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SegundaBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TerceiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TerceiraBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QuartaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuartaBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Apontamento] SET [PrimeiraBatida] = @PrimeiraBatida, [SegundaBatida] = @SegundaBatida, [TerceiraBatida] = @TerceiraBatida, [QuartaBatida] = @QuartaBatida, [Id_funcionario] = @Id_funcionario WHERE (([Id_apontamento] = @Original_Id_apontamento) AND ((@IsNull_PrimeiraBatida = 1 AND [PrimeiraBatida] IS NULL) OR ([PrimeiraBatida] = @Original_PrimeiraBatida)) AND ((@IsNull_SegundaBatida = 1 AND [SegundaBatida] IS NULL) OR ([SegundaBatida] = @Original_SegundaBatida)) AND ((@IsNull_TerceiraBatida = 1 AND [TerceiraBatida] IS NULL) OR ([TerceiraBatida] = @Original_TerceiraBatida)) AND ((@IsNull_QuartaBatida = 1 AND [QuartaBatida] IS NULL) OR ([QuartaBatida] = @Original_QuartaBatida)) AND ([Id_funcionario] = @Original_Id_funcionario));
+SELECT Id_apontamento, PrimeiraBatida, SegundaBatida, TerceiraBatida, QuartaBatida, Id_funcionario FROM Apontamento WHERE (Id_apontamento = @Id_apontamento)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrimeiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimeiraBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SegundaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SegundaBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TerceiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TerceiraBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QuartaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuartaBatida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_apontamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_apontamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrimeiraBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimeiraBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrimeiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrimeiraBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SegundaBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SegundaBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SegundaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SegundaBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TerceiraBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TerceiraBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TerceiraBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TerceiraBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QuartaBatida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuartaBatida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QuartaBatida", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuartaBatida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_apontamento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_apontamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ConexaoBaseDados.Properties.Settings.Default.Base_Dados_Personal_TesteConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT Id_apontamento, PrimeiraBatida, SegundaBatida, TerceiraBatida, QuartaBatid" +
+                "a, Id_funcionario FROM dbo.Apontamento";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Base_Dados_Personal_TesteDataSet.ApontamentoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Base_Dados_Personal_TesteDataSet.ApontamentoDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Base_Dados_Personal_TesteDataSet.ApontamentoDataTable dataTable = new Base_Dados_Personal_TesteDataSet.ApontamentoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Base_Dados_Personal_TesteDataSet.ApontamentoDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Base_Dados_Personal_TesteDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Apontamento");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id_apontamento, global::System.Nullable<global::System.TimeSpan> Original_PrimeiraBatida, global::System.Nullable<global::System.TimeSpan> Original_SegundaBatida, global::System.Nullable<global::System.TimeSpan> Original_TerceiraBatida, global::System.Nullable<global::System.TimeSpan> Original_QuartaBatida, int Original_Id_funcionario) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_apontamento));
+            if ((Original_PrimeiraBatida.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_PrimeiraBatida.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SegundaBatida.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.TimeSpan)(Original_SegundaBatida.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TerceiraBatida.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.TimeSpan)(Original_TerceiraBatida.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QuartaBatida.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.TimeSpan)(Original_QuartaBatida.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_Id_funcionario));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<global::System.TimeSpan> PrimeiraBatida, global::System.Nullable<global::System.TimeSpan> SegundaBatida, global::System.Nullable<global::System.TimeSpan> TerceiraBatida, global::System.Nullable<global::System.TimeSpan> QuartaBatida, int Id_funcionario) {
+            if ((PrimeiraBatida.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.TimeSpan)(PrimeiraBatida.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((SegundaBatida.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.TimeSpan)(SegundaBatida.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((TerceiraBatida.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(TerceiraBatida.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((QuartaBatida.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.TimeSpan)(QuartaBatida.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Id_funcionario));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<global::System.TimeSpan> PrimeiraBatida, global::System.Nullable<global::System.TimeSpan> SegundaBatida, global::System.Nullable<global::System.TimeSpan> TerceiraBatida, global::System.Nullable<global::System.TimeSpan> QuartaBatida, int Id_funcionario, int Original_Id_apontamento, global::System.Nullable<global::System.TimeSpan> Original_PrimeiraBatida, global::System.Nullable<global::System.TimeSpan> Original_SegundaBatida, global::System.Nullable<global::System.TimeSpan> Original_TerceiraBatida, global::System.Nullable<global::System.TimeSpan> Original_QuartaBatida, int Original_Id_funcionario, int Id_apontamento) {
+            if ((PrimeiraBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.TimeSpan)(PrimeiraBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((SegundaBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.TimeSpan)(SegundaBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((TerceiraBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(TerceiraBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((QuartaBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.TimeSpan)(QuartaBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Id_funcionario));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id_apontamento));
+            if ((Original_PrimeiraBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.TimeSpan)(Original_PrimeiraBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SegundaBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.TimeSpan)(Original_SegundaBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TerceiraBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.TimeSpan)(Original_TerceiraBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QuartaBatida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.TimeSpan)(Original_QuartaBatida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Id_funcionario));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Id_apontamento));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<global::System.TimeSpan> PrimeiraBatida, global::System.Nullable<global::System.TimeSpan> SegundaBatida, global::System.Nullable<global::System.TimeSpan> TerceiraBatida, global::System.Nullable<global::System.TimeSpan> QuartaBatida, int Id_funcionario, int Original_Id_apontamento, global::System.Nullable<global::System.TimeSpan> Original_PrimeiraBatida, global::System.Nullable<global::System.TimeSpan> Original_SegundaBatida, global::System.Nullable<global::System.TimeSpan> Original_TerceiraBatida, global::System.Nullable<global::System.TimeSpan> Original_QuartaBatida, int Original_Id_funcionario) {
+            return this.Update(PrimeiraBatida, SegundaBatida, TerceiraBatida, QuartaBatida, Id_funcionario, Original_Id_apontamento, Original_PrimeiraBatida, Original_SegundaBatida, Original_TerceiraBatida, Original_QuartaBatida, Original_Id_funcionario, Original_Id_apontamento);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CadastroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public CadastroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Cadastro";
+            tableMapping.ColumnMappings.Add("Id_cadastro", "Id_cadastro");
+            tableMapping.ColumnMappings.Add("Nome", "Nome");
+            tableMapping.ColumnMappings.Add("Sobrenome", "Sobrenome");
+            tableMapping.ColumnMappings.Add("Idade", "Idade");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("Email_secundario", "Email_secundario");
+            tableMapping.ColumnMappings.Add("Senha", "Senha");
+            tableMapping.ColumnMappings.Add("Confirmacao_senha", "Confirmacao_senha");
+            tableMapping.ColumnMappings.Add("Empregador", "Empregador");
+            tableMapping.ColumnMappings.Add("Cargo", "Cargo");
+            tableMapping.ColumnMappings.Add("Id_funcionario", "Id_funcionario");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Cadastro] WHERE (([Id_cadastro] = @Original_Id_cadastro) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([Idade] = @Original_Idade) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ([Email_secundario] = @Original_Email_secundario) AND ([Senha] = @Original_Senha) AND ([Confirmacao_senha] = @Original_Confirmacao_senha) AND ([Empregador] = @Original_Empregador) AND ([Cargo] = @Original_Cargo) AND ([Id_funcionario] = @Original_Id_funcionario))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_cadastro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_cadastro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Idade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Idade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email_secundario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_secundario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Empregador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Empregador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Cadastro] ([Nome], [Sobrenome], [Idade], [Email], [Email_secundario], [Senha], [Confirmacao_senha], [Empregador], [Cargo], [Id_funcionario]) VALUES (@Nome, @Sobrenome, @Idade, @Email, @Email_secundario, @Senha, @Confirmacao_senha, @Empregador, @Cargo, @Id_funcionario);
+SELECT Id_cadastro, Nome, Sobrenome, Idade, Email, Email_secundario, Senha, Confirmacao_senha, Empregador, Cargo, Id_funcionario FROM Cadastro WHERE (Id_cadastro = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Idade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Idade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_secundario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_secundario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Empregador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Empregador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Cadastro] SET [Nome] = @Nome, [Sobrenome] = @Sobrenome, [Idade] = @Idade, [Email] = @Email, [Email_secundario] = @Email_secundario, [Senha] = @Senha, [Confirmacao_senha] = @Confirmacao_senha, [Empregador] = @Empregador, [Cargo] = @Cargo, [Id_funcionario] = @Id_funcionario WHERE (([Id_cadastro] = @Original_Id_cadastro) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([Idade] = @Original_Idade) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ([Email_secundario] = @Original_Email_secundario) AND ([Senha] = @Original_Senha) AND ([Confirmacao_senha] = @Original_Confirmacao_senha) AND ([Empregador] = @Original_Empregador) AND ([Cargo] = @Original_Cargo) AND ([Id_funcionario] = @Original_Id_funcionario));
+SELECT Id_cadastro, Nome, Sobrenome, Idade, Email, Email_secundario, Senha, Confirmacao_senha, Empregador, Cargo, Id_funcionario FROM Cadastro WHERE (Id_cadastro = @Id_cadastro)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Idade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Idade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email_secundario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_secundario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Empregador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Empregador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_cadastro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_cadastro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Idade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Idade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email_secundario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email_secundario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Confirmacao_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Confirmacao_senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Empregador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Empregador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_funcionario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_funcionario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_cadastro", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_cadastro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ConexaoBaseDados.Properties.Settings.Default.Base_Dados_Personal_TesteConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT Id_cadastro, Nome, Sobrenome, Idade, Email, Email_secundario, Senha, Confi" +
+                "rmacao_senha, Empregador, Cargo, Id_funcionario FROM dbo.Cadastro";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Base_Dados_Personal_TesteDataSet.CadastroDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Base_Dados_Personal_TesteDataSet.CadastroDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Base_Dados_Personal_TesteDataSet.CadastroDataTable dataTable = new Base_Dados_Personal_TesteDataSet.CadastroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Base_Dados_Personal_TesteDataSet.CadastroDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Base_Dados_Personal_TesteDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Cadastro");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id_cadastro, string Original_Nome, string Original_Sobrenome, int Original_Idade, string Original_Email, string Original_Email_secundario, string Original_Senha, string Original_Confirmacao_senha, string Original_Empregador, string Original_Cargo, int Original_Id_funcionario) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_cadastro));
+            if ((Original_Nome == null)) {
+                throw new global::System.ArgumentNullException("Original_Nome");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nome));
+            }
+            if ((Original_Sobrenome == null)) {
+                throw new global::System.ArgumentNullException("Original_Sobrenome");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Sobrenome));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Idade));
+            if ((Original_Email == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Email));
+            }
+            if ((Original_Email_secundario == null)) {
+                throw new global::System.ArgumentNullException("Original_Email_secundario");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Email_secundario));
+            }
+            if ((Original_Senha == null)) {
+                throw new global::System.ArgumentNullException("Original_Senha");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Senha));
+            }
+            if ((Original_Confirmacao_senha == null)) {
+                throw new global::System.ArgumentNullException("Original_Confirmacao_senha");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Confirmacao_senha));
+            }
+            if ((Original_Empregador == null)) {
+                throw new global::System.ArgumentNullException("Original_Empregador");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Empregador));
+            }
+            if ((Original_Cargo == null)) {
+                throw new global::System.ArgumentNullException("Original_Cargo");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Cargo));
+            }
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_Id_funcionario));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Nome, string Sobrenome, int Idade, string Email, string Email_secundario, string Senha, string Confirmacao_senha, string Empregador, string Cargo, int Id_funcionario) {
+            if ((Nome == null)) {
+                throw new global::System.ArgumentNullException("Nome");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nome));
+            }
+            if ((Sobrenome == null)) {
+                throw new global::System.ArgumentNullException("Sobrenome");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Sobrenome));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Idade));
+            if ((Email == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Email));
+            }
+            if ((Email_secundario == null)) {
+                throw new global::System.ArgumentNullException("Email_secundario");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email_secundario));
+            }
+            if ((Senha == null)) {
+                throw new global::System.ArgumentNullException("Senha");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Senha));
+            }
+            if ((Confirmacao_senha == null)) {
+                throw new global::System.ArgumentNullException("Confirmacao_senha");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Confirmacao_senha));
+            }
+            if ((Empregador == null)) {
+                throw new global::System.ArgumentNullException("Empregador");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Empregador));
+            }
+            if ((Cargo == null)) {
+                throw new global::System.ArgumentNullException("Cargo");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Cargo));
+            }
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Id_funcionario));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Nome, 
+                    string Sobrenome, 
+                    int Idade, 
+                    string Email, 
+                    string Email_secundario, 
+                    string Senha, 
+                    string Confirmacao_senha, 
+                    string Empregador, 
+                    string Cargo, 
+                    int Id_funcionario, 
+                    int Original_Id_cadastro, 
+                    string Original_Nome, 
+                    string Original_Sobrenome, 
+                    int Original_Idade, 
+                    string Original_Email, 
+                    string Original_Email_secundario, 
+                    string Original_Senha, 
+                    string Original_Confirmacao_senha, 
+                    string Original_Empregador, 
+                    string Original_Cargo, 
+                    int Original_Id_funcionario, 
+                    int Id_cadastro) {
+            if ((Nome == null)) {
+                throw new global::System.ArgumentNullException("Nome");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nome));
+            }
+            if ((Sobrenome == null)) {
+                throw new global::System.ArgumentNullException("Sobrenome");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Sobrenome));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Idade));
+            if ((Email == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Email));
+            }
+            if ((Email_secundario == null)) {
+                throw new global::System.ArgumentNullException("Email_secundario");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email_secundario));
+            }
+            if ((Senha == null)) {
+                throw new global::System.ArgumentNullException("Senha");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Senha));
+            }
+            if ((Confirmacao_senha == null)) {
+                throw new global::System.ArgumentNullException("Confirmacao_senha");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Confirmacao_senha));
+            }
+            if ((Empregador == null)) {
+                throw new global::System.ArgumentNullException("Empregador");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Empregador));
+            }
+            if ((Cargo == null)) {
+                throw new global::System.ArgumentNullException("Cargo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Cargo));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Id_funcionario));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Id_cadastro));
+            if ((Original_Nome == null)) {
+                throw new global::System.ArgumentNullException("Original_Nome");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Nome));
+            }
+            if ((Original_Sobrenome == null)) {
+                throw new global::System.ArgumentNullException("Original_Sobrenome");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Sobrenome));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Idade));
+            if ((Original_Email == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Email));
+            }
+            if ((Original_Email_secundario == null)) {
+                throw new global::System.ArgumentNullException("Original_Email_secundario");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Email_secundario));
+            }
+            if ((Original_Senha == null)) {
+                throw new global::System.ArgumentNullException("Original_Senha");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Senha));
+            }
+            if ((Original_Confirmacao_senha == null)) {
+                throw new global::System.ArgumentNullException("Original_Confirmacao_senha");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Confirmacao_senha));
+            }
+            if ((Original_Empregador == null)) {
+                throw new global::System.ArgumentNullException("Original_Empregador");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Empregador));
+            }
+            if ((Original_Cargo == null)) {
+                throw new global::System.ArgumentNullException("Original_Cargo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Cargo));
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Id_funcionario));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Id_cadastro));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Nome, 
+                    string Sobrenome, 
+                    int Idade, 
+                    string Email, 
+                    string Email_secundario, 
+                    string Senha, 
+                    string Confirmacao_senha, 
+                    string Empregador, 
+                    string Cargo, 
+                    int Id_funcionario, 
+                    int Original_Id_cadastro, 
+                    string Original_Nome, 
+                    string Original_Sobrenome, 
+                    int Original_Idade, 
+                    string Original_Email, 
+                    string Original_Email_secundario, 
+                    string Original_Senha, 
+                    string Original_Confirmacao_senha, 
+                    string Original_Empregador, 
+                    string Original_Cargo, 
+                    int Original_Id_funcionario) {
+            return this.Update(Nome, Sobrenome, Idade, Email, Email_secundario, Senha, Confirmacao_senha, Empregador, Cargo, Id_funcionario, Original_Id_cadastro, Original_Nome, Original_Sobrenome, Original_Idade, Original_Email, Original_Email_secundario, Original_Senha, Original_Confirmacao_senha, Original_Empregador, Original_Cargo, Original_Id_funcionario, Original_Id_cadastro);
         }
     }
     
@@ -12768,11 +14056,13 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
         
         private UpdateOrderOption _updateOrder;
         
-        private Acesso_funcionarioTableAdapter _acesso_funcionarioTableAdapter;
-        
         private Acesso_personalDTableAdapter _acesso_personalDTableAdapter;
         
         private Agendamento_feriasTableAdapter _agendamento_feriasTableAdapter;
+        
+        private ApontamentoTableAdapter _apontamentoTableAdapter;
+        
+        private CadastroTableAdapter _cadastroTableAdapter;
         
         private Decimo_terceiro_salarioTableAdapter _decimo_terceiro_salarioTableAdapter;
         
@@ -12810,20 +14100,6 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Acesso_funcionarioTableAdapter Acesso_funcionarioTableAdapter {
-            get {
-                return this._acesso_funcionarioTableAdapter;
-            }
-            set {
-                this._acesso_funcionarioTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public Acesso_personalDTableAdapter Acesso_personalDTableAdapter {
             get {
                 return this._acesso_personalDTableAdapter;
@@ -12844,6 +14120,34 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
             }
             set {
                 this._agendamento_feriasTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public ApontamentoTableAdapter ApontamentoTableAdapter {
+            get {
+                return this._apontamentoTableAdapter;
+            }
+            set {
+                this._apontamentoTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public CadastroTableAdapter CadastroTableAdapter {
+            get {
+                return this._cadastroTableAdapter;
+            }
+            set {
+                this._cadastroTableAdapter = value;
             }
         }
         
@@ -12978,10 +14282,6 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._acesso_funcionarioTableAdapter != null) 
-                            && (this._acesso_funcionarioTableAdapter.Connection != null))) {
-                    return this._acesso_funcionarioTableAdapter.Connection;
-                }
                 if (((this._acesso_personalDTableAdapter != null) 
                             && (this._acesso_personalDTableAdapter.Connection != null))) {
                     return this._acesso_personalDTableAdapter.Connection;
@@ -12989,6 +14289,14 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                 if (((this._agendamento_feriasTableAdapter != null) 
                             && (this._agendamento_feriasTableAdapter.Connection != null))) {
                     return this._agendamento_feriasTableAdapter.Connection;
+                }
+                if (((this._apontamentoTableAdapter != null) 
+                            && (this._apontamentoTableAdapter.Connection != null))) {
+                    return this._apontamentoTableAdapter.Connection;
+                }
+                if (((this._cadastroTableAdapter != null) 
+                            && (this._cadastroTableAdapter.Connection != null))) {
+                    return this._cadastroTableAdapter.Connection;
                 }
                 if (((this._decimo_terceiro_salarioTableAdapter != null) 
                             && (this._decimo_terceiro_salarioTableAdapter.Connection != null))) {
@@ -13035,13 +14343,16 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._acesso_funcionarioTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._acesso_personalDTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._agendamento_feriasTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._apontamentoTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._cadastroTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._decimo_terceiro_salarioTableAdapter != null)) {
@@ -13151,21 +14462,30 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._acesso_funcionarioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Acesso_funcionario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._acesso_funcionarioTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._acesso_personalDTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Acesso_personalD.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._acesso_personalDTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._apontamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Apontamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._apontamentoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cadastroTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cadastro.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cadastroTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13252,19 +14572,27 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._acesso_funcionarioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Acesso_funcionario.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._acesso_funcionarioTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._acesso_personalDTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Acesso_personalD.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._acesso_personalDTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._apontamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Apontamento.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._apontamentoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cadastroTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cadastro.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cadastroTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13294,19 +14622,27 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._cadastroTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cadastro.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cadastroTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._apontamentoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Apontamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._apontamentoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._acesso_personalDTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Acesso_personalD.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._acesso_personalDTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._acesso_funcionarioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Acesso_funcionario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._acesso_funcionarioTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -13413,11 +14749,6 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._acesso_funcionarioTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._acesso_funcionarioTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._acesso_personalDTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._acesso_personalDTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -13425,6 +14756,16 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
             }
             if (((this._agendamento_feriasTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._agendamento_feriasTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._apontamentoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._apontamentoTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._cadastroTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._cadastroTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -13500,15 +14841,6 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._acesso_funcionarioTableAdapter != null)) {
-                    revertConnections.Add(this._acesso_funcionarioTableAdapter, this._acesso_funcionarioTableAdapter.Connection);
-                    this._acesso_funcionarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._acesso_funcionarioTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._acesso_funcionarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._acesso_funcionarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._acesso_funcionarioTableAdapter.Adapter);
-                    }
-                }
                 if ((this._acesso_personalDTableAdapter != null)) {
                     revertConnections.Add(this._acesso_personalDTableAdapter, this._acesso_personalDTableAdapter.Connection);
                     this._acesso_personalDTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -13525,6 +14857,24 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                     if (this._agendamento_feriasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._agendamento_feriasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._agendamento_feriasTableAdapter.Adapter);
+                    }
+                }
+                if ((this._apontamentoTableAdapter != null)) {
+                    revertConnections.Add(this._apontamentoTableAdapter, this._apontamentoTableAdapter.Connection);
+                    this._apontamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._apontamentoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._apontamentoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._apontamentoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._apontamentoTableAdapter.Adapter);
+                    }
+                }
+                if ((this._cadastroTableAdapter != null)) {
+                    revertConnections.Add(this._cadastroTableAdapter, this._cadastroTableAdapter.Connection);
+                    this._cadastroTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._cadastroTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._cadastroTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._cadastroTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._cadastroTableAdapter.Adapter);
                     }
                 }
                 if ((this._decimo_terceiro_salarioTableAdapter != null)) {
@@ -13657,10 +15007,6 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._acesso_funcionarioTableAdapter != null)) {
-                    this._acesso_funcionarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._acesso_funcionarioTableAdapter]));
-                    this._acesso_funcionarioTableAdapter.Transaction = null;
-                }
                 if ((this._acesso_personalDTableAdapter != null)) {
                     this._acesso_personalDTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._acesso_personalDTableAdapter]));
                     this._acesso_personalDTableAdapter.Transaction = null;
@@ -13668,6 +15014,14 @@ SELECT Id_saude, Nome, Cnpj, Valor, Porcentagem FROM Planos_saude WHERE (Id_saud
                 if ((this._agendamento_feriasTableAdapter != null)) {
                     this._agendamento_feriasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._agendamento_feriasTableAdapter]));
                     this._agendamento_feriasTableAdapter.Transaction = null;
+                }
+                if ((this._apontamentoTableAdapter != null)) {
+                    this._apontamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._apontamentoTableAdapter]));
+                    this._apontamentoTableAdapter.Transaction = null;
+                }
+                if ((this._cadastroTableAdapter != null)) {
+                    this._cadastroTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cadastroTableAdapter]));
+                    this._cadastroTableAdapter.Transaction = null;
                 }
                 if ((this._decimo_terceiro_salarioTableAdapter != null)) {
                     this._decimo_terceiro_salarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._decimo_terceiro_salarioTableAdapter]));
