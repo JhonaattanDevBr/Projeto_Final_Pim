@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanoOdontologico", "PlanoO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpresasClientes", "EmpresasClientes\EmpresasClientes.csproj", "{2DA1744F-4B4E-4E55-9C6C-2E1020163E25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConexaoBaseDados", "ConexaoBaseDados\ConexaoBaseDados.csproj", "{364E34F6-1DC5-44AB-903B-7A3FB269ACA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{2DA1744F-4B4E-4E55-9C6C-2E1020163E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DA1744F-4B4E-4E55-9C6C-2E1020163E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DA1744F-4B4E-4E55-9C6C-2E1020163E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364E34F6-1DC5-44AB-903B-7A3FB269ACA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364E34F6-1DC5-44AB-903B-7A3FB269ACA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364E34F6-1DC5-44AB-903B-7A3FB269ACA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364E34F6-1DC5-44AB-903B-7A3FB269ACA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{F88DED36-C8A0-4463-A6BC-59B07243BE23} = {BDA199BF-3900-41FD-929C-CFB62582DEAC}
 		{FBAB88DA-E044-4DAC-880F-43427B86700C} = {BDA199BF-3900-41FD-929C-CFB62582DEAC}
 		{2DA1744F-4B4E-4E55-9C6C-2E1020163E25} = {BDA199BF-3900-41FD-929C-CFB62582DEAC}
+		{364E34F6-1DC5-44AB-903B-7A3FB269ACA6} = {12530F25-D90C-4EC8-AB2C-90647B3FF2C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3920AE7A-4B69-4D30-B7DD-ED00B5FF869C}
