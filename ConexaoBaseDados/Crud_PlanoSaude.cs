@@ -5,12 +5,13 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlanoSaude;
 
 namespace ConexaoBaseDados
 {
-    public class Crud_PlanoSaude
+    public class crud_PlanoSaude
     {
-        public bool CadastrarConvMedico(string nome,string cnpj, string valor, string porcentagem)
+        public bool CadastrarConvMedico(ConvenioMedico _convenioMedico)
         {
             string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -25,25 +26,25 @@ namespace ConexaoBaseDados
                 var pmtNome = cmd.CreateParameter();
                 pmtNome.ParameterName = "@nome";
                 pmtNome.DbType = DbType.String;
-                pmtNome.Value = nome;
+                pmtNome.Value = _convenioMedico.NomeConvMedico;
                 cmd.Parameters.Add(pmtNome);
 
                 var pmtCnpj = cmd.CreateParameter();
                 pmtCnpj.ParameterName = "@cnpj";
                 pmtCnpj.DbType = DbType.String;
-                pmtCnpj.Value = cnpj;
+                pmtCnpj.Value = _convenioMedico.CnpjConvMedico;
                 cmd.Parameters.Add(pmtCnpj);
 
                 var pmtValor = cmd.CreateParameter();
                 pmtValor.ParameterName = "@valor";
                 pmtValor.DbType = DbType.Double;
-                pmtValor.Value = valor;
+                pmtValor.Value = _convenioMedico.ValorConvMedico;
                 cmd.Parameters.Add(pmtValor);
 
                 var pmtPorcentagem = cmd.CreateParameter();
                 pmtPorcentagem.ParameterName = "@porcentagem";
                 pmtPorcentagem.DbType = DbType.Int32;
-                pmtPorcentagem.Value = porcentagem;
+                pmtPorcentagem.Value = _convenioMedico.PorcentagemConvMedico;
                 cmd.Parameters.Add(pmtPorcentagem);
 
                 if (cmd.ExecuteNonQuery() > 0)

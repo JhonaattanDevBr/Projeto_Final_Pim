@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmpresasClientes;
+using ConexaoBaseDados;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
@@ -15,6 +16,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
     public partial class Form_CadEmpresas : Form
     {
         Empresas empresasCli = new Empresas();
+        crud_Empresas _crud_Empresas = new crud_Empresas();
 
         public Form_CadEmpresas()
         {
@@ -43,8 +45,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             retornoCadastro = empresasCli.AutenticarCadastroEmpresas();
             if (retornoCadastro == true)
             {
-                MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
-                Close();
+                bool[] solicitarCadastro = new bool[2];
+                solicitarCadastro[0] = _crud_Empresas.incluirEnderecoEmpresa(empresasCli);
+                solicitarCadastro[1] = _crud_Empresas.incluirEmpresa(empresasCli);
+                if (solicitarCadastro[0] && solicitarCadastro[1])
+                {
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
+                    Close();
+                }
             }
             else
             {

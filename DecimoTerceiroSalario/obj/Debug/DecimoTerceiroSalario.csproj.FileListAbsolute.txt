@@ -7,3 +7,12 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.CopyComplete
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\bin\Debug\DecimoTerceiroSalario.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\bin\Debug\DecimoTerceiroSalario.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\bin\Debug\FolhaDePagamento.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\bin\Debug\FolhaDePagamento.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.csproj.CopyComplete
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\DecimoTerceiroSalario\obj\Debug\DecimoTerceiroSalario.pdb
