@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "00sHoK6kSagu5vdvgfXGL+qVJ2bUyMWMPH8+OadW61MYHL6eftkBBqA8gcoJa2kN3PWp6JFdCCrKDCpx/XC10w==",
   "success": true,
   "projectFilePath": "C:\\Users\\jhonb\\OneDrive\\Documentos\\Faculdade ADS\\Sistema PIM\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
@@ -22,4 +23,11 @@
       "message": "Problema ao ler o arquivo de cache C:\\Users\\jhonb\\OneDrive\\Documentos\\Faculdade ADS\\Sistema PIM\\Sis_WebPersonalDynamic\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+=======
+  "dgSpecHash": "x1F7zfoGRR7icphpKZ1zUQZtZZ9n2PPy0Al46fgYwVw46vVYhMbGEwuO6lridmhu3vR19Cd/J8WAZ79zOBpTDw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jhonb\\OneDrive\\Documentos\\Faculdade ADS\\Sistema PIM\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> Sis_Desktop
 }

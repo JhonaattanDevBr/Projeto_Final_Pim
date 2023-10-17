@@ -49,19 +49,29 @@ namespace ConexaoBaseDados
             try
             {
                 conexaoDb.Open();
-                string query = "SELECT Id_odonto, Nome FROM Planos_odontologicos ORDER BY Id_odonto";
+
+
+                string query = "SELECT id_odonto, Nome FROM Planos_odontologicos ORDER BY id_odonto";
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
                 SqlDataReader leitura = cmd.ExecuteReader();
+
+                // Criando um Dictionary para armazenar os dados do banco de dados
                 Dictionary<int, string> dados = new Dictionary<int, string>();
+
                 while (leitura.Read())
                 {
-                    int idOdonto = leitura.GetInt32(0); 
-                    string nome = leitura.GetString(1);
+                    int id_odonto = leitura.GetInt32(0);  // Lendo o Id_saude (assume-se que é int)
+                    string nome = leitura.GetString(1); // Lendo o Nome
 
-                    dados[idOdonto] = nome;
+                    // Adicionando os dados ao Dictionary
+                    dados[id_odonto] = nome;
                 }
+
+                // Retornando o Dictionary com os dados do banco de dados
                 conexaoDb.Close();
                 return dados;
+
             }
             catch (Exception)
             {
@@ -92,6 +102,7 @@ namespace ConexaoBaseDados
                 }
                 conexaoDb.Close();
                 return dados;
+
             }
             catch (Exception)
             {
