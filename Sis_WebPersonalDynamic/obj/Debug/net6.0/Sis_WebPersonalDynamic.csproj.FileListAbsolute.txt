@@ -101,3 +101,4 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\Sis_WebPersonalDyna
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\Sis_WebPersonalDynamic\obj\Debug\net6.0\Sis_WebPersonalDynamic.genruntimeconfig.cache
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\Sis_WebPersonalDynamic\obj\Debug\net6.0\ref\Sis_WebPersonalDynamic.dll
 >>>>>>> Sis_Desktop
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\Sis_WebPersonalDynamic\obj\Debug\net6.0\Sis_WebPersonalDynamic.csproj.AssemblyReference.cache
