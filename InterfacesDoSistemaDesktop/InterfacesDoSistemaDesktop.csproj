@@ -214,7 +214,7 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs" />
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
       <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
@@ -240,7 +240,7 @@
       <DependentUpon>Form_ViewDeleteEmpresas.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.cs" />
-=======
+
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,7 +280,7 @@
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
->>>>>>> Sis_Desktop
+
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.Designer.cs">
       <DependentUpon>Form_ViewDeleteFuncionarios.cs</DependentUpon>
     </Compile>
