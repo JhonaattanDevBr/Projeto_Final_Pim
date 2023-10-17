@@ -4,3 +4,5 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CoreCompileInputs.cache
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb

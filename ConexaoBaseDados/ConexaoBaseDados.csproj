@@ -41,16 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base_Dados_Personal_DynamicDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Base_Dados_Personal_DynamicDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Base_Dados_Personal_TesteDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Base_Dados_Personal_TesteDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="crud_AcessoPersonalD.cs" />
     <Compile Include="crud_Empresas.cs" />
     <Compile Include="crud_Funcionarios.cs" />
@@ -65,28 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Base_Dados_Personal_DynamicDataSet.xsc">
-      <DependentUpon>Base_Dados_Personal_DynamicDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Base_Dados_Personal_DynamicDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Base_Dados_Personal_DynamicDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Base_Dados_Personal_DynamicDataSet.xss">
-      <DependentUpon>Base_Dados_Personal_DynamicDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Base_Dados_Personal_TesteDataSet.xsc">
-      <DependentUpon>Base_Dados_Personal_TesteDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Base_Dados_Personal_TesteDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Base_Dados_Personal_TesteDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Base_Dados_Personal_TesteDataSet.xss">
-      <DependentUpon>Base_Dados_Personal_TesteDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
