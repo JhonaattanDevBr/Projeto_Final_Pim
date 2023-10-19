@@ -2,9 +2,9 @@
 
 namespace Sis_WebPersonalDynamic.Controllers
 {
-    public class PagInicio : Controller
+    public class PagSalarioController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Salario()
         {
             return View();
         }

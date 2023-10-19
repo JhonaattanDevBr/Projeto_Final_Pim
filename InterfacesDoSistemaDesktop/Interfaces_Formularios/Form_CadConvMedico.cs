@@ -26,10 +26,19 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         private void btnCadastrarConvMedico_Click(object sender, EventArgs e)
         {
             bool retornoCadastro;
-            conMedico.NomeConvMedico = txtNomeConvMedico.Text;
+            // Preciso replicar isso no CadConvenioMedico
+            if (txtValorConvMedico.Text == "")
+            {
+                conMedico.ValorConvMedico = "0";
+                conMedico.PorcentagemConvMedico = txtPorcentagemConvMedico.Text;
+            }
+            else
+            {
+                conMedico.PorcentagemConvMedico = "0";
+                conMedico.ValorConvMedico = txtValorConvMedico.Text;
+            }
             conMedico.CnpjConvMedico = mskCnpjConvMedico.Text;
-            conMedico.ValorConvMedico = txtValorConvMedico.Text;
-            conMedico.PorcentagemConvMedico = txtPorcentagemConvMedico.Text;
+            conMedico.NomeConvMedico = txtNomeConvMedico.Text;
 
             retornoCadastro = conMedico.AutenticarCadConvMedico();
             if (retornoCadastro)
@@ -59,6 +68,41 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         private void txtValorConvMedico_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void rdbValorFixado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbValorFixado.Checked)
+            {
+                txtPorcentagemConvMedico.Clear();
+                lblValorConvMedico.Enabled = true;
+                txtValorConvMedico.Enabled = true;
+                lblPorcentagemConvMedico.Enabled = false;
+                txtPorcentagemConvMedico.Enabled = false;
+                //txtPorcentagemConvOdonto.Text = "0";
+            }
+        }
+
+        private void rdbPercentual_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbPercentual.Checked)
+            {
+                txtValorConvMedico.Clear();
+                lblPorcentagemConvMedico.Enabled = true;
+                txtPorcentagemConvMedico.Enabled = true;
+                lblValorConvMedico.Enabled = false;
+                txtValorConvMedico.Enabled = false;
+                //txtValorConvOdonto.Text = "0";
+            }
+        }
+
+        private void txtPorcentagemConvMedico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08 && valorDigitado != 46 && valorDigitado != 44)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

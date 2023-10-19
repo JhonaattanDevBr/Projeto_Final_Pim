@@ -110,9 +110,9 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 
         private void Form_CadFuncionarios_Load(object sender, EventArgs e)
         {
+
             Dictionary<int, string> popularComboBoxConvenioMedico = _crud_Funcionarios.PopularCaixaConvenioMedico();
             cmbConvMedico.Items.Clear(); // Limpar os itens existentes no ComboBox
-
             foreach (var convMedico in popularComboBoxConvenioMedico) // Adicionar os valores ao ComboBox
             {
                 cmbConvMedico.Items.Add(convMedico);
@@ -120,10 +120,9 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             cmbConvMedico.ValueMember = "Key"; // Definir a propriedade ValueMember para a chave (Id_saude)
             cmbConvMedico.DisplayMember = "Value"; // Definir a propriedade DisplayMember para o nome
             cmbConvMedico.SelectedIndex = 0; // Selecionar o primeiro item no ComboBox
-
+            /*
             Dictionary<int, string> popularComboBoxConvenioOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
             cmbConvOdontoFunc.Items.Clear();
-
             foreach (var convOdontologico in popularComboBoxConvenioOdontologico)
             {
                 cmbConvOdontoFunc.Items.Add(convOdontologico);
@@ -131,17 +130,16 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             cmbConvOdontoFunc.ValueMember = "Key";
             cmbConvOdontoFunc.DisplayMember = "Value";
             cmbConvOdontoFunc.SelectedIndex = 0;
-
+            
             Dictionary<int, string> polularComboBoxEmpregador = _crud_Funcionarios.PopularCaixaEmpregador();
             cmbEmpregadorFunc.Items.Clear();
-
             foreach(var empregador in polularComboBoxEmpregador)
             {
                 cmbEmpregadorFunc.Items.Add(empregador);
             }
             cmbEmpregadorFunc.ValueMember = "Key";
             cmbEmpregadorFunc.DisplayMember = "Value";
-            cmbEmpregadorFunc.SelectedIndex = 0;
+            cmbEmpregadorFunc.SelectedIndex = 0;*/
         }
     }
 }

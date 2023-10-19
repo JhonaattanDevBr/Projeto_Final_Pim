@@ -11,9 +11,12 @@ namespace ConexaoBaseDados
 {
     public class crud_PlanoSaude
     {
+        servidoresBancoDados _servidores = new servidoresBancoDados();
+
         public bool CadastrarConvMedico(ConvenioMedico _convenioMedico)
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
+            
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
