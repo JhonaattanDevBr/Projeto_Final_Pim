@@ -11,6 +11,8 @@ namespace ConexaoBaseDados
 {
     public class crud_AcessoPersonalD
     {
+        servidoresBancoDados _servidores = new servidoresBancoDados();
+        // Ainda preciso mudar o crud e para buscar os atributos ao inves de receber parametros
         public bool CadastrarFuncPersonalD(string nome,
                                            string cargo,
                                            string setor,
@@ -18,7 +20,7 @@ namespace ConexaoBaseDados
                                            string senha,
                                            string confirmacaoSenha)
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try

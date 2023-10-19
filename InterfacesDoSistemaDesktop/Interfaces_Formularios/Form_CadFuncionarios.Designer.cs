@@ -106,7 +106,7 @@
             this.gpbCadastroFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbCadastroFuncionarios.Location = new System.Drawing.Point(12, 12);
             this.gpbCadastroFuncionarios.Name = "gpbCadastroFuncionarios";
-            this.gpbCadastroFuncionarios.Size = new System.Drawing.Size(611, 697);
+            this.gpbCadastroFuncionarios.Size = new System.Drawing.Size(760, 637);
             this.gpbCadastroFuncionarios.TabIndex = 0;
             this.gpbCadastroFuncionarios.TabStop = false;
             this.gpbCadastroFuncionarios.Text = "Cadastro de funcionários";
@@ -116,7 +116,7 @@
             this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.LightBlue;
             this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(236, 650);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(305, 593);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(144, 30);
             this.btnCadastrarFuncionario.TabIndex = 4;
@@ -136,9 +136,9 @@
             this.gpbEndereco.Controls.Add(this.lblBairro);
             this.gpbEndereco.Controls.Add(this.lblEstado);
             this.gpbEndereco.Controls.Add(this.lblCidade);
-            this.gpbEndereco.Location = new System.Drawing.Point(6, 492);
+            this.gpbEndereco.Location = new System.Drawing.Point(6, 437);
             this.gpbEndereco.Name = "gpbEndereco";
-            this.gpbEndereco.Size = new System.Drawing.Size(598, 135);
+            this.gpbEndereco.Size = new System.Drawing.Size(748, 135);
             this.gpbEndereco.TabIndex = 3;
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Informações de endereço";
@@ -261,9 +261,9 @@
             this.gpbContrato.Controls.Add(this.lblCargo);
             this.gpbContrato.Controls.Add(this.lblEmpregador);
             this.gpbContrato.Controls.Add(this.lblNumeroRegistro);
-            this.gpbContrato.Location = new System.Drawing.Point(6, 335);
+            this.gpbContrato.Location = new System.Drawing.Point(6, 280);
             this.gpbContrato.Name = "gpbContrato";
-            this.gpbContrato.Size = new System.Drawing.Size(598, 142);
+            this.gpbContrato.Size = new System.Drawing.Size(748, 142);
             this.gpbContrato.TabIndex = 2;
             this.gpbContrato.TabStop = false;
             this.gpbContrato.Text = "Informações contratuais";
@@ -272,7 +272,7 @@
             // 
             this.txtDependentesFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDependentesFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtDependentesFunc.Location = new System.Drawing.Point(490, 108);
+            this.txtDependentesFunc.Location = new System.Drawing.Point(352, 103);
             this.txtDependentesFunc.MaxLength = 2;
             this.txtDependentesFunc.Name = "txtDependentesFunc";
             this.txtDependentesFunc.Size = new System.Drawing.Size(80, 20);
@@ -282,7 +282,7 @@
             // 
             this.cmbConvOdontoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.cmbConvOdontoFunc.FormattingEnabled = true;
-            this.cmbConvOdontoFunc.Location = new System.Drawing.Point(318, 107);
+            this.cmbConvOdontoFunc.Location = new System.Drawing.Point(180, 102);
             this.cmbConvOdontoFunc.Name = "cmbConvOdontoFunc";
             this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 21);
             this.cmbConvOdontoFunc.TabIndex = 14;
@@ -292,7 +292,7 @@
             // 
             this.cmbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.cmbConvMedico.FormattingEnabled = true;
-            this.cmbConvMedico.Location = new System.Drawing.Point(147, 107);
+            this.cmbConvMedico.Location = new System.Drawing.Point(9, 102);
             this.cmbConvMedico.Name = "cmbConvMedico";
             this.cmbConvMedico.Size = new System.Drawing.Size(150, 21);
             this.cmbConvMedico.TabIndex = 13;
@@ -302,7 +302,7 @@
             // 
             this.txtSalarioFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSalarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtSalarioFunc.Location = new System.Drawing.Point(9, 107);
+            this.txtSalarioFunc.Location = new System.Drawing.Point(539, 48);
             this.txtSalarioFunc.Name = "txtSalarioFunc";
             this.txtSalarioFunc.Size = new System.Drawing.Size(120, 20);
             this.txtSalarioFunc.TabIndex = 12;
@@ -352,7 +352,7 @@
             // 
             this.lblDependentes.AutoSize = true;
             this.lblDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblDependentes.Location = new System.Drawing.Point(487, 90);
+            this.lblDependentes.Location = new System.Drawing.Point(349, 85);
             this.lblDependentes.Name = "lblDependentes";
             this.lblDependentes.Size = new System.Drawing.Size(81, 15);
             this.lblDependentes.TabIndex = 7;
@@ -362,7 +362,7 @@
             // 
             this.lblConvenioOdontologico.AutoSize = true;
             this.lblConvenioOdontologico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblConvenioOdontologico.Location = new System.Drawing.Point(315, 89);
+            this.lblConvenioOdontologico.Location = new System.Drawing.Point(177, 84);
             this.lblConvenioOdontologico.Name = "lblConvenioOdontologico";
             this.lblConvenioOdontologico.Size = new System.Drawing.Size(132, 15);
             this.lblConvenioOdontologico.TabIndex = 6;
@@ -372,7 +372,7 @@
             // 
             this.lblConvenioMedico.AutoSize = true;
             this.lblConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblConvenioMedico.Location = new System.Drawing.Point(144, 89);
+            this.lblConvenioMedico.Location = new System.Drawing.Point(6, 84);
             this.lblConvenioMedico.Name = "lblConvenioMedico";
             this.lblConvenioMedico.Size = new System.Drawing.Size(102, 15);
             this.lblConvenioMedico.TabIndex = 5;
@@ -382,7 +382,7 @@
             // 
             this.lblSalario.AutoSize = true;
             this.lblSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblSalario.Location = new System.Drawing.Point(6, 89);
+            this.lblSalario.Location = new System.Drawing.Point(536, 30);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(46, 15);
             this.lblSalario.TabIndex = 4;
@@ -444,9 +444,9 @@
             this.gpbContato.Controls.Add(this.lblEmailSecundario);
             this.gpbContato.Controls.Add(this.lblDominio);
             this.gpbContato.Controls.Add(this.lblEmail);
-            this.gpbContato.Location = new System.Drawing.Point(6, 172);
+            this.gpbContato.Location = new System.Drawing.Point(6, 127);
             this.gpbContato.Name = "gpbContato";
-            this.gpbContato.Size = new System.Drawing.Size(598, 144);
+            this.gpbContato.Size = new System.Drawing.Size(748, 137);
             this.gpbContato.TabIndex = 1;
             this.gpbContato.TabStop = false;
             this.gpbContato.Text = "Informações de contato";
@@ -454,7 +454,7 @@
             // mskCelularSecundarioFunc
             // 
             this.mskCelularSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskCelularSecundarioFunc.Location = new System.Drawing.Point(295, 107);
+            this.mskCelularSecundarioFunc.Location = new System.Drawing.Point(152, 101);
             this.mskCelularSecundarioFunc.Mask = "(00) 00000-0000";
             this.mskCelularSecundarioFunc.Name = "mskCelularSecundarioFunc";
             this.mskCelularSecundarioFunc.Size = new System.Drawing.Size(120, 20);
@@ -463,7 +463,7 @@
             // mskCelularPrincipalFunc
             // 
             this.mskCelularPrincipalFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskCelularPrincipalFunc.Location = new System.Drawing.Point(152, 107);
+            this.mskCelularPrincipalFunc.Location = new System.Drawing.Point(9, 101);
             this.mskCelularPrincipalFunc.Mask = "(00) 00000-0000";
             this.mskCelularPrincipalFunc.Name = "mskCelularPrincipalFunc";
             this.mskCelularPrincipalFunc.Size = new System.Drawing.Size(120, 20);
@@ -472,7 +472,7 @@
             // mskTelefoneFunc
             // 
             this.mskTelefoneFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskTelefoneFunc.Location = new System.Drawing.Point(9, 107);
+            this.mskTelefoneFunc.Location = new System.Drawing.Point(592, 47);
             this.mskTelefoneFunc.Mask = "(00) 0000-0000";
             this.mskTelefoneFunc.Name = "mskTelefoneFunc";
             this.mskTelefoneFunc.Size = new System.Drawing.Size(120, 20);
@@ -544,7 +544,7 @@
             // 
             this.lblCelularSecundario.AutoSize = true;
             this.lblCelularSecundario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCelularSecundario.Location = new System.Drawing.Point(292, 89);
+            this.lblCelularSecundario.Location = new System.Drawing.Point(149, 83);
             this.lblCelularSecundario.Name = "lblCelularSecundario";
             this.lblCelularSecundario.Size = new System.Drawing.Size(110, 15);
             this.lblCelularSecundario.TabIndex = 6;
@@ -554,7 +554,7 @@
             // 
             this.lblCelularPrincipal.AutoSize = true;
             this.lblCelularPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCelularPrincipal.Location = new System.Drawing.Point(149, 89);
+            this.lblCelularPrincipal.Location = new System.Drawing.Point(6, 83);
             this.lblCelularPrincipal.Name = "lblCelularPrincipal";
             this.lblCelularPrincipal.Size = new System.Drawing.Size(96, 15);
             this.lblCelularPrincipal.TabIndex = 5;
@@ -564,7 +564,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblTelefone.Location = new System.Drawing.Point(6, 89);
+            this.lblTelefone.Location = new System.Drawing.Point(589, 29);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(55, 15);
             this.lblTelefone.TabIndex = 4;
@@ -627,7 +627,7 @@
             this.gpbInfoFuncionario.Controls.Add(this.lblNome);
             this.gpbInfoFuncionario.Location = new System.Drawing.Point(6, 22);
             this.gpbInfoFuncionario.Name = "gpbInfoFuncionario";
-            this.gpbInfoFuncionario.Size = new System.Drawing.Size(598, 135);
+            this.gpbInfoFuncionario.Size = new System.Drawing.Size(748, 89);
             this.gpbInfoFuncionario.TabIndex = 0;
             this.gpbInfoFuncionario.TabStop = false;
             this.gpbInfoFuncionario.Text = "Informações pessoais";
@@ -635,7 +635,7 @@
             // mskCpfFunc
             // 
             this.mskCpfFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskCpfFunc.Location = new System.Drawing.Point(127, 98);
+            this.mskCpfFunc.Location = new System.Drawing.Point(565, 48);
             this.mskCpfFunc.Mask = "000.000.000-00";
             this.mskCpfFunc.Name = "mskCpfFunc";
             this.mskCpfFunc.Size = new System.Drawing.Size(100, 20);
@@ -645,7 +645,7 @@
             // 
             this.mskRgFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.mskRgFunc.HideSelection = false;
-            this.mskRgFunc.Location = new System.Drawing.Point(9, 98);
+            this.mskRgFunc.Location = new System.Drawing.Point(447, 48);
             this.mskRgFunc.Mask = "00.000.000-0";
             this.mskRgFunc.Name = "mskRgFunc";
             this.mskRgFunc.Size = new System.Drawing.Size(100, 20);
@@ -708,7 +708,7 @@
             // 
             this.lblCpf.AutoSize = true;
             this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCpf.Location = new System.Drawing.Point(124, 80);
+            this.lblCpf.Location = new System.Drawing.Point(562, 30);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(30, 15);
             this.lblCpf.TabIndex = 5;
@@ -718,7 +718,7 @@
             // 
             this.lblRg.AutoSize = true;
             this.lblRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblRg.Location = new System.Drawing.Point(6, 80);
+            this.lblRg.Location = new System.Drawing.Point(444, 30);
             this.lblRg.Name = "lblRg";
             this.lblRg.Size = new System.Drawing.Size(25, 15);
             this.lblRg.TabIndex = 4;
@@ -769,7 +769,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(635, 721);
+            this.ClientSize = new System.Drawing.Size(784, 661);
             this.Controls.Add(this.gpbCadastroFuncionarios);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
