@@ -11,9 +11,11 @@ namespace ConexaoBaseDados
 {
     public class crud_Empresas
     {
+        servidoresBancoDados _servidores = new servidoresBancoDados();
+
         public bool incluirEnderecoEmpresa(Empresas _empresa)
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -75,7 +77,7 @@ namespace ConexaoBaseDados
 
         public bool incluirEmpresa (Empresas _empresa)
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
