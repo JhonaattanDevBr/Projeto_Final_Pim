@@ -10,10 +10,11 @@ namespace ConexaoBaseDados
 {
     public class crud_Funcionarios
     {
+        servidoresBancoDados _servidores = new servidoresBancoDados();
 
         public Dictionary<int, string> PopularCaixaConvenioMedico()
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -43,7 +44,7 @@ namespace ConexaoBaseDados
 
         public Dictionary<int, string> PopularCaixaConvenioOdontologico()
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -82,7 +83,7 @@ namespace ConexaoBaseDados
 
         public Dictionary<int, string> PopularCaixaEmpregador()
         {
-            string caminho = @"Data Source=DESKTOP-AF6EDUF\SQLEXPRESSS;Initial Catalog=Base_Dados_Personal_Teste;Integrated Security=True";
+            string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try

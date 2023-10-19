@@ -112,47 +112,17 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         {
 
             Dictionary<int, string> popularComboBoxConvenioMedico = _crud_Funcionarios.PopularCaixaConvenioMedico();
-            Dictionary<int, string> popularComboBoxOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
-
-            // Limpar os itens existentes no ComboBox
-            cmbConvMedico.Items.Clear();
-            cmbConvOdontoFunc.Items.Clear();
-
-            // Adicionar os valores ao ComboBox
-            foreach (var item in popularComboBoxConvenioMedico)
-
             cmbConvMedico.Items.Clear(); // Limpar os itens existentes no ComboBox
-
             foreach (var convMedico in popularComboBoxConvenioMedico) // Adicionar os valores ao ComboBox
-
             {
                 cmbConvMedico.Items.Add(convMedico);
             }
             cmbConvMedico.ValueMember = "Key"; // Definir a propriedade ValueMember para a chave (Id_saude)
             cmbConvMedico.DisplayMember = "Value"; // Definir a propriedade DisplayMember para o nome
             cmbConvMedico.SelectedIndex = 0; // Selecionar o primeiro item no ComboBox
-
-
-            foreach (var item in popularComboBoxOdontologico)
-            {
-                cmbConvOdontoFunc.Items.Add(item);
-            }
-
-            // Definir a propriedade ValueMember para a chave (Id_saude)
-            cmbConvMedico.ValueMember = "Key";
-            cmbConvOdontoFunc.ValueMember = "key";
-
-            // Definir a propriedade DisplayMember para o nome
-            cmbConvMedico.DisplayMember = "Value";
-            cmbConvOdontoFunc.DisplayMember = "Value";
-
-            // Selecionar o primeiro item no ComboBox
-            cmbConvMedico.SelectedIndex = 0;
-            cmbConvOdontoFunc.SelectedIndex = 0;
-
+            /*
             Dictionary<int, string> popularComboBoxConvenioOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
             cmbConvOdontoFunc.Items.Clear();
-
             foreach (var convOdontologico in popularComboBoxConvenioOdontologico)
             {
                 cmbConvOdontoFunc.Items.Add(convOdontologico);
@@ -160,18 +130,16 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             cmbConvOdontoFunc.ValueMember = "Key";
             cmbConvOdontoFunc.DisplayMember = "Value";
             cmbConvOdontoFunc.SelectedIndex = 0;
-
+            
             Dictionary<int, string> polularComboBoxEmpregador = _crud_Funcionarios.PopularCaixaEmpregador();
             cmbEmpregadorFunc.Items.Clear();
-
-
             foreach(var empregador in polularComboBoxEmpregador)
             {
                 cmbEmpregadorFunc.Items.Add(empregador);
             }
             cmbEmpregadorFunc.ValueMember = "Key";
             cmbEmpregadorFunc.DisplayMember = "Value";
-            cmbEmpregadorFunc.SelectedIndex = 0;
+            cmbEmpregadorFunc.SelectedIndex = 0;*/
         }
     }
 }
