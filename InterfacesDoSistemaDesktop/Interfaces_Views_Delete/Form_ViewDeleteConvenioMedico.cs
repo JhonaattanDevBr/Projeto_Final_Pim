@@ -16,5 +16,10 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         {
             InitializeComponent();
         }
+
+        private void Form_ViewDeleteConvenioMedico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

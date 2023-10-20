@@ -231,6 +231,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_ViewDeleteConvenioMedico";
             this.Text = "Convênio Médico";
+            this.Load += new System.EventHandler(this.Form_ViewDeleteConvenioMedico_Load);
             this.gpbConvenioMedico.ResumeLayout(false);
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
