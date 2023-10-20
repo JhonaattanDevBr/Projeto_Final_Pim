@@ -120,7 +120,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             cmbConvMedico.ValueMember = "Key"; // Definir a propriedade ValueMember para a chave (Id_saude)
             cmbConvMedico.DisplayMember = "Value"; // Definir a propriedade DisplayMember para o nome
             cmbConvMedico.SelectedIndex = 0; // Selecionar o primeiro item no ComboBox
-            /*
+            
             Dictionary<int, string> popularComboBoxConvenioOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
             cmbConvOdontoFunc.Items.Clear();
             foreach (var convOdontologico in popularComboBoxConvenioOdontologico)
@@ -139,7 +139,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             }
             cmbEmpregadorFunc.ValueMember = "Key";
             cmbEmpregadorFunc.DisplayMember = "Value";
-            cmbEmpregadorFunc.SelectedIndex = 0;*/
+            cmbEmpregadorFunc.SelectedIndex = 0;
         }
     }
 }
