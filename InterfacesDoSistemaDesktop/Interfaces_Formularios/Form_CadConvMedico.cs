@@ -45,10 +45,22 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             {
                 bool incluirConvMedico = _crud_PlanoSaude.CadastrarConvMedico(conMedico);
                 if (incluirConvMedico)
-                
-                    MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
-                    Close();
-                
+                {
+                    // a mensagem esta ao contrario.
+                    DialogResult sair =  MessageBox.Show("Cadastro realizado com sucesso!\nDeseja inserir um novo convênio ?", "Operação concluida!", MessageBoxButtons.YesNo);
+                    if (sair == DialogResult.Yes)
+                    {
+                        txtNomeConvMedico.Clear();
+                        mskCnpjConvMedico.Clear();
+                        txtValorConvMedico.Clear();
+                        txtPorcentagemConvMedico.Clear();
+                        txtNomeConvMedico.Focus();
+                    }
+                    else
+                    {
+                        Close();
+                    }
+                }
             }
             else
             {
