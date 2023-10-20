@@ -68,5 +68,39 @@ namespace ConexaoBaseDados
             }
 
         }
+
+        public List<ConvenioMedico> buscarConvenioMedico()
+        {
+            string caminho = _servidores.servidorNotebook;
+            List<ConvenioMedico> _lstConvenioMedico = new List<ConvenioMedico>();
+            ConvenioMedico _convenioMedico = new ConvenioMedico();
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string querry = "SELECT * FROM Planos_saude";
+
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _convenioMedico.NomeConvMedico = _leitor.GetString(0);
+                    _convenioMedico.CnpjConvMedico = _leitor.GetString(1);
+                    _convenioMedico.ValorConvMedico = _leitor.GetString(2);
+                    _convenioMedico.PorcentagemConvMedico = _leitor.GetString(3);
+                    _lstConvenioMedico.Add(_convenioMedico);
+                }
+                return _lstConvenioMedico;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
     }
 }
