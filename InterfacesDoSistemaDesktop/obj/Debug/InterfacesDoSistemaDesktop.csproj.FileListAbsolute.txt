@@ -192,7 +192,6 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteConvenioMedico.resources
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\bin\Debug\FuncionariosEmpresas.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\bin\Debug\FuncionariosEmpresas.pdb
-C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteConvenioMedico.resources
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteEmpresas.resources
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteConvenioOdontologico.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteConvenioOdontologico.resources
@@ -204,3 +203,4 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistema
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Updates.Form_UpdateConvenioOdontologico.resources
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Updates.Form_UpdateEmpresas.resources
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteFuncionarios.resources
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Views_Delete.Form_ViewDeleteConvenioMedico.resources
