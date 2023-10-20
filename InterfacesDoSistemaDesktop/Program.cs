@@ -19,7 +19,11 @@ namespace InterfacesDoSistemaDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Form_ViewDeleteConvenioMedico());
+=======
+            Application.Run(new Form_CadConvMedico());
+>>>>>>> 8a726a79d8885fda709d5b127b8ec579c22da3d8
         }
     }
 }
