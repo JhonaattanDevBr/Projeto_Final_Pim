@@ -218,6 +218,8 @@
             this.dgvVisualizaConvMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisualizaConvMedico.Location = new System.Drawing.Point(6, 22);
             this.dgvVisualizaConvMedico.Name = "dgvVisualizaConvMedico";
+            this.dgvVisualizaConvMedico.ReadOnly = true;
+            this.dgvVisualizaConvMedico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVisualizaConvMedico.Size = new System.Drawing.Size(711, 629);
             this.dgvVisualizaConvMedico.TabIndex = 0;
             // 
@@ -228,8 +230,12 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(984, 681);
             this.Controls.Add(this.gpbConvenioMedico);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form_ViewDeleteConvenioMedico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Convênio Médico";
             this.Load += new System.EventHandler(this.Form_ViewDeleteConvenioMedico_Load);
             this.gpbConvenioMedico.ResumeLayout(false);
