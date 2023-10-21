@@ -22,7 +22,7 @@ namespace Sis_WebPersonalDynamic.Controllers
          }
         protected bool CadastraFuncionario(CadastroModel cadastro)
         {
-            string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True";
+            string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
             
             SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
             try

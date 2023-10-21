@@ -4,7 +4,7 @@ namespace Sis_WebPersonalDynamic.Models
 {
     public class CadastroModel
     {
-        public int Id_funcionario { get; set; }
+        public int Id_cadastro { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório! informe seu nome")]
         public string Nome { get; set; }
@@ -32,5 +32,6 @@ namespace Sis_WebPersonalDynamic.Models
 
         [Required(ErrorMessage = "Campo obrigatório! informe seu Cargo")]
         public string Cargo { get; set; }
+        public int Id_funcionario { get; set; }
     }
 }
