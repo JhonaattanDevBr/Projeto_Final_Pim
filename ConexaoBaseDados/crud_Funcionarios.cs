@@ -70,13 +70,12 @@ namespace ConexaoBaseDados
                 }
 
                 // Retornando o Dictionary com os dados do banco de dados
+
                 conexaoDb.Close();
                 return dados;
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

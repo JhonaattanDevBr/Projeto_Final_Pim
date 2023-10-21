@@ -24,6 +24,7 @@ namespace FuncionariosEmpresas
         public string CelularPrincipal { get; set; }
         public string CelularSecundario { get; set; }
         public string NumeroRegistro { get; set; }
+        public string CargaHoraria { get; set; }
         public string Empregador { get; set; }
         public string Cargo { get; set; }
         public string DataAdmisao { get; set; }
@@ -153,12 +154,13 @@ namespace FuncionariosEmpresas
             !string.IsNullOrEmpty(CelularPrincipal) &&
             !string.IsNullOrEmpty(CelularSecundario) &&
             !string.IsNullOrEmpty(NumeroRegistro) &&
-            !string.IsNullOrEmpty(Empregador) &&
+            !string.IsNullOrEmpty(CargaHoraria) &&
+            //!string.IsNullOrEmpty(Empregador) &&
             !string.IsNullOrEmpty(Cargo) &&
             !string.IsNullOrEmpty(DataAdmisao) &&
             !string.IsNullOrEmpty(Salario) &&
-            !string.IsNullOrEmpty(ConvenioMedico) &&
-            !string.IsNullOrEmpty(ConvenioOdontologico) &&
+            //!string.IsNullOrEmpty(ConvenioMedico) &&
+            //!string.IsNullOrEmpty(ConvenioOdontologico) &&
             !string.IsNullOrEmpty(Dependentes) &&
             !string.IsNullOrEmpty(Cidade) &&
             !string.IsNullOrEmpty(Estado) &&
@@ -246,6 +248,7 @@ namespace FuncionariosEmpresas
             List<string> colecaoDeDigitos = new List<string>();
             colecaoDeDigitos.Add(Idade);
             colecaoDeDigitos.Add(NumeroRegistro);
+            colecaoDeDigitos.Add(CargaHoraria);
             colecaoDeDigitos.Add(Salario);
             colecaoDeDigitos.Add(Dependentes);
             colecaoDeDigitos.Add(Numero);
@@ -254,8 +257,10 @@ namespace FuncionariosEmpresas
             {
                 foreach (char c in str)
                 {
-                    todosCaracteresValidos = true;
-                    break;
+                    if (char.IsDigit(c))
+                    {
+                        todosCaracteresValidos = true;
+                    }
                 }
             }
 

@@ -37,12 +37,13 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             _funcionarios.CelularPrincipal = mskCelularPrincipalFunc.Text;
             _funcionarios.CelularSecundario = mskCelularSecundarioFunc.Text;
             _funcionarios.NumeroRegistro = txtRegistroFunc.Text;
-            _funcionarios.Empregador = cmbEmpregadorFunc.Text;
+            _funcionarios.CargaHoraria = txtCargaHoraria.Text;
+            //_funcionarios.Empregador = cmbEmpregadorFunc.Text;
             _funcionarios.Cargo = txtCargoFunc.Text;
             _funcionarios.DataAdmisao = mskDataAdmissaoFunc.Text;
             _funcionarios.Salario = txtSalarioFunc.Text;
-            _funcionarios.ConvenioMedico = cmbConvMedico.ValueMember;
-            _funcionarios.ConvenioOdontologico = cmbConvOdontoFunc.Text;
+            //_funcionarios.ConvenioMedico = cmbConvMedico.ValueMember;
+            //_funcionarios.ConvenioOdontologico = cmbConvOdontoFunc.Text;
             _funcionarios.Dependentes = txtDependentesFunc.Text;
             _funcionarios.Cidade = txtCidadeFunc.Text;
             _funcionarios.Estado = txtEstadoFunc.Text;
@@ -110,36 +111,116 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 
         private void Form_CadFuncionarios_Load(object sender, EventArgs e)
         {
-
             Dictionary<int, string> popularComboBoxConvenioMedico = _crud_Funcionarios.PopularCaixaConvenioMedico();
             cmbConvMedico.Items.Clear(); // Limpar os itens existentes no ComboBox
-            foreach (var convMedico in popularComboBoxConvenioMedico) // Adicionar os valores ao ComboBox
+            if (popularComboBoxConvenioMedico.Count == 0)
             {
-                cmbConvMedico.Items.Add(convMedico);
+                cmbConvMedico.Enabled = false;
+                _funcionarios.ConvenioMedico = "0";
             }
-            cmbConvMedico.ValueMember = "Key"; // Definir a propriedade ValueMember para a chave (Id_saude)
-            cmbConvMedico.DisplayMember = "Value"; // Definir a propriedade DisplayMember para o nome
-            cmbConvMedico.SelectedIndex = 0; // Selecionar o primeiro item no ComboBox
-            
+            else
+            {
+                foreach (var convMedico in popularComboBoxConvenioMedico) // Adicionar os valores ao ComboBox
+                {
+                    cmbConvMedico.Items.Add(convMedico);
+                }
+                cmbConvMedico.ValueMember = "Key"; // Definir a propriedade ValueMember para a chave (Id_saude)
+                cmbConvMedico.DisplayMember = "Value"; // Definir a propriedade DisplayMember para o nome
+                cmbConvMedico.SelectedIndex = 0; // Selecionar o primeiro item no ComboBox
+                
+            }
+                
             Dictionary<int, string> popularComboBoxConvenioOdontologico = _crud_Funcionarios.PopularCaixaConvenioOdontologico();
             cmbConvOdontoFunc.Items.Clear();
-            foreach (var convOdontologico in popularComboBoxConvenioOdontologico)
+            if (popularComboBoxConvenioOdontologico.Count == 0)
             {
-                cmbConvOdontoFunc.Items.Add(convOdontologico);
+                cmbConvOdontoFunc.Enabled = false;
+                _funcionarios.ConvenioOdontologico = "0";
             }
-            cmbConvOdontoFunc.ValueMember = "Key";
-            cmbConvOdontoFunc.DisplayMember = "Value";
-            cmbConvOdontoFunc.SelectedIndex = 0;
+            else
+            {
+                foreach (var convOdontologico in popularComboBoxConvenioOdontologico)
+                {
+                    cmbConvOdontoFunc.Items.Add(convOdontologico);
+                }
+                cmbConvOdontoFunc.ValueMember = "Key";
+                cmbConvOdontoFunc.DisplayMember = "Value";
+                cmbConvOdontoFunc.SelectedIndex = 0;
+                
+            }
             
             Dictionary<int, string> polularComboBoxEmpregador = _crud_Funcionarios.PopularCaixaEmpregador();
             cmbEmpregadorFunc.Items.Clear();
-            foreach(var empregador in polularComboBoxEmpregador)
+            if (polularComboBoxEmpregador.Count == 0)
             {
-                cmbEmpregadorFunc.Items.Add(empregador);
+                cmbEmpregadorFunc.Enabled = false;
+                _funcionarios.Empregador = "0";
             }
-            cmbEmpregadorFunc.ValueMember = "Key";
-            cmbEmpregadorFunc.DisplayMember = "Value";
-            cmbEmpregadorFunc.SelectedIndex = 0;
+            else
+            {
+                foreach (var empregador in polularComboBoxEmpregador)
+                {
+                    cmbEmpregadorFunc.Items.Add(empregador);
+                }
+                cmbEmpregadorFunc.ValueMember = "Key";
+                cmbEmpregadorFunc.DisplayMember = "Value";
+                cmbEmpregadorFunc.SelectedIndex = 0;
+            }
         }
+
+        private void txtRegistroFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCargaHoraria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDependentesFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIdadeFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalarioFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08 && valorDigitado != 46 && valorDigitado != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

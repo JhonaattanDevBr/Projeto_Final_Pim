@@ -88,6 +88,8 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.lblCargaHoraria = new System.Windows.Forms.Label();
+            this.txtCargaHoraria = new System.Windows.Forms.TextBox();
             this.gpbCadastroFuncionarios.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbContrato.SuspendLayout();
@@ -152,6 +154,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(80, 20);
             this.textBox14.TabIndex = 9;
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // txtRuaFunc
             // 
@@ -245,6 +248,8 @@
             // 
             // gpbContrato
             // 
+            this.gpbContrato.Controls.Add(this.txtCargaHoraria);
+            this.gpbContrato.Controls.Add(this.lblCargaHoraria);
             this.gpbContrato.Controls.Add(this.txtDependentesFunc);
             this.gpbContrato.Controls.Add(this.cmbConvOdontoFunc);
             this.gpbContrato.Controls.Add(this.cmbConvMedico);
@@ -277,6 +282,7 @@
             this.txtDependentesFunc.Name = "txtDependentesFunc";
             this.txtDependentesFunc.Size = new System.Drawing.Size(80, 20);
             this.txtDependentesFunc.TabIndex = 15;
+            this.txtDependentesFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDependentesFunc_KeyPress);
             // 
             // cmbConvOdontoFunc
             // 
@@ -306,6 +312,7 @@
             this.txtSalarioFunc.Name = "txtSalarioFunc";
             this.txtSalarioFunc.Size = new System.Drawing.Size(120, 20);
             this.txtSalarioFunc.TabIndex = 12;
+            this.txtSalarioFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioFunc_KeyPress);
             // 
             // mskDataAdmissaoFunc
             // 
@@ -347,6 +354,7 @@
             this.txtRegistroFunc.Name = "txtRegistroFunc";
             this.txtRegistroFunc.Size = new System.Drawing.Size(80, 20);
             this.txtRegistroFunc.TabIndex = 8;
+            this.txtRegistroFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroFunc_KeyPress);
             // 
             // lblDependentes
             // 
@@ -683,6 +691,7 @@
             this.txtIdadeFunc.Name = "txtIdadeFunc";
             this.txtIdadeFunc.Size = new System.Drawing.Size(50, 20);
             this.txtIdadeFunc.TabIndex = 8;
+            this.txtIdadeFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdadeFunc_KeyPress);
             // 
             // txtSobrenomeFunc
             // 
@@ -763,6 +772,26 @@
             this.lblNome.Size = new System.Drawing.Size(41, 15);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
+            // 
+            // lblCargaHoraria
+            // 
+            this.lblCargaHoraria.AutoSize = true;
+            this.lblCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblCargaHoraria.Location = new System.Drawing.Point(452, 85);
+            this.lblCargaHoraria.Name = "lblCargaHoraria";
+            this.lblCargaHoraria.Size = new System.Drawing.Size(82, 15);
+            this.lblCargaHoraria.TabIndex = 16;
+            this.lblCargaHoraria.Text = "Carga horaria";
+            // 
+            // txtCargaHoraria
+            // 
+            this.txtCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCargaHoraria.Location = new System.Drawing.Point(455, 103);
+            this.txtCargaHoraria.MaxLength = 3;
+            this.txtCargaHoraria.Name = "txtCargaHoraria";
+            this.txtCargaHoraria.Size = new System.Drawing.Size(50, 20);
+            this.txtCargaHoraria.TabIndex = 17;
+            this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
             // 
             // Form_CadFuncionarios
             // 
@@ -853,5 +882,7 @@
         private System.Windows.Forms.TextBox txtEstadoFunc;
         private System.Windows.Forms.TextBox txtCidadeFunc;
         private System.Windows.Forms.Button btnCadastrarFuncionario;
+        private System.Windows.Forms.TextBox txtCargaHoraria;
+        private System.Windows.Forms.Label lblCargaHoraria;
     }
 }
