@@ -50,8 +50,30 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
                 solicitarCadastro[1] = _crud_Empresas.incluirEmpresa(empresasCli);
                 if (solicitarCadastro[0] && solicitarCadastro[1])
                 {
-                    MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
-                    Close();
+                    DialogResult sair = MessageBox.Show("Cadastro realizado com sucesso!\nDeseja inserir uma nova empresa ?", "Operação concluida!", MessageBoxButtons.YesNo);
+                    if (sair == DialogResult.Yes)
+                    {
+                        txtRazaoSocial.Clear();
+                        txtNomeFantasia.Clear();
+                        txtNascionalidade.Clear();
+                        mskCnpj.Clear();
+                        txtEmail.Clear();
+                        //cmbDominio.SelectedIndex = 0;
+                        mskTelefone.Clear();
+                        txtCeo.Clear();
+                       // dtmDataFundacao.Clear();
+                        txtSegmento.Clear();
+                        txtCidade.Clear();
+                        txtEstado.Clear();
+                        txtBairro.Clear();
+                        txtRua.Clear();
+                        txtNumero.Clear();
+                        txtRazaoSocial.Focus();
+                    }
+                    else
+                    {
+                        Close();
+                    }
                 }
             }
             else

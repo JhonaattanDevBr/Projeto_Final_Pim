@@ -271,12 +271,6 @@
     <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.Designer.cs">
       <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.Designer.cs">
-      <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioOdontologico.cs">
       <SubType>Form</SubType>
     </Compile>

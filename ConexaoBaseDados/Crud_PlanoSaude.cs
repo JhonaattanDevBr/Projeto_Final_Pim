@@ -16,7 +16,6 @@ namespace ConexaoBaseDados
         public bool CadastrarConvMedico(ConvenioMedico _convenioMedico)
         {
             string caminho = _servidores.servidorNotebook;
-            
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -68,5 +67,48 @@ namespace ConexaoBaseDados
             }
 
         }
+
+        public DataTable buscarConvenioMedico()
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+           
+            //FINAMENTE FUNCIONOU ESSA POHAAAAAAAAA
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT * FROM Planos_saude";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+                SqlDataReader _leitor = cmd.ExecuteReader();
+                
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Id", typeof(int));
+                dt.Columns.Add("Nome", typeof(string));
+                dt.Columns.Add("Cnpj", typeof(string));
+                dt.Columns.Add("Valor", typeof(decimal));
+                dt.Columns.Add("Porcentagem", typeof(decimal));
+
+                while ( _leitor.Read())
+                {
+                    int id = _leitor.GetInt32(0);
+                    string nome = _leitor.GetString(1);
+                    string cnpj = _leitor.GetString(2);
+                    float valor = _leitor.GetFloat(3);
+                    int porcentagem = _leitor.GetInt32(4);
+                    dt.Rows.Add(id, nome, cnpj, valor, porcentagem);
+                }
+                conexaoDb.Close();
+                return dt;
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
     }
 }

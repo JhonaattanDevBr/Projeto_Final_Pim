@@ -14,6 +14,7 @@
     "C:\\Users\\Jho\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Jho\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
+<<<<<<< HEAD
   "logs": [
     {
       "code": "Undefined",
@@ -22,4 +23,7 @@
       "message": "Problem reading the cache file C:\\Users\\Jho\\Documents\\Facudade ADS\\4º Semestre\\Sistemas\\Sistema Final PIM\\ProjetoContaPersonal\\Sis_WebPersonalDynamic\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+=======
+  "logs": []
+>>>>>>> Sis_Desktop
 }

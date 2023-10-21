@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ViewDeleteConvenioMedico));
             this.gpbConvenioMedico = new System.Windows.Forms.GroupBox();
+            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
+            this.mskPesquisaCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.lblCnpj = new System.Windows.Forms.Label();
+            this.lblNomeConvenioMedico = new System.Windows.Forms.Label();
+            this.txtPesquisaConvenioMedico = new System.Windows.Forms.TextBox();
             this.gpbFiltro = new System.Windows.Forms.GroupBox();
             this.btnLimparFiltro = new System.Windows.Forms.Button();
             this.rdbCnpj = new System.Windows.Forms.RadioButton();
@@ -39,15 +44,10 @@
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgvVisualizaConvMedico = new System.Windows.Forms.DataGridView();
-            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
-            this.mskPesquisaCnpj = new System.Windows.Forms.MaskedTextBox();
-            this.lblCnpj = new System.Windows.Forms.Label();
-            this.lblNomeConvenioMedico = new System.Windows.Forms.Label();
-            this.txtPesquisaConvenioMedico = new System.Windows.Forms.TextBox();
             this.gpbConvenioMedico.SuspendLayout();
+            this.gpbPesquisa.SuspendLayout();
             this.gpbFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizaConvMedico)).BeginInit();
-            this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbConvenioMedico
@@ -64,9 +64,59 @@
             this.gpbConvenioMedico.Location = new System.Drawing.Point(13, 12);
             this.gpbConvenioMedico.Name = "gpbConvenioMedico";
             this.gpbConvenioMedico.Size = new System.Drawing.Size(959, 657);
-            this.gpbConvenioMedico.TabIndex = 1;
+            this.gpbConvenioMedico.TabIndex = 2;
             this.gpbConvenioMedico.TabStop = false;
             this.gpbConvenioMedico.Text = "Convênio médico";
+            // 
+            // gpbPesquisa
+            // 
+            this.gpbPesquisa.Controls.Add(this.mskPesquisaCnpj);
+            this.gpbPesquisa.Controls.Add(this.lblCnpj);
+            this.gpbPesquisa.Controls.Add(this.lblNomeConvenioMedico);
+            this.gpbPesquisa.Controls.Add(this.txtPesquisaConvenioMedico);
+            this.gpbPesquisa.Location = new System.Drawing.Point(723, 22);
+            this.gpbPesquisa.Name = "gpbPesquisa";
+            this.gpbPesquisa.Size = new System.Drawing.Size(230, 98);
+            this.gpbPesquisa.TabIndex = 6;
+            this.gpbPesquisa.TabStop = false;
+            this.gpbPesquisa.Text = "Pesquisa rápida";
+            // 
+            // mskPesquisaCnpj
+            // 
+            this.mskPesquisaCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskPesquisaCnpj.Location = new System.Drawing.Point(53, 64);
+            this.mskPesquisaCnpj.Mask = "00,000,000/0000-00";
+            this.mskPesquisaCnpj.Name = "mskPesquisaCnpj";
+            this.mskPesquisaCnpj.Size = new System.Drawing.Size(124, 20);
+            this.mskPesquisaCnpj.TabIndex = 4;
+            // 
+            // lblCnpj
+            // 
+            this.lblCnpj.AutoSize = true;
+            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblCnpj.Location = new System.Drawing.Point(9, 67);
+            this.lblCnpj.Name = "lblCnpj";
+            this.lblCnpj.Size = new System.Drawing.Size(38, 15);
+            this.lblCnpj.TabIndex = 3;
+            this.lblCnpj.Text = "CNPJ";
+            // 
+            // lblNomeConvenioMedico
+            // 
+            this.lblNomeConvenioMedico.AutoSize = true;
+            this.lblNomeConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblNomeConvenioMedico.Location = new System.Drawing.Point(6, 33);
+            this.lblNomeConvenioMedico.Name = "lblNomeConvenioMedico";
+            this.lblNomeConvenioMedico.Size = new System.Drawing.Size(41, 15);
+            this.lblNomeConvenioMedico.TabIndex = 2;
+            this.lblNomeConvenioMedico.Text = "Nome";
+            // 
+            // txtPesquisaConvenioMedico
+            // 
+            this.txtPesquisaConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtPesquisaConvenioMedico.Location = new System.Drawing.Point(53, 33);
+            this.txtPesquisaConvenioMedico.Name = "txtPesquisaConvenioMedico";
+            this.txtPesquisaConvenioMedico.Size = new System.Drawing.Size(124, 20);
+            this.txtPesquisaConvenioMedico.TabIndex = 1;
             // 
             // gpbFiltro
             // 
@@ -168,58 +218,10 @@
             this.dgvVisualizaConvMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisualizaConvMedico.Location = new System.Drawing.Point(6, 22);
             this.dgvVisualizaConvMedico.Name = "dgvVisualizaConvMedico";
+            this.dgvVisualizaConvMedico.ReadOnly = true;
+            this.dgvVisualizaConvMedico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVisualizaConvMedico.Size = new System.Drawing.Size(711, 629);
             this.dgvVisualizaConvMedico.TabIndex = 0;
-            // 
-            // gpbPesquisa
-            // 
-            this.gpbPesquisa.Controls.Add(this.mskPesquisaCnpj);
-            this.gpbPesquisa.Controls.Add(this.lblCnpj);
-            this.gpbPesquisa.Controls.Add(this.lblNomeConvenioMedico);
-            this.gpbPesquisa.Controls.Add(this.txtPesquisaConvenioMedico);
-            this.gpbPesquisa.Location = new System.Drawing.Point(723, 22);
-            this.gpbPesquisa.Name = "gpbPesquisa";
-            this.gpbPesquisa.Size = new System.Drawing.Size(230, 98);
-            this.gpbPesquisa.TabIndex = 6;
-            this.gpbPesquisa.TabStop = false;
-            this.gpbPesquisa.Text = "Pesquisa rápida";
-            // 
-            // mskPesquisaCnpj
-            // 
-            this.mskPesquisaCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.mskPesquisaCnpj.Location = new System.Drawing.Point(53, 64);
-            this.mskPesquisaCnpj.Mask = "00,000,000/0000-00";
-            this.mskPesquisaCnpj.Name = "mskPesquisaCnpj";
-            this.mskPesquisaCnpj.Size = new System.Drawing.Size(124, 20);
-            this.mskPesquisaCnpj.TabIndex = 4;
-            // 
-            // lblCnpj
-            // 
-            this.lblCnpj.AutoSize = true;
-            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCnpj.Location = new System.Drawing.Point(9, 67);
-            this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(38, 15);
-            this.lblCnpj.TabIndex = 3;
-            this.lblCnpj.Text = "CNPJ";
-            // 
-            // lblNomeConvenioMedico
-            // 
-            this.lblNomeConvenioMedico.AutoSize = true;
-            this.lblNomeConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblNomeConvenioMedico.Location = new System.Drawing.Point(6, 33);
-            this.lblNomeConvenioMedico.Name = "lblNomeConvenioMedico";
-            this.lblNomeConvenioMedico.Size = new System.Drawing.Size(41, 15);
-            this.lblNomeConvenioMedico.TabIndex = 2;
-            this.lblNomeConvenioMedico.Text = "Nome";
-            // 
-            // txtPesquisaConvenioMedico
-            // 
-            this.txtPesquisaConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtPesquisaConvenioMedico.Location = new System.Drawing.Point(53, 33);
-            this.txtPesquisaConvenioMedico.Name = "txtPesquisaConvenioMedico";
-            this.txtPesquisaConvenioMedico.Size = new System.Drawing.Size(124, 20);
-            this.txtPesquisaConvenioMedico.TabIndex = 1;
             // 
             // Form_ViewDeleteConvenioMedico
             // 
@@ -235,12 +237,13 @@
             this.Name = "Form_ViewDeleteConvenioMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Convênio Médico";
+            this.Load += new System.EventHandler(this.Form_ViewDeleteConvenioMedico_Load);
             this.gpbConvenioMedico.ResumeLayout(false);
+            this.gpbPesquisa.ResumeLayout(false);
+            this.gpbPesquisa.PerformLayout();
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizaConvMedico)).EndInit();
-            this.gpbPesquisa.ResumeLayout(false);
-            this.gpbPesquisa.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -248,6 +251,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpbConvenioMedico;
+        private System.Windows.Forms.GroupBox gpbPesquisa;
+        private System.Windows.Forms.MaskedTextBox mskPesquisaCnpj;
+        private System.Windows.Forms.Label lblCnpj;
+        private System.Windows.Forms.Label lblNomeConvenioMedico;
+        private System.Windows.Forms.TextBox txtPesquisaConvenioMedico;
         private System.Windows.Forms.GroupBox gpbFiltro;
         private System.Windows.Forms.Button btnLimparFiltro;
         private System.Windows.Forms.RadioButton rdbCnpj;
@@ -257,10 +265,5 @@
         private System.Windows.Forms.Button btnAlterarDados;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dgvVisualizaConvMedico;
-        private System.Windows.Forms.GroupBox gpbPesquisa;
-        private System.Windows.Forms.MaskedTextBox mskPesquisaCnpj;
-        private System.Windows.Forms.Label lblCnpj;
-        private System.Windows.Forms.Label lblNomeConvenioMedico;
-        private System.Windows.Forms.TextBox txtPesquisaConvenioMedico;
     }
 }
