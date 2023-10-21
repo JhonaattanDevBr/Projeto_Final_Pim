@@ -8,8 +8,14 @@ namespace Sis_WebPersonalDynamic
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
-            var app = builder.Build();
+            builder.Services.AddDistributedMemoryCache(); // Adicione um mecanismo de cache para as sessões
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Defina o tempo limite da sessão conforme necessário
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+                var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -26,6 +32,8 @@ namespace Sis_WebPersonalDynamic
 
             app.UseAuthorization();
 
+            app.UseSession();
+            
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Login}/{action=Index}/{id?}");

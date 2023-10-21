@@ -15,10 +15,10 @@ namespace Sis_WebPersonalDynamic.Controllers
         public ActionResult Login(LoginModel login)
         {
             // Verifique se o email e a senha correspondem a um registro válido no banco de dados
-            string query = "SELECT COUNT(*) FROM Acesso_funcionario WHERE Email = @email AND Senha = @senha";
+            string query = "SELECT COUNT(*) FROM Cadastro WHERE Email = @email AND Senha = @senha";
             int count = 0;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True"))
             {
                 connection.Open();
 

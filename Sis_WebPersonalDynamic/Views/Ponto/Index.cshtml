@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Controle de Ponto";
 }
-
+@model List<ApontamentoModel>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -17,19 +17,10 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" asp-controller="Ponto" asp-action="Index">Apontamento</a> <!--Referente a página de inicio-->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="PagSalario" asp-action="Salario">Salário</a>
                     </li> 
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="FolhaPag" asp-action="FolhaPagamento">Folha de Pagamento</a>
                     </li>
-                   <!-- <li class="nav-item">
-                        <a class="nav-link" asp-controller="PagHolerite" asp-action="Holerite">Holerite</a>
-                     </li>-->
-                    <!--<li class="nav-item">
-                        <a class="nav-link" asp-controller="Faltas" asp-action="Falta">Faltas</a>
-                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
                     </li>
@@ -42,30 +33,67 @@
     </nav>
 </header>
 
+<br />
+<div class="container">
+       <div class="row border Regular shadow" style="margin-top:20px; margin-bottom:20px">
+            <a>
+                <i class="fs-4 bi-clock" style="font-size:30px; margin-right: 20px; margin-left:10px"></i><span style="font-size:30px">Registrar Ponto</span>
+            </a>
+            </div>    
+    <div class="text-center">
+        @using (Html.BeginForm("BaterPonto","Ponto", FormMethod.Post))
+        {
+            <button type="submit" asp-controller="Ponto" asp-action="BaterPonto" class="bnt bnt-outline-primary">Registrar Ponto</button>
+        }
+        <br>
+    </div>
+
+ <!--Aqui temos no topo da página as horas do dia e as horas do mês que falta reportar -->
+
+    <div class="form-row" style="margin-top:20px; margin-bottom:20px; margin-right:20px">
+        <div class="col" style="display:inline-block">
+            <h4>Horas trabalhadas</h4>
+            <h2>@ViewBag.data</h2>
+        </div>
+        <div class="col" style="display:inline-block">
+            <h4>Horas à reportar</h4>
+             <h2>@ViewBag.reportar</h2>
+        </div>
+    </div>
+</div>    
+
 <div class="display-5">
         Meus Apontamentos 
 </div>
-<div class="container">
+
+<!--Aqui temos Umtabela que aprensenta todas as batidas do dia-->
+@if(Model != null && Model.Any<ApontamentoModel>())
+    {
+    foreach(ApontamentoModel ponto in Model)
+    {
+        <div class="container">
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <td>Dia</td>
+                    <td>Horas trabalhadas</td>
                     <td>Entrada</td>
+                    <td>Saida Almoço</td>
+                    <td>Retorno Almoço</td>
                     <td>Saida</td>
-                    <td>Entrada</td>
-                    <td>Saida</td>
-                    <td>Horas totais</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>@ponto.Dia</td>
+                    <td>@ponto.Somatorio_dia</td>
+                    <td>@ponto.Inicio_jornada</td>
+                    <td>@ponto.Saida_almoco</td>
+                    <td>@ponto.Retorno_almoco</td>
+                    <td>@ponto.Fim_jornada</td>
                 </tr>
             </tbody>
         </table>
 </div>
+    }
+}
