@@ -1,5 +1,6 @@
 ﻿using InterfacesDoSistemaDesktop.Interfaces_Acesso;
 using InterfacesDoSistemaDesktop.Interfaces_Formularios;
+using InterfacesDoSistemaDesktop.Interfaces_Views_Delete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace InterfacesDoSistemaDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_CadEmpresas());
+            Application.Run(new Form_CadConvMedico());
         }
     }
 }
