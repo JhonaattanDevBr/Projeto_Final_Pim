@@ -16,7 +16,6 @@ namespace ConexaoBaseDados
         public bool CadastrarConvMedico(ConvenioMedico _convenioMedico)
         {
             string caminho = _servidores.servidorNotebook;
-            
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -63,40 +62,46 @@ namespace ConexaoBaseDados
             }
             catch (Exception)
             {
-
                 throw;
             }
 
         }
 
-        public List<ConvenioMedico> buscarConvenioMedico()
+        public DataTable buscarConvenioMedico()
         {
             string caminho = _servidores.servidorNotebook;
-            List<ConvenioMedico> _lstConvenioMedico = new List<ConvenioMedico>();
-            ConvenioMedico _convenioMedico = new ConvenioMedico();
             SqlConnection conexaoDb = new SqlConnection(caminho);
-
+           
             try
             {
                 conexaoDb.Open();
-                string querry = "SELECT * FROM Planos_saude";
 
+                string querry = "SELECT * FROM Planos_saude";
                 SqlCommand cmd = new SqlCommand(querry, conexaoDb);
                 SqlDataReader _leitor = cmd.ExecuteReader();
+                
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Código", typeof(int));
+                dt.Columns.Add("Nome", typeof(string));
+                dt.Columns.Add("Cnpj", typeof(string));
+                dt.Columns.Add("Valor", typeof(decimal));
+                dt.Columns.Add("Porcentagem", typeof(decimal));
 
-                while (_leitor.Read())
+                while ( _leitor.Read())
                 {
-                    _convenioMedico.NomeConvMedico = _leitor.GetString(0);
-                    _convenioMedico.CnpjConvMedico = _leitor.GetString(1);
-                    _convenioMedico.ValorConvMedico = _leitor.GetString(2);
-                    _convenioMedico.PorcentagemConvMedico = _leitor.GetString(3);
-                    _lstConvenioMedico.Add(_convenioMedico);
+                    int id = _leitor.GetInt32(0);
+                    string nome = _leitor.GetString(1);
+                    string cnpj = _leitor.GetString(2);
+                    double valor = _leitor.GetDouble(3);
+                    int porcentagem = _leitor.GetInt32(4);
+                    dt.Rows.Add(id, nome, cnpj, valor, porcentagem);
                 }
-                return _lstConvenioMedico;
+                conexaoDb.Close();
+                return dt;
+                
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

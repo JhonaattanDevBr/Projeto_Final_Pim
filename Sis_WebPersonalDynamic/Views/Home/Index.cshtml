@@ -1,7 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Página Home";
 }
-
 @model List<FuncionarioModel>
 
 <header>
@@ -91,17 +90,22 @@
                     <div class="col">
                             Férias: Status não definido
                     </div>                  
-                    <br />
-                    <div class="col">
-                        Faltas:
-                    </div>
-                    <br />
+                    <br />          
+                <div class="col" style="display:inline-block">
+                    <h4>Horas trabalhadas</h4>
+                    <h2>@ViewBag.data</h2>
                 </div>
+                <div class="col" style="display:inline-block">
+                    <h4>Horas à reportar</h4>
+                 <h2>@ViewBag.reportar</h2>
+                </div>
+            
+</div>    
             </div>
+        </div>
 
         </div>
-        <br />
-    </div>
+    
     }
 }
 

@@ -26,7 +26,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
         {
             bool retornoCadastro;
             
-            // Preciso replicar isso no CadConvenioMedico
             if (txtValorConvOdonto.Text == "")
             {
                 conOdonto.ValorConvOdonto = "0";
@@ -46,8 +45,19 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
                 bool incluirConvOdontologico = _crud_PlanoOdontologico.CadastrarConvOdontologico(conOdonto);
                 if (incluirConvOdontologico)
                 {
-                    MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
-                    Close();
+                    DialogResult sair = MessageBox.Show("Cadastro realizado com sucesso!\nDeseja inserir um novo convênio ?", "Operação concluida!", MessageBoxButtons.YesNo);
+                    if (sair == DialogResult.Yes)
+                    {
+                        txtNomeConvOdonto.Clear();
+                        mskCnpjConvOdonto.Clear();
+                        txtValorConvOdonto.Clear();
+                        txtPorcentagemConvOdonto.Clear();
+                        txtNomeConvOdonto.Focus();
+                    }
+                    else
+                    {
+                        Close();
+                    }
                 }
             }
             else

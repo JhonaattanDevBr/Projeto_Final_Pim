@@ -1,24 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Página de ferias";
 }
-
-<head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
-          rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js">
-    </script>
-</head>
-
-@{
-    ViewData["Title"] = "Controle de Ponto";
-}
-
+@model AgendamentoferiasModel
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -59,61 +42,186 @@
     </nav>
 </header>
 
+<div class="container">
+    <div class="row border Regular shadow" style="margin-top:20px; margin-bottom:20px">
+        <a>
+            <i class="fs-4 bi-airplane" style="font-size:30px; margin-right:20px; margin-left:10px"></i><span style="font-size:30px">Agendamento de ferias</span>
+        </a>
+    </div>
 
+    <h3 style="width:700px" class="">Selecione os períodos desejado de férias</h3>
 
-
-<div class="alert alert-success" role="alert">
-    <strong>Férias disponivel!</strong> Solicite um agendamento!
-</div>
-<h1 class="display-5"> Informações de férias</h1>
-<br />
-
-<fieldset class="form-group">
-    <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0">Período de Férias</legend>
-        <div class="col-sm-10">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="opcao1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                    1 período
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="opcao2">
-                <label class="form-check-label" for="gridRadios2">
-                    2 períodos
-                </label>
-            </div>
-            <div class="form-check disabled">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="opcao3" checked>
-                <label class="form-check-label" for="gridRadios3">
-                    3 períodos
-                </label>
-            </div>
+    <div class="container" style="margin-bottom:20px">
+        <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
     </div>
-</fieldset>
 
-
-<label class="form-control-label">Data inicio</label>
-<input type="text" class="date form-control" style="width: 200px" />
-<script type="text/javascript">
-    $(".date").datepicker({
-        format: "dd-mm-yyyy",
-    });
-</script>
-
-<label class="form-control-label">Data final</label>
-<input type="text" class="date form-control" style="width: 200px" />
-<script type="text/javascript">
-    $(".date").datepicker({
-        format: "dd-mm-yyyy",
-    });
-</script>
-<br />
-    <div class="align-items-center">
-    <button type="submit" class="btn btn-primary">Agendar</button>
+    <div class="container border" id="divPeriod1" style="display:none; margin-bottom:20px">
+        <h4>Primeiro periodo</h4>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Data de inicio</label>
+                <input type="date" class="form-control" id="exempleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+             <label for="inputQtdDias">Quantidade Dias</label>
+                <select class="form-control" style="width:70px; margin-bottom:20px">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                 </select>
+            
+        </form>
     </div>
 
+    <div class="container border" id="divPeriod2" style="display:none; margin-bottom:20px">
+        <h4>Segundo periodo</h4>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Data de inicio</label>
+                <input type="date" class="form-control" id="exempleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <label for="inputQtdDias">Quantidade Dias</label>
+                <select class="form-control" style="width:70px; margin-bottom:20px">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                </select>
+        </form>
+    </div>
 
-                        <!--Aqui vou adicionar o status das férias e as opções para agendar e venda delas-->
+    <div class="container border" id="divPeriod3" style="display: none; margin-bottom:20px">
+        <h4>Terceiro periodo</h4>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Data de inicio</label>
+                <input type="date" class="form-control" id="exempleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <label for="inputQtdDias">Quantidade Dias</label>
+            <select class="form-control" style="width:70px; margin-bottom:20px">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                </select>
+        </form>
+    </div>
+
+    <button type="submit" id="Enviar" class="btn btn-primary" style="display:none;">Enviar</button>
+
+    <script>
+        function togglePerioDivs() 
+        {
+            var selectedValue = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
+
+            document.getElementById("divPeriod1").style.display = "none";
+            document.getElementById("divPeriod2").style.display = "none"; 
+            document.getElementById("divPeriod3").style.display = "none";
+
+            if (selectedValue === "option1") {
+                document.getElementById("divPeriod1").style.display = "block";
+                document.getElementById("Enviar").style.display = "block";
+            } else if (selectedValue === "option2") {
+                document.getElementById("divPeriod1").style.display = "block";
+                document.getElementById("divPeriod2").style.display = "block";
+                document.getElementById("Enviar").style.display = "block";
+            } else if (selectedValue === "option3") {
+                document.getElementById("divPeriod1").style.display = "block";
+                document.getElementById("divPeriod2").style.display = "block";
+                document.getElementById("divPeriod3").style.display = "block";
+                document.getElementById("Enviar").style.display = "block";
+            }
+        }
+
+        var radioButtons = document.querySelectorAll('input[name="inlineRadioOptions"]');
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener("change", togglePerioDivs);
+        });
+        togglePerioDivs();
+    </script>
+
+  </div>
+

@@ -18,7 +18,7 @@ namespace Sis_WebPersonalDynamic.Controllers
         {
 
 
-            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True";
+            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
             SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
             FuncionarioModel funcionario = new FuncionarioModel();
 
@@ -40,20 +40,21 @@ namespace Sis_WebPersonalDynamic.Controllers
                 funcionario.Sexo = reader.GetString(4);               
                 funcionario.Id_endereco = reader.GetInt32(5);
                 funcionario.Registro = reader.GetInt32(6);
-                funcionario.Cpf = reader.GetString(7);
-                funcionario.Rg = reader.GetString(8);
-                funcionario.Email = reader.GetString(9);
-                funcionario.Email_secundario= reader.GetString(10);
-                funcionario.Telefone = reader.GetInt32(11);
-                funcionario.Celular_1 = reader.GetInt32(12);
-                funcionario.Celular_2 = reader.GetInt32(13);
-                funcionario.Num_dependentes = reader.GetInt32(14);
-                funcionario.Id_planos_saude = reader.GetInt32(15);
-                funcionario.Id_planos_odontologicos = reader.GetInt32(16);
-                funcionario.Id_empresas = reader.GetInt32(16);
-                funcionario.Cargo = reader.GetString(18);
-                funcionario.Salario = reader.GetFloat(19);
-                funcionario.Data_admissao = reader.GetDateTime(20);
+                funcionario.Carga_horaria = reader.GetInt32(7);
+                funcionario.Cpf = reader.GetString(8);
+                funcionario.Rg = reader.GetString(9);
+                funcionario.Email = reader.GetString(10);
+                funcionario.Email_secundario= reader.GetString(11);
+                funcionario.Telefone = reader.GetString(12);
+                funcionario.Cell_principal = reader.GetString(13);
+                funcionario.Cell_secundario = reader.GetString(14);
+                funcionario.Num_dependentes = reader.GetInt32(15);
+                funcionario.Id_planos_saude = reader.GetInt32(16);
+                funcionario.Id_planos_odontologicos = reader.GetInt32(17);
+                funcionario.Id_empresas = reader.GetInt32(18);
+                funcionario.Cargo = reader.GetString(19);
+                funcionario.Salario = reader.GetFloat(20);
+                funcionario.Data_admissao = reader.GetDateTime(21);
 
                 lista.Add(funcionario);
             }

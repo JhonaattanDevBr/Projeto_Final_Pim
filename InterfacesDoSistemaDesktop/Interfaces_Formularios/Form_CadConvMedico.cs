@@ -46,7 +46,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
                 bool incluirConvMedico = _crud_PlanoSaude.CadastrarConvMedico(conMedico);
                 if (incluirConvMedico)
                 {
-                    // a mensagem esta ao contrario.
                     DialogResult sair =  MessageBox.Show("Cadastro realizado com sucesso!\nDeseja inserir um novo convênio ?", "Operação concluida!", MessageBoxButtons.YesNo);
                     if (sair == DialogResult.Yes)
                     {

@@ -81,7 +81,7 @@ namespace ConexaoBaseDados
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
-            {
+            {// vou ter que rodar esse codigo de novo para descobri o pq da erro na segunda vez em q vou execultar.
                 conexaoDb.Open();
 
                 string querry = "INSERT INTO EMPRESAS (Razao_social, Nome_fantasia, Nacionalidade, Cnpj, Email, Telefone, Ceo, Fundacao, Segmento, Id_endereco)" +

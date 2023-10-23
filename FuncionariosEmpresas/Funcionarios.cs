@@ -24,6 +24,7 @@ namespace FuncionariosEmpresas
         public string CelularPrincipal { get; set; }
         public string CelularSecundario { get; set; }
         public string NumeroRegistro { get; set; }
+        public string CargaHoraria { get; set; }
         public string Empregador { get; set; }
         public string Cargo { get; set; }
         public string DataAdmisao { get; set; }
@@ -39,10 +40,10 @@ namespace FuncionariosEmpresas
         public string MensagemErro { get; set; }
 
 
-        public bool SolicitarCadastroFuncionario()
+        public bool AutenticarFuncionario()
         {
-            bool auten1, auten2, auten3, auten4, auten5, auten6, auten7, auten8, auten9, auten10;
-            
+            bool auten1, auten2, auten3, auten4, auten5, auten6, auten7, auten8, auten9, auten10, auten11;
+
             auten1 = AutenticarCamposVazios();
             auten2 = AutenticarSexo();
             auten3 = AutenticarRg();
@@ -53,6 +54,7 @@ namespace FuncionariosEmpresas
             auten8 = AutenticarApenasNumeros();
             auten9 = AutenticarApenasLetrasNumerosEspacosEmBranco();
             auten10 = AutenticarEspacosEmBranco();
+            auten11 = AutenticarApenasLetrasEspacosBranco();
 
             if (auten1)
             {
@@ -74,9 +76,18 @@ namespace FuncionariosEmpresas
                                             {
                                                 if (auten10)
                                                 {
-                                                    DataAdmisao = FormatarData();
-                                                    MesclarEmailDominio();
-                                                    return true;
+                                                    if (auten11)
+                                                    {
+                                                        DataAdmisao = FormatarData();
+                                                        MesclarEmailDominio();
+                                                        CapturarId();
+                                                        return true;
+                                                    }
+                                                    else
+                                                    {
+                                                        MensagemErro = "O campo SOBRENOME não aceita números e caracteres especiais.";
+                                                        return false;
+                                                    }
                                                 }
                                                 else
                                                 {
@@ -98,7 +109,7 @@ namespace FuncionariosEmpresas
                                     }
                                     else
                                     {
-                                        MensagemErro = "Os campos NOME e SOBRENOME não poodem conter numeros ou espaços em branco.";
+                                        MensagemErro = "Os campos NOME e CARGO não poodem conter numeros ou espaços em branco.";
                                         return false;
                                     }
                                 }
@@ -153,12 +164,13 @@ namespace FuncionariosEmpresas
             !string.IsNullOrEmpty(CelularPrincipal) &&
             !string.IsNullOrEmpty(CelularSecundario) &&
             !string.IsNullOrEmpty(NumeroRegistro) &&
-            !string.IsNullOrEmpty(Empregador) &&
+            !string.IsNullOrEmpty(CargaHoraria) &&
+            //!string.IsNullOrEmpty(Empregador) &&
             !string.IsNullOrEmpty(Cargo) &&
             !string.IsNullOrEmpty(DataAdmisao) &&
             !string.IsNullOrEmpty(Salario) &&
-            !string.IsNullOrEmpty(ConvenioMedico) &&
-            !string.IsNullOrEmpty(ConvenioOdontologico) &&
+            //!string.IsNullOrEmpty(ConvenioMedico) &&
+            //!string.IsNullOrEmpty(ConvenioOdontologico) &&
             !string.IsNullOrEmpty(Dependentes) &&
             !string.IsNullOrEmpty(Cidade) &&
             !string.IsNullOrEmpty(Estado) &&
@@ -184,7 +196,7 @@ namespace FuncionariosEmpresas
         {
             string rgFormatado = Rg;
 
-            rgFormatado = rgFormatado.Replace(".", "").Replace("-", "");
+            rgFormatado = rgFormatado.Replace(",", "").Replace("-", "");
             if(rgFormatado.Length == 9)
             {
                 return true;
@@ -196,7 +208,7 @@ namespace FuncionariosEmpresas
         {
             string cpfFormatado = Cpf;
 
-            cpfFormatado = cpfFormatado.Replace(".", "").Replace("-", "");
+            cpfFormatado = cpfFormatado.Replace(",", "").Replace("-", "");
             if(cpfFormatado.Length == 11)
             {
                 return true;
@@ -233,7 +245,16 @@ namespace FuncionariosEmpresas
 
         private bool AutenticarApenasLetras()
         {
-            if(Nome.Any(char.IsLetter) && Sobrenome.Any(char.IsLetter))
+            if(Nome.All(char.IsLetter) && Cargo.All(char.IsLetter))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarApenasLetrasEspacosBranco()
+        {
+            if(Sobrenome.All(char.IsLetter) || Sobrenome.Any(char.IsWhiteSpace))
             {
                 return true;
             }
@@ -246,6 +267,7 @@ namespace FuncionariosEmpresas
             List<string> colecaoDeDigitos = new List<string>();
             colecaoDeDigitos.Add(Idade);
             colecaoDeDigitos.Add(NumeroRegistro);
+            colecaoDeDigitos.Add(CargaHoraria);
             colecaoDeDigitos.Add(Salario);
             colecaoDeDigitos.Add(Dependentes);
             colecaoDeDigitos.Add(Numero);
@@ -254,8 +276,10 @@ namespace FuncionariosEmpresas
             {
                 foreach (char c in str)
                 {
-                    todosCaracteresValidos = true;
-                    break;
+                    if (char.IsDigit(c))
+                    {
+                        todosCaracteresValidos = true;
+                    }
                 }
             }
 
@@ -324,6 +348,27 @@ namespace FuncionariosEmpresas
             string emailSecundarioCompleto = EmailSecundario + DominioSecundario;
             Email = emailPrincipalCompleto;
             EmailSecundario = emailSecundarioCompleto;
+        }
+
+        private void CapturarId()
+        {
+            string empregador = Empregador;
+            empregador = empregador.Replace("[", "").Replace(",", " ");
+            string[] divisorEmpregador = empregador.Split(' ');
+            string idEmpregador = divisorEmpregador[0];
+            Empregador = idEmpregador;
+
+            string convenioMedico = ConvenioMedico;
+            convenioMedico = convenioMedico.Replace("[", "").Replace(",", " ");
+            string[]  divisorMedico = convenioMedico.Split(' ');
+            string idMedico = divisorMedico[0];
+            ConvenioMedico = idMedico;
+
+            string convenioOdontologico = ConvenioOdontologico;
+            convenioOdontologico = convenioOdontologico.Replace("[", "").Replace(",", " ");
+            string[] divisorOdontologico = convenioOdontologico.Split(' ');
+            string idOdontologico = divisorOdontologico[0];
+            ConvenioOdontologico = idOdontologico;
         }
     }
 }

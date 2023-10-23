@@ -43,6 +43,8 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
             this.gpbEmpresa = new System.Windows.Forms.GroupBox();
+            this.lblDominio = new System.Windows.Forms.Label();
+            this.cmbDominio = new System.Windows.Forms.ComboBox();
             this.dtmDataFundacao = new System.Windows.Forms.DateTimePicker();
             this.txtSegmento = new System.Windows.Forms.TextBox();
             this.txtCeo = new System.Windows.Forms.TextBox();
@@ -61,8 +63,6 @@
             this.lblNascionalidade = new System.Windows.Forms.Label();
             this.lblNomeFantasia = new System.Windows.Forms.Label();
             this.lblRazaoSocial = new System.Windows.Forms.Label();
-            this.cmbDominio = new System.Windows.Forms.ComboBox();
-            this.lblDominio = new System.Windows.Forms.Label();
             this.gpbCadEmpresas.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbEmpresa.SuspendLayout();
@@ -246,6 +246,39 @@
             this.gpbEmpresa.TabStop = false;
             this.gpbEmpresa.Text = "Dados da empresa";
             // 
+            // lblDominio
+            // 
+            this.lblDominio.AutoSize = true;
+            this.lblDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblDominio.Location = new System.Drawing.Point(422, 92);
+            this.lblDominio.Name = "lblDominio";
+            this.lblDominio.Size = new System.Drawing.Size(54, 15);
+            this.lblDominio.TabIndex = 18;
+            this.lblDominio.Text = "Dominio";
+            // 
+            // cmbDominio
+            // 
+            this.cmbDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbDominio.FormattingEnabled = true;
+            this.cmbDominio.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@outlook.com",
+            "@hotmail.com",
+            "@bol.com",
+            "@yahoo.com",
+            "@oul.com",
+            "@terra.com",
+            "@gmx.com",
+            "@icload.com",
+            "@zoho.com"});
+            this.cmbDominio.Location = new System.Drawing.Point(422, 110);
+            this.cmbDominio.Name = "cmbDominio";
+            this.cmbDominio.Size = new System.Drawing.Size(121, 21);
+            this.cmbDominio.TabIndex = 10;
+            this.cmbDominio.Text = "[Selecione]";
+            this.cmbDominio.SelectedIndexChanged += new System.EventHandler(this.cmbDominio_SelectedIndexChanged);
+            this.cmbDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominio_KeyPress);
+            // 
             // dtmDataFundacao
             // 
             this.dtmDataFundacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -428,38 +461,6 @@
             this.lblRazaoSocial.Size = new System.Drawing.Size(78, 15);
             this.lblRazaoSocial.TabIndex = 0;
             this.lblRazaoSocial.Text = "Razão social";
-            // 
-            // cmbDominio
-            // 
-            this.cmbDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.cmbDominio.FormattingEnabled = true;
-            this.cmbDominio.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@outlook.com",
-            "@hotmail.com",
-            "@bol.com",
-            "@yahoo.com",
-            "@oul.com",
-            "@terra.com",
-            "@gmx.com",
-            "@icload.com",
-            "@zoho.com"});
-            this.cmbDominio.Location = new System.Drawing.Point(422, 110);
-            this.cmbDominio.Name = "cmbDominio";
-            this.cmbDominio.Size = new System.Drawing.Size(121, 21);
-            this.cmbDominio.TabIndex = 10;
-            this.cmbDominio.SelectedIndexChanged += new System.EventHandler(this.cmbDominio_SelectedIndexChanged);
-            this.cmbDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominio_KeyPress);
-            // 
-            // lblDominio
-            // 
-            this.lblDominio.AutoSize = true;
-            this.lblDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblDominio.Location = new System.Drawing.Point(422, 92);
-            this.lblDominio.Name = "lblDominio";
-            this.lblDominio.Size = new System.Drawing.Size(54, 15);
-            this.lblDominio.TabIndex = 18;
-            this.lblDominio.Text = "Dominio";
             // 
             // Form_CadEmpresas
             // 
