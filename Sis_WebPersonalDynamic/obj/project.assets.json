@@ -470,23 +470,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iaram\\.nuget\\packages\\": {},
+    "C:\\Users\\Jho\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iaram\\OneDrive\\Área de Trabalho\\Projeto Final PIM\\Projeto_Final_Pim\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
+      "projectUniqueName": "C:\\Users\\Jho\\Documents\\Facudade ADS\\4º Semestre\\Sistemas\\Sistema Final PIM\\ProjetoContaPersonal\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
       "projectName": "Sis_WebPersonalDynamic",
-      "projectPath": "C:\\Users\\iaram\\OneDrive\\Área de Trabalho\\Projeto Final PIM\\Projeto_Final_Pim\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
-      "packagesPath": "C:\\Users\\iaram\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iaram\\OneDrive\\Área de Trabalho\\Projeto Final PIM\\Projeto_Final_Pim\\Sis_WebPersonalDynamic\\obj\\",
+      "projectPath": "C:\\Users\\Jho\\Documents\\Facudade ADS\\4º Semestre\\Sistemas\\Sistema Final PIM\\ProjetoContaPersonal\\Sis_WebPersonalDynamic\\Sis_WebPersonalDynamic.csproj",
+      "packagesPath": "C:\\Users\\Jho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jho\\Documents\\Facudade ADS\\4º Semestre\\Sistemas\\Sistema Final PIM\\ProjetoContaPersonal\\Sis_WebPersonalDynamic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\iaram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jho\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -495,6 +495,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -537,20 +538,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-<<<<<<< HEAD
   },
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\iaram\\OneDrive\\Área de Trabalho\\Projeto Final PIM\\Projeto_Final_Pim\\Sis_WebPersonalDynamic\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\Jho\\Documents\\Facudade ADS\\4º Semestre\\Sistemas\\Sistema Final PIM\\ProjetoContaPersonal\\Sis_WebPersonalDynamic\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'expectedPackageFiles', line 17, position 0."
     }
   ]
-=======
-  }
->>>>>>> Sis_Desktop
 }
