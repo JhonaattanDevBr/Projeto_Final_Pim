@@ -31,3 +31,5 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\FuncionariosEmpresas.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\FuncionariosEmpresas.pdb
 >>>>>>> SIs_Desktop
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\FuncionariosEmpresas.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\bin\Debug\FuncionariosEmpresas.pdb
