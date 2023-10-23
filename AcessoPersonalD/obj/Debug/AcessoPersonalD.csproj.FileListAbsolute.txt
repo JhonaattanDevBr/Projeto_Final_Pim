@@ -14,6 +14,7 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CopyComplete
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj\Debug\AcessoPersonalD.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj\Debug\AcessoPersonalD.pdb
+<<<<<<< HEAD
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\AcessoPersonalD.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\AcessoPersonalD.pdb
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\ConexaoBaseDados.dll
@@ -30,3 +31,7 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CopyComplete
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\obj\Debug\AcessoPersonalD.pdb
+=======
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\FuncionariosEmpresas.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\FuncionariosEmpresas.pdb
+>>>>>>> SIs_Desktop

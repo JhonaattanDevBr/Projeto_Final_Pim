@@ -66,6 +66,10 @@
       <Project>{2da1744f-4b4e-4e55-9c6c-2e1020163e25}</Project>
       <Name>EmpresasClientes</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FuncionariosEmpresas\FuncionariosEmpresas.csproj">
+      <Project>{3750cde9-e095-4aae-bdaa-28b0a662f70a}</Project>
+      <Name>FuncionariosEmpresas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlanoOdontologico\PlanoOdontologico.csproj">
       <Project>{fbab88da-e044-4dac-880f-43427b86700c}</Project>
       <Name>PlanoOdontologico</Name>

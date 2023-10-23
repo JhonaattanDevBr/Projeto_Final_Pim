@@ -62,7 +62,6 @@ namespace ConexaoBaseDados
             }
             catch (Exception)
             {
-
                 throw;
             }
 
@@ -73,7 +72,6 @@ namespace ConexaoBaseDados
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
            
-            //FINAMENTE FUNCIONOU ESSA POHAAAAAAAAA
             try
             {
                 conexaoDb.Open();
@@ -83,7 +81,7 @@ namespace ConexaoBaseDados
                 SqlDataReader _leitor = cmd.ExecuteReader();
                 
                 DataTable dt = new DataTable();
-                dt.Columns.Add("Id", typeof(int));
+                dt.Columns.Add("Código", typeof(int));
                 dt.Columns.Add("Nome", typeof(string));
                 dt.Columns.Add("Cnpj", typeof(string));
                 dt.Columns.Add("Valor", typeof(decimal));
@@ -94,7 +92,7 @@ namespace ConexaoBaseDados
                     int id = _leitor.GetInt32(0);
                     string nome = _leitor.GetString(1);
                     string cnpj = _leitor.GetString(2);
-                    float valor = _leitor.GetFloat(3);
+                    double valor = _leitor.GetDouble(3);
                     int porcentagem = _leitor.GetInt32(4);
                     dt.Rows.Add(id, nome, cnpj, valor, porcentagem);
                 }
@@ -104,7 +102,6 @@ namespace ConexaoBaseDados
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

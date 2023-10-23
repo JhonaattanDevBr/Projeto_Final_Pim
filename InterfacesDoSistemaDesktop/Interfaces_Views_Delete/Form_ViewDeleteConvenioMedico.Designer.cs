@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ViewDeleteConvenioMedico));
             this.gpbConvenioMedico = new System.Windows.Forms.GroupBox();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
@@ -63,7 +65,7 @@
             this.gpbConvenioMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbConvenioMedico.Location = new System.Drawing.Point(13, 12);
             this.gpbConvenioMedico.Name = "gpbConvenioMedico";
-            this.gpbConvenioMedico.Size = new System.Drawing.Size(959, 657);
+            this.gpbConvenioMedico.Size = new System.Drawing.Size(959, 637);
             this.gpbConvenioMedico.TabIndex = 2;
             this.gpbConvenioMedico.TabStop = false;
             this.gpbConvenioMedico.Text = "Convênio médico";
@@ -215,12 +217,29 @@
             // dgvVisualizaConvMedico
             // 
             this.dgvVisualizaConvMedico.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVisualizaConvMedico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVisualizaConvMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisualizaConvMedico.Location = new System.Drawing.Point(6, 22);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVisualizaConvMedico.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvVisualizaConvMedico.GridColor = System.Drawing.Color.Black;
+            this.dgvVisualizaConvMedico.Location = new System.Drawing.Point(6, 28);
             this.dgvVisualizaConvMedico.Name = "dgvVisualizaConvMedico";
             this.dgvVisualizaConvMedico.ReadOnly = true;
             this.dgvVisualizaConvMedico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVisualizaConvMedico.Size = new System.Drawing.Size(711, 629);
+            this.dgvVisualizaConvMedico.Size = new System.Drawing.Size(711, 603);
             this.dgvVisualizaConvMedico.TabIndex = 0;
             // 
             // Form_ViewDeleteConvenioMedico
@@ -228,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(984, 681);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.gpbConvenioMedico);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

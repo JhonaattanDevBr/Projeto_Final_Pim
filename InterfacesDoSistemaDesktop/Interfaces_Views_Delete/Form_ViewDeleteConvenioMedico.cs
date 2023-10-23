@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,10 +23,16 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void Form_ViewDeleteConvenioMedico_Load(object sender, EventArgs e)
         {
+            dgvVisualizaConvMedico.Columns.Clear();
             DataTable tabelaConvenioMedico = _crud_PlanoSaude.buscarConvenioMedico();
             dgvVisualizaConvMedico.DataSource = tabelaConvenioMedico;
-            // ja esta funcionando agora preciso configurar permissoes e caracteristicas da tabela
-            // como por exemplo não permitir que o usuario faça a alteração dos dados digitando.
+
+            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
+            dgvVisualizaConvMedico.Columns[0].Width = 70;
+            dgvVisualizaConvMedico.Columns[1].Width = 210;
+            dgvVisualizaConvMedico.Columns[2].Width = 168;
+            dgvVisualizaConvMedico.Columns[3].Width = 100;
+            dgvVisualizaConvMedico.Columns[4].Width = 120;
         }
     }
 }
