@@ -19,13 +19,13 @@ namespace InterfacesDoSistemaDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
+
             Application.Run(new Form_CadConvMedico());
-=======
 
-            Application.Run(new Form_ViewDeleteConvenioMedico());
 
->>>>>>> Sis_Desktop
+            //Application.Run(new Form_ViewDeleteConvenioMedico());
+
+ 
         }
     }
 }
