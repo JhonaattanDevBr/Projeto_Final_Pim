@@ -26,3 +26,5 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\ob
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.csproj.CopyComplete
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\FuncionariosEmpresas.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\bin\Debug\FuncionariosEmpresas.pdb

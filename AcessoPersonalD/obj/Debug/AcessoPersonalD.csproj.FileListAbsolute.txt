@@ -30,3 +30,5 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj\Debug\AcessoPersonalD.csproj.CopyComplete
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj\Debug\AcessoPersonalD.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\AcessoPersonalD\obj\Debug\AcessoPersonalD.pdb
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\FuncionariosEmpresas.dll
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\AcessoPersonalD\bin\Debug\FuncionariosEmpresas.pdb

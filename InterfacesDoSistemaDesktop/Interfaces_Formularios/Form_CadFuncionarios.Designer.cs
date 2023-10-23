@@ -43,6 +43,8 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
             this.gpbContrato = new System.Windows.Forms.GroupBox();
+            this.txtCargaHoraria = new System.Windows.Forms.TextBox();
+            this.lblCargaHoraria = new System.Windows.Forms.Label();
             this.txtDependentesFunc = new System.Windows.Forms.TextBox();
             this.cmbConvOdontoFunc = new System.Windows.Forms.ComboBox();
             this.cmbConvMedico = new System.Windows.Forms.ComboBox();
@@ -77,8 +79,6 @@
             this.gpbInfoFuncionario = new System.Windows.Forms.GroupBox();
             this.mskCpfFunc = new System.Windows.Forms.MaskedTextBox();
             this.mskRgFunc = new System.Windows.Forms.MaskedTextBox();
-            this.rdbSexoFeminino = new System.Windows.Forms.RadioButton();
-            this.rdbSexoMasculino = new System.Windows.Forms.RadioButton();
             this.txtIdadeFunc = new System.Windows.Forms.TextBox();
             this.txtSobrenomeFunc = new System.Windows.Forms.TextBox();
             this.txtNomeFunc = new System.Windows.Forms.TextBox();
@@ -88,8 +88,8 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblCargaHoraria = new System.Windows.Forms.Label();
-            this.txtCargaHoraria = new System.Windows.Forms.TextBox();
+            this.rdbSexoMasculino = new System.Windows.Forms.RadioButton();
+            this.rdbSexoFeminino = new System.Windows.Forms.RadioButton();
             this.gpbCadastroFuncionarios.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbContrato.SuspendLayout();
@@ -273,6 +273,26 @@
             this.gpbContrato.TabStop = false;
             this.gpbContrato.Text = "Informações contratuais";
             // 
+            // txtCargaHoraria
+            // 
+            this.txtCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCargaHoraria.Location = new System.Drawing.Point(455, 103);
+            this.txtCargaHoraria.MaxLength = 3;
+            this.txtCargaHoraria.Name = "txtCargaHoraria";
+            this.txtCargaHoraria.Size = new System.Drawing.Size(50, 20);
+            this.txtCargaHoraria.TabIndex = 17;
+            this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
+            // 
+            // lblCargaHoraria
+            // 
+            this.lblCargaHoraria.AutoSize = true;
+            this.lblCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblCargaHoraria.Location = new System.Drawing.Point(452, 85);
+            this.lblCargaHoraria.Name = "lblCargaHoraria";
+            this.lblCargaHoraria.Size = new System.Drawing.Size(82, 15);
+            this.lblCargaHoraria.TabIndex = 16;
+            this.lblCargaHoraria.Text = "Carga horaria";
+            // 
             // txtDependentesFunc
             // 
             this.txtDependentesFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
@@ -292,6 +312,7 @@
             this.cmbConvOdontoFunc.Name = "cmbConvOdontoFunc";
             this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 21);
             this.cmbConvOdontoFunc.TabIndex = 14;
+            this.cmbConvOdontoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbConvOdontoFunc_SelectedIndexChanged);
             this.cmbConvOdontoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvOdontoFunc_KeyPress);
             // 
             // cmbConvMedico
@@ -302,6 +323,7 @@
             this.cmbConvMedico.Name = "cmbConvMedico";
             this.cmbConvMedico.Size = new System.Drawing.Size(150, 21);
             this.cmbConvMedico.TabIndex = 13;
+            this.cmbConvMedico.SelectedIndexChanged += new System.EventHandler(this.cmbConvMedico_SelectedIndexChanged);
             this.cmbConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvMedico_KeyPress);
             // 
             // txtSalarioFunc
@@ -343,6 +365,7 @@
             this.cmbEmpregadorFunc.Name = "cmbEmpregadorFunc";
             this.cmbEmpregadorFunc.Size = new System.Drawing.Size(129, 21);
             this.cmbEmpregadorFunc.TabIndex = 9;
+            this.cmbEmpregadorFunc.SelectedIndexChanged += new System.EventHandler(this.cmbEmpregadorFunc_SelectedIndexChanged);
             this.cmbEmpregadorFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEmpregadorFunc_KeyPress);
             // 
             // txtRegistroFunc
@@ -620,10 +643,10 @@
             // 
             // gpbInfoFuncionario
             // 
-            this.gpbInfoFuncionario.Controls.Add(this.mskCpfFunc);
-            this.gpbInfoFuncionario.Controls.Add(this.mskRgFunc);
             this.gpbInfoFuncionario.Controls.Add(this.rdbSexoFeminino);
             this.gpbInfoFuncionario.Controls.Add(this.rdbSexoMasculino);
+            this.gpbInfoFuncionario.Controls.Add(this.mskCpfFunc);
+            this.gpbInfoFuncionario.Controls.Add(this.mskRgFunc);
             this.gpbInfoFuncionario.Controls.Add(this.txtIdadeFunc);
             this.gpbInfoFuncionario.Controls.Add(this.txtSobrenomeFunc);
             this.gpbInfoFuncionario.Controls.Add(this.txtNomeFunc);
@@ -658,29 +681,6 @@
             this.mskRgFunc.Name = "mskRgFunc";
             this.mskRgFunc.Size = new System.Drawing.Size(100, 20);
             this.mskRgFunc.TabIndex = 11;
-            // 
-            // rdbSexoFeminino
-            // 
-            this.rdbSexoFeminino.AutoSize = true;
-            this.rdbSexoFeminino.Location = new System.Drawing.Point(401, 47);
-            this.rdbSexoFeminino.Name = "rdbSexoFeminino";
-            this.rdbSexoFeminino.Size = new System.Drawing.Size(35, 21);
-            this.rdbSexoFeminino.TabIndex = 10;
-            this.rdbSexoFeminino.TabStop = true;
-            this.rdbSexoFeminino.Text = "F";
-            this.rdbSexoFeminino.UseVisualStyleBackColor = true;
-            this.rdbSexoFeminino.CheckedChanged += new System.EventHandler(this.rdbSexoFeminino_CheckedChanged);
-            // 
-            // rdbSexoMasculino
-            // 
-            this.rdbSexoMasculino.AutoSize = true;
-            this.rdbSexoMasculino.Location = new System.Drawing.Point(357, 47);
-            this.rdbSexoMasculino.Name = "rdbSexoMasculino";
-            this.rdbSexoMasculino.Size = new System.Drawing.Size(38, 21);
-            this.rdbSexoMasculino.TabIndex = 9;
-            this.rdbSexoMasculino.TabStop = true;
-            this.rdbSexoMasculino.Text = "M";
-            this.rdbSexoMasculino.UseVisualStyleBackColor = true;
             // 
             // txtIdadeFunc
             // 
@@ -773,25 +773,27 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // lblCargaHoraria
+            // rdbSexoMasculino
             // 
-            this.lblCargaHoraria.AutoSize = true;
-            this.lblCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblCargaHoraria.Location = new System.Drawing.Point(452, 85);
-            this.lblCargaHoraria.Name = "lblCargaHoraria";
-            this.lblCargaHoraria.Size = new System.Drawing.Size(82, 15);
-            this.lblCargaHoraria.TabIndex = 16;
-            this.lblCargaHoraria.Text = "Carga horaria";
+            this.rdbSexoMasculino.AutoSize = true;
+            this.rdbSexoMasculino.Location = new System.Drawing.Point(357, 47);
+            this.rdbSexoMasculino.Name = "rdbSexoMasculino";
+            this.rdbSexoMasculino.Size = new System.Drawing.Size(38, 21);
+            this.rdbSexoMasculino.TabIndex = 13;
+            this.rdbSexoMasculino.TabStop = true;
+            this.rdbSexoMasculino.Text = "M";
+            this.rdbSexoMasculino.UseVisualStyleBackColor = true;
             // 
-            // txtCargaHoraria
+            // rdbSexoFeminino
             // 
-            this.txtCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.txtCargaHoraria.Location = new System.Drawing.Point(455, 103);
-            this.txtCargaHoraria.MaxLength = 3;
-            this.txtCargaHoraria.Name = "txtCargaHoraria";
-            this.txtCargaHoraria.Size = new System.Drawing.Size(50, 20);
-            this.txtCargaHoraria.TabIndex = 17;
-            this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
+            this.rdbSexoFeminino.AutoSize = true;
+            this.rdbSexoFeminino.Location = new System.Drawing.Point(401, 46);
+            this.rdbSexoFeminino.Name = "rdbSexoFeminino";
+            this.rdbSexoFeminino.Size = new System.Drawing.Size(35, 21);
+            this.rdbSexoFeminino.TabIndex = 14;
+            this.rdbSexoFeminino.TabStop = true;
+            this.rdbSexoFeminino.Text = "F";
+            this.rdbSexoFeminino.UseVisualStyleBackColor = true;
             // 
             // Form_CadFuncionarios
             // 
@@ -833,8 +835,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.MaskedTextBox mskCpfFunc;
         private System.Windows.Forms.MaskedTextBox mskRgFunc;
-        private System.Windows.Forms.RadioButton rdbSexoFeminino;
-        private System.Windows.Forms.RadioButton rdbSexoMasculino;
         private System.Windows.Forms.TextBox txtIdadeFunc;
         private System.Windows.Forms.TextBox txtSobrenomeFunc;
         private System.Windows.Forms.TextBox txtNomeFunc;
@@ -884,5 +884,7 @@
         private System.Windows.Forms.Button btnCadastrarFuncionario;
         private System.Windows.Forms.TextBox txtCargaHoraria;
         private System.Windows.Forms.Label lblCargaHoraria;
+        private System.Windows.Forms.RadioButton rdbSexoMasculino;
+        private System.Windows.Forms.RadioButton rdbSexoFeminino;
     }
 }
