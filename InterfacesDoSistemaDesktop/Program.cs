@@ -20,7 +20,7 @@ namespace InterfacesDoSistemaDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form_CadFuncionarios());
+            Application.Run(new Form_CadConvMedico());
 
 
 

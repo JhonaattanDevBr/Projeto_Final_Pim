@@ -214,24 +214,6 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
-      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.Designer.cs">
-      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.Designer.cs">
-      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,24 +234,6 @@
     </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
-      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.Designer.cs">
-      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.Designer.cs">
-      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioOdontologico.cs">
       <SubType>Form</SubType>
@@ -372,15 +336,6 @@
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.resx">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioMedico.resx">
-      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.resx">
-      <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateEmpresas.resx">
-      <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Views_Delete\Form_ViewDeleteConvenioMedico.resx">
       <DependentUpon>Form_ViewDeleteConvenioMedico.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +371,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Novo Projeto PIM\ModeloPersonalDynamic.Desktop\DadosPersonalDynamic.Controle\DadosPersonalDynamic.Controle.csproj">
+      <Project>{955ae67c-78ac-4eab-9558-fa29095a3055}</Project>
+      <Name>DadosPersonalDynamic.Controle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Novo Projeto PIM\ModeloPersonalDynamic.Desktop\ModeloPersonalDynamic.Desktop\ModeloPersonalDynamic.Desktop.csproj">
+      <Project>{cdc05223-a8f8-4039-8cd1-ad7d485f34f3}</Project>
+      <Name>ModeloPersonalDynamic.Desktop</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AcessoPersonalD\AcessoPersonalD.csproj">
       <Project>{7064411d-3425-41c7-b60c-f4a657f2e10e}</Project>
       <Name>AcessoPersonalD</Name>
@@ -457,6 +420,8 @@
       <Name>ProjetoContaPersonal</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interfaces_Updates\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
