@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using EmpresasClientes;
 using FuncionariosEmpresas;
 
 namespace ConexaoBaseDados
@@ -17,7 +14,7 @@ namespace ConexaoBaseDados
         servidoresBancoDados _servidores = new servidoresBancoDados();
 
         private string Query { get; set; }
-        
+
         public bool IncluirEnderecoFuncioanario(Funcionarios _funcionario)
         {
             string caminho = _servidores.servidorNotebook;
@@ -99,7 +96,7 @@ namespace ConexaoBaseDados
                         "(@nome, @sobrenome, @idade, @sexo, IDENT_CURRENT('Endereco'), @registro, @carga_horaria, @cpf, @rg, @email, @email_secundario, @telefone, " +
                         "@cell_principal, @cell_secundario, @num_dependentes, @id_planos_saude, @id_empresas, @cargo, @salario, @data_admissao)";
             }
-            else if(_funcionario.ConvenioMedico == "0" && _funcionario.ConvenioOdontologico == "0")
+            else if (_funcionario.ConvenioMedico == "0" && _funcionario.ConvenioOdontologico == "0")
             {
                 Query = "INSERT INTO Funcionarios (Nome, Sobrenome, Idade, Sexo, Id_endereco, Registro, Carga_horaria, Cpf, Rg, Email, Email_secundario, Telefone, " +
                         "Cell_principal, Cell_secundario, Num_dependentes, Id_empresas, Cargo, Salario, Data_admissao) " +
@@ -126,73 +123,73 @@ namespace ConexaoBaseDados
                 _pmtNome.ParameterName = "@nome";
                 _pmtNome.DbType = DbType.String;
                 _pmtNome.Value = _funcionario.Nome;
-                cmd.Parameters.Add( _pmtNome );
+                cmd.Parameters.Add(_pmtNome);
 
                 var _pmtSobrenome = cmd.CreateParameter();
                 _pmtSobrenome.ParameterName = "@sobrenome";
                 _pmtSobrenome.DbType = DbType.String;
                 _pmtSobrenome.Value = _funcionario.Sobrenome;
-                cmd.Parameters.Add(_pmtSobrenome );
+                cmd.Parameters.Add(_pmtSobrenome);
 
                 var _pmtIdade = cmd.CreateParameter();
                 _pmtIdade.ParameterName = "@idade";
                 _pmtIdade.DbType = DbType.Int32;
                 _pmtIdade.Value = _funcionario.Idade;
-                cmd.Parameters.Add(_pmtIdade );
+                cmd.Parameters.Add(_pmtIdade);
 
                 var _pmtSexo = cmd.CreateParameter();
                 _pmtSexo.ParameterName = "@sexo";
                 _pmtSexo.SqlDbType = SqlDbType.Char;
                 _pmtSexo.Value = _funcionario.Sexo;
-                cmd.Parameters.Add(_pmtSexo );
+                cmd.Parameters.Add(_pmtSexo);
 
                 var _pmtRegistro = cmd.CreateParameter();
                 _pmtRegistro.ParameterName = "@registro";
                 _pmtRegistro.DbType = DbType.Int32;
                 _pmtRegistro.Value = _funcionario.NumeroRegistro;
-                cmd.Parameters.Add(_pmtRegistro );
+                cmd.Parameters.Add(_pmtRegistro);
 
                 var _pmtCargaHoraria = cmd.CreateParameter();
                 _pmtCargaHoraria.ParameterName = "@carga_horaria";
                 _pmtCargaHoraria.DbType = DbType.Int32;
                 _pmtCargaHoraria.Value = _funcionario.CargaHoraria;
-                cmd.Parameters.Add( _pmtCargaHoraria );
+                cmd.Parameters.Add(_pmtCargaHoraria);
 
                 var _pmtCpf = cmd.CreateParameter();
                 _pmtCpf.ParameterName = "@cpf";
                 _pmtCpf.DbType = DbType.String;
                 _pmtCpf.Value = _funcionario.Cpf;
-                cmd.Parameters.Add(_pmtCpf );
+                cmd.Parameters.Add(_pmtCpf);
 
                 var _pmtRg = cmd.CreateParameter();
                 _pmtRg.ParameterName = "@rg";
                 _pmtRg.DbType = DbType.String;
                 _pmtRg.Value = _funcionario.Rg;
-                cmd.Parameters.Add(_pmtRg );
+                cmd.Parameters.Add(_pmtRg);
 
                 var _pmtEmail = cmd.CreateParameter();
                 _pmtEmail.ParameterName = "@email";
                 _pmtEmail.DbType = DbType.String;
                 _pmtEmail.Value = _funcionario.Email;
-                cmd.Parameters.Add(_pmtEmail );
+                cmd.Parameters.Add(_pmtEmail);
 
                 var _pmtEmailSecundario = cmd.CreateParameter();
                 _pmtEmailSecundario.ParameterName = "@email_secundario";
                 _pmtEmailSecundario.DbType = DbType.String;
                 _pmtEmailSecundario.Value = _funcionario.EmailSecundario;
-                cmd.Parameters.Add( _pmtEmailSecundario );
+                cmd.Parameters.Add(_pmtEmailSecundario);
 
                 var _pmtTelefone = cmd.CreateParameter();
                 _pmtTelefone.ParameterName = "@telefone";
                 _pmtTelefone.DbType = DbType.String;
                 _pmtTelefone.Value = _funcionario.Telefone;
-                cmd.Parameters.Add(_pmtTelefone );
+                cmd.Parameters.Add(_pmtTelefone);
 
                 var _pmtCellPrincipal = cmd.CreateParameter();
                 _pmtCellPrincipal.ParameterName = "@cell_principal";
                 _pmtCellPrincipal.DbType = DbType.String;
                 _pmtCellPrincipal.Value = _funcionario.CelularPrincipal;
-                cmd.Parameters.Add(_pmtCellPrincipal );
+                cmd.Parameters.Add(_pmtCellPrincipal);
 
                 var _pmtCellSecundario = cmd.CreateParameter();
                 _pmtCellSecundario.ParameterName = "@cell_secundario";
@@ -204,9 +201,9 @@ namespace ConexaoBaseDados
                 _pmtNumDependentes.ParameterName = "@num_dependentes";
                 _pmtNumDependentes.DbType = DbType.Int32;
                 _pmtNumDependentes.Value = _funcionario.Dependentes;
-                cmd.Parameters.Add( _pmtNumDependentes );
+                cmd.Parameters.Add(_pmtNumDependentes);
 
-                if(_funcionario.ConvenioMedico != "0")
+                if (_funcionario.ConvenioMedico != "0")
                 {
                     var _pmtIdPlanoSaude = cmd.CreateParameter();
                     _pmtIdPlanoSaude.ParameterName = "@id_planos_saude";
@@ -214,8 +211,8 @@ namespace ConexaoBaseDados
                     _pmtIdPlanoSaude.Value = _funcionario.ConvenioMedico;
                     cmd.Parameters.Add(_pmtIdPlanoSaude);
                 }
-                
-                if(_funcionario.ConvenioOdontologico != "0")
+
+                if (_funcionario.ConvenioOdontologico != "0")
                 {
                     var _pmtIdPlanoOdontologico = cmd.CreateParameter();
                     _pmtIdPlanoOdontologico.ParameterName = "@id_planos_odontologicos";
@@ -223,18 +220,18 @@ namespace ConexaoBaseDados
                     _pmtIdPlanoOdontologico.Value = _funcionario.ConvenioOdontologico;
                     cmd.Parameters.Add(_pmtIdPlanoOdontologico);
                 }
-                
+
                 var _pmtIdEmpresa = cmd.CreateParameter();
                 _pmtIdEmpresa.ParameterName = "@id_empresas";
                 _pmtIdEmpresa.DbType = DbType.Int32;
                 _pmtIdEmpresa.Value = _funcionario.Empregador;
-                cmd.Parameters.Add( _pmtIdEmpresa );
+                cmd.Parameters.Add(_pmtIdEmpresa);
 
                 var _pmtCargo = cmd.CreateParameter();
                 _pmtCargo.ParameterName = "@cargo";
                 _pmtCargo.DbType = DbType.String;
                 _pmtCargo.Value = _funcionario.Cargo;
-                cmd.Parameters.Add( _pmtCargo );
+                cmd.Parameters.Add(_pmtCargo);
 
                 var _pmtSalario = cmd.CreateParameter();
                 _pmtSalario.ParameterName = "@salario";

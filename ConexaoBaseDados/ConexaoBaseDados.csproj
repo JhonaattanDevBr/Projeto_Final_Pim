@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{364E34F6-1DC5-44AB-903B-7A3FB269ACA6}</ProjectGuid>
+    <ProjectGuid>{4A198B29-43E3-4B22-AEC7-C5B3D528D1AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConexaoBaseDados</RootNamespace>
@@ -47,24 +47,28 @@
     <Compile Include="crud_PlanoOdontologico.cs" />
     <Compile Include="crud_PlanoSaude.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <Compile Include="servidoresBancoDados.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\BeneficioDasFerias\BeneficioDasFerias.csproj">
+      <Project>{7179df48-52b2-46db-8706-500715a41791}</Project>
+      <Name>BeneficioDasFerias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContaPersonalD\ContaPersonalD.csproj">
+      <Project>{fb162e50-7508-4592-a5c4-0e678ed89e0a}</Project>
+      <Name>ContaPersonalD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
+      <Project>{fa5d273c-aac3-4daa-8dee-874b03f03f0b}</Project>
+      <Name>DecimoTerceiroSalario</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmpresasClientes\EmpresasClientes.csproj">
       <Project>{2da1744f-4b4e-4e55-9c6c-2e1020163e25}</Project>
       <Name>EmpresasClientes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FolhaDePagamento\FolhaDePagamento.csproj">
+      <Project>{a76974cf-0950-45e4-a362-3f8a0a112205}</Project>
+      <Name>FolhaDePagamento</Name>
     </ProjectReference>
     <ProjectReference Include="..\FuncionariosEmpresas\FuncionariosEmpresas.csproj">
       <Project>{3750cde9-e095-4aae-bdaa-28b0a662f70a}</Project>
@@ -78,9 +82,6 @@
       <Project>{f88ded36-c8a0-4463-a6bc-59b07243be23}</Project>
       <Name>PlanoSaude</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

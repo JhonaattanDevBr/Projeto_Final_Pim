@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +55,7 @@ namespace ConexaoBaseDados
                 pmtNumero.Value = _empresa.Numero;
                 cmd.Parameters.Add(pmtNumero);
 
-                if(cmd.ExecuteNonQuery() > 0)
+                if (cmd.ExecuteNonQuery() > 0)
                 {
                     conexaoDb.Close();
                     return true;
@@ -75,7 +75,7 @@ namespace ConexaoBaseDados
             }
         }
 
-        public bool incluirEmpresa (Empresas _empresa)
+        public bool incluirEmpresa(Empresas _empresa)
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -140,9 +140,9 @@ namespace ConexaoBaseDados
                 pmtSegmento.ParameterName = "@segmento";
                 pmtSegmento.DbType = DbType.String;
                 pmtSegmento.Value = _empresa.Segmento;
-                cmd.Parameters.Add (pmtSegmento);
+                cmd.Parameters.Add(pmtSegmento);
 
-                if(cmd.ExecuteNonQuery() > 0)
+                if (cmd.ExecuteNonQuery() > 0)
                 {
                     conexaoDb.Close();
                     return true;

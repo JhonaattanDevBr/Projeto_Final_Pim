@@ -71,7 +71,7 @@ namespace ConexaoBaseDados
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
-           
+
             try
             {
                 conexaoDb.Open();
@@ -79,7 +79,7 @@ namespace ConexaoBaseDados
                 string querry = "SELECT * FROM Planos_saude";
                 SqlCommand cmd = new SqlCommand(querry, conexaoDb);
                 SqlDataReader _leitor = cmd.ExecuteReader();
-                
+
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Código", typeof(int));
                 dt.Columns.Add("Nome", typeof(string));
@@ -87,7 +87,7 @@ namespace ConexaoBaseDados
                 dt.Columns.Add("Valor", typeof(decimal));
                 dt.Columns.Add("Porcentagem", typeof(decimal));
 
-                while ( _leitor.Read())
+                while (_leitor.Read())
                 {
                     int id = _leitor.GetInt32(0);
                     string nome = _leitor.GetString(1);
@@ -98,14 +98,13 @@ namespace ConexaoBaseDados
                 }
                 conexaoDb.Close();
                 return dt;
-                
+
             }
             catch (Exception)
             {
                 throw;
             }
         }
-
 
     }
 }

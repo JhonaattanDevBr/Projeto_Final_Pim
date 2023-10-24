@@ -9,7 +9,7 @@ using PlanoOdontologico;
 
 namespace ConexaoBaseDados
 {
-    public class crud_PlanoOdontologico
+    internal class crud_PlanoOdontologico
     {
         servidoresBancoDados _servidores = new servidoresBancoDados();
 

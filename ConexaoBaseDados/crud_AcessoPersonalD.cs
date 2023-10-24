@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,11 +61,11 @@ namespace ConexaoBaseDados
 
                 var pmtConfSenha = cmd.CreateParameter();
                 pmtConfSenha.ParameterName = "@confSenha";
-                pmtConfSenha.DbType= DbType.String;
+                pmtConfSenha.DbType = DbType.String;
                 pmtConfSenha.Value = confirmacaoSenha;
                 cmd.Parameters.Add(pmtConfSenha);
 
-                if(cmd.ExecuteNonQuery() > 0)
+                if (cmd.ExecuteNonQuery() > 0)
                 {
                     conexaoDb.Close();
                     return true;
@@ -82,8 +81,9 @@ namespace ConexaoBaseDados
 
                 throw;
             }
-           
-        }servidoresBancoDados _servidores = new servidoresBancoDados();
+
+        }
+        servidoresBancoDados _servidores = new servidoresBancoDados();
         // Ainda preciso mudar o crud e para buscar os atributos ao inves de receber parametros
         public bool CadastrarFuncPersonalD(string nome,
                                            string cargo,
@@ -134,11 +134,11 @@ namespace ConexaoBaseDados
 
                 var pmtConfSenha = cmd.CreateParameter();
                 pmtConfSenha.ParameterName = "@confSenha";
-                pmtConfSenha.DbType= DbType.String;
+                pmtConfSenha.DbType = DbType.String;
                 pmtConfSenha.Value = confirmacaoSenha;
                 cmd.Parameters.Add(pmtConfSenha);
 
-                if(cmd.ExecuteNonQuery() > 0)
+                if (cmd.ExecuteNonQuery() > 0)
                 {
                     conexaoDb.Close();
                     return true;
@@ -154,7 +154,7 @@ namespace ConexaoBaseDados
 
                 throw;
             }
-           
+
         }
     }
 }
