@@ -214,12 +214,6 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
-      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,12 +246,6 @@
     </Compile>
     <Compile Include="Interfaces_Views_Delete\Form_ViewDeleteFuncionarios.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
-      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs">
       <SubType>Form</SubType>
@@ -372,9 +360,6 @@
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.resx">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioMedico.resx">
-      <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.resx">
       <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,10 +401,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AcessoPersonalD\AcessoPersonalD.csproj">
-      <Project>{7064411d-3425-41c7-b60c-f4a657f2e10e}</Project>
-      <Name>AcessoPersonalD</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BeneficioDasFerias\BeneficioDasFerias.csproj">
       <Project>{efbd6b3d-b1e6-4157-a815-29033744836f}</Project>
       <Name>BeneficioDasFerias</Name>
@@ -427,6 +408,10 @@
     <ProjectReference Include="..\ConexaoBaseDados\ConexaoBaseDados.csproj">
       <Project>{364e34f6-1dc5-44ab-903b-7a3fb269aca6}</Project>
       <Name>ConexaoBaseDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContaPersonalD\ContaPersonalD.csproj">
+      <Project>{fb162e50-7508-4592-a5c4-0e678ed89e0a}</Project>
+      <Name>ContaPersonalD</Name>
     </ProjectReference>
     <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
       <Project>{c87b4bb1-ebf0-48cc-a842-b80c2e4be3c3}</Project>

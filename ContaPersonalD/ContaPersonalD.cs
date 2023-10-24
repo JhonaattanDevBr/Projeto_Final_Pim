@@ -27,7 +27,7 @@ namespace AcessoPersonalD
             teste2 = TesteApenasLetras();
             teste3 = TesteEspacosEmBranco();
             teste4 = TesteAutenticacaoSenha();
-            
+
 
             if (teste1 == true &&
                teste2 == true &&
@@ -54,7 +54,7 @@ namespace AcessoPersonalD
                     MensagemErro = "Nenhum dos campos pode conter espaços em branco.";
                     return false;
                 }
-                else 
+                else
                 {
                     return false;
                 }
@@ -94,8 +94,8 @@ namespace AcessoPersonalD
                    texto4 = Usuario.Replace(" ", ""),
                    texto5 = Senha.Replace(" ", ""),
                    texto6 = ConfirmacaoSenha.Replace(" ", "");
-           
-            if(!(Nome != texto1) &&
+
+            if (!(Nome != texto1) &&
                !(Cargo != texto2) &&
                !(Setor != texto3) &&
                !(Usuario != texto4) &&
@@ -103,7 +103,7 @@ namespace AcessoPersonalD
                !(ConfirmacaoSenha != texto6))
             {
                 return true;
-            } 
+            }
             else { return false; }
         }
 
@@ -121,12 +121,15 @@ namespace AcessoPersonalD
                     if (Senha.Equals(ConfirmacaoSenha))
                     {
                         return true;
-                    }else { MensagemErro = "As senhas devem ser identicas entre si."; return false; }
+                    }
+                    else { MensagemErro = "As senhas devem ser identicas entre si."; return false; }
 
-                }else { MensagemErro = "A senha deve possuir no mínimo 8 dígitos."; return false; }
+                }
+                else { MensagemErro = "A senha deve possuir no mínimo 8 dígitos."; return false; }
 
-            }else { MensagemErro = "Todos os campos devem ser preenchidos."; return false; }
-            
+            }
+            else { MensagemErro = "Todos os campos devem ser preenchidos."; return false; }
+
         }
     }
 }
