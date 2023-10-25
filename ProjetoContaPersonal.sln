@@ -24,6 +24,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C8B5B2A-34D6-4A96-ACD5-C267A96CE58B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Sis_WebPersonalDynamic\Startup.cs = Sis_WebPersonalDynamic\Startup.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Icones_Imagens", "Icones_Imagens", "{363E62F4-74F6-4CF5-BD9F-C52680F79F15}"
