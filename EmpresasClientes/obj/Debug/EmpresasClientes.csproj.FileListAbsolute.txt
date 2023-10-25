@@ -4,3 +4,9 @@ C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\Proj
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\EmpresasClientes\obj\Debug\EmpresasClientes.csproj.CoreCompileInputs.cache
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\EmpresasClientes\obj\Debug\EmpresasClientes.dll
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\EmpresasClientes\obj\Debug\EmpresasClientes.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\EmpresasClientes\bin\Debug\EmpresasClientes.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\EmpresasClientes\bin\Debug\EmpresasClientes.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\EmpresasClientes\obj\Debug\EmpresasClientes.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\EmpresasClientes\obj\Debug\EmpresasClientes.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\EmpresasClientes\obj\Debug\EmpresasClientes.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\EmpresasClientes\obj\Debug\EmpresasClientes.pdb

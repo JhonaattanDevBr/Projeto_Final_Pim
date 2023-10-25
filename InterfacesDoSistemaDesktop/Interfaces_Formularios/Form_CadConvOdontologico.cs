@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConexaoBaseDados;
+using BaseDeDados;
 using System.Windows.Forms;
 
 namespace InterfacesDoSistemaDesktop.Interfaces_Formularios

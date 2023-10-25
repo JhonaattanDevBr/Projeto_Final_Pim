@@ -214,21 +214,15 @@
     <Compile Include="Interfaces_Formularios\Form_CadUsuarioPersonalD.Designer.cs">
       <DependentUpon>Form_CadUsuarioPersonalD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.cs" />
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioMedico.Designer.cs">
       <DependentUpon>Form_UpdateConvenioMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.cs" />
     <Compile Include="Interfaces_Updates\Form_UpdateConvenioOdontologico.Designer.cs">
       <DependentUpon>Form_UpdateConvenioOdontologico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.cs" />
     <Compile Include="Interfaces_Updates\Form_UpdateEmpresas.Designer.cs">
       <DependentUpon>Form_UpdateEmpresas.cs</DependentUpon>
     </Compile>

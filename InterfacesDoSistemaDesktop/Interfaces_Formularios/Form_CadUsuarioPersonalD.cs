@@ -1,4 +1,4 @@
-﻿using AcessoPersonalD;
+﻿using ContaPersonal;
 using ProjetoContaPersonal;
 using System;
 using System.Collections.Generic;
@@ -17,9 +17,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
     public partial class Form_CadUsuarioPersonalD : Form
     {
         
-        ContaPersonalD personalD = new ContaPersonalD();
-
-        Controle controleReq = new Controle();
+       Personal personalD = new Personal();
 
         public Form_CadUsuarioPersonalD()
         {
