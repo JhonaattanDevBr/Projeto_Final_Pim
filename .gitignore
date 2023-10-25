@@ -530,3 +530,14 @@ FodyWeavers.xsd
 
 .vs/*
 *.suo
+
+# Ignorar pastas geradas pela compilação
+Sis_WebPersonalDynamic/obj/
+
+# Ignorar arquivos executáveis gerados
+Sis_WebPersonalDynamic/apphost.exe
+
+# Ignorar outros arquivos específicos
+Sis_WebPersonalDynamic/obj/Debug/net6.0/Sis_WebPersonalDynamic.csproj.CoreCompileInputs.cache
+Sis_WebPersonalDynamic/obj/Debug/net6.0/Sis__WebPersonalDynamic.csproj.FileListAbsolute.txt
+
