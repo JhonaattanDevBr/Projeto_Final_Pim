@@ -1,5 +1,4 @@
-﻿using ContaPersonal;
-using ProjetoContaPersonal;
+﻿using ProjetoContaPersonal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using ContaPersonal;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
