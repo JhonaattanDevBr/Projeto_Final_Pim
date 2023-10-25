@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PlanoSaude;
 
-namespace ConexaoBaseDados
+namespace BaseDeDados
 {
     public class crud_PlanoSaude
     {
@@ -105,6 +105,5 @@ namespace ConexaoBaseDados
                 throw;
             }
         }
-
     }
 }

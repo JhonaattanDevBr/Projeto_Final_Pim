@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using PlanoOdontologico;
 
-namespace ConexaoBaseDados
+namespace BaseDeDados
 {
-    internal class crud_PlanoOdontologico
+    public class crud_PlanoOdontologico
     {
         servidoresBancoDados _servidores = new servidoresBancoDados();
 

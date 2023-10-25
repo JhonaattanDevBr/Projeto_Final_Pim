@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FuncionariosEmpresas;
 
-namespace ConexaoBaseDados
+namespace BaseDeDados
 {
     public class crud_Funcionarios
     {

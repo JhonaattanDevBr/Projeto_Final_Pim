@@ -1,16 +1,13 @@
-﻿using ConexaoBaseDados;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcessoPersonalD
+namespace ContaPersonal
 {
-    public class ContaPersonalD
+    public class Personal
     {
-        crud_AcessoPersonalD cnnDados = new crud_AcessoPersonalD();
-
         public string Nome { get; set; }
         public string Cargo { get; set; }
         public string Setor { get; set; }
@@ -34,7 +31,7 @@ namespace AcessoPersonalD
                teste3 == true &&
                teste4 == true)
             {
-                bool retornoCad = cnnDados.CadastrarFuncPersonalD(Nome, Cargo, Setor, Usuario, Senha, ConfirmacaoSenha);
+                //bool retornoCad = cnnDados.CadastrarFuncPersonalD(Nome, Cargo, Setor, Usuario, Senha, ConfirmacaoSenha); nao vou mais fazer dessa forma
                 return true;
             }
             else

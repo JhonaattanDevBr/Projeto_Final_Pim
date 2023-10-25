@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ConexaoBaseDados;
+using BaseDeDados;
 
 namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 {

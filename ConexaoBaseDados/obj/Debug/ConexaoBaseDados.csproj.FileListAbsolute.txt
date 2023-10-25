@@ -1,2 +1,0 @@
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.csproj.AssemblyReference.cache
-C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\ConexaoBaseDados\obj\Debug\ConexaoBaseDados.csproj.CoreCompileInputs.cache

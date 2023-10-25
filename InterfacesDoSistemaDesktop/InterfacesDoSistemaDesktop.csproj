@@ -371,13 +371,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseDeDados\BaseDeDados.csproj">
+      <Project>{32c0c10b-5f67-46ee-b248-f1e38e5b9cd4}</Project>
+      <Name>BaseDeDados</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeneficioDasFerias\BeneficioDasFerias.csproj">
       <Project>{efbd6b3d-b1e6-4157-a815-29033744836f}</Project>
       <Name>BeneficioDasFerias</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConexaoBaseDados\ConexaoBaseDados.csproj">
-      <Project>{4a198b29-43e3-4b22-aec7-c5b3d528d1ad}</Project>
-      <Name>ConexaoBaseDados</Name>
+    <ProjectReference Include="..\ContaPersonal\ContaPersonal.csproj">
+      <Project>{ad50847c-512f-492f-953c-487ad47fa9dc}</Project>
+      <Name>ContaPersonal</Name>
     </ProjectReference>
     <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
       <Project>{c87b4bb1-ebf0-48cc-a842-b80c2e4be3c3}</Project>
