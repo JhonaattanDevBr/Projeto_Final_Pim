@@ -10,3 +10,9 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoOdontologico\o
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CoreCompileInputs.cache
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\bin\Debug\PlanoOdontologico.dll
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\bin\Debug\PlanoOdontologico.pdb
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb

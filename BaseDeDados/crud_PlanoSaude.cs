@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PlanoSaude;
+using System.ComponentModel.Design;
 
 namespace BaseDeDados
 {
@@ -67,6 +68,41 @@ namespace BaseDeDados
 
         }
 
+        public bool ExcluirConvMedico(string id)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "DELETE FROM Planos_saude WHERE id_saude = @id";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = id;
+                cmd.Parameters.Add( _pmtId);
+
+                if(cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public DataTable buscarConvenioMedico()
         {
             string caminho = _servidores.servidorNotebook;
@@ -105,5 +141,7 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        
     }
 }
