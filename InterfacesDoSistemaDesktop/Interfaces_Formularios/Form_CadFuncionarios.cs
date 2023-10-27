@@ -69,7 +69,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             if (polularComboBoxEmpregador.Count == 0)
             {
                 cmbEmpregadorFunc.Enabled = false;
-                _funcionarios.Empregador = "NULL";
+                _funcionarios.Empregador = "0";
             }
             else
             {

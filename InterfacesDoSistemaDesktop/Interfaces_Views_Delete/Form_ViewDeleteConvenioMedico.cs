@@ -50,24 +50,41 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void btnExcluirRegistro_Click(object sender, EventArgs e)
         {
-
-            bool retornoExclusao = _crud_PlanoSaude.ExcluirConvMedico(Id);
-
-            DialogResult deletar = MessageBox.Show("Deseja realmente excluir o registro?\nApós um registro ser excluido os dados não pode ser restalrados.",
-                                                   "ATENÇÂO!",
-                                                   MessageBoxButtons.YesNo);
-            if (deletar == DialogResult.Yes)
+            if(Id != "")
             {
-                if (retornoExclusao)
+                DialogResult deletar = MessageBox.Show("Deseja realmente excluir o registro?\n\nApós um registro ser excluido os dados serão perdidos permanentemente, " +
+                                                   "não podendo ser restaurados.",
+                                                   "ATENÇÂO!",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Warning);
+                if (deletar == DialogResult.Yes)
                 {
-                    MessageBox.Show("O Registro foi excluido.", "Operação concluida.");
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possível excluir o registro.", "Falha na operação ");
+                    bool retornoExclusao = _crud_PlanoSaude.ExcluirConvMedico(Id);
+                    if (retornoExclusao)
+                    {
+                        MessageBox.Show("O Registro foi excluido.", "Operação concluida.");
+                        AtualizarTabela();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível excluir o registro.", "Falha na operação ");
+                    }
                 }
             }
-            
+        }
+
+        private void AtualizarTabela()
+        {
+            dgvVisualizaConvMedico.Columns.Clear();
+            DataTable tabelaConvenioMedico = _crud_PlanoSaude.buscarConvenioMedico();
+            dgvVisualizaConvMedico.DataSource = tabelaConvenioMedico;
+
+            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
+            dgvVisualizaConvMedico.Columns[0].Width = 70;
+            dgvVisualizaConvMedico.Columns[1].Width = 210;
+            dgvVisualizaConvMedico.Columns[2].Width = 168;
+            dgvVisualizaConvMedico.Columns[3].Width = 100;
+            dgvVisualizaConvMedico.Columns[4].Width = 120;
         }
     }
 }
