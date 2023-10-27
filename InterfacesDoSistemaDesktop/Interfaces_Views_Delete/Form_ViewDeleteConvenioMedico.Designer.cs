@@ -189,6 +189,7 @@
             this.btnExcluirRegistro.TabIndex = 3;
             this.btnExcluirRegistro.Text = "Excluir Registro";
             this.btnExcluirRegistro.UseVisualStyleBackColor = false;
+            this.btnExcluirRegistro.Click += new System.EventHandler(this.btnExcluirRegistro_Click);
             // 
             // btnAlterarDados
             // 
@@ -228,7 +229,7 @@
             this.dgvVisualizaConvMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -241,6 +242,7 @@
             this.dgvVisualizaConvMedico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVisualizaConvMedico.Size = new System.Drawing.Size(711, 603);
             this.dgvVisualizaConvMedico.TabIndex = 0;
+            this.dgvVisualizaConvMedico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizaConvMedico_CellClick);
             // 
             // Form_ViewDeleteConvenioMedico
             // 
