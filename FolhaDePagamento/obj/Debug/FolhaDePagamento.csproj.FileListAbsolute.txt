@@ -10,3 +10,9 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\FolhaDePagamento\ob
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\FolhaDePagamento\obj\Debug\FolhaDePagamento.csproj.CoreCompileInputs.cache
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\FolhaDePagamento\obj\Debug\FolhaDePagamento.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\FolhaDePagamento\obj\Debug\FolhaDePagamento.pdb
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\FolhaDePagamento\bin\Debug\FolhaDePagamento.dll
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\FolhaDePagamento\bin\Debug\FolhaDePagamento.pdb
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\FolhaDePagamento\obj\Debug\FolhaDePagamento.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\FolhaDePagamento\obj\Debug\FolhaDePagamento.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\FolhaDePagamento\obj\Debug\FolhaDePagamento.dll
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\FolhaDePagamento\obj\Debug\FolhaDePagamento.pdb

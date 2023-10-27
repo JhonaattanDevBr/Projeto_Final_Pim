@@ -10,3 +10,9 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoSaude\obj\Debu
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoSaude\obj\Debug\PlanoSaude.csproj.CoreCompileInputs.cache
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoSaude\obj\Debug\PlanoSaude.dll
 C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Sistema PIM\PlanoSaude\obj\Debug\PlanoSaude.pdb
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoSaude\bin\Debug\PlanoSaude.dll
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoSaude\bin\Debug\PlanoSaude.pdb
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoSaude\obj\Debug\PlanoSaude.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoSaude\obj\Debug\PlanoSaude.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoSaude\obj\Debug\PlanoSaude.dll
+C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoSaude\obj\Debug\PlanoSaude.pdb
