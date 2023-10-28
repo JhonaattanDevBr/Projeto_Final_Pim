@@ -21,7 +21,7 @@ namespace InterfacesDoSistemaDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form_AtualizarConvMedico());
+            Application.Run(new Form_CadFuncionarios());
         }
     }
 }
