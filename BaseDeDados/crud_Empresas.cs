@@ -14,7 +14,7 @@ namespace BaseDeDados
     {
         servidoresBancoDados _servidores = new servidoresBancoDados();
 
-        public bool incluirEnderecoEmpresa(Empresas _empresa)
+        public bool IncluirEnderecoEmpresa(Empresas _empresa)
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -76,7 +76,7 @@ namespace BaseDeDados
             }
         }
 
-        public bool incluirEmpresa(Empresas _empresa)
+        public bool IncluirEmpresa(Empresas _empresa)
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);

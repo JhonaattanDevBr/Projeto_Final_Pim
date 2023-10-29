@@ -263,6 +263,72 @@ namespace BaseDeDados
             }
         }
 
+        public DataTable BuscarEmpresas()
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT Id_empresa, Razao_social, Nome_fantasia, Nacionalidade, Cnpj, Email, Telefone, Ceo, Fundacao, Segmento, Empresas.Id_endereco, " +
+                                "Cidade, Estado, Bairro, Rua, Numero FROM Empresas " +
+                                "INNER JOIN Endereco " +
+                                "ON Empresas.Id_endereco = Endereco.Id_endereco";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Código", typeof(int));
+                dt.Columns.Add("Razão Social", typeof(string));
+                dt.Columns.Add("Nome Fantasia", typeof(string));
+                dt.Columns.Add("Nascionalidade", typeof(string));
+                dt.Columns.Add("Cnpj", typeof(string));
+                dt.Columns.Add("Email", typeof(string));
+                dt.Columns.Add("Telefone", typeof(string));
+                dt.Columns.Add("Ceo", typeof(string));
+                dt.Columns.Add("Fundação", typeof(DateTime));
+                dt.Columns.Add("Segmento", typeof(string));
+                dt.Columns.Add("Cód. Endereco", typeof(int));
+                dt.Columns.Add("Cidade", typeof(string));
+                dt.Columns.Add("Estado", typeof(string));
+                dt.Columns.Add("Bairro", typeof(string));
+                dt.Columns.Add("Rua", typeof(string));
+                dt.Columns.Add("Numero", typeof(int));
+
+                while (_leitor.Read())
+                {
+                    int id = _leitor.GetInt32(0);
+                    string razaoSocial = _leitor.GetString(1);
+                    string nomeFantasia = _leitor.GetString(2);
+                    string nascionalidade = _leitor.GetString(3);
+                    string cnpj = _leitor.GetString(4);
+                    string email = _leitor.GetString(5);
+                    string telefone = _leitor.GetString(6);
+                    string ceo = _leitor.GetString(7);
+                    DateTime fundacao = _leitor.GetDateTime(8);
+                    string segmento = _leitor.GetString(9);
+                    int codEndereco = _leitor.GetInt32(10);
+                    string cidade = _leitor.GetString(11);
+                    string estado = _leitor.GetString(12);
+                    string bairro = _leitor.GetString(13);
+                    string rua = _leitor.GetString(14);
+                    int numero = _leitor.GetInt32(15);
+
+                    dt.Rows.Add(id, razaoSocial, nomeFantasia, nascionalidade, cnpj, email, telefone, ceo, fundacao, segmento, codEndereco, cidade, estado, bairro, rua, numero);
+                }
+                conexaoDb.Close();
+                return dt;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
         public Dictionary<int, string> PopularCaixaConvenioMedico()
         {
             string caminho = _servidores.servidorNotebook;
