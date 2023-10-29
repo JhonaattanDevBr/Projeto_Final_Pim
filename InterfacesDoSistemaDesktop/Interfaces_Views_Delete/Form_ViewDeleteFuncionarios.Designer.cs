@@ -213,6 +213,7 @@
             this.btnExcluirRegistro.TabIndex = 3;
             this.btnExcluirRegistro.Text = "Excluir Registro";
             this.btnExcluirRegistro.UseVisualStyleBackColor = false;
+            this.btnExcluirRegistro.Click += new System.EventHandler(this.btnExcluirRegistro_Click);
             // 
             // btnAlterarDados
             // 
@@ -244,8 +245,11 @@
             this.dgvVisualizarFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisualizarFuncionarios.Location = new System.Drawing.Point(6, 22);
             this.dgvVisualizarFuncionarios.Name = "dgvVisualizarFuncionarios";
+            this.dgvVisualizarFuncionarios.ReadOnly = true;
+            this.dgvVisualizarFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVisualizarFuncionarios.Size = new System.Drawing.Size(1011, 629);
             this.dgvVisualizarFuncionarios.TabIndex = 0;
+            this.dgvVisualizarFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarFuncionarios_CellClick);
             // 
             // Form_ViewDeleteFuncionarios
             // 

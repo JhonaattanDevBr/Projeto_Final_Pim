@@ -264,6 +264,40 @@ namespace BaseDeDados
             }
         }
 
+        public bool ExcluirFuncionario(string id)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "DELETE FROM Funcionarios WHERE Id_funcionario = @id";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = id;
+                cmd.Parameters.Add(_pmtId);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public DataTable BuscarEmpresas()
         {
             string caminho = _servidores.servidorNotebook;
