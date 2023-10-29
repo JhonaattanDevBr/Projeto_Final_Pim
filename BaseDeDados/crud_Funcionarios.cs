@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FuncionariosEmpresas;
+using System.Globalization;
 
 namespace BaseDeDados
 {
@@ -272,51 +273,65 @@ namespace BaseDeDados
             {
                 conexaoDb.Open();
 
-                string querry = "SELECT Id_empresa, Razao_social, Nome_fantasia, Nacionalidade, Cnpj, Email, Telefone, Ceo, Fundacao, Segmento, Empresas.Id_endereco, " +
-                                "Cidade, Estado, Bairro, Rua, Numero FROM Empresas " +
-                                "INNER JOIN Endereco " +
-                                "ON Empresas.Id_endereco = Endereco.Id_endereco";
+                string querry = "SELECT Id_funcionario, Funcionarios.Nome, Sobrenome, Idade, Sexo, " +
+                                "Funcionarios.Id_endereco, Cidade, Estado, Bairro, Rua, Numero, " +
+                                "Registro, Carga_horaria, Cpf, Rg, Funcionarios.Email, Email_secundario, " +
+                                "Funcionarios.Telefone, Cell_principal, Cell_secundario, Num_dependentes, " +
+                                "Id_planos_saude, Planos_saude.Nome, " +
+                                "Id_planos_odontologicos, Planos_odontologicos.Nome, " +
+                                "Id_empresas, Empresas.Razao_social Cargo, Salario, Data_admissao FROM Funcionarios " +
+                                "INNER JOIN Endereco ON Funcionarios.Id_endereco = Endereco.Id_endereco " +
+                                "LEFT JOIN Planos_saude ON Funcionarios.Id_planos_saude = Planos_saude.Id_saude " +
+                                "LEFT JOIN Planos_odontologicos ON Funcionarios.Id_planos_odontologicos = Planos_odontologicos.Id_odonto " +
+                                "INNER JOIN Empresas ON Funcionarios.Id_empresas = Empresas.Id_empresa";
+
                 SqlCommand cmd = new SqlCommand(querry, conexaoDb);
                 SqlDataReader _leitor = cmd.ExecuteReader();
 
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Código", typeof(int));
-                dt.Columns.Add("Razão Social", typeof(string));
-                dt.Columns.Add("Nome Fantasia", typeof(string));
-                dt.Columns.Add("Nascionalidade", typeof(string));
-                dt.Columns.Add("Cnpj", typeof(string));
-                dt.Columns.Add("Email", typeof(string));
-                dt.Columns.Add("Telefone", typeof(string));
-                dt.Columns.Add("Ceo", typeof(string));
-                dt.Columns.Add("Fundação", typeof(DateTime));
-                dt.Columns.Add("Segmento", typeof(string));
-                dt.Columns.Add("Cód. Endereco", typeof(int));
+                dt.Columns.Add("Nome", typeof(string));
+                dt.Columns.Add("Sobrenome", typeof(string));
+                dt.Columns.Add("Idade", typeof(int));
+                dt.Columns.Add("Sexo", typeof(string));
+                dt.Columns.Add("Cód. Endereco", typeof(int)); // Vou tentar jogar esse código na cidade ↓
                 dt.Columns.Add("Cidade", typeof(string));
                 dt.Columns.Add("Estado", typeof(string));
                 dt.Columns.Add("Bairro", typeof(string));
                 dt.Columns.Add("Rua", typeof(string));
                 dt.Columns.Add("Numero", typeof(int));
+                dt.Columns.Add("Registro", typeof(int));
+                dt.Columns.Add("Carga H.", typeof(int));
+                dt.Columns.Add("CPF", typeof(string));
+                dt.Columns.Add("RG", typeof(string));
+                dt.Columns.Add("Email", typeof(string));
+                dt.Columns.Add("Email Secundario", typeof(string));
+                dt.Columns.Add("Dependentes", typeof(int));
+                dt.Columns.Add("Cód. ConMed.", typeof(int));  // Vou tentar jogar esse código no nome do conv medico ↓
+                dt.Columns.Add("Convênio Médico", typeof(string));
+                dt.Columns.Add("Cód ConOdon.", typeof(int)); // Vou tentar jogar esse código no nome do conv odonto ↓
+                dt.Columns.Add("Convênio Odonto", typeof(string));
+                dt.Columns.Add("Cód. Empresa", typeof(int)); // Vou tentar jogar esse código no empregador ↓
+                dt.Columns.Add("Empregador", typeof(string));
+                dt.Columns.Add("Cargo", typeof(string));
+                dt.Columns.Add("Salário", typeof(decimal));
+                dt.Columns.Add("Data Admissão", typeof(DateTime));
+                
 
                 while (_leitor.Read())
                 {
                     int id = _leitor.GetInt32(0);
-                    string razaoSocial = _leitor.GetString(1);
-                    string nomeFantasia = _leitor.GetString(2);
-                    string nascionalidade = _leitor.GetString(3);
-                    string cnpj = _leitor.GetString(4);
-                    string email = _leitor.GetString(5);
-                    string telefone = _leitor.GetString(6);
-                    string ceo = _leitor.GetString(7);
-                    DateTime fundacao = _leitor.GetDateTime(8);
-                    string segmento = _leitor.GetString(9);
-                    int codEndereco = _leitor.GetInt32(10);
-                    string cidade = _leitor.GetString(11);
-                    string estado = _leitor.GetString(12);
-                    string bairro = _leitor.GetString(13);
-                    string rua = _leitor.GetString(14);
-                    int numero = _leitor.GetInt32(15);
+                    string nome = _leitor.GetString(1);
+                    string sobrenome = _leitor.GetString(2);
+                    int idade = _leitor.GetInt32(3);
+                    string sexo = _leitor.GetString(4);
+                    int codEndereco = _leitor.GetInt32(5);
+                    string cidade = _leitor.GetString(6);
+                    string estado = _leitor.GetString(7);
+                    string bairro = _leitor.GetString(8);
 
-                    dt.Rows.Add(id, razaoSocial, nomeFantasia, nascionalidade, cnpj, email, telefone, ceo, fundacao, segmento, codEndereco, cidade, estado, bairro, rua, numero);
+
+                    dt.Rows.Add(id);
                 }
                 conexaoDb.Close();
                 return dt;
