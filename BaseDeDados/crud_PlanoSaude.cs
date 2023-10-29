@@ -7,12 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using PlanoSaude;
 using System.ComponentModel.Design;
+using System.Data.OleDb;
 
 namespace BaseDeDados
 {
     public class crud_PlanoSaude
     {
         servidoresBancoDados _servidores = new servidoresBancoDados();
+        public string Id { get; set; }
 
         public bool CadastrarConvMedico(ConvenioMedico _convenioMedico)
         {
@@ -68,6 +70,74 @@ namespace BaseDeDados
 
         }
 
+        public bool AlterarConvMedico(ConvenioMedico _convenioMedico)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "UPDATE Planos_saude SET Nome = @nome, " +
+                               "Cnpj = @cnpj, " +
+                               "Valor = @valor, " +
+                               "Porcentagem = @porcentagem" +
+                               " WHERE id_saude = @id";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtNome = cmd.CreateParameter();
+                _pmtNome.ParameterName = "@nome";
+                _pmtNome.DbType = DbType.String;
+                _pmtNome.Value = _convenioMedico.NomeConvMedico;
+                cmd.Parameters.Add(_pmtNome);
+
+                var _pmtCpf = cmd.CreateParameter();
+                _pmtCpf.ParameterName = "@cnpj";
+                _pmtCpf.DbType = DbType.String;
+                _pmtCpf.Value = _convenioMedico.CnpjConvMedico;
+                cmd.Parameters.Add(_pmtCpf);
+
+                var _pmtValor = cmd.CreateParameter();
+                _pmtValor.ParameterName = "@valor";
+                _pmtValor.SqlDbType = SqlDbType.Float;
+                _pmtValor.Value = _convenioMedico.ValorConvMedico;
+                cmd.Parameters.Add(_pmtValor);
+
+                var _pmtPorcentagem = cmd.CreateParameter();
+                _pmtPorcentagem.ParameterName = "@porcentagem";
+                _pmtPorcentagem.DbType = DbType.Int32;
+                _pmtPorcentagem.Value = _convenioMedico.PorcentagemConvMedico;
+                cmd.Parameters.Add( _pmtPorcentagem);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = _convenioMedico.Id;
+                cmd.Parameters.Add( _pmtId);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally 
+            { 
+                conexaoDb.Close();
+                Id = "";
+            }
+        }
+
         public bool ExcluirConvMedico(string id)
         {
             string caminho = _servidores.servidorNotebook;
@@ -83,7 +153,7 @@ namespace BaseDeDados
                 _pmtId.ParameterName = "@id";
                 _pmtId.DbType = DbType.Int32;
                 _pmtId.Value = id;
-                cmd.Parameters.Add( _pmtId);
+                cmd.Parameters.Add(_pmtId);
 
                 if(cmd.ExecuteNonQuery() > 0)
                 {
@@ -103,7 +173,7 @@ namespace BaseDeDados
             }
         }
 
-        public DataTable buscarConvenioMedico()
+        public DataTable BuscarConvenioMedico()
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -142,6 +212,48 @@ namespace BaseDeDados
             }
         }
 
-        
+        public List<ConvenioMedico> BuscarConvMedicoEspecifico(ConvenioMedico _convenioMedico)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT * FROM Planos_saude WHERE Id_saude = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                List<ConvenioMedico> _registro = new List<ConvenioMedico>();
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = _convenioMedico.Id;
+                cmd.Parameters.Add( _pmtId );
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _convenioMedico.NomeConvMedico = _leitor.GetString(1);
+                    _convenioMedico.CnpjConvMedico = _leitor.GetString(2);
+                    _convenioMedico.ValorConvMedico = _leitor.GetDouble(3).ToString();
+                    _convenioMedico.PorcentagemConvMedico= _leitor.GetInt32(4).ToString();
+                    _registro.Add(_convenioMedico);
+                    
+                }
+                conexaoDb.Close();
+                return _registro;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            { conexaoDb.Close(); }
+        }
+
     }
 }

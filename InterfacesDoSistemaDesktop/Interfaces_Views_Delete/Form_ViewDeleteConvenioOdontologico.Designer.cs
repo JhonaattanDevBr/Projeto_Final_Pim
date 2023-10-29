@@ -187,6 +187,7 @@
             this.btnExcluirRegistro.TabIndex = 3;
             this.btnExcluirRegistro.Text = "Excluir Registro";
             this.btnExcluirRegistro.UseVisualStyleBackColor = false;
+            this.btnExcluirRegistro.Click += new System.EventHandler(this.btnExcluirRegistro_Click);
             // 
             // btnAlterarDados
             // 
@@ -199,6 +200,7 @@
             this.btnAlterarDados.TabIndex = 2;
             this.btnAlterarDados.Text = "Alterar Dados";
             this.btnAlterarDados.UseVisualStyleBackColor = false;
+            this.btnAlterarDados.Click += new System.EventHandler(this.btnAlterarDados_Click);
             // 
             // btnPesquisar
             // 
@@ -220,6 +222,7 @@
             this.dgvVisualizarConvOdonto.Name = "dgvVisualizarConvOdonto";
             this.dgvVisualizarConvOdonto.Size = new System.Drawing.Size(711, 629);
             this.dgvVisualizarConvOdonto.TabIndex = 0;
+            this.dgvVisualizarConvOdonto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarConvOdonto_CellClick);
             // 
             // Form_ViewDeleteConvenioOdontologico
             // 
@@ -235,6 +238,7 @@
             this.Name = "Form_ViewDeleteConvenioOdontologico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Convênio Oodontológico";
+            this.Load += new System.EventHandler(this.Form_ViewDeleteConvenioOdontologico_Load);
             this.gpbConvenioOdonto.ResumeLayout(false);
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();

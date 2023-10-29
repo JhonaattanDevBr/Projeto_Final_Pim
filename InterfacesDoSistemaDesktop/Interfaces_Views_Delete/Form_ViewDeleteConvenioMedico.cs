@@ -1,5 +1,6 @@
 ﻿using BaseDeDados;
-using PlanoSaude;
+using InterfacesDoSistemaDesktop.Interfaces_AtualizarDados;
+using PlanoSaude; 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
     public partial class Form_ViewDeleteConvenioMedico : Form
     {
         crud_PlanoSaude _crud_PlanoSaude = new crud_PlanoSaude();
+        ConvenioMedico _convenioMedico = new ConvenioMedico();
         public string Id { get; set; }
 
         public Form_ViewDeleteConvenioMedico()
@@ -27,7 +29,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void Form_ViewDeleteConvenioMedico_Load(object sender, EventArgs e)
         {
             dgvVisualizaConvMedico.Columns.Clear();
-            DataTable tabelaConvenioMedico = _crud_PlanoSaude.buscarConvenioMedico();
+            DataTable tabelaConvenioMedico = _crud_PlanoSaude.BuscarConvenioMedico();
             dgvVisualizaConvMedico.DataSource = tabelaConvenioMedico;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
@@ -76,7 +78,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void AtualizarTabela()
         {
             dgvVisualizaConvMedico.Columns.Clear();
-            DataTable tabelaConvenioMedico = _crud_PlanoSaude.buscarConvenioMedico();
+            DataTable tabelaConvenioMedico = _crud_PlanoSaude.BuscarConvenioMedico();
             dgvVisualizaConvMedico.DataSource = tabelaConvenioMedico;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
@@ -85,6 +87,21 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
             dgvVisualizaConvMedico.Columns[2].Width = 168;
             dgvVisualizaConvMedico.Columns[3].Width = 100;
             dgvVisualizaConvMedico.Columns[4].Width = 120;
+        }
+
+        private void btnAlterarDados_Click(object sender, EventArgs e)
+        {
+            if (Id != "")
+            {
+                DialogResult alterar = MessageBox.Show("Deseja realmente alterar os dados do registro? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
+                if (alterar == DialogResult.Yes)
+                {
+                    _convenioMedico.Id = Id;
+                    Form_AtualizarConvMedico _form_AtualizarConvMedico = new Form_AtualizarConvMedico(Id);
+                    _form_AtualizarConvMedico.ShowDialog();
+                    AtualizarTabela();
+                }
+            }
         }
     }
 }

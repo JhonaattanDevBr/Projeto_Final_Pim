@@ -9,6 +9,7 @@ namespace PlanoSaude
 {
     public class ConvenioMedico
     {
+        public string Id { get; set; }
         public string NomeConvMedico { get; set; }
         public string CnpjConvMedico { get; set; }
         public string ValorConvMedico { get; set; }

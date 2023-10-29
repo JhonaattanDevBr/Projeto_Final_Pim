@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AtualizarConvMedico));
             this.gpbConvMedico = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblModoDesconto = new System.Windows.Forms.Label();
             this.rdbPercentual = new System.Windows.Forms.RadioButton();
             this.rdbValorFixado = new System.Windows.Forms.RadioButton();
@@ -48,6 +49,7 @@
             // gpbConvMedico
             // 
             this.gpbConvMedico.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbConvMedico.Controls.Add(this.btnCancelar);
             this.gpbConvMedico.Controls.Add(this.lblModoDesconto);
             this.gpbConvMedico.Controls.Add(this.rdbPercentual);
             this.gpbConvMedico.Controls.Add(this.rdbValorFixado);
@@ -63,10 +65,22 @@
             this.gpbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbConvMedico.Location = new System.Drawing.Point(12, 12);
             this.gpbConvMedico.Name = "gpbConvMedico";
-            this.gpbConvMedico.Size = new System.Drawing.Size(328, 371);
+            this.gpbConvMedico.Size = new System.Drawing.Size(328, 405);
             this.gpbConvMedico.TabIndex = 1;
             this.gpbConvMedico.TabStop = false;
             this.gpbConvMedico.Text = "Convênio médico";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnCancelar.Location = new System.Drawing.Point(127, 370);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // lblModoDesconto
             // 
@@ -87,6 +101,7 @@
             this.rdbPercentual.TabIndex = 10;
             this.rdbPercentual.Text = "Percentual";
             this.rdbPercentual.UseVisualStyleBackColor = true;
+            this.rdbPercentual.CheckedChanged += new System.EventHandler(this.rdbPercentual_CheckedChanged);
             // 
             // rdbValorFixado
             // 
@@ -99,6 +114,7 @@
             this.rdbValorFixado.TabStop = true;
             this.rdbValorFixado.Text = "Fixado";
             this.rdbValorFixado.UseVisualStyleBackColor = true;
+            this.rdbValorFixado.CheckedChanged += new System.EventHandler(this.rdbValorFixado_CheckedChanged);
             // 
             // btnCadastrarConvMedico
             // 
@@ -111,6 +127,7 @@
             this.btnCadastrarConvMedico.TabIndex = 8;
             this.btnCadastrarConvMedico.Text = "Atualizar Convênio Médico";
             this.btnCadastrarConvMedico.UseVisualStyleBackColor = false;
+            this.btnCadastrarConvMedico.Click += new System.EventHandler(this.btnCadastrarConvMedico_Click);
             // 
             // txtPorcentagemConvMedico
             // 
@@ -196,7 +213,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(352, 395);
+            this.ClientSize = new System.Drawing.Size(352, 429);
             this.Controls.Add(this.gpbConvMedico);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -205,6 +222,7 @@
             this.Name = "Form_AtualizarConvMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualizar Dados";
+            this.Load += new System.EventHandler(this.Form_AtualizarConvMedico_Load);
             this.gpbConvMedico.ResumeLayout(false);
             this.gpbConvMedico.PerformLayout();
             this.ResumeLayout(false);
@@ -226,5 +244,6 @@
         private System.Windows.Forms.Label lblValorConvMedico;
         private System.Windows.Forms.Label lblCnpjConvMedico;
         private System.Windows.Forms.Label lblNomeConvMedico;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -8,6 +8,7 @@ namespace PlanoOdontologico
 {
     public class ConvenioOdontologico
     {
+        public string Id { get; set; }
         public string NomeConvOdonto { get; set; }
         public string CnpjConvOdonto { get; set; }
         public string ValorConvOdonto { get; set; }
