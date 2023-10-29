@@ -10,6 +10,7 @@ namespace EmpresasClientes
 {
     public class Empresas
     {
+        public string Id { get; set; }
         public string RazaoSocial { get; set; }
         public string NomeFantasia { get; set; }
         public string Nascionalidade { get; set; }
@@ -25,6 +26,7 @@ namespace EmpresasClientes
         public string Bairro { get; set; }
         public string Rua { get; set; }
         public string Numero { get; set; }
+        public string IdEndereco { get; set; }
         public string MensagemErro { get; set; }
 
         public bool AutenticarCadastroEmpresas()
@@ -54,7 +56,7 @@ namespace EmpresasClientes
                                     if(auten7 == true)
                                     {
                                         Fundacao =  FormatarData();
-                                        Email = MesclarEmailDominio();
+                                        //Email = MesclarEmailDominio();
                                         return true;
                                     }
                                     else
@@ -102,7 +104,7 @@ namespace EmpresasClientes
                !string.IsNullOrEmpty(NomeFantasia) &&
                !string.IsNullOrEmpty(Nascionalidade) &&
                !string.IsNullOrEmpty(Email) &&
-               !string.IsNullOrEmpty(Dominio) &&
+               //!string.IsNullOrEmpty(Dominio) && não preciso dessa parte do código
                !string.IsNullOrEmpty(Ceo) &&
                !string.IsNullOrEmpty(Segmento) &&
                !string.IsNullOrEmpty(Fundacao) &&

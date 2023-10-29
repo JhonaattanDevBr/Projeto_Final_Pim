@@ -88,6 +88,12 @@
     <Compile Include="Interfaces_AtualizarDados\Form_AtualizarConvOdonto.Designer.cs">
       <DependentUpon>Form_AtualizarConvOdonto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarEmpresas.Designer.cs">
+      <DependentUpon>Form_AtualizarEmpresas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Ferias\Form_CalculosFerias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarConvOdonto.resx">
       <DependentUpon>Form_AtualizarConvOdonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarEmpresas.resx">
+      <DependentUpon>Form_AtualizarEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Ferias\Form_CalculosFerias.resx">
       <DependentUpon>Form_CalculosFerias.cs</DependentUpon>

@@ -1,6 +1,6 @@
-﻿namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
+﻿namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
 {
-    partial class Form_CadEmpresas
+    partial class Form_AtualizarEmpresas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CadEmpresas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AtualizarEmpresas));
             this.gpbCadEmpresas = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCadastrarEmpresa = new System.Windows.Forms.Button();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -43,8 +44,6 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
             this.gpbEmpresa = new System.Windows.Forms.GroupBox();
-            this.lblDominio = new System.Windows.Forms.Label();
-            this.cmbDominio = new System.Windows.Forms.ComboBox();
             this.dtmDataFundacao = new System.Windows.Forms.DateTimePicker();
             this.txtSegmento = new System.Windows.Forms.TextBox();
             this.txtCeo = new System.Windows.Forms.TextBox();
@@ -71,27 +70,40 @@
             // gpbCadEmpresas
             // 
             this.gpbCadEmpresas.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbCadEmpresas.Controls.Add(this.btnCancelar);
             this.gpbCadEmpresas.Controls.Add(this.btnCadastrarEmpresa);
             this.gpbCadEmpresas.Controls.Add(this.gpbEndereco);
             this.gpbCadEmpresas.Controls.Add(this.gpbEmpresa);
             this.gpbCadEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.gpbCadEmpresas.Location = new System.Drawing.Point(13, 13);
+            this.gpbCadEmpresas.Location = new System.Drawing.Point(12, 13);
             this.gpbCadEmpresas.Name = "gpbCadEmpresas";
             this.gpbCadEmpresas.Size = new System.Drawing.Size(818, 525);
-            this.gpbCadEmpresas.TabIndex = 0;
+            this.gpbCadEmpresas.TabIndex = 1;
             this.gpbCadEmpresas.TabStop = false;
-            this.gpbCadEmpresas.Text = "Cadastro de empresa";
+            this.gpbCadEmpresas.Text = "Atualizar dados das empresas";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(437, 470);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnCadastrarEmpresa
             // 
             this.btnCadastrarEmpresa.BackColor = System.Drawing.Color.LightBlue;
             this.btnCadastrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(333, 469);
+            this.btnCadastrarEmpresa.Location = new System.Drawing.Point(278, 470);
             this.btnCadastrarEmpresa.Name = "btnCadastrarEmpresa";
             this.btnCadastrarEmpresa.Size = new System.Drawing.Size(142, 30);
             this.btnCadastrarEmpresa.TabIndex = 2;
-            this.btnCadastrarEmpresa.Text = "Cadastrar Empresa";
+            this.btnCadastrarEmpresa.Text = "Atualizar Empresa";
             this.btnCadastrarEmpresa.UseVisualStyleBackColor = false;
             this.btnCadastrarEmpresa.Click += new System.EventHandler(this.btnCadastrarEmpresa_Click);
             // 
@@ -218,8 +230,6 @@
             // gpbEmpresa
             // 
             this.gpbEmpresa.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gpbEmpresa.Controls.Add(this.lblDominio);
-            this.gpbEmpresa.Controls.Add(this.cmbDominio);
             this.gpbEmpresa.Controls.Add(this.dtmDataFundacao);
             this.gpbEmpresa.Controls.Add(this.txtSegmento);
             this.gpbEmpresa.Controls.Add(this.txtCeo);
@@ -246,39 +256,6 @@
             this.gpbEmpresa.TabStop = false;
             this.gpbEmpresa.Text = "Dados da empresa";
             // 
-            // lblDominio
-            // 
-            this.lblDominio.AutoSize = true;
-            this.lblDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblDominio.Location = new System.Drawing.Point(422, 92);
-            this.lblDominio.Name = "lblDominio";
-            this.lblDominio.Size = new System.Drawing.Size(54, 15);
-            this.lblDominio.TabIndex = 18;
-            this.lblDominio.Text = "Dominio";
-            // 
-            // cmbDominio
-            // 
-            this.cmbDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cmbDominio.FormattingEnabled = true;
-            this.cmbDominio.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@outlook.com",
-            "@hotmail.com",
-            "@bol.com",
-            "@yahoo.com",
-            "@oul.com",
-            "@terra.com",
-            "@gmx.com",
-            "@icload.com",
-            "@zoho.com"});
-            this.cmbDominio.Location = new System.Drawing.Point(422, 110);
-            this.cmbDominio.Name = "cmbDominio";
-            this.cmbDominio.Size = new System.Drawing.Size(121, 23);
-            this.cmbDominio.TabIndex = 10;
-            this.cmbDominio.Text = "[Selecione]";
-            this.cmbDominio.SelectedIndexChanged += new System.EventHandler(this.cmbDominio_SelectedIndexChanged);
-            this.cmbDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominio_KeyPress);
-            // 
             // dtmDataFundacao
             // 
             this.dtmDataFundacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -289,7 +266,6 @@
             this.dtmDataFundacao.Size = new System.Drawing.Size(110, 23);
             this.dtmDataFundacao.TabIndex = 3;
             this.dtmDataFundacao.Value = new System.DateTime(2023, 10, 1, 0, 0, 0, 0);
-            this.dtmDataFundacao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateTimePicker1_KeyPress);
             // 
             // txtSegmento
             // 
@@ -327,9 +303,8 @@
             this.txtEmail.Location = new System.Drawing.Point(296, 110);
             this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(120, 21);
+            this.txtEmail.Size = new System.Drawing.Size(150, 21);
             this.txtEmail.TabIndex = 13;
-            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // mskCnpj
             // 
@@ -462,7 +437,7 @@
             this.lblRazaoSocial.TabIndex = 0;
             this.lblRazaoSocial.Text = "Razão social";
             // 
-            // Form_CadEmpresas
+            // Form_AtualizarEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -473,9 +448,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form_CadEmpresas";
+            this.Name = "Form_AtualizarEmpresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Empresas";
+            this.Text = "Atualizar Dados";
+            this.Load += new System.EventHandler(this.Form_AtualizarEmpresas_Load);
             this.gpbCadEmpresas.ResumeLayout(false);
             this.gpbEndereco.ResumeLayout(false);
             this.gpbEndereco.PerformLayout();
@@ -488,8 +464,28 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpbCadEmpresas;
+        private System.Windows.Forms.Button btnCadastrarEmpresa;
         private System.Windows.Forms.GroupBox gpbEndereco;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblRua;
+        private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.GroupBox gpbEmpresa;
+        private System.Windows.Forms.DateTimePicker dtmDataFundacao;
+        private System.Windows.Forms.TextBox txtSegmento;
+        private System.Windows.Forms.TextBox txtCeo;
+        private System.Windows.Forms.MaskedTextBox mskTelefone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox mskCnpj;
+        private System.Windows.Forms.TextBox txtNascionalidade;
+        private System.Windows.Forms.TextBox txtNomeFantasia;
+        private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.Label lblSegmento;
         private System.Windows.Forms.Label lblDataFundacao;
         private System.Windows.Forms.Label lblCeo;
@@ -499,27 +495,6 @@
         private System.Windows.Forms.Label lblNascionalidade;
         private System.Windows.Forms.Label lblNomeFantasia;
         private System.Windows.Forms.Label lblRazaoSocial;
-        private System.Windows.Forms.TextBox txtRazaoSocial;
-        private System.Windows.Forms.TextBox txtNomeFantasia;
-        private System.Windows.Forms.TextBox txtNascionalidade;
-        private System.Windows.Forms.MaskedTextBox mskCnpj;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.MaskedTextBox mskTelefone;
-        private System.Windows.Forms.TextBox txtCeo;
-        private System.Windows.Forms.TextBox txtSegmento;
-        private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Label lblRua;
-        private System.Windows.Forms.Label lblBairro;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblCidade;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Button btnCadastrarEmpresa;
-        private System.Windows.Forms.DateTimePicker dtmDataFundacao;
-        private System.Windows.Forms.ComboBox cmbDominio;
-        private System.Windows.Forms.Label lblDominio;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

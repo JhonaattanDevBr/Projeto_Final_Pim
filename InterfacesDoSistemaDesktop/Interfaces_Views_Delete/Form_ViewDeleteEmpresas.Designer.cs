@@ -63,9 +63,9 @@
             this.gpbEmpresas.Controls.Add(this.btnPesquisar);
             this.gpbEmpresas.Controls.Add(this.dgvVisualizarEmpresa);
             this.gpbEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.gpbEmpresas.Location = new System.Drawing.Point(13, 12);
+            this.gpbEmpresas.Location = new System.Drawing.Point(12, 12);
             this.gpbEmpresas.Name = "gpbEmpresas";
-            this.gpbEmpresas.Size = new System.Drawing.Size(959, 657);
+            this.gpbEmpresas.Size = new System.Drawing.Size(1260, 657);
             this.gpbEmpresas.TabIndex = 0;
             this.gpbEmpresas.TabStop = false;
             this.gpbEmpresas.Text = "Empresas";
@@ -76,7 +76,7 @@
             this.gpbFiltro.Controls.Add(this.rdbCnpj);
             this.gpbFiltro.Controls.Add(this.rdbSegmento);
             this.gpbFiltro.Controls.Add(this.rdbRazaoSocial);
-            this.gpbFiltro.Location = new System.Drawing.Point(723, 159);
+            this.gpbFiltro.Location = new System.Drawing.Point(1023, 156);
             this.gpbFiltro.Name = "gpbFiltro";
             this.gpbFiltro.Size = new System.Drawing.Size(230, 137);
             this.gpbFiltro.TabIndex = 6;
@@ -135,7 +135,7 @@
             this.gpbPesquisa.Controls.Add(this.lblNomeFantasia);
             this.gpbPesquisa.Controls.Add(this.txtPesquisaNomeFantasia);
             this.gpbPesquisa.Controls.Add(this.cmbCampoPesquisa);
-            this.gpbPesquisa.Location = new System.Drawing.Point(723, 22);
+            this.gpbPesquisa.Location = new System.Drawing.Point(1023, 22);
             this.gpbPesquisa.Name = "gpbPesquisa";
             this.gpbPesquisa.Size = new System.Drawing.Size(230, 118);
             this.gpbPesquisa.TabIndex = 5;
@@ -196,7 +196,7 @@
             this.btnSair.BackColor = System.Drawing.Color.LightBlue;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnSair.Location = new System.Drawing.Point(782, 513);
+            this.btnSair.Location = new System.Drawing.Point(1083, 513);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(108, 30);
             this.btnSair.TabIndex = 4;
@@ -208,31 +208,33 @@
             this.btnExcluirRegistro.BackColor = System.Drawing.Color.LightBlue;
             this.btnExcluirRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcluirRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnExcluirRegistro.Location = new System.Drawing.Point(782, 463);
+            this.btnExcluirRegistro.Location = new System.Drawing.Point(1083, 463);
             this.btnExcluirRegistro.Name = "btnExcluirRegistro";
             this.btnExcluirRegistro.Size = new System.Drawing.Size(108, 30);
             this.btnExcluirRegistro.TabIndex = 3;
             this.btnExcluirRegistro.Text = "Excluir Registro";
             this.btnExcluirRegistro.UseVisualStyleBackColor = false;
+            this.btnExcluirRegistro.Click += new System.EventHandler(this.btnExcluirRegistro_Click);
             // 
             // btnAlterarDados
             // 
             this.btnAlterarDados.BackColor = System.Drawing.Color.LightBlue;
             this.btnAlterarDados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarDados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAlterarDados.Location = new System.Drawing.Point(782, 416);
+            this.btnAlterarDados.Location = new System.Drawing.Point(1083, 416);
             this.btnAlterarDados.Name = "btnAlterarDados";
             this.btnAlterarDados.Size = new System.Drawing.Size(108, 30);
             this.btnAlterarDados.TabIndex = 2;
             this.btnAlterarDados.Text = "Alterar Dados";
             this.btnAlterarDados.UseVisualStyleBackColor = false;
+            this.btnAlterarDados.Click += new System.EventHandler(this.btnAlterarDados_Click);
             // 
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.Color.LightBlue;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnPesquisar.Location = new System.Drawing.Point(782, 369);
+            this.btnPesquisar.Location = new System.Drawing.Point(1083, 369);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(108, 30);
             this.btnPesquisar.TabIndex = 1;
@@ -243,17 +245,20 @@
             // 
             this.dgvVisualizarEmpresa.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvVisualizarEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisualizarEmpresa.Location = new System.Drawing.Point(0, 22);
+            this.dgvVisualizarEmpresa.Location = new System.Drawing.Point(6, 22);
             this.dgvVisualizarEmpresa.Name = "dgvVisualizarEmpresa";
-            this.dgvVisualizarEmpresa.Size = new System.Drawing.Size(711, 629);
+            this.dgvVisualizarEmpresa.ReadOnly = true;
+            this.dgvVisualizarEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVisualizarEmpresa.Size = new System.Drawing.Size(1011, 629);
             this.dgvVisualizarEmpresa.TabIndex = 0;
+            this.dgvVisualizarEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarEmpresa_CellClick);
             // 
             // Form_ViewDeleteEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(984, 681);
+            this.ClientSize = new System.Drawing.Size(1284, 681);
             this.Controls.Add(this.gpbEmpresas);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -262,6 +267,7 @@
             this.Name = "Form_ViewDeleteEmpresas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minhas Empresas";
+            this.Load += new System.EventHandler(this.Form_ViewDeleteEmpresas_Load);
             this.gpbEmpresas.ResumeLayout(false);
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();
