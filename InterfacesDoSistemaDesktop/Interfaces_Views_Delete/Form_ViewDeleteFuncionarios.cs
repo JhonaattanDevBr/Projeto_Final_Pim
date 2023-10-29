@@ -29,8 +29,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void Form_ViewDeleteFuncionarios_Load(object sender, EventArgs e)
         {
             dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaConvenioMedico = _crud_Funcionarios.BuscarEmpresas();
-            dgvVisualizarFuncionarios.DataSource = tabelaConvenioMedico;
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarEmpresas();
+            dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
             dgvVisualizarFuncionarios.Columns[0].Width = 70;

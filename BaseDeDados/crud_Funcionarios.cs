@@ -279,7 +279,7 @@ namespace BaseDeDados
                                 "Funcionarios.Telefone, Cell_principal, Cell_secundario, Num_dependentes, " +
                                 "Id_planos_saude, Planos_saude.Nome, " +
                                 "Id_planos_odontologicos, Planos_odontologicos.Nome, " +
-                                "Id_empresas, Empresas.Razao_social Cargo, Salario, Data_admissao FROM Funcionarios " +
+                                "Id_empresas, Empresas.Razao_social, Cargo, Salario, Data_admissao FROM Funcionarios " +
                                 "INNER JOIN Endereco ON Funcionarios.Id_endereco = Endereco.Id_endereco " +
                                 "LEFT JOIN Planos_saude ON Funcionarios.Id_planos_saude = Planos_saude.Id_saude " +
                                 "LEFT JOIN Planos_odontologicos ON Funcionarios.Id_planos_odontologicos = Planos_odontologicos.Id_odonto " +
@@ -306,18 +306,24 @@ namespace BaseDeDados
                 dt.Columns.Add("RG", typeof(string));
                 dt.Columns.Add("Email", typeof(string));
                 dt.Columns.Add("Email Secundario", typeof(string));
+                dt.Columns.Add("Telefone", typeof(string));
+                dt.Columns.Add("Cell Princ.", typeof(string));
+                dt.Columns.Add("Cell Secun.", typeof(string));
                 dt.Columns.Add("Dependentes", typeof(int));
-                dt.Columns.Add("Cód. ConMed.", typeof(int));  // Vou tentar jogar esse código no nome do conv medico ↓
+                dt.Columns.Add("Cód. ConMed.", typeof(string));  // Vou tentar jogar esse código no nome do conv medico ↓
                 dt.Columns.Add("Convênio Médico", typeof(string));
-                dt.Columns.Add("Cód ConOdon.", typeof(int)); // Vou tentar jogar esse código no nome do conv odonto ↓
+                dt.Columns.Add("Cód ConOdon.", typeof(string)); // Vou tentar jogar esse código no nome do conv odonto ↓
                 dt.Columns.Add("Convênio Odonto", typeof(string));
                 dt.Columns.Add("Cód. Empresa", typeof(int)); // Vou tentar jogar esse código no empregador ↓
                 dt.Columns.Add("Empregador", typeof(string));
                 dt.Columns.Add("Cargo", typeof(string));
                 dt.Columns.Add("Salário", typeof(decimal));
                 dt.Columns.Add("Data Admissão", typeof(DateTime));
-                
 
+                string idConvMedico = "0";
+                string convMedico = "NULL";
+                string idConvOdonto = "0";
+                string convOdonto = "NULL";
                 while (_leitor.Read())
                 {
                     int id = _leitor.GetInt32(0);
@@ -329,9 +335,49 @@ namespace BaseDeDados
                     string cidade = _leitor.GetString(6);
                     string estado = _leitor.GetString(7);
                     string bairro = _leitor.GetString(8);
+                    string rua = _leitor.GetString(9);
+                    int numero = _leitor.GetInt32(10);
+                    int registro = _leitor.GetInt32(11);
+                    int cargaHoraria = _leitor.GetInt32(12);
+                    string cpf = _leitor.GetString(13);
+                    string rg = _leitor.GetString(14);
+                    string email = _leitor.GetString(15);
+                    string emailSecundario = _leitor.GetString(16);
+                    string telefone = _leitor.GetString(17);
+                    string cellPrinc = _leitor.GetString(18);
+                    string cellSecun = _leitor.GetString(19);
+                    int dependentes = _leitor.GetInt32(20);
+
+                    if (_leitor.IsDBNull(21))
+                    {
+                        idConvMedico = "0";
+                        convMedico = "NULL";
+                    }
+                    else
+                    {
+                        idConvMedico = _leitor.GetInt32(21).ToString();
+                        convMedico = _leitor.GetString(22);
+                    }
+                    if(_leitor.IsDBNull(23)) // O metodo IsDBNull é um metodo que testa quando um dado vem do banco de dados e sua coluna é nula
+                    {
+                        idConvOdonto = "0";
+                        convOdonto = "NULL";
+                    }
+                    else
+                    {
+                        idConvOdonto = _leitor.GetInt32(23).ToString();
+                        convOdonto = _leitor.GetString(24);
+                    }
+                    
+                    int idEmpresa = _leitor.GetInt32(25);
+                    string empregador = _leitor.GetString(26);
+                    string cargo = _leitor.GetString(27);
+                    double salario = _leitor.GetDouble(28);
+                    DateTime dataAdmissao = _leitor.GetDateTime(29);
 
 
-                    dt.Rows.Add(id);
+                    dt.Rows.Add(id, nome, sobrenome, idade, sexo, codEndereco, cidade, estado, bairro, rua, numero, registro, cargaHoraria, cpf, rg, email, emailSecundario,
+                                telefone, cellPrinc, cellSecun, dependentes, idConvMedico, convMedico, idConvOdonto, convOdonto, idEmpresa, empregador, cargo, salario, dataAdmissao);
                 }
                 conexaoDb.Close();
                 return dt;
