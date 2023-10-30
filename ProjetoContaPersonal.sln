@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDeDados", "BaseDeDados\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContaPersonal", "ContaPersonal\ContaPersonal.csproj", "{AD50847C-512F-492F-953C-487AD47FA9DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PIM", "..\..\..\..\source\repos\PIM\PIM.csproj", "{E4A5F72E-7275-42D5-90E0-4C48621CAC91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sis_WebPersonalDynamic", "..\..\..\..\source\repos\PIM\Sis_WebPersonalDynamic.csproj", "{E4A5F72E-7275-42D5-90E0-4C48621CAC91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
