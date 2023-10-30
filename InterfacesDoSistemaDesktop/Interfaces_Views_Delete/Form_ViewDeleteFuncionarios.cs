@@ -1,5 +1,7 @@
 ﻿using BaseDeDados;
+using EmpresasClientes;
 using FuncionariosEmpresas;
+using InterfacesDoSistemaDesktop.Interfaces_AtualizarDados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +32,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void Form_ViewDeleteFuncionarios_Load(object sender, EventArgs e)
         {
             dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarEmpresas();
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
             dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
@@ -63,7 +65,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void AtualizarTabela()
         {
             dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarEmpresas();
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
             dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
@@ -96,6 +98,21 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     {
                         MessageBox.Show("Não foi possível excluir o registro.", "Falha na operação ");
                     }
+                }
+            }
+        }
+
+        private void btnAlterarDados_Click(object sender, EventArgs e)
+        {
+            if (Id != "")
+            {
+                DialogResult alterar = MessageBox.Show("Deseja realmente alterar os dados do registro? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
+                if (alterar == DialogResult.Yes)
+                {
+                    _funcionarios.Id = Id;
+                    Form_AtualizarFuncionarios _AtualizarFuncionarios = new Form_AtualizarFuncionarios(Id, IdEmpresa, IdConvMedico, IdConvOdonto, IdEndereco);
+                    _AtualizarFuncionarios.ShowDialog();
+                    AtualizarTabela();
                 }
             }
         }

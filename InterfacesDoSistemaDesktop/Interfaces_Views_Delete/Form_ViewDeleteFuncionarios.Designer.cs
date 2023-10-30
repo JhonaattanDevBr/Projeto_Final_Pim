@@ -226,6 +226,7 @@
             this.btnAlterarDados.TabIndex = 2;
             this.btnAlterarDados.Text = "Alterar Dados";
             this.btnAlterarDados.UseVisualStyleBackColor = false;
+            this.btnAlterarDados.Click += new System.EventHandler(this.btnAlterarDados_Click);
             // 
             // btnPesquisar
             // 

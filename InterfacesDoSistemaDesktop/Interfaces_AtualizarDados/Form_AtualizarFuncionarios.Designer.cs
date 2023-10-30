@@ -1,6 +1,6 @@
-﻿namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
+﻿namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
 {
-    partial class Form_CadFuncionarios
+    partial class Form_AtualizarFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CadFuncionarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AtualizarFuncionarios));
             this.gpbCadastroFuncionarios = new System.Windows.Forms.GroupBox();
-            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
+            this.btnAtualizarFuncionario = new System.Windows.Forms.Button();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.txtRuaFunc = new System.Windows.Forms.TextBox();
@@ -90,6 +90,7 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.gpbCadastroFuncionarios.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbContrato.SuspendLayout();
@@ -100,7 +101,8 @@
             // gpbCadastroFuncionarios
             // 
             this.gpbCadastroFuncionarios.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gpbCadastroFuncionarios.Controls.Add(this.btnCadastrarFuncionario);
+            this.gpbCadastroFuncionarios.Controls.Add(this.btnCancelar);
+            this.gpbCadastroFuncionarios.Controls.Add(this.btnAtualizarFuncionario);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbEndereco);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbContrato);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbContato);
@@ -109,22 +111,22 @@
             this.gpbCadastroFuncionarios.Location = new System.Drawing.Point(12, 12);
             this.gpbCadastroFuncionarios.Name = "gpbCadastroFuncionarios";
             this.gpbCadastroFuncionarios.Size = new System.Drawing.Size(760, 637);
-            this.gpbCadastroFuncionarios.TabIndex = 0;
+            this.gpbCadastroFuncionarios.TabIndex = 1;
             this.gpbCadastroFuncionarios.TabStop = false;
-            this.gpbCadastroFuncionarios.Text = "Cadastro de funcionários";
+            this.gpbCadastroFuncionarios.Text = "Atulizar dados dos funcionários";
             // 
-            // btnCadastrarFuncionario
+            // btnAtualizarFuncionario
             // 
-            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(305, 593);
-            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(144, 30);
-            this.btnCadastrarFuncionario.TabIndex = 4;
-            this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
-            this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
-            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
+            this.btnAtualizarFuncionario.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAtualizarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtualizarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAtualizarFuncionario.Location = new System.Drawing.Point(248, 593);
+            this.btnAtualizarFuncionario.Name = "btnAtualizarFuncionario";
+            this.btnAtualizarFuncionario.Size = new System.Drawing.Size(144, 30);
+            this.btnAtualizarFuncionario.TabIndex = 4;
+            this.btnAtualizarFuncionario.Text = "Atualizar Funcionário";
+            this.btnAtualizarFuncionario.UseVisualStyleBackColor = false;
+            this.btnAtualizarFuncionario.Click += new System.EventHandler(this.btnAtualizarFuncionario_Click);
             // 
             // gpbEndereco
             // 
@@ -154,7 +156,6 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(80, 21);
             this.textBox14.TabIndex = 9;
-            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // txtRuaFunc
             // 
@@ -281,7 +282,6 @@
             this.txtCargaHoraria.Name = "txtCargaHoraria";
             this.txtCargaHoraria.Size = new System.Drawing.Size(50, 21);
             this.txtCargaHoraria.TabIndex = 17;
-            this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
             // 
             // lblCargaHoraria
             // 
@@ -302,7 +302,6 @@
             this.txtDependentesFunc.Name = "txtDependentesFunc";
             this.txtDependentesFunc.Size = new System.Drawing.Size(80, 21);
             this.txtDependentesFunc.TabIndex = 15;
-            this.txtDependentesFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDependentesFunc_KeyPress);
             // 
             // cmbConvOdontoFunc
             // 
@@ -312,8 +311,6 @@
             this.cmbConvOdontoFunc.Name = "cmbConvOdontoFunc";
             this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 23);
             this.cmbConvOdontoFunc.TabIndex = 14;
-            this.cmbConvOdontoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbConvOdontoFunc_SelectedIndexChanged);
-            this.cmbConvOdontoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvOdontoFunc_KeyPress);
             // 
             // cmbConvMedico
             // 
@@ -323,8 +320,6 @@
             this.cmbConvMedico.Name = "cmbConvMedico";
             this.cmbConvMedico.Size = new System.Drawing.Size(150, 23);
             this.cmbConvMedico.TabIndex = 13;
-            this.cmbConvMedico.SelectedIndexChanged += new System.EventHandler(this.cmbConvMedico_SelectedIndexChanged);
-            this.cmbConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvMedico_KeyPress);
             // 
             // txtSalarioFunc
             // 
@@ -334,7 +329,6 @@
             this.txtSalarioFunc.Name = "txtSalarioFunc";
             this.txtSalarioFunc.Size = new System.Drawing.Size(120, 21);
             this.txtSalarioFunc.TabIndex = 12;
-            this.txtSalarioFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioFunc_KeyPress);
             // 
             // dtmDataAdmissaoFunc
             // 
@@ -345,7 +339,6 @@
             this.dtmDataAdmissaoFunc.Name = "dtmDataAdmissaoFunc";
             this.dtmDataAdmissaoFunc.Size = new System.Drawing.Size(118, 23);
             this.dtmDataAdmissaoFunc.TabIndex = 11;
-            this.dtmDataAdmissaoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskDataAdmissaoFunc_KeyPress);
             // 
             // txtCargoFunc
             // 
@@ -365,8 +358,6 @@
             this.cmbEmpregadorFunc.Name = "cmbEmpregadorFunc";
             this.cmbEmpregadorFunc.Size = new System.Drawing.Size(129, 23);
             this.cmbEmpregadorFunc.TabIndex = 9;
-            this.cmbEmpregadorFunc.SelectedIndexChanged += new System.EventHandler(this.cmbEmpregadorFunc_SelectedIndexChanged);
-            this.cmbEmpregadorFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEmpregadorFunc_KeyPress);
             // 
             // txtRegistroFunc
             // 
@@ -377,7 +368,6 @@
             this.txtRegistroFunc.Name = "txtRegistroFunc";
             this.txtRegistroFunc.Size = new System.Drawing.Size(80, 21);
             this.txtRegistroFunc.TabIndex = 8;
-            this.txtRegistroFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroFunc_KeyPress);
             // 
             // lblDependentes
             // 
@@ -528,7 +518,6 @@
             this.cmbDominioCaixaSecundaria.Name = "cmbDominioCaixaSecundaria";
             this.cmbDominioCaixaSecundaria.Size = new System.Drawing.Size(114, 23);
             this.cmbDominioCaixaSecundaria.TabIndex = 10;
-            this.cmbDominioCaixaSecundaria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominioCaixaSecundaria_KeyPress);
             // 
             // txtEmailSecundarioFunc
             // 
@@ -559,7 +548,6 @@
             this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
             this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 23);
             this.cmbDominioCaixaPrincipal.TabIndex = 8;
-            this.cmbDominioCaixaPrincipal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominioCaixaPrincipal_KeyPress);
             // 
             // txtEmailFunc
             // 
@@ -713,7 +701,6 @@
             this.txtIdadeFunc.Name = "txtIdadeFunc";
             this.txtIdadeFunc.Size = new System.Drawing.Size(50, 21);
             this.txtIdadeFunc.TabIndex = 8;
-            this.txtIdadeFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdadeFunc_KeyPress);
             // 
             // txtSobrenomeFunc
             // 
@@ -795,7 +782,19 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // Form_CadFuncionarios
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(408, 593);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // Form_AtualizarFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -806,10 +805,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form_CadFuncionarios";
+            this.Name = "Form_AtualizarFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Funcionarios";
-            this.Load += new System.EventHandler(this.Form_CadFuncionarios_Load);
+            this.Text = "Atualizar Dados";
+            this.Load += new System.EventHandler(this.Form_AtualizarFuncionarios_Load);
             this.gpbCadastroFuncionarios.ResumeLayout(false);
             this.gpbEndereco.ResumeLayout(false);
             this.gpbEndereco.PerformLayout();
@@ -826,48 +825,21 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpbCadastroFuncionarios;
-        private System.Windows.Forms.GroupBox gpbInfoFuncionario;
-        private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.Label lblRg;
-        private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.Label lblIdade;
-        private System.Windows.Forms.Label lblSobrenome;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.MaskedTextBox mskCpfFunc;
-        private System.Windows.Forms.MaskedTextBox mskRgFunc;
-        private System.Windows.Forms.TextBox txtIdadeFunc;
-        private System.Windows.Forms.TextBox txtSobrenomeFunc;
-        private System.Windows.Forms.TextBox txtNomeFunc;
-        private System.Windows.Forms.GroupBox gpbContato;
-        private System.Windows.Forms.Label lblCelularSecundario;
-        private System.Windows.Forms.Label lblCelularPrincipal;
-        private System.Windows.Forms.Label lblTelefone;
-        private System.Windows.Forms.Label lblDominioSecundario;
-        private System.Windows.Forms.Label lblEmailSecundario;
-        private System.Windows.Forms.Label lblDominio;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.MaskedTextBox mskCelularSecundarioFunc;
-        private System.Windows.Forms.MaskedTextBox mskCelularPrincipalFunc;
-        private System.Windows.Forms.MaskedTextBox mskTelefoneFunc;
-        private System.Windows.Forms.ComboBox cmbDominioCaixaSecundaria;
-        private System.Windows.Forms.TextBox txtEmailSecundarioFunc;
-        private System.Windows.Forms.ComboBox cmbDominioCaixaPrincipal;
-        private System.Windows.Forms.TextBox txtEmailFunc;
-        private System.Windows.Forms.GroupBox gpbContrato;
-        private System.Windows.Forms.Label lblDependentes;
-        private System.Windows.Forms.Label lblConvenioOdontologico;
-        private System.Windows.Forms.Label lblConvenioMedico;
-        private System.Windows.Forms.Label lblSalario;
-        private System.Windows.Forms.Label lblDataAdmissao;
-        private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.Label lblEmpregador;
-        private System.Windows.Forms.Label lblNumeroRegistro;
+        private System.Windows.Forms.Button btnAtualizarFuncionario;
         private System.Windows.Forms.GroupBox gpbEndereco;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtRuaFunc;
+        private System.Windows.Forms.TextBox txtBairroFunc;
+        private System.Windows.Forms.TextBox txtEstadoFunc;
+        private System.Windows.Forms.TextBox txtCidadeFunc;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblRua;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.GroupBox gpbContrato;
+        private System.Windows.Forms.TextBox txtCargaHoraria;
+        private System.Windows.Forms.Label lblCargaHoraria;
         private System.Windows.Forms.TextBox txtDependentesFunc;
         private System.Windows.Forms.ComboBox cmbConvOdontoFunc;
         private System.Windows.Forms.ComboBox cmbConvMedico;
@@ -876,15 +848,43 @@
         private System.Windows.Forms.TextBox txtCargoFunc;
         private System.Windows.Forms.ComboBox cmbEmpregadorFunc;
         private System.Windows.Forms.TextBox txtRegistroFunc;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox txtRuaFunc;
-        private System.Windows.Forms.TextBox txtBairroFunc;
-        private System.Windows.Forms.TextBox txtEstadoFunc;
-        private System.Windows.Forms.TextBox txtCidadeFunc;
-        private System.Windows.Forms.Button btnCadastrarFuncionario;
-        private System.Windows.Forms.TextBox txtCargaHoraria;
-        private System.Windows.Forms.Label lblCargaHoraria;
-        private System.Windows.Forms.RadioButton rdbSexoMasculino;
+        private System.Windows.Forms.Label lblDependentes;
+        private System.Windows.Forms.Label lblConvenioOdontologico;
+        private System.Windows.Forms.Label lblConvenioMedico;
+        private System.Windows.Forms.Label lblSalario;
+        private System.Windows.Forms.Label lblDataAdmissao;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblEmpregador;
+        private System.Windows.Forms.Label lblNumeroRegistro;
+        private System.Windows.Forms.GroupBox gpbContato;
+        private System.Windows.Forms.MaskedTextBox mskCelularSecundarioFunc;
+        private System.Windows.Forms.MaskedTextBox mskCelularPrincipalFunc;
+        private System.Windows.Forms.MaskedTextBox mskTelefoneFunc;
+        private System.Windows.Forms.ComboBox cmbDominioCaixaSecundaria;
+        private System.Windows.Forms.TextBox txtEmailSecundarioFunc;
+        private System.Windows.Forms.ComboBox cmbDominioCaixaPrincipal;
+        private System.Windows.Forms.TextBox txtEmailFunc;
+        private System.Windows.Forms.Label lblCelularSecundario;
+        private System.Windows.Forms.Label lblCelularPrincipal;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.Label lblDominioSecundario;
+        private System.Windows.Forms.Label lblEmailSecundario;
+        private System.Windows.Forms.Label lblDominio;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.GroupBox gpbInfoFuncionario;
         private System.Windows.Forms.RadioButton rdbSexoFeminino;
+        private System.Windows.Forms.RadioButton rdbSexoMasculino;
+        private System.Windows.Forms.MaskedTextBox mskCpfFunc;
+        private System.Windows.Forms.MaskedTextBox mskRgFunc;
+        private System.Windows.Forms.TextBox txtIdadeFunc;
+        private System.Windows.Forms.TextBox txtSobrenomeFunc;
+        private System.Windows.Forms.TextBox txtNomeFunc;
+        private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.Label lblRg;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.Label lblIdade;
+        private System.Windows.Forms.Label lblSobrenome;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

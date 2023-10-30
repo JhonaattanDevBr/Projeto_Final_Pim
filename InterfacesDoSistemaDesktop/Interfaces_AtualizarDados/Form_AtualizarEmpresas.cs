@@ -21,8 +21,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
         public Form_AtualizarEmpresas(string id, string idEndereco)
         {
             InitializeComponent();
-            string registro = id;
-            _empresas.Id = registro; // vou arrumar isso pra ele receber o valor direto.
+            _empresas.Id = id; 
             _empresas.IdEndereco = idEndereco;
         }
 

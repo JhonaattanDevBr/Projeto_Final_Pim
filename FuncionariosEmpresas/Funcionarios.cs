@@ -10,6 +10,11 @@ namespace FuncionariosEmpresas
 {
     public class Funcionarios
     {
+        public string Id { get; set; }
+        public string IdEndereco { get; set; }
+        public string IdConvMedico { get; set; }
+        public string IdConvOdonto { get; set; }
+        public string IdEmpresa { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Idade { get; set; }

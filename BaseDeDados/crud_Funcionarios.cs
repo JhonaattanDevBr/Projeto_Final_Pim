@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FuncionariosEmpresas;
 using System.Globalization;
+using EmpresasClientes;
 
 namespace BaseDeDados
 {
@@ -298,7 +299,7 @@ namespace BaseDeDados
             }
         }
 
-        public DataTable BuscarEmpresas()
+        public DataTable BuscarFuncionarios()
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -423,6 +424,69 @@ namespace BaseDeDados
             }
         }
 
+        public List<Funcionarios> BuscarInfoFuncionario(Funcionarios _funcionario)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Nome, Sobrenome, Idade, Sexo, Registro, Carga_horaria, Cpf, Rg, Email, Email_secundario, " +
+                               "Telefone, Cell_principal, Cell_secundario, Num_dependentes, Cargo, Salario, Data_admissao, " +
+                               "Cidade, Estado, Bairro, Rua, Numero from Funcionarios " +
+                               "JOIN Endereco On Funcionarios.Id_endereco = Endereco.Id_endereco " +
+                               "WHERE Id_funcionario = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                List<Funcionarios> _registro = new List<Funcionarios>();
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = _funcionario.Id;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _funcionario.Nome = _leitor.GetString(0);
+                    _funcionario.Sobrenome = _leitor.GetString(1);
+                    _funcionario.Idade = _leitor.GetInt32(2).ToString();
+                    _funcionario.Sexo = _leitor.GetString(3);
+                    _funcionario.NumeroRegistro = _leitor.GetInt32(4).ToString();
+                    _funcionario.CargaHoraria = _leitor.GetInt32(5).ToString();
+                    _funcionario.Cpf = _leitor.GetString(6);
+                    _funcionario.Rg = _leitor.GetString(7);
+                    _funcionario.Email = _leitor.GetString(8);
+                    _funcionario.EmailSecundario = _leitor.GetString(9);
+                    _funcionario.Telefone = _leitor.GetString(10);
+                    _funcionario.CelularPrincipal = _leitor.GetString(11);
+                    _funcionario.CelularSecundario = _leitor.GetString(12);
+                    _funcionario.Dependentes = _leitor.GetInt32(13).ToString();
+                    _funcionario.Cargo = _leitor.GetString(14);
+                    _funcionario.Salario = _leitor.GetDouble(15).ToString();
+                    _funcionario.DataAdmisao = _leitor.GetDateTime(16).ToString();
+                    _funcionario.Cidade = _leitor.GetString(17);
+                    _funcionario.Estado = _leitor.GetString(18);
+                    _funcionario.Bairro = _leitor.GetString(19);
+                    _funcionario.Rua = _leitor.GetString(20);
+                    _funcionario.Numero = _leitor.GetInt32(21).ToString();
+                    _registro.Add(_funcionario);
+                }
+                conexaoDb.Close();
+                return _registro;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            { conexaoDb.Close(); }
+        }
 
         public Dictionary<int, string> PopularCaixaConvenioMedico()
         {

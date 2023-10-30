@@ -100,7 +100,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             _funcionarios.NumeroRegistro = txtRegistroFunc.Text;
             _funcionarios.CargaHoraria = txtCargaHoraria.Text;
             _funcionarios.Cargo = txtCargoFunc.Text;
-            _funcionarios.DataAdmisao = mskDataAdmissaoFunc.Text;
+            _funcionarios.DataAdmisao = dtmDataAdmissaoFunc.Text;
             _funcionarios.Salario = txtSalarioFunc.Text;
             _funcionarios.Dependentes = txtDependentesFunc.Text;
             _funcionarios.Cidade = txtCidadeFunc.Text;
