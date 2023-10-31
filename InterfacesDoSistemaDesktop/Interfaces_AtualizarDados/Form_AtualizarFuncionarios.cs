@@ -180,16 +180,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             }
 
 
-            // Amanha vou terminar essaparte inserrindo a alteração do registor do funcionario.
-
-
-            /*
+            // Amanha vou precisar verificar o crud de alterar o registro do funcionario
+            // Tambem preciso incluir todos os códigos da tela de cadastro que não permitem que o usuario ensira valores ivalidos.
             bool retornoAutenticacao = _funcionarios.AutenticarFuncionario();
             if (retornoAutenticacao)
             {
                 bool[] retornoAtualizacao = new bool[2];
-                retornoAtualizacao[0] = _crud_Funcionarios.AtualizarEnderecoEmpresas(_funcionarios);
-                retornoAtualizacao[1] = _crud_Funcionarios.AtualizarRegistroEmpresas(_funcionarios);
+                retornoAtualizacao[0] = _crud_Funcionarios.AtualizarEnderecoFuncionario(_funcionarios);
+                retornoAtualizacao[1] = _crud_Funcionarios.AtualizarRegistroFuncionario(_funcionarios);
 
                 if (retornoAtualizacao[0] && retornoAtualizacao[1])
                 {
@@ -204,7 +202,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             else
             {
                 MessageBox.Show(_funcionarios.MensagemErro, "Falha na operação");
-            }*/
+            }
         }
     }
 }

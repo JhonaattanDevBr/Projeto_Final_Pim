@@ -265,6 +265,229 @@ namespace BaseDeDados
             }
         }
 
+        public bool AtualizarEnderecoFuncionario(Funcionarios _funcionario)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "UPDATE Endereco SET " +
+                               "Cidade = @cidade, Estado = @estado, Bairro = @bairro, Rua = @rua, Numero = @numero WHERE Id_endereco = @idEndereco";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtCidade = cmd.CreateParameter();
+                _pmtCidade.ParameterName = "@cidade";
+                _pmtCidade.DbType = DbType.String;
+                _pmtCidade.Value = _funcionario.Cidade;
+                cmd.Parameters.Add(_pmtCidade);
+
+                var _pmtEstado = cmd.CreateParameter();
+                _pmtEstado.ParameterName = "@estado";
+                _pmtEstado.DbType = DbType.String;
+                _pmtEstado.Value = _funcionario.Estado;
+                cmd.Parameters.Add(_pmtEstado);
+
+                var _pmtBairro = cmd.CreateParameter();
+                _pmtBairro.ParameterName = "@bairro";
+                _pmtBairro.DbType = DbType.String;
+                _pmtBairro.Value = _funcionario.Bairro;
+                cmd.Parameters.Add(_pmtBairro);
+
+                var _pmtRua = cmd.CreateParameter();
+                _pmtRua.ParameterName = "@rua";
+                _pmtRua.DbType = DbType.String;
+                _pmtRua.Value = _funcionario.Rua;
+                cmd.Parameters.Add(_pmtRua);
+
+                var _pmtNumero = cmd.CreateParameter();
+                _pmtNumero.ParameterName = "@numero";
+                _pmtNumero.DbType = DbType.Int32;
+                _pmtNumero.Value = _funcionario.Numero;
+                cmd.Parameters.Add(_pmtNumero);
+
+                var _pmtIdEndereco = cmd.CreateParameter();
+                _pmtIdEndereco.ParameterName = "@idEndereco";
+                _pmtIdEndereco.DbType = DbType.Int32;
+                _pmtIdEndereco.Value = _funcionario.IdEndereco;
+                cmd.Parameters.Add(_pmtIdEndereco);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conexaoDb.Close();
+            }
+        }
+
+        public bool AtualizarRegistroFuncionario(Funcionarios _funcionario)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "UPDATE Funcionarios SET " +
+                               "Nome = @nome, Sobrenome = @sobrenome, Idade = @idade, Sexo = @sexo, Id_endereco = @idEndereco, Registro = @registro, Carga_horaria = @cargaHoraria, " +
+                               "Cpf = @cpf, Rg = @rg, Email = @email, Email_secundario = @emailSecundario, Telefone = @telefone, " +
+                               "Cell_principal = @celularPrincipal, Cell_secundario = @celularSecundario, Num_dependentes = @numeroDependentes, " +
+                               "Id_planos_saude = @idConvMedico, Id_planos_odontologicos = @idConvOdonto, Id_empresas = @idEmpresa, Cargo = @cargo, " +
+                               "Salario = @salario, Data_admissao = @datAdmissao " +
+                               "WHERE Id_funcionario = id";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                // TENHO QUE REVISAR ESSE CRUD PQ ACHO Q TEM COISA ERRADO, FIZ COM SONO
+                var _pmtNome = cmd.CreateParameter();
+                _pmtNome.ParameterName = "@nome";
+                _pmtNome.DbType = DbType.String;
+                _pmtNome.Value = _funcionario.Nome;
+                cmd.Parameters.Add(_pmtNome);
+
+                var _pmtSobrenome = cmd.CreateParameter();
+                _pmtSobrenome.ParameterName = "@sobrenome";
+                _pmtSobrenome.DbType = DbType.String;
+                _pmtSobrenome.Value = _funcionario.Sobrenome;
+                cmd.Parameters.Add(_pmtSobrenome);
+
+                var _pmtIdade = cmd.CreateParameter();
+                _pmtIdade.ParameterName = "@idade";
+                _pmtIdade.DbType = DbType.Int32;
+                _pmtIdade.Value = _funcionario.Idade;
+                cmd.Parameters.Add(_pmtIdade);
+
+                var _pmtSexo = cmd.CreateParameter();
+                _pmtSexo.ParameterName = "@sexo";
+                _pmtSexo.SqlDbType = SqlDbType.Char;
+                _pmtSexo.Value = _funcionario.Sexo;
+                cmd.Parameters.Add(_pmtSexo);
+
+                var _pmtIdEndereco = cmd.CreateParameter();
+                _pmtIdEndereco.ParameterName = "@idEndereco";
+                _pmtIdEndereco.DbType = DbType.Int32;
+                _pmtIdEndereco.Value = _funcionario.IdEndereco;
+                cmd.Parameters.Add(_pmtIdEndereco);
+
+                var _pmtRegistro = cmd.CreateParameter();
+                _pmtRegistro.ParameterName = "@registro";
+                _pmtRegistro.DbType = DbType.Int32;
+                _pmtRegistro.Value = _funcionario.NumeroRegistro;
+                cmd.Parameters.Add(_pmtRegistro);
+
+                var _pmtCargaHoraria = cmd.CreateParameter();
+                _pmtCargaHoraria.ParameterName = "@cargaHoraria";
+                _pmtCargaHoraria.DbType = DbType.Int32;
+                _pmtCargaHoraria.Value = _funcionario.CargaHoraria;
+                cmd.Parameters.Add(_pmtCargaHoraria);
+
+                var _pmtCpf = cmd.CreateParameter();
+                _pmtCpf.ParameterName = "@cpf";
+                _pmtCpf.DbType = DbType.Date;
+                _pmtCpf.Value = _funcionario.Cpf;
+                cmd.Parameters.Add(_pmtCpf);
+
+                var _pmtRg = cmd.CreateParameter();
+                _pmtRg.ParameterName = "@rg";
+                _pmtRg.DbType = DbType.String;
+                _pmtRg.Value = _funcionario;
+                cmd.Parameters.Add(_pmtRg);
+
+                var _pmtEmail = cmd.CreateParameter();
+                _pmtEmail.ParameterName = "@email";
+                _pmtEmail.DbType = DbType.Int32;
+                _pmtEmail.Value = _funcionario.Email;
+                cmd.Parameters.Add(_pmtEmail);
+
+                var _pmtCellPrincipal = cmd.CreateParameter();
+                _pmtCellPrincipal.ParameterName = "@celularPrincipal";
+                _pmtCellPrincipal.DbType = DbType.String;
+                _pmtCellPrincipal.Value = _funcionario.CelularPrincipal;
+                cmd.Parameters.Add(_pmtCellPrincipal);
+
+                var _pmtCellSecundario = cmd.CreateParameter();
+                _pmtCellSecundario.ParameterName = "@celularSecundario";
+                _pmtCellSecundario.DbType = DbType.String;
+                _pmtCellSecundario.Value = _funcionario.CelularSecundario;
+                cmd.Parameters.Add( _pmtCellSecundario);
+
+                var _pmtDependentes = cmd.CreateParameter();
+                _pmtDependentes.ParameterName = "@numeroDependentes";
+                _pmtDependentes.DbType = DbType.Int32;
+                _pmtDependentes.Value = _funcionario.Dependentes;
+                cmd.Parameters.Add(_pmtDependentes);
+
+                var _pmtConvMedico = cmd.CreateParameter();
+                _pmtConvMedico.ParameterName = "@idConvMedico";
+                _pmtConvMedico.DbType = DbType.Int32;
+                _pmtConvMedico.Value = _funcionario.IdConvMedico;
+                cmd.Parameters.Add(_pmtConvMedico);
+
+                var _pmtConvOdonto = cmd.CreateParameter();
+                _pmtConvOdonto.ParameterName = "@idConvOdonto";
+                _pmtConvOdonto.DbType = DbType.Int32;
+                _pmtConvOdonto.Value = _funcionario.IdConvOdonto;
+                cmd.Parameters.Add(_pmtConvOdonto);
+
+                var _pmtEmpregador = cmd.CreateParameter();
+                _pmtEmpregador.ParameterName = "@idEmpresa";
+                _pmtEmpregador.DbType = DbType.Int32;
+                _pmtEmpregador.Value = _funcionario.IdEmpresa;
+                cmd.Parameters.Add( _pmtEmpregador );
+
+                var _pmtCargo = cmd.CreateParameter();
+                _pmtCargo.ParameterName = "@cargo";
+                _pmtCargo.DbType = DbType.String;
+                _pmtCargo.Value = _funcionario.Cargo;
+                cmd.Parameters.Add(_pmtCargo );
+
+                var _pmtSalario = cmd.CreateParameter();
+                _pmtCargaHoraria.ParameterName = "@salario";
+                _pmtSalario.DbType = DbType.Double;
+                _pmtSalario.Value = _funcionario.Salario;
+                cmd.Parameters.Add(_pmtSalario );
+
+                var _pmtDatAdmissao = cmd.CreateParameter();
+                _pmtDatAdmissao.ParameterName = "@datAdmissao";
+                _pmtDatAdmissao.DbType = DbType.Date;
+                _pmtDatAdmissao.Value = _funcionario.DataAdmisao;
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                conexaoDb.Close();
+            }
+        }
+
         public bool ExcluirFuncionario(string id)
         {
             string caminho = _servidores.servidorNotebook;
