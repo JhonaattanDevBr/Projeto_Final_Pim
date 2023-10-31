@@ -76,6 +76,30 @@
     <Compile Include="Interfaces_Acesso\Form_Ajuda.Designer.cs">
       <DependentUpon>Form_Ajuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarConvMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarConvMedico.Designer.cs">
+      <DependentUpon>Form_AtualizarConvMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarConvOdonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarConvOdonto.Designer.cs">
+      <DependentUpon>Form_AtualizarConvOdonto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarEmpresas.Designer.cs">
+      <DependentUpon>Form_AtualizarEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.Designer.cs">
+      <DependentUpon>Form_AtualizarFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Ferias\Form_CalculosFerias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +290,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Acesso\Form_Acesso.resx">
       <DependentUpon>Form_Acesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarConvMedico.resx">
+      <DependentUpon>Form_AtualizarConvMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarConvOdonto.resx">
+      <DependentUpon>Form_AtualizarConvOdonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarEmpresas.resx">
+      <DependentUpon>Form_AtualizarEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.resx">
+      <DependentUpon>Form_AtualizarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Ferias\Form_CalculosFerias.resx">
       <DependentUpon>Form_CalculosFerias.cs</DependentUpon>

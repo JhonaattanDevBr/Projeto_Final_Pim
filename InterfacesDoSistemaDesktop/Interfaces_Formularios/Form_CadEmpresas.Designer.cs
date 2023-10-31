@@ -118,51 +118,51 @@
             // txtNumero
             // 
             this.txtNumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNumero.Location = new System.Drawing.Point(296, 111);
             this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(100, 21);
             this.txtNumero.TabIndex = 9;
             // 
             // txtRua
             // 
             this.txtRua.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtRua.Location = new System.Drawing.Point(13, 111);
             this.txtRua.MaxLength = 100;
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(200, 20);
+            this.txtRua.Size = new System.Drawing.Size(200, 21);
             this.txtRua.TabIndex = 8;
             // 
             // txtBairro
             // 
             this.txtBairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtBairro.Location = new System.Drawing.Point(536, 55);
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(150, 20);
+            this.txtBairro.Size = new System.Drawing.Size(150, 21);
             this.txtBairro.TabIndex = 7;
             // 
             // txtEstado
             // 
             this.txtEstado.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEstado.Location = new System.Drawing.Point(296, 55);
             this.txtEstado.MaxLength = 40;
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(150, 20);
+            this.txtEstado.Size = new System.Drawing.Size(150, 21);
             this.txtEstado.TabIndex = 6;
             // 
             // txtCidade
             // 
             this.txtCidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCidade.Location = new System.Drawing.Point(13, 55);
             this.txtCidade.MaxLength = 40;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(150, 20);
+            this.txtCidade.Size = new System.Drawing.Size(150, 21);
             this.txtCidade.TabIndex = 5;
             // 
             // lblNumero
@@ -258,7 +258,7 @@
             // 
             // cmbDominio
             // 
-            this.cmbDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbDominio.FormattingEnabled = true;
             this.cmbDominio.Items.AddRange(new object[] {
             "@gmail.com",
@@ -273,7 +273,7 @@
             "@zoho.com"});
             this.cmbDominio.Location = new System.Drawing.Point(422, 110);
             this.cmbDominio.Name = "cmbDominio";
-            this.cmbDominio.Size = new System.Drawing.Size(121, 21);
+            this.cmbDominio.Size = new System.Drawing.Size(121, 23);
             this.cmbDominio.TabIndex = 10;
             this.cmbDominio.Text = "[Selecione]";
             this.cmbDominio.SelectedIndexChanged += new System.EventHandler(this.cmbDominio_SelectedIndexChanged);
@@ -294,82 +294,82 @@
             // txtSegmento
             // 
             this.txtSegmento.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtSegmento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtSegmento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSegmento.Location = new System.Drawing.Point(574, 163);
             this.txtSegmento.MaxLength = 100;
             this.txtSegmento.Name = "txtSegmento";
-            this.txtSegmento.Size = new System.Drawing.Size(150, 20);
+            this.txtSegmento.Size = new System.Drawing.Size(150, 21);
             this.txtSegmento.TabIndex = 17;
             // 
             // txtCeo
             // 
             this.txtCeo.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtCeo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCeo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCeo.Location = new System.Drawing.Point(574, 60);
             this.txtCeo.MaxLength = 100;
             this.txtCeo.Name = "txtCeo";
-            this.txtCeo.Size = new System.Drawing.Size(200, 20);
+            this.txtCeo.Size = new System.Drawing.Size(200, 21);
             this.txtCeo.TabIndex = 15;
             // 
             // mskTelefone
             // 
-            this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskTelefone.Location = new System.Drawing.Point(296, 163);
             this.mskTelefone.Mask = "(00) 0000-0000";
             this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(120, 20);
+            this.mskTelefone.Size = new System.Drawing.Size(120, 21);
             this.mskTelefone.TabIndex = 14;
             // 
             // txtEmail
             // 
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEmail.Location = new System.Drawing.Point(296, 110);
             this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(120, 20);
+            this.txtEmail.Size = new System.Drawing.Size(120, 21);
             this.txtEmail.TabIndex = 13;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // mskCnpj
             // 
-            this.mskCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskCnpj.Location = new System.Drawing.Point(296, 60);
             this.mskCnpj.Mask = "00,000,000/0000-00";
             this.mskCnpj.Name = "mskCnpj";
-            this.mskCnpj.Size = new System.Drawing.Size(150, 20);
+            this.mskCnpj.Size = new System.Drawing.Size(150, 21);
             this.mskCnpj.TabIndex = 12;
             // 
             // txtNascionalidade
             // 
             this.txtNascionalidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtNascionalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtNascionalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNascionalidade.Location = new System.Drawing.Point(13, 163);
             this.txtNascionalidade.MaxLength = 60;
             this.txtNascionalidade.Name = "txtNascionalidade";
-            this.txtNascionalidade.Size = new System.Drawing.Size(150, 20);
+            this.txtNascionalidade.Size = new System.Drawing.Size(150, 21);
             this.txtNascionalidade.TabIndex = 11;
             // 
             // txtNomeFantasia
             // 
             this.txtNomeFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNomeFantasia.Location = new System.Drawing.Point(13, 110);
             this.txtNomeFantasia.MaxLength = 255;
             this.txtNomeFantasia.Name = "txtNomeFantasia";
-            this.txtNomeFantasia.Size = new System.Drawing.Size(200, 20);
+            this.txtNomeFantasia.Size = new System.Drawing.Size(200, 21);
             this.txtNomeFantasia.TabIndex = 10;
             // 
             // txtRazaoSocial
             // 
             this.txtRazaoSocial.BackColor = System.Drawing.SystemColors.Window;
             this.txtRazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtRazaoSocial.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtRazaoSocial.Location = new System.Drawing.Point(13, 60);
             this.txtRazaoSocial.MaxLength = 255;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(200, 20);
+            this.txtRazaoSocial.Size = new System.Drawing.Size(200, 21);
             this.txtRazaoSocial.TabIndex = 9;
             // 
             // lblSegmento

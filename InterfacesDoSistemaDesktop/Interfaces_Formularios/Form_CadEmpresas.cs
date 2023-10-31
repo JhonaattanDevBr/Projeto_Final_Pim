@@ -46,8 +46,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             if (retornoCadastro == true)
             {
                 bool[] solicitarCadastro = new bool[2];
-                solicitarCadastro[0] = _crud_Empresas.incluirEnderecoEmpresa(empresasCli);
-                solicitarCadastro[1] = _crud_Empresas.incluirEmpresa(empresasCli);
+                solicitarCadastro[0] = _crud_Empresas.IncluirEnderecoEmpresa(empresasCli);
+                solicitarCadastro[1] = _crud_Empresas.IncluirEmpresa(empresasCli);
                 if (solicitarCadastro[0] && solicitarCadastro[1])
                 {
                     DialogResult sair = MessageBox.Show("Cadastro realizado com sucesso!\nDeseja inserir uma nova empresa ?", "Operação concluida!", MessageBoxButtons.YesNo);

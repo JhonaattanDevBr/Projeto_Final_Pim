@@ -49,7 +49,7 @@
             this.cmbConvOdontoFunc = new System.Windows.Forms.ComboBox();
             this.cmbConvMedico = new System.Windows.Forms.ComboBox();
             this.txtSalarioFunc = new System.Windows.Forms.TextBox();
-            this.mskDataAdmissaoFunc = new System.Windows.Forms.DateTimePicker();
+            this.dtmDataAdmissaoFunc = new System.Windows.Forms.DateTimePicker();
             this.txtCargoFunc = new System.Windows.Forms.TextBox();
             this.cmbEmpregadorFunc = new System.Windows.Forms.ComboBox();
             this.txtRegistroFunc = new System.Windows.Forms.TextBox();
@@ -77,6 +77,8 @@
             this.lblDominio = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.gpbInfoFuncionario = new System.Windows.Forms.GroupBox();
+            this.rdbSexoFeminino = new System.Windows.Forms.RadioButton();
+            this.rdbSexoMasculino = new System.Windows.Forms.RadioButton();
             this.mskCpfFunc = new System.Windows.Forms.MaskedTextBox();
             this.mskRgFunc = new System.Windows.Forms.MaskedTextBox();
             this.txtIdadeFunc = new System.Windows.Forms.TextBox();
@@ -88,8 +90,6 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.rdbSexoMasculino = new System.Windows.Forms.RadioButton();
-            this.rdbSexoFeminino = new System.Windows.Forms.RadioButton();
             this.gpbCadastroFuncionarios.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbContrato.SuspendLayout();
@@ -148,52 +148,52 @@
             // textBox14
             // 
             this.textBox14.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.textBox14.Location = new System.Drawing.Point(230, 99);
             this.textBox14.MaxLength = 5;
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(80, 20);
+            this.textBox14.Size = new System.Drawing.Size(80, 21);
             this.textBox14.TabIndex = 9;
             this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // txtRuaFunc
             // 
             this.txtRuaFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtRuaFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtRuaFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtRuaFunc.Location = new System.Drawing.Point(9, 99);
             this.txtRuaFunc.MaxLength = 100;
             this.txtRuaFunc.Name = "txtRuaFunc";
-            this.txtRuaFunc.Size = new System.Drawing.Size(200, 20);
+            this.txtRuaFunc.Size = new System.Drawing.Size(200, 21);
             this.txtRuaFunc.TabIndex = 8;
             // 
             // txtBairroFunc
             // 
             this.txtBairroFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtBairroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtBairroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtBairroFunc.Location = new System.Drawing.Point(284, 48);
             this.txtBairroFunc.MaxLength = 50;
             this.txtBairroFunc.Name = "txtBairroFunc";
-            this.txtBairroFunc.Size = new System.Drawing.Size(150, 20);
+            this.txtBairroFunc.Size = new System.Drawing.Size(150, 21);
             this.txtBairroFunc.TabIndex = 7;
             // 
             // txtEstadoFunc
             // 
             this.txtEstadoFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtEstadoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEstadoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEstadoFunc.Location = new System.Drawing.Point(147, 48);
             this.txtEstadoFunc.MaxLength = 40;
             this.txtEstadoFunc.Name = "txtEstadoFunc";
-            this.txtEstadoFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtEstadoFunc.Size = new System.Drawing.Size(120, 21);
             this.txtEstadoFunc.TabIndex = 6;
             // 
             // txtCidadeFunc
             // 
             this.txtCidadeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtCidadeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCidadeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCidadeFunc.Location = new System.Drawing.Point(9, 48);
             this.txtCidadeFunc.MaxLength = 40;
             this.txtCidadeFunc.Name = "txtCidadeFunc";
-            this.txtCidadeFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtCidadeFunc.Size = new System.Drawing.Size(120, 21);
             this.txtCidadeFunc.TabIndex = 5;
             // 
             // lblNumero
@@ -254,7 +254,7 @@
             this.gpbContrato.Controls.Add(this.cmbConvOdontoFunc);
             this.gpbContrato.Controls.Add(this.cmbConvMedico);
             this.gpbContrato.Controls.Add(this.txtSalarioFunc);
-            this.gpbContrato.Controls.Add(this.mskDataAdmissaoFunc);
+            this.gpbContrato.Controls.Add(this.dtmDataAdmissaoFunc);
             this.gpbContrato.Controls.Add(this.txtCargoFunc);
             this.gpbContrato.Controls.Add(this.cmbEmpregadorFunc);
             this.gpbContrato.Controls.Add(this.txtRegistroFunc);
@@ -275,11 +275,11 @@
             // 
             // txtCargaHoraria
             // 
-            this.txtCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCargaHoraria.Location = new System.Drawing.Point(455, 103);
             this.txtCargaHoraria.MaxLength = 3;
             this.txtCargaHoraria.Name = "txtCargaHoraria";
-            this.txtCargaHoraria.Size = new System.Drawing.Size(50, 20);
+            this.txtCargaHoraria.Size = new System.Drawing.Size(50, 21);
             this.txtCargaHoraria.TabIndex = 17;
             this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
             // 
@@ -296,32 +296,32 @@
             // txtDependentesFunc
             // 
             this.txtDependentesFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtDependentesFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtDependentesFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtDependentesFunc.Location = new System.Drawing.Point(352, 103);
             this.txtDependentesFunc.MaxLength = 2;
             this.txtDependentesFunc.Name = "txtDependentesFunc";
-            this.txtDependentesFunc.Size = new System.Drawing.Size(80, 20);
+            this.txtDependentesFunc.Size = new System.Drawing.Size(80, 21);
             this.txtDependentesFunc.TabIndex = 15;
             this.txtDependentesFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDependentesFunc_KeyPress);
             // 
             // cmbConvOdontoFunc
             // 
-            this.cmbConvOdontoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbConvOdontoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbConvOdontoFunc.FormattingEnabled = true;
             this.cmbConvOdontoFunc.Location = new System.Drawing.Point(180, 102);
             this.cmbConvOdontoFunc.Name = "cmbConvOdontoFunc";
-            this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 21);
+            this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 23);
             this.cmbConvOdontoFunc.TabIndex = 14;
             this.cmbConvOdontoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbConvOdontoFunc_SelectedIndexChanged);
             this.cmbConvOdontoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvOdontoFunc_KeyPress);
             // 
             // cmbConvMedico
             // 
-            this.cmbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbConvMedico.FormattingEnabled = true;
             this.cmbConvMedico.Location = new System.Drawing.Point(9, 102);
             this.cmbConvMedico.Name = "cmbConvMedico";
-            this.cmbConvMedico.Size = new System.Drawing.Size(150, 21);
+            this.cmbConvMedico.Size = new System.Drawing.Size(150, 23);
             this.cmbConvMedico.TabIndex = 13;
             this.cmbConvMedico.SelectedIndexChanged += new System.EventHandler(this.cmbConvMedico_SelectedIndexChanged);
             this.cmbConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvMedico_KeyPress);
@@ -329,41 +329,41 @@
             // txtSalarioFunc
             // 
             this.txtSalarioFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtSalarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtSalarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSalarioFunc.Location = new System.Drawing.Point(539, 48);
             this.txtSalarioFunc.Name = "txtSalarioFunc";
-            this.txtSalarioFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtSalarioFunc.Size = new System.Drawing.Size(120, 21);
             this.txtSalarioFunc.TabIndex = 12;
             this.txtSalarioFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioFunc_KeyPress);
             // 
-            // mskDataAdmissaoFunc
+            // dtmDataAdmissaoFunc
             // 
-            this.mskDataAdmissaoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.mskDataAdmissaoFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.mskDataAdmissaoFunc.Location = new System.Drawing.Point(400, 48);
-            this.mskDataAdmissaoFunc.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
-            this.mskDataAdmissaoFunc.Name = "mskDataAdmissaoFunc";
-            this.mskDataAdmissaoFunc.Size = new System.Drawing.Size(118, 23);
-            this.mskDataAdmissaoFunc.TabIndex = 11;
-            this.mskDataAdmissaoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskDataAdmissaoFunc_KeyPress);
+            this.dtmDataAdmissaoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtmDataAdmissaoFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmDataAdmissaoFunc.Location = new System.Drawing.Point(400, 48);
+            this.dtmDataAdmissaoFunc.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.dtmDataAdmissaoFunc.Name = "dtmDataAdmissaoFunc";
+            this.dtmDataAdmissaoFunc.Size = new System.Drawing.Size(118, 23);
+            this.dtmDataAdmissaoFunc.TabIndex = 11;
+            this.dtmDataAdmissaoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskDataAdmissaoFunc_KeyPress);
             // 
             // txtCargoFunc
             // 
             this.txtCargoFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtCargoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtCargoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCargoFunc.Location = new System.Drawing.Point(258, 48);
             this.txtCargoFunc.MaxLength = 100;
             this.txtCargoFunc.Name = "txtCargoFunc";
-            this.txtCargoFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtCargoFunc.Size = new System.Drawing.Size(120, 21);
             this.txtCargoFunc.TabIndex = 10;
             // 
             // cmbEmpregadorFunc
             // 
-            this.cmbEmpregadorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbEmpregadorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbEmpregadorFunc.FormattingEnabled = true;
             this.cmbEmpregadorFunc.Location = new System.Drawing.Point(109, 48);
             this.cmbEmpregadorFunc.Name = "cmbEmpregadorFunc";
-            this.cmbEmpregadorFunc.Size = new System.Drawing.Size(129, 21);
+            this.cmbEmpregadorFunc.Size = new System.Drawing.Size(129, 23);
             this.cmbEmpregadorFunc.TabIndex = 9;
             this.cmbEmpregadorFunc.SelectedIndexChanged += new System.EventHandler(this.cmbEmpregadorFunc_SelectedIndexChanged);
             this.cmbEmpregadorFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEmpregadorFunc_KeyPress);
@@ -371,11 +371,11 @@
             // txtRegistroFunc
             // 
             this.txtRegistroFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtRegistroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtRegistroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtRegistroFunc.Location = new System.Drawing.Point(9, 48);
             this.txtRegistroFunc.MaxLength = 10;
             this.txtRegistroFunc.Name = "txtRegistroFunc";
-            this.txtRegistroFunc.Size = new System.Drawing.Size(80, 20);
+            this.txtRegistroFunc.Size = new System.Drawing.Size(80, 21);
             this.txtRegistroFunc.TabIndex = 8;
             this.txtRegistroFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroFunc_KeyPress);
             // 
@@ -484,34 +484,34 @@
             // 
             // mskCelularSecundarioFunc
             // 
-            this.mskCelularSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCelularSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskCelularSecundarioFunc.Location = new System.Drawing.Point(152, 101);
             this.mskCelularSecundarioFunc.Mask = "(00) 00000-0000";
             this.mskCelularSecundarioFunc.Name = "mskCelularSecundarioFunc";
-            this.mskCelularSecundarioFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskCelularSecundarioFunc.Size = new System.Drawing.Size(120, 21);
             this.mskCelularSecundarioFunc.TabIndex = 13;
             // 
             // mskCelularPrincipalFunc
             // 
-            this.mskCelularPrincipalFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCelularPrincipalFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskCelularPrincipalFunc.Location = new System.Drawing.Point(9, 101);
             this.mskCelularPrincipalFunc.Mask = "(00) 00000-0000";
             this.mskCelularPrincipalFunc.Name = "mskCelularPrincipalFunc";
-            this.mskCelularPrincipalFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskCelularPrincipalFunc.Size = new System.Drawing.Size(120, 21);
             this.mskCelularPrincipalFunc.TabIndex = 12;
             // 
             // mskTelefoneFunc
             // 
-            this.mskTelefoneFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskTelefoneFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskTelefoneFunc.Location = new System.Drawing.Point(592, 47);
             this.mskTelefoneFunc.Mask = "(00) 0000-0000";
             this.mskTelefoneFunc.Name = "mskTelefoneFunc";
-            this.mskTelefoneFunc.Size = new System.Drawing.Size(120, 20);
+            this.mskTelefoneFunc.Size = new System.Drawing.Size(120, 21);
             this.mskTelefoneFunc.TabIndex = 11;
             // 
             // cmbDominioCaixaSecundaria
             // 
-            this.cmbDominioCaixaSecundaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbDominioCaixaSecundaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbDominioCaixaSecundaria.FormattingEnabled = true;
             this.cmbDominioCaixaSecundaria.Items.AddRange(new object[] {
             "@gmail.com",
@@ -526,23 +526,23 @@
             "@zoho.com"});
             this.cmbDominioCaixaSecundaria.Location = new System.Drawing.Point(455, 47);
             this.cmbDominioCaixaSecundaria.Name = "cmbDominioCaixaSecundaria";
-            this.cmbDominioCaixaSecundaria.Size = new System.Drawing.Size(114, 21);
+            this.cmbDominioCaixaSecundaria.Size = new System.Drawing.Size(114, 23);
             this.cmbDominioCaixaSecundaria.TabIndex = 10;
             this.cmbDominioCaixaSecundaria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominioCaixaSecundaria_KeyPress);
             // 
             // txtEmailSecundarioFunc
             // 
             this.txtEmailSecundarioFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtEmailSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEmailSecundarioFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEmailSecundarioFunc.Location = new System.Drawing.Point(299, 47);
             this.txtEmailSecundarioFunc.MaxLength = 150;
             this.txtEmailSecundarioFunc.Name = "txtEmailSecundarioFunc";
-            this.txtEmailSecundarioFunc.Size = new System.Drawing.Size(150, 20);
+            this.txtEmailSecundarioFunc.Size = new System.Drawing.Size(150, 21);
             this.txtEmailSecundarioFunc.TabIndex = 9;
             // 
             // cmbDominioCaixaPrincipal
             // 
-            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
             this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {
             "@gmail.com",
@@ -557,18 +557,18 @@
             "@zoho.com"});
             this.cmbDominioCaixaPrincipal.Location = new System.Drawing.Point(165, 46);
             this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
-            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 21);
+            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 23);
             this.cmbDominioCaixaPrincipal.TabIndex = 8;
             this.cmbDominioCaixaPrincipal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDominioCaixaPrincipal_KeyPress);
             // 
             // txtEmailFunc
             // 
             this.txtEmailFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtEmailFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtEmailFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEmailFunc.Location = new System.Drawing.Point(9, 47);
             this.txtEmailFunc.MaxLength = 150;
             this.txtEmailFunc.Name = "txtEmailFunc";
-            this.txtEmailFunc.Size = new System.Drawing.Size(150, 20);
+            this.txtEmailFunc.Size = new System.Drawing.Size(150, 21);
             this.txtEmailFunc.TabIndex = 7;
             // 
             // lblCelularSecundario
@@ -663,54 +663,76 @@
             this.gpbInfoFuncionario.TabStop = false;
             this.gpbInfoFuncionario.Text = "Informações pessoais";
             // 
+            // rdbSexoFeminino
+            // 
+            this.rdbSexoFeminino.AutoSize = true;
+            this.rdbSexoFeminino.Location = new System.Drawing.Point(401, 46);
+            this.rdbSexoFeminino.Name = "rdbSexoFeminino";
+            this.rdbSexoFeminino.Size = new System.Drawing.Size(35, 21);
+            this.rdbSexoFeminino.TabIndex = 14;
+            this.rdbSexoFeminino.TabStop = true;
+            this.rdbSexoFeminino.Text = "F";
+            this.rdbSexoFeminino.UseVisualStyleBackColor = true;
+            // 
+            // rdbSexoMasculino
+            // 
+            this.rdbSexoMasculino.AutoSize = true;
+            this.rdbSexoMasculino.Location = new System.Drawing.Point(357, 47);
+            this.rdbSexoMasculino.Name = "rdbSexoMasculino";
+            this.rdbSexoMasculino.Size = new System.Drawing.Size(38, 21);
+            this.rdbSexoMasculino.TabIndex = 13;
+            this.rdbSexoMasculino.TabStop = true;
+            this.rdbSexoMasculino.Text = "M";
+            this.rdbSexoMasculino.UseVisualStyleBackColor = true;
+            // 
             // mskCpfFunc
             // 
-            this.mskCpfFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCpfFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskCpfFunc.Location = new System.Drawing.Point(565, 48);
             this.mskCpfFunc.Mask = "000.000.000-00";
             this.mskCpfFunc.Name = "mskCpfFunc";
-            this.mskCpfFunc.Size = new System.Drawing.Size(100, 20);
+            this.mskCpfFunc.Size = new System.Drawing.Size(100, 21);
             this.mskCpfFunc.TabIndex = 12;
             // 
             // mskRgFunc
             // 
-            this.mskRgFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskRgFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskRgFunc.HideSelection = false;
             this.mskRgFunc.Location = new System.Drawing.Point(447, 48);
             this.mskRgFunc.Mask = "00.000.000-0";
             this.mskRgFunc.Name = "mskRgFunc";
-            this.mskRgFunc.Size = new System.Drawing.Size(100, 20);
+            this.mskRgFunc.Size = new System.Drawing.Size(100, 21);
             this.mskRgFunc.TabIndex = 11;
             // 
             // txtIdadeFunc
             // 
             this.txtIdadeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtIdadeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtIdadeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIdadeFunc.Location = new System.Drawing.Point(284, 48);
             this.txtIdadeFunc.MaxLength = 2;
             this.txtIdadeFunc.Name = "txtIdadeFunc";
-            this.txtIdadeFunc.Size = new System.Drawing.Size(50, 20);
+            this.txtIdadeFunc.Size = new System.Drawing.Size(50, 21);
             this.txtIdadeFunc.TabIndex = 8;
             this.txtIdadeFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdadeFunc_KeyPress);
             // 
             // txtSobrenomeFunc
             // 
             this.txtSobrenomeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtSobrenomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtSobrenomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSobrenomeFunc.Location = new System.Drawing.Point(147, 48);
             this.txtSobrenomeFunc.MaxLength = 150;
             this.txtSobrenomeFunc.Name = "txtSobrenomeFunc";
-            this.txtSobrenomeFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtSobrenomeFunc.Size = new System.Drawing.Size(120, 21);
             this.txtSobrenomeFunc.TabIndex = 7;
             // 
             // txtNomeFunc
             // 
             this.txtNomeFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtNomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtNomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNomeFunc.Location = new System.Drawing.Point(9, 48);
             this.txtNomeFunc.MaxLength = 30;
             this.txtNomeFunc.Name = "txtNomeFunc";
-            this.txtNomeFunc.Size = new System.Drawing.Size(120, 20);
+            this.txtNomeFunc.Size = new System.Drawing.Size(120, 21);
             this.txtNomeFunc.TabIndex = 6;
             // 
             // lblCpf
@@ -772,28 +794,6 @@
             this.lblNome.Size = new System.Drawing.Size(41, 15);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
-            // 
-            // rdbSexoMasculino
-            // 
-            this.rdbSexoMasculino.AutoSize = true;
-            this.rdbSexoMasculino.Location = new System.Drawing.Point(357, 47);
-            this.rdbSexoMasculino.Name = "rdbSexoMasculino";
-            this.rdbSexoMasculino.Size = new System.Drawing.Size(38, 21);
-            this.rdbSexoMasculino.TabIndex = 13;
-            this.rdbSexoMasculino.TabStop = true;
-            this.rdbSexoMasculino.Text = "M";
-            this.rdbSexoMasculino.UseVisualStyleBackColor = true;
-            // 
-            // rdbSexoFeminino
-            // 
-            this.rdbSexoFeminino.AutoSize = true;
-            this.rdbSexoFeminino.Location = new System.Drawing.Point(401, 46);
-            this.rdbSexoFeminino.Name = "rdbSexoFeminino";
-            this.rdbSexoFeminino.Size = new System.Drawing.Size(35, 21);
-            this.rdbSexoFeminino.TabIndex = 14;
-            this.rdbSexoFeminino.TabStop = true;
-            this.rdbSexoFeminino.Text = "F";
-            this.rdbSexoFeminino.UseVisualStyleBackColor = true;
             // 
             // Form_CadFuncionarios
             // 
@@ -872,7 +872,7 @@
         private System.Windows.Forms.ComboBox cmbConvOdontoFunc;
         private System.Windows.Forms.ComboBox cmbConvMedico;
         private System.Windows.Forms.TextBox txtSalarioFunc;
-        private System.Windows.Forms.DateTimePicker mskDataAdmissaoFunc;
+        private System.Windows.Forms.DateTimePicker dtmDataAdmissaoFunc;
         private System.Windows.Forms.TextBox txtCargoFunc;
         private System.Windows.Forms.ComboBox cmbEmpregadorFunc;
         private System.Windows.Forms.TextBox txtRegistroFunc;

@@ -118,20 +118,20 @@
             // txtPorcentagemConvMedico
             // 
             this.txtPorcentagemConvMedico.Enabled = false;
-            this.txtPorcentagemConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtPorcentagemConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtPorcentagemConvMedico.Location = new System.Drawing.Point(9, 277);
             this.txtPorcentagemConvMedico.Name = "txtPorcentagemConvMedico";
-            this.txtPorcentagemConvMedico.Size = new System.Drawing.Size(100, 20);
+            this.txtPorcentagemConvMedico.Size = new System.Drawing.Size(100, 21);
             this.txtPorcentagemConvMedico.TabIndex = 7;
             this.txtPorcentagemConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPorcentagemConvMedico_KeyPress);
             // 
             // txtValorConvMedico
             // 
-            this.txtValorConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtValorConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtValorConvMedico.Location = new System.Drawing.Point(9, 219);
             this.txtValorConvMedico.MaxLength = 5;
             this.txtValorConvMedico.Name = "txtValorConvMedico";
-            this.txtValorConvMedico.Size = new System.Drawing.Size(150, 20);
+            this.txtValorConvMedico.Size = new System.Drawing.Size(150, 21);
             this.txtValorConvMedico.TabIndex = 6;
             this.txtValorConvMedico.Tag = "";
             this.txtValorConvMedico.TextChanged += new System.EventHandler(this.txtValorConvMedico_TextChanged);
@@ -139,21 +139,21 @@
             // 
             // mskCnpjConvMedico
             // 
-            this.mskCnpjConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.mskCnpjConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.mskCnpjConvMedico.Location = new System.Drawing.Point(9, 111);
             this.mskCnpjConvMedico.Mask = "00,000,000/0000-00";
             this.mskCnpjConvMedico.Name = "mskCnpjConvMedico";
-            this.mskCnpjConvMedico.Size = new System.Drawing.Size(150, 20);
+            this.mskCnpjConvMedico.Size = new System.Drawing.Size(150, 21);
             this.mskCnpjConvMedico.TabIndex = 5;
             // 
             // txtNomeConvMedico
             // 
             this.txtNomeConvMedico.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtNomeConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.txtNomeConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNomeConvMedico.Location = new System.Drawing.Point(9, 53);
             this.txtNomeConvMedico.MaxLength = 60;
             this.txtNomeConvMedico.Name = "txtNomeConvMedico";
-            this.txtNomeConvMedico.Size = new System.Drawing.Size(200, 20);
+            this.txtNomeConvMedico.Size = new System.Drawing.Size(200, 21);
             this.txtNomeConvMedico.TabIndex = 4;
             // 
             // lblPorcentagemConvMedico

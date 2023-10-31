@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FuncionariosEmpresas;
+using System.Globalization;
+using EmpresasClientes;
 
 namespace BaseDeDados
 {
@@ -261,6 +263,229 @@ namespace BaseDeDados
 
                 throw;
             }
+        }
+
+        public bool ExcluirFuncionario(string id)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "DELETE FROM Funcionarios WHERE Id_funcionario = @id";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = id;
+                cmd.Parameters.Add(_pmtId);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public DataTable BuscarFuncionarios()
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT Id_funcionario, Funcionarios.Nome, Sobrenome, Idade, Sexo, " +
+                                "Funcionarios.Id_endereco, Cidade, Estado, Bairro, Rua, Numero, " +
+                                "Registro, Carga_horaria, Cpf, Rg, Funcionarios.Email, Email_secundario, " +
+                                "Funcionarios.Telefone, Cell_principal, Cell_secundario, Num_dependentes, " +
+                                "Id_planos_saude, Planos_saude.Nome, " +
+                                "Id_planos_odontologicos, Planos_odontologicos.Nome, " +
+                                "Id_empresas, Empresas.Razao_social, Cargo, Salario, Data_admissao FROM Funcionarios " +
+                                "INNER JOIN Endereco ON Funcionarios.Id_endereco = Endereco.Id_endereco " +
+                                "LEFT JOIN Planos_saude ON Funcionarios.Id_planos_saude = Planos_saude.Id_saude " +
+                                "LEFT JOIN Planos_odontologicos ON Funcionarios.Id_planos_odontologicos = Planos_odontologicos.Id_odonto " +
+                                "INNER JOIN Empresas ON Funcionarios.Id_empresas = Empresas.Id_empresa";
+
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Código", typeof(int));
+                dt.Columns.Add("Nome", typeof(string));
+                dt.Columns.Add("Sobrenome", typeof(string));
+                dt.Columns.Add("Idade", typeof(int));
+                dt.Columns.Add("Sexo", typeof(string));
+                dt.Columns.Add("Cód. Endereco", typeof(int)); // Vou tentar jogar esse código na cidade ↓
+                dt.Columns.Add("Cidade", typeof(string));
+                dt.Columns.Add("Estado", typeof(string));
+                dt.Columns.Add("Bairro", typeof(string));
+                dt.Columns.Add("Rua", typeof(string));
+                dt.Columns.Add("Numero", typeof(int));
+                dt.Columns.Add("Registro", typeof(int));
+                dt.Columns.Add("Carga H.", typeof(int));
+                dt.Columns.Add("CPF", typeof(string));
+                dt.Columns.Add("RG", typeof(string));
+                dt.Columns.Add("Email", typeof(string));
+                dt.Columns.Add("Email Secundario", typeof(string));
+                dt.Columns.Add("Telefone", typeof(string));
+                dt.Columns.Add("Cell Princ.", typeof(string));
+                dt.Columns.Add("Cell Secun.", typeof(string));
+                dt.Columns.Add("Dependentes", typeof(int));
+                dt.Columns.Add("Cód. ConMed.", typeof(string));  // Vou tentar jogar esse código no nome do conv medico ↓
+                dt.Columns.Add("Convênio Médico", typeof(string));
+                dt.Columns.Add("Cód ConOdon.", typeof(string)); // Vou tentar jogar esse código no nome do conv odonto ↓
+                dt.Columns.Add("Convênio Odonto", typeof(string));
+                dt.Columns.Add("Cód. Empresa", typeof(int)); // Vou tentar jogar esse código no empregador ↓
+                dt.Columns.Add("Empregador", typeof(string));
+                dt.Columns.Add("Cargo", typeof(string));
+                dt.Columns.Add("Salário", typeof(decimal));
+                dt.Columns.Add("Data Admissão", typeof(DateTime));
+
+                string idConvMedico = "0";
+                string convMedico = "NULL";
+                string idConvOdonto = "0";
+                string convOdonto = "NULL";
+                while (_leitor.Read())
+                {
+                    int id = _leitor.GetInt32(0);
+                    string nome = _leitor.GetString(1);
+                    string sobrenome = _leitor.GetString(2);
+                    int idade = _leitor.GetInt32(3);
+                    string sexo = _leitor.GetString(4);
+                    int codEndereco = _leitor.GetInt32(5);
+                    string cidade = _leitor.GetString(6);
+                    string estado = _leitor.GetString(7);
+                    string bairro = _leitor.GetString(8);
+                    string rua = _leitor.GetString(9);
+                    int numero = _leitor.GetInt32(10);
+                    int registro = _leitor.GetInt32(11);
+                    int cargaHoraria = _leitor.GetInt32(12);
+                    string cpf = _leitor.GetString(13);
+                    string rg = _leitor.GetString(14);
+                    string email = _leitor.GetString(15);
+                    string emailSecundario = _leitor.GetString(16);
+                    string telefone = _leitor.GetString(17);
+                    string cellPrinc = _leitor.GetString(18);
+                    string cellSecun = _leitor.GetString(19);
+                    int dependentes = _leitor.GetInt32(20);
+
+                    if (_leitor.IsDBNull(21))
+                    {
+                        idConvMedico = "0";
+                        convMedico = "NULL";
+                    }
+                    else
+                    {
+                        idConvMedico = _leitor.GetInt32(21).ToString();
+                        convMedico = _leitor.GetString(22);
+                    }
+                    if(_leitor.IsDBNull(23)) // O metodo IsDBNull é um metodo que testa quando um dado vem do banco de dados e sua coluna é nula
+                    {
+                        idConvOdonto = "0";
+                        convOdonto = "NULL";
+                    }
+                    else
+                    {
+                        idConvOdonto = _leitor.GetInt32(23).ToString();
+                        convOdonto = _leitor.GetString(24);
+                    }
+                    
+                    int idEmpresa = _leitor.GetInt32(25);
+                    string empregador = _leitor.GetString(26);
+                    string cargo = _leitor.GetString(27);
+                    double salario = _leitor.GetDouble(28);
+                    DateTime dataAdmissao = _leitor.GetDateTime(29);
+
+
+                    dt.Rows.Add(id, nome, sobrenome, idade, sexo, codEndereco, cidade, estado, bairro, rua, numero, registro, cargaHoraria, cpf, rg, email, emailSecundario,
+                                telefone, cellPrinc, cellSecun, dependentes, idConvMedico, convMedico, idConvOdonto, convOdonto, idEmpresa, empregador, cargo, salario, dataAdmissao);
+                }
+                conexaoDb.Close();
+                return dt;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public List<Funcionarios> BuscarInfoFuncionario(Funcionarios _funcionario)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Nome, Sobrenome, Idade, Sexo, Registro, Carga_horaria, Cpf, Rg, Email, Email_secundario, " +
+                               "Telefone, Cell_principal, Cell_secundario, Num_dependentes, Cargo, Salario, Data_admissao, " +
+                               "Cidade, Estado, Bairro, Rua, Numero from Funcionarios " +
+                               "JOIN Endereco On Funcionarios.Id_endereco = Endereco.Id_endereco " +
+                               "WHERE Id_funcionario = @id";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                List<Funcionarios> _registro = new List<Funcionarios>();
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = _funcionario.Id;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _funcionario.Nome = _leitor.GetString(0);
+                    _funcionario.Sobrenome = _leitor.GetString(1);
+                    _funcionario.Idade = _leitor.GetInt32(2).ToString();
+                    _funcionario.Sexo = _leitor.GetString(3);
+                    _funcionario.NumeroRegistro = _leitor.GetInt32(4).ToString();
+                    _funcionario.CargaHoraria = _leitor.GetInt32(5).ToString();
+                    _funcionario.Cpf = _leitor.GetString(6);
+                    _funcionario.Rg = _leitor.GetString(7);
+                    _funcionario.Email = _leitor.GetString(8);
+                    _funcionario.EmailSecundario = _leitor.GetString(9);
+                    _funcionario.Telefone = _leitor.GetString(10);
+                    _funcionario.CelularPrincipal = _leitor.GetString(11);
+                    _funcionario.CelularSecundario = _leitor.GetString(12);
+                    _funcionario.Dependentes = _leitor.GetInt32(13).ToString();
+                    _funcionario.Cargo = _leitor.GetString(14);
+                    _funcionario.Salario = _leitor.GetDouble(15).ToString();
+                    _funcionario.DataAdmisao = _leitor.GetDateTime(16).ToString();
+                    _funcionario.Cidade = _leitor.GetString(17);
+                    _funcionario.Estado = _leitor.GetString(18);
+                    _funcionario.Bairro = _leitor.GetString(19);
+                    _funcionario.Rua = _leitor.GetString(20);
+                    _funcionario.Numero = _leitor.GetInt32(21).ToString();
+                    _registro.Add(_funcionario);
+                }
+                conexaoDb.Close();
+                return _registro;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            { conexaoDb.Close(); }
         }
 
         public Dictionary<int, string> PopularCaixaConvenioMedico()
