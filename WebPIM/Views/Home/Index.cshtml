@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Página Home";
+}
+@model List<FuncionarioModel>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Personal Dynamic RH & DP</a> <!--Nome do cabeçalho-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Início</a> <!--Referente a página de inicio-->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Ponto" asp-action="Index">Apontamento</a> <!--Referente a página de inicio-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="FolhaPagamento" asp-action="FolhaPagamento">Folha de Pagamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Ferias" asp-action="Ferias">Férias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" asp-controller="Login" asp-action="Index">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+@if (Model != null && Model.Any<FuncionarioModel>())
+{
+    foreach (FuncionarioModel funcionario in Model)
+    {
+        <div class="row">
+        <div class="col-sm">
+            <p class="display-5">Bem-vindo,@funcionario.Nome </p>
+            <p class="fs-5">Área do Usúario</p>
+            <!-- Empilhe as colunas, em dispositivos móveis, fazendo com que uma tenha largura total e a outra só metade -->
+            <div class="card">
+                <div class="card-header">Meus Dados</div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="col">
+                            Nome: @funcionario.Nome
+                        </div>
+                        <br />
+                        <div class="col">
+                            Cargo: @funcionario.Cargo
+                        </div>
+                        <br />
+                        <div class="col">
+                            Data Admissão: @funcionario.Data_admissao
+                        </div>
+                        <br />
+                        <div class="col">
+                            Salário: R$ @funcionario.Salario
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+            <br />
+            <br />
+            <br />
+            <div class="card">
+                <div class="card-header">Linha do Tempo</div>
+                <div class="card-body">
+                    <div class="col">
+                        Informe do último salário: 
+                    </div>
+                    <br>
+                    <div class="col">
+                            Férias: Status não definido
+                    </div>                  
+                    <br />          
+</div>    
+            </div>
+        </div>
+
+        </div>
+    
+    }
+}
