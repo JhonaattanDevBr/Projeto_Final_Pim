@@ -39,6 +39,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDeDados", "BaseDeDados\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContaPersonal", "ContaPersonal\ContaPersonal.csproj", "{AD50847C-512F-492F-953C-487AD47FA9DC}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPIM", "WebPIM\WebPIM.csproj", "{8AA6E40C-17B2-44C2-AB97-696B30644919}"
+EndProject
+>>>>>>> main
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +94,13 @@ Global
 		{AD50847C-512F-492F-953C-487AD47FA9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD50847C-512F-492F-953C-487AD47FA9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD50847C-512F-492F-953C-487AD47FA9DC}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+		{8AA6E40C-17B2-44C2-AB97-696B30644919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA6E40C-17B2-44C2-AB97-696B30644919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA6E40C-17B2-44C2-AB97-696B30644919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA6E40C-17B2-44C2-AB97-696B30644919}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> main
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +117,10 @@ Global
 		{3750CDE9-E095-4AAE-BDAA-28B0A662F70A} = {BDA199BF-3900-41FD-929C-CFB62582DEAC}
 		{32C0C10B-5F67-46EE-B248-F1E38E5B9CD4} = {12530F25-D90C-4EC8-AB2C-90647B3FF2C1}
 		{AD50847C-512F-492F-953C-487AD47FA9DC} = {BDA199BF-3900-41FD-929C-CFB62582DEAC}
+<<<<<<< HEAD
+=======
+		{8AA6E40C-17B2-44C2-AB97-696B30644919} = {E8EB6988-8029-4F4A-9DED-63AB3E805AA4}
+>>>>>>> main
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3920AE7A-4B69-4D30-B7DD-ED00B5FF869C}
