@@ -349,7 +349,7 @@ namespace BaseDeDados
                                "Cell_principal = @celularPrincipal, Cell_secundario = @celularSecundario, Num_dependentes = @numeroDependentes, " +
                                "Id_planos_saude = @idConvMedico, Id_planos_odontologicos = @idConvOdonto, Id_empresas = @idEmpresa, Cargo = @cargo, " +
                                "Salario = @salario, Data_admissao = @datAdmissao " +
-                               "WHERE Id_funcionario = id";
+                               "WHERE Id_funcionario = @id";
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
 
                 // TENHO QUE REVISAR ESSE CRUD PQ ACHO Q TEM COISA ERRADO, FIZ COM SONO
@@ -397,7 +397,7 @@ namespace BaseDeDados
 
                 var _pmtCpf = cmd.CreateParameter();
                 _pmtCpf.ParameterName = "@cpf";
-                _pmtCpf.DbType = DbType.Date;
+                _pmtCpf.DbType = DbType.String;
                 _pmtCpf.Value = _funcionario.Cpf;
                 cmd.Parameters.Add(_pmtCpf);
 
@@ -409,9 +409,21 @@ namespace BaseDeDados
 
                 var _pmtEmail = cmd.CreateParameter();
                 _pmtEmail.ParameterName = "@email";
-                _pmtEmail.DbType = DbType.Int32;
+                _pmtEmail.DbType = DbType.String;
                 _pmtEmail.Value = _funcionario.Email;
                 cmd.Parameters.Add(_pmtEmail);
+
+                var _pmtEmailSecundario = cmd.CreateParameter();
+                _pmtEmailSecundario.ParameterName = "@emailSecundario";
+                _pmtEmailSecundario.DbType = DbType.String;
+                _pmtEmailSecundario.Value = _funcionario.EmailSecundario;
+                cmd.Parameters.Add( _pmtEmailSecundario);
+
+                var _telefone = cmd.CreateParameter();
+                _telefone.ParameterName = "@telefone";
+                _telefone.DbType = DbType.String;
+                _telefone.Value = _funcionario.Telefone;
+                cmd.Parameters.Add(_telefone);
 
                 var _pmtCellPrincipal = cmd.CreateParameter();
                 _pmtCellPrincipal.ParameterName = "@celularPrincipal";
@@ -465,6 +477,12 @@ namespace BaseDeDados
                 _pmtDatAdmissao.ParameterName = "@datAdmissao";
                 _pmtDatAdmissao.DbType = DbType.Date;
                 _pmtDatAdmissao.Value = _funcionario.DataAdmisao;
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@id";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = _funcionario.Id;
+                cmd.Parameters.Add(_pmtId );
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {

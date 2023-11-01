@@ -16,3 +16,9 @@ C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\Pla
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CoreCompileInputs.cache
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\PlanoOdontologico\bin\Debug\PlanoOdontologico.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\PlanoOdontologico\bin\Debug\PlanoOdontologico.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\PlanoOdontologico\obj\Debug\PlanoOdontologico.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\PlanoOdontologico\obj\Debug\PlanoOdontologico.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\PlanoOdontologico\obj\Debug\PlanoOdontologico.pdb

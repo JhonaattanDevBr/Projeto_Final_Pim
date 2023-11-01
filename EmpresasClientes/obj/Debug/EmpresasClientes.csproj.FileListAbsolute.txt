@@ -16,3 +16,9 @@ C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\EmpresasClientes\obj\Debug\Empr
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\EmpresasClientes\obj\Debug\EmpresasClientes.csproj.CoreCompileInputs.cache
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\EmpresasClientes\obj\Debug\EmpresasClientes.dll
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\EmpresasClientes\obj\Debug\EmpresasClientes.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\EmpresasClientes\bin\Debug\EmpresasClientes.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\EmpresasClientes\bin\Debug\EmpresasClientes.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\EmpresasClientes\obj\Debug\EmpresasClientes.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\EmpresasClientes\obj\Debug\EmpresasClientes.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\EmpresasClientes\obj\Debug\EmpresasClientes.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\EmpresasClientes\obj\Debug\EmpresasClientes.pdb

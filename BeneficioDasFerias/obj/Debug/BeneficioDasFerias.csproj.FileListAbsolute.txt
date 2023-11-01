@@ -25,3 +25,12 @@ C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\BeneficioDasFerias\obj\Debug\Be
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.CopyComplete
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.dll
 C:\Users\jhonb\OneDrive\Documentos\Projeto Teste\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\bin\Debug\BeneficioDasFerias.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\bin\Debug\BeneficioDasFerias.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\bin\Debug\FolhaDePagamento.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\bin\Debug\FolhaDePagamento.pdb
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.AssemblyReference.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.CoreCompileInputs.cache
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.csproj.CopyComplete
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.dll
+C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\BeneficioDasFerias\obj\Debug\BeneficioDasFerias.pdb
