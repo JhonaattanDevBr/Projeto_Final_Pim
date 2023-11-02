@@ -12,8 +12,6 @@ namespace FuncionariosEmpresas
     {
         public string Id { get; set; }
         public string IdEndereco { get; set; }
-        public string IdConvMedico { get; set; }
-        public string IdConvOdonto { get; set; }
         public string IdEmpresa { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
@@ -250,7 +248,7 @@ namespace FuncionariosEmpresas
 
         private bool AutenticarApenasLetras()
         {
-            if(Nome.All(char.IsLetter) && Cargo.All(char.IsLetter))
+            if(Nome.All(char.IsLetter))
             {
                 return true;
             }
@@ -259,7 +257,7 @@ namespace FuncionariosEmpresas
 
         private bool AutenticarApenasLetrasEspacosBranco()
         {
-            if(Sobrenome.All(char.IsLetter) || Sobrenome.Any(char.IsWhiteSpace))
+            if(Sobrenome.All(char.IsLetter) || Sobrenome.Any(char.IsWhiteSpace) && Cargo.All(char.IsLetter) || Cargo.Any(char.IsWhiteSpace))
             {
                 return true;
             }

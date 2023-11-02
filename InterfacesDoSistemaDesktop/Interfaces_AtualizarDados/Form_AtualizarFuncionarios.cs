@@ -18,13 +18,13 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
         crud_Funcionarios _crud_Funcionarios = new crud_Funcionarios();
         Funcionarios _funcionarios = new Funcionarios();
 
-        public Form_AtualizarFuncionarios(string id, string idEndereco, string idConvMedico, string idConvOdonto, string idEmpresa)
+        public Form_AtualizarFuncionarios(string id, string idEndereco, string idEmpresa)
         {
             InitializeComponent();
             _funcionarios.Id = id;
             _funcionarios.IdEndereco = idEndereco;
-            _funcionarios.IdConvMedico = idConvMedico;
-            _funcionarios.IdConvOdonto = idConvOdonto;
+            //_funcionarios.IdConvMedico = idConvMedico;
+           // _funcionarios.IdConvOdonto = idConvOdonto;
             _funcionarios.IdEmpresa = idEmpresa;
         }
 
@@ -40,8 +40,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
                    cargaHoraria = _funcionarios.CargaHoraria,
                    cpf = _funcionarios.Cpf,
                    rg = _funcionarios.Rg,
-                   email = _funcionarios.Email,
-                   emailSecundario = _funcionarios.EmailSecundario,
+                   retornoEmailPrincipal = _funcionarios.Email,
+                   retornoEmailSecundario = _funcionarios.EmailSecundario,
                    telefone = _funcionarios.Telefone,
                    cellularPrincipal = _funcionarios.CelularPrincipal,
                    cellularSecundario = _funcionarios.CelularSecundario,
@@ -55,14 +55,24 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
                    rua = _funcionarios.Rua,
                    numero = _funcionarios.Numero;
 
+            string[] dominioEmailPrincipal = retornoEmailPrincipal.Split('@');
+            string email = dominioEmailPrincipal[0];
+            string dominioPrincipal = dominioEmailPrincipal[1];
+            cmbDominioCaixaPrincipal.Text = dominioPrincipal;
+
+            string[] dominioEmailSecundario = retornoEmailSecundario.Split('@');
+            string emailSecundario = dominioEmailSecundario[0];
+            string dominioSecundario = dominioEmailSecundario[1];
+            cmbDominioCaixaSecundaria.Text = dominioSecundario;
+
             txtNomeFunc.Text = nome;
             txtSobrenomeFunc.Text = sobrenome;
             txtIdadeFunc.Text = idade;
-            if(sexo == "M")
+            if (sexo == "M")
             {
                 rdbSexoMasculino.Checked = true;
             }
-            if(sexo == "F") 
+            if (sexo == "F")
             {
                 rdbSexoFeminino.Checked = true;
             }
@@ -179,9 +189,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
                 _funcionarios.Sexo = rdbSexoFeminino.Text;
             }
 
-
-            // Amanha vou precisar verificar o crud de alterar o registro do funcionario
-            // Tambem preciso incluir todos os códigos da tela de cadastro que não permitem que o usuario ensira valores ivalidos.
             bool retornoAutenticacao = _funcionarios.AutenticarFuncionario();
             if (retornoAutenticacao)
             {
@@ -203,6 +210,98 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             {
                 MessageBox.Show(_funcionarios.MensagemErro, "Falha na operação");
             }
+        }
+
+        private void dtmDataAdmissaoFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbEmpregadorFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbConvMedico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbConvOdontoFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtRegistroFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCargaHoraria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDependentesFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIdadeFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalarioFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08 && valorDigitado != 46 && valorDigitado != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int valorDigitado = (int)e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmbConvMedico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = cmbConvMedico.SelectedItem.ToString();
+            _funcionarios.ConvenioMedico = valor;
+        }
+
+        private void cmbEmpregadorFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = cmbEmpregadorFunc.SelectedItem.ToString();
+            _funcionarios.Empregador = valor;
+        }
+
+        private void cmbConvOdontoFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valor = cmbConvOdontoFunc.SelectedItem.ToString();
+            _funcionarios.ConvenioOdontologico = valor;
         }
     }
 }

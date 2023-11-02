@@ -334,7 +334,7 @@ namespace BaseDeDados
                 conexaoDb.Close();
             }
         }
-
+        
         public bool AtualizarRegistroFuncionario(Funcionarios _funcionario)
         {
             string caminho = _servidores.servidorNotebook;
@@ -344,7 +344,8 @@ namespace BaseDeDados
             {
                 conexaoDb.Open();
                 string query = "UPDATE Funcionarios SET " +
-                               "Nome = @nome, Sobrenome = @sobrenome, Idade = @idade, Sexo = @sexo, Id_endereco = @idEndereco, Registro = @registro, Carga_horaria = @cargaHoraria, " +
+                               "Nome = @nome, Sobrenome = @sobrenome, Idade = @idade, Sexo = @sexo, " +
+                               "Registro = @registro, Carga_horaria = @cargaHoraria, " +
                                "Cpf = @cpf, Rg = @rg, Email = @email, Email_secundario = @emailSecundario, Telefone = @telefone, " +
                                "Cell_principal = @celularPrincipal, Cell_secundario = @celularSecundario, Num_dependentes = @numeroDependentes, " +
                                "Id_planos_saude = @idConvMedico, Id_planos_odontologicos = @idConvOdonto, Id_empresas = @idEmpresa, Cargo = @cargo, " +
@@ -352,7 +353,6 @@ namespace BaseDeDados
                                "WHERE Id_funcionario = @id";
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
 
-                // TENHO QUE REVISAR ESSE CRUD PQ ACHO Q TEM COISA ERRADO, FIZ COM SONO
                 var _pmtNome = cmd.CreateParameter();
                 _pmtNome.ParameterName = "@nome";
                 _pmtNome.DbType = DbType.String;
@@ -404,7 +404,7 @@ namespace BaseDeDados
                 var _pmtRg = cmd.CreateParameter();
                 _pmtRg.ParameterName = "@rg";
                 _pmtRg.DbType = DbType.String;
-                _pmtRg.Value = _funcionario;
+                _pmtRg.Value = _funcionario.Rg;
                 cmd.Parameters.Add(_pmtRg);
 
                 var _pmtEmail = cmd.CreateParameter();
@@ -446,19 +446,19 @@ namespace BaseDeDados
                 var _pmtConvMedico = cmd.CreateParameter();
                 _pmtConvMedico.ParameterName = "@idConvMedico";
                 _pmtConvMedico.DbType = DbType.Int32;
-                _pmtConvMedico.Value = _funcionario.IdConvMedico;
+                _pmtConvMedico.Value = _funcionario.ConvenioMedico;
                 cmd.Parameters.Add(_pmtConvMedico);
 
                 var _pmtConvOdonto = cmd.CreateParameter();
                 _pmtConvOdonto.ParameterName = "@idConvOdonto";
                 _pmtConvOdonto.DbType = DbType.Int32;
-                _pmtConvOdonto.Value = _funcionario.IdConvOdonto;
+                _pmtConvOdonto.Value = _funcionario.ConvenioOdontologico;
                 cmd.Parameters.Add(_pmtConvOdonto);
 
                 var _pmtEmpregador = cmd.CreateParameter();
                 _pmtEmpregador.ParameterName = "@idEmpresa";
                 _pmtEmpregador.DbType = DbType.Int32;
-                _pmtEmpregador.Value = _funcionario.IdEmpresa;
+                _pmtEmpregador.Value = _funcionario.Empregador;
                 cmd.Parameters.Add( _pmtEmpregador );
 
                 var _pmtCargo = cmd.CreateParameter();
@@ -468,15 +468,16 @@ namespace BaseDeDados
                 cmd.Parameters.Add(_pmtCargo );
 
                 var _pmtSalario = cmd.CreateParameter();
-                _pmtCargaHoraria.ParameterName = "@salario";
+                _pmtSalario.ParameterName = "@salario";
                 _pmtSalario.DbType = DbType.Double;
                 _pmtSalario.Value = _funcionario.Salario;
-                cmd.Parameters.Add(_pmtSalario );
+                cmd.Parameters.Add(_pmtSalario);
 
                 var _pmtDatAdmissao = cmd.CreateParameter();
                 _pmtDatAdmissao.ParameterName = "@datAdmissao";
                 _pmtDatAdmissao.DbType = DbType.Date;
                 _pmtDatAdmissao.Value = _funcionario.DataAdmisao;
+                cmd.Parameters.Add(_pmtDatAdmissao);
 
                 var _pmtId = cmd.CreateParameter();
                 _pmtId.ParameterName = "@id";

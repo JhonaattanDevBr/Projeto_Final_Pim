@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AtualizarFuncionarios));
             this.gpbCadastroFuncionarios = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAtualizarFuncionario = new System.Windows.Forms.Button();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -67,7 +68,6 @@
             this.mskTelefoneFunc = new System.Windows.Forms.MaskedTextBox();
             this.cmbDominioCaixaSecundaria = new System.Windows.Forms.ComboBox();
             this.txtEmailSecundarioFunc = new System.Windows.Forms.TextBox();
-            this.cmbDominioCaixaPrincipal = new System.Windows.Forms.ComboBox();
             this.txtEmailFunc = new System.Windows.Forms.TextBox();
             this.lblCelularSecundario = new System.Windows.Forms.Label();
             this.lblCelularPrincipal = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbDominioCaixaPrincipal = new System.Windows.Forms.ComboBox();
             this.gpbCadastroFuncionarios.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbContrato.SuspendLayout();
@@ -114,6 +114,18 @@
             this.gpbCadastroFuncionarios.TabIndex = 1;
             this.gpbCadastroFuncionarios.TabStop = false;
             this.gpbCadastroFuncionarios.Text = "Atulizar dados dos funcionários";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(408, 593);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnAtualizarFuncionario
             // 
@@ -156,6 +168,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(80, 21);
             this.textBox14.TabIndex = 9;
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             // 
             // txtRuaFunc
             // 
@@ -282,6 +295,7 @@
             this.txtCargaHoraria.Name = "txtCargaHoraria";
             this.txtCargaHoraria.Size = new System.Drawing.Size(50, 21);
             this.txtCargaHoraria.TabIndex = 17;
+            this.txtCargaHoraria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaHoraria_KeyPress);
             // 
             // lblCargaHoraria
             // 
@@ -302,6 +316,7 @@
             this.txtDependentesFunc.Name = "txtDependentesFunc";
             this.txtDependentesFunc.Size = new System.Drawing.Size(80, 21);
             this.txtDependentesFunc.TabIndex = 15;
+            this.txtDependentesFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDependentesFunc_KeyPress);
             // 
             // cmbConvOdontoFunc
             // 
@@ -311,6 +326,8 @@
             this.cmbConvOdontoFunc.Name = "cmbConvOdontoFunc";
             this.cmbConvOdontoFunc.Size = new System.Drawing.Size(150, 23);
             this.cmbConvOdontoFunc.TabIndex = 14;
+            this.cmbConvOdontoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbConvOdontoFunc_SelectedIndexChanged);
+            this.cmbConvOdontoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvOdontoFunc_KeyPress);
             // 
             // cmbConvMedico
             // 
@@ -320,6 +337,8 @@
             this.cmbConvMedico.Name = "cmbConvMedico";
             this.cmbConvMedico.Size = new System.Drawing.Size(150, 23);
             this.cmbConvMedico.TabIndex = 13;
+            this.cmbConvMedico.SelectedIndexChanged += new System.EventHandler(this.cmbConvMedico_SelectedIndexChanged);
+            this.cmbConvMedico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbConvMedico_KeyPress);
             // 
             // txtSalarioFunc
             // 
@@ -329,6 +348,7 @@
             this.txtSalarioFunc.Name = "txtSalarioFunc";
             this.txtSalarioFunc.Size = new System.Drawing.Size(120, 21);
             this.txtSalarioFunc.TabIndex = 12;
+            this.txtSalarioFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioFunc_KeyPress);
             // 
             // dtmDataAdmissaoFunc
             // 
@@ -339,6 +359,7 @@
             this.dtmDataAdmissaoFunc.Name = "dtmDataAdmissaoFunc";
             this.dtmDataAdmissaoFunc.Size = new System.Drawing.Size(118, 23);
             this.dtmDataAdmissaoFunc.TabIndex = 11;
+            this.dtmDataAdmissaoFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtmDataAdmissaoFunc_KeyPress);
             // 
             // txtCargoFunc
             // 
@@ -358,6 +379,8 @@
             this.cmbEmpregadorFunc.Name = "cmbEmpregadorFunc";
             this.cmbEmpregadorFunc.Size = new System.Drawing.Size(129, 23);
             this.cmbEmpregadorFunc.TabIndex = 9;
+            this.cmbEmpregadorFunc.SelectedIndexChanged += new System.EventHandler(this.cmbEmpregadorFunc_SelectedIndexChanged);
+            this.cmbEmpregadorFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEmpregadorFunc_KeyPress);
             // 
             // txtRegistroFunc
             // 
@@ -368,6 +391,7 @@
             this.txtRegistroFunc.Name = "txtRegistroFunc";
             this.txtRegistroFunc.Size = new System.Drawing.Size(80, 21);
             this.txtRegistroFunc.TabIndex = 8;
+            this.txtRegistroFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroFunc_KeyPress);
             // 
             // lblDependentes
             // 
@@ -529,26 +553,6 @@
             this.txtEmailSecundarioFunc.Size = new System.Drawing.Size(150, 21);
             this.txtEmailSecundarioFunc.TabIndex = 9;
             // 
-            // cmbDominioCaixaPrincipal
-            // 
-            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
-            this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@outlook.com",
-            "@hotmail.com",
-            "@bol.com",
-            "@yahoo.com",
-            "@oul.com",
-            "@terra.com",
-            "@gmx.com",
-            "@icload.com",
-            "@zoho.com"});
-            this.cmbDominioCaixaPrincipal.Location = new System.Drawing.Point(165, 46);
-            this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
-            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 23);
-            this.cmbDominioCaixaPrincipal.TabIndex = 8;
-            // 
             // txtEmailFunc
             // 
             this.txtEmailFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
@@ -701,6 +705,7 @@
             this.txtIdadeFunc.Name = "txtIdadeFunc";
             this.txtIdadeFunc.Size = new System.Drawing.Size(50, 21);
             this.txtIdadeFunc.TabIndex = 8;
+            this.txtIdadeFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdadeFunc_KeyPress);
             // 
             // txtSobrenomeFunc
             // 
@@ -782,17 +787,25 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // btnCancelar
+            // cmbDominioCaixaPrincipal
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(408, 593);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
+            this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@outlook.com",
+            "@hotmail.com",
+            "@bol.com",
+            "@yahoo.com",
+            "@oul.com",
+            "@terra.com",
+            "@gmx.com",
+            "@icload.com",
+            "@zoho.com"});
+            this.cmbDominioCaixaPrincipal.Location = new System.Drawing.Point(165, 46);
+            this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
+            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 23);
+            this.cmbDominioCaixaPrincipal.TabIndex = 8;
             // 
             // Form_AtualizarFuncionarios
             // 
@@ -862,7 +875,6 @@
         private System.Windows.Forms.MaskedTextBox mskTelefoneFunc;
         private System.Windows.Forms.ComboBox cmbDominioCaixaSecundaria;
         private System.Windows.Forms.TextBox txtEmailSecundarioFunc;
-        private System.Windows.Forms.ComboBox cmbDominioCaixaPrincipal;
         private System.Windows.Forms.TextBox txtEmailFunc;
         private System.Windows.Forms.Label lblCelularSecundario;
         private System.Windows.Forms.Label lblCelularPrincipal;
@@ -886,5 +898,6 @@
         private System.Windows.Forms.Label lblSobrenome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ComboBox cmbDominioCaixaPrincipal;
     }
 }

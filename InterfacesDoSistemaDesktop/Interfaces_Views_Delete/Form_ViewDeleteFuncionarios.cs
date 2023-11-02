@@ -51,14 +51,9 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
             string id = linhaSelecionada.Cells["Código"].Value.ToString();
             string idEndereco = linhaSelecionada.Cells["Cód. Endereco"].Value.ToString();
-            string idConvMedico = linhaSelecionada.Cells["Cód. ConMed."].Value.ToString();
-            string idConvOdonto = linhaSelecionada.Cells["Cód ConOdon."].Value.ToString();
             string idEmpresa = linhaSelecionada.Cells["Cód. Empresa"].Value.ToString();
-            //MessageBox.Show($"O Id fo funcionario é: {id}\n\n Id Endereco: {idEndereco}\n\n Id ConvMedico: {idConvMedico}\n\n IdConvOdonto: {idConvOdonto}\n\n IdEmpresa: {idEmpresa}", "FUNCIONOU");
             Id = id;
             IdEndereco = idEndereco;
-            IdConvMedico = idConvMedico;
-            IdConvOdonto = idConvOdonto;
             IdEmpresa = idEmpresa;
         }
 
@@ -110,7 +105,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                 if (alterar == DialogResult.Yes)
                 {
                     _funcionarios.Id = Id;
-                    Form_AtualizarFuncionarios _AtualizarFuncionarios = new Form_AtualizarFuncionarios(Id, IdEmpresa, IdConvMedico, IdConvOdonto, IdEndereco);
+                    _funcionarios.IdEmpresa = IdEndereco;
+                    Form_AtualizarFuncionarios _AtualizarFuncionarios = new Form_AtualizarFuncionarios(Id, IdEndereco, IdEmpresa);
                     _AtualizarFuncionarios.ShowDialog();
                     AtualizarTabela();
                 }
