@@ -541,7 +541,7 @@ namespace BaseDeDados
             }
         }
 
-        public DataTable BuscarFuncionarios()
+        public DataTable BuscarFuncionarios(string codEmpresa)
         {
             string caminho = _servidores.servidorNotebook;
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -557,14 +557,22 @@ namespace BaseDeDados
                                 "Id_planos_saude, Planos_saude.Nome, " +
                                 "Id_planos_odontologicos, Planos_odontologicos.Nome, " +
                                 "Id_empresas, Empresas.Razao_social, Cargo, Salario, Data_admissao FROM Funcionarios " +
-                                "WHERE Id_empresa = @idEmpresa" + // ainda preciso declarar o parametro dessa linha para funcionar
+                                "WHERE Id_empresa = @idEmpresa " + // ja declarei mas ainda não esta funcionando, esta dandi erro de declaração da variavel idEmpresa.
                                 "INNER JOIN Endereco ON Funcionarios.Id_endereco = Endereco.Id_endereco " +
                                 "LEFT JOIN Planos_saude ON Funcionarios.Id_planos_saude = Planos_saude.Id_saude " +
                                 "LEFT JOIN Planos_odontologicos ON Funcionarios.Id_planos_odontologicos = Planos_odontologicos.Id_odonto " +
                                 "INNER JOIN Empresas ON Funcionarios.Id_empresas = Empresas.Id_empresa";
 
+
+
                 SqlCommand cmd = new SqlCommand(querry, conexaoDb);
                 SqlDataReader _leitor = cmd.ExecuteReader();
+
+                var _pmtCodEmpresa = cmd.CreateParameter();
+                _pmtCodEmpresa.ParameterName = "@idEmpresa";
+                _pmtCodEmpresa.DbType = DbType.Int32;
+                _pmtCodEmpresa.Value = codEmpresa;
+                cmd.Parameters.Add(_pmtCodEmpresa);
 
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Código", typeof(int));
@@ -597,6 +605,8 @@ namespace BaseDeDados
                 dt.Columns.Add("Cargo", typeof(string));
                 dt.Columns.Add("Salário", typeof(decimal));
                 dt.Columns.Add("Data Admissão", typeof(DateTime));
+
+                
 
                 string idConvMedico = "0";
                 string convMedico = "NULL";

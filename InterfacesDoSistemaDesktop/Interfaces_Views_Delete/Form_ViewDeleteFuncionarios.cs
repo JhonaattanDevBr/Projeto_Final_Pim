@@ -54,6 +54,11 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                 cmbListarEmpresas.SelectedIndex = 0;
             }
 
+            string refEmpresa = cmbListarEmpresas.SelectedItem.ToString();
+            refEmpresa = refEmpresa.Replace("[", "").Replace("]", "").Replace(",", " ");
+            string[] id = refEmpresa.Split(' ');
+            IdEmpresa = id[0];
+            /*
             dgvVisualizarFuncionarios.Columns.Clear();
             DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
             dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
@@ -64,7 +69,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
             dgvVisualizarFuncionarios.Columns[2].Width = 168;
             dgvVisualizarFuncionarios.Columns[3].Width = 120;
             dgvVisualizarFuncionarios.Columns[4].Width = 160;
-            dgvVisualizarFuncionarios.Columns[5].Width = 140;
+            dgvVisualizarFuncionarios.Columns[5].Width = 140;*/
         }
 
         private void dgvVisualizarFuncionarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -83,7 +88,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void AtualizarTabela()
         {
             dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios(IdEmpresa);
             dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
@@ -139,6 +144,21 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void cmbListarEmpresas_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            dgvVisualizarFuncionarios.Columns.Clear();
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios(IdEmpresa);
+            dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
+
+            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
+            dgvVisualizarFuncionarios.Columns[0].Width = 70;
+            dgvVisualizarFuncionarios.Columns[1].Width = 210;
+            dgvVisualizarFuncionarios.Columns[2].Width = 168;
+            dgvVisualizarFuncionarios.Columns[3].Width = 120;
+            dgvVisualizarFuncionarios.Columns[4].Width = 160;
+            dgvVisualizarFuncionarios.Columns[5].Width = 140;
         }
     }
 }
