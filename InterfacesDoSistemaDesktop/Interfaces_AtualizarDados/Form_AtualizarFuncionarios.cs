@@ -23,8 +23,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             InitializeComponent();
             _funcionarios.Id = id;
             _funcionarios.IdEndereco = idEndereco;
-            //_funcionarios.IdConvMedico = idConvMedico;
-           // _funcionarios.IdConvOdonto = idConvOdonto;
             _funcionarios.IdEmpresa = idEmpresa;
         }
 
@@ -96,6 +94,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             txtRuaFunc.Text = rua;
             textBox14.Text = numero;
 
+            // Aqui vou inserir o código para listar as empresas existentes no banco de dados
+
             Dictionary<int, string> popularComboBoxConvenioMedico = _crud_Funcionarios.PopularCaixaConvenioMedico();
             cmbConvMedico.Items.Clear(); // Limpar os itens existentes no ComboBox
             if (popularComboBoxConvenioMedico.Count == 0)
@@ -130,7 +130,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
                 cmbConvOdontoFunc.ValueMember = "Key";
                 cmbConvOdontoFunc.DisplayMember = "Value";
                 cmbConvOdontoFunc.SelectedIndex = 0;
-
             }
 
             // VOu modificar essa parte para verificar se as empresas ja foram cadastradas no banco de dados para só entao os funcionarios serem cadastrados.
@@ -161,9 +160,9 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             _funcionarios.Rg = mskRgFunc.Text;
             _funcionarios.Cpf = mskCpfFunc.Text;
             _funcionarios.Email = txtEmailFunc.Text;
-            //_funcionarios.DominioPrincipal = cmbDominioCaixaPrincipal.Text;
+            _funcionarios.DominioPrincipal = cmbDominioCaixaPrincipal.Text;
             _funcionarios.EmailSecundario = txtEmailSecundarioFunc.Text;
-            //_funcionarios.DominioSecundario = cmbDominioCaixaSecundaria.Text;
+            _funcionarios.DominioSecundario = cmbDominioCaixaSecundaria.Text;
             _funcionarios.Telefone = mskTelefoneFunc.Text;
             _funcionarios.CelularPrincipal = mskCelularPrincipalFunc.Text;
             _funcionarios.CelularSecundario = mskCelularSecundarioFunc.Text;

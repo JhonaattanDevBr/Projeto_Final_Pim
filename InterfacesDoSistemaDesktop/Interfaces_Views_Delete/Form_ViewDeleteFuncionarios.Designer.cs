@@ -46,6 +46,9 @@
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgvVisualizarFuncionarios = new System.Windows.Forms.DataGridView();
+            this.lblSelecionarEmpresa = new System.Windows.Forms.Label();
+            this.cmbListarEmpresas = new System.Windows.Forms.ComboBox();
+            this.btnListar = new System.Windows.Forms.Button();
             this.gpbFuncionarios.SuspendLayout();
             this.gpbFiltro.SuspendLayout();
             this.gpbPesquisa.SuspendLayout();
@@ -55,6 +58,9 @@
             // gpbFuncionarios
             // 
             this.gpbFuncionarios.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbFuncionarios.Controls.Add(this.btnListar);
+            this.gpbFuncionarios.Controls.Add(this.cmbListarEmpresas);
+            this.gpbFuncionarios.Controls.Add(this.lblSelecionarEmpresa);
             this.gpbFuncionarios.Controls.Add(this.gpbFiltro);
             this.gpbFuncionarios.Controls.Add(this.gpbPesquisa);
             this.gpbFuncionarios.Controls.Add(this.btnSair);
@@ -244,13 +250,48 @@
             // 
             this.dgvVisualizarFuncionarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvVisualizarFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisualizarFuncionarios.Location = new System.Drawing.Point(6, 22);
+            this.dgvVisualizarFuncionarios.Location = new System.Drawing.Point(6, 52);
             this.dgvVisualizarFuncionarios.Name = "dgvVisualizarFuncionarios";
             this.dgvVisualizarFuncionarios.ReadOnly = true;
             this.dgvVisualizarFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVisualizarFuncionarios.Size = new System.Drawing.Size(1011, 629);
+            this.dgvVisualizarFuncionarios.Size = new System.Drawing.Size(1011, 599);
             this.dgvVisualizarFuncionarios.TabIndex = 0;
             this.dgvVisualizarFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarFuncionarios_CellClick);
+            // 
+            // lblSelecionarEmpresa
+            // 
+            this.lblSelecionarEmpresa.AutoSize = true;
+            this.lblSelecionarEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblSelecionarEmpresa.Location = new System.Drawing.Point(7, 23);
+            this.lblSelecionarEmpresa.Name = "lblSelecionarEmpresa";
+            this.lblSelecionarEmpresa.Size = new System.Drawing.Size(300, 15);
+            this.lblSelecionarEmpresa.TabIndex = 7;
+            this.lblSelecionarEmpresa.Text = "Selecione uma empresa para listas seus funcionários";
+            // 
+            // cmbListarEmpresas
+            // 
+            this.cmbListarEmpresas.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbListarEmpresas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbListarEmpresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbListarEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbListarEmpresas.FormattingEnabled = true;
+            this.cmbListarEmpresas.Location = new System.Drawing.Point(313, 23);
+            this.cmbListarEmpresas.Name = "cmbListarEmpresas";
+            this.cmbListarEmpresas.Size = new System.Drawing.Size(300, 23);
+            this.cmbListarEmpresas.TabIndex = 8;
+            this.cmbListarEmpresas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbListarEmpresas_KeyPress);
+            // 
+            // btnListar
+            // 
+            this.btnListar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnListar.Location = new System.Drawing.Point(646, 16);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 30);
+            this.btnListar.TabIndex = 9;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = false;
             // 
             // Form_ViewDeleteFuncionarios
             // 
@@ -268,6 +309,7 @@
             this.Text = "Funcionários";
             this.Load += new System.EventHandler(this.Form_ViewDeleteFuncionarios_Load);
             this.gpbFuncionarios.ResumeLayout(false);
+            this.gpbFuncionarios.PerformLayout();
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();
             this.gpbPesquisa.ResumeLayout(false);
@@ -296,5 +338,8 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dgvVisualizarFuncionarios;
         private System.Windows.Forms.RadioButton rdbRegistro;
+        private System.Windows.Forms.ComboBox cmbListarEmpresas;
+        private System.Windows.Forms.Label lblSelecionarEmpresa;
+        private System.Windows.Forms.Button btnListar;
     }
 }

@@ -68,6 +68,7 @@
             this.mskTelefoneFunc = new System.Windows.Forms.MaskedTextBox();
             this.cmbDominioCaixaSecundaria = new System.Windows.Forms.ComboBox();
             this.txtEmailSecundarioFunc = new System.Windows.Forms.TextBox();
+            this.cmbDominioCaixaPrincipal = new System.Windows.Forms.ComboBox();
             this.txtEmailFunc = new System.Windows.Forms.TextBox();
             this.lblCelularSecundario = new System.Windows.Forms.Label();
             this.lblCelularPrincipal = new System.Windows.Forms.Label();
@@ -90,7 +91,6 @@
             this.lblIdade = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.cmbDominioCaixaPrincipal = new System.Windows.Forms.ComboBox();
             this.gpbCadastroFuncionarios.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbContrato.SuspendLayout();
@@ -320,6 +320,9 @@
             // 
             // cmbConvOdontoFunc
             // 
+            this.cmbConvOdontoFunc.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbConvOdontoFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbConvOdontoFunc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbConvOdontoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbConvOdontoFunc.FormattingEnabled = true;
             this.cmbConvOdontoFunc.Location = new System.Drawing.Point(180, 102);
@@ -331,6 +334,9 @@
             // 
             // cmbConvMedico
             // 
+            this.cmbConvMedico.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbConvMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbConvMedico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbConvMedico.FormattingEnabled = true;
             this.cmbConvMedico.Location = new System.Drawing.Point(9, 102);
@@ -373,6 +379,9 @@
             // 
             // cmbEmpregadorFunc
             // 
+            this.cmbEmpregadorFunc.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbEmpregadorFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpregadorFunc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbEmpregadorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbEmpregadorFunc.FormattingEnabled = true;
             this.cmbEmpregadorFunc.Location = new System.Drawing.Point(109, 48);
@@ -525,6 +534,9 @@
             // 
             // cmbDominioCaixaSecundaria
             // 
+            this.cmbDominioCaixaSecundaria.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbDominioCaixaSecundaria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDominioCaixaSecundaria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbDominioCaixaSecundaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbDominioCaixaSecundaria.FormattingEnabled = true;
             this.cmbDominioCaixaSecundaria.Items.AddRange(new object[] {
@@ -552,6 +564,29 @@
             this.txtEmailSecundarioFunc.Name = "txtEmailSecundarioFunc";
             this.txtEmailSecundarioFunc.Size = new System.Drawing.Size(150, 21);
             this.txtEmailSecundarioFunc.TabIndex = 9;
+            // 
+            // cmbDominioCaixaPrincipal
+            // 
+            this.cmbDominioCaixaPrincipal.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbDominioCaixaPrincipal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDominioCaixaPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
+            this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@outlook.com",
+            "@hotmail.com",
+            "@bol.com",
+            "@yahoo.com",
+            "@oul.com",
+            "@terra.com",
+            "@gmx.com",
+            "@icload.com",
+            "@zoho.com"});
+            this.cmbDominioCaixaPrincipal.Location = new System.Drawing.Point(165, 46);
+            this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
+            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 23);
+            this.cmbDominioCaixaPrincipal.TabIndex = 8;
             // 
             // txtEmailFunc
             // 
@@ -786,26 +821,6 @@
             this.lblNome.Size = new System.Drawing.Size(41, 15);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
-            // 
-            // cmbDominioCaixaPrincipal
-            // 
-            this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
-            this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@outlook.com",
-            "@hotmail.com",
-            "@bol.com",
-            "@yahoo.com",
-            "@oul.com",
-            "@terra.com",
-            "@gmx.com",
-            "@icload.com",
-            "@zoho.com"});
-            this.cmbDominioCaixaPrincipal.Location = new System.Drawing.Point(165, 46);
-            this.cmbDominioCaixaPrincipal.Name = "cmbDominioCaixaPrincipal";
-            this.cmbDominioCaixaPrincipal.Size = new System.Drawing.Size(111, 23);
-            this.cmbDominioCaixaPrincipal.TabIndex = 8;
             // 
             // Form_AtualizarFuncionarios
             // 

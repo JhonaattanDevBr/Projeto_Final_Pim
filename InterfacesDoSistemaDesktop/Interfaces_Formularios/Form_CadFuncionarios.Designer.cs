@@ -306,6 +306,9 @@
             // 
             // cmbConvOdontoFunc
             // 
+            this.cmbConvOdontoFunc.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbConvOdontoFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbConvOdontoFunc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbConvOdontoFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbConvOdontoFunc.FormattingEnabled = true;
             this.cmbConvOdontoFunc.Location = new System.Drawing.Point(180, 102);
@@ -317,6 +320,9 @@
             // 
             // cmbConvMedico
             // 
+            this.cmbConvMedico.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbConvMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbConvMedico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbConvMedico.FormattingEnabled = true;
             this.cmbConvMedico.Location = new System.Drawing.Point(9, 102);
@@ -359,6 +365,9 @@
             // 
             // cmbEmpregadorFunc
             // 
+            this.cmbEmpregadorFunc.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbEmpregadorFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpregadorFunc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbEmpregadorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbEmpregadorFunc.FormattingEnabled = true;
             this.cmbEmpregadorFunc.Location = new System.Drawing.Point(109, 48);
@@ -511,6 +520,9 @@
             // 
             // cmbDominioCaixaSecundaria
             // 
+            this.cmbDominioCaixaSecundaria.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbDominioCaixaSecundaria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDominioCaixaSecundaria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbDominioCaixaSecundaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbDominioCaixaSecundaria.FormattingEnabled = true;
             this.cmbDominioCaixaSecundaria.Items.AddRange(new object[] {
@@ -542,6 +554,9 @@
             // 
             // cmbDominioCaixaPrincipal
             // 
+            this.cmbDominioCaixaPrincipal.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbDominioCaixaPrincipal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDominioCaixaPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbDominioCaixaPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbDominioCaixaPrincipal.FormattingEnabled = true;
             this.cmbDominioCaixaPrincipal.Items.AddRange(new object[] {

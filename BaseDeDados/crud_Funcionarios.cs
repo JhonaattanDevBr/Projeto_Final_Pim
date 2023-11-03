@@ -557,6 +557,7 @@ namespace BaseDeDados
                                 "Id_planos_saude, Planos_saude.Nome, " +
                                 "Id_planos_odontologicos, Planos_odontologicos.Nome, " +
                                 "Id_empresas, Empresas.Razao_social, Cargo, Salario, Data_admissao FROM Funcionarios " +
+                                "WHERE Id_empresa = @idEmpresa" + // ainda preciso declarar o parametro dessa linha para funcionar
                                 "INNER JOIN Endereco ON Funcionarios.Id_endereco = Endereco.Id_endereco " +
                                 "LEFT JOIN Planos_saude ON Funcionarios.Id_planos_saude = Planos_saude.Id_saude " +
                                 "LEFT JOIN Planos_odontologicos ON Funcionarios.Id_planos_odontologicos = Planos_odontologicos.Id_odonto " +
@@ -826,5 +827,36 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        public Dictionary<int, string> PopularCaixaListarEmpresas()
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Id_empresa, Nome_fantasia FROM Empresas ORDER BY Id_empresa";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+                SqlDataReader leitura = cmd.ExecuteReader();
+                Dictionary<int, string> dados = new Dictionary<int, string>();
+
+                while (leitura.Read())
+                {
+                    int idEmpresa = leitura.GetInt32(0);
+                    string nomeFantasia = leitura.GetString(1);
+
+                    dados[idEmpresa] = nomeFantasia;
+                }
+                conexaoDb.Close();
+                return dados;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

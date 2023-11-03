@@ -31,6 +31,29 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void Form_ViewDeleteFuncionarios_Load(object sender, EventArgs e)
         {
+
+            // TENHO QUE RETIRAR O CÓDIGO DE POPULAR A DATAGRID ASSIM QUE O FORM INICIAR E COLOCAR DENTRO DO EVENTO DO BOTÃO PARA QUANDO
+            // O USUARIO SELECIONAR UM GOS ITEMS DA LISTA SER CARREGADO NA GRIDVIEW OS DADOS DOS FUNCIONARIOS DAQUELA EMPRESA.
+            // PRECISO MANTER NO LOAD APENAS O MENOTO DE POPULAR A COMBO BOX DAS EMPRESAS.
+
+            Dictionary<int, string> popularListaEmpresas = _crud_Funcionarios.PopularCaixaListarEmpresas();
+            cmbListarEmpresas.Items.Clear();
+            if (popularListaEmpresas.Count == 0)
+            {
+                cmbListarEmpresas.Enabled = false;
+                _funcionarios.ConvenioOdontologico = "0";
+            }
+            else
+            {
+                foreach (var convOdontologico in popularListaEmpresas)
+                {
+                    cmbListarEmpresas.Items.Add(convOdontologico);
+                }
+                cmbListarEmpresas.ValueMember = "Key";
+                cmbListarEmpresas.DisplayMember = "Value";
+                cmbListarEmpresas.SelectedIndex = 0;
+            }
+
             dgvVisualizarFuncionarios.Columns.Clear();
             DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
             dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
@@ -111,6 +134,11 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     AtualizarTabela();
                 }
             }
+        }
+
+        private void cmbListarEmpresas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
