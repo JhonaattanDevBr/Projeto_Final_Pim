@@ -302,5 +302,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
             string valor = cmbConvOdontoFunc.SelectedItem.ToString();
             _funcionarios.ConvenioOdontologico = valor;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja cancelar a operação?", "CANCELAR", MessageBoxButtons.YesNo);
+            if (sair == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

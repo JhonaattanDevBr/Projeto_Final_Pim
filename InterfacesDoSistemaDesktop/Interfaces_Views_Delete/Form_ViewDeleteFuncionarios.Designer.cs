@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ViewDeleteFuncionarios));
             this.gpbFuncionarios = new System.Windows.Forms.GroupBox();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.cmbListarEmpresas = new System.Windows.Forms.ComboBox();
+            this.lblSelecionarEmpresa = new System.Windows.Forms.Label();
             this.gpbFiltro = new System.Windows.Forms.GroupBox();
             this.rdbRegistro = new System.Windows.Forms.RadioButton();
             this.btnLimparFiltro = new System.Windows.Forms.Button();
@@ -46,9 +49,6 @@
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgvVisualizarFuncionarios = new System.Windows.Forms.DataGridView();
-            this.lblSelecionarEmpresa = new System.Windows.Forms.Label();
-            this.cmbListarEmpresas = new System.Windows.Forms.ComboBox();
-            this.btnListar = new System.Windows.Forms.Button();
             this.gpbFuncionarios.SuspendLayout();
             this.gpbFiltro.SuspendLayout();
             this.gpbPesquisa.SuspendLayout();
@@ -75,6 +75,42 @@
             this.gpbFuncionarios.TabIndex = 1;
             this.gpbFuncionarios.TabStop = false;
             this.gpbFuncionarios.Text = "Funcionários";
+            // 
+            // btnListar
+            // 
+            this.btnListar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnListar.Location = new System.Drawing.Point(646, 16);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 30);
+            this.btnListar.TabIndex = 9;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // cmbListarEmpresas
+            // 
+            this.cmbListarEmpresas.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbListarEmpresas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbListarEmpresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbListarEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbListarEmpresas.FormattingEnabled = true;
+            this.cmbListarEmpresas.Location = new System.Drawing.Point(313, 23);
+            this.cmbListarEmpresas.Name = "cmbListarEmpresas";
+            this.cmbListarEmpresas.Size = new System.Drawing.Size(300, 23);
+            this.cmbListarEmpresas.TabIndex = 8;
+            this.cmbListarEmpresas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbListarEmpresas_KeyPress);
+            // 
+            // lblSelecionarEmpresa
+            // 
+            this.lblSelecionarEmpresa.AutoSize = true;
+            this.lblSelecionarEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblSelecionarEmpresa.Location = new System.Drawing.Point(7, 23);
+            this.lblSelecionarEmpresa.Name = "lblSelecionarEmpresa";
+            this.lblSelecionarEmpresa.Size = new System.Drawing.Size(300, 15);
+            this.lblSelecionarEmpresa.TabIndex = 7;
+            this.lblSelecionarEmpresa.Text = "Selecione uma empresa para listas seus funcionários";
             // 
             // gpbFiltro
             // 
@@ -257,41 +293,6 @@
             this.dgvVisualizarFuncionarios.Size = new System.Drawing.Size(1011, 599);
             this.dgvVisualizarFuncionarios.TabIndex = 0;
             this.dgvVisualizarFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarFuncionarios_CellClick);
-            // 
-            // lblSelecionarEmpresa
-            // 
-            this.lblSelecionarEmpresa.AutoSize = true;
-            this.lblSelecionarEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblSelecionarEmpresa.Location = new System.Drawing.Point(7, 23);
-            this.lblSelecionarEmpresa.Name = "lblSelecionarEmpresa";
-            this.lblSelecionarEmpresa.Size = new System.Drawing.Size(300, 15);
-            this.lblSelecionarEmpresa.TabIndex = 7;
-            this.lblSelecionarEmpresa.Text = "Selecione uma empresa para listas seus funcionários";
-            // 
-            // cmbListarEmpresas
-            // 
-            this.cmbListarEmpresas.BackColor = System.Drawing.Color.LightBlue;
-            this.cmbListarEmpresas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbListarEmpresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbListarEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cmbListarEmpresas.FormattingEnabled = true;
-            this.cmbListarEmpresas.Location = new System.Drawing.Point(313, 23);
-            this.cmbListarEmpresas.Name = "cmbListarEmpresas";
-            this.cmbListarEmpresas.Size = new System.Drawing.Size(300, 23);
-            this.cmbListarEmpresas.TabIndex = 8;
-            this.cmbListarEmpresas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbListarEmpresas_KeyPress);
-            // 
-            // btnListar
-            // 
-            this.btnListar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnListar.Location = new System.Drawing.Point(646, 16);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 30);
-            this.btnListar.TabIndex = 9;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = false;
             // 
             // Form_ViewDeleteFuncionarios
             // 

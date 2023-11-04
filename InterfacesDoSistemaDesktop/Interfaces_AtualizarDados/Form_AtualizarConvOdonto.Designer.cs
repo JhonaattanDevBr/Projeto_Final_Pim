@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AtualizarConvOdonto));
             this.gpbConvenioOdontologico = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.rdbPercentual = new System.Windows.Forms.RadioButton();
             this.rdbValorFixado = new System.Windows.Forms.RadioButton();
             this.lblModoDesconto = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.lblvalorFixado = new System.Windows.Forms.Label();
             this.lblCnpjConvOdonto = new System.Windows.Forms.Label();
             this.lblNomeConvOdonto = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.gpbConvenioOdontologico.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,19 @@
             this.gpbConvenioOdontologico.TabIndex = 1;
             this.gpbConvenioOdontologico.TabStop = false;
             this.gpbConvenioOdontologico.Text = "Cadastro de convênio odontológico";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnCancelar.Location = new System.Drawing.Point(126, 369);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // rdbPercentual
             // 
@@ -194,18 +207,6 @@
             this.lblNomeConvOdonto.Size = new System.Drawing.Size(184, 15);
             this.lblNomeConvOdonto.TabIndex = 0;
             this.lblNomeConvOdonto.Text = "Nome do convênio odontológico";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnCancelar.Location = new System.Drawing.Point(126, 369);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelar.TabIndex = 13;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // Form_AtualizarConvOdonto
             // 

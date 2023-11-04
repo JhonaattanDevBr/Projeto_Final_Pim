@@ -42,16 +42,19 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void dgvVisualizarConvOdonto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView tabelaConvOdontologico = (DataGridView)sender; 
-            DataGridViewRow linhaSelecionada = tabelaConvOdontologico.Rows[e.RowIndex];
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridView tabelaConvOdontologico = (DataGridView)sender;
+                DataGridViewRow linhaSelecionada = tabelaConvOdontologico.Rows[e.RowIndex];
 
-            string id = linhaSelecionada.Cells["Código"].Value.ToString(); 
-            Id = id;
+                string id = linhaSelecionada.Cells["Código"].Value.ToString();
+                Id = id;
+            }
         }
 
         private void btnExcluirRegistro_Click(object sender, EventArgs e)
         {
-            if (Id != "")
+            if (!string.IsNullOrEmpty(Id))
             {
                 DialogResult deletar = MessageBox.Show("Deseja realmente excluir o registro?\n\nApós um registro ser excluido os dados serão perdidos permanentemente, " +
                                                    "não podendo ser restaurados.",
@@ -72,11 +75,12 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     }
                 }
             }
+            Id = "";
         }
 
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
-            if (Id != "")
+            if (!string.IsNullOrEmpty(Id))
             {
                 DialogResult alterar = MessageBox.Show("Deseja realmente alterar os dados do registro? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
                 if (alterar == DialogResult.Yes)
@@ -87,6 +91,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     AtualizarTabela();
                 }
             }
+            Id = "";
         }
 
         private void AtualizarTabela()

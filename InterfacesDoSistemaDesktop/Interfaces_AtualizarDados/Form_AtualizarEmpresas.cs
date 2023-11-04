@@ -104,5 +104,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
                 MessageBox.Show(_empresas.MensagemErro, "Falha na operação");
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja cancelar a operação?", "CANCELAR", MessageBoxButtons.YesNo);
+            if (sair == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

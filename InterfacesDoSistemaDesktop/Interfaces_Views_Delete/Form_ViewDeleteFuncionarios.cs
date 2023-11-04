@@ -23,6 +23,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         public string IdConvMedico { get; set; }
         public string IdConvOdonto { get; set; }
         public string IdEndereco { get; set; }
+        public string CodEmpresa { get; set; }
 
         public Form_ViewDeleteFuncionarios()
         {
@@ -31,11 +32,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void Form_ViewDeleteFuncionarios_Load(object sender, EventArgs e)
         {
-
-            // TENHO QUE RETIRAR O CÓDIGO DE POPULAR A DATAGRID ASSIM QUE O FORM INICIAR E COLOCAR DENTRO DO EVENTO DO BOTÃO PARA QUANDO
-            // O USUARIO SELECIONAR UM GOS ITEMS DA LISTA SER CARREGADO NA GRIDVIEW OS DADOS DOS FUNCIONARIOS DAQUELA EMPRESA.
-            // PRECISO MANTER NO LOAD APENAS O MENOTO DE POPULAR A COMBO BOX DAS EMPRESAS.
-
             Dictionary<int, string> popularListaEmpresas = _crud_Funcionarios.PopularCaixaListarEmpresas();
             cmbListarEmpresas.Items.Clear();
             if (popularListaEmpresas.Count == 0)
@@ -53,37 +49,28 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                 cmbListarEmpresas.DisplayMember = "Value";
                 cmbListarEmpresas.SelectedIndex = 0;
             }
-
-            dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
-            dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
-
-            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
-            dgvVisualizarFuncionarios.Columns[0].Width = 70;
-            dgvVisualizarFuncionarios.Columns[1].Width = 210;
-            dgvVisualizarFuncionarios.Columns[2].Width = 168;
-            dgvVisualizarFuncionarios.Columns[3].Width = 120;
-            dgvVisualizarFuncionarios.Columns[4].Width = 160;
-            dgvVisualizarFuncionarios.Columns[5].Width = 140;
         }
 
         private void dgvVisualizarFuncionarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView tabelaEmpresas = (DataGridView)sender;
-            DataGridViewRow linhaSelecionada = tabelaEmpresas.Rows[e.RowIndex];
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridView tabelaEmpresas = (DataGridView)sender;
+                DataGridViewRow linhaSelecionada = tabelaEmpresas.Rows[e.RowIndex];
 
-            string id = linhaSelecionada.Cells["Código"].Value.ToString();
-            string idEndereco = linhaSelecionada.Cells["Cód. Endereco"].Value.ToString();
-            string idEmpresa = linhaSelecionada.Cells["Cód. Empresa"].Value.ToString();
-            Id = id;
-            IdEndereco = idEndereco;
-            IdEmpresa = idEmpresa;
+                string id = linhaSelecionada.Cells["Código"].Value.ToString();
+                string idEndereco = linhaSelecionada.Cells["Cód. Endereco"].Value.ToString();
+                string idEmpresa = linhaSelecionada.Cells["Cód. Empresa"].Value.ToString();
+                Id = id;
+                IdEndereco = idEndereco;
+                IdEmpresa = idEmpresa;
+            }
         }
 
         private void AtualizarTabela()
         {
             dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios();
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios(IdEmpresa);
             dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
@@ -97,7 +84,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void btnExcluirRegistro_Click(object sender, EventArgs e)
         {
-            if (Id != "")
+            if (!string.IsNullOrEmpty(Id))
             {
                 DialogResult deletar = MessageBox.Show("Deseja realmente excluir o registro?\n\nApós um registro ser excluido os dados serão perdidos permanentemente, " +
                                                    "não podendo ser restaurados.\n\nDeseja continuar?",
@@ -118,11 +105,13 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     }
                 }
             }
+            Id = "";
         }
 
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
-            if (Id != "")
+            
+            if (!string.IsNullOrEmpty(Id))
             {
                 DialogResult alterar = MessageBox.Show("Deseja realmente alterar os dados do registro? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
                 if (alterar == DialogResult.Yes)
@@ -134,11 +123,36 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     AtualizarTabela();
                 }
             }
+            Id = "";
+            IdEndereco = "";
+            IdEmpresa = "";
         }
 
         private void cmbListarEmpresas_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            string refEmpresa = cmbListarEmpresas.SelectedItem.ToString();
+            refEmpresa = refEmpresa.Replace("[", "").Replace("]", "").Replace(",", " ");
+            string[] id = refEmpresa.Split(' ');
+            CodEmpresa = id[0];
+
+            dgvVisualizarFuncionarios.DataSource = null; // Define DataSource como null para limpar as colunas existentes, se houver.
+
+            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios(CodEmpresa);
+            dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
+
+            // Definindo o valor padrão da largura das colunas após definir o DataSource.
+            dgvVisualizarFuncionarios.Columns[0].Width = 70;
+            dgvVisualizarFuncionarios.Columns[1].Width = 210;
+            dgvVisualizarFuncionarios.Columns[2].Width = 168;
+            dgvVisualizarFuncionarios.Columns[3].Width = 120;
+            dgvVisualizarFuncionarios.Columns[4].Width = 160;
+            dgvVisualizarFuncionarios.Columns[5].Width = 140;
+            
         }
     }
 }

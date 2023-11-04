@@ -21,7 +21,7 @@ namespace InterfacesDoSistemaDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form_ViewDeleteFuncionarios());
+            Application.Run(new Form_ViewDeleteConvenioMedico());
         }
     }
 }

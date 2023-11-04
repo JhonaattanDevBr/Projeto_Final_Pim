@@ -44,13 +44,16 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void dgvVisualizarEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView tabelaEmpresas = (DataGridView)sender; 
-            DataGridViewRow linhaSelecionada = tabelaEmpresas.Rows[e.RowIndex]; 
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridView tabelaEmpresas = (DataGridView)sender;
+                DataGridViewRow linhaSelecionada = tabelaEmpresas.Rows[e.RowIndex];
 
-            string id = linhaSelecionada.Cells["Código"].Value.ToString(); 
-            string idEndereco = linhaSelecionada.Cells["Cód. Endereco"].Value.ToString();
-            Id = id;
-            IdEmpresa = idEndereco;
+                string id = linhaSelecionada.Cells["Código"].Value.ToString();
+                string idEndereco = linhaSelecionada.Cells["Cód. Endereco"].Value.ToString();
+                Id = id;
+                IdEmpresa = idEndereco;
+            }
         }
 
         private void AtualizarTabela()
@@ -70,7 +73,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
 
         private void btnExcluirRegistro_Click(object sender, EventArgs e)
         {
-            if (Id != "")
+            if (!string.IsNullOrEmpty(Id) && !string.IsNullOrEmpty(IdEmpresa))
             {
                 DialogResult deletar = MessageBox.Show("Deseja realmente excluir o registro?\n\nApós um registro ser excluido os dados serão perdidos permanentemente, " +
                                                    "não podendo ser restaurados.\n\nDeseja continuar?",
@@ -91,11 +94,13 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     }
                 }
             }
+            Id = "";
+            IdEmpresa = "";
         }
 
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
-            if (Id != "")
+            if (!string.IsNullOrEmpty(Id))
             {
                 DialogResult alterar = MessageBox.Show("Deseja realmente alterar os dados do registro? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
                 if (alterar == DialogResult.Yes)
@@ -106,6 +111,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
                     AtualizarTabela();
                 }
             }
+            Id = "";
         }
     }
 }
