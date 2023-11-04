@@ -121,7 +121,7 @@ namespace BaseDeDados
 
                 var pmtTelefone = cmd.CreateParameter();
                 pmtTelefone.ParameterName = "@telefone";
-                pmtTelefone.DbType = DbType.Int32;
+                pmtTelefone.DbType = DbType.String;
                 pmtTelefone.Value = _empresa.Telefone;
                 cmd.Parameters.Add(pmtTelefone);
 

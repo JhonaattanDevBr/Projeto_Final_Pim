@@ -31,7 +31,6 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             empresasCli.Nascionalidade = txtNascionalidade.Text;
             empresasCli.Cnpj = mskCnpj.Text;
             empresasCli.Email = txtEmail.Text;
-            empresasCli.Dominio = cmbDominio.Text;
             empresasCli.Telefone = mskTelefone.Text;
             empresasCli.Ceo = txtCeo.Text;
             empresasCli.Fundacao = dtmDataFundacao.Text;
@@ -61,7 +60,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
                         //cmbDominio.SelectedIndex = 0;
                         mskTelefone.Clear();
                         txtCeo.Clear();
-                       // dtmDataFundacao.Clear();
+                       // dtmDataFundacao.Clear(); Preciso ver o pq esse atributo esta comentado.
                         txtSegmento.Clear();
                         txtCidade.Clear();
                         txtEstado.Clear();
@@ -83,13 +82,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             }
         }
 
-        private void dateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           e.Handled = true;
-        }
-
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e) // Esse metodo não faz referencia a nada então eu posso apagar, porem eu vou ter q fazer um novo metodo desse para habilitar 
+        {  // o metodo de validação de email.
             int letra = (int) e.KeyChar;
             if(letra == 64 || letra == 32)
             {
@@ -97,13 +91,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             }
         }
 
-        private void cmbDominio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbDominio.DropDownStyle = ComboBoxStyle.DropDownList;
-
-        }
-
-        private void cmbDominio_KeyPress(object sender, KeyPressEventArgs e)
+        private void dtmDataFundacao_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
