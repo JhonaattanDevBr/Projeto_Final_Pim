@@ -8,20 +8,6 @@ namespace BeneficioDasFerias
 {
     public class AgendamentoFerias
     {
-        /*
-            Id_agendamento int identity (100,1) not null,
-			Primeiro_mes varchar (10),
-			Primeiro_periodo int not null,
-			Segundo_mes varchar (10),
-			Segundo_periodo int not null,
-			Terceiro_mes varchar (10),
-			Terceiro_periodo int not null,
-			Dias_restantes int not null,
-			Dias_vendidos int not null,
-			Primeira_parcela_decimo varchar (3) not null,
-			primary key (Id_agendamento)
-         */
-
 		public string IdAgendamento { get; set; }
 		public string PrimeiroMes { get; set; }
 		public string PrimeiroPeriodo { get; set; }
