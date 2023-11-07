@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BaseDeDados;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InterfacesDoSistemaDesktop
@@ -15,6 +16,7 @@ namespace InterfacesDoSistemaDesktop
     public partial class Form_AgendarFerias : Form
     {
         AgendamentoFerias _agendamentoFerias = new AgendamentoFerias();
+        Crud_AgendamentoFerias _crud_AgendamentoFerias = new Crud_AgendamentoFerias();
 
         public Form_AgendarFerias()
         {
@@ -235,6 +237,9 @@ namespace InterfacesDoSistemaDesktop
                 _agendamentoFerias.TerceiroPeriodo = txtTerceiroPeriodoDias.Text;
             }
 
+            //int dias = 30;
+            //int diasRestantes = 30 - Convert.ToInt32(txtQuantidade.Text);
+
             if(cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
             {
                 _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
@@ -243,7 +248,15 @@ namespace InterfacesDoSistemaDesktop
                 bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
                 if (retornoAutenticacao)
                 {
-                    MessageBox.Show("Agendamento realizado com sucesso.", "Operação concluida!");
+                    bool retornoAgendamento = _crud_AgendamentoFerias.AgendarFerias(_agendamentoFerias);
+                    if (retornoAgendamento)
+                    {
+                        MessageBox.Show("Agendamento realizado com sucesso.", "Operação concluida!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                    }
                 }
                 else
                 {
