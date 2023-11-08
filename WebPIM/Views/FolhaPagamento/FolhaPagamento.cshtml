@@ -39,59 +39,63 @@
 </div>
 <table class="table table-bordered">
     <caption>Folha de pagamento</caption>
-    @foreach (var folha in Model)
-    {
-        <tr>
-            <th scope="col" colspan="1">EMPRESA</th>
-            <th scope="col">CNPJ</th>
-            <th scope="col">FOLHA</th>
-        </tr>
-        <tr>
-            <td>@folha.Id_empresas</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="col">Registo</th>
-            <th scope="col">Empregado</th>
-            <th scope="col">Função</th>
-        </tr>
-        <tr>
-            <td>@folha.Id_funcionarios</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="col">Banco</th>
-            <th scope="col">Conta corrente</th>
-            <th scope="col">Salário</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>@folha.Salario_base</td>
-        </tr>
-        <tr>
-            <th scope="col">CONTA</th>
-            <th scope="col">VENCIMENTO</th>
-            <th scope="col">DESCONTO</th>
-            <th scope="col">INSS</th>
-        </tr>
-        <tr>
-            <td>0000</td>
-            <td>encimentos</td>
-            <td>Descontos</td>
-            <td>Inss</td>
-        </tr>
-        <tr>
-            <th colspan="1"></th>
-            <th>TOTAIS</th>
-            <th>Liquído</th>
-        </tr>
-        <tr>
-            <td>@folha.Salario_base</td>
-            <td>@folha.Salario_liquido</td>
-        </tr>
+    
+     @if (Model != null)
+     {
+       foreach (var folha in Model)
+        {
+            <tr>
+                <th scope="col" colspan="1">EMPRESA</th>
+                <th scope="col">CNPJ</th>
+                <th scope="col">FOLHA</th>
+            </tr>
+            <tr>
+                <td>@folha.Nome_fantasia</td>
+                <td>@folha.Cnpj</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="col">Registo</th>
+                <th scope="col">Empregado</th>
+                <th scope="col">Função</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="col">Banco</th>
+                <th scope="col">Conta corrente</th>
+                <th scope="col">Salário</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>@folha.Salario_liquido</td>
+            </tr>
+            <tr>
+                <th scope="col">CONTA</th>
+                <th scope="col">VENCIMENTO</th>
+                <th scope="col">DESCONTO</th>
+                <th scope="col">INSS</th>
+            </tr>
+            <tr>
+                <td>0000</td>
+                <td>@folha.Vencimentos</td>
+                <td>@folha.Descontos</td>
+                <td>@folha.Inss</td>
+            </tr>
+            <tr>
+                <th colspan="1"></th>
+                <th>TOTAIS</th>
+                <th>Liquído</th>
+            </tr>
+            <tr>
+                <td>@folha.Salario_base</td>
+                <td>@folha.Salario_liquido</td>
+            </tr>
+        }
     }
     <thead>
         <tr>
@@ -101,128 +105,3 @@
     </thead>
 </table>
 
-<!-- <caption>Folha de pagamento</caption>
-    <thead>
-        <tr>
-
-            <th scope="col" colspan="1">EMPRESA</th>
-            <th scope="col">CNPJ</th>
-            <th scope="col">FOLHA</th>
-        </tr>
-    </thead>
-    <tbody>
-        foreach(var folha in Model)
-        {
-            <tr>
-                <td>folha.Id_empresas</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Nome</td>
-                <td>folha.Id_funcionarios</td>
-                <td>1234567891-11</td>
-                <td></td>
-                <td>1</td>
-                <td></td>
-            </tr>
-        <thead>
-            <tr>
-                <th scope="col">Registo</th>
-                <th scope="col">Empregado</th>
-                <th scope="col">Função</th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>N registro</td>
-                <td>Nome do empregado</td>
-                <td>Função funcionário</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </thead>
-        <thead>
-            <tr>
-                <th scope="col">Banco</th>
-                <th scope="col">Conta corrente</th>
-                <th scope="col">Salário</th>
-                <td></td>
-                <th scope="col">Referência</th>
-                <td></td>
-            </tr>
-            <tr>
-                <td>000 0000</td>
-                <td>00000-0</td>
-                <td>R$/Mês</td>
-                <td></td>
-                <td>00/0000</td>
-                <td></td>
-            </tr>
-        </thead>
-        <thead>
-            <tr>
-                <th scope="col">CÓD</th>
-                <th scope="col">CONTA</th>
-                <th scope="col">QUANTIDADE</th>
-                <th scope="col">VENCIMENTO</th>
-                <th scope="col">DESCONTO</th>
-                <td></td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">001</th>
-                <td>INSS</td>
-                <td>255,65</td>
-                <td>154,25</td>
-                <td>185,54</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        <thead>
-            <tr>
-                <th colspan="1"></th>
-                <th>TOTAIS</th>
-                <th>Liquído</th>
-                <th>Vencimentos</th>
-                <th>Descontos</th>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>R$</td>
-                <td>R$</td>
-                <td>R$</td>
-                <td></td>
-            </tr>
-        </thead>
-        <thead>
-            <tr>
-                <th colspan="3">Assinatura: _____________________________________________________</th>
-                <th></th>
-                <td></td>
-                <th colspan="1">Data:__/__/_____</th>
-                <td></td>
-                <td></td>
-            </tr>
-        </thead>
-   </tbody> -->

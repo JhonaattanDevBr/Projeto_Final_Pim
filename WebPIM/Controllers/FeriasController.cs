@@ -1,12 +1,131 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebPIM.Models;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace WebPIM.Controllers
 {
     public class FeriasController : Controller
     {
+        private string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
         public IActionResult Ferias()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AgendandoFerias(AgendamentoFeriasModel ferias)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (AgendaFerias(ferias))
+                    {
+                        TempData["MensagemSucesso"] = "Agendamento feito com Sucesso";
+                        return RedirectToAction("Ferias", "Ferias");
+                    }
+                    TempData["MensagemErro"] = "Falha no agendamento";
+                }
+                catch(Exception ex)
+                {
+                    TempData["MensagemErro"] = "Erro no agendamento" + ex.Message;
+                }
+            }
+            return View("Ferias", ferias);
+        }
+        private bool AgendaFerias(AgendamentoFeriasModel ferias)
+        {
+            using (SqlConnection conexaoDB = new SqlConnection(conexaoSQL))
+            {
+                conexaoDB.Open();
+
+                string query = $"INSERT INTO Agendamento_ferias (Primeiro_mes, Primeiro_periodo, Segundo_mes, Segundo_periodo, Terceiro_mes, Terceiro_periodo, Dias_restantes, Dias_vendidos, primeira_parcela_decimo)" +
+                        $"VALUES(@primeiroMes, @primeiroPeriodo, @segundoMes, @segundoPeriodo, @terceiroMes, @terceiroPeriodo, @diasRestantes, @diasVendidos, @primeira_parcela_decimo)";
+
+                using (SqlCommand command = new SqlCommand(query, conexaoDB))
+                {
+                    command.Parameters.AddWithValue("@primeiroMes", ferias.PrimeiroMes);
+                    command.Parameters.AddWithValue("@primeiroPeriodo", ferias.PrimeiroPeriodo);
+                    command.Parameters.AddWithValue("@segundoMes", ferias.SegundoMes);
+                    command.Parameters.AddWithValue("@segundoPeriodo", ferias.SegundoPeriodo);
+                    command.Parameters.AddWithValue("@terceiroMes", ferias.TerceiroMes);
+                    command.Parameters.AddWithValue("@terceiroPeriodo", ferias.TerceiroPeriodo);
+                    command.Parameters.AddWithValue("@diasRestantes", ferias.Dias_restantes);
+                    command.Parameters.AddWithValue("@diasVendidos", ferias.Dias_vendidos);
+                    command.Parameters.AddWithValue("@primeira_parcela_decimo", ferias.Primeira_parcela_decimo);
+                    
+                    int agendamento = command.ExecuteNonQuery();
+
+                    return agendamento > 0;
+                }
+            }
+        }
+
+        /*public ActionResult Agendar (FeriasModel ferias)
+        {
+            if (ModelState.IsValid)
+            {
+                if (VerficaTempoTrabalhado(ferias.Id_funcionario, ferias.Saida))
+                {
+                    string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
+                    SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
+
+                    return RedirectToAction("Index", "Home"); // Inserção bem-sucedida
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Erro"); // Falha na inserção
+                }
+            }
+            return View("Ferias", ferias);
+        }*/
+
+        /*private bool VerficaTempoTrabalhado (int Id_funcionario, DateTime Saida)
+        {
+            List<FeriasModel> ListaFuncionario = new List<FeriasModel> ();
+
+            var funcionario = ListaFuncionario.FirstOrDefault(e => e.Id_funcionario == Id_funcionario);
+            if (funcionario != null) {
+                TimeSpan tempoTrabalhado = DateTime.Now - Saida;
+
+                if(tempoTrabalhado.TotalDays >= 365 && Saida.AddYears(1)<= DateTime.Now)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }*/
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*public IActionResult Ferias()
         {
             List<AgendamentoFeriasModel> SolicitacaoFerias = RecebeFerias();
             List<FeriasModel> ferias = Feriasmodel();
@@ -16,6 +135,8 @@ namespace WebPIM.Controllers
         public IActionResult AgendarFerias()
         {
             var conexaoSql = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
+            
+            
             SqlConnection conexaoDB = new SqlConnection(conexaoSql);
             AgendamentoFeriasModel agendamento = new AgendamentoFeriasModel();
 
@@ -23,7 +144,11 @@ namespace WebPIM.Controllers
 
             conexaoDB.Open();
 
-            string query = "$SELECT * FROM Agendamento_ferias";
+            string query = $"INSERT INTO Agendamento_ferias " +
+                $"WHERE Agendamento_ferias.Id_agendamento = Ferias.Id_agendamento_ferias" +
+                $"(PrimeiroPeriodo, PrimeiroMes, SegundoPeriodo, SegundoMes, TerceiroPeriodo,TerceiroMes, Dias_restantes, Dias_vendidos,Primeira_parcela_decimo)" +
+                $"VALUES" +
+                $"(@primeiroPeriodo,@primeiroMes,@segundoPeriodo,@segundoMes,@terceiroPeriodo,@terceiroMes,@primeira_parcela_decimo)";
             SqlCommand command = new SqlCommand(query, conexaoDB);
 
             SqlDataReader reader = command.ExecuteReader();
@@ -110,6 +235,5 @@ namespace WebPIM.Controllers
             }
 
             return Ferias;
-        }
+        }*/
     }
-}

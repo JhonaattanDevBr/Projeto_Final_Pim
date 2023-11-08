@@ -76,7 +76,7 @@ namespace WebPIM.Controllers
                 DateTime dataHora = DateTime.Now;
 
                 string HorasFormatada = dataHora.ToString("T");
-                string dataFormatada = dataHora.ToString("dd/MM/yyyy");
+                string dataFormatada = dataHora.ToString ("dd/MM/yyyy");
 
                 conexaoDB.Open();
 
