@@ -41,9 +41,9 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
             }
             else
             {
-                foreach (var convOdontologico in popularListaEmpresas)
+                foreach (var empresas in popularListaEmpresas)
                 {
-                    cmbListarEmpresas.Items.Add(convOdontologico);
+                    cmbListarEmpresas.Items.Add(empresas);
                 }
                 cmbListarEmpresas.ValueMember = "Key";
                 cmbListarEmpresas.DisplayMember = "Value";
@@ -70,8 +70,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
         private void AtualizarTabela()
         {
             dgvVisualizarFuncionarios.Columns.Clear();
-            DataTable tabelaFUncionarios = _crud_Funcionarios.BuscarFuncionarios(IdEmpresa);
-            dgvVisualizarFuncionarios.DataSource = tabelaFUncionarios;
+            DataTable tabelaFuncionarios = _crud_Funcionarios.BuscarFuncionarios(IdEmpresa);
+            dgvVisualizarFuncionarios.DataSource = tabelaFuncionarios;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
             dgvVisualizarFuncionarios.Columns[0].Width = 70;
