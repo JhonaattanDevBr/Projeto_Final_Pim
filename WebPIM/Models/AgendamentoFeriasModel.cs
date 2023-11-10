@@ -17,6 +17,7 @@ namespace WebPIM.Models
         public bool VenderFerias { get; set; }                                              
         public int Dias_vendidos { get; set; }
         public int Primeira_parcela_decimo { get; set; }
-
+        public int Id_funcionario { get; set; }
+       
     }
 }

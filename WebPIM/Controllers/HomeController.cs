@@ -20,46 +20,49 @@ namespace WebPIM.Controllers
 
             var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
             SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
-            FuncionarioModel funcionario = new FuncionarioModel();
-
+           
             List<FuncionarioModel> lista = new List<FuncionarioModel>();
+
+            // Agora você pode usar Session["id_funcionario"] para recuperar o ID do funcionário logado
+            var id_funcionario_logado = HttpContext.Session.GetInt32("id_funcionario");
 
             conexaoDB.Open();
 
-            string query = "SELECT * FROM Funcionarios";
+            string query = $"SELECT * FROM Funcionarios WHERE Id_funcionario = '{id_funcionario_logado}'";
 
-            SqlCommand command = new SqlCommand(query, conexaoDB);
-            SqlDataReader reader = command.ExecuteReader();
+            using SqlCommand command = new SqlCommand(query, conexaoDB);
+            using SqlDataReader reader = command.ExecuteReader();
 
 
             while (reader.Read())
             {
-                funcionario.Nome = reader.GetString(1);
-                funcionario.Sobrenome = reader.GetString(2);
-                funcionario.Idade = reader.GetInt32(3);
-                funcionario.Sexo = reader.GetString(4);
-                funcionario.Id_endereco = reader.GetInt32(5);
-                funcionario.Registro = reader.GetInt32(6);
-                funcionario.Carga_horaria = reader.GetInt32(7);
-                funcionario.Cpf = reader.GetString(8);
-                funcionario.Rg = reader.GetString(9);
-                funcionario.Email = reader.GetString(10);
-                funcionario.Email_secundario = reader.GetString(11);
-                funcionario.Telefone = reader.GetString(12);
-                funcionario.Cell_principal = reader.GetString(13);
-                funcionario.Cell_secundario = reader.GetString(14);
-                funcionario.Num_dependentes = reader.GetInt32(15);
-                funcionario.Id_planos_saude = reader.GetInt32(16);
-                funcionario.Id_planos_odontologicos = reader.GetInt32(17);
-                funcionario.Id_empresas = reader.GetInt32(18);
-                funcionario.Cargo = reader.GetString(19);
-                funcionario.Salario = reader.GetFloat(20);
-                funcionario.Data_admissao = reader.GetDateTime(21);
+                FuncionarioModel funcionario = new FuncionarioModel
+                {
+                    Nome = reader.GetString(1),
+                    Sobrenome = reader.GetString(2),
+                    Idade = reader.GetInt32(3),
+                    Sexo = reader.GetString(4),
+                    Id_endereco = reader.GetInt32(5),
+                    Registro = reader.GetInt32(6),
+                    Carga_horaria = reader.GetInt32(7),
+                    Cpf = reader.GetString(8),
+                    Rg = reader.GetString(9),
+                    Email = reader.GetString(10),
+                    Email_secundario = reader.GetString(11),
+                    Telefone = reader.GetString(12),
+                    Cell_principal = reader.GetString(13),
+                    Cell_secundario = reader.GetString(14),
+                    Num_dependentes = reader.GetInt32(15),
+                    Id_planos_saude = reader.GetInt32(16),
+                    Id_planos_odontologicos = reader.GetInt32(17),
+                    Id_empresas = reader.GetInt32(18),
+                    Cargo = reader.GetString(19),
+                    Salario = reader.GetFloat(20),
+                    Data_admissao = reader.GetDateTime(21)
+                };
 
                 lista.Add(funcionario);
             }
-
-
             return lista;
         }
 

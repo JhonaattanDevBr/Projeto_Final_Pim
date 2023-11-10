@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Página de ferias";
 }
-@model WebPIM.Models.AgendamentoFeriasModel
+@model List<FeriasModel>
 
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -34,354 +34,67 @@
     </nav>
 </header>
 
+<div class="container">
 
-    <div class="container">
     <div class="display-6" style="margin-top:20px; margin-bottom:20px">
         <a>
-            <h3 style="width:700px" class="display-4">Agendamento de férias</h3>
-        </a>
-        @if (TempData["MensagemSucesso"] != null)
-        {
-            <div class="alert alert-success">@TempData["MensagemSucesso"]</div>
-        }
-
-        @if (TempData["MensagemErro"] != null)
-        {
-            <div class="alert alert-danger">@TempData["MensagemErro"]</div>
-        }
-    </div>
-    <div class="row border Regular shadow" style="margin-top:20px; margin-bottom:20px">
-        <a>
-           Status férias:
+            <h3 style="width:700px" class="display-4">Minhas férias</h3>
         </a>
     </div>
-    <br />
-    <a>
-        <i style="font-size:30px; margin-right:20px; margin-left:10px"></i><span style="font-size:30px">Selecione o periodo desejados de férias</span>
-    </a>
 
-    @using (Html.BeginForm("AgendandoFerias","Ferias", FormMethod.Post))
+    @if (ViewBag.ErrorMessage != null)
     {
-        <div class="container" style="margin-bottom:20px">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" for="PrimeiroPeriodo" name="Periodo" id="inlineRadio1" value="PrimeiroPeriodo"><!--inlineRadioOptions-->
-            <label class="form-check-label" for="PrimeiroPeriodo">1</label><!--for="inlineRadio1"-->
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" for="SegundoPeriodo" name="Periodo" id="inlineRadio2" value="SegundoPeriodo"><!--inlineRadioOptions-->
-            <label class="form-check-label" for="SegundoPeriodo">2</label><!--for="inlineRadio2"-->
-        </div>
-        <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" for="TerceiroPeriodo" name="Periodo" id="inlineRadio3" value="TerceiroPeriodo">
-            <label class="form-check-label" for="TerceiroPeriodo">3</label>
-        </div>
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMessage
     </div>
-
-    <div class="container border" id="divPeriod1" style="display:none; margin-bottom:20px">
-        <h4>Primeiro periodo</h4>
-        <form asp-action="AgendandoFerias" method="post">
-                <div class="form-group">
-                    <label asp-for="PrimeiroMes">Primeiro Mês</label>
-                    <input type="number" asp-for="PrimeiroMes" class="form-control">
-                    <span asp-validation-for="PrimeiroMes" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label asp-for="PrimeiroPeriodo">Quantidade Dias</label>
-                    <select class="form-control"  asp-for="PrimeiroPeriodo" style="width:70px; margin-bottom:20px">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                    </select>
-                    <span asp-validation-for="PrimeiroPeriodo" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-group">
-                    <div class="form-check form-check-inline">
-                        <input asp-for="VenderFerias" class="form-check-input"/>
-                        <label class="form-check-label" for="flexCheckDefault">Vender período de férias</label>
-                    </div>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label asp-for="Dias_vendidos">Dias a vender</label>
-                    <select class="form-control" asp-for="Dias_vendidos" style="width:70px; margin-bottom:20px">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                    </select>
-                </div>
-                <input type="submit" value="Agendar" asp-controller="Ferias" asp-action="AgendandoFerias" class="btn btn-primary"/>
-            </form>
-    </div>
-
-    <div class="container border" id="divPeriod2" style="display:none; margin-bottom:20px">
-        <h4>Segundo periodo</h4>
-            <form asp-action="AgendandoFerias" method="post">
-                <div class="form-group">
-                    <label asp-for="SegundoMes">Segundo Mês</label>
-                    <input type="number" asp-for="SegundoMes" class="form-control">
-                    <span asp-validation-for="SegundoMes" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label asp-for="SegundoPeriodo">Quantidade Dias</label>
-                    <select class="form-control"  asp-for="SegundoPeriodo" style="width:70px; margin-bottom:20px">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                    </select>
-                    <span asp-validation-for="SegundoPeriodo" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-group">
-                    <div class="form-check form-check-inline">
-                        <input asp-for="VenderFerias" class="form-check-input"/>
-                        <label class="form-check-label" for="flexCheckDefault">Vender período de férias</label>
-                    </div>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label asp-for="Dias_vendidos">Dias a vender</label>
-                    <select class="form-control" asp-for="Dias_vendidos" style="width:70px; margin-bottom:20px">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                    </select>
-                </div>
-                <input type="submit" value="Agendar" asp-controller="Ferias" asp-action="AgendandoFerias" class="btn btn-primary"/>
-            </form>
-    </div>
-
-    <div class="container border" id="divPeriod3" style="display: none; margin-bottom:20px">
-        <h4>Terceiro periodo</h4>
-            <form asp-action="AgendandoFerias" method="post">
-                <div class="form-group">
-                    <label asp-for="TerceiroMes">Terceiro Mês</label>
-                    <input type="number" asp-for="TerceiroMes" class="form-control">
-                    <span asp-validation-for="TerceiroMes" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label asp-for="TerceiroPeriodo">Quantidade Dias</label>
-                    <select class="form-control"  asp-for="TerceiroPeriodo" style="width:70px; margin-bottom:20px">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                    </select>
-                    <span asp-validation-for="TerceiroPeriodo" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-group">
-                    <div class="form-check form-check-inline">
-                        <input asp-for="VenderFerias" class="form-check-input"/>
-                        <label class="form-check-label" for="flexCheckDefault">Vender período de férias</label>
-                    </div>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label asp-for="Dias_vendidos">Dias a vender</label>
-                    <select class="form-control" asp-for="Dias_vendidos" style="width:70px; margin-bottom:20px">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                    </select>
-                </div>
-                <input type="submit" value="Agendar" asp-controller="Ferias" asp-action="AgendandoFerias" class="btn btn-primary"/>
-            </form>
-        </div>    
     }
-    @* <button type="submit" id="Enviar" asp-controller="Ferias" asp-action="AgendandoFerias" class="btn btn-primary" style="display:none;">Enviar</button> *@
 
-    <script>
-        function togglePerioDivs()
+
+    @if (Model != null)
+    {
+        @foreach (var ferias in Model)
         {
-            var selectedValue = document.querySelector('input[name="Periodo"]:checked').value;
-
-            document.getElementById("divPeriod1").style.display = "none";
-            document.getElementById("divPeriod2").style.display = "none";
-            document.getElementById("divPeriod3").style.display = "none";
-
-            if (selectedValue === "PrimeiroPeriodo") {
-                document.getElementById("divPeriod1").style.display = "block";
-                document.getElementById("Enviar").style.display = "block";
-            } else if (selectedValue === "SegundoPeriodo") {
-                document.getElementById("divPeriod1").style.display = "block";
-                document.getElementById("divPeriod2").style.display = "block";
-                document.getElementById("Enviar").style.display = "block";
-            } else if (selectedValue === "TerceiroPeriodo") {
-                document.getElementById("divPeriod1").style.display = "block";
-                document.getElementById("divPeriod2").style.display = "block";
-                document.getElementById("divPeriod3").style.display = "block";
-                document.getElementById("Enviar").style.display = "block";
-            }
+            <div class="row border Regular shadow" style="margin-top:20px; margin-bottom:20px">
+                <p>
+                    Status férias: @ferias?.ObterStatusFerias() <!-- Adicione a verificação para ferias também -->
+                </p>
+            </div>
         }
-        var radioButtons = document.querySelectorAll('input[name="Periodo"]');
-        radioButtons.forEach(function (radioButton) {
-            radioButton.addEventListener("change", togglePerioDivs);
-        });
-        togglePerioDivs();
-    </script>
-</>
+    }
 
-
-
+    @if (Model != null && Model.Any<FeriasModel>())
+    {
+        foreach (FeriasModel ferias in Model)
+        {
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="col">
+                                    Nome: @ferias.Nome @ferias.Sobrenome
+                                </div>
+                                <br>
+                                <div class="col">
+                                    Número de registro @ferias.Registro
+                                </div>
+                                <br />
+                                <div class="col">
+                                    Início das férias: @ferias.Saida?.ToString("dd/MM/yyyy")
+                                </div>
+                                <br />
+                                <div class="col">
+                                    Data final das férias: @ferias.Retorno?.ToString("dd/MM/yyyy")
+                                </div>
+                                <br />
+                                <div class="col">
+                                    Período de férias: @ferias.Dias_gozados
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

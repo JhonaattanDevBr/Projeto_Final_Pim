@@ -32,10 +32,13 @@
     </div>
     @if (TempData["MensagemErro"] != null)
     {
-        <div class="alert alert-danger" role="alert" style="margin-top: 15px">
-            @TempData["MensagemErro"]
+        <div class="alert alert-danger">
+        
+            <p>@TempData["MensagemErro"]</p>
+       
         </div>
     }
+   
     <form asp-controller="Login" asp-action="Entrar">
         <!--form-group-->
 

@@ -47,52 +47,59 @@
             <tr>
                 <th scope="col" colspan="1">EMPRESA</th>
                 <th scope="col">CNPJ</th>
-                <th scope="col">FOLHA</th>
+                <th></th>
+                <th></th>
             </tr>
             <tr>
                 <td>@folha.Nome_fantasia</td>
                 <td>@folha.Cnpj</td>
                 <td></td>
-            </tr>
-            <tr>
-                <th scope="col">Registo</th>
-                <th scope="col">Empregado</th>
-                <th scope="col">Função</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
                 <td></td>
             </tr>
             <tr>
-                <th scope="col">Banco</th>
-                <th scope="col">Conta corrente</th>
-                <th scope="col">Salário</th>
+                <th scope="col">REGISTRO</th>
+                <th scope="col">FUNCIONÁRIO</th>
+                <th scope="col">FUNÇÃO</th>
+                <th scope="col">HORAS EXTRAS</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td>@folha.Salario_liquido</td>
+                <td>@folha.Registro</td>
+                <td>@folha.Nome</td>
+                <td>@folha.Cargo</td>
+                <td>@folha.Horas_extras</td>
             </tr>
             <tr>
-                <th scope="col">CONTA</th>
+                <th scope="col">INSALUBRIDADE</th>
+                <th scope="col">INSS</th>
+                <th scope="col">IRRF</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>@folha.Insalubridade</td>
+                <td>@folha.Inss</td>
+                <td>@folha.Irrf</td>
+                <td></td>
+            </tr>
+            <tr>
                 <th scope="col">VENCIMENTO</th>
                 <th scope="col">DESCONTO</th>
-                <th scope="col">INSS</th>
+                <th scope="col">ADICIONAL NOTA</th>
+                <th scope="col">VALE TRANSPORTE</th>
             </tr>
             <tr>
-                <td>0000</td>
                 <td>@folha.Vencimentos</td>
                 <td>@folha.Descontos</td>
-                <td>@folha.Inss</td>
+                <td>@folha.Adicional_not</td>
+                <td>@folha.VL_transporte</td>
             </tr>
             <tr>
-                <th colspan="1"></th>
-                <th>TOTAIS</th>
-                <th>Liquído</th>
+                <th colspan="2">TOTAIS</th>
+                <th></th>
+                <th>Liquído à receber</th>
             </tr>
             <tr>
-                <td>@folha.Salario_base</td>
+                <td colspan="2">@folha.Salario_base</td>
+                <td></td>
                 <td>@folha.Salario_liquido</td>
             </tr>
         }
