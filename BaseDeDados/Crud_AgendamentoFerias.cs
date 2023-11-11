@@ -22,15 +22,15 @@ namespace BaseDeDados
             try
             {
                 conexaoDb.Open();
-
+                // VOU TESTAR QUANDO CHEGAR
                 string query = "INSERT INTO Agendamento_ferias (Primeiro_mes, Primeiro_periodo, Segundo_mes, Segundo_periodo, Terceiro_mes, Terceiro_periodo, Dias_restantes, " +
-                               "Dias_vendidos, Primeira_parcela_decimo) " +
-                               "VALUES (@primeiroMes, @primeiroPeriodo, @segundoMes, @segundoPeriodo, @terceiroMes, @terceiroPeriodo, @diasRestantes, @diasVendidos, @primeiraParcelaDecimo)";
+                               "Dias_vendidos, Primeira_parcela_decimo, Id_funcionario) " +
+                               "VALUES (@primeiroMes, @primeiroPeriodo, @segundoMes, @segundoPeriodo, @terceiroMes, @terceiroPeriodo, @diasRestantes, @diasVendidos, @primeiraParcelaDecimo, @idFuncionario)";
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
 
                 var _pmtPrimeiroMes = cmd.CreateParameter();
                 _pmtPrimeiroMes.ParameterName = "@primeiroMes";
-                _pmtPrimeiroMes.DbType = DbType.Int32;
+                _pmtPrimeiroMes.DbType = DbType.String;
                 _pmtPrimeiroMes.Value = _agendamentoFerias.PrimeiroMes;
                 cmd.Parameters.Add(_pmtPrimeiroMes);
 
@@ -82,6 +82,12 @@ namespace BaseDeDados
                 _pmtPrimeiraParcelaDecimo.Value = _agendamentoFerias.PrimeiraParcelaDecimo;
                 cmd.Parameters.Add(_pmtPrimeiraParcelaDecimo);
 
+                var _pmtIdFuncionario = cmd.CreateParameter();
+                _pmtIdFuncionario.ParameterName = "@idFuncionario";
+                _pmtIdFuncionario.DbType = DbType.Int32;
+                _pmtIdFuncionario.Value = _agendamentoFerias.IdFuncionario;
+                cmd.Parameters.Add(_pmtIdFuncionario);
+
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     conexaoDb.Close();
@@ -119,8 +125,7 @@ namespace BaseDeDados
                                 "Agendamento_ferias.Terceiro_mes as '3º Mes'," +
                                 "Agendamento_ferias.Terceiro_periodo as '3º Periodo'," +
                                 "Agendamento_ferias.Dias_vendidos as 'Dias vendidos'," +
-                                "Agendamento_ferias.Dias_restantes as 'Dias restantes', " +
-                                "'pendente, agendada, atrasada' AS Status FROM Funcionarios " +
+                                "Agendamento_ferias.Dias_restantes as 'Dias restantes' FROM Funcionarios " +
                                 "LEFT JOIN Agendamento_ferias ON Funcionarios.Id_funcionario = Agendamento_ferias.Id_funcionario WHERE Funcionarios.Id_empresas = @id";
 
                 SqlCommand cmd = new SqlCommand(querry, conexaoDb);

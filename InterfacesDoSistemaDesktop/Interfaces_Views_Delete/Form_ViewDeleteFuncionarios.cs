@@ -108,6 +108,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
             Id = "";
         }
 
+  
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
             

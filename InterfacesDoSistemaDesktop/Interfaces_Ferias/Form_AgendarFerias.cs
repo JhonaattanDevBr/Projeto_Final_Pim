@@ -18,9 +18,10 @@ namespace InterfacesDoSistemaDesktop
         AgendamentoFerias _agendamentoFerias = new AgendamentoFerias();
         Crud_AgendamentoFerias _crud_AgendamentoFerias = new Crud_AgendamentoFerias();
 
-        public Form_AgendarFerias()
+        public Form_AgendarFerias(string id)
         {
             InitializeComponent();
+            _agendamentoFerias.IdFuncionario = id;
         }
 
         // Preciso colocar uma validação onde nenhum dos tres campos possa ser maior q 30
@@ -237,13 +238,14 @@ namespace InterfacesDoSistemaDesktop
                 _agendamentoFerias.TerceiroPeriodo = txtTerceiroPeriodoDias.Text;
             }
 
-            //int dias = 30;
+            int dias = 30;
             //int diasRestantes = 30 - Convert.ToInt32(txtQuantidade.Text);
 
             if(cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
             {
                 _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
                 _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
+                _agendamentoFerias.DiasRestantes = dias.ToString();
 
                 bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
                 if (retornoAutenticacao)

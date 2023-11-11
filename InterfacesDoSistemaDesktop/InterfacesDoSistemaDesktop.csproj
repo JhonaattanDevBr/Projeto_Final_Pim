@@ -208,11 +208,11 @@
     <Compile Include="Interfaces_Acesso\Form_Accesskey.Designer.cs">
       <DependentUpon>Form_Accesskey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces_Ferias\Form_ConsultarFerias.cs">
+    <Compile Include="Interfaces_Ferias\Form_ConsultarTabelaFerias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces_Ferias\Form_ConsultarFerias.Designer.cs">
-      <DependentUpon>Form_ConsultarFerias.cs</DependentUpon>
+    <Compile Include="Interfaces_Ferias\Form_ConsultarTabelaFerias.Designer.cs">
+      <DependentUpon>Form_ConsultarTabelaFerias.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadConvMedico.cs">
       <SubType>Form</SubType>
@@ -363,8 +363,8 @@
     <EmbeddedResource Include="Interfaces_Acesso\Form_Accesskey.resx">
       <DependentUpon>Form_Accesskey.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces_Ferias\Form_ConsultarFerias.resx">
-      <DependentUpon>Form_ConsultarFerias.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_ConsultarTabelaFerias.resx">
+      <DependentUpon>Form_ConsultarTabelaFerias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadConvMedico.resx">
       <DependentUpon>Form_CadConvMedico.cs</DependentUpon>

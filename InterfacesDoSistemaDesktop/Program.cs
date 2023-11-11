@@ -1,6 +1,7 @@
 ﻿using InterfacesDoSistemaDesktop.Interfaces_Acesso;
 using InterfacesDoSistemaDesktop.Interfaces_AtualizarDados;
 using InterfacesDoSistemaDesktop.Interfaces_Ferias;
+//using InterfacesDoSistemaDesktop.Interfaces_Ferias;
 using InterfacesDoSistemaDesktop.Interfaces_Formularios;
 using InterfacesDoSistemaDesktop.Interfaces_Views_Delete;
 using System;
@@ -22,7 +23,7 @@ namespace InterfacesDoSistemaDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form_ConsultarFerias());
+            Application.Run(new Form_ConsultarTabelaFerias());
         }
     }
 }
