@@ -48,7 +48,7 @@
                 <div class="card-body">
                     <div class="container">
                         <div class="col">
-                            Nome: @funcionario.Nome
+                            Nome: @funcionario.Nome @funcionario.Sobrenome
                         </div>
                         <br />
                         <div class="col">
@@ -56,7 +56,7 @@
                         </div>
                         <br />
                         <div class="col">
-                            Data Admissão: @funcionario.Data_admissao
+                                Data Admissão: @funcionario.Data_admissao.ToString("dd/MM/yyyy")
                         </div>
                         <br />
                         <div class="col">
@@ -75,7 +75,7 @@
                 <div class="card-header">Linha do Tempo</div>
                 <div class="card-body">
                     <div class="col">
-                        Informe do último salário: 
+                        Informe do último salário: @funcionario.Salario
                     </div>
                     <br>
                     <div class="col">

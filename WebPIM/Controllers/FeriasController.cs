@@ -1,115 +1,82 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebPIM.Models;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace WebPIM.Controllers
 {
     public class FeriasController : Controller
     {
+        private string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
         public IActionResult Ferias()
         {
-            List<AgendamentoFeriasModel> SolicitacaoFerias = RecebeFerias();
-            List<FeriasModel> ferias = Feriasmodel();
-            return View();
+            try
+            {
+                List<FeriasModel> ferias = ObterListaFerias();
+                ViewBag.StatusFerias = CalcularStatusFerias(ferias);
+
+                return View(ferias);
+            }
+            catch (Exception ex)
+            {
+                // Lide com a exceção de forma adequada, talvez exibindo uma mensagem de erro na View
+                ViewBag.ErrorMessage = "Ocorreu um erro ao obter as informações de férias.";
+                return View(new List<FeriasModel>());
+            }
         }
 
-        public IActionResult AgendarFerias()
+        private string CalcularStatusFerias(List<FeriasModel> ferias)
         {
-            var conexaoSql = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
-            SqlConnection conexaoDB = new SqlConnection(conexaoSql);
-            AgendamentoFeriasModel agendamento = new AgendamentoFeriasModel();
+            bool todasLiberadas = ferias.All(f => f.ObterStatusFerias() == "Liberada");
+            bool todasNaoAgendadas = ferias.All(f => f.ObterStatusFerias() == "Não Agendada");
 
-            List<AgendamentoFeriasModel> lista = new List<AgendamentoFeriasModel>();
-
-            conexaoDB.Open();
-
-            string query = "$SELECT * FROM Agendamento_ferias";
-            SqlCommand command = new SqlCommand(query, conexaoDB);
-
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            if (todasLiberadas)
             {
-                AgendamentoFeriasModel agendamentoferias = new AgendamentoFeriasModel();
-
-                agendamentoferias.PrimeiroPeriodo = reader.GetInt32(1);
-                agendamentoferias.PrimeiroMes = reader.GetInt32(2);
-                agendamentoferias.SegundoPeriodo = reader.GetInt32(3);
-                agendamentoferias.SegundoMes = reader.GetInt32(4);
-                agendamentoferias.TerceiroPeriodo = reader.GetInt32(5);
-                agendamentoferias.TerceiroMes = reader.GetInt32(6);
-                agendamentoferias.Dias_restantes = reader.GetInt32(7);
-                agendamentoferias.Dias_vendidos = reader.GetInt32(8);
-                agendamentoferias.Primeira_parcela_decimo = reader.GetInt32(9);
-
-                lista.Add(agendamentoferias);
+                return "Férias liberada";
             }
-            conexaoDB.Close();
-
-            return RedirectToAction("Index", "Home");
+            else if (todasNaoAgendadas)
+            {
+                return "Férias nãp agendada";
+            }
+            else
+            {
+                return "Suas férias não está liberada ou agendada";
+            }
         }
 
-        public List<AgendamentoFeriasModel> RecebeFerias()
+        public List<FeriasModel> ObterListaFerias()
         {
-            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
-            SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
+            List<FeriasModel> lista = new List<FeriasModel>();
 
-            List<AgendamentoFeriasModel> agendamento = new List<AgendamentoFeriasModel>();
-
-            conexaoDB.Open();
-
-            string query = $"SELECT * FROM Agendamento_ferias";
-            SqlCommand command = new SqlCommand(query, conexaoDB);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            using (SqlConnection conexaoDB = new SqlConnection(conexaoSQL))
             {
-                AgendamentoFeriasModel agendamentoferias = new AgendamentoFeriasModel();
+                conexaoDB.Open();
+                string query = $"SELECT Ferias.*," +
+                    $"Funcionarios.Nome AS nome, Funcionarios.Sobrenome AS sobrenome, Funcionarios.Registro AS registro " +
+                    $"FROM Ferias " +
+                    $"INNER JOIN Funcionarios ON Ferias.Id_funcionarios = Funcionarios.Id_funcionario";
 
-                agendamentoferias.PrimeiroPeriodo = reader.GetInt32(1);
-                agendamentoferias.PrimeiroMes = reader.GetInt32(2);
-                agendamentoferias.SegundoPeriodo = reader.GetInt32(3);
-                agendamentoferias.SegundoMes = reader.GetInt32(4);
-                agendamentoferias.TerceiroPeriodo = reader.GetInt32(5);
-                agendamentoferias.TerceiroMes = reader.GetInt32(6);
-                agendamentoferias.Dias_restantes = reader.GetInt32(7);
-                agendamentoferias.Dias_vendidos = reader.GetInt32(8);
-                agendamentoferias.Primeira_parcela_decimo = reader.GetInt32(9);
+                using (SqlCommand command = new SqlCommand(query, conexaoDB))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            FeriasModel ferias = new FeriasModel();
 
-                agendamento.Add(agendamentoferias);
+                            ferias.Dias_gozados = reader.GetInt32(1);
+                            ferias.Saida = reader.GetDateTime(2);
+                            ferias.Retorno = reader.GetDateTime(3);
+                            ferias.Nome = reader.GetString(reader.GetOrdinal("nome"));
+                            ferias.Sobrenome = reader.GetString(reader.GetOrdinal("sobrenome"));
+                            ferias.Registro = reader.GetInt32(reader.GetOrdinal("registro"));
+
+                            lista.Add(ferias);
+                        }
+                        return lista;
+                    }
+                }
             }
-
-            return agendamento;
-        }
-        public List<FeriasModel> Feriasmodel()
-        {
-            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
-            SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
-
-            List<FeriasModel> Ferias = new List<FeriasModel>();
-
-            conexaoDB.Open();
-
-            string query = $"SELECT * FROM Ferias";
-            SqlCommand command = new SqlCommand(query, conexaoDB);
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                FeriasModel ferias = new FeriasModel();
-
-                ferias.Dias_gozados = reader.GetInt32(1);
-                ferias.Saida = reader.GetDateTime(2);
-                ferias.Retorno = reader.GetDateTime(3);
-                ferias.Dias_vendidos = reader.GetInt32(4);
-                ferias.Abono_pecuniario = reader.GetFloat(5);
-                ferias.Um_terco_abonoP = reader.GetFloat(6);
-                ferias.Id_funcionario = reader.GetInt32(11);
-                ferias.Id_folha_pagamento = reader.GetInt32(12);
-                ferias.Id_agendamento_ferias = reader.GetInt32(13);
-
-                Ferias.Add(ferias);
-            }
-
-            return Ferias;
         }
     }
 }

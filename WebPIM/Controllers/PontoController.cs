@@ -9,7 +9,6 @@ namespace WebPIM.Controllers
             public int TotalHorasTrabalhadas { get; set; }
             public int HorasFaltantes { get; set; }
             public int HorasACompensar { get; set; }
-
             public IActionResult Index()
             {
                 List<ApontamentoModel> listaPonto = ListarPontoEletronico();
@@ -76,7 +75,7 @@ namespace WebPIM.Controllers
                 DateTime dataHora = DateTime.Now;
 
                 string HorasFormatada = dataHora.ToString("T");
-                string dataFormatada = dataHora.ToString("dd/MM/yyyy");
+                string dataFormatada = dataHora.Date.ToString ("dd/MM/yyyy");//mudei aqui .Date
 
                 conexaoDB.Open();
 
@@ -113,18 +112,19 @@ namespace WebPIM.Controllers
 
                 var horastrabalhadas = CalcularHorasTrabalhadas(lista);
 
+                //iserirHoras(dataFormatada.ToString("dd/MM/yyyy"), horastrabalhadas);
                 iserirHoras(dataFormatada, horastrabalhadas);
                 conexaoDB.Close();
 
                 return RedirectToAction("Index", "Home");
             }
-
             public void iserirHoras(string dataFormatada, TimeSpan horasTrabalhadas)
             {
                 var conexaoSql = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
                 SqlConnection conexaoDB = new SqlConnection(conexaoSql);
 
                 conexaoDB.Open();
+
                 var NRegistro = HttpContext.Session.GetInt32("Registro");
 
                 string query = "UPDATE Apontamento " +
@@ -134,7 +134,6 @@ namespace WebPIM.Controllers
                 SqlCommand command = new SqlCommand(query, conexaoDB);
                 SqlDataReader reader = command.ExecuteReader();
             }
-
             private TimeSpan CalcularHorasTrabalhadas(List<ApontamentoModel> lista)
             {
                 foreach (var item in lista)

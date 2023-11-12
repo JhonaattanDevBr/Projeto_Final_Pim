@@ -44,83 +44,81 @@
             @TempData["MensagemErro"]
         </div>
     }
-<form>
+    <form>
   
-    <div class="col">
-      <label for="nome">Nome: </label>
-      <input type="text" asp-for="Nome" class="form-control" id="inputName" placeholder="Nome">
-      @Html.ValidationMessageFor(x => x.Nome)
-    </div>
-        <br>
-    <div class="col">
-      <label for="inputSobrenome">Sobrenome: </label>
-      <input type="text" asp-for="Sobrenome" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-      @Html.ValidationMessageFor(x => x.Sobrenome)  
-  </div>
-        <br>
-    <div class="form-group">
-        <label for="idade">Idade: </label>
-        <input type="number" asp-for="Idade" class="form-control">
-        @Html.ValidationMessageFor(x => x.Idade)
+        <div class="col">
+          <label for="nome">Nome: </label>
+          <input type="text" asp-for="Nome" class="form-control" id="inputName" placeholder="Nome">
+          @Html.ValidationMessageFor(x => x.Nome)
         </div>
-    <!--<div>
-        <label for="sexo">Sexo:  </label>
-    <div class="form-check form-check-inline">
-                <input type="radio" asp-for="Sexo" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
-        <label class="form-check-label" for="inlineRadio1">Feminino</label>
-    </div>
+            <br>
+        <div class="col">
+          <label for="inputSobrenome">Sobrenome: </label>
+          <input type="text" asp-for="Sobrenome" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+          @Html.ValidationMessageFor(x => x.Sobrenome)  
+        </div>
+            <br>
+        <div class="form-group">
+            <label for="idade">Idade: </label>
+            <input type="number" asp-for="Idade" class="form-control">
+            @Html.ValidationMessageFor(x => x.Idade)
+            </div>
+        <!--<div>
+            <label for="sexo">Sexo:  </label>
+        <div class="form-check form-check-inline">
+                    <input type="radio" asp-for="Sexo" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+            <label class="form-check-label" for="inlineRadio1">Feminino</label>
+        </div>
         
-    <div class="form-check form-check-inline">
-        <input type="radio" asp-for="Sexo" class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
-        <label class="form-check-label" for="inlineRadio2">Masculino</label>
-    </div>-->
-        <br>
-    </div>
-        <div class="form-group">
-            <label for="email">Email: </label>
-            <input type="text" asp-for="Email" class="form-control" placeholder="Informe o email">
-            @Html.ValidationMessageFor(x => x.Email)
+        <div class="form-check form-check-inline">
+            <input type="radio" asp-for="Sexo" class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+            <label class="form-check-label" for="inlineRadio2">Masculino</label>
+        </div>-->
+            <br>
+        <div>
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="text" asp-for="Email" class="form-control" placeholder="Informe o email">
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="emailsecundario">Email de Recuperação: </label>
+                <input type="text" asp-for="Email_Secundario" class="form-control" placeholder="Informe o email">
+                @Html.ValidationMessageFor(x => x.Email_Secundario)
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="senha">Senha: </label>
+                <input type="text" asp-for="Senha" class="form-control" placeholder="Informe uma senha">
+                @Html.ValidationMessageFor(x => x.Senha)
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="confirmarsenha">Confirmar senha: </label>
+                <input type="text" asp-for="Confirmacao_senha" class="form-control" placeholder="confirmar senha senha">
+                @Html.ValidationMessageFor(x => x.Senha)
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="empregador">Empregador: </label>
+                <input type="text" asp-for="Empregador" class="form-control" id="empregador" placeholder="unip">
+                @Html.ValidationMessageFor(x => x.Empregador)
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="cargo">Cargo: </label>
+                <input type="text" asp-for="Cargo" class="form-control" id="cargo" placeholder="informe seu cargo">
+                @Html.ValidationMessageFor(x => x.Cargo)
+            </div>
+            <br>
         </div>
-            <br>
-        <div class="form-group">
-             <label for="emailsecundario">Email de Recuperação: </label>
-          <input type="text" asp-for="Email_Secundario" class="form-control" placeholder="Informe o email">
-            @Html.ValidationMessageFor(x => x.Email_Secundario)
-        </div>
-            <br>
-        <div class="form-group">
-            <label for="senha">Senha: </label>
-            <input type="text" asp-for="Senha" class="form-control" placeholder="Informe uma senha">
-            @Html.ValidationMessageFor(x => x.Senha)
-        </div>
-            <br>
-        <div class="form-group">
-             <label for="confirmarsenha">Confirmar senha: </label>
-            <input type="text" asp-for="Confirmacao_senha" class="form-control" placeholder="confirmar senha senha">
-            @Html.ValidationMessageFor(x => x.Senha)
-         </div>
-            <br>
+             <!--------------Botão--------------->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" asp-controller="Login" asp-action="ValidandoUsuario">Cadastar</button>
+                <br>
+                <a class="bnt bnt-secondary bnt-block" role="button" aria-pressed="true" asp-controller="Login" asp-action="Index" role="button">voltar</a>
+            </div>
 
-        <div class="form-group">
-            <label for="empregador">Empregador: </label>
-            <input type="text" asp-for="Empregador" class="form-control" id="empregador" placeholder="unip">
-            @Html.ValidationMessageFor(x => x.Empregador)
-        </div>
-            <br>
-        <div class="form-group">
-            <label for="cargo">Cargo: </label>
-            <input type="text" asp-for="Cargo" class="form-control" id="cargo" placeholder="informe seu cargo">
-            @Html.ValidationMessageFor(x => x.Cargo)
-        </div>
-            <br>
-
-         <!--------------Botão--------------->
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" asp-controller="Login" asp-action="ValidandoUsuario">Cadastar</button>
-            <br>
-        <a class="bnt bnt-secondary bnt-block" role="button" aria-pressed="true" asp-controller="Login" asp-action="Index" role="button">voltar</a>
-        
-        </div>
-
-</form>
+    </form>
 </body>

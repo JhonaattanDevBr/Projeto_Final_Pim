@@ -26,6 +26,12 @@
         public float Salario_liquido { get; set; }
         public int Id_funcionarios { get; set; }
         public int Id_empresas { get; set; }
+        public string Nome_fantasia { get; set; }
+        public string Cnpj { get; set; }
+        public string Cargo { get; set; }
+        public string Nome { get; set; }
+        public int Registro { get; set; }
+
 
     }
 }
