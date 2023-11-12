@@ -19,7 +19,7 @@ namespace BaseDeDados
                                            string senha,
                                            string confirmacaoSenha)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try

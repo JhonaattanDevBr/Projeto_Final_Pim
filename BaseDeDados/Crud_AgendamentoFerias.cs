@@ -16,7 +16,7 @@ namespace BaseDeDados
 
         public bool AgendarFerias(AgendamentoFerias _agendamentoFerias)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -107,7 +107,7 @@ namespace BaseDeDados
 
         public bool AtualizarFerias(AgendamentoFerias _agendamentoFerias)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -208,7 +208,7 @@ namespace BaseDeDados
 
         public DataTable ListarFuncionariosParaAgendarFerias(string id)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -325,7 +325,7 @@ namespace BaseDeDados
 
         public Dictionary<int, string> PopularCaixaListarEmpresas()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try

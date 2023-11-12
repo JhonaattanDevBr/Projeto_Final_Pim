@@ -16,7 +16,7 @@ namespace BaseDeDados
 
         public bool IncluirEnderecoEmpresa(Empresas _empresa)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -78,7 +78,7 @@ namespace BaseDeDados
 
         public bool IncluirEmpresa(Empresas _empresa)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -164,7 +164,7 @@ namespace BaseDeDados
 
         public bool AtualizarEnderecoEmpresas(Empresas _empresa)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -234,7 +234,7 @@ namespace BaseDeDados
 
         public bool AtualizarRegistroEmpresas(Empresas _empresa)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -336,7 +336,7 @@ namespace BaseDeDados
 
         public bool ExcluirEmpresa(string id)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -370,7 +370,7 @@ namespace BaseDeDados
 
         public DataTable BuscarEmpresas()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -435,7 +435,7 @@ namespace BaseDeDados
 
         public List<Empresas> BuscarInfoEmpresarialEmpresas(Empresas _empresas)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -483,7 +483,7 @@ namespace BaseDeDados
 
         public List<Empresas> BuscarEnderecoEmpresas(Empresas _empresas)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
