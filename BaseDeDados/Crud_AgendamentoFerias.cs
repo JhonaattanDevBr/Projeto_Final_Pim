@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BeneficioDasFerias;
 using System.Globalization;
+using FuncionariosEmpresas;
+using System.Runtime.InteropServices;
+using FolhaDePagamento;
 
 namespace BaseDeDados
 {
@@ -206,6 +209,40 @@ namespace BaseDeDados
             }
         }
 
+        public bool ExcluirRegistroFerias(string idAgendamento)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "DELETE FROM Agendamento_ferias WHERE Id_agendamento = @idAgendamento";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idAgendamento";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = idAgendamento;
+                cmd.Parameters.Add(_pmtId);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public DataTable ListarFuncionariosParaAgendarFerias(string id)
         {
             string caminho = _servidores.servidor;
@@ -215,18 +252,21 @@ namespace BaseDeDados
             {
                 conexaoDb.Open();
 
-                string querry = "SELECT Funcionarios.Id_funcionario, " +
-                                "Nome, " +
-                                "Data_admissao as 'Data admissao'," +
-                                "Agendamento_ferias.Primeiro_mes as '1º Mes'," +
-                                "Agendamento_ferias.Primeiro_periodo as '1º Periodo'," +
-                                "Agendamento_ferias.Segundo_mes as '2º Mes'," +
-                                "Agendamento_ferias.Segundo_periodo as '2º Periodo'," +
-                                "Agendamento_ferias.Terceiro_mes as '3º Mes'," +
-                                "Agendamento_ferias.Terceiro_periodo as '3º Periodo'," +
-                                "Agendamento_ferias.Dias_vendidos as 'Dias vendidos'," +
-                                "Agendamento_ferias.Dias_restantes as 'Dias restantes' FROM Funcionarios " +
-                                "LEFT JOIN Agendamento_ferias ON Funcionarios.Id_funcionario = Agendamento_ferias.Id_funcionario WHERE Funcionarios.Id_empresas = @id";
+                string querry = "SELECT Id_agendamento, " +
+                                "Primeiro_mes, " +
+                                "Primeiro_periodo, " +
+                                "Segundo_mes, " +
+                                "Segundo_periodo, " +
+                                "Terceiro_mes, " +
+                                "Terceiro_periodo, " +
+                                "Dias_restantes, " +
+                                "Dias_vendidos, " +
+                                "Primeira_parcela_decimo,  " +
+                                "Funcionarios.Nome, " +
+                                "Agendamento_ferias.Id_funcionario, " +
+                                "Funcionarios.Data_admissao, " +
+                                "Id_folha FROM Agendamento_ferias " +
+                                "LEFT JOIN Funcionarios ON Funcionarios.Id_funcionario = Agendamento_ferias.Id_funcionario WHERE Funcionarios.Id_empresas = @id";
 
                 SqlCommand cmd = new SqlCommand(querry, conexaoDb);
 
@@ -239,18 +279,20 @@ namespace BaseDeDados
                 SqlDataReader _leitor = cmd.ExecuteReader();
 
                 DataTable dt = new DataTable();
-                dt.Columns.Add("Código", typeof(int));
-                dt.Columns.Add("Nome", typeof(string));
-                dt.Columns.Add("Data admissao", typeof(DateTime));
+                dt.Columns.Add("Cód. Férias", typeof(int));
                 dt.Columns.Add("1º Mes", typeof(string));
                 dt.Columns.Add("1º Periodo", typeof(int));
                 dt.Columns.Add("2º Mes", typeof(string));
                 dt.Columns.Add("2º Periodo", typeof(int));
                 dt.Columns.Add("3º Mes", typeof(string));
                 dt.Columns.Add("3º Periodo", typeof(int));
-                dt.Columns.Add("Dias vendidos", typeof(int));
                 dt.Columns.Add("Dias restantes", typeof(int));
-
+                dt.Columns.Add("Dias vendidos", typeof(int));
+                dt.Columns.Add("1º Parcela décimo", typeof(string));
+                dt.Columns.Add("Nome", typeof(string));
+                dt.Columns.Add("Cód. Funcionário", typeof(int));
+                dt.Columns.Add("Data admissao", typeof(DateTime));
+                dt.Columns.Add("Cód. Folha");
 
                 DateTime dataAtual = DateTime.Now;
                 string dataAtualParaFormatar = dataAtual.ToString();
@@ -261,45 +303,43 @@ namespace BaseDeDados
                 int mes = Convert.ToInt32(dataDivisor[1]);
                 int ano = Convert.ToInt32(dataDivisor[2]);
 
-                string primeiroMes = "n";
+                string primeiroMes = "Nao agendado";
                 int primeiroMesDias = 0;
-                string segundoMes = "n";
+                string segundoMes = "Nao agendado";
                 int segundoMesDias = 0;
-                string terceiroMes = "n";
+                string terceiroMes = "Nao agendado";
                 int terceiroMesDias = 0;
                 int diasVendidos = 0;
                 int diasRestantes = 0;
+                string primeiraParcela = "Não";
+                int folha = 0;
 
                 // AGORA ESTA FUNCIONANDO.
                 while (_leitor.Read())
                 {
-                    int codigo = _leitor.GetInt32(0);
-                    string nome = _leitor.GetString(1);
-                    DateTime admissao = _leitor.GetDateTime(2);
-                    if (_leitor.IsDBNull(3))
-                    {
-                        primeiroMes = "Nao agendado";
-                        primeiroMesDias = 0;
-                        segundoMes = "Nao agendado";
-                        segundoMesDias = 0;
-                        terceiroMes = "Nao agendado";
-                        terceiroMesDias = 0;
-                        diasVendidos = 0;
-                        diasRestantes = 0;
-                    }
-                    else
-                    {
-                        primeiroMes = _leitor.GetString(3);
-                        primeiroMesDias = _leitor.GetInt32(4);
-                        segundoMes = _leitor.GetString(5);
-                        segundoMesDias = _leitor.GetInt32(6);
-                        terceiroMes = _leitor.GetString(7);
-                        terceiroMesDias = _leitor.GetInt32(8);
-                        diasVendidos = _leitor.GetInt32(9);
-                        diasRestantes = _leitor.GetInt32(10);
-                    }
+                    int agendamento = _leitor.GetInt32(0);
                     
-                    
+                    if (!_leitor.IsDBNull(1))
+                    {
+                        primeiroMes = _leitor.GetString(1);
+                        primeiroMesDias = _leitor.GetInt32(2);
+                        segundoMes = _leitor.GetString(3);
+                        segundoMesDias = _leitor.GetInt32(4);
+                        terceiroMes = _leitor.GetString(5);
+                        terceiroMesDias = _leitor.GetInt32(6);
+                        diasRestantes = _leitor.GetInt32(7);
+                        diasVendidos = _leitor.GetInt32(8);
+                        primeiraParcela = _leitor.GetString(9);
+                    }
+                    string nome = _leitor.GetString(10);
+                    int codigoFuncionario = _leitor.GetInt32(11);
+                    DateTime admissao = _leitor.GetDateTime(12);
+                    if (!_leitor.IsDBNull(13))
+                    {
+                        folha = _leitor.GetInt32(13);
+                    }
+                   
+
                     string dataAdmissaoParaFormatar = admissao.ToString();
                     dataAdmissaoParaFormatar = dataAdmissaoParaFormatar.Replace("/", " ");
                     string[] dataParaValidar = dataAdmissaoParaFormatar.Split(' ');
@@ -309,7 +349,7 @@ namespace BaseDeDados
 
                     if(mesAdmissao == mes)
                     {
-                        dt.Rows.Add(codigo, nome, admissao, primeiroMes, primeiroMesDias, segundoMes, segundoMesDias, terceiroMes, terceiroMesDias, diasVendidos, diasRestantes);
+                        dt.Rows.Add(agendamento, primeiroMes, primeiroMesDias, segundoMes, segundoMesDias, terceiroMes, terceiroMesDias, diasRestantes, diasVendidos, primeiraParcela, nome, codigoFuncionario, admissao, folha);
                     }
 
                 }
@@ -321,6 +361,63 @@ namespace BaseDeDados
             {
                 throw;
             }
+        }
+
+        public List<AgendamentoFerias> BuscarRegistroFerias(AgendamentoFerias _agendamentoFerias)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT * FROM Agendamento_ferias WHERE Id_funcionario = @idFuncionario";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                List<AgendamentoFerias> _registro = new List<AgendamentoFerias>();
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idFuncionario";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = _agendamentoFerias.IdFuncionario;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _agendamentoFerias.IdAgendamento = _leitor.GetInt32(0).ToString();
+                    _agendamentoFerias.PrimeiroMes = _leitor.GetString(1);
+                    _agendamentoFerias.PrimeiroPeriodo = _leitor.GetInt32(2).ToString();
+                    _agendamentoFerias.SegundoMes = _leitor.GetString(3);
+                    _agendamentoFerias.SegundoPeriodo = _leitor.GetInt32(4).ToString();
+                    _agendamentoFerias.TerceiroMes = _leitor.GetString(5);
+                    _agendamentoFerias.TerceiroPeriodo = _leitor.GetInt32(6).ToString();
+                    _agendamentoFerias.DiasRestantes = _leitor.GetInt32(7).ToString();
+                    _agendamentoFerias.DiasVendidos = _leitor.GetInt32(8).ToString();
+                    _agendamentoFerias.PrimeiraParcelaDecimo = _leitor.GetString(9);
+                    if (!_leitor.IsDBNull(10))
+                    {
+                        _agendamentoFerias.IdFolha = _leitor.GetInt32(10).ToString();
+                    }
+                    if (!_leitor.IsDBNull(11))
+                    {
+                        _agendamentoFerias.IdFuncionario = _leitor.GetInt32(11).ToString();
+                    }
+                    
+                    _registro.Add(_agendamentoFerias);
+                }
+                conexaoDb.Close();
+                return _registro;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            { conexaoDb.Close(); }
         }
 
         public Dictionary<int, string> PopularCaixaListarEmpresas()

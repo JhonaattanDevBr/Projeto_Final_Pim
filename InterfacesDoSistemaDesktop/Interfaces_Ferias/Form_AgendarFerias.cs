@@ -241,30 +241,65 @@ namespace InterfacesDoSistemaDesktop
             int dias = 30;
             //int diasRestantes = 30 - Convert.ToInt32(txtQuantidade.Text);
 
-            if(cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
+            if (cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
             {
-                _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
-                _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
-                _agendamentoFerias.DiasRestantes = dias.ToString();
-
-                bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
-                if (retornoAutenticacao)
+                if (rdbSim.Checked && !string.IsNullOrEmpty(txtQuantidade.Text))
                 {
-                    bool retornoAgendamento = _crud_AgendamentoFerias.AgendarFerias(_agendamentoFerias);
-                    if (retornoAgendamento)
+                    _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
+                    _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
+                    _agendamentoFerias.DiasRestantes = dias.ToString();
+
+                    bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
+                    if (retornoAutenticacao)
                     {
-                        MessageBox.Show("Agendamento realizado com sucesso.", "Operação concluida!");
-                        this.Close();
+                        bool retornoAgendamento = _crud_AgendamentoFerias.AtualizarFerias(_agendamentoFerias);
+                        if (retornoAgendamento)
+                        {
+                            MessageBox.Show("Férias atualizada com sucesso.", "Operação concluida!");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                        MessageBox.Show(_agendamentoFerias.MensagemErro, "Falha na operação");
                     }
+                }
+                else if (rdbNao.Checked && string.IsNullOrEmpty(txtQuantidade.Text))
+                {
+                    _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
+                    _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
+                    _agendamentoFerias.DiasRestantes = dias.ToString();
+
+                    bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
+                    if (retornoAutenticacao)
+                    {
+                        bool retornoAgendamento = _crud_AgendamentoFerias.AtualizarFerias(_agendamentoFerias);
+                        if (retornoAgendamento)
+                        {
+                            MessageBox.Show("Férias atualizada com sucesso.", "Operação concluida!");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(_agendamentoFerias.MensagemErro, "Falha na operação");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show(_agendamentoFerias.MensagemErro, "Falha na operação");
+                    MessageBox.Show("Caso seja solictada a venda das férias o campo\nQUANTIDADE DE DIAS VENDIDOS\ndeve ser preenchido", "Falha na operação");
                 }
+
+
             }
         }
     }

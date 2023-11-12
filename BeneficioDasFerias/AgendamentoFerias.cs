@@ -18,6 +18,7 @@ namespace BeneficioDasFerias
 		public string DiasRestantes { get; set; }
 		public string DiasVendidos { get; set; }
 		public string PrimeiraParcelaDecimo { get; set; }
+		public string IdFolha { get; set; }
 		public string IdFuncionario { get; set; }
         public string MensagemErro { get; set; }
 

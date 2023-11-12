@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ConsultarTabelaFerias));
             this.gpbConsultarFerias = new System.Windows.Forms.GroupBox();
-            this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.lblEmpresa = new System.Windows.Forms.Label();
-            this.btnAgendar = new System.Windows.Forms.Button();
-            this.btnAtualizar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
             this.cmbListarFuncionarios = new System.Windows.Forms.ComboBox();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnAgendar = new System.Windows.Forms.Button();
+            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
             this.gpbConsultarFerias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.SuspendLayout();
@@ -61,53 +61,42 @@
             this.gpbConsultarFerias.TabStop = false;
             this.gpbConsultarFerias.Text = "Consultar tabela de férias";
             // 
-            // dgvFuncionarios
+            // cmbListarFuncionarios
             // 
-            this.dgvFuncionarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(6, 56);
-            this.dgvFuncionarios.Name = "dgvFuncionarios";
-            this.dgvFuncionarios.ReadOnly = true;
-            this.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(800, 475);
-            this.dgvFuncionarios.TabIndex = 0;
-            this.dgvFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionarios_CellClick);
+            this.cmbListarFuncionarios.BackColor = System.Drawing.Color.LightBlue;
+            this.cmbListarFuncionarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbListarFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbListarFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbListarFuncionarios.FormattingEnabled = true;
+            this.cmbListarFuncionarios.Location = new System.Drawing.Point(410, 24);
+            this.cmbListarFuncionarios.Name = "cmbListarFuncionarios";
+            this.cmbListarFuncionarios.Size = new System.Drawing.Size(300, 23);
+            this.cmbListarFuncionarios.TabIndex = 7;
             // 
-            // btnListar
+            // btnSair
             // 
-            this.btnListar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnListar.Location = new System.Drawing.Point(735, 20);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(107, 30);
-            this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = false;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnSair.Location = new System.Drawing.Point(830, 319);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(107, 30);
+            this.btnSair.TabIndex = 6;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
             // 
-            // lblEmpresa
+            // btnExcluir
             // 
-            this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblEmpresa.Location = new System.Drawing.Point(6, 29);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(398, 15);
-            this.lblEmpresa.TabIndex = 2;
-            this.lblEmpresa.Text = "Selecione uma empresa para listar os funcionários com direito as férias";
-            // 
-            // btnAgendar
-            // 
-            this.btnAgendar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAgendar.Location = new System.Drawing.Point(830, 169);
-            this.btnAgendar.Name = "btnAgendar";
-            this.btnAgendar.Size = new System.Drawing.Size(107, 30);
-            this.btnAgendar.TabIndex = 3;
-            this.btnAgendar.Text = "Agendar Férias";
-            this.btnAgendar.UseVisualStyleBackColor = false;
-            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
+            this.btnExcluir.BackColor = System.Drawing.Color.LightBlue;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnExcluir.Location = new System.Drawing.Point(830, 266);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(107, 30);
+            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.Text = "Excluir Férias";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtualizar
             // 
@@ -122,41 +111,53 @@
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // btnExcluir
+            // btnAgendar
             // 
-            this.btnExcluir.BackColor = System.Drawing.Color.LightBlue;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnExcluir.Location = new System.Drawing.Point(830, 266);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(107, 30);
-            this.btnExcluir.TabIndex = 5;
-            this.btnExcluir.Text = "Excluir Férias";
-            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnAgendar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAgendar.Location = new System.Drawing.Point(830, 169);
+            this.btnAgendar.Name = "btnAgendar";
+            this.btnAgendar.Size = new System.Drawing.Size(107, 30);
+            this.btnAgendar.TabIndex = 3;
+            this.btnAgendar.Text = "Agendar Férias";
+            this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
-            // btnSair
+            // lblEmpresa
             // 
-            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnSair.Location = new System.Drawing.Point(830, 319);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(107, 30);
-            this.btnSair.TabIndex = 6;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
+            this.lblEmpresa.AutoSize = true;
+            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblEmpresa.Location = new System.Drawing.Point(6, 29);
+            this.lblEmpresa.Name = "lblEmpresa";
+            this.lblEmpresa.Size = new System.Drawing.Size(398, 15);
+            this.lblEmpresa.TabIndex = 2;
+            this.lblEmpresa.Text = "Selecione uma empresa para listar os funcionários com direito as férias";
             // 
-            // cmbListarFuncionarios
+            // btnListar
             // 
-            this.cmbListarFuncionarios.BackColor = System.Drawing.Color.LightBlue;
-            this.cmbListarFuncionarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbListarFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbListarFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cmbListarFuncionarios.FormattingEnabled = true;
-            this.cmbListarFuncionarios.Location = new System.Drawing.Point(410, 24);
-            this.cmbListarFuncionarios.Name = "cmbListarFuncionarios";
-            this.cmbListarFuncionarios.Size = new System.Drawing.Size(300, 23);
-            this.cmbListarFuncionarios.TabIndex = 7;
+            this.btnListar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnListar.Location = new System.Drawing.Point(735, 20);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(107, 30);
+            this.btnListar.TabIndex = 1;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // dgvFuncionarios
+            // 
+            this.dgvFuncionarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionarios.Location = new System.Drawing.Point(6, 56);
+            this.dgvFuncionarios.Name = "dgvFuncionarios";
+            this.dgvFuncionarios.ReadOnly = true;
+            this.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFuncionarios.Size = new System.Drawing.Size(800, 475);
+            this.dgvFuncionarios.TabIndex = 0;
+            this.dgvFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionarios_CellClick);
             // 
             // Form_ConsultarTabelaFerias
             // 

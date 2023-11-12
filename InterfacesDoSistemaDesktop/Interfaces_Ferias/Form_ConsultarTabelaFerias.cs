@@ -22,6 +22,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Ferias
 
         public string Id { get; set; }
         public string IdEmpresa { get; set; }
+        public string IdAgendamento { get; set; }
 
         public Form_ConsultarTabelaFerias()
         {
@@ -55,40 +56,22 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Ferias
             dgvFuncionarios.DataSource = tabelaPeriodoAquisitivo;
 
             // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
-            dgvFuncionarios.Columns[0].Width = 70;
-            dgvFuncionarios.Columns[1].Width = 180;
-            dgvFuncionarios.Columns[2].Width = 100;
-            dgvFuncionarios.Columns[3].Width = 100;
-            dgvFuncionarios.Columns[4].Width = 70;
-            dgvFuncionarios.Columns[5].Width = 100;
-            dgvFuncionarios.Columns[6].Width = 70;
-            dgvFuncionarios.Columns[7].Width = 100;
-            dgvFuncionarios.Columns[8].Width = 70;
-            dgvFuncionarios.Columns[9].Width = 80;
-            dgvFuncionarios.Columns[10].Width = 80;
-        }
+            dgvFuncionarios.Columns[0].Width = 70; // ferias
+            dgvFuncionarios.Columns[1].Width = 100; // primeiro mes
+            dgvFuncionarios.Columns[2].Width = 70; // primeiro mes dias
+            dgvFuncionarios.Columns[3].Width = 100; // segundo mes
+            dgvFuncionarios.Columns[4].Width = 70; // segundo mes dias
+            dgvFuncionarios.Columns[5].Width = 100; //terceiro mes
+            dgvFuncionarios.Columns[6].Width = 70; // terceiro mes dias
+            dgvFuncionarios.Columns[7].Width = 100; // dias restantres
+            dgvFuncionarios.Columns[8].Width = 90; // dias vendidos
+            dgvFuncionarios.Columns[9].Width = 120; // decimo
+            dgvFuncionarios.Columns[10].Width = 150; // nome
+            dgvFuncionarios.Columns[11].Width = 100; // codigo
+            dgvFuncionarios.Columns[12].Width = 100; // data
+            dgvFuncionarios.Columns[13].Width = 70; // folha
+            
 
-        // VOU JOGAR ESTE MÉTODO COMO O ULTIMO
-        private void AtualizarTabela()
-        {
-            dgvFuncionarios.DataSource = null; // Define DataSource como null para limpar as colunas existentes, se houver.
-
-            dgvFuncionarios.Columns.Clear();
-            DataTable tabelaPeriodoAquisitivo = _crud_AgendamentoFerias.ListarFuncionariosParaAgendarFerias(IdEmpresa);
-            dgvFuncionarios.DataSource = tabelaPeriodoAquisitivo;
-
-            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
-            dgvFuncionarios.Columns[0].Width = 70;
-            dgvFuncionarios.Columns[1].Width = 180;
-            dgvFuncionarios.Columns[2].Width = 100;
-            dgvFuncionarios.Columns[3].Width = 100;
-            dgvFuncionarios.Columns[4].Width = 70;
-            dgvFuncionarios.Columns[5].Width = 100;
-            dgvFuncionarios.Columns[6].Width = 70;
-            dgvFuncionarios.Columns[7].Width = 100;
-            dgvFuncionarios.Columns[8].Width = 70;
-            dgvFuncionarios.Columns[9].Width = 80;
-            dgvFuncionarios.Columns[10].Width = 80;
         }
 
         private void dgvFuncionarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -98,8 +81,10 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Ferias
                 DataGridView tabelaEmpresas = (DataGridView)sender;
                 DataGridViewRow linhaSelecionada = tabelaEmpresas.Rows[e.RowIndex];
 
-                string id = linhaSelecionada.Cells["Código"].Value.ToString();
+                string id = linhaSelecionada.Cells["Cód. Funcionário"].Value.ToString();
+                string idAgendamento = linhaSelecionada.Cells["Cód. Férias"].Value.ToString();
                 Id = id;
+                IdAgendamento = idAgendamento;
             }
         }
 
@@ -133,6 +118,54 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Ferias
                 }
             }
             Id = "";
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                DialogResult deletar = MessageBox.Show("Deseja realmente excluir o registro?\n\nApós um registro ser excluido os dados serão perdidos permanentemente, " +
+                                                   "não podendo ser restaurados.\n\nDeseja continuar?",
+                                                   "ATENÇÂO!",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Warning);
+                if (deletar == DialogResult.Yes)
+                {
+                    bool retornoExclusao = _crud_AgendamentoFerias.ExcluirRegistroFerias(IdAgendamento);
+                    if (retornoExclusao)
+                    {
+                        MessageBox.Show("O Registro foi excluido.", "Operação concluida.");
+                        AtualizarTabela();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível excluir o registro.", "Falha na operação ");
+                    }
+                }
+            }
+            Id = "";
+        }
+
+        private void AtualizarTabela()
+        {
+            dgvFuncionarios.DataSource = null; // Define DataSource como null para limpar as colunas existentes, se houver.
+
+            dgvFuncionarios.Columns.Clear();
+            DataTable tabelaPeriodoAquisitivo = _crud_AgendamentoFerias.ListarFuncionariosParaAgendarFerias(IdEmpresa);
+            dgvFuncionarios.DataSource = tabelaPeriodoAquisitivo;
+
+            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
+            dgvFuncionarios.Columns[0].Width = 70;
+            dgvFuncionarios.Columns[1].Width = 180;
+            dgvFuncionarios.Columns[2].Width = 100;
+            dgvFuncionarios.Columns[3].Width = 100;
+            dgvFuncionarios.Columns[4].Width = 70;
+            dgvFuncionarios.Columns[5].Width = 100;
+            dgvFuncionarios.Columns[6].Width = 70;
+            dgvFuncionarios.Columns[7].Width = 100;
+            dgvFuncionarios.Columns[8].Width = 70;
+            dgvFuncionarios.Columns[9].Width = 80;
+            dgvFuncionarios.Columns[10].Width = 80;
         }
     }
 }
