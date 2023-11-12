@@ -100,6 +100,12 @@
     <Compile Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.Designer.cs">
       <DependentUpon>Form_AtualizarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarRegistroFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarRegistroFerias.Designer.cs">
+      <DependentUpon>Form_AtualizarRegistroFerias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Ferias\Form_CalculosFerias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,12 @@
     <Compile Include="Interfaces_Acesso\Form_Accesskey.Designer.cs">
       <DependentUpon>Form_Accesskey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_Ferias\Form_ConsultarTabelaFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_Ferias\Form_ConsultarTabelaFerias.Designer.cs">
+      <DependentUpon>Form_ConsultarTabelaFerias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Formularios\Form_CadConvMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +315,9 @@
     <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.resx">
       <DependentUpon>Form_AtualizarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarRegistroFerias.resx">
+      <DependentUpon>Form_AtualizarRegistroFerias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Ferias\Form_CalculosFerias.resx">
       <DependentUpon>Form_CalculosFerias.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Acesso\Form_Accesskey.resx">
       <DependentUpon>Form_Accesskey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Ferias\Form_ConsultarTabelaFerias.resx">
+      <DependentUpon>Form_ConsultarTabelaFerias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Formularios\Form_CadConvMedico.resx">
       <DependentUpon>Form_CadConvMedico.cs</DependentUpon>

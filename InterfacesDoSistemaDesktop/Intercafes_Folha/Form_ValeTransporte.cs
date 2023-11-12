@@ -33,8 +33,8 @@ namespace InterfacesDoSistemaDesktop
 
         private void doisPeríodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_AgendarFerias objForm_DoisPeriodos = new Form_AgendarFerias();
-            objForm_DoisPeriodos.Show();
+            // Form_AgendarFerias objForm_DoisPeriodos = new Form_AgendarFerias(); não sei de onde veio isso
+            //objForm_DoisPeriodos.Show();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

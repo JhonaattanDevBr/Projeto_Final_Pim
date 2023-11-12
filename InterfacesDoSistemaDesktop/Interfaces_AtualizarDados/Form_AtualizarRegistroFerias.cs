@@ -1,4 +1,5 @@
-﻿using BeneficioDasFerias;
+﻿using BaseDeDados;
+using BeneficioDasFerias;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,27 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BaseDeDados;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace InterfacesDoSistemaDesktop
+namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
 {
-    public partial class Form_AgendarFerias : Form
+    public partial class Form_AtualizarRegistroFerias : Form
     {
         AgendamentoFerias _agendamentoFerias = new AgendamentoFerias();
         Crud_AgendamentoFerias _crud_AgendamentoFerias = new Crud_AgendamentoFerias();
 
-        public Form_AgendarFerias(string id)
+        public Form_AtualizarRegistroFerias(string id)
         {
             InitializeComponent();
             _agendamentoFerias.IdFuncionario = id;
-        }
 
-        // Preciso colocar uma validação onde nenhum dos tres campos possa ser maior q 30
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void rdbSim_CheckedChanged(object sender, EventArgs e)
@@ -54,14 +47,14 @@ namespace InterfacesDoSistemaDesktop
                 txtQuantidade.Focus();
                 return;
             }
-            if(!int.TryParse(txtQuantidade.Text, out int venda))
+            if (!int.TryParse(txtQuantidade.Text, out int venda))
             {
                 MessageBox.Show("Este campo não aceita letras ou caracteres.", "ATENÇÃO");
                 txtQuantidade.Clear();
                 txtQuantidade.Focus();
                 return;
             }
-            if(venda > 10)
+            if (venda > 10)
             {
                 txtQuantidade.Clear();
                 txtQuantidade.Focus();
@@ -76,12 +69,12 @@ namespace InterfacesDoSistemaDesktop
             if (!char.IsDigit(e.KeyChar) && valorDigitado != 08)
             {
                 e.Handled = true;
-            }            
+            }
         }
 
         private void rdbPeriodoCompleto_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbPeriodoCompleto.Checked) 
+            if (rdbPeriodoCompleto.Checked)
             {
                 cmbPrimeiroPeriodo.Enabled = true;
                 txtPrimeiroPeriodoDias.Enabled = true;
@@ -196,7 +189,7 @@ namespace InterfacesDoSistemaDesktop
             }
         }
 
-        private void btnAgendar_Click(object sender, EventArgs e)
+        private void btnAtualizarAgendamento_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtQuantidade.Text))
             {
@@ -241,7 +234,7 @@ namespace InterfacesDoSistemaDesktop
             int dias = 30;
             //int diasRestantes = 30 - Convert.ToInt32(txtQuantidade.Text);
 
-            if(cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
+            if (cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
             {
                 _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
                 _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
@@ -250,10 +243,10 @@ namespace InterfacesDoSistemaDesktop
                 bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
                 if (retornoAutenticacao)
                 {
-                    bool retornoAgendamento = _crud_AgendamentoFerias.AgendarFerias(_agendamentoFerias);
+                    bool retornoAgendamento = _crud_AgendamentoFerias.AtualizarFerias(_agendamentoFerias);
                     if (retornoAgendamento)
                     {
-                        MessageBox.Show("Agendamento realizado com sucesso.", "Operação concluida!");
+                        MessageBox.Show("Férias atualizada com sucesso.", "Operação concluida!");
                         this.Close();
                     }
                     else
