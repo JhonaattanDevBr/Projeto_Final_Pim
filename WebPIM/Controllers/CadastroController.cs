@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BaseDeDados;
+using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
 using WebPIM.Models;
@@ -7,11 +8,13 @@ namespace WebPIM.Controllers
 {
     public class CadastroController : Controller
     {
-       
+       servidoresBancoDados _servidoresBancoDados = new servidoresBancoDados();
+
             public IActionResult NovoCadastro()
             {
                 return View();
             }
+
             public IActionResult CadastrandoFuncionario(CadastroModel cadastro)
             {
                 if (CadastraFuncionario(cadastro))
@@ -21,11 +24,15 @@ namespace WebPIM.Controllers
                 }
                 return View("NovoCadastro");
             }
+
             protected bool CadastraFuncionario(CadastroModel cadastro)
             {
-                string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
+                //string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
 
-                SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
+                //SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
+
+                SqlConnection conexaoDB = new SqlConnection(_servidoresBancoDados.servidor);
+
                 try
                 {
                     conexaoDB.Open();

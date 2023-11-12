@@ -872,5 +872,33 @@ namespace BaseDeDados
             }
         }
 
+        public int ColetarNumeroRegistro()
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            int registro = 0;
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT TOP 1 Registro FROM Funcionarios ORDER BY Registro DESC";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+                SqlDataReader leitura = cmd.ExecuteReader();
+
+                while (leitura.Read())
+                {
+                    registro = leitura.GetInt32(0);
+                }
+
+                conexaoDb.Close();
+                return registro;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

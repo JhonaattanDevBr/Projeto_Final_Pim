@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using WebPIM.Models;
+using BaseDeDados;
 
 namespace WebPIM.Controllers
 {
     public class LoginController : Controller
     {
+        servidoresBancoDados _servidoresBancoDados = new servidoresBancoDados();
+
         public IActionResult Index()
         {
             return View();
@@ -24,7 +27,8 @@ namespace WebPIM.Controllers
             //int count = 0;
             int idFuncionario = 0;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True"))
+            //using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(_servidoresBancoDados.servidor))
             {
                 connection.Open();
 
