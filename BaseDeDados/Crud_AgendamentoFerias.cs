@@ -22,10 +22,110 @@ namespace BaseDeDados
             try
             {
                 conexaoDb.Open();
-                // VOU TESTAR QUANDO CHEGAR
                 string query = "INSERT INTO Agendamento_ferias (Primeiro_mes, Primeiro_periodo, Segundo_mes, Segundo_periodo, Terceiro_mes, Terceiro_periodo, Dias_restantes, " +
                                "Dias_vendidos, Primeira_parcela_decimo, Id_funcionario) " +
                                "VALUES (@primeiroMes, @primeiroPeriodo, @segundoMes, @segundoPeriodo, @terceiroMes, @terceiroPeriodo, @diasRestantes, @diasVendidos, @primeiraParcelaDecimo, @idFuncionario)";
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtPrimeiroMes = cmd.CreateParameter();
+                _pmtPrimeiroMes.ParameterName = "@primeiroMes";
+                _pmtPrimeiroMes.DbType = DbType.String;
+                _pmtPrimeiroMes.Value = _agendamentoFerias.PrimeiroMes;
+                cmd.Parameters.Add(_pmtPrimeiroMes);
+
+                var _pmtPrimeiroPeriodo = cmd.CreateParameter();
+                _pmtPrimeiroPeriodo.ParameterName = "@primeiroPeriodo";
+                _pmtPrimeiroPeriodo.DbType = DbType.Int32;
+                _pmtPrimeiroPeriodo.Value = _agendamentoFerias.PrimeiroPeriodo;
+                cmd.Parameters.Add(_pmtPrimeiroPeriodo);
+
+                var _pmtSegundoMes = cmd.CreateParameter();
+                _pmtSegundoMes.ParameterName = "@segundoMes";
+                _pmtSegundoMes.DbType = DbType.String;
+                _pmtSegundoMes.Value = _agendamentoFerias.SegundoMes;
+                cmd.Parameters.Add(_pmtSegundoMes);
+
+                var _pmtSegundoPeriodo = cmd.CreateParameter();
+                _pmtSegundoPeriodo.ParameterName = "@segundoPeriodo";
+                _pmtSegundoPeriodo.DbType = DbType.Int32;
+                _pmtSegundoPeriodo.Value = _agendamentoFerias.SegundoPeriodo;
+                cmd.Parameters.Add(_pmtSegundoPeriodo);
+
+                var _pmtTerceiroMes = cmd.CreateParameter();
+                _pmtTerceiroMes.ParameterName = "@terceiroMes";
+                _pmtTerceiroMes.DbType = DbType.String;
+                _pmtTerceiroMes.Value = _agendamentoFerias.TerceiroMes;
+                cmd.Parameters.Add(_pmtTerceiroMes);
+
+                var _pmtTerceiroPeriodo = cmd.CreateParameter();
+                _pmtTerceiroPeriodo.ParameterName = "@terceiroPeriodo";
+                _pmtTerceiroPeriodo.DbType = DbType.Int32;
+                _pmtTerceiroPeriodo.Value = _agendamentoFerias.TerceiroPeriodo;
+                cmd.Parameters.Add(_pmtTerceiroPeriodo);
+
+                var _pmtDiasRestantes = cmd.CreateParameter();
+                _pmtDiasRestantes.ParameterName = "@diasRestantes";
+                _pmtDiasRestantes.DbType = DbType.Int32;
+                _pmtDiasRestantes.Value = _agendamentoFerias.DiasRestantes;
+                cmd.Parameters.Add(_pmtDiasRestantes);
+
+                var _pmtDiasVendidos = cmd.CreateParameter();
+                _pmtDiasVendidos.ParameterName = "@diasVendidos";
+                _pmtDiasVendidos.DbType = DbType.Int32;
+                _pmtDiasVendidos.Value = _agendamentoFerias.DiasVendidos;
+                cmd.Parameters.Add(_pmtDiasVendidos);
+
+                var _pmtPrimeiraParcelaDecimo = cmd.CreateParameter();
+                _pmtPrimeiraParcelaDecimo.ParameterName = "@primeiraParcelaDecimo";
+                _pmtPrimeiraParcelaDecimo.DbType = DbType.String;
+                _pmtPrimeiraParcelaDecimo.Value = _agendamentoFerias.PrimeiraParcelaDecimo;
+                cmd.Parameters.Add(_pmtPrimeiraParcelaDecimo);
+
+                var _pmtIdFuncionario = cmd.CreateParameter();
+                _pmtIdFuncionario.ParameterName = "@idFuncionario";
+                _pmtIdFuncionario.DbType = DbType.Int32;
+                _pmtIdFuncionario.Value = _agendamentoFerias.IdFuncionario;
+                cmd.Parameters.Add(_pmtIdFuncionario);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    conexaoDb.Close();
+                    return true;
+                }
+                else
+                {
+                    conexaoDb.Close();
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public bool AtualizarFerias(AgendamentoFerias _agendamentoFerias)
+        {
+            string caminho = _servidores.servidorNotebook;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+
+                // DE DUAS UMA, OU EU FAÇO UM METODO PARA ELE NAO AGENDAR FÉRIAS PARA UM FUNCIONARIO SE ELA JA ESTIVER AGENDADA,
+                // OU EU CRIO UMA COLUNA ONDE EU PEGO O ID DO AGENDAMENTO E UTILIZO ELE NO LUGAR DO ID_FUNCIONARIO QUANDO FOR ATUALIZAR O REGISTRO DAS FÉRIAS.
+                conexaoDb.Open();
+                string query = "UPDATE Agendamento_ferias SET Primeiro_mes = @primeiroMes, " +
+                               "Primeiro_periodo = @primeiroPeriodo, " +
+                               "Segundo_mes = @segundoMes, " +
+                               "Segundo_periodo = @segundoPeriodo, " +
+                               "Terceiro_mes = @terceiroMes, " +
+                               "Terceiro_periodo = @terceiroPeriodo, " +
+                               "Dias_restantes = @diasRestantes, " +
+                               "Dias_vendidos = @diasVendidos, " +
+                               "Primeira_parcela_decimo = @primeiraParcelaDecimo " +
+                               "WHERE Id_funcionario = @idFuncionario";
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
 
                 var _pmtPrimeiroMes = cmd.CreateParameter();

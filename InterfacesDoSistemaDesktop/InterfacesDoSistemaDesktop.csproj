@@ -100,6 +100,12 @@
     <Compile Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.Designer.cs">
       <DependentUpon>Form_AtualizarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarRegistroFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces_AtualizarDados\Form_AtualizarRegistroFerias.Designer.cs">
+      <DependentUpon>Form_AtualizarRegistroFerias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Ferias\Form_CalculosFerias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarFuncionarios.resx">
       <DependentUpon>Form_AtualizarFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarRegistroFerias.resx">
+      <DependentUpon>Form_AtualizarRegistroFerias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Ferias\Form_CalculosFerias.resx">
       <DependentUpon>Form_CalculosFerias.cs</DependentUpon>

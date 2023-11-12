@@ -107,6 +107,7 @@
             this.btnAgendar.TabIndex = 3;
             this.btnAgendar.Text = "Agendar Férias";
             this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnAtualizar
             // 
@@ -119,6 +120,7 @@
             this.btnAtualizar.TabIndex = 4;
             this.btnAtualizar.Text = "Atualizar Férias";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnExcluir
             // 

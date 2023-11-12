@@ -1,6 +1,7 @@
 ﻿using BaseDeDados;
 using BeneficioDasFerias;
 using FuncionariosEmpresas;
+using InterfacesDoSistemaDesktop.Interfaces_AtualizarDados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,6 +101,38 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Ferias
                 string id = linhaSelecionada.Cells["Código"].Value.ToString();
                 Id = id;
             }
+        }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                DialogResult agendar = MessageBox.Show("Deseja agendar um registro de férias para o funcionário? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
+                if (agendar == DialogResult.Yes)
+                {
+                    _funcionarios.Id = Id;
+                    Form_AgendarFerias _form_AgendarFerias = new Form_AgendarFerias(Id); ;
+                    _form_AgendarFerias.ShowDialog();
+                    AtualizarTabela();
+                }
+            }
+            Id = "";
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                DialogResult alterar = MessageBox.Show("Deseja realmente alterar os dados do registro?", "ATENÇÂO!", MessageBoxButtons.YesNo);
+                if (alterar == DialogResult.Yes)
+                {
+                    _funcionarios.Id = Id;
+                    Form_AtualizarRegistroFerias _atualizarRegistroFerias = new Form_AtualizarRegistroFerias(Id);
+                    _atualizarRegistroFerias.ShowDialog();
+                    AtualizarTabela();
+                }
+            }
+            Id = "";
         }
     }
 }
