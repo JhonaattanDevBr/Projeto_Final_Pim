@@ -87,16 +87,18 @@
             this.btnFerias = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.btnCadastros = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnBotaoUm = new System.Windows.Forms.Button();
+            this.btnBotaoDois = new System.Windows.Forms.Button();
+            this.btnBotaoTres = new System.Windows.Forms.Button();
+            this.btnBotaoQuatro = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SlateBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
             this.módulosToolStripMenuItem});
@@ -114,33 +116,32 @@
             this.fecharArquivoToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
             // novoArquivoToolStripMenuItem
             // 
             this.novoArquivoToolStripMenuItem.Name = "novoArquivoToolStripMenuItem";
-            this.novoArquivoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoArquivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoArquivoToolStripMenuItem.Text = "Abrir arquivo";
             // 
             // novoArquivoToolStripMenuItem1
             // 
             this.novoArquivoToolStripMenuItem1.Name = "novoArquivoToolStripMenuItem1";
-            this.novoArquivoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.novoArquivoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.novoArquivoToolStripMenuItem1.Text = "Novo arquivo";
             // 
             // fecharArquivoToolStripMenuItem
             // 
             this.fecharArquivoToolStripMenuItem.Name = "fecharArquivoToolStripMenuItem";
-            this.fecharArquivoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fecharArquivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fecharArquivoToolStripMenuItem.Text = "Fechar arquivo";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // módulosToolStripMenuItem
             // 
@@ -164,31 +165,31 @@
             this.excluirToolStripMenuItem,
             this.consultarToolStripMenuItem});
             this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
-            this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.folhaDePagamentoToolStripMenuItem.Text = "Empresas";
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar empresa";
             // 
             // alterarDadosToolStripMenuItem
             // 
             this.alterarDadosToolStripMenuItem.Name = "alterarDadosToolStripMenuItem";
-            this.alterarDadosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.alterarDadosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.alterarDadosToolStripMenuItem.Text = "Alterar dados";
             // 
             // excluirToolStripMenuItem
             // 
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.excluirToolStripMenuItem.Text = "Excluir empresa";
             // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.consultarToolStripMenuItem.Text = "Consultar empresas";
             // 
             // fériasToolStripMenuItem
@@ -199,31 +200,31 @@
             this.excluirToolStripMenuItem1,
             this.consultarToolStripMenuItem1});
             this.fériasToolStripMenuItem.Name = "fériasToolStripMenuItem";
-            this.fériasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.fériasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.fériasToolStripMenuItem.Text = "Funcionários";
             // 
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar funcionário";
             // 
             // alterarDadosToolStripMenuItem1
             // 
             this.alterarDadosToolStripMenuItem1.Name = "alterarDadosToolStripMenuItem1";
-            this.alterarDadosToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.alterarDadosToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.alterarDadosToolStripMenuItem1.Text = "Alterar dados";
             // 
             // excluirToolStripMenuItem1
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.excluirToolStripMenuItem1.Text = "Excluir funcionário";
             // 
             // consultarToolStripMenuItem1
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(194, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.consultarToolStripMenuItem1.Text = "Consultar funcionários";
             // 
             // décimoToolStripMenuItem
@@ -234,31 +235,31 @@
             this.excluirToolStripMenuItem2,
             this.consultarToolStripMenuItem2});
             this.décimoToolStripMenuItem.Name = "décimoToolStripMenuItem";
-            this.décimoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.décimoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.décimoToolStripMenuItem.Text = "Planos de saúde";
             // 
             // cadastrarToolStripMenuItem2
             // 
             this.cadastrarToolStripMenuItem2.Name = "cadastrarToolStripMenuItem2";
-            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(208, 22);
+            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
             this.cadastrarToolStripMenuItem2.Text = "Cadastrar plano de saúde";
             // 
             // alterarDadosToolStripMenuItem2
             // 
             this.alterarDadosToolStripMenuItem2.Name = "alterarDadosToolStripMenuItem2";
-            this.alterarDadosToolStripMenuItem2.Size = new System.Drawing.Size(208, 22);
+            this.alterarDadosToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
             this.alterarDadosToolStripMenuItem2.Text = "Alterar dados";
             // 
             // excluirToolStripMenuItem2
             // 
             this.excluirToolStripMenuItem2.Name = "excluirToolStripMenuItem2";
-            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(208, 22);
+            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
             this.excluirToolStripMenuItem2.Text = "Excluir plano de saúde";
             // 
             // consultarToolStripMenuItem2
             // 
             this.consultarToolStripMenuItem2.Name = "consultarToolStripMenuItem2";
-            this.consultarToolStripMenuItem2.Size = new System.Drawing.Size(208, 22);
+            this.consultarToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
             this.consultarToolStripMenuItem2.Text = "Consultar plano de saúde";
             // 
             // gerarReciboDeFériasToolStripMenuItem
@@ -269,31 +270,31 @@
             this.excluirToolStripMenuItem3,
             this.consultarToolStripMenuItem3});
             this.gerarReciboDeFériasToolStripMenuItem.Name = "gerarReciboDeFériasToolStripMenuItem";
-            this.gerarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.gerarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.gerarReciboDeFériasToolStripMenuItem.Text = "Planos odontológicos";
             // 
             // cadastrarToolStripMenuItem3
             // 
             this.cadastrarToolStripMenuItem3.Name = "cadastrarToolStripMenuItem3";
-            this.cadastrarToolStripMenuItem3.Size = new System.Drawing.Size(243, 22);
+            this.cadastrarToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
             this.cadastrarToolStripMenuItem3.Text = "Cadastrar plano odontológico";
             // 
             // alterarDadosToolStripMenuItem3
             // 
             this.alterarDadosToolStripMenuItem3.Name = "alterarDadosToolStripMenuItem3";
-            this.alterarDadosToolStripMenuItem3.Size = new System.Drawing.Size(243, 22);
+            this.alterarDadosToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
             this.alterarDadosToolStripMenuItem3.Text = "Alterar dados";
             // 
             // excluirToolStripMenuItem3
             // 
             this.excluirToolStripMenuItem3.Name = "excluirToolStripMenuItem3";
-            this.excluirToolStripMenuItem3.Size = new System.Drawing.Size(243, 22);
+            this.excluirToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
             this.excluirToolStripMenuItem3.Text = "Excluir plano odontológico";
             // 
             // consultarToolStripMenuItem3
             // 
             this.consultarToolStripMenuItem3.Name = "consultarToolStripMenuItem3";
-            this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(243, 22);
+            this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
             this.consultarToolStripMenuItem3.Text = "Consultar planos odontológicos";
             // 
             // consultarBeneficioDasFériasToolStripMenuItem
@@ -316,118 +317,104 @@
             this.calcularAdicionalNoturnoToolStripMenuItem,
             this.calcularAtrasosEFaltasToolStripMenuItem});
             this.consultarBeneficioDasFériasToolStripMenuItem.Name = "consultarBeneficioDasFériasToolStripMenuItem";
-            this.consultarBeneficioDasFériasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.consultarBeneficioDasFériasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.consultarBeneficioDasFériasToolStripMenuItem.Text = "Folha de pagamento";
             // 
             // gerarNovaFolhaToolStripMenuItem
             // 
             this.gerarNovaFolhaToolStripMenuItem.Name = "gerarNovaFolhaToolStripMenuItem";
-            this.gerarNovaFolhaToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.gerarNovaFolhaToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.gerarNovaFolhaToolStripMenuItem.Text = "Gerar nova folha";
             // 
             // visualizarFolhaToolStripMenuItem
             // 
             this.visualizarFolhaToolStripMenuItem.Name = "visualizarFolhaToolStripMenuItem";
-            this.visualizarFolhaToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.visualizarFolhaToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.visualizarFolhaToolStripMenuItem.Text = "Visualizar folha";
             // 
             // calcularValeTransporteToolStripMenuItem
             // 
             this.calcularValeTransporteToolStripMenuItem.Name = "calcularValeTransporteToolStripMenuItem";
-            this.calcularValeTransporteToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularValeTransporteToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularValeTransporteToolStripMenuItem.Text = "Calcular vale transporte";
-            this.calcularValeTransporteToolStripMenuItem.Click += new System.EventHandler(this.calcularValeTransporteToolStripMenuItem_Click);
             // 
             // calcularValeAlimentaçãoToolStripMenuItem
             // 
             this.calcularValeAlimentaçãoToolStripMenuItem.Name = "calcularValeAlimentaçãoToolStripMenuItem";
-            this.calcularValeAlimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularValeAlimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularValeAlimentaçãoToolStripMenuItem.Text = "Calcular vale alimentação";
-            this.calcularValeAlimentaçãoToolStripMenuItem.Click += new System.EventHandler(this.calcularValeAlimentaçãoToolStripMenuItem_Click);
             // 
             // calcularAdiantamentoQuinzenalToolStripMenuItem
             // 
             this.calcularAdiantamentoQuinzenalToolStripMenuItem.Name = "calcularAdiantamentoQuinzenalToolStripMenuItem";
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularAdiantamentoQuinzenalToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularAdiantamentoQuinzenalToolStripMenuItem.Text = "Calcular adiantamento quinzenal";
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem.Click += new System.EventHandler(this.calcularAdiantamentoQuinzenalToolStripMenuItem_Click);
             // 
             // calcularConvênioOdontológicoToolStripMenuItem
             // 
             this.calcularConvênioOdontológicoToolStripMenuItem.Name = "calcularConvênioOdontológicoToolStripMenuItem";
-            this.calcularConvênioOdontológicoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularConvênioOdontológicoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularConvênioOdontológicoToolStripMenuItem.Text = "Calcular convênio odontológico";
-            this.calcularConvênioOdontológicoToolStripMenuItem.Click += new System.EventHandler(this.calcularConvênioOdontológicoToolStripMenuItem_Click);
             // 
             // calcularConvênioMédicoToolStripMenuItem
             // 
             this.calcularConvênioMédicoToolStripMenuItem.Name = "calcularConvênioMédicoToolStripMenuItem";
-            this.calcularConvênioMédicoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularConvênioMédicoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularConvênioMédicoToolStripMenuItem.Text = "Calcular convênio médico";
-            this.calcularConvênioMédicoToolStripMenuItem.Click += new System.EventHandler(this.calcularConvênioMédicoToolStripMenuItem_Click);
             // 
             // calcularDependentesToolStripMenuItem
             // 
             this.calcularDependentesToolStripMenuItem.Name = "calcularDependentesToolStripMenuItem";
-            this.calcularDependentesToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularDependentesToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularDependentesToolStripMenuItem.Text = "Calcular dependente";
-            this.calcularDependentesToolStripMenuItem.Click += new System.EventHandler(this.calcularDependentesToolStripMenuItem_Click);
             // 
             // calcularPensãoToolStripMenuItem
             // 
             this.calcularPensãoToolStripMenuItem.Name = "calcularPensãoToolStripMenuItem";
-            this.calcularPensãoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularPensãoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularPensãoToolStripMenuItem.Text = "Calcular pensão";
-            this.calcularPensãoToolStripMenuItem.Click += new System.EventHandler(this.calcularPensãoToolStripMenuItem_Click);
             // 
             // calcularFGTSToolStripMenuItem
             // 
             this.calcularFGTSToolStripMenuItem.Name = "calcularFGTSToolStripMenuItem";
-            this.calcularFGTSToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularFGTSToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularFGTSToolStripMenuItem.Text = "Calcular FGTS";
-            this.calcularFGTSToolStripMenuItem.Click += new System.EventHandler(this.calcularFGTSToolStripMenuItem_Click);
             // 
             // calcularINSSToolStripMenuItem
             // 
             this.calcularINSSToolStripMenuItem.Name = "calcularINSSToolStripMenuItem";
-            this.calcularINSSToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularINSSToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularINSSToolStripMenuItem.Text = "Calcular INSS";
-            this.calcularINSSToolStripMenuItem.Click += new System.EventHandler(this.calcularINSSToolStripMenuItem_Click);
             // 
             // calcularIRRFToolStripMenuItem
             // 
             this.calcularIRRFToolStripMenuItem.Name = "calcularIRRFToolStripMenuItem";
-            this.calcularIRRFToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularIRRFToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularIRRFToolStripMenuItem.Text = "Calcular IRRF";
-            this.calcularIRRFToolStripMenuItem.Click += new System.EventHandler(this.calcularIRRFToolStripMenuItem_Click);
             // 
             // calcularHorasExtrasToolStripMenuItem
             // 
             this.calcularHorasExtrasToolStripMenuItem.Name = "calcularHorasExtrasToolStripMenuItem";
-            this.calcularHorasExtrasToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularHorasExtrasToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularHorasExtrasToolStripMenuItem.Text = "Calcular horas extras";
-            this.calcularHorasExtrasToolStripMenuItem.Click += new System.EventHandler(this.calcularHorasExtrasToolStripMenuItem_Click);
             // 
             // calcularPericulosidadeEInsalubridadeToolStripMenuItem
             // 
             this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Name = "calcularPericulosidadeEInsalubridadeToolStripMenuItem";
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Text = "Calcular periculosidade e insalubridade";
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Click += new System.EventHandler(this.calcularPericulosidadeEInsalubridadeToolStripMenuItem_Click);
             // 
             // calcularAdicionalNoturnoToolStripMenuItem
             // 
             this.calcularAdicionalNoturnoToolStripMenuItem.Name = "calcularAdicionalNoturnoToolStripMenuItem";
-            this.calcularAdicionalNoturnoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularAdicionalNoturnoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularAdicionalNoturnoToolStripMenuItem.Text = "Calcular adicional noturno";
-            this.calcularAdicionalNoturnoToolStripMenuItem.Click += new System.EventHandler(this.calcularAdicionalNoturnoToolStripMenuItem_Click);
             // 
             // calcularAtrasosEFaltasToolStripMenuItem
             // 
             this.calcularAtrasosEFaltasToolStripMenuItem.Name = "calcularAtrasosEFaltasToolStripMenuItem";
-            this.calcularAtrasosEFaltasToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.calcularAtrasosEFaltasToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.calcularAtrasosEFaltasToolStripMenuItem.Text = "Calcular atrasos e faltas";
-            this.calcularAtrasosEFaltasToolStripMenuItem.Click += new System.EventHandler(this.calcularAtrasosEFaltasToolStripMenuItem_Click);
             // 
             // gerarReciboDeFériasToolStripMenuItem1
             // 
@@ -438,47 +425,44 @@
             this.agendarFériasToolStripMenuItem,
             this.calcularFériasToolStripMenuItem});
             this.gerarReciboDeFériasToolStripMenuItem1.Name = "gerarReciboDeFériasToolStripMenuItem1";
-            this.gerarReciboDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(195, 22);
+            this.gerarReciboDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
             this.gerarReciboDeFériasToolStripMenuItem1.Text = "Férias";
             // 
             // gerarNovoReciboDeFériasToolStripMenuItem
             // 
             this.gerarNovoReciboDeFériasToolStripMenuItem.Name = "gerarNovoReciboDeFériasToolStripMenuItem";
-            this.gerarNovoReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.gerarNovoReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.gerarNovoReciboDeFériasToolStripMenuItem.Text = "Gerar novo recibo de férias";
             // 
             // visualizarReciboDeFériasToolStripMenuItem
             // 
             this.visualizarReciboDeFériasToolStripMenuItem.Name = "visualizarReciboDeFériasToolStripMenuItem";
-            this.visualizarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.visualizarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.visualizarReciboDeFériasToolStripMenuItem.Text = "Visualizar recibo de férias";
             // 
             // consultarBenefícioDeFériasToolStripMenuItem1
             // 
             this.consultarBenefícioDeFériasToolStripMenuItem1.Name = "consultarBenefícioDeFériasToolStripMenuItem1";
-            this.consultarBenefícioDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
+            this.consultarBenefícioDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(232, 22);
             this.consultarBenefícioDeFériasToolStripMenuItem1.Text = "Consultar benefício de férias";
             // 
             // agendarFériasToolStripMenuItem
             // 
             this.agendarFériasToolStripMenuItem.Name = "agendarFériasToolStripMenuItem";
-            this.agendarFériasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.agendarFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.agendarFériasToolStripMenuItem.Text = "Agendar férias";
-            this.agendarFériasToolStripMenuItem.Click += new System.EventHandler(this.agendarFériasToolStripMenuItem_Click);
             // 
             // calcularFériasToolStripMenuItem
             // 
             this.calcularFériasToolStripMenuItem.Name = "calcularFériasToolStripMenuItem";
-            this.calcularFériasToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.calcularFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.calcularFériasToolStripMenuItem.Text = "Calcular férias";
-            this.calcularFériasToolStripMenuItem.Click += new System.EventHandler(this.calcularFériasToolStripMenuItem_Click);
             // 
             // décimoTerceiroSalárioToolStripMenuItem
             // 
             this.décimoTerceiroSalárioToolStripMenuItem.Name = "décimoTerceiroSalárioToolStripMenuItem";
-            this.décimoTerceiroSalárioToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.décimoTerceiroSalárioToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.décimoTerceiroSalárioToolStripMenuItem.Text = "Décimo terceiro salário";
-            this.décimoTerceiroSalárioToolStripMenuItem.Click += new System.EventHandler(this.décimoTerceiroSalárioToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -506,6 +490,7 @@
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnAjuda
             // 
@@ -519,6 +504,7 @@
             this.btnAjuda.TabIndex = 4;
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.UseVisualStyleBackColor = false;
+            this.btnAjuda.Click += new System.EventHandler(this.btnAjuda_Click);
             // 
             // btnFolhaDePagamento
             // 
@@ -532,6 +518,7 @@
             this.btnFolhaDePagamento.TabIndex = 3;
             this.btnFolhaDePagamento.Text = "Folha de Pagamento";
             this.btnFolhaDePagamento.UseVisualStyleBackColor = false;
+            this.btnFolhaDePagamento.Click += new System.EventHandler(this.btnFolhaDePagamento_Click);
             // 
             // btnFerias
             // 
@@ -545,6 +532,7 @@
             this.btnFerias.TabIndex = 2;
             this.btnFerias.Text = "Férias";
             this.btnFerias.UseVisualStyleBackColor = false;
+            this.btnFerias.Click += new System.EventHandler(this.btnFerias_Click);
             // 
             // btnConsultas
             // 
@@ -556,8 +544,9 @@
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Size = new System.Drawing.Size(200, 50);
             this.btnConsultas.TabIndex = 1;
-            this.btnConsultas.Text = "Consultas";
+            this.btnConsultas.Text = "Consultas / Alterações";
             this.btnConsultas.UseVisualStyleBackColor = false;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // btnCadastros
             // 
@@ -571,23 +560,63 @@
             this.btnCadastros.TabIndex = 0;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.UseVisualStyleBackColor = false;
+            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
             // 
-            // dataGridView1
+            // btnBotaoUm
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(270, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(338, 522);
-            this.dataGridView1.TabIndex = 3;
+            this.btnBotaoUm.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBotaoUm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBotaoUm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnBotaoUm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBotaoUm.Location = new System.Drawing.Point(383, 137);
+            this.btnBotaoUm.Name = "btnBotaoUm";
+            this.btnBotaoUm.Size = new System.Drawing.Size(200, 100);
+            this.btnBotaoUm.TabIndex = 3;
+            this.btnBotaoUm.Text = "Botão Um";
+            this.btnBotaoUm.UseVisualStyleBackColor = false;
+            this.btnBotaoUm.Visible = false;
             // 
-            // dataGridView2
+            // btnBotaoDois
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(625, 27);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(347, 522);
-            this.dataGridView2.TabIndex = 4;
+            this.btnBotaoDois.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBotaoDois.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBotaoDois.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnBotaoDois.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBotaoDois.Location = new System.Drawing.Point(670, 137);
+            this.btnBotaoDois.Name = "btnBotaoDois";
+            this.btnBotaoDois.Size = new System.Drawing.Size(200, 100);
+            this.btnBotaoDois.TabIndex = 4;
+            this.btnBotaoDois.Text = "Botão Dois";
+            this.btnBotaoDois.UseVisualStyleBackColor = false;
+            this.btnBotaoDois.Visible = false;
+            // 
+            // btnBotaoTres
+            // 
+            this.btnBotaoTres.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBotaoTres.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBotaoTres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnBotaoTres.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBotaoTres.Location = new System.Drawing.Point(383, 306);
+            this.btnBotaoTres.Name = "btnBotaoTres";
+            this.btnBotaoTres.Size = new System.Drawing.Size(200, 100);
+            this.btnBotaoTres.TabIndex = 5;
+            this.btnBotaoTres.Text = "Botão Três";
+            this.btnBotaoTres.UseVisualStyleBackColor = false;
+            this.btnBotaoTres.Visible = false;
+            // 
+            // btnBotaoQuatro
+            // 
+            this.btnBotaoQuatro.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBotaoQuatro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBotaoQuatro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnBotaoQuatro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBotaoQuatro.Location = new System.Drawing.Point(670, 306);
+            this.btnBotaoQuatro.Name = "btnBotaoQuatro";
+            this.btnBotaoQuatro.Size = new System.Drawing.Size(200, 100);
+            this.btnBotaoQuatro.TabIndex = 6;
+            this.btnBotaoQuatro.Text = "Botão Quatro";
+            this.btnBotaoQuatro.UseVisualStyleBackColor = false;
+            this.btnBotaoQuatro.Visible = false;
             // 
             // Form_AreaRestrita
             // 
@@ -595,8 +624,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnBotaoQuatro);
+            this.Controls.Add(this.btnBotaoTres);
+            this.Controls.Add(this.btnBotaoDois);
+            this.Controls.Add(this.btnBotaoUm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
@@ -609,8 +640,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,7 +705,9 @@
         private System.Windows.Forms.Button btnFerias;
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnBotaoUm;
+        private System.Windows.Forms.Button btnBotaoDois;
+        private System.Windows.Forms.Button btnBotaoTres;
+        private System.Windows.Forms.Button btnBotaoQuatro;
     }
 }
