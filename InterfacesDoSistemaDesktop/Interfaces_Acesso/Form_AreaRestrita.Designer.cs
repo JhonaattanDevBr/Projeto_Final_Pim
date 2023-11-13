@@ -81,12 +81,12 @@
             this.calcularFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décimoTerceiroSalárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCadastros = new System.Windows.Forms.Button();
-            this.btnConsultas = new System.Windows.Forms.Button();
-            this.btnFerias = new System.Windows.Forms.Button();
-            this.btnFolhaDePagamento = new System.Windows.Forms.Button();
-            this.btnAjuda = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnAjuda = new System.Windows.Forms.Button();
+            this.btnFolhaDePagamento = new System.Windows.Forms.Button();
+            this.btnFerias = new System.Windows.Forms.Button();
+            this.btnConsultas = new System.Windows.Forms.Button();
+            this.btnCadastros = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
@@ -494,57 +494,18 @@
             this.panel1.Size = new System.Drawing.Size(264, 538);
             this.panel1.TabIndex = 2;
             // 
-            // btnCadastros
+            // btnSair
             // 
-            this.btnCadastros.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCadastros.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastros.Location = new System.Drawing.Point(3, 28);
-            this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Size = new System.Drawing.Size(200, 50);
-            this.btnCadastros.TabIndex = 0;
-            this.btnCadastros.Text = "Cadastros";
-            this.btnCadastros.UseVisualStyleBackColor = false;
-            // 
-            // btnConsultas
-            // 
-            this.btnConsultas.BackColor = System.Drawing.Color.LightBlue;
-            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConsultas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnConsultas.Location = new System.Drawing.Point(3, 112);
-            this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(200, 50);
-            this.btnConsultas.TabIndex = 1;
-            this.btnConsultas.Text = "Consultas";
-            this.btnConsultas.UseVisualStyleBackColor = false;
-            // 
-            // btnFerias
-            // 
-            this.btnFerias.BackColor = System.Drawing.Color.LightBlue;
-            this.btnFerias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFerias.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFerias.Location = new System.Drawing.Point(3, 198);
-            this.btnFerias.Name = "btnFerias";
-            this.btnFerias.Size = new System.Drawing.Size(200, 50);
-            this.btnFerias.TabIndex = 2;
-            this.btnFerias.Text = "Férias";
-            this.btnFerias.UseVisualStyleBackColor = false;
-            // 
-            // btnFolhaDePagamento
-            // 
-            this.btnFolhaDePagamento.BackColor = System.Drawing.Color.LightBlue;
-            this.btnFolhaDePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFolhaDePagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFolhaDePagamento.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFolhaDePagamento.Location = new System.Drawing.Point(3, 281);
-            this.btnFolhaDePagamento.Name = "btnFolhaDePagamento";
-            this.btnFolhaDePagamento.Size = new System.Drawing.Size(200, 50);
-            this.btnFolhaDePagamento.TabIndex = 3;
-            this.btnFolhaDePagamento.Text = "Folha de Pagamento";
-            this.btnFolhaDePagamento.UseVisualStyleBackColor = false;
+            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSair.Location = new System.Drawing.Point(3, 454);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(200, 50);
+            this.btnSair.TabIndex = 5;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
             // 
             // btnAjuda
             // 
@@ -559,21 +520,61 @@
             this.btnAjuda.Text = "Ajuda";
             this.btnAjuda.UseVisualStyleBackColor = false;
             // 
-            // btnSair
+            // btnFolhaDePagamento
             // 
-            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSair.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSair.Location = new System.Drawing.Point(3, 454);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(200, 50);
-            this.btnSair.TabIndex = 5;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnFolhaDePagamento.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFolhaDePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFolhaDePagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFolhaDePagamento.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnFolhaDePagamento.Location = new System.Drawing.Point(3, 281);
+            this.btnFolhaDePagamento.Name = "btnFolhaDePagamento";
+            this.btnFolhaDePagamento.Size = new System.Drawing.Size(200, 50);
+            this.btnFolhaDePagamento.TabIndex = 3;
+            this.btnFolhaDePagamento.Text = "Folha de Pagamento";
+            this.btnFolhaDePagamento.UseVisualStyleBackColor = false;
+            // 
+            // btnFerias
+            // 
+            this.btnFerias.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFerias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFerias.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnFerias.Location = new System.Drawing.Point(3, 198);
+            this.btnFerias.Name = "btnFerias";
+            this.btnFerias.Size = new System.Drawing.Size(200, 50);
+            this.btnFerias.TabIndex = 2;
+            this.btnFerias.Text = "Férias";
+            this.btnFerias.UseVisualStyleBackColor = false;
+            // 
+            // btnConsultas
+            // 
+            this.btnConsultas.BackColor = System.Drawing.Color.LightBlue;
+            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConsultas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnConsultas.Location = new System.Drawing.Point(3, 112);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(200, 50);
+            this.btnConsultas.TabIndex = 1;
+            this.btnConsultas.Text = "Consultas";
+            this.btnConsultas.UseVisualStyleBackColor = false;
+            // 
+            // btnCadastros
+            // 
+            this.btnCadastros.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCadastros.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCadastros.Location = new System.Drawing.Point(3, 28);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Size = new System.Drawing.Size(200, 50);
+            this.btnCadastros.TabIndex = 0;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(270, 27);
             this.dataGridView1.Name = "dataGridView1";

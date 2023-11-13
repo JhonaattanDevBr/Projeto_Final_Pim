@@ -59,15 +59,5 @@ namespace InterfacesDoSistemaDesktop.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_20220729_WA0005 {
-            get {
-                object obj = ResourceManager.GetObject("IMG-20220729-WA0005", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
