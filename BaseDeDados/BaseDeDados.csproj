@@ -55,6 +55,10 @@
       <Project>{7179df48-52b2-46db-8706-500715a41791}</Project>
       <Name>BeneficioDasFerias</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ContaPersonal\ContaPersonal.csproj">
+      <Project>{ad50847c-512f-492f-953c-487ad47fa9dc}</Project>
+      <Name>ContaPersonal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DecimoTerceiroSalario\DecimoTerceiroSalario.csproj">
       <Project>{fa5d273c-aac3-4daa-8dee-874b03f03f0b}</Project>
       <Name>DecimoTerceiroSalario</Name>

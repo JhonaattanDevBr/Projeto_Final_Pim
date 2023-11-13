@@ -13,9 +13,10 @@ namespace InterfacesDoSistemaDesktop
 {
     public partial class Form_AreaRestrita : Form
     {
-        public Form_AreaRestrita()
+        public Form_AreaRestrita(string nomeFuncionario)
         {
             InitializeComponent();
+            lblUsuario.Text = nomeFuncionario;
         }
 
         private void btnCadastros_Click(object sender, EventArgs e)

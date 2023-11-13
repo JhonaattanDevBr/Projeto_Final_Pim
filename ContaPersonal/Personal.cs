@@ -18,48 +18,101 @@ namespace ContaPersonal
 
         public bool PegarValoresParaValidarCadastro()
         {
-            bool teste1, teste2, teste3, teste4;
+            bool auten1, auten2, auten3, auten4, auten5, auten6;
 
-            teste1 = TesteCaixaBaixa();
-            teste2 = TesteApenasLetras();
-            teste3 = TesteEspacosEmBranco();
-            teste4 = TesteAutenticacaoSenha();
+            auten1 = AutenticarCamposVazios();
+            auten2 = AutenticarOitoDigitos();
+            auten3 = AutenticarCompatibilidadeSenhas();
+            auten4 = AutenticarCaixaBaixa();
+            auten5 = AutenticarApenasLetras();
+            auten6 = AutenticarEspacosEmBranco();
 
 
-            if (teste1 == true &&
-               teste2 == true &&
-               teste3 == true &&
-               teste4 == true)
+
+            if (auten1)
             {
-                //bool retornoCad = cnnDados.CadastrarFuncPersonalD(Nome, Cargo, Setor, Usuario, Senha, ConfirmacaoSenha); nao vou mais fazer dessa forma
-                return true;
-            }
-            else
-            {
-                if (teste1 == false)
+                if (auten2)
                 {
-                    MensagemErro = "Os campos nome, cargo, setor e usuario não podem conter letras em caixa alta.";
-                    return false;
-                }
-                else if (teste2 == false)
-                {
-                    MensagemErro = "Os campos nome, cargo, setor e usuario não podem conter números ou caracteres especiais.";
-                    return false;
-                }
-                else if (teste3 == false)
-                {
-                    MensagemErro = "Nenhum dos campos pode conter espaços em branco.";
-                    return false;
+                    if (auten3)
+                    {
+                        if (auten4)
+                        {
+                            if (auten5)
+                            {
+                                if (auten6)
+                                {
+                                    return true;
+                                }
+                                else
+                                {
+                                    MensagemErro = "Nenhum dos campos pode conter espaços em branco.";
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                MensagemErro = "Os campos NOME, CARGO, SETOR e USÚARIO não podem conter números ou caracteres especiais.";
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            MensagemErro = "Os campos NOME, CARGO, SETOR e USÚARIO não podem conter letras em caixa alta.";
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        MensagemErro = "As SENHAS devem ser identicas entre si.";
+                        return false;
+                    }
                 }
                 else
                 {
+                    MensagemErro = "A SENHA deve possuir no mínimo 8 dígitos.";
                     return false;
                 }
-
+            }
+            else
+            {
+                MensagemErro = "Todos os campos devem ser preenchidos.";
+                return false;
             }
         }
 
-        private bool TesteCaixaBaixa()
+        private bool AutenticarCamposVazios()
+        {
+            if (!string.IsNullOrEmpty(Nome) &&
+                !string.IsNullOrEmpty(Cargo) &&
+                !string.IsNullOrEmpty(Setor) &&
+                !string.IsNullOrEmpty(Usuario) &&
+                !string.IsNullOrEmpty(Senha) &&
+                !string.IsNullOrEmpty(ConfirmacaoSenha))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarOitoDigitos()
+        {
+            if (Senha.Length >= 8 && ConfirmacaoSenha.Length >= 8)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarCompatibilidadeSenhas()
+        {
+            if (Senha.Equals(ConfirmacaoSenha))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool AutenticarCaixaBaixa()
         {
             if (Nome.ToLower() == Nome &&
                 Cargo.ToLower() == Cargo &&
@@ -71,7 +124,7 @@ namespace ContaPersonal
             else { return false; }
         }
 
-        private bool TesteApenasLetras()
+        private bool AutenticarApenasLetras()
         {
             if (Nome.All(char.IsLetter) &&
                 Cargo.All(char.IsLetter) &&
@@ -83,7 +136,7 @@ namespace ContaPersonal
             else { return false; }
         }
 
-        private bool TesteEspacosEmBranco()
+        private bool AutenticarEspacosEmBranco()
         {
             string texto1 = Nome.Replace(" ", ""),
                    texto2 = Cargo.Replace(" ", ""),
@@ -104,29 +157,8 @@ namespace ContaPersonal
             else { return false; }
         }
 
-        private bool TesteAutenticacaoSenha()
-        {
-            if (!string.IsNullOrEmpty(Nome) &&
-                !string.IsNullOrEmpty(Cargo) &&
-                !string.IsNullOrEmpty(Setor) &&
-                !string.IsNullOrEmpty(Usuario) &&
-                !string.IsNullOrEmpty(Senha) &&
-                !string.IsNullOrEmpty(ConfirmacaoSenha))
-            {
-                if (Senha.Length >= 8 && ConfirmacaoSenha.Length >= 8)
-                {
-                    if (Senha.Equals(ConfirmacaoSenha))
-                    {
-                        return true;
-                    }
-                    else { MensagemErro = "As senhas devem ser identicas entre si."; return false; }
+        
 
-                }
-                else { MensagemErro = "A senha deve possuir no mínimo 8 dígitos."; return false; }
-
-            }
-            else { MensagemErro = "Todos os campos devem ser preenchidos."; return false; }
-
-        }
+        
     }
 }
