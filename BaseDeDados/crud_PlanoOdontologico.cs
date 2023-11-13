@@ -18,7 +18,7 @@ namespace BaseDeDados
 
         public bool CadastrarConvOdontologico(ConvenioOdontologico _convenioOdontologico)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -73,7 +73,7 @@ namespace BaseDeDados
 
         public DataTable BuscarConveniOdontologico()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -112,7 +112,7 @@ namespace BaseDeDados
 
         public bool AlterarConvOdontologico(ConvenioOdontologico _convenioOdontologico)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -180,7 +180,7 @@ namespace BaseDeDados
 
         public bool ExcluirConvOdontologico(string id)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -215,7 +215,7 @@ namespace BaseDeDados
 
         public List<ConvenioOdontologico> BuscarConvMedicoEspecifico(ConvenioOdontologico _convenioOdontologico)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try

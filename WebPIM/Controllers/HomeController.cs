@@ -2,11 +2,14 @@
 using System.Diagnostics;
 using WebPIM.Models;
 using System.Data.SqlClient;
+using BaseDeDados;
 
 namespace WebPIM.Controllers
 {
     public class HomeController : Controller
     {
+        servidoresBancoDados _servidoresBancoDados = new servidoresBancoDados();
+
             public IActionResult Index()
             {
                 List<FuncionarioModel> ListasFuncionarios = ListaFuncionario();
@@ -16,11 +19,11 @@ namespace WebPIM.Controllers
 
         public List<FuncionarioModel> ListaFuncionario()
         {
+            //var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
+            //SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
 
+            SqlConnection conexaoDB = new SqlConnection(_servidoresBancoDados.servidor);
 
-            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
-            SqlConnection conexaoDB = new SqlConnection(conexaoSQL);
-           
             List<FuncionarioModel> lista = new List<FuncionarioModel>();
 
             // Agora você pode usar Session["id_funcionario"] para recuperar o ID do funcionário logado
@@ -57,7 +60,7 @@ namespace WebPIM.Controllers
                     Id_planos_odontologicos = reader.GetInt32(17),
                     Id_empresas = reader.GetInt32(18),
                     Cargo = reader.GetString(19),
-                    Salario = reader.GetFloat(20),
+                    Salario = reader.GetDouble(20), //  O ERRO ERA AQUI, LA NA MODEL ESTAVA COM TIPO DE DADO DOUBLE E AQUI ESTAVA GetFloat e por isso estaava dando erro.
                     Data_admissao = reader.GetDateTime(21)
                 };
 

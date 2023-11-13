@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using WebPIM.Models;
+using BaseDeDados;
 
 namespace WebPIM.Controllers
 {
     public class FolhaPagamentoController : Controller
     {
+        servidoresBancoDados _servidoresBancoDados = new servidoresBancoDados();
+
         public IActionResult FolhaPagamento()
         {
             List<FolhaPagModel> listaFolhaPag = listaFolhaPagamento();
@@ -13,10 +16,11 @@ namespace WebPIM.Controllers
         }
         public List<FolhaPagModel> listaFolhaPagamento()
         {
-            var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True";
+            //var conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_teste_dados_personal;Integrated Security=True";
             List<FolhaPagModel> lista = new List<FolhaPagModel>();
 
-            using (SqlConnection conexaoDB = new SqlConnection(conexaoSQL))
+            //using (SqlConnection conexaoDB = new SqlConnection(conexaoSQL))
+            using (SqlConnection conexaoDB = new SqlConnection(_servidoresBancoDados.servidor))
             {
                 conexaoDB.Open();
 

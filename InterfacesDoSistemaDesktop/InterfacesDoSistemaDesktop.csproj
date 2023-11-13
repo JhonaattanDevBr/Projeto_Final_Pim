@@ -303,6 +303,9 @@
     <EmbeddedResource Include="Interfaces_Acesso\Form_Acesso.resx">
       <DependentUpon>Form_Acesso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces_Acesso\Form_Ajuda.resx">
+      <DependentUpon>Form_Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_AtualizarDados\Form_AtualizarConvMedico.resx">
       <DependentUpon>Form_AtualizarConvMedico.cs</DependentUpon>
     </EmbeddedResource>
@@ -410,6 +413,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

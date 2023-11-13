@@ -2,12 +2,17 @@
 using WebPIM.Models;
 using System.Data.SqlClient;
 using System.Data;
+using BaseDeDados;
 
 namespace WebPIM.Controllers
 {
     public class FeriasController : Controller
     {
-        private string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
+
+        servidoresBancoDados _servidoresBancoDados = new servidoresBancoDados();
+
+        //private string conexaoSQL = @"Data Source=LAPTOP-TJ6127TR;Initial Catalog=Base_Dados_Personal_Dynamic;Integrated Security=True";
+
         public IActionResult Ferias()
         {
             try
@@ -48,7 +53,9 @@ namespace WebPIM.Controllers
         {
             List<FeriasModel> lista = new List<FeriasModel>();
 
-            using (SqlConnection conexaoDB = new SqlConnection(conexaoSQL))
+            //using (SqlConnection conexaoDB = new SqlConnection(conexaoSQL))
+
+            SqlConnection conexaoDB = new SqlConnection(_servidoresBancoDados.servidor);
             {
                 conexaoDB.Open();
                 string query = $"SELECT Ferias.*," +
@@ -56,7 +63,7 @@ namespace WebPIM.Controllers
                     $"FROM Ferias " +
                     $"INNER JOIN Funcionarios ON Ferias.Id_funcionarios = Funcionarios.Id_funcionario";
 
-                using (SqlCommand command = new SqlCommand(query, conexaoDB))
+                using (SqlCommand command = new SqlCommand(query, conexaoDB)) // ACHO Q ESSE VAI DAR ERRO QUANDO COMPILAR
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {

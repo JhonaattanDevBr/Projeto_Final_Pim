@@ -19,7 +19,7 @@ namespace BaseDeDados
 
         public bool IncluirEnderecoFuncioanario(Funcionarios _funcionario)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -79,7 +79,7 @@ namespace BaseDeDados
 
         public bool IncluirFuncionario(Funcionarios _funcionario)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             if (_funcionario.ConvenioMedico == "0")
@@ -267,7 +267,7 @@ namespace BaseDeDados
 
         public bool AtualizarEnderecoFuncionario(Funcionarios _funcionario)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -337,7 +337,7 @@ namespace BaseDeDados
         
         public bool AtualizarRegistroFuncionario(Funcionarios _funcionario)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -509,7 +509,7 @@ namespace BaseDeDados
 
         public bool ExcluirFuncionario(string id)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -543,7 +543,7 @@ namespace BaseDeDados
 
         public DataTable BuscarFuncionarios(string codEmpresa)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -683,7 +683,7 @@ namespace BaseDeDados
 
         public List<Funcionarios> BuscarInfoFuncionario(Funcionarios _funcionario)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -747,7 +747,7 @@ namespace BaseDeDados
 
         public Dictionary<int, string> PopularCaixaConvenioMedico()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -776,7 +776,7 @@ namespace BaseDeDados
 
         public Dictionary<int, string> PopularCaixaConvenioOdontologico()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -814,7 +814,7 @@ namespace BaseDeDados
 
         public Dictionary<int, string> PopularCaixaEmpregador()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -844,7 +844,7 @@ namespace BaseDeDados
 
         public Dictionary<int, string> PopularCaixaListarEmpresas()
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -872,5 +872,33 @@ namespace BaseDeDados
             }
         }
 
+        public int ColetarNumeroRegistro()
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            int registro = 0;
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT TOP 1 Registro FROM Funcionarios ORDER BY Registro DESC";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+                SqlDataReader leitura = cmd.ExecuteReader();
+
+                while (leitura.Read())
+                {
+                    registro = leitura.GetInt32(0);
+                }
+
+                conexaoDb.Close();
+                return registro;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

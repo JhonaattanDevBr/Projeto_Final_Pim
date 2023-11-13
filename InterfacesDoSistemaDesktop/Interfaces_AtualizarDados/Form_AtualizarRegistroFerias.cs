@@ -1,5 +1,6 @@
 ﻿using BaseDeDados;
 using BeneficioDasFerias;
+using FuncionariosEmpresas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,12 +25,94 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
 
         }
 
+        // Preciso inserir o código para os campos receberem os valores que foram coletados do banco de dados.
+
+        private void Form_AtualizarRegistroFerias_Load(object sender, EventArgs e)
+        {
+            List<AgendamentoFerias> listaRegistroFuncionario = new List<AgendamentoFerias>();
+            listaRegistroFuncionario = _crud_AgendamentoFerias.BuscarRegistroFerias(_agendamentoFerias);
+
+            string primeiroMes = _agendamentoFerias.PrimeiroMes,
+                   primeiroPeriodo = _agendamentoFerias.PrimeiroPeriodo,
+                   segundoMes = _agendamentoFerias.SegundoMes,
+                   segundoPeriodo = _agendamentoFerias.SegundoPeriodo,
+                   terceiroMes = _agendamentoFerias.TerceiroMes,
+                   terceiroPerdiodo = _agendamentoFerias.TerceiroPeriodo,
+                   diasRestantes = _agendamentoFerias.DiasRestantes,
+                   decimoTerceiro = _agendamentoFerias.PrimeiraParcelaDecimo,
+                   diasVendidos = _agendamentoFerias.DiasVendidos;
+
+            if (diasVendidos != "0" && decimoTerceiro == "Sim")
+            {
+                rdbSim.Checked = true;
+                txtQuantidade.Enabled = true;
+                rdbDecimoTSim.Enabled = true;
+                txtQuantidade.Text = diasVendidos.ToString();
+            }
+            else if (diasVendidos == "0" && decimoTerceiro == "Não")
+            {
+                rdbNao.Checked = true;
+                txtQuantidade.Enabled = false;
+                rdbDecimoTNao.Checked = true;
+            }
+            else if (diasVendidos != "0" && decimoTerceiro == "Não")
+            {
+                rdbSim.Checked = true;
+                txtQuantidade.Enabled = true;
+                rdbDecimoTNao.Checked = true;
+                txtQuantidade.Text = diasVendidos.ToString();
+            }
+            else
+            {
+                rdbNao.Checked = true;
+                txtQuantidade.Enabled = true;
+                rdbDecimoTSim.Checked = true;
+            }
+
+            if (!string.IsNullOrEmpty(primeiroMes) && primeiroPeriodo != "0" &&
+                segundoMes == "****" && segundoPeriodo == "0" &&
+                terceiroMes == "*****" && terceiroPerdiodo == "0")
+            {
+                rdbPeriodoCompleto.Enabled = true;
+                cmbPrimeiroPeriodo.Text = primeiroMes;
+                txtPrimeiroPeriodoDias.Text = primeiroPeriodo;
+            }
+            else if (!string.IsNullOrEmpty(primeiroMes) && primeiroPeriodo != "0" &&
+                     !string.IsNullOrEmpty(segundoMes) && segundoPeriodo != "0" &&
+                     terceiroMes == "*****" && terceiroPerdiodo == "0")
+            {
+                rdbDoisPeriodos.Enabled = true;
+                cmbPrimeiroPeriodo.Text = primeiroMes;
+                txtPrimeiroPeriodoDias.Text = primeiroPeriodo;
+                cmbSegundoPeriodo.Enabled = true;
+                txtSegundoPeriodoDias.Enabled = true;
+                cmbSegundoPeriodo.Text = segundoMes;
+                txtSegundoPeriodoDias.Text = segundoPeriodo;
+            }
+            else
+            {
+                rdbTresPeriodos.Enabled = true;
+                cmbPrimeiroPeriodo.Text = primeiroMes;
+                txtPrimeiroPeriodoDias.Text = primeiroPeriodo;
+                cmbSegundoPeriodo.Enabled = true;
+                txtSegundoPeriodoDias.Enabled = true;
+                cmbSegundoPeriodo.Text = segundoMes;
+                txtSegundoPeriodoDias.Text = segundoPeriodo;
+                cmbTerceiroPeriodo.Enabled = true;
+                txtTerceiroPeriodoDias.Enabled = true;
+                cmbTerceiroPeriodo.Text = terceiroMes;
+                txtTerceiroPeriodoDias.Text = terceiroPerdiodo;
+                
+            }
+        }
+
         private void rdbSim_CheckedChanged(object sender, EventArgs e)
         {
             if (rdbSim.Checked)
             {
                 lblQuantidade.Enabled = true;
                 txtQuantidade.Enabled = true;
+                
             }
             else if (rdbSim.Checked == false)
             {
@@ -236,29 +319,66 @@ namespace InterfacesDoSistemaDesktop.Interfaces_AtualizarDados
 
             if (cmbPrimeiroPeriodo.SelectedItem != null && !string.IsNullOrEmpty(txtPrimeiroPeriodoDias.Text))
             {
-                _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
-                _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
-                _agendamentoFerias.DiasRestantes = dias.ToString();
-
-                bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
-                if (retornoAutenticacao)
+                if (rdbSim.Checked && !string.IsNullOrEmpty(txtQuantidade.Text))
                 {
-                    bool retornoAgendamento = _crud_AgendamentoFerias.AtualizarFerias(_agendamentoFerias);
-                    if (retornoAgendamento)
+                    _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
+                    _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
+                    _agendamentoFerias.DiasRestantes = dias.ToString();
+
+                    bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
+                    if (retornoAutenticacao)
                     {
-                        MessageBox.Show("Férias atualizada com sucesso.", "Operação concluida!");
-                        this.Close();
+                        bool retornoAgendamento = _crud_AgendamentoFerias.AtualizarFerias(_agendamentoFerias);
+                        if (retornoAgendamento)
+                        {
+                            MessageBox.Show("Férias atualizada com sucesso.", "Operação concluida!");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                        MessageBox.Show(_agendamentoFerias.MensagemErro, "Falha na operação");
                     }
+                }
+                else if (rdbNao.Checked && string.IsNullOrEmpty(txtQuantidade.Text))
+                {
+                    _agendamentoFerias.PrimeiroMes = cmbPrimeiroPeriodo.SelectedItem.ToString();
+                    _agendamentoFerias.PrimeiroPeriodo = txtPrimeiroPeriodoDias.Text;
+                    _agendamentoFerias.DiasRestantes = dias.ToString();
+
+                    bool retornoAutenticacao = _agendamentoFerias.AuntenticarAgendamentoFerias();
+                    if (retornoAutenticacao)
+                    {
+                        bool retornoAgendamento = _crud_AgendamentoFerias.AtualizarFerias(_agendamentoFerias);
+                        if (retornoAgendamento)
+                        {
+                            MessageBox.Show("Férias atualizada com sucesso.", "Operação concluida!");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(_agendamentoFerias.MensagemErro, "Falha na operação");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show(_agendamentoFerias.MensagemErro, "Falha na operação");
+                    MessageBox.Show("Caso seja solictada a venda das férias o campo\nQUANTIDADE DE DIAS VENDIDOS\ndeve ser preenchido", "Falha na operação");
                 }
+
+                
             }
         }
+
+        
     }
 }

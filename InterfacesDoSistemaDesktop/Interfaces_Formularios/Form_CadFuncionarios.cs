@@ -81,6 +81,21 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
                 cmbEmpregadorFunc.DisplayMember = "Value";
                 cmbEmpregadorFunc.SelectedIndex = 0;
             }
+
+            int contador = 1000;
+            
+            int coletorRegistro = _crud_Funcionarios.ColetarNumeroRegistro();
+            if (coletorRegistro > 0)
+            {
+                coletorRegistro++;
+                txtRegistroFunc.Text = coletorRegistro.ToString();
+            }
+            else
+            {
+                contador++;
+                txtRegistroFunc.Text = contador.ToString();
+            }
+
         }
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
@@ -156,6 +171,20 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
                         textBox14.Clear();
                         cmbEmpregadorFunc.SelectedIndex = 0;
                         txtNomeFunc.Focus();
+
+                        int contador = 1000;
+
+                        int coletorRegistro = _crud_Funcionarios.ColetarNumeroRegistro();
+                        if (coletorRegistro > 0)
+                        {
+                            coletorRegistro++;
+                            txtRegistroFunc.Text = coletorRegistro.ToString();
+                        }
+                        else
+                        {
+                            contador++;
+                            txtRegistroFunc.Text = contador.ToString();
+                        }
                     }
                     else
                     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterfacesDoSistemaDesktop.Interfaces_Acesso;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,124 +13,78 @@ namespace InterfacesDoSistemaDesktop
 {
     public partial class Form_AreaRestrita : Form
     {
-        public Form_AreaRestrita()
+        public Form_AreaRestrita(string nomeFuncionario)
         {
             InitializeComponent();
+            lblUsuario.Text = nomeFuncionario;
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCadastros_Click(object sender, EventArgs e)
         {
-            Close();
+            btnBotaoUm.Visible = true;
+            btnBotaoUm.Text = "Cadastrar Nova Empresa";
+            btnBotaoDois.Visible = true;
+            btnBotaoDois.Text = "Cadastrar Novo Convênio Médico";
+            btnBotaoTres.Visible = true;
+            btnBotaoTres.Text = "Cadastrar Novo Convênio Odontológico";
+            btnBotaoQuatro.Visible = true;
+            btnBotaoQuatro.Text = "Cadastrar Novo Funcionário";
         }
 
-        private void agendarFériasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnConsultas_Click(object sender, EventArgs e)
         {
-            /* Eu tentei fazer a janela fehcar essa janela e abrir a outra sem ficar com duas janelas abertas mas não consegui
-             depois eu tento fazer isso, por enquanto vou fazer a interface do formulario que o professor solicitou.*/
-            //Inter_AgendarFerias ObjInterfaceAgendarFerias = new Inter_AgendarFerias();
-            //ObjInterfaceAgendarFerias.Show();
-            
+            btnBotaoUm.Visible = true;
+            btnBotaoUm.Text = "Consultar Minhas Empresas";
+            btnBotaoDois.Visible = true;
+            btnBotaoDois.Text = "Consultar Meus Convênios Médicos";
+            btnBotaoTres.Visible = true;
+            btnBotaoTres.Text = "Consultar Meus Convênios Odontológicos";
+            btnBotaoQuatro.Visible = true;
+            btnBotaoQuatro.Text = "Consultar Meus Funcionários";
         }
 
-        private void calcularValeTransporteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnFerias_Click(object sender, EventArgs e)
         {
-            Form_ValeTransporte form_ValeTransporte = new Form_ValeTransporte();
-            form_ValeTransporte.Show();
+            btnBotaoUm.Visible = true;
+            btnBotaoUm.Text = "Consultar Tabela de Férias";
+            btnBotaoDois.Visible = true;
+            btnBotaoDois.Text = "Gerar Recibo de Férias";
+            btnBotaoTres.Visible = false;
+            btnBotaoQuatro.Visible = false;
         }
 
-        private void calcularValeAlimentaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnFolhaDePagamento_Click(object sender, EventArgs e)
         {
-            Form form_ValeAlimentacao = new Form_ValeAlimentacao();
-            form_ValeAlimentacao.Show();
+            btnBotaoUm.Visible = true;
+            btnBotaoUm.Text = "Consultar Lista de Pagamentos";
+            btnBotaoDois.Visible = true;
+            btnBotaoDois.Text = "Gerar Folha de Pagamento";
+            btnBotaoTres.Visible = false;
+            btnBotaoQuatro.Visible = false;
         }
 
-        private void calcularAdiantamentoQuinzenalToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnAjuda_Click(object sender, EventArgs e)
         {
-            Form_AdiantamentoQuinzenal form_AdiantamentoQuinzenal = new Form_AdiantamentoQuinzenal();
-            form_AdiantamentoQuinzenal.Show();
+            Form_Ajuda _form_Ajuda = new Form_Ajuda();
+            _form_Ajuda.ShowDialog();
         }
 
-        private void calcularConvênioOdontológicoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
-            Form_ConvenioOdontologico form_ConvenioOdontologico = new Form_ConvenioOdontologico();
-            form_ConvenioOdontologico.Show();
+            DialogResult sair = MessageBox.Show("Deseja realmente fechar o sistema?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                Close();
+            }
         }
 
-        private void calcularConvênioMédicoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form_ConvenioMedico form_ConvenioMedico = new Form_ConvenioMedico();
-            form_ConvenioMedico.Show();
+            DialogResult sair = MessageBox.Show("Deseja realmente fechar o sistema?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                Close();
+            }
         }
-
-        private void calcularDependentesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Dependentes form_Dependentes = new Form_Dependentes();
-            form_Dependentes.Show();
-        }
-
-        private void calcularPensãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Pensao form_Pensao = new Form_Pensao();
-            form_Pensao.Show();
-        }
-
-        private void calcularFGTSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Fgts form_Fgts = new Form_Fgts();
-            form_Fgts.Show();
-        }
-
-        private void calcularINSSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Inss form_Inss = new Form_Inss();
-            form_Inss.Show();
-        }
-
-        private void calcularIRRFToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Irrf form_Irrf = new Form_Irrf();
-            form_Irrf.Show();
-        }
-
-        private void calcularHorasExtrasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_HorasExtras form_HorasExtras = new Form_HorasExtras();
-            form_HorasExtras.Show();
-        }
-
-        private void calcularPericulosidadeEInsalubridadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_Periculosidade_Insalubridade form_Periculosidade_Insalubridade = new Form_Periculosidade_Insalubridade();
-            form_Periculosidade_Insalubridade.Show();
-        }
-
-        private void calcularAdicionalNoturnoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_AdicionalNotruno form_AdicionalNotruno = new Form_AdicionalNotruno();
-            form_AdicionalNotruno.Show();
-        }
-
-        private void calcularAtrasosEFaltasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_AtrasosFaltas form_InterfaceAtrasos = new Form_AtrasosFaltas(); //vou testar as interfaces de atrasos e faltas nesse botão mas depois vou acionar esse metodo de novo 
-            form_InterfaceAtrasos.Show();
-            //Form_Atrasos form_Atrasos = new Form_Atrasos();
-            //form_Atrasos.Show();
-            //Form_FaltasInjustificadas form_FaltasInjustificadas = new Form_FaltasInjustificadas();
-            //form_FaltasInjustificadas.Show();
-        }
-
-        private void décimoTerceiroSalárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_DecimoTerceiro form_InterfaceDecimoTerceiro = new Form_DecimoTerceiro();
-            form_InterfaceDecimoTerceiro.Show();
-        }
-
-        private void calcularFériasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_CalculosFerias form_CalculosFerias = new Form_CalculosFerias();
-            form_CalculosFerias.Show();
-        }
-
     }
 }

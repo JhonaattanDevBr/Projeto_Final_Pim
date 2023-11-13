@@ -464,6 +464,7 @@
             this.Name = "Form_AtualizarRegistroFerias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualizar Férias";
+            this.Load += new System.EventHandler(this.Form_AtualizarRegistroFerias_Load);
             this.gpbAgendarFerias.ResumeLayout(false);
             this.gpbAgendarFerias.PerformLayout();
             this.gpbDecimoTerceiro.ResumeLayout(false);

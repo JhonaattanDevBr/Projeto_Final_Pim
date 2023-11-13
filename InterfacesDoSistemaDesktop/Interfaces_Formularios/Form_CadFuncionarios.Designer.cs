@@ -379,11 +379,14 @@
             // 
             // txtRegistroFunc
             // 
+            this.txtRegistroFunc.BackColor = System.Drawing.Color.LightBlue;
             this.txtRegistroFunc.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtRegistroFunc.Enabled = false;
             this.txtRegistroFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtRegistroFunc.Location = new System.Drawing.Point(9, 48);
             this.txtRegistroFunc.MaxLength = 10;
             this.txtRegistroFunc.Name = "txtRegistroFunc";
+            this.txtRegistroFunc.ReadOnly = true;
             this.txtRegistroFunc.Size = new System.Drawing.Size(80, 21);
             this.txtRegistroFunc.TabIndex = 8;
             this.txtRegistroFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistroFunc_KeyPress);

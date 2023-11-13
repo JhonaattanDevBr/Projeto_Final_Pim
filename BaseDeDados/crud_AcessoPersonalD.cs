@@ -5,21 +5,19 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ContaPersonal;
+using FuncionariosEmpresas;
 
 namespace BaseDeDados
 {
     public class crud_AcessoPersonalD
     {
         servidoresBancoDados _servidores = new servidoresBancoDados();
+
         // Ainda preciso mudar o crud e para buscar os atributos ao inves de receber parametros
-        public bool CadastrarFuncPersonalD(string nome,
-                                           string cargo,
-                                           string setor,
-                                           string usuario,
-                                           string senha,
-                                           string confirmacaoSenha)
+        public bool CadastrarFuncPersonalD(Personal _personal)
         {
-            string caminho = _servidores.servidorNotebook;
+            string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
 
             try
@@ -32,37 +30,37 @@ namespace BaseDeDados
                 var pmtNome = cmd.CreateParameter();
                 pmtNome.ParameterName = "@nome";
                 pmtNome.DbType = DbType.String;
-                pmtNome.Value = nome;
+                pmtNome.Value = _personal.Nome;
                 cmd.Parameters.Add(pmtNome);
 
                 var pmtCargo = cmd.CreateParameter();
                 pmtCargo.ParameterName = "@cargo";
                 pmtCargo.DbType = DbType.String;
-                pmtCargo.Value = cargo;
+                pmtCargo.Value = _personal.Cargo;
                 cmd.Parameters.Add(pmtCargo);
 
                 var pmtSetor = cmd.CreateParameter();
                 pmtSetor.ParameterName = "@setor";
                 pmtSetor.DbType = DbType.String;
-                pmtSetor.Value = setor;
+                pmtSetor.Value = _personal.Setor;
                 cmd.Parameters.Add(pmtSetor);
 
                 var pmtUsuario = cmd.CreateParameter();
                 pmtUsuario.ParameterName = "@usuario";
                 pmtUsuario.DbType = DbType.String;
-                pmtUsuario.Value = usuario;
+                pmtUsuario.Value = _personal.Usuario;
                 cmd.Parameters.Add(pmtUsuario);
 
                 var pmtSenha = cmd.CreateParameter();
                 pmtSenha.ParameterName = "@senha";
                 pmtSenha.DbType = DbType.String;
-                pmtSenha.Value = senha;
+                pmtSenha.Value = _personal.Senha;
                 cmd.Parameters.Add(pmtSenha);
 
                 var pmtConfSenha = cmd.CreateParameter();
                 pmtConfSenha.ParameterName = "@confSenha";
                 pmtConfSenha.DbType = DbType.String;
-                pmtConfSenha.Value = confirmacaoSenha;
+                pmtConfSenha.Value = _personal.ConfirmacaoSenha;
                 cmd.Parameters.Add(pmtConfSenha);
 
                 if (cmd.ExecuteNonQuery() > 0)
@@ -83,6 +81,93 @@ namespace BaseDeDados
             }
 
         }
-        
+
+        public string ColetarSenha(Personal _personal)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Senha FROM Acesso_personalD";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _personal.Senha = _leitor.GetString(0);
+                }
+
+                conexaoDb.Close();
+                return _personal.Senha;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public string ColetarLogin(Personal _personal)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Usuario FROM Acesso_personalD";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _personal.Usuario = _leitor.GetString(0);
+                }
+
+                conexaoDb.Close();
+                return _personal.Usuario;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public string ColetarNomeFuncionario(Personal _personal)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Nome FROM Acesso_personalD";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+
+                while (_leitor.Read())
+                {
+                    _personal.Nome = _leitor.GetString(0);
+                }
+
+                conexaoDb.Close();
+                return _personal.Nome;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

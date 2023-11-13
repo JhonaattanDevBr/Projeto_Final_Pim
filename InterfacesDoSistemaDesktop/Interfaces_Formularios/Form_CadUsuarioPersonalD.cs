@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using BaseDeDados;
 using System.Drawing.Text;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,8 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
     public partial class Form_CadUsuarioPersonalD : Form
     {
         
-       Personal personalD = new Personal();
+        Personal _personalD = new Personal();
+        crud_AcessoPersonalD _crud_AcessoPersonalD = new crud_AcessoPersonalD();
 
         public Form_CadUsuarioPersonalD()
         {
@@ -26,24 +28,32 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
 
         private void btnCriarUsuario_Click(object sender, EventArgs e)
         {
-            bool retornoCadastro;
-            personalD.Nome = txtNome.Text;
-            personalD.Setor = txtSetor.Text;
-            personalD.Cargo = txtCargo.Text;
-            personalD.Usuario = txtUsuario.Text;
-            personalD.Senha = txtSenha.Text;
-            personalD.ConfirmacaoSenha = txtConfirmacaoSenha.Text;
+            _personalD.Nome = txtNome.Text;
+            _personalD.Setor = txtSetor.Text;
+            _personalD.Cargo = txtCargo.Text;
+            _personalD.Usuario = txtUsuario.Text;
+            _personalD.Senha = txtSenha.Text;
+            _personalD.ConfirmacaoSenha = txtConfirmacaoSenha.Text;
             
-            retornoCadastro = personalD.PegarValoresParaValidarCadastro();
+            bool retornoAutenticacao = _personalD.PegarValoresParaValidarCadastro();
 
-            if (retornoCadastro == true)
+            if (retornoAutenticacao)
             {
-                MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
-                Close();
+                bool retornoCadastro = _crud_AcessoPersonalD.CadastrarFuncPersonalD(_personalD);
+                if (retornoCadastro)
+                {
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Operação concluida!");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ouve um erro ao conectar-se ao banco de dados.", "Falha na operação");
+                }
+                
             }
             else
             {
-                MessageBox.Show(personalD.MensagemErro, "Falha na operação!");
+                MessageBox.Show(_personalD.MensagemErro, "Falha na operação!");
             }
             
         }
