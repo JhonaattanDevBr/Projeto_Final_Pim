@@ -31,55 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AreaRestrita));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoArquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoArquivoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fecharArquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.módulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.folhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarDadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.décimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarDadosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarDadosToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarBeneficioDasFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarNovaFolhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarFolhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularValeTransporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularValeAlimentaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularConvênioOdontológicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularConvênioMédicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularDependentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularPensãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularFGTSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularINSSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularIRRFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularHorasExtrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularAdicionalNoturnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularAtrasosEFaltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarReciboDeFériasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarNovoReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarBenefícioDeFériasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendarFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcularFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.décimoTerceiroSalárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAjuda = new System.Windows.Forms.Button();
@@ -91,6 +42,28 @@
             this.btnBotaoDois = new System.Windows.Forms.Button();
             this.btnBotaoTres = new System.Windows.Forms.Button();
             this.btnBotaoQuatro = new System.Windows.Forms.Button();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasAlteraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.folhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovaEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoConvênioMédicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoConvênioOdontológicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMinhasEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMeusConvêniosMédicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMeusConvêniosOdontológicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMeusFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarTabelaDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarListaDePagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarFolhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblBoasVindas = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblCopyright = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +74,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
-            this.módulosToolStripMenuItem});
+            this.ajudaToolStripMenuItem,
+            this.sairToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -111,358 +85,13 @@
             // arquivoToolStripMenuItem
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoArquivoToolStripMenuItem,
-            this.novoArquivoToolStripMenuItem1,
-            this.fecharArquivoToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
-            // 
-            // novoArquivoToolStripMenuItem
-            // 
-            this.novoArquivoToolStripMenuItem.Name = "novoArquivoToolStripMenuItem";
-            this.novoArquivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.novoArquivoToolStripMenuItem.Text = "Abrir arquivo";
-            // 
-            // novoArquivoToolStripMenuItem1
-            // 
-            this.novoArquivoToolStripMenuItem1.Name = "novoArquivoToolStripMenuItem1";
-            this.novoArquivoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.novoArquivoToolStripMenuItem1.Text = "Novo arquivo";
-            // 
-            // fecharArquivoToolStripMenuItem
-            // 
-            this.fecharArquivoToolStripMenuItem.Name = "fecharArquivoToolStripMenuItem";
-            this.fecharArquivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fecharArquivoToolStripMenuItem.Text = "Fechar arquivo";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
-            // módulosToolStripMenuItem
-            // 
-            this.módulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.folhaDePagamentoToolStripMenuItem,
+            this.sairToolStripMenuItem,
+            this.consultasAlteraçõesToolStripMenuItem,
             this.fériasToolStripMenuItem,
-            this.décimoToolStripMenuItem,
-            this.gerarReciboDeFériasToolStripMenuItem,
-            this.consultarBeneficioDasFériasToolStripMenuItem,
-            this.gerarReciboDeFériasToolStripMenuItem1,
-            this.décimoTerceiroSalárioToolStripMenuItem});
-            this.módulosToolStripMenuItem.Name = "módulosToolStripMenuItem";
-            this.módulosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.módulosToolStripMenuItem.Text = "Módulos";
-            // 
-            // folhaDePagamentoToolStripMenuItem
-            // 
-            this.folhaDePagamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.alterarDadosToolStripMenuItem,
-            this.excluirToolStripMenuItem,
-            this.consultarToolStripMenuItem});
-            this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
-            this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.folhaDePagamentoToolStripMenuItem.Text = "Empresas";
-            // 
-            // cadastrarToolStripMenuItem
-            // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar empresa";
-            // 
-            // alterarDadosToolStripMenuItem
-            // 
-            this.alterarDadosToolStripMenuItem.Name = "alterarDadosToolStripMenuItem";
-            this.alterarDadosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.alterarDadosToolStripMenuItem.Text = "Alterar dados";
-            // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir empresa";
-            // 
-            // consultarToolStripMenuItem
-            // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar empresas";
-            // 
-            // fériasToolStripMenuItem
-            // 
-            this.fériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem1,
-            this.alterarDadosToolStripMenuItem1,
-            this.excluirToolStripMenuItem1,
-            this.consultarToolStripMenuItem1});
-            this.fériasToolStripMenuItem.Name = "fériasToolStripMenuItem";
-            this.fériasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.fériasToolStripMenuItem.Text = "Funcionários";
-            // 
-            // cadastrarToolStripMenuItem1
-            // 
-            this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.cadastrarToolStripMenuItem1.Text = "Cadastrar funcionário";
-            // 
-            // alterarDadosToolStripMenuItem1
-            // 
-            this.alterarDadosToolStripMenuItem1.Name = "alterarDadosToolStripMenuItem1";
-            this.alterarDadosToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.alterarDadosToolStripMenuItem1.Text = "Alterar dados";
-            // 
-            // excluirToolStripMenuItem1
-            // 
-            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.excluirToolStripMenuItem1.Text = "Excluir funcionário";
-            // 
-            // consultarToolStripMenuItem1
-            // 
-            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.consultarToolStripMenuItem1.Text = "Consultar funcionários";
-            // 
-            // décimoToolStripMenuItem
-            // 
-            this.décimoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem2,
-            this.alterarDadosToolStripMenuItem2,
-            this.excluirToolStripMenuItem2,
-            this.consultarToolStripMenuItem2});
-            this.décimoToolStripMenuItem.Name = "décimoToolStripMenuItem";
-            this.décimoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.décimoToolStripMenuItem.Text = "Planos de saúde";
-            // 
-            // cadastrarToolStripMenuItem2
-            // 
-            this.cadastrarToolStripMenuItem2.Name = "cadastrarToolStripMenuItem2";
-            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
-            this.cadastrarToolStripMenuItem2.Text = "Cadastrar plano de saúde";
-            // 
-            // alterarDadosToolStripMenuItem2
-            // 
-            this.alterarDadosToolStripMenuItem2.Name = "alterarDadosToolStripMenuItem2";
-            this.alterarDadosToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
-            this.alterarDadosToolStripMenuItem2.Text = "Alterar dados";
-            // 
-            // excluirToolStripMenuItem2
-            // 
-            this.excluirToolStripMenuItem2.Name = "excluirToolStripMenuItem2";
-            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
-            this.excluirToolStripMenuItem2.Text = "Excluir plano de saúde";
-            // 
-            // consultarToolStripMenuItem2
-            // 
-            this.consultarToolStripMenuItem2.Name = "consultarToolStripMenuItem2";
-            this.consultarToolStripMenuItem2.Size = new System.Drawing.Size(211, 22);
-            this.consultarToolStripMenuItem2.Text = "Consultar plano de saúde";
-            // 
-            // gerarReciboDeFériasToolStripMenuItem
-            // 
-            this.gerarReciboDeFériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem3,
-            this.alterarDadosToolStripMenuItem3,
-            this.excluirToolStripMenuItem3,
-            this.consultarToolStripMenuItem3});
-            this.gerarReciboDeFériasToolStripMenuItem.Name = "gerarReciboDeFériasToolStripMenuItem";
-            this.gerarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.gerarReciboDeFériasToolStripMenuItem.Text = "Planos odontológicos";
-            // 
-            // cadastrarToolStripMenuItem3
-            // 
-            this.cadastrarToolStripMenuItem3.Name = "cadastrarToolStripMenuItem3";
-            this.cadastrarToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
-            this.cadastrarToolStripMenuItem3.Text = "Cadastrar plano odontológico";
-            // 
-            // alterarDadosToolStripMenuItem3
-            // 
-            this.alterarDadosToolStripMenuItem3.Name = "alterarDadosToolStripMenuItem3";
-            this.alterarDadosToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
-            this.alterarDadosToolStripMenuItem3.Text = "Alterar dados";
-            // 
-            // excluirToolStripMenuItem3
-            // 
-            this.excluirToolStripMenuItem3.Name = "excluirToolStripMenuItem3";
-            this.excluirToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
-            this.excluirToolStripMenuItem3.Text = "Excluir plano odontológico";
-            // 
-            // consultarToolStripMenuItem3
-            // 
-            this.consultarToolStripMenuItem3.Name = "consultarToolStripMenuItem3";
-            this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(245, 22);
-            this.consultarToolStripMenuItem3.Text = "Consultar planos odontológicos";
-            // 
-            // consultarBeneficioDasFériasToolStripMenuItem
-            // 
-            this.consultarBeneficioDasFériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gerarNovaFolhaToolStripMenuItem,
-            this.visualizarFolhaToolStripMenuItem,
-            this.calcularValeTransporteToolStripMenuItem,
-            this.calcularValeAlimentaçãoToolStripMenuItem,
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem,
-            this.calcularConvênioOdontológicoToolStripMenuItem,
-            this.calcularConvênioMédicoToolStripMenuItem,
-            this.calcularDependentesToolStripMenuItem,
-            this.calcularPensãoToolStripMenuItem,
-            this.calcularFGTSToolStripMenuItem,
-            this.calcularINSSToolStripMenuItem,
-            this.calcularIRRFToolStripMenuItem,
-            this.calcularHorasExtrasToolStripMenuItem,
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem,
-            this.calcularAdicionalNoturnoToolStripMenuItem,
-            this.calcularAtrasosEFaltasToolStripMenuItem});
-            this.consultarBeneficioDasFériasToolStripMenuItem.Name = "consultarBeneficioDasFériasToolStripMenuItem";
-            this.consultarBeneficioDasFériasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.consultarBeneficioDasFériasToolStripMenuItem.Text = "Folha de pagamento";
-            // 
-            // gerarNovaFolhaToolStripMenuItem
-            // 
-            this.gerarNovaFolhaToolStripMenuItem.Name = "gerarNovaFolhaToolStripMenuItem";
-            this.gerarNovaFolhaToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.gerarNovaFolhaToolStripMenuItem.Text = "Gerar nova folha";
-            // 
-            // visualizarFolhaToolStripMenuItem
-            // 
-            this.visualizarFolhaToolStripMenuItem.Name = "visualizarFolhaToolStripMenuItem";
-            this.visualizarFolhaToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.visualizarFolhaToolStripMenuItem.Text = "Visualizar folha";
-            // 
-            // calcularValeTransporteToolStripMenuItem
-            // 
-            this.calcularValeTransporteToolStripMenuItem.Name = "calcularValeTransporteToolStripMenuItem";
-            this.calcularValeTransporteToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularValeTransporteToolStripMenuItem.Text = "Calcular vale transporte";
-            // 
-            // calcularValeAlimentaçãoToolStripMenuItem
-            // 
-            this.calcularValeAlimentaçãoToolStripMenuItem.Name = "calcularValeAlimentaçãoToolStripMenuItem";
-            this.calcularValeAlimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularValeAlimentaçãoToolStripMenuItem.Text = "Calcular vale alimentação";
-            // 
-            // calcularAdiantamentoQuinzenalToolStripMenuItem
-            // 
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem.Name = "calcularAdiantamentoQuinzenalToolStripMenuItem";
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularAdiantamentoQuinzenalToolStripMenuItem.Text = "Calcular adiantamento quinzenal";
-            // 
-            // calcularConvênioOdontológicoToolStripMenuItem
-            // 
-            this.calcularConvênioOdontológicoToolStripMenuItem.Name = "calcularConvênioOdontológicoToolStripMenuItem";
-            this.calcularConvênioOdontológicoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularConvênioOdontológicoToolStripMenuItem.Text = "Calcular convênio odontológico";
-            // 
-            // calcularConvênioMédicoToolStripMenuItem
-            // 
-            this.calcularConvênioMédicoToolStripMenuItem.Name = "calcularConvênioMédicoToolStripMenuItem";
-            this.calcularConvênioMédicoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularConvênioMédicoToolStripMenuItem.Text = "Calcular convênio médico";
-            // 
-            // calcularDependentesToolStripMenuItem
-            // 
-            this.calcularDependentesToolStripMenuItem.Name = "calcularDependentesToolStripMenuItem";
-            this.calcularDependentesToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularDependentesToolStripMenuItem.Text = "Calcular dependente";
-            // 
-            // calcularPensãoToolStripMenuItem
-            // 
-            this.calcularPensãoToolStripMenuItem.Name = "calcularPensãoToolStripMenuItem";
-            this.calcularPensãoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularPensãoToolStripMenuItem.Text = "Calcular pensão";
-            // 
-            // calcularFGTSToolStripMenuItem
-            // 
-            this.calcularFGTSToolStripMenuItem.Name = "calcularFGTSToolStripMenuItem";
-            this.calcularFGTSToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularFGTSToolStripMenuItem.Text = "Calcular FGTS";
-            // 
-            // calcularINSSToolStripMenuItem
-            // 
-            this.calcularINSSToolStripMenuItem.Name = "calcularINSSToolStripMenuItem";
-            this.calcularINSSToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularINSSToolStripMenuItem.Text = "Calcular INSS";
-            // 
-            // calcularIRRFToolStripMenuItem
-            // 
-            this.calcularIRRFToolStripMenuItem.Name = "calcularIRRFToolStripMenuItem";
-            this.calcularIRRFToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularIRRFToolStripMenuItem.Text = "Calcular IRRF";
-            // 
-            // calcularHorasExtrasToolStripMenuItem
-            // 
-            this.calcularHorasExtrasToolStripMenuItem.Name = "calcularHorasExtrasToolStripMenuItem";
-            this.calcularHorasExtrasToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularHorasExtrasToolStripMenuItem.Text = "Calcular horas extras";
-            // 
-            // calcularPericulosidadeEInsalubridadeToolStripMenuItem
-            // 
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Name = "calcularPericulosidadeEInsalubridadeToolStripMenuItem";
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularPericulosidadeEInsalubridadeToolStripMenuItem.Text = "Calcular periculosidade e insalubridade";
-            // 
-            // calcularAdicionalNoturnoToolStripMenuItem
-            // 
-            this.calcularAdicionalNoturnoToolStripMenuItem.Name = "calcularAdicionalNoturnoToolStripMenuItem";
-            this.calcularAdicionalNoturnoToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularAdicionalNoturnoToolStripMenuItem.Text = "Calcular adicional noturno";
-            // 
-            // calcularAtrasosEFaltasToolStripMenuItem
-            // 
-            this.calcularAtrasosEFaltasToolStripMenuItem.Name = "calcularAtrasosEFaltasToolStripMenuItem";
-            this.calcularAtrasosEFaltasToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.calcularAtrasosEFaltasToolStripMenuItem.Text = "Calcular atrasos e faltas";
-            // 
-            // gerarReciboDeFériasToolStripMenuItem1
-            // 
-            this.gerarReciboDeFériasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gerarNovoReciboDeFériasToolStripMenuItem,
-            this.visualizarReciboDeFériasToolStripMenuItem,
-            this.consultarBenefícioDeFériasToolStripMenuItem1,
-            this.agendarFériasToolStripMenuItem,
-            this.calcularFériasToolStripMenuItem});
-            this.gerarReciboDeFériasToolStripMenuItem1.Name = "gerarReciboDeFériasToolStripMenuItem1";
-            this.gerarReciboDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-            this.gerarReciboDeFériasToolStripMenuItem1.Text = "Férias";
-            // 
-            // gerarNovoReciboDeFériasToolStripMenuItem
-            // 
-            this.gerarNovoReciboDeFériasToolStripMenuItem.Name = "gerarNovoReciboDeFériasToolStripMenuItem";
-            this.gerarNovoReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.gerarNovoReciboDeFériasToolStripMenuItem.Text = "Gerar novo recibo de férias";
-            // 
-            // visualizarReciboDeFériasToolStripMenuItem
-            // 
-            this.visualizarReciboDeFériasToolStripMenuItem.Name = "visualizarReciboDeFériasToolStripMenuItem";
-            this.visualizarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.visualizarReciboDeFériasToolStripMenuItem.Text = "Visualizar recibo de férias";
-            // 
-            // consultarBenefícioDeFériasToolStripMenuItem1
-            // 
-            this.consultarBenefícioDeFériasToolStripMenuItem1.Name = "consultarBenefícioDeFériasToolStripMenuItem1";
-            this.consultarBenefícioDeFériasToolStripMenuItem1.Size = new System.Drawing.Size(232, 22);
-            this.consultarBenefícioDeFériasToolStripMenuItem1.Text = "Consultar benefício de férias";
-            // 
-            // agendarFériasToolStripMenuItem
-            // 
-            this.agendarFériasToolStripMenuItem.Name = "agendarFériasToolStripMenuItem";
-            this.agendarFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.agendarFériasToolStripMenuItem.Text = "Agendar férias";
-            // 
-            // calcularFériasToolStripMenuItem
-            // 
-            this.calcularFériasToolStripMenuItem.Name = "calcularFériasToolStripMenuItem";
-            this.calcularFériasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.calcularFériasToolStripMenuItem.Text = "Calcular férias";
-            // 
-            // décimoTerceiroSalárioToolStripMenuItem
-            // 
-            this.décimoTerceiroSalárioToolStripMenuItem.Name = "décimoTerceiroSalárioToolStripMenuItem";
-            this.décimoTerceiroSalárioToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.décimoTerceiroSalárioToolStripMenuItem.Text = "Décimo terceiro salário";
+            this.folhaDePagamentoToolStripMenuItem});
+            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.arquivoToolStripMenuItem.Text = "Módulos";
             // 
             // panel1
             // 
@@ -484,7 +113,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSair.Location = new System.Drawing.Point(3, 454);
+            this.btnSair.Location = new System.Drawing.Point(29, 454);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(200, 50);
             this.btnSair.TabIndex = 5;
@@ -498,7 +127,7 @@
             this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAjuda.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAjuda.Location = new System.Drawing.Point(3, 367);
+            this.btnAjuda.Location = new System.Drawing.Point(29, 367);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Size = new System.Drawing.Size(200, 50);
             this.btnAjuda.TabIndex = 4;
@@ -512,7 +141,7 @@
             this.btnFolhaDePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFolhaDePagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnFolhaDePagamento.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFolhaDePagamento.Location = new System.Drawing.Point(3, 281);
+            this.btnFolhaDePagamento.Location = new System.Drawing.Point(29, 281);
             this.btnFolhaDePagamento.Name = "btnFolhaDePagamento";
             this.btnFolhaDePagamento.Size = new System.Drawing.Size(200, 50);
             this.btnFolhaDePagamento.TabIndex = 3;
@@ -526,7 +155,7 @@
             this.btnFerias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnFerias.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFerias.Location = new System.Drawing.Point(3, 198);
+            this.btnFerias.Location = new System.Drawing.Point(29, 198);
             this.btnFerias.Name = "btnFerias";
             this.btnFerias.Size = new System.Drawing.Size(200, 50);
             this.btnFerias.TabIndex = 2;
@@ -540,7 +169,7 @@
             this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnConsultas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnConsultas.Location = new System.Drawing.Point(3, 112);
+            this.btnConsultas.Location = new System.Drawing.Point(29, 112);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Size = new System.Drawing.Size(200, 50);
             this.btnConsultas.TabIndex = 1;
@@ -554,7 +183,7 @@
             this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCadastros.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastros.Location = new System.Drawing.Point(3, 28);
+            this.btnCadastros.Location = new System.Drawing.Point(29, 28);
             this.btnCadastros.Name = "btnCadastros";
             this.btnCadastros.Size = new System.Drawing.Size(200, 50);
             this.btnCadastros.TabIndex = 0;
@@ -618,12 +247,183 @@
             this.btnBotaoQuatro.UseVisualStyleBackColor = false;
             this.btnBotaoQuatro.Visible = false;
             // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarNovaEmpresaToolStripMenuItem,
+            this.cadastrarNovoConvênioMédicoToolStripMenuItem,
+            this.cadastrarNovoConvênioOdontológicoToolStripMenuItem,
+            this.cadastrarNovoFuncionárioToolStripMenuItem});
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.sairToolStripMenuItem.Text = "Cadastros";
+            // 
+            // consultasAlteraçõesToolStripMenuItem
+            // 
+            this.consultasAlteraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarMinhasEmpresasToolStripMenuItem,
+            this.consultarMeusConvêniosMédicosToolStripMenuItem,
+            this.consultarMeusConvêniosOdontológicosToolStripMenuItem,
+            this.consultarMeusFuncionáriosToolStripMenuItem});
+            this.consultasAlteraçõesToolStripMenuItem.Name = "consultasAlteraçõesToolStripMenuItem";
+            this.consultasAlteraçõesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.consultasAlteraçõesToolStripMenuItem.Text = "Consultas | Alterações";
+            // 
+            // fériasToolStripMenuItem
+            // 
+            this.fériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarTabelaDeFériasToolStripMenuItem,
+            this.gerarReciboDeFériasToolStripMenuItem});
+            this.fériasToolStripMenuItem.Name = "fériasToolStripMenuItem";
+            this.fériasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.fériasToolStripMenuItem.Text = "Férias";
+            // 
+            // folhaDePagamentoToolStripMenuItem
+            // 
+            this.folhaDePagamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarListaDePagamentosToolStripMenuItem,
+            this.gerarFolhaDePagamentoToolStripMenuItem});
+            this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
+            this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.folhaDePagamentoToolStripMenuItem.Text = "Folha de Pagamento";
+            // 
+            // cadastrarNovaEmpresaToolStripMenuItem
+            // 
+            this.cadastrarNovaEmpresaToolStripMenuItem.Name = "cadastrarNovaEmpresaToolStripMenuItem";
+            this.cadastrarNovaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
+            this.cadastrarNovaEmpresaToolStripMenuItem.Text = "Cadastrar Nova Empresa";
+            // 
+            // cadastrarNovoConvênioMédicoToolStripMenuItem
+            // 
+            this.cadastrarNovoConvênioMédicoToolStripMenuItem.Name = "cadastrarNovoConvênioMédicoToolStripMenuItem";
+            this.cadastrarNovoConvênioMédicoToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
+            this.cadastrarNovoConvênioMédicoToolStripMenuItem.Text = "Cadastrar Novo Convênio Médico";
+            // 
+            // cadastrarNovoConvênioOdontológicoToolStripMenuItem
+            // 
+            this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Name = "cadastrarNovoConvênioOdontológicoToolStripMenuItem";
+            this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
+            this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Text = "Cadastrar Novo Convênio Odontológico";
+            // 
+            // cadastrarNovoFuncionárioToolStripMenuItem
+            // 
+            this.cadastrarNovoFuncionárioToolStripMenuItem.Name = "cadastrarNovoFuncionárioToolStripMenuItem";
+            this.cadastrarNovoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
+            this.cadastrarNovoFuncionárioToolStripMenuItem.Text = "Cadastrar Novo Funcionário";
+            // 
+            // consultarMinhasEmpresasToolStripMenuItem
+            // 
+            this.consultarMinhasEmpresasToolStripMenuItem.Name = "consultarMinhasEmpresasToolStripMenuItem";
+            this.consultarMinhasEmpresasToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
+            this.consultarMinhasEmpresasToolStripMenuItem.Text = "Consultar Minhas Empresas";
+            // 
+            // consultarMeusConvêniosMédicosToolStripMenuItem
+            // 
+            this.consultarMeusConvêniosMédicosToolStripMenuItem.Name = "consultarMeusConvêniosMédicosToolStripMenuItem";
+            this.consultarMeusConvêniosMédicosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
+            this.consultarMeusConvêniosMédicosToolStripMenuItem.Text = "Consultar Meus Convênios Médicos";
+            // 
+            // consultarMeusConvêniosOdontológicosToolStripMenuItem
+            // 
+            this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Name = "consultarMeusConvêniosOdontológicosToolStripMenuItem";
+            this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
+            this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Text = "Consultar Meus Convênios Odontológicos";
+            // 
+            // consultarMeusFuncionáriosToolStripMenuItem
+            // 
+            this.consultarMeusFuncionáriosToolStripMenuItem.Name = "consultarMeusFuncionáriosToolStripMenuItem";
+            this.consultarMeusFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
+            this.consultarMeusFuncionáriosToolStripMenuItem.Text = "Consultar Meus Funcionários";
+            // 
+            // consultarTabelaDeFériasToolStripMenuItem
+            // 
+            this.consultarTabelaDeFériasToolStripMenuItem.Name = "consultarTabelaDeFériasToolStripMenuItem";
+            this.consultarTabelaDeFériasToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.consultarTabelaDeFériasToolStripMenuItem.Text = "Consultar Tabela de Férias";
+            // 
+            // gerarReciboDeFériasToolStripMenuItem
+            // 
+            this.gerarReciboDeFériasToolStripMenuItem.Name = "gerarReciboDeFériasToolStripMenuItem";
+            this.gerarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.gerarReciboDeFériasToolStripMenuItem.Text = "Gerar Recibo de Férias";
+            // 
+            // consultarListaDePagamentosToolStripMenuItem
+            // 
+            this.consultarListaDePagamentosToolStripMenuItem.Name = "consultarListaDePagamentosToolStripMenuItem";
+            this.consultarListaDePagamentosToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.consultarListaDePagamentosToolStripMenuItem.Text = "Consultar Lista de Pagamentos";
+            // 
+            // gerarFolhaDePagamentoToolStripMenuItem
+            // 
+            this.gerarFolhaDePagamentoToolStripMenuItem.Name = "gerarFolhaDePagamentoToolStripMenuItem";
+            this.gerarFolhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.gerarFolhaDePagamentoToolStripMenuItem.Text = "Gerar Folha de Pagamento";
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // sairToolStripMenuItem1
+            // 
+            this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(40, 20);
+            this.sairToolStripMenuItem1.Text = "Sair";
+            this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
+            // 
+            // lblBoasVindas
+            // 
+            this.lblBoasVindas.AutoSize = true;
+            this.lblBoasVindas.BackColor = System.Drawing.Color.SlateBlue;
+            this.lblBoasVindas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblBoasVindas.Location = new System.Drawing.Point(829, 25);
+            this.lblBoasVindas.Name = "lblBoasVindas";
+            this.lblBoasVindas.Size = new System.Drawing.Size(137, 15);
+            this.lblBoasVindas.TabIndex = 7;
+            this.lblBoasVindas.Text = "Seja bêm vindo de volta";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.SlateBlue;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblUsuario.Location = new System.Drawing.Point(829, 53);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(95, 15);
+            this.lblUsuario.TabIndex = 8;
+            this.lblUsuario.Text = "Usuario Logado";
+            // 
+            // lblCopyright
+            // 
+            this.lblCopyright.AutoSize = true;
+            this.lblCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic);
+            this.lblCopyright.Location = new System.Drawing.Point(875, 525);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(107, 15);
+            this.lblCopyright.TabIndex = 9;
+            this.lblCopyright.Text = "Desenvolvido por :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(875, 540);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 15);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Ideal Systems";
+            // 
             // Form_AreaRestrita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCopyright);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.lblBoasVindas);
             this.Controls.Add(this.btnBotaoQuatro);
             this.Controls.Add(this.btnBotaoTres);
             this.Controls.Add(this.btnBotaoDois);
@@ -649,55 +449,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoArquivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoArquivoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem fecharArquivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem módulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem folhaDePagamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarDadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem alterarDadosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem décimoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem alterarDadosToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem gerarReciboDeFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem alterarDadosToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem consultarBeneficioDasFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gerarNovaFolhaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarFolhaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gerarReciboDeFériasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gerarNovoReciboDeFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarReciboDeFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarBenefícioDeFériasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem agendarFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularValeTransporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularValeAlimentaçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularAdiantamentoQuinzenalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularConvênioOdontológicoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularConvênioMédicoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularDependentesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularPensãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularFGTSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularINSSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularIRRFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularHorasExtrasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularPericulosidadeEInsalubridadeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularAdicionalNoturnoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularAtrasosEFaltasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem décimoTerceiroSalárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calcularFériasToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCadastros;
         private System.Windows.Forms.Button btnAjuda;
@@ -709,5 +460,27 @@
         private System.Windows.Forms.Button btnBotaoDois;
         private System.Windows.Forms.Button btnBotaoTres;
         private System.Windows.Forms.Button btnBotaoQuatro;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasAlteraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fériasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem folhaDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarNovaEmpresaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarNovoConvênioMédicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarNovoConvênioOdontológicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarNovoFuncionárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMinhasEmpresasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMeusConvêniosMédicosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMeusConvêniosOdontológicosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMeusFuncionáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarTabelaDeFériasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerarReciboDeFériasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarListaDePagamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerarFolhaDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
+        private System.Windows.Forms.Label lblBoasVindas;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblCopyright;
+        private System.Windows.Forms.Label label2;
     }
 }

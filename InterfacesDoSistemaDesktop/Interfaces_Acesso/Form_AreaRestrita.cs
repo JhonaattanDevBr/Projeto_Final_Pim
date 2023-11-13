@@ -76,5 +76,14 @@ namespace InterfacesDoSistemaDesktop
                 Close();
             }
         }
+
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja realmente fechar o sistema?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }
