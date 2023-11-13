@@ -130,6 +130,5 @@ namespace InterfacesDoSistemaDesktop
             Form_CalculosFerias form_CalculosFerias = new Form_CalculosFerias();
             form_CalculosFerias.Show();
         }
-
     }
 }
