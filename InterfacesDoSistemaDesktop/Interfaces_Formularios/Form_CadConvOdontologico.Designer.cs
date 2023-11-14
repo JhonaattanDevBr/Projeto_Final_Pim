@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CadConvOdontologico));
             this.gpbConvenioOdontologico = new System.Windows.Forms.GroupBox();
+            this.rdbPercentual = new System.Windows.Forms.RadioButton();
+            this.rdbValorFixado = new System.Windows.Forms.RadioButton();
+            this.lblModoDesconto = new System.Windows.Forms.Label();
             this.btnCadastrarConvOdonto = new System.Windows.Forms.Button();
             this.txtPorcentagemConvOdonto = new System.Windows.Forms.TextBox();
             this.txtValorConvOdonto = new System.Windows.Forms.TextBox();
@@ -39,15 +42,14 @@
             this.lblvalorFixado = new System.Windows.Forms.Label();
             this.lblCnpjConvOdonto = new System.Windows.Forms.Label();
             this.lblNomeConvOdonto = new System.Windows.Forms.Label();
-            this.lblModoDesconto = new System.Windows.Forms.Label();
-            this.rdbValorFixado = new System.Windows.Forms.RadioButton();
-            this.rdbPercentual = new System.Windows.Forms.RadioButton();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gpbConvenioOdontologico.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbConvenioOdontologico
             // 
             this.gpbConvenioOdontologico.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbConvenioOdontologico.Controls.Add(this.btnSair);
             this.gpbConvenioOdontologico.Controls.Add(this.rdbPercentual);
             this.gpbConvenioOdontologico.Controls.Add(this.rdbValorFixado);
             this.gpbConvenioOdontologico.Controls.Add(this.lblModoDesconto);
@@ -68,12 +70,46 @@
             this.gpbConvenioOdontologico.TabStop = false;
             this.gpbConvenioOdontologico.Text = "Cadastro de convênio odontológico";
             // 
+            // rdbPercentual
+            // 
+            this.rdbPercentual.AutoSize = true;
+            this.rdbPercentual.Location = new System.Drawing.Point(88, 168);
+            this.rdbPercentual.Name = "rdbPercentual";
+            this.rdbPercentual.Size = new System.Drawing.Size(104, 21);
+            this.rdbPercentual.TabIndex = 11;
+            this.rdbPercentual.Text = "Percentual";
+            this.rdbPercentual.UseVisualStyleBackColor = true;
+            this.rdbPercentual.CheckedChanged += new System.EventHandler(this.rdbPercentual_CheckedChanged);
+            // 
+            // rdbValorFixado
+            // 
+            this.rdbValorFixado.AutoSize = true;
+            this.rdbValorFixado.Checked = true;
+            this.rdbValorFixado.Location = new System.Drawing.Point(9, 168);
+            this.rdbValorFixado.Name = "rdbValorFixado";
+            this.rdbValorFixado.Size = new System.Drawing.Size(73, 21);
+            this.rdbValorFixado.TabIndex = 10;
+            this.rdbValorFixado.TabStop = true;
+            this.rdbValorFixado.Text = "Fixado";
+            this.rdbValorFixado.UseVisualStyleBackColor = true;
+            this.rdbValorFixado.CheckedChanged += new System.EventHandler(this.rdbValorFixado_CheckedChanged);
+            // 
+            // lblModoDesconto
+            // 
+            this.lblModoDesconto.AutoSize = true;
+            this.lblModoDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblModoDesconto.Location = new System.Drawing.Point(6, 150);
+            this.lblModoDesconto.Name = "lblModoDesconto";
+            this.lblModoDesconto.Size = new System.Drawing.Size(227, 15);
+            this.lblModoDesconto.TabIndex = 9;
+            this.lblModoDesconto.Text = "Selecione a forma de desconto aplicada";
+            // 
             // btnCadastrarConvOdonto
             // 
             this.btnCadastrarConvOdonto.BackColor = System.Drawing.Color.LightBlue;
             this.btnCadastrarConvOdonto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarConvOdonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarConvOdonto.Location = new System.Drawing.Point(42, 327);
+            this.btnCadastrarConvOdonto.Location = new System.Drawing.Point(6, 327);
             this.btnCadastrarConvOdonto.Name = "btnCadastrarConvOdonto";
             this.btnCadastrarConvOdonto.Size = new System.Drawing.Size(220, 30);
             this.btnCadastrarConvOdonto.TabIndex = 8;
@@ -160,39 +196,18 @@
             this.lblNomeConvOdonto.TabIndex = 0;
             this.lblNomeConvOdonto.Text = "Nome do convênio odontológico";
             // 
-            // lblModoDesconto
+            // btnSair
             // 
-            this.lblModoDesconto.AutoSize = true;
-            this.lblModoDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblModoDesconto.Location = new System.Drawing.Point(6, 150);
-            this.lblModoDesconto.Name = "lblModoDesconto";
-            this.lblModoDesconto.Size = new System.Drawing.Size(227, 15);
-            this.lblModoDesconto.TabIndex = 9;
-            this.lblModoDesconto.Text = "Selecione a forma de desconto aplicada";
-            // 
-            // rdbValorFixado
-            // 
-            this.rdbValorFixado.AutoSize = true;
-            this.rdbValorFixado.Checked = true;
-            this.rdbValorFixado.Location = new System.Drawing.Point(9, 168);
-            this.rdbValorFixado.Name = "rdbValorFixado";
-            this.rdbValorFixado.Size = new System.Drawing.Size(73, 21);
-            this.rdbValorFixado.TabIndex = 10;
-            this.rdbValorFixado.TabStop = true;
-            this.rdbValorFixado.Text = "Fixado";
-            this.rdbValorFixado.UseVisualStyleBackColor = true;
-            this.rdbValorFixado.CheckedChanged += new System.EventHandler(this.rdbValorFixado_CheckedChanged);
-            // 
-            // rdbPercentual
-            // 
-            this.rdbPercentual.AutoSize = true;
-            this.rdbPercentual.Location = new System.Drawing.Point(88, 168);
-            this.rdbPercentual.Name = "rdbPercentual";
-            this.rdbPercentual.Size = new System.Drawing.Size(104, 21);
-            this.rdbPercentual.TabIndex = 11;
-            this.rdbPercentual.Text = "Percentual";
-            this.rdbPercentual.UseVisualStyleBackColor = true;
-            this.rdbPercentual.CheckedChanged += new System.EventHandler(this.rdbPercentual_CheckedChanged);
+            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnSair.Location = new System.Drawing.Point(247, 327);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 30);
+            this.btnSair.TabIndex = 13;
+            this.btnSair.Text = "Fechar";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // Form_CadConvOdontologico
             // 
@@ -229,5 +244,6 @@
         private System.Windows.Forms.RadioButton rdbPercentual;
         private System.Windows.Forms.RadioButton rdbValorFixado;
         private System.Windows.Forms.Label lblModoDesconto;
+        private System.Windows.Forms.Button btnSair;
     }
 }

@@ -329,6 +329,7 @@
             this.btnBotaoUm.Text = "Botão Um";
             this.btnBotaoUm.UseVisualStyleBackColor = false;
             this.btnBotaoUm.Visible = false;
+            this.btnBotaoUm.Click += new System.EventHandler(this.btnBotaoUm_Click);
             // 
             // btnBotaoDois
             // 
@@ -343,6 +344,7 @@
             this.btnBotaoDois.Text = "Botão Dois";
             this.btnBotaoDois.UseVisualStyleBackColor = false;
             this.btnBotaoDois.Visible = false;
+            this.btnBotaoDois.Click += new System.EventHandler(this.btnBotaoDois_Click);
             // 
             // btnBotaoTres
             // 
@@ -357,6 +359,7 @@
             this.btnBotaoTres.Text = "Botão Três";
             this.btnBotaoTres.UseVisualStyleBackColor = false;
             this.btnBotaoTres.Visible = false;
+            this.btnBotaoTres.Click += new System.EventHandler(this.btnBotaoTres_Click);
             // 
             // btnBotaoQuatro
             // 
@@ -371,6 +374,7 @@
             this.btnBotaoQuatro.Text = "Botão Quatro";
             this.btnBotaoQuatro.UseVisualStyleBackColor = false;
             this.btnBotaoQuatro.Visible = false;
+            this.btnBotaoQuatro.Click += new System.EventHandler(this.btnBotaoQuatro_Click);
             // 
             // lblBoasVindas
             // 

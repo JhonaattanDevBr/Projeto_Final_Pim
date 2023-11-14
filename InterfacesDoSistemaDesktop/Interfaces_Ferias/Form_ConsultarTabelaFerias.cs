@@ -167,5 +167,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Ferias
             dgvFuncionarios.Columns[9].Width = 80;
             dgvFuncionarios.Columns[10].Width = 80;
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            DialogResult fechar = MessageBox.Show("Deseja fechar?", "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (fechar == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }

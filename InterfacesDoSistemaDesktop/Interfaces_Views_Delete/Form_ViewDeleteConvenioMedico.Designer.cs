@@ -41,7 +41,7 @@
             this.btnLimparFiltro = new System.Windows.Forms.Button();
             this.rdbCnpj = new System.Windows.Forms.RadioButton();
             this.rdbNomeConvenioMedico = new System.Windows.Forms.RadioButton();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnExcluirRegistro = new System.Windows.Forms.Button();
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.gpbConvenioMedico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.gpbConvenioMedico.Controls.Add(this.gpbPesquisa);
             this.gpbConvenioMedico.Controls.Add(this.gpbFiltro);
-            this.gpbConvenioMedico.Controls.Add(this.btnSair);
+            this.gpbConvenioMedico.Controls.Add(this.btnFechar);
             this.gpbConvenioMedico.Controls.Add(this.btnExcluirRegistro);
             this.gpbConvenioMedico.Controls.Add(this.btnAlterarDados);
             this.gpbConvenioMedico.Controls.Add(this.btnPesquisar);
@@ -166,17 +166,18 @@
             this.rdbNomeConvenioMedico.Text = "Nome";
             this.rdbNomeConvenioMedico.UseVisualStyleBackColor = true;
             // 
-            // btnSair
+            // btnFechar
             // 
-            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnSair.Location = new System.Drawing.Point(782, 513);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(108, 30);
-            this.btnSair.TabIndex = 4;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnFechar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnFechar.Location = new System.Drawing.Point(782, 513);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(108, 30);
+            this.btnFechar.TabIndex = 4;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnExcluirRegistro
             // 
@@ -282,7 +283,7 @@
         private System.Windows.Forms.Button btnLimparFiltro;
         private System.Windows.Forms.RadioButton rdbCnpj;
         private System.Windows.Forms.RadioButton rdbNomeConvenioMedico;
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnExcluirRegistro;
         private System.Windows.Forms.Button btnAlterarDados;
         private System.Windows.Forms.Button btnPesquisar;

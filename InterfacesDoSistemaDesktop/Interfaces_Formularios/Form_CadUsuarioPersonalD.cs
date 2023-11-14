@@ -57,5 +57,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Formularios
             }
             
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult cancelar = MessageBox.Show("Deseja fechar?", "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cancelar == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtConfirmacaoSenha = new System.Windows.Forms.TextBox();
             this.gpbCadUsuarioPersonalD = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.gpbCadUsuarioPersonalD.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,6 +184,7 @@
             // gpbCadUsuarioPersonalD
             // 
             this.gpbCadUsuarioPersonalD.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbCadUsuarioPersonalD.Controls.Add(this.btnCancelar);
             this.gpbCadUsuarioPersonalD.Controls.Add(this.txtNome);
             this.gpbCadUsuarioPersonalD.Controls.Add(this.txtConfirmacaoSenha);
             this.gpbCadUsuarioPersonalD.Controls.Add(this.lblNome);
@@ -203,6 +205,19 @@
             this.gpbCadUsuarioPersonalD.TabIndex = 13;
             this.gpbCadUsuarioPersonalD.TabStop = false;
             this.gpbCadUsuarioPersonalD.Text = "Cadastro de usuário";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(189, 371);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Form_CadUsuarioPersonalD
             // 
@@ -240,5 +255,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtConfirmacaoSenha;
         private System.Windows.Forms.GroupBox gpbCadUsuarioPersonalD;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

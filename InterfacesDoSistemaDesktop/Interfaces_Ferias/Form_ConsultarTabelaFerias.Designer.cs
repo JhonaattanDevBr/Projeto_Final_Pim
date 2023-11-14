@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ConsultarTabelaFerias));
             this.gpbConsultarFerias = new System.Windows.Forms.GroupBox();
             this.cmbListarFuncionarios = new System.Windows.Forms.ComboBox();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             // 
             this.gpbConsultarFerias.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.gpbConsultarFerias.Controls.Add(this.cmbListarFuncionarios);
-            this.gpbConsultarFerias.Controls.Add(this.btnSair);
+            this.gpbConsultarFerias.Controls.Add(this.btnFechar);
             this.gpbConsultarFerias.Controls.Add(this.btnExcluir);
             this.gpbConsultarFerias.Controls.Add(this.btnAtualizar);
             this.gpbConsultarFerias.Controls.Add(this.btnAgendar);
@@ -73,17 +73,18 @@
             this.cmbListarFuncionarios.Size = new System.Drawing.Size(300, 23);
             this.cmbListarFuncionarios.TabIndex = 7;
             // 
-            // btnSair
+            // btnFechar
             // 
-            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnSair.Location = new System.Drawing.Point(830, 319);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(107, 30);
-            this.btnSair.TabIndex = 6;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnFechar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnFechar.Location = new System.Drawing.Point(830, 319);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(107, 30);
+            this.btnFechar.TabIndex = 6;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnExcluir
             // 
@@ -186,7 +187,7 @@
         private System.Windows.Forms.GroupBox gpbConsultarFerias;
         private System.Windows.Forms.DataGridView dgvFuncionarios;
         private System.Windows.Forms.ComboBox cmbListarFuncionarios;
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnAgendar;

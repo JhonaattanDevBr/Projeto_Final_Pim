@@ -44,7 +44,7 @@
             this.lblRg = new System.Windows.Forms.Label();
             this.lblNomeFuncionario = new System.Windows.Forms.Label();
             this.txtPesquisaNomeFuncionario = new System.Windows.Forms.TextBox();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnExcluirRegistro = new System.Windows.Forms.Button();
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.gpbFuncionarios.Controls.Add(this.lblSelecionarEmpresa);
             this.gpbFuncionarios.Controls.Add(this.gpbFiltro);
             this.gpbFuncionarios.Controls.Add(this.gpbPesquisa);
-            this.gpbFuncionarios.Controls.Add(this.btnSair);
+            this.gpbFuncionarios.Controls.Add(this.btnFechar);
             this.gpbFuncionarios.Controls.Add(this.btnExcluirRegistro);
             this.gpbFuncionarios.Controls.Add(this.btnAlterarDados);
             this.gpbFuncionarios.Controls.Add(this.btnPesquisar);
@@ -232,17 +232,18 @@
             this.txtPesquisaNomeFuncionario.Size = new System.Drawing.Size(124, 20);
             this.txtPesquisaNomeFuncionario.TabIndex = 1;
             // 
-            // btnSair
+            // btnFechar
             // 
-            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnSair.Location = new System.Drawing.Point(1083, 513);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(108, 30);
-            this.btnSair.TabIndex = 4;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnFechar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnFechar.Location = new System.Drawing.Point(1083, 513);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(108, 30);
+            this.btnFechar.TabIndex = 4;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnExcluirRegistro
             // 
@@ -333,7 +334,7 @@
         private System.Windows.Forms.Label lblRg;
         private System.Windows.Forms.Label lblNomeFuncionario;
         private System.Windows.Forms.TextBox txtPesquisaNomeFuncionario;
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnExcluirRegistro;
         private System.Windows.Forms.Button btnAlterarDados;
         private System.Windows.Forms.Button btnPesquisar;

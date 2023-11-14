@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using InterfacesDoSistemaDesktop.Interfaces_Formularios;
+using InterfacesDoSistemaDesktop.Interfaces_Views_Delete;
+using InterfacesDoSistemaDesktop.Interfaces_Ferias;
 
 namespace InterfacesDoSistemaDesktop
 {
@@ -84,6 +88,95 @@ namespace InterfacesDoSistemaDesktop
             if (sair == DialogResult.Yes)
             {
                 Close();
+            }
+        }
+
+        private void btnBotaoUm_Click(object sender, EventArgs e)
+        {
+            switch (btnBotaoUm.Text) 
+            {
+                case "Cadastrar Nova Empresa":
+                    Form_CadEmpresas _CadEmpresas = new Form_CadEmpresas();
+                    _CadEmpresas.ShowDialog();
+                    break;
+
+                case "Consultar Minhas Empresas":
+                    Form_ViewDeleteEmpresas _viewDeleteEmpresas = new Form_ViewDeleteEmpresas();
+                    _viewDeleteEmpresas.ShowDialog();
+                    break;
+
+                case "Consultar Tabela de Férias":
+                    Form_ConsultarTabelaFerias _consultarTabelaFerias = new Form_ConsultarTabelaFerias();
+                    _consultarTabelaFerias.ShowDialog();
+                    break;
+
+                case "Consultar Lista de Pagamentos":
+                    MessageBox.Show("Ainda não fiz essa interface", "Atenção");
+                    break;
+
+                default: break;
+            }
+        }
+
+        private void btnBotaoDois_Click(object sender, EventArgs e)
+        {
+            switch (btnBotaoDois.Text)
+            {
+                case "Cadastrar Novo Convênio Médico":
+                    Form_CadConvMedico _cadConvMedico = new Form_CadConvMedico();
+                    _cadConvMedico.ShowDialog();
+                    break;
+
+                case "Consultar Meus Convênios Médicos":
+                    Form_ViewDeleteConvenioMedico _viewDeleteConvenioMedico = new Form_ViewDeleteConvenioMedico();
+                    _viewDeleteConvenioMedico.ShowDialog();
+                    break;
+
+                case "Gerar Recibo de Férias":
+                    MessageBox.Show("Ainda não fiz essa interface", "Atenção");
+                    break;
+
+                case "Gerar Folha de Pagamento":
+                    MessageBox.Show("Ainda não fiz essa interface", "Atenção");
+                    break;
+
+                default: break;
+            }
+        }
+
+        private void btnBotaoTres_Click(object sender, EventArgs e)
+        {
+            switch (btnBotaoTres.Text)
+            {
+                case "Cadastrar Novo Convênio Odontológico":
+                    Form_CadConvOdontologico _CadConvOdontologico = new Form_CadConvOdontologico();
+                    _CadConvOdontologico.ShowDialog();
+                    break;
+
+                case "Consultar Meus Convênios Odontológicos":
+                    Form_ViewDeleteConvenioOdontologico _viewDeleteConvenioOdontologico = new Form_ViewDeleteConvenioOdontologico();
+                    _viewDeleteConvenioOdontologico.ShowDialog();
+                    break;
+
+                default: break;
+            }
+        }
+
+        private void btnBotaoQuatro_Click(object sender, EventArgs e)
+        {
+            switch (btnBotaoQuatro.Text)
+            {
+                case "Cadastrar Novo Funcionário":
+                    Form_CadFuncionarios _cadFuncionarios = new Form_CadFuncionarios();
+                    _cadFuncionarios.ShowDialog();
+                    break;
+
+                case "Consultar Meus Funcionários":
+                    Form_ViewDeleteFuncionarios _viewDeleteFuncionarios = new Form_ViewDeleteFuncionarios();
+                    _viewDeleteFuncionarios.ShowDialog();
+                    break;
+
+                default: break;
             }
         }
     }

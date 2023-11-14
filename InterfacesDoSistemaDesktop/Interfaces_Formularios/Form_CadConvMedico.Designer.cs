@@ -33,7 +33,6 @@
             this.lblModoDesconto = new System.Windows.Forms.Label();
             this.rdbPercentual = new System.Windows.Forms.RadioButton();
             this.rdbValorFixado = new System.Windows.Forms.RadioButton();
-            this.btnCadastrarConvMedico = new System.Windows.Forms.Button();
             this.txtPorcentagemConvMedico = new System.Windows.Forms.TextBox();
             this.txtValorConvMedico = new System.Windows.Forms.TextBox();
             this.mskCnpjConvMedico = new System.Windows.Forms.MaskedTextBox();
@@ -42,12 +41,15 @@
             this.lblValorConvMedico = new System.Windows.Forms.Label();
             this.lblCnpjConvMedico = new System.Windows.Forms.Label();
             this.lblNomeConvMedico = new System.Windows.Forms.Label();
+            this.btnCadastrarConvMedico = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gpbConvMedico.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbConvMedico
             // 
             this.gpbConvMedico.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbConvMedico.Controls.Add(this.btnSair);
             this.gpbConvMedico.Controls.Add(this.lblModoDesconto);
             this.gpbConvMedico.Controls.Add(this.rdbPercentual);
             this.gpbConvMedico.Controls.Add(this.rdbValorFixado);
@@ -101,19 +103,6 @@
             this.rdbValorFixado.Text = "Fixado";
             this.rdbValorFixado.UseVisualStyleBackColor = true;
             this.rdbValorFixado.CheckedChanged += new System.EventHandler(this.rdbValorFixado_CheckedChanged);
-            // 
-            // btnCadastrarConvMedico
-            // 
-            this.btnCadastrarConvMedico.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCadastrarConvMedico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastrarConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarConvMedico.Location = new System.Drawing.Point(70, 327);
-            this.btnCadastrarConvMedico.Name = "btnCadastrarConvMedico";
-            this.btnCadastrarConvMedico.Size = new System.Drawing.Size(186, 30);
-            this.btnCadastrarConvMedico.TabIndex = 8;
-            this.btnCadastrarConvMedico.Text = "Cadastrar Convênio Médico";
-            this.btnCadastrarConvMedico.UseVisualStyleBackColor = false;
-            this.btnCadastrarConvMedico.Click += new System.EventHandler(this.btnCadastrarConvMedico_Click);
             // 
             // txtPorcentagemConvMedico
             // 
@@ -197,6 +186,32 @@
             this.lblNomeConvMedico.TabIndex = 0;
             this.lblNomeConvMedico.Text = "Nome do convênio médico";
             // 
+            // btnCadastrarConvMedico
+            // 
+            this.btnCadastrarConvMedico.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCadastrarConvMedico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrarConvMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCadastrarConvMedico.Location = new System.Drawing.Point(21, 326);
+            this.btnCadastrarConvMedico.Name = "btnCadastrarConvMedico";
+            this.btnCadastrarConvMedico.Size = new System.Drawing.Size(186, 30);
+            this.btnCadastrarConvMedico.TabIndex = 8;
+            this.btnCadastrarConvMedico.Text = "Cadastrar Convênio Médico";
+            this.btnCadastrarConvMedico.UseVisualStyleBackColor = false;
+            this.btnCadastrarConvMedico.Click += new System.EventHandler(this.btnCadastrarConvMedico_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.LightBlue;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnSair.Location = new System.Drawing.Point(224, 326);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 30);
+            this.btnSair.TabIndex = 12;
+            this.btnSair.Text = "Fechar";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // Form_CadConvMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,10 +242,11 @@
         private System.Windows.Forms.TextBox txtNomeConvMedico;
         private System.Windows.Forms.MaskedTextBox mskCnpjConvMedico;
         private System.Windows.Forms.TextBox txtPorcentagemConvMedico;
-        private System.Windows.Forms.Button btnCadastrarConvMedico;
         private System.Windows.Forms.TextBox txtValorConvMedico;
         private System.Windows.Forms.RadioButton rdbPercentual;
         private System.Windows.Forms.RadioButton rdbValorFixado;
         private System.Windows.Forms.Label lblModoDesconto;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnCadastrarConvMedico;
     }
 }

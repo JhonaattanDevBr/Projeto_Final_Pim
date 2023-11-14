@@ -9,14 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using BaseDeDados;
 using ContaPersonal;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace InterfacesDoSistemaDesktop.Interfaces_Acesso
 {
     public partial class Form_Acesso : Form
     {
+        Thread entrarNoSistema;
         Personal _Personal = new Personal();
         crud_AcessoPersonalD _crud_AcessoPersonalD = new crud_AcessoPersonalD();
+
+        public string NomeFuncionario { get; set; }
         public Form_Acesso()
         {
             InitializeComponent();
@@ -51,14 +55,24 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Acesso
 
             if (txtUsuario.Text == informacoesLogin[0] && txtSenha.Text == informacoesLogin[1])
             {
-                MessageBox.Show("Cadastro realizado", "Funcionou");
-                Form_AreaRestrita _form_AreaRestrita = new Form_AreaRestrita(informacoesLogin[2]);
-                _form_AreaRestrita.ShowDialog();
+                NomeFuncionario = informacoesLogin[2];
+
+                this.Close(); // fechou a interface atual
+                entrarNoSistema = new Thread(AcessarSistema); // Aqui eu crio uma Thread que recebe como parametro o método AcessarSistema
+                entrarNoSistema.SetApartmentState(ApartmentState.STA); // Aqui eu chamo o método SetApartmentState do objeto da Thread,
+                                                                       // ele configura o estado apartment de um thread antes dela ser iniciada
+                                                                       // Depois dentro dos parametros eu chamo o método apartmentState. e chamo o atributo STA de single thread (
+                entrarNoSistema.Start(); // Aqui eu execulto a Thread.
             }
             else
             {
                 MessageBox.Show("Os dados inseridos estão incorretos", "Falha ao realizar login");
             }
+        }
+
+        private void AcessarSistema (object obj) // Método q eu vou usar para selecionar a interface desejada.
+        {
+            Application.Run(new Form_AreaRestrita(NomeFuncionario));
         }
     }
 }

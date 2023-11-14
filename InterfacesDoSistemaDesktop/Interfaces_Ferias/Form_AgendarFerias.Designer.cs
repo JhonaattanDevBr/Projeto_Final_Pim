@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AgendarFerias));
             this.gpbAgendarFerias = new System.Windows.Forms.GroupBox();
+            this.gpbDecimoTerceiro = new System.Windows.Forms.GroupBox();
+            this.rdbDecimoTNao = new System.Windows.Forms.RadioButton();
+            this.rdbDecimoTSim = new System.Windows.Forms.RadioButton();
+            this.lblDecimoTerceiro = new System.Windows.Forms.Label();
             this.gpbPeriodo = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblPrimeiroPeriodo = new System.Windows.Forms.Label();
@@ -54,13 +58,9 @@
             this.rdbNao = new System.Windows.Forms.RadioButton();
             this.rdbSim = new System.Windows.Forms.RadioButton();
             this.lblVenda = new System.Windows.Forms.Label();
-            this.gpbDecimoTerceiro = new System.Windows.Forms.GroupBox();
-            this.lblDecimoTerceiro = new System.Windows.Forms.Label();
-            this.rdbDecimoTSim = new System.Windows.Forms.RadioButton();
-            this.rdbDecimoTNao = new System.Windows.Forms.RadioButton();
             this.gpbAgendarFerias.SuspendLayout();
-            this.gpbPeriodo.SuspendLayout();
             this.gpbDecimoTerceiro.SuspendLayout();
+            this.gpbPeriodo.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbAgendarFerias
@@ -81,6 +81,50 @@
             this.gpbAgendarFerias.TabIndex = 0;
             this.gpbAgendarFerias.TabStop = false;
             this.gpbAgendarFerias.Text = "Agendamento de férias";
+            // 
+            // gpbDecimoTerceiro
+            // 
+            this.gpbDecimoTerceiro.Controls.Add(this.rdbDecimoTNao);
+            this.gpbDecimoTerceiro.Controls.Add(this.rdbDecimoTSim);
+            this.gpbDecimoTerceiro.Controls.Add(this.lblDecimoTerceiro);
+            this.gpbDecimoTerceiro.Location = new System.Drawing.Point(9, 102);
+            this.gpbDecimoTerceiro.Name = "gpbDecimoTerceiro";
+            this.gpbDecimoTerceiro.Size = new System.Drawing.Size(472, 80);
+            this.gpbDecimoTerceiro.TabIndex = 5;
+            this.gpbDecimoTerceiro.TabStop = false;
+            this.gpbDecimoTerceiro.Text = "Décimo terceiro";
+            // 
+            // rdbDecimoTNao
+            // 
+            this.rdbDecimoTNao.AutoSize = true;
+            this.rdbDecimoTNao.Checked = true;
+            this.rdbDecimoTNao.Location = new System.Drawing.Point(67, 47);
+            this.rdbDecimoTNao.Name = "rdbDecimoTNao";
+            this.rdbDecimoTNao.Size = new System.Drawing.Size(55, 21);
+            this.rdbDecimoTNao.TabIndex = 2;
+            this.rdbDecimoTNao.TabStop = true;
+            this.rdbDecimoTNao.Text = "Não";
+            this.rdbDecimoTNao.UseVisualStyleBackColor = true;
+            // 
+            // rdbDecimoTSim
+            // 
+            this.rdbDecimoTSim.AutoSize = true;
+            this.rdbDecimoTSim.Location = new System.Drawing.Point(9, 47);
+            this.rdbDecimoTSim.Name = "rdbDecimoTSim";
+            this.rdbDecimoTSim.Size = new System.Drawing.Size(52, 21);
+            this.rdbDecimoTSim.TabIndex = 1;
+            this.rdbDecimoTSim.Text = "Sim";
+            this.rdbDecimoTSim.UseVisualStyleBackColor = true;
+            // 
+            // lblDecimoTerceiro
+            // 
+            this.lblDecimoTerceiro.AutoSize = true;
+            this.lblDecimoTerceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblDecimoTerceiro.Location = new System.Drawing.Point(6, 29);
+            this.lblDecimoTerceiro.Name = "lblDecimoTerceiro";
+            this.lblDecimoTerceiro.Size = new System.Drawing.Size(333, 15);
+            this.lblDecimoTerceiro.TabIndex = 0;
+            this.lblDecimoTerceiro.Text = "O Funcionário solicitou o adiantamento do décimo terceiro?";
             // 
             // gpbPeriodo
             // 
@@ -121,6 +165,7 @@
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblPrimeiroPeriodo
             // 
@@ -407,50 +452,6 @@
             this.lblVenda.TabIndex = 0;
             this.lblVenda.Text = "O funcionário solicitou a venda das férias?";
             // 
-            // gpbDecimoTerceiro
-            // 
-            this.gpbDecimoTerceiro.Controls.Add(this.rdbDecimoTNao);
-            this.gpbDecimoTerceiro.Controls.Add(this.rdbDecimoTSim);
-            this.gpbDecimoTerceiro.Controls.Add(this.lblDecimoTerceiro);
-            this.gpbDecimoTerceiro.Location = new System.Drawing.Point(9, 102);
-            this.gpbDecimoTerceiro.Name = "gpbDecimoTerceiro";
-            this.gpbDecimoTerceiro.Size = new System.Drawing.Size(472, 80);
-            this.gpbDecimoTerceiro.TabIndex = 5;
-            this.gpbDecimoTerceiro.TabStop = false;
-            this.gpbDecimoTerceiro.Text = "Décimo terceiro";
-            // 
-            // lblDecimoTerceiro
-            // 
-            this.lblDecimoTerceiro.AutoSize = true;
-            this.lblDecimoTerceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblDecimoTerceiro.Location = new System.Drawing.Point(6, 29);
-            this.lblDecimoTerceiro.Name = "lblDecimoTerceiro";
-            this.lblDecimoTerceiro.Size = new System.Drawing.Size(333, 15);
-            this.lblDecimoTerceiro.TabIndex = 0;
-            this.lblDecimoTerceiro.Text = "O Funcionário solicitou o adiantamento do décimo terceiro?";
-            // 
-            // rdbDecimoTSim
-            // 
-            this.rdbDecimoTSim.AutoSize = true;
-            this.rdbDecimoTSim.Location = new System.Drawing.Point(9, 47);
-            this.rdbDecimoTSim.Name = "rdbDecimoTSim";
-            this.rdbDecimoTSim.Size = new System.Drawing.Size(52, 21);
-            this.rdbDecimoTSim.TabIndex = 1;
-            this.rdbDecimoTSim.Text = "Sim";
-            this.rdbDecimoTSim.UseVisualStyleBackColor = true;
-            // 
-            // rdbDecimoTNao
-            // 
-            this.rdbDecimoTNao.AutoSize = true;
-            this.rdbDecimoTNao.Checked = true;
-            this.rdbDecimoTNao.Location = new System.Drawing.Point(67, 47);
-            this.rdbDecimoTNao.Name = "rdbDecimoTNao";
-            this.rdbDecimoTNao.Size = new System.Drawing.Size(55, 21);
-            this.rdbDecimoTNao.TabIndex = 2;
-            this.rdbDecimoTNao.TabStop = true;
-            this.rdbDecimoTNao.Text = "Não";
-            this.rdbDecimoTNao.UseVisualStyleBackColor = true;
-            // 
             // Form_AgendarFerias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,10 +468,10 @@
             this.Text = "Agendar Férias";
             this.gpbAgendarFerias.ResumeLayout(false);
             this.gpbAgendarFerias.PerformLayout();
-            this.gpbPeriodo.ResumeLayout(false);
-            this.gpbPeriodo.PerformLayout();
             this.gpbDecimoTerceiro.ResumeLayout(false);
             this.gpbDecimoTerceiro.PerformLayout();
+            this.gpbPeriodo.ResumeLayout(false);
+            this.gpbPeriodo.PerformLayout();
             this.ResumeLayout(false);
 
         }

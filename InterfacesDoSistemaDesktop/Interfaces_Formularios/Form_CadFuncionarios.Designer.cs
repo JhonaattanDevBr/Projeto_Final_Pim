@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CadFuncionarios));
             this.gpbCadastroFuncionarios = new System.Windows.Forms.GroupBox();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -100,6 +101,7 @@
             // gpbCadastroFuncionarios
             // 
             this.gpbCadastroFuncionarios.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbCadastroFuncionarios.Controls.Add(this.btnFechar);
             this.gpbCadastroFuncionarios.Controls.Add(this.btnCadastrarFuncionario);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbEndereco);
             this.gpbCadastroFuncionarios.Controls.Add(this.gpbContrato);
@@ -113,12 +115,25 @@
             this.gpbCadastroFuncionarios.TabStop = false;
             this.gpbCadastroFuncionarios.Text = "Cadastro de funcionários";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnFechar.Location = new System.Drawing.Point(425, 592);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 30);
+            this.btnFechar.TabIndex = 15;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // btnCadastrarFuncionario
             // 
             this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.LightBlue;
             this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(305, 593);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(265, 592);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(144, 30);
             this.btnCadastrarFuncionario.TabIndex = 4;
@@ -904,5 +919,6 @@
         private System.Windows.Forms.Label lblCargaHoraria;
         private System.Windows.Forms.RadioButton rdbSexoMasculino;
         private System.Windows.Forms.RadioButton rdbSexoFeminino;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

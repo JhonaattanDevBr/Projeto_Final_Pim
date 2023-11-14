@@ -155,5 +155,14 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Views_Delete
             dgvVisualizarFuncionarios.Columns[5].Width = 140;
             
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            DialogResult fechar = MessageBox.Show("Deseja fechar?", "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (fechar == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }
