@@ -109,24 +109,28 @@
             this.cadastrarNovaEmpresaToolStripMenuItem.Name = "cadastrarNovaEmpresaToolStripMenuItem";
             this.cadastrarNovaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
             this.cadastrarNovaEmpresaToolStripMenuItem.Text = "Cadastrar Nova Empresa";
+            this.cadastrarNovaEmpresaToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovaEmpresaToolStripMenuItem_Click);
             // 
             // cadastrarNovoConvênioMédicoToolStripMenuItem
             // 
             this.cadastrarNovoConvênioMédicoToolStripMenuItem.Name = "cadastrarNovoConvênioMédicoToolStripMenuItem";
             this.cadastrarNovoConvênioMédicoToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
             this.cadastrarNovoConvênioMédicoToolStripMenuItem.Text = "Cadastrar Novo Convênio Médico";
+            this.cadastrarNovoConvênioMédicoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoConvênioMédicoToolStripMenuItem_Click);
             // 
             // cadastrarNovoConvênioOdontológicoToolStripMenuItem
             // 
             this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Name = "cadastrarNovoConvênioOdontológicoToolStripMenuItem";
             this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
             this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Text = "Cadastrar Novo Convênio Odontológico";
+            this.cadastrarNovoConvênioOdontológicoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoConvênioOdontológicoToolStripMenuItem_Click);
             // 
             // cadastrarNovoFuncionárioToolStripMenuItem
             // 
             this.cadastrarNovoFuncionárioToolStripMenuItem.Name = "cadastrarNovoFuncionárioToolStripMenuItem";
             this.cadastrarNovoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
             this.cadastrarNovoFuncionárioToolStripMenuItem.Text = "Cadastrar Novo Funcionário";
+            this.cadastrarNovoFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoFuncionárioToolStripMenuItem_Click);
             // 
             // consultasAlteraçõesToolStripMenuItem
             // 
@@ -144,24 +148,28 @@
             this.consultarMinhasEmpresasToolStripMenuItem.Name = "consultarMinhasEmpresasToolStripMenuItem";
             this.consultarMinhasEmpresasToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.consultarMinhasEmpresasToolStripMenuItem.Text = "Consultar Minhas Empresas";
+            this.consultarMinhasEmpresasToolStripMenuItem.Click += new System.EventHandler(this.consultarMinhasEmpresasToolStripMenuItem_Click);
             // 
             // consultarMeusConvêniosMédicosToolStripMenuItem
             // 
             this.consultarMeusConvêniosMédicosToolStripMenuItem.Name = "consultarMeusConvêniosMédicosToolStripMenuItem";
             this.consultarMeusConvêniosMédicosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.consultarMeusConvêniosMédicosToolStripMenuItem.Text = "Consultar Meus Convênios Médicos";
+            this.consultarMeusConvêniosMédicosToolStripMenuItem.Click += new System.EventHandler(this.consultarMeusConvêniosMédicosToolStripMenuItem_Click);
             // 
             // consultarMeusConvêniosOdontológicosToolStripMenuItem
             // 
             this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Name = "consultarMeusConvêniosOdontológicosToolStripMenuItem";
             this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Text = "Consultar Meus Convênios Odontológicos";
+            this.consultarMeusConvêniosOdontológicosToolStripMenuItem.Click += new System.EventHandler(this.consultarMeusConvêniosOdontológicosToolStripMenuItem_Click);
             // 
             // consultarMeusFuncionáriosToolStripMenuItem
             // 
             this.consultarMeusFuncionáriosToolStripMenuItem.Name = "consultarMeusFuncionáriosToolStripMenuItem";
             this.consultarMeusFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.consultarMeusFuncionáriosToolStripMenuItem.Text = "Consultar Meus Funcionários";
+            this.consultarMeusFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.consultarMeusFuncionáriosToolStripMenuItem_Click);
             // 
             // fériasToolStripMenuItem
             // 
@@ -177,6 +185,7 @@
             this.consultarTabelaDeFériasToolStripMenuItem.Name = "consultarTabelaDeFériasToolStripMenuItem";
             this.consultarTabelaDeFériasToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.consultarTabelaDeFériasToolStripMenuItem.Text = "Consultar Tabela de Férias";
+            this.consultarTabelaDeFériasToolStripMenuItem.Click += new System.EventHandler(this.consultarTabelaDeFériasToolStripMenuItem_Click);
             // 
             // gerarReciboDeFériasToolStripMenuItem
             // 
@@ -210,6 +219,7 @@
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
+            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem1
             // 

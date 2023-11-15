@@ -394,3 +394,4 @@ C:\Users\jhonb\OneDrive\Documentos\Faculdade ADS\Projeto Atual\InterfacesDoSiste
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Ferias.Form_ConsultarTabelaFerias.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_AtualizarDados.Form_AtualizarRegistroFerias.resources
 C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Interfaces_Acesso.Form_Ajuda.resources
+C:\Users\Jho\Documents\Facudade ADS\4º Semestre\Sistemas\Sistema Final PIM\ProjetoContaPersonal\InterfacesDoSistemaDesktop\obj\Debug\InterfacesDoSistemaDesktop.Intercafes_Folha.Form_SelFuncionarioGerarFolha.resources

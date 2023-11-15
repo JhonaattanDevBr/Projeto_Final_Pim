@@ -64,6 +64,12 @@
     <Compile Include="Intercafes_Folha\Form_Atrasos.Designer.cs">
       <DependentUpon>Form_Atrasos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Intercafes_Folha\Form_SelFuncionarioGerarFolha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intercafes_Folha\Form_SelFuncionarioGerarFolha.Designer.cs">
+      <DependentUpon>Form_SelFuncionarioGerarFolha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces_Acesso\Form_Acesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Intercafes_Folha\Form_Atrasos.resx">
       <DependentUpon>Form_Atrasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intercafes_Folha\Form_SelFuncionarioGerarFolha.resx">
+      <DependentUpon>Form_SelFuncionarioGerarFolha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces_Acesso\Form_Acesso.resx">
       <DependentUpon>Form_Acesso.cs</DependentUpon>

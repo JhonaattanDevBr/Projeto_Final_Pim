@@ -44,6 +44,7 @@
     <Compile Include="crud_AcessoPersonalD.cs" />
     <Compile Include="Crud_AgendamentoFerias.cs" />
     <Compile Include="crud_Empresas.cs" />
+    <Compile Include="Crud_FolhaDePagamento.cs" />
     <Compile Include="crud_Funcionarios.cs" />
     <Compile Include="crud_PlanoOdontologico.cs" />
     <Compile Include="crud_PlanoSaude.cs" />

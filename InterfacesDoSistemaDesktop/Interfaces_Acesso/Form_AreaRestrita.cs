@@ -179,5 +179,65 @@ namespace InterfacesDoSistemaDesktop
                 default: break;
             }
         }
+
+        private void cadastrarNovaEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CadEmpresas _CadEmpresas = new Form_CadEmpresas();
+            _CadEmpresas.ShowDialog();
+        }
+
+        private void cadastrarNovoConvênioMédicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CadConvMedico _cadConvMedico = new Form_CadConvMedico();
+            _cadConvMedico.ShowDialog();
+        }
+
+        private void cadastrarNovoConvênioOdontológicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CadConvOdontologico _CadConvOdontologico = new Form_CadConvOdontologico();
+            _CadConvOdontologico.ShowDialog();
+        }
+
+        private void cadastrarNovoFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CadFuncionarios _cadFuncionarios = new Form_CadFuncionarios();
+            _cadFuncionarios.ShowDialog();
+        }
+
+        private void consultarMinhasEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ViewDeleteEmpresas _viewDeleteEmpresas = new Form_ViewDeleteEmpresas();
+            _viewDeleteEmpresas.ShowDialog();
+        }
+
+        private void consultarMeusConvêniosMédicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ViewDeleteConvenioMedico _viewDeleteConvenioMedico = new Form_ViewDeleteConvenioMedico();
+            _viewDeleteConvenioMedico.ShowDialog();
+        }
+
+        private void consultarMeusConvêniosOdontológicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ViewDeleteConvenioOdontologico _viewDeleteConvenioOdontologico = new Form_ViewDeleteConvenioOdontologico();
+            _viewDeleteConvenioOdontologico.ShowDialog();
+        }
+
+        private void consultarMeusFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ViewDeleteFuncionarios _viewDeleteFuncionarios = new Form_ViewDeleteFuncionarios();
+            _viewDeleteFuncionarios.ShowDialog();
+        }
+
+        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Ajuda _form_Ajuda = new Form_Ajuda();
+            _form_Ajuda.ShowDialog();
+        }
+
+        private void consultarTabelaDeFériasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ConsultarTabelaFerias _consultarTabelaFerias = new Form_ConsultarTabelaFerias();
+            _consultarTabelaFerias.ShowDialog();
+        }
     }
 }

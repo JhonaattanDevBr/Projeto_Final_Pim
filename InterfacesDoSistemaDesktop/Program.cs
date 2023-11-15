@@ -1,4 +1,5 @@
-﻿using InterfacesDoSistemaDesktop.Interfaces_Acesso;
+﻿using InterfacesDoSistemaDesktop.Intercafes_Folha;
+using InterfacesDoSistemaDesktop.Interfaces_Acesso;
 using InterfacesDoSistemaDesktop.Interfaces_AtualizarDados;
 using InterfacesDoSistemaDesktop.Interfaces_Ferias;
 //using InterfacesDoSistemaDesktop.Interfaces_Ferias;
@@ -23,7 +24,7 @@ namespace InterfacesDoSistemaDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form_Acesso());
+            Application.Run(new Form_SelFuncionarioGerarFolha());
         }
     }
 }
