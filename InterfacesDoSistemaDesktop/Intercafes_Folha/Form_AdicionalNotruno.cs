@@ -14,7 +14,7 @@ namespace InterfacesDoSistemaDesktop
     public partial class Form_AdicionalNotruno : Form
     {
         Folha folhaPG = new Folha();
-        public Form_AdicionalNotruno()
+        public Form_AdicionalNotruno(string idFuncionario)
         {
             InitializeComponent();
         }

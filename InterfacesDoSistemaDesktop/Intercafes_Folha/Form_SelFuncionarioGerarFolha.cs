@@ -1,4 +1,5 @@
 ﻿using BaseDeDados;
+using FuncionariosEmpresas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,10 @@ namespace InterfacesDoSistemaDesktop.Intercafes_Folha
     public partial class Form_SelFuncionarioGerarFolha : Form
     {
         Crud_FolhaDePagamento _crud_FolhaDePagamento = new Crud_FolhaDePagamento();
+        Funcionarios _funcionarios = new Funcionarios();
 
         public string IdEmpresa { get; set; }
+        public string IdFuncionario { get; set; }
         public Form_SelFuncionarioGerarFolha()
         {
             InitializeComponent();
@@ -41,21 +44,70 @@ namespace InterfacesDoSistemaDesktop.Intercafes_Folha
             string[] id = refEmpresa.Split(' ');
             IdEmpresa = id[0];
 
-            dgvFolhaNaoGerada.DataSource = null; // Define DataSource como null para limpar as colunas existentes, se houver.
+            dgvFolhaNaoGerada.DataSource = null; 
 
             dgvFolhaNaoGerada.Columns.Clear();
             DataTable funcionarioParaGerarFolha = _crud_FolhaDePagamento.ListarFuncionariosParaGerarFolha(IdEmpresa);
             dgvFolhaNaoGerada.DataSource = funcionarioParaGerarFolha;
 
-            // Definindo o valor padrao da largura das colunas sempre que a interface iniciar ↓.
-            dgvFolhaNaoGerada.Columns[0].Width = 70; // ferias
-            dgvFolhaNaoGerada.Columns[1].Width = 100; // primeiro mes
-            dgvFolhaNaoGerada.Columns[2].Width = 150; // primeiro mes dias
-            dgvFolhaNaoGerada.Columns[3].Width = 60; // segundo mes
-            dgvFolhaNaoGerada.Columns[4].Width = 100; // segundo mes dias
-            dgvFolhaNaoGerada.Columns[5].Width = 80; //terceiro mes
-            
+            dgvFolhaNaoGerada.Columns[0].Width = 70;
+            dgvFolhaNaoGerada.Columns[1].Width = 100;
+            dgvFolhaNaoGerada.Columns[2].Width = 150;
+            dgvFolhaNaoGerada.Columns[3].Width = 60;
+            dgvFolhaNaoGerada.Columns[4].Width = 100;
+            dgvFolhaNaoGerada.Columns[5].Width = 80; 
+        }
 
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            DialogResult fechar = MessageBox.Show("Deseja fechar?", "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (fechar == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void AtualizarTabela()
+        {
+            dgvFolhaNaoGerada.DataSource = null;
+
+            dgvFolhaNaoGerada.Columns.Clear();
+            DataTable funcionarioParaGerarFolha = _crud_FolhaDePagamento.ListarFuncionariosParaGerarFolha(IdEmpresa);
+            dgvFolhaNaoGerada.DataSource = funcionarioParaGerarFolha;
+
+            dgvFolhaNaoGerada.Columns[0].Width = 70;
+            dgvFolhaNaoGerada.Columns[1].Width = 100;
+            dgvFolhaNaoGerada.Columns[2].Width = 150;
+            dgvFolhaNaoGerada.Columns[3].Width = 60;
+            dgvFolhaNaoGerada.Columns[4].Width = 100;
+            dgvFolhaNaoGerada.Columns[5].Width = 80;
+        }
+
+        private void dgvFolhaNaoGerada_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridView tabelaEmpresas = (DataGridView)sender;
+                DataGridViewRow linhaSelecionada = tabelaEmpresas.Rows[e.RowIndex];
+
+                string idFuncionario = linhaSelecionada.Cells["Código"].Value.ToString();
+                IdFuncionario = idFuncionario;
+            }
+        }
+
+        private void btnGerarFolha_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(IdFuncionario))
+            {
+                DialogResult agendar = MessageBox.Show("Deseja gerar a folha de pagamento do funcionário? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
+                if (agendar == DialogResult.Yes)
+                {
+                    Form_AdiantamentoQuinzenal _adiantamentoQuinzenal = new Form_AdiantamentoQuinzenal(IdFuncionario);
+                    _adiantamentoQuinzenal.ShowDialog();
+                    AtualizarTabela();
+                }
+            }
+            IdFuncionario = "";
         }
     }
 }

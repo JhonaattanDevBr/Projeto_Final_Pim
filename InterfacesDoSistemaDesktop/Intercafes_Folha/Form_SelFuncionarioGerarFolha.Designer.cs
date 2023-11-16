@@ -30,21 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SelFuncionarioGerarFolha));
             this.gpbSelFuncionarioGerarFolha = new System.Windows.Forms.GroupBox();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnGerarFolha = new System.Windows.Forms.Button();
+            this.dgvFolhaGerada = new System.Windows.Forms.DataGridView();
+            this.dgvFolhaNaoGerada = new System.Windows.Forms.DataGridView();
             this.cmbListarFuncionarios = new System.Windows.Forms.ComboBox();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
-            this.dgvFolhaNaoGerada = new System.Windows.Forms.DataGridView();
-            this.dgvFolhaGerada = new System.Windows.Forms.DataGridView();
-            this.btnGerarFolha = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.gpbSelFuncionarioGerarFolha.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaNaoGerada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaGerada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaNaoGerada)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbSelFuncionarioGerarFolha
             // 
             this.gpbSelFuncionarioGerarFolha.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbSelFuncionarioGerarFolha.Controls.Add(this.btnExcluir);
             this.gpbSelFuncionarioGerarFolha.Controls.Add(this.btnFechar);
             this.gpbSelFuncionarioGerarFolha.Controls.Add(this.btnGerarFolha);
             this.gpbSelFuncionarioGerarFolha.Controls.Add(this.dgvFolhaGerada);
@@ -59,6 +61,55 @@
             this.gpbSelFuncionarioGerarFolha.TabIndex = 0;
             this.gpbSelFuncionarioGerarFolha.TabStop = false;
             this.gpbSelFuncionarioGerarFolha.Text = "Funcionários para gerar folhas de págamento";
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnFechar.Location = new System.Drawing.Point(512, 322);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(116, 30);
+            this.btnFechar.TabIndex = 14;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // btnGerarFolha
+            // 
+            this.btnGerarFolha.BackColor = System.Drawing.Color.LightBlue;
+            this.btnGerarFolha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGerarFolha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnGerarFolha.Location = new System.Drawing.Point(512, 230);
+            this.btnGerarFolha.Name = "btnGerarFolha";
+            this.btnGerarFolha.Size = new System.Drawing.Size(116, 30);
+            this.btnGerarFolha.TabIndex = 13;
+            this.btnGerarFolha.Text = "Gerar Folha";
+            this.btnGerarFolha.UseVisualStyleBackColor = false;
+            this.btnGerarFolha.Click += new System.EventHandler(this.btnGerarFolha_Click);
+            // 
+            // dgvFolhaGerada
+            // 
+            this.dgvFolhaGerada.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvFolhaGerada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFolhaGerada.Location = new System.Drawing.Point(634, 59);
+            this.dgvFolhaGerada.Name = "dgvFolhaGerada";
+            this.dgvFolhaGerada.ReadOnly = true;
+            this.dgvFolhaGerada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFolhaGerada.Size = new System.Drawing.Size(420, 472);
+            this.dgvFolhaGerada.TabIndex = 12;
+            // 
+            // dgvFolhaNaoGerada
+            // 
+            this.dgvFolhaNaoGerada.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvFolhaNaoGerada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFolhaNaoGerada.Location = new System.Drawing.Point(9, 59);
+            this.dgvFolhaNaoGerada.Name = "dgvFolhaNaoGerada";
+            this.dgvFolhaNaoGerada.ReadOnly = true;
+            this.dgvFolhaNaoGerada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFolhaNaoGerada.Size = new System.Drawing.Size(497, 472);
+            this.dgvFolhaNaoGerada.TabIndex = 11;
+            this.dgvFolhaNaoGerada.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFolhaNaoGerada_CellClick);
             // 
             // cmbListarFuncionarios
             // 
@@ -95,51 +146,17 @@
             this.btnListar.UseVisualStyleBackColor = false;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // dgvFolhaNaoGerada
+            // btnExcluir
             // 
-            this.dgvFolhaNaoGerada.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvFolhaNaoGerada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFolhaNaoGerada.Location = new System.Drawing.Point(9, 59);
-            this.dgvFolhaNaoGerada.Name = "dgvFolhaNaoGerada";
-            this.dgvFolhaNaoGerada.ReadOnly = true;
-            this.dgvFolhaNaoGerada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFolhaNaoGerada.Size = new System.Drawing.Size(497, 472);
-            this.dgvFolhaNaoGerada.TabIndex = 11;
-            // 
-            // dgvFolhaGerada
-            // 
-            this.dgvFolhaGerada.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvFolhaGerada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFolhaGerada.Location = new System.Drawing.Point(634, 59);
-            this.dgvFolhaGerada.Name = "dgvFolhaGerada";
-            this.dgvFolhaGerada.ReadOnly = true;
-            this.dgvFolhaGerada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFolhaGerada.Size = new System.Drawing.Size(420, 472);
-            this.dgvFolhaGerada.TabIndex = 12;
-            // 
-            // btnGerarFolha
-            // 
-            this.btnGerarFolha.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGerarFolha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGerarFolha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnGerarFolha.Location = new System.Drawing.Point(512, 249);
-            this.btnGerarFolha.Name = "btnGerarFolha";
-            this.btnGerarFolha.Size = new System.Drawing.Size(116, 30);
-            this.btnGerarFolha.TabIndex = 13;
-            this.btnGerarFolha.Text = "Gerar Folha";
-            this.btnGerarFolha.UseVisualStyleBackColor = false;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnFechar.Location = new System.Drawing.Point(512, 294);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(116, 30);
-            this.btnFechar.TabIndex = 14;
-            this.btnFechar.Text = "Fechar";
-            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnExcluir.BackColor = System.Drawing.Color.LightBlue;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnExcluir.Location = new System.Drawing.Point(512, 276);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(116, 30);
+            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.Text = "Excluir Folha";
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // Form_SelFuncionarioGerarFolha
             // 
@@ -158,8 +175,8 @@
             this.Load += new System.EventHandler(this.Form_SelFuncionarioGerarFolha_Load);
             this.gpbSelFuncionarioGerarFolha.ResumeLayout(false);
             this.gpbSelFuncionarioGerarFolha.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaNaoGerada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaGerada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFolhaNaoGerada)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +191,6 @@
         private System.Windows.Forms.DataGridView dgvFolhaNaoGerada;
         private System.Windows.Forms.Button btnGerarFolha;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

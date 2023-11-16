@@ -900,5 +900,41 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        public double ColetarSalario(Funcionarios _funcionario)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            double salario = 0;
+            try
+            {
+                conexaoDb.Open();
+                string query = "SELECT Salario FROM Funcionarios WHERE Id_funcionario = @idFuncionario";
+
+                SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtIdFuncionario = cmd.CreateParameter();
+                _pmtIdFuncionario.ParameterName = "@idFuncionario";
+                _pmtIdFuncionario.DbType = DbType.Int32;
+                _pmtIdFuncionario.Value = _funcionario.Id;
+                cmd.Parameters.Add(_pmtIdFuncionario);
+
+                SqlDataReader leitura = cmd.ExecuteReader();
+
+                while (leitura.Read())
+                {
+                    salario = leitura.GetDouble(0);
+                }
+
+                conexaoDb.Close();
+                return salario;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

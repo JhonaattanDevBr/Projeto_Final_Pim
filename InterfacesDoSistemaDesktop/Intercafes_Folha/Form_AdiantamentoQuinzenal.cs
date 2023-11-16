@@ -8,26 +8,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FuncionariosEmpresas;
+using BaseDeDados;
+using System.Threading;
 
 namespace InterfacesDoSistemaDesktop
 {
     public partial class Form_AdiantamentoQuinzenal : Form
     {
-        public Form_AdiantamentoQuinzenal()
+        Funcionarios _funcionarios = new Funcionarios();
+        crud_Funcionarios _crudFuncionarios = new crud_Funcionarios();
+
+        Thread _t1;
+
+        public string IdFuncionario { get; set; }
+
+        public Form_AdiantamentoQuinzenal(string idFuncionario)
         {
             InitializeComponent();
+            IdFuncionario = idFuncionario;
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form_AdiantamentoQuinzenal_Load(object sender, EventArgs e)
         {
-            Close();
+            _funcionarios.Id = IdFuncionario;
+            double retornoSalario = _crudFuncionarios.ColetarSalario(_funcionarios);
+            txtSalarioBase.Text = retornoSalario.ToString();
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Folha ObjFolha = new Folha();
-            double retorno = ObjFolha.CalcularAdiantamentoQuinzenal(Convert.ToDouble(txtSalarioBase.Text));
-            txtRetorno.Text = retorno.ToString();
+            Folha _folha = new Folha();
+            if (!string.IsNullOrEmpty(txtSalarioBase.Text))
+            {
+                double retorno = _folha.CalcularAdiantamentoQuinzenal(Convert.ToDouble(txtSalarioBase.Text));
+                txtRetorno.Text = retorno.ToString();
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -35,6 +51,35 @@ namespace InterfacesDoSistemaDesktop
             txtSalarioBase.Clear();
             txtRetorno.Clear();
             txtSalarioBase.Focus();
+            if (string.IsNullOrEmpty(txtSalarioBase.Text))
+            {
+                _funcionarios.Id = IdFuncionario;
+                double retornoSalario = _crudFuncionarios.ColetarSalario(_funcionarios);
+                txtSalarioBase.Text = retornoSalario.ToString();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult cancelar = MessageBox.Show("Deseja cancelar o processo de gerar para folha de pagamento?", 
+                                                    "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cancelar == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void btnAvancar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _t1 = new Thread(AdicionalNoturno);
+            _t1.SetApartmentState(ApartmentState.STA);
+            _t1.Start();
+        }
+
+        private void AdicionalNoturno(object obj)
+        {
+            Application.Run(new Form_AdicionalNotruno(IdFuncionario));
         }
     }
 }
