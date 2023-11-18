@@ -22,17 +22,20 @@ namespace InterfacesDoSistemaDesktop
         Thread _t1;
 
         public string IdFuncionario { get; set; }
+        List<string> dados = new List<string>();
 
         public Form_AdiantamentoQuinzenal(string idFuncionario)
         {
             InitializeComponent();
             IdFuncionario = idFuncionario;
+            dados.Add(idFuncionario);
         }
 
         private void Form_AdiantamentoQuinzenal_Load(object sender, EventArgs e)
         {
             _funcionarios.Id = IdFuncionario;
             double retornoSalario = _crudFuncionarios.ColetarSalario(_funcionarios);
+            dados.Add(retornoSalario.ToString());
             txtSalarioBase.Text = retornoSalario.ToString();
         }
 
@@ -79,7 +82,9 @@ namespace InterfacesDoSistemaDesktop
 
         private void AdicionalNoturno(object obj)
         {
-            Application.Run(new Form_AdicionalNotruno(IdFuncionario));
+            Application.Run(new Form_AdicionalNotruno(dados));
         }
+
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using FolhaDePagamento;
+﻿using BaseDeDados;
+using FolhaDePagamento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,20 @@ namespace InterfacesDoSistemaDesktop
     public partial class Form_AdicionalNotruno : Form
     {
         Folha folhaPG = new Folha();
-        public Form_AdicionalNotruno(string idFuncionario)
+        Crud_FolhaDePagamento _crud_FolhaDePagamento = new Crud_FolhaDePagamento();
+
+        List<string> dadosRecebidos = new List<string>();
+        List<string> dadosParaEnviar = new List<string>();
+        List<TimeSpan> listaHoras = new List<TimeSpan>();
+
+        public Form_AdicionalNotruno(List<string> dadosEnviados)
         {
             InitializeComponent();
+            dadosRecebidos = dadosEnviados;
+            txtSalarioBase.Text = dadosRecebidos[1];
+            DateTime DiaHoraAtual = PegarDiaHoraAtual();
+            listaHoras = _crud_FolhaDePagamento.ColetarRegistroHoara(dadosRecebidos[0], DiaHoraAtual.ToString());
+            textBox1.Text = CalcularHoras(listaHoras).ToString();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,6 +198,26 @@ namespace InterfacesDoSistemaDesktop
             {
                 throw;
             }
+        }
+
+        private DateTime PegarDiaHoraAtual()
+        {
+            DateTime dataHoraAtual = DateTime.Now;
+            return dataHoraAtual;
+        }
+
+        // O metodo de contar as horas esta funcionando, agora preciso formatar sua exibição em tela e formatar para o formato aceito no método de calulcar
+        // o valor utilizando as horas.
+        private TimeSpan CalcularHoras(List<TimeSpan> tm)
+        {
+            List<TimeSpan> listaTm = new List<TimeSpan>();
+            listaTm = tm;
+            TimeSpan somaTotal = TimeSpan.Zero;
+            foreach (var tempo in listaTm)
+            {
+                somaTotal += tempo;
+            }
+            return somaTotal;
         }
     }
 }

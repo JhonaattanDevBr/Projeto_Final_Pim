@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AdicionalNotruno));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.gpbAdicionalNotruno = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAvancar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.txtRetorno = new System.Windows.Forms.TextBox();
@@ -50,8 +52,7 @@
             this.txtHorasFechadas = new System.Windows.Forms.TextBox();
             this.lblMinutos = new System.Windows.Forms.Label();
             this.lblHorasFechadas = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAvancar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gpbAdicionalNotruno.SuspendLayout();
             this.gpbConversor.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             // gpbAdicionalNotruno
             // 
             this.gpbAdicionalNotruno.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gpbAdicionalNotruno.Controls.Add(this.textBox1);
             this.gpbAdicionalNotruno.Controls.Add(this.btnCancelar);
             this.gpbAdicionalNotruno.Controls.Add(this.btnAvancar);
             this.gpbAdicionalNotruno.Controls.Add(this.btnCalcular);
@@ -93,6 +95,30 @@
             this.gpbAdicionalNotruno.TabIndex = 1;
             this.gpbAdicionalNotruno.TabStop = false;
             this.gpbAdicionalNotruno.Text = "Adicional noturno";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(582, 227);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnAvancar
+            // 
+            this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAvancar.Location = new System.Drawing.Point(673, 227);
+            this.btnAvancar.Name = "btnAvancar";
+            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
+            this.btnAvancar.TabIndex = 12;
+            this.btnAvancar.Text = "Avançar";
+            this.btnAvancar.UseVisualStyleBackColor = false;
             // 
             // btnCalcular
             // 
@@ -122,9 +148,11 @@
             // 
             // txtRetorno
             // 
+            this.txtRetorno.Enabled = false;
             this.txtRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtRetorno.Location = new System.Drawing.Point(216, 119);
             this.txtRetorno.Name = "txtRetorno";
+            this.txtRetorno.ReadOnly = true;
             this.txtRetorno.Size = new System.Drawing.Size(100, 21);
             this.txtRetorno.TabIndex = 9;
             // 
@@ -140,9 +168,11 @@
             // 
             // txtTotalHoras
             // 
+            this.txtTotalHoras.Enabled = false;
             this.txtTotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTotalHoras.Location = new System.Drawing.Point(97, 92);
             this.txtTotalHoras.Name = "txtTotalHoras";
+            this.txtTotalHoras.ReadOnly = true;
             this.txtTotalHoras.Size = new System.Drawing.Size(100, 21);
             this.txtTotalHoras.TabIndex = 7;
             this.txtTotalHoras.TextChanged += new System.EventHandler(this.txtTotalHoras_TextChanged);
@@ -192,9 +222,13 @@
             // 
             // txtSalarioBase
             // 
+            this.txtSalarioBase.BackColor = System.Drawing.Color.LightBlue;
+            this.txtSalarioBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSalarioBase.Enabled = false;
             this.txtSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSalarioBase.Location = new System.Drawing.Point(88, 34);
             this.txtSalarioBase.Name = "txtSalarioBase";
+            this.txtSalarioBase.ReadOnly = true;
             this.txtSalarioBase.Size = new System.Drawing.Size(100, 21);
             this.txtSalarioBase.TabIndex = 2;
             this.txtSalarioBase.TextChanged += new System.EventHandler(this.txtSalarioBase_TextChanged);
@@ -229,9 +263,11 @@
             // 
             // txtTotalHorasConvertidas
             // 
+            this.txtTotalHorasConvertidas.Enabled = false;
             this.txtTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 63);
             this.txtTotalHorasConvertidas.Name = "txtTotalHorasConvertidas";
+            this.txtTotalHorasConvertidas.ReadOnly = true;
             this.txtTotalHorasConvertidas.Size = new System.Drawing.Size(100, 21);
             this.txtTotalHorasConvertidas.TabIndex = 8;
             // 
@@ -260,18 +296,22 @@
             // 
             // txtMinutos
             // 
+            this.txtMinutos.Enabled = false;
             this.txtMinutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtMinutos.Location = new System.Drawing.Point(268, 29);
             this.txtMinutos.Name = "txtMinutos";
+            this.txtMinutos.ReadOnly = true;
             this.txtMinutos.Size = new System.Drawing.Size(100, 21);
             this.txtMinutos.TabIndex = 4;
             this.txtMinutos.TextChanged += new System.EventHandler(this.txtMinutos_TextChanged);
             // 
             // txtHorasFechadas
             // 
+            this.txtHorasFechadas.Enabled = false;
             this.txtHorasFechadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtHorasFechadas.Location = new System.Drawing.Point(105, 29);
             this.txtHorasFechadas.Name = "txtHorasFechadas";
+            this.txtHorasFechadas.ReadOnly = true;
             this.txtHorasFechadas.Size = new System.Drawing.Size(100, 21);
             this.txtHorasFechadas.TabIndex = 3;
             this.txtHorasFechadas.TextChanged += new System.EventHandler(this.txtHorasFechadas_TextChanged);
@@ -296,29 +336,12 @@
             this.lblHorasFechadas.TabIndex = 0;
             this.lblHorasFechadas.Text = "Horas fechadas";
             // 
-            // btnCancelar
+            // textBox1
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(582, 227);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelar.TabIndex = 13;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnAvancar
-            // 
-            this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAvancar.Location = new System.Drawing.Point(673, 227);
-            this.btnAvancar.Name = "btnAvancar";
-            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
-            this.btnAvancar.TabIndex = 12;
-            this.btnAvancar.Text = "Avançar";
-            this.btnAvancar.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(370, 167);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 14;
             // 
             // Form_AdicionalNotruno
             // 
@@ -368,5 +391,6 @@
         private System.Windows.Forms.Label lblTotalHorasConvertidas;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAvancar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

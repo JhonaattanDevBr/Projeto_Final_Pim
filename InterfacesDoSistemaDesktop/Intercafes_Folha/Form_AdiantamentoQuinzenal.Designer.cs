@@ -134,6 +134,8 @@
             // 
             // txtSalarioBase
             // 
+            this.txtSalarioBase.BackColor = System.Drawing.Color.LightBlue;
+            this.txtSalarioBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSalarioBase.Enabled = false;
             this.txtSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSalarioBase.Location = new System.Drawing.Point(88, 31);
