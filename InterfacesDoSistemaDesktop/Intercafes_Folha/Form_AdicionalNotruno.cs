@@ -27,80 +27,10 @@ namespace InterfacesDoSistemaDesktop
             dadosRecebidos = dadosEnviados;
             txtSalarioBase.Text = dadosRecebidos[1];
             DateTime DiaHoraAtual = PegarDiaHoraAtual();
-            listaHoras = _crud_FolhaDePagamento.ColetarRegistroHoara(dadosRecebidos[0], DiaHoraAtual.ToString());
-            textBox1.Text = CalcularHoras(listaHoras).ToString();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void rdbSim_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rdbSim.Checked == true)
-            {
-                gpbConversor.Visible = true;
-                txtTotalHoras.Enabled = false;
-                txtTotalHoras.Clear();
-                txtRetorno.Clear();
-            }
-            else
-            {
-                txtTotalHoras.Enabled = true;
-                txtTotalHoras.Clear();
-                gpbConversor.Visible = false;
-                txtTotalHorasConvertidas.Clear();
-                txtHorasFechadas.Clear();
-                txtMinutos.Clear();
-                txtRetorno.Clear();
-            }
-        }
-
-        private void txtHorasFechadas_TextChanged(object sender, EventArgs e)
-        {
-            string validacao = txtHorasFechadas.Text.Trim();
-
-            if (string.IsNullOrEmpty(validacao))
-            {
-                txtHorasFechadas.Clear();
-                txtHorasFechadas.Focus();
-                return;
-            }
-            if(!int.TryParse(validacao, out int val))
-            {
-                MessageBox.Show("Este campo não aceita letras ou caracteres.", "ATENÇÃO");
-                txtHorasFechadas.Clear();
-                txtHorasFechadas.Focus();
-                return;
-            }
-        }
-
-        private void txtMinutos_TextChanged(object sender, EventArgs e)
-        {
-            string validacao = txtMinutos.Text.Trim();
-            
-            if (string.IsNullOrEmpty(validacao))
-            {
-                txtMinutos.Clear();
-                txtMinutos.Focus();
-                return;
-            }
-            if (!int.TryParse(validacao, out int val))
-            {
-                
-                MessageBox.Show("Este campo não aceita letras ou caracteres.", "ATENÇÃO");
-                txtMinutos.Clear();
-                //txtMinutos.Focus();
-                return;
-            }
-            if(val > 60)
-            {
-                MessageBox.Show("Este campo não aceita valores acima de 60.", "ATENÇÃO");
-                txtMinutos.Clear();
-                txtMinutos.Focus();
-                return;
-            }
+            //listaHoras = _crud_FolhaDePagamento.ColetarRegistroHoara(dadosRecebidos[0], DiaHoraAtual.ToString());
+            //textBox1.Text = CalcularHoras(listaHoras).ToString();
+            listaHoras = _crud_FolhaDePagamento.ColetarRegistroAdcNoturno(dadosRecebidos[0], DiaHoraAtual.ToString());
+            txtTotalHoras.Text = CalcularHoras(listaHoras).ToString();
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
@@ -108,7 +38,12 @@ namespace InterfacesDoSistemaDesktop
             double retorno;
             try
             {
-                retorno = folhaPG.ConversorDeMinutosEmHoras(Convert.ToInt32(txtHorasFechadas.Text), Convert.ToInt32(txtMinutos.Text));
+                string horas = txtTotalHoras.Text;
+                horas = horas.Replace(":", " ");
+                string[] divisorHoras = horas.Split(' ');
+                int horasTrabalhadas = int.Parse(divisorHoras[0]);
+                int minutosTrabalhados = int.Parse(divisorHoras[1]);
+                retorno = folhaPG.ConversorDeMinutosEmHoras(minutosTrabalhados, minutosTrabalhados);
                 txtTotalHorasConvertidas.Text = $"{retorno:f2}".ToString();                
             }
             catch (Exception)
@@ -146,8 +81,6 @@ namespace InterfacesDoSistemaDesktop
         {
             txtSalarioBase.Clear();
             txtRetorno.Clear();
-            txtHorasFechadas.Clear();
-            txtMinutos.Clear();
             txtTotalHorasConvertidas.Clear();
             txtTotalHoras.Clear();
             txtSalarioBase.Focus();
@@ -183,16 +116,8 @@ namespace InterfacesDoSistemaDesktop
             double retorno;
             try
             {
-                if (rdbSim.Checked == true)
-                {
-                    retorno = folhaPG.CalcularAdicionalNoturno(Convert.ToDouble(txtSalarioBase.Text), Convert.ToDouble(txtTotalHorasConvertidas.Text));
-                    txtRetorno.Text = $"{retorno:f2}".ToString();
-                }
-                else
-                {
                     retorno = folhaPG.CalcularAdicionalNoturno(Convert.ToDouble(txtSalarioBase.Text), Convert.ToInt32(txtTotalHoras.Text));
                     txtRetorno.Text = $"{retorno:f2}".ToString();
-                }
             }
             catch (Exception)
             {
