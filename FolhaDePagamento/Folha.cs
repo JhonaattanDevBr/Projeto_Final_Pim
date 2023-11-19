@@ -251,14 +251,6 @@ namespace FolhaDePagamento
             double totalDeMinutos, totalDeHoras;
             try
             {
-                do
-                {
-                    if (quantidadeDeMinutos <= 0 || quantidadeDeMinutos > 60)
-                    {
-                        // Aqui eu vou mostrar na tela uma mensagem dizendo q o valor não pode ser > 60.
-                    }
-                } while (quantidadeDeMinutos <= 0 || quantidadeDeMinutos > 60);
-
                 totalDeMinutos = (double)quantidadeDeMinutos / 60.0;
                 totalDeHoras = (double)quantidadeDehorasFechadas + totalDeMinutos;
                 TotalDeHorasConvertidas = totalDeHoras;
@@ -287,7 +279,7 @@ namespace FolhaDePagamento
 
         }
 
-        public double CalcularHoraExtra(double salario, double porcentagem, int hora)
+        public double CalcularHoraExtra(double salario, double porcentagem, double hora)
         {
             // Preciso colocar o DSR sobre horas extras nesse método
             double valorDaHoraNormal, valorDeUmaHoraExtra, valorTotalDaHoraExtra;

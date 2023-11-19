@@ -222,5 +222,70 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        public List<TimeSpan> ColetarRegistroHorasExtras(string idFuncionario, string dataHora)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT Somatorio_dia FROM Apontamento WHERE Id_funcionario = @idFuncionario";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idFuncionario";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = idFuncionario;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+                List<TimeSpan> adicionalNoturno = new List<TimeSpan>();
+
+                dataHora = dataHora.Replace("/", " ");
+                string[] data = dataHora.Split(' ');
+                int diAtual = Convert.ToInt32(data[0]);
+                int mesAtual = Convert.ToInt32(data[1]);
+                int anoAtual = Convert.ToInt32(data[2]);
+                TimeSpan horAtual = TimeSpan.Parse(data[3]);
+
+                while (_leitor.Read())
+                {
+                    string somatorioDia = _leitor.GetDateTime(0).ToString();
+                    somatorioDia = somatorioDia.Replace("/", " ");
+                    string[] dataSomatorio = somatorioDia.Split(' ');
+                    int dia = Convert.ToInt32(dataSomatorio[0]);
+                    int mes = Convert.ToInt32(dataSomatorio[1]);
+                    int ano = Convert.ToInt32(dataSomatorio[2]);
+                    TimeSpan horas = TimeSpan.Parse(dataSomatorio[3]);
+
+                    // ↓ ↓ ↓ Aqui eu tenhho q adicionar mais uma condição para ele não pegar registros de dois mesesanteriores pra cima,
+                    // o calculo deve ser feito apenas com os registros do mes anterior, ou seja se estamos no mes 10 ele deve fazer
+                    // o calculo com os registros apenas do mes 09 e não com os registros dos meses 08, 07...
+                    if (anoAtual == ano && mesAtual > mes)
+                    {
+                        TimeSpan dezHoras = new TimeSpan(22, 0, 0);
+                        TimeSpan oitoHoras = new TimeSpan(8, 0, 0);
+                        TimeSpan madrugada = new TimeSpan(00, 0, 0);
+                        TimeSpan fimAdcNot = new TimeSpan(5, 0, 0);
+
+                        if (horas >= oitoHoras && horas < dezHoras)
+                        {
+                            TimeSpan horaExtra = horas - oitoHoras;
+                            adicionalNoturno.Add(horaExtra);
+                        }
+                    }
+                }
+                conexaoDb.Close();
+                return adicionalNoturno;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

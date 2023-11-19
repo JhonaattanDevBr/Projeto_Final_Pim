@@ -1,4 +1,5 @@
-﻿using FolhaDePagamento;
+﻿using BaseDeDados;
+using FolhaDePagamento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,82 +15,45 @@ namespace InterfacesDoSistemaDesktop
     public partial class Form_HorasExtras : Form
     {
         Folha folhaPG = new Folha();
-        
-        public Form_HorasExtras()
+        Crud_FolhaDePagamento _crud_FolhaDePagamento = new Crud_FolhaDePagamento();
+
+        List<string> dadosRecebidos = new List<string>();
+        List<string> dadosParaEnviar = new List<string>();
+        List<TimeSpan> listaHoras = new List<TimeSpan>();
+
+        public Form_HorasExtras(List<string> dadosEnviados) // Aqui eu chego sempre com 6 itens na lista.
         {
             InitializeComponent();
-        }
+            dadosRecebidos = dadosEnviados;
+            dadosParaEnviar.Add(dadosRecebidos[0]); // Id
+            dadosParaEnviar.Add(dadosRecebidos[1]); // Salario
+            dadosParaEnviar.Add(dadosRecebidos[2]); // Adicional
+            dadosParaEnviar.Add(dadosRecebidos[3]); // Horas Adc. Not
+            dadosParaEnviar.Add(dadosRecebidos[4]); // Adc. Not
+            dadosParaEnviar.Add(dadosRecebidos[5]); // Periculosidade/Insalubridade
+            txtSalarioBase.Text = dadosRecebidos[1];
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
+            DateTime DiaHoraAtual = PegarDiaHoraAtual();
+            //listaHoras = _crud_FolhaDePagamento.ColetarRegistroHoara(dadosRecebidos[0], DiaHoraAtual.ToString());
+            //textBox1.Text = CalcularHoras(listaHoras).ToString();
+            listaHoras = _crud_FolhaDePagamento.ColetarRegistroHorasExtras(dadosRecebidos[0], DiaHoraAtual.ToString());
+            txtTotalHoras.Text = CalcularHoras(listaHoras).ToString();
+            string horas = txtTotalHoras.Text;
+            horas = horas.Replace(":", " ");
+            string[] divisorHoras = horas.Split(' ');
+            int horasTrabalhadas = int.Parse(divisorHoras[0]);
+            int minutosTrabalhados = int.Parse(divisorHoras[1]);
+            double retorno;
+            retorno = folhaPG.ConversorDeMinutosEmHoras(horasTrabalhadas, minutosTrabalhados);
+            txtTotalHorasConvertidas.Text = $"{retorno:f2}".ToString();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             try
             {
-                txtSalarioBase.Clear();
-                txtTotalHoras.Clear();
                 txtRetorno.Clear();
-                txtHorasFechadas.Clear();
-                txtMinutos.Clear();
-                txtTotalHorasConvertidas.Clear();
-                rdbNao.Checked = true;
                 rdbCinquenta.Checked = true;
-                gpbConversor.Visible = false;
-                txtHorasFechadas.Visible = false;
-                txtMinutos.Visible = false;
-                txtTotalHorasConvertidas.Visible = false;
-                txtSalarioBase.Focus();
-            }
-            catch (Exception)
-            {
-                throw new Exception("Erro ao realizar a operação!");
-            }
-            
-
-        }
-
-        private void rdbSim_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (rdbSim.Checked)
-                {
-                    gpbConversor.Visible = true;
-                    lblHorasFechadas.Visible = true;
-                    txtHorasFechadas.Visible = true;
-                    lblMinutos.Visible = true;
-                    txtMinutos.Visible = true;
-                    lblTotalHorasConvertidas.Visible = true;
-                    txtTotalHorasConvertidas.Visible = true;
-                    btnConverter.Visible = true;
-                }
-                else
-                {
-                    gpbConversor.Visible = false;
-                    lblHorasFechadas.Visible = false;
-                    txtHorasFechadas.Visible = false;
-                    lblMinutos.Visible = false;
-                    txtMinutos.Visible = false;
-                    lblTotalHorasConvertidas.Visible = false;
-                    txtTotalHorasConvertidas.Visible = false;
-                    btnConverter.Visible = false;
-                }
-            }
-            catch (Exception)
-            {
-                throw new Exception("Erro ao realizar a operação!");
-            }
-        }
-
-        private void btnConverter_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                double horasConvertidas = folhaPG.ConversorDeMinutosEmHoras(Convert.ToInt16(txtHorasFechadas.Text), Convert.ToInt16(txtMinutos.Text));
-                txtTotalHorasConvertidas.Text = $"{horasConvertidas:f2}".ToString();
             }
             catch (Exception)
             {
@@ -109,13 +73,15 @@ namespace InterfacesDoSistemaDesktop
                 if (rdbCinquenta.Checked)
                 {
                     double cinquenta = 1.5;
-                    double retorno = folhaPG.CalcularHoraExtra(Convert.ToDouble(txtSalarioBase.Text), cinquenta, Convert.ToInt16(txtTotalHoras.Text));
+                    double horasConvertidas = Convert.ToDouble(txtTotalHorasConvertidas.Text);
+                    double retorno = folhaPG.CalcularHoraExtra(Convert.ToDouble(txtSalarioBase.Text), cinquenta, horasConvertidas);
                     txtRetorno.Text = $"{retorno:f2}".ToString();
                 }
                 else if (rdbCem.Checked)
                 {
                     double Cem = 2;
-                    double retorno = folhaPG.CalcularHoraExtra(Convert.ToDouble(txtSalarioBase.Text), Cem, Convert.ToInt16(txtTotalHoras.Text));
+                    double horasConvertidas = Convert.ToDouble(txtTotalHorasConvertidas.Text);
+                    double retorno = folhaPG.CalcularHoraExtra(Convert.ToDouble(txtSalarioBase.Text), Cem, horasConvertidas);
                     txtRetorno.Text = $"{retorno:f2}".ToString();
                 }
             }
@@ -123,6 +89,24 @@ namespace InterfacesDoSistemaDesktop
             {
                 throw new Exception("Erro ao realizar a operação!");
             }
+        }
+
+        private DateTime PegarDiaHoraAtual()
+        {
+            DateTime dataHoraAtual = DateTime.Now;
+            return dataHoraAtual;
+        }
+
+        private TimeSpan CalcularHoras(List<TimeSpan> tm)
+        {
+            List<TimeSpan> listaTm = new List<TimeSpan>();
+            listaTm = tm;
+            TimeSpan somaTotal = TimeSpan.Zero;
+            foreach (var tempo in listaTm)
+            {
+                somaTotal += tempo;
+            }
+            return somaTotal;
         }
     }
 }

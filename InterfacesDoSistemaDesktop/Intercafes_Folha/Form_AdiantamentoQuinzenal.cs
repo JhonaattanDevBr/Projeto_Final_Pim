@@ -74,6 +74,14 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtRetorno.Text))
+            {
+                dados.Add("Não possui adiantamento");
+            }
+            else
+            {
+                dados.Add(txtRetorno.Text.ToString() + " Adiantamento Quinzenal");
+            }
             this.Close();
             _t1 = new Thread(AdicionalNoturno);
             _t1.SetApartmentState(ApartmentState.STA);

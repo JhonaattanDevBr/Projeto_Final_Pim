@@ -57,6 +57,7 @@
             this.btnVoltar.TabIndex = 0;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // gpbAdicionalNotruno
             // 
@@ -93,6 +94,7 @@
             this.btnCancelar.TabIndex = 13;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAvancar
             // 
@@ -105,13 +107,14 @@
             this.btnAvancar.TabIndex = 12;
             this.btnAvancar.Text = "Avançar";
             this.btnAvancar.UseVisualStyleBackColor = false;
+            this.btnAvancar.Click += new System.EventHandler(this.btnAvancar_Click);
             // 
             // btnCalcular
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.LightBlue;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCalcular.Location = new System.Drawing.Point(91, 195);
+            this.btnCalcular.Location = new System.Drawing.Point(91, 169);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 30);
             this.btnCalcular.TabIndex = 11;
@@ -124,7 +127,7 @@
             this.btnLimpar.BackColor = System.Drawing.Color.LightBlue;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnLimpar.Location = new System.Drawing.Point(9, 195);
+            this.btnLimpar.Location = new System.Drawing.Point(9, 169);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 30);
             this.btnLimpar.TabIndex = 10;
@@ -136,7 +139,7 @@
             // 
             this.txtRetorno.Enabled = false;
             this.txtRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtRetorno.Location = new System.Drawing.Point(216, 156);
+            this.txtRetorno.Location = new System.Drawing.Point(216, 130);
             this.txtRetorno.Name = "txtRetorno";
             this.txtRetorno.ReadOnly = true;
             this.txtRetorno.Size = new System.Drawing.Size(100, 21);
@@ -146,7 +149,7 @@
             // 
             this.lblRetorno.AutoSize = true;
             this.lblRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblRetorno.Location = new System.Drawing.Point(6, 158);
+            this.lblRetorno.Location = new System.Drawing.Point(6, 132);
             this.lblRetorno.Name = "lblRetorno";
             this.lblRetorno.Size = new System.Drawing.Size(204, 15);
             this.lblRetorno.TabIndex = 8;
@@ -156,7 +159,7 @@
             // 
             this.txtTotalHoras.Enabled = false;
             this.txtTotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtTotalHoras.Location = new System.Drawing.Point(97, 92);
+            this.txtTotalHoras.Location = new System.Drawing.Point(97, 66);
             this.txtTotalHoras.Name = "txtTotalHoras";
             this.txtTotalHoras.ReadOnly = true;
             this.txtTotalHoras.Size = new System.Drawing.Size(100, 21);
@@ -166,7 +169,7 @@
             // 
             this.lblTotalHoras.AutoSize = true;
             this.lblTotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblTotalHoras.Location = new System.Drawing.Point(6, 93);
+            this.lblTotalHoras.Location = new System.Drawing.Point(6, 67);
             this.lblTotalHoras.Name = "lblTotalHoras";
             this.lblTotalHoras.Size = new System.Drawing.Size(85, 15);
             this.lblTotalHoras.TabIndex = 6;
@@ -199,7 +202,7 @@
             // 
             this.txtTotalHorasConvertidas.Enabled = false;
             this.txtTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 124);
+            this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 98);
             this.txtTotalHorasConvertidas.Name = "txtTotalHorasConvertidas";
             this.txtTotalHorasConvertidas.ReadOnly = true;
             this.txtTotalHorasConvertidas.Size = new System.Drawing.Size(100, 21);
@@ -209,7 +212,7 @@
             // 
             this.lblTotalHorasConvertidas.AutoSize = true;
             this.lblTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblTotalHorasConvertidas.Location = new System.Drawing.Point(6, 125);
+            this.lblTotalHorasConvertidas.Location = new System.Drawing.Point(6, 99);
             this.lblTotalHorasConvertidas.Name = "lblTotalHorasConvertidas";
             this.lblTotalHorasConvertidas.Size = new System.Drawing.Size(150, 15);
             this.lblTotalHorasConvertidas.TabIndex = 7;
@@ -226,7 +229,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form_AdicionalNotruno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicional Notruno";
