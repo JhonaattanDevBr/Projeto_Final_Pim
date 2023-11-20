@@ -346,5 +346,89 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        public string ColetarIdConvMedico(string idFuncionario)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT Id_planos_saude FROM Funcionarios WHERE Id_funcionario = @idFuncionario";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idFuncionario";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = idFuncionario;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+                string idConvMedico = null;
+
+                while (_leitor.Read())
+                {
+                    idConvMedico = _leitor.GetInt32(0).ToString();
+                }
+                conexaoDb.Close();
+                return idConvMedico;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public List<string> ColetarConvMedico(string idConvMedico)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT Nome, Valor, Porcentagem FROM Planos_saude WHERE Id_saude = @idSaude";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idSaude";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = idConvMedico;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+                List<string> convenioMedico = new List<string>();
+
+                while (_leitor.Read())
+                {
+                    string nome = _leitor.GetString(0);
+                    if(_leitor.GetDouble(1) != 0)
+                    {
+                        string valor = _leitor.GetDouble(1).ToString();
+                        string menssagem = "Valor";
+                        convenioMedico.Add(nome);
+                        convenioMedico.Add(valor);
+                        convenioMedico.Add(menssagem);
+                    }
+                    else
+                    {
+                        string porcentagem = _leitor.GetInt32(2).ToString();
+                        string menssagem = "Porcentagem";
+                        convenioMedico.Add(nome);
+                        convenioMedico.Add(porcentagem);
+                        convenioMedico.Add(menssagem);
+                    }
+                }
+                conexaoDb.Close();
+                return convenioMedico;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

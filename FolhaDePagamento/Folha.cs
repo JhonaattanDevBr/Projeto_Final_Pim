@@ -378,12 +378,12 @@ namespace FolhaDePagamento
             }
         }
 
-        public double CalcularConvenioMedico(double salario, double convenio)
+        public double CalcularConvenioMedico(double salario, double porcentagem)
         {
-            double valorDoConvenioMedico;
-            valorDoConvenioMedico = salario - convenio;
+            double percentual = porcentagem / 100;
+            double valorDoConvenioMedico = salario * percentual;
             DescontoDoConvenioMedico = valorDoConvenioMedico;
-            return valorDoConvenioMedico;
+            return valorDoConvenioMedico;   
         }
 
         public double CalcularConvenioOdontologico(double salario, double convenio)
