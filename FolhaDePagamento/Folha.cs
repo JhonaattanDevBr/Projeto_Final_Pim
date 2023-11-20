@@ -32,9 +32,9 @@ namespace FolhaDePagamento
         public string MensagemIRRF { get; set; }
 
 
-        public double ContabilizarValeTransporte(double salario, double passagem, int dias)
+        public double ContabilizarValeTransporte(double salario, int dias)
         {
-            double valorPorcentagem, valorPassagem, porcentagem;
+            double valorPorcentagem, valorPassagem, porcentagem, passagem = 9.60;
             int percentual = 6;
             try
             {
@@ -282,12 +282,13 @@ namespace FolhaDePagamento
         public double CalcularHoraExtra(double salario, double porcentagem, double hora)
         {
             // Preciso colocar o DSR sobre horas extras nesse método
-            double valorDaHoraNormal, valorDeUmaHoraExtra, valorTotalDaHoraExtra;
+            double valorDaHoraNormal, valorDeUmaHoraExtra, valorTotalDaHoraExtra, a;
             try
             {
                 valorDaHoraNormal = salario / 220;
                 valorDeUmaHoraExtra = valorDaHoraNormal * porcentagem;
-                valorTotalDaHoraExtra = hora * valorDeUmaHoraExtra;
+                a = valorDaHoraNormal + valorDeUmaHoraExtra;
+                valorTotalDaHoraExtra = hora * a;
                 TotalDeHorasExtras = valorTotalDaHoraExtra;
                 return valorTotalDaHoraExtra;
             }

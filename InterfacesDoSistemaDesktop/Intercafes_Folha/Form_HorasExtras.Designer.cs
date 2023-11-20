@@ -80,7 +80,7 @@
             // 
             this.txtTotalHorasConvertidas.Enabled = false;
             this.txtTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 129);
+            this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 101);
             this.txtTotalHorasConvertidas.Name = "txtTotalHorasConvertidas";
             this.txtTotalHorasConvertidas.ReadOnly = true;
             this.txtTotalHorasConvertidas.Size = new System.Drawing.Size(100, 21);
@@ -90,7 +90,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.label1.Location = new System.Drawing.Point(6, 130);
+            this.label1.Location = new System.Drawing.Point(6, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 15);
             this.label1.TabIndex = 23;
@@ -107,6 +107,7 @@
             this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAvancar
             // 
@@ -119,6 +120,7 @@
             this.btnAvancar.TabIndex = 21;
             this.btnAvancar.Text = "Avançar";
             this.btnAvancar.UseVisualStyleBackColor = false;
+            this.btnAvancar.Click += new System.EventHandler(this.btnAvancar_Click);
             // 
             // btnVoltar
             // 
@@ -131,6 +133,7 @@
             this.btnVoltar.TabIndex = 20;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // gpbPorcentagem
             // 
@@ -183,7 +186,7 @@
             this.btnLimpar.BackColor = System.Drawing.Color.LightBlue;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnLimpar.Location = new System.Drawing.Point(90, 194);
+            this.btnLimpar.Location = new System.Drawing.Point(90, 166);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 30);
             this.btnLimpar.TabIndex = 14;
@@ -196,7 +199,7 @@
             this.btnCalcular.BackColor = System.Drawing.Color.LightBlue;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCalcular.Location = new System.Drawing.Point(9, 194);
+            this.btnCalcular.Location = new System.Drawing.Point(9, 166);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 30);
             this.btnCalcular.TabIndex = 13;
@@ -208,7 +211,7 @@
             // 
             this.lblRetorno.AutoSize = true;
             this.lblRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblRetorno.Location = new System.Drawing.Point(6, 165);
+            this.lblRetorno.Location = new System.Drawing.Point(6, 137);
             this.lblRetorno.Name = "lblRetorno";
             this.lblRetorno.Size = new System.Drawing.Size(203, 15);
             this.lblRetorno.TabIndex = 12;
@@ -218,7 +221,7 @@
             // 
             this.txtRetorno.Enabled = false;
             this.txtRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetorno.Location = new System.Drawing.Point(215, 164);
+            this.txtRetorno.Location = new System.Drawing.Point(215, 136);
             this.txtRetorno.Name = "txtRetorno";
             this.txtRetorno.ReadOnly = true;
             this.txtRetorno.Size = new System.Drawing.Size(100, 21);
@@ -228,7 +231,7 @@
             // 
             this.txtTotalHoras.Enabled = false;
             this.txtTotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtTotalHoras.Location = new System.Drawing.Point(97, 94);
+            this.txtTotalHoras.Location = new System.Drawing.Point(97, 66);
             this.txtTotalHoras.Name = "txtTotalHoras";
             this.txtTotalHoras.ReadOnly = true;
             this.txtTotalHoras.Size = new System.Drawing.Size(100, 21);
@@ -238,7 +241,7 @@
             // 
             this.lblTotalHoras.AutoSize = true;
             this.lblTotalHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblTotalHoras.Location = new System.Drawing.Point(6, 96);
+            this.lblTotalHoras.Location = new System.Drawing.Point(6, 68);
             this.lblTotalHoras.Name = "lblTotalHoras";
             this.lblTotalHoras.Size = new System.Drawing.Size(85, 15);
             this.lblTotalHoras.TabIndex = 6;

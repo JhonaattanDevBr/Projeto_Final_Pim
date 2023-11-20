@@ -47,6 +47,7 @@ namespace InterfacesDoSistemaDesktop
                 {
                     gpbPericulosidade.Visible = false;
                     gpbInsalubridade.Visible = true;
+                    txtRetornoPericulosidade.Clear();
                 }
                 else
                 {

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +21,8 @@ namespace InterfacesDoSistemaDesktop
         List<string> dadosRecebidos = new List<string>();
         List<string> dadosParaEnviar = new List<string>();
         List<TimeSpan> listaHoras = new List<TimeSpan>();
+
+        Thread _t1, _t2;
 
         public Form_HorasExtras(List<string> dadosEnviados) // Aqui eu chego sempre com 6 itens na lista.
         {
@@ -72,14 +75,14 @@ namespace InterfacesDoSistemaDesktop
             {
                 if (rdbCinquenta.Checked)
                 {
-                    double cinquenta = 1.5;
+                    double cinquenta = 0.5;
                     double horasConvertidas = Convert.ToDouble(txtTotalHorasConvertidas.Text);
                     double retorno = folhaPG.CalcularHoraExtra(Convert.ToDouble(txtSalarioBase.Text), cinquenta, horasConvertidas);
                     txtRetorno.Text = $"{retorno:f2}".ToString();
                 }
                 else if (rdbCem.Checked)
                 {
-                    double Cem = 2;
+                    double Cem = 1.0;
                     double horasConvertidas = Convert.ToDouble(txtTotalHorasConvertidas.Text);
                     double retorno = folhaPG.CalcularHoraExtra(Convert.ToDouble(txtSalarioBase.Text), Cem, horasConvertidas);
                     txtRetorno.Text = $"{retorno:f2}".ToString();
@@ -107,6 +110,50 @@ namespace InterfacesDoSistemaDesktop
                 somaTotal += tempo;
             }
             return somaTotal;
+        }
+
+        private void btnAvancar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtRetorno.Text))
+            {
+                dadosParaEnviar.Add("Não possui horas extras");
+            }
+            else
+            {
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Horas extras");
+            }
+            this.Close();
+            _t1 = new Thread(ValeTransporte);
+            _t1.SetApartmentState(ApartmentState.STA);
+            _t1.Start();
+        }
+
+        private void ValeTransporte()
+        {
+            Application.Run(new Form_ValeTransporte(dadosParaEnviar));
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _t2 = new Thread(PericulosidadEnsalubridade);
+            _t2.SetApartmentState(ApartmentState.STA);
+            _t2.Start();
+        }
+
+        private void PericulosidadEnsalubridade()
+        {
+            Application.Run(new Form_Periculosidade_Insalubridade(dadosParaEnviar));
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult cancelar = MessageBox.Show("Deseja cancelar o processo de gerar para folha de pagamento?",
+                                                    "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cancelar == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }
