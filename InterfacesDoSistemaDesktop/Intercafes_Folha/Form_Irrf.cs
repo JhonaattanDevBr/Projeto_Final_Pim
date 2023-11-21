@@ -1,4 +1,5 @@
-﻿using FolhaDePagamento;
+﻿using BaseDeDados;
+using FolhaDePagamento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,89 +15,70 @@ namespace InterfacesDoSistemaDesktop
 {
     public partial class Form_Irrf : Form
     {
-        Folha folhaPG = new Folha();
+        Folha _folha = new Folha();
+        Crud_FolhaDePagamento _crud_FolhaDePagamento = new Crud_FolhaDePagamento();
 
-        public Form_Irrf()
+        List<string> dadosRecebidos = new List<string>();
+        List<string> dadosParaEnviar = new List<string>();
+        List<string> dadosConvOdonto = new List<string>();
+        
+
+        Thread _t1, _t2;
+
+        public Form_Irrf(List<string> dadosEnviados)
         {
             InitializeComponent();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
+            dadosRecebidos = dadosEnviados;
+            dadosParaEnviar.Add(dadosRecebidos[0]); // Id
+            dadosParaEnviar.Add(dadosRecebidos[1]); // Salario
+            dadosParaEnviar.Add(dadosRecebidos[2]); // Adicional
+            dadosParaEnviar.Add(dadosRecebidos[3]); // Horas Adc. Not
+            dadosParaEnviar.Add(dadosRecebidos[4]); // Adc. Not
+            dadosParaEnviar.Add(dadosRecebidos[5]); // Periculosidade/Insalubridade
+            dadosParaEnviar.Add(dadosRecebidos[6]); // Horas extras
+            dadosParaEnviar.Add(dadosRecebidos[7]); // Vale transporte
+            dadosParaEnviar.Add(dadosRecebidos[8]); // Vale alimentação/refeição
+            dadosParaEnviar.Add(dadosRecebidos[9]); // id Convenio medico
+            dadosParaEnviar.Add(dadosRecebidos[10]); // nome convenio medico
+            dadosParaEnviar.Add(dadosRecebidos[11]); // valor convenio medico
+            dadosParaEnviar.Add(dadosRecebidos[12]); // Id convenio odonto
+            dadosParaEnviar.Add(dadosRecebidos[13]); // nome convenio odonto
+            dadosParaEnviar.Add(dadosRecebidos[14]); // valor convenio odonto
+            dadosParaEnviar.Add(dadosRecebidos[15]); // valor dependentes
+            dadosParaEnviar.Add(dadosRecebidos[16]); // Jornada
+            dadosParaEnviar.Add(dadosRecebidos[17]); // Horas em Atraso
+            dadosParaEnviar.Add(dadosRecebidos[18]); // valor de atraso
+            dadosParaEnviar.Add(dadosRecebidos[19]); // valor do INSS
+            dadosParaEnviar.Add(dadosRecebidos[20]); // valor da pensao
+            txtSalarioBase.Text = dadosRecebidos[1];
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtSalarioBase.Clear();
             txtRetorno.Clear();
+            txtRetorno.Focus();
             gpbMensagem.Visible = false;
             lblMensagamFaixa.Visible = false;
             lblMensagemPorcentagem.Visible = false;
             lblMensagemFormaDeCalculo.Visible = false;
-            txtSalarioBase.Focus();
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            List<string> irrf = new List<string>();
             try
             {
-                double retorno = folhaPG.CalcularIrrf(Convert.ToDouble(txtSalarioBase.Text));
-                if (retorno == 0)
-                {
-                    txtRetorno.Text = retorno.ToString();
+                irrf = _folha.CalcularIrrf(dadosRecebidos[1], dadosRecebidos[19], dadosRecebidos[20], dadosRecebidos[15]);
+
+                    txtRetorno.Text = irrf[0].ToString();
                     gpbMensagem.Visible = true;
                     lblMensagamFaixa.Visible = true;
                     lblMensagemPorcentagem.Visible = true;
                     lblMensagemFormaDeCalculo.Visible = true;
-                    lblMensagamFaixa.Text = ("A base de calculo se estabelece na primeira faixa.");
-                    lblMensagemPorcentagem.Text = ("Funcionário está isento do desconto de IRRF.");
-                    lblMensagemFormaDeCalculo.Text = folhaPG.MensagemIRRF;
-                }
-                else if (retorno <= 158.40)
-                {
-                    txtRetorno.Text = retorno.ToString();
-                    gpbMensagem.Visible = true;
-                    lblMensagamFaixa.Visible = true;
-                    lblMensagemPorcentagem.Visible = true;
-                    lblMensagemFormaDeCalculo.Visible = true;
-                    lblMensagamFaixa.Text = ("A base de calculo se estabelece na segunda faixa.");
-                    lblMensagemPorcentagem.Text = ("Desconto do IRRF realizado sobre 7,5%");
-                    lblMensagemFormaDeCalculo.Text = folhaPG.MensagemIRRF;
-                }
-                else if (retorno <= 370.40)
-                {
-                    txtRetorno.Text = retorno.ToString();
-                    gpbMensagem.Visible = true;
-                    lblMensagamFaixa.Visible = true;
-                    lblMensagemPorcentagem.Visible = true;
-                    lblMensagemFormaDeCalculo.Visible = true;
-                    lblMensagamFaixa.Text = ("A base de calculo se estabelece na terceira faixa.");
-                    lblMensagemPorcentagem.Text = ("Desconto do IRRF realizado sobre 15,00%");
-                    lblMensagemFormaDeCalculo.Text = folhaPG.MensagemIRRF;
-                }
-                else if (retorno <= 651.73)
-                {
-                    txtRetorno.Text = retorno.ToString();
-                    gpbMensagem.Visible = true;
-                    lblMensagamFaixa.Visible = true;
-                    lblMensagemPorcentagem.Visible = true;
-                    lblMensagemFormaDeCalculo.Visible = true;
-                    lblMensagamFaixa.Text = ("A base de calculo se estabelece na quarta faixa.");
-                    lblMensagemPorcentagem.Text = ("Desconto do IRRF realizado sobre 22,50%");
-                    lblMensagemFormaDeCalculo.Text = folhaPG.MensagemIRRF;
-                }
-                else
-                {
-                    txtRetorno.Text = retorno.ToString();
-                    gpbMensagem.Visible = true;
-                    lblMensagamFaixa.Visible = true;
-                    lblMensagemPorcentagem.Visible = true;
-                    lblMensagemFormaDeCalculo.Visible = true;
-                    lblMensagamFaixa.Text = ("A base de calculo se estabelece acima da quarta faixa.");
-                    lblMensagemPorcentagem.Text = ("Desconto do IRRF realizado sobre 27,50%");
-                    lblMensagemFormaDeCalculo.Text = folhaPG.MensagemIRRF;
-                }
+                    lblMensagamFaixa.Text = irrf[1];
+                    lblMensagemPorcentagem.Text = irrf[2];
+                    lblMensagemFormaDeCalculo.Text = irrf[3];
+               
             }
             catch (Exception ex)
             {
@@ -104,28 +87,48 @@ namespace InterfacesDoSistemaDesktop
 
         }
 
-        private void txtSalarioBase_TextChanged(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            string validacao = txtSalarioBase.Text.Trim();
-            if(string.IsNullOrEmpty(validacao))
+            DialogResult cancelar = MessageBox.Show("Deseja cancelar o processo de gerar para folha de pagamento?",
+                                                 "ATENÇÂO!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cancelar == DialogResult.Yes)
             {
-                txtSalarioBase.Clear();
-                txtSalarioBase.Focus();
-                btnCalcular.Enabled = false;
-                return;
+                Close();
+            }
+        }
+
+        private void btnAvancar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtRetorno.Text))
+            {
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Valor do IRRF");
+                this.Close();
+                _t1 = new Thread(Decimo);
+                _t1.SetApartmentState(ApartmentState.STA);
+                _t1.Start();
             }
             else
             {
-                btnCalcular.Enabled = true;
-                return;
+                MessageBox.Show("O calculo do IRRF deve computado, clicque em calcular.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (!int.TryParse(validacao, out int valor))
-            {
-                MessageBox.Show("Este campo nao aceita letras ou caracteres.", "ATENÇÃO");
-                txtSalarioBase.Clear();
-                txtSalarioBase.Focus();
-                return;
-            }
+        }
+
+        private void Decimo()
+        {
+            // Aqui vou ter que ver como fazer essa parte
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _t2 = new Thread(Pensao);
+            _t2.SetApartmentState(ApartmentState.STA);
+            _t2.Start();
+        }
+
+        private void Pensao()
+        {
+            Application.Run(new Form_Pensao(dadosRecebidos));
         }
     }
 }

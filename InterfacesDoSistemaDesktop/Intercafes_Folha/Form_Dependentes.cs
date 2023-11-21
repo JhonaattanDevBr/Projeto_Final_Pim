@@ -73,13 +73,13 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
-            if (txtRetorno.Text != "0")
+            if (txtRetorno.Text != "")
             {
                 dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Dependentes");
             }
             else
             {
-                dadosParaEnviar.Add("Não possui dependentes");
+                dadosParaEnviar.Add(" 0 Não possui dependentes");
             }
             this.Close();
             _t1 = new Thread(Atrasos);

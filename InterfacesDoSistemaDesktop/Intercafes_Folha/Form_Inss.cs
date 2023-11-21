@@ -102,7 +102,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void Pensao()
         {
-            Application.Run(new Form_Pensao());
+            Application.Run(new Form_Pensao(dadosParaEnviar));
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
