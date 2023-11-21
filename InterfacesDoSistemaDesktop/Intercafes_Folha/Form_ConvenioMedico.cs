@@ -39,7 +39,7 @@ namespace InterfacesDoSistemaDesktop
             dadosParaEnviar.Add(dadosRecebidos[8]); // Vale alimentação/refeição
             txtSalarioBase.Text = dadosRecebidos[1];
             string idConv = _crud_FolhaDePagamento.ColetarIdConvMedico(dadosRecebidos[0]);
-            dadosParaEnviar.Add(idConv); // Id Convenio Médico
+            dadosParaEnviar.Add(idConv + " Id convenio medico"); // Id Convenio Médico
             dadosConvMedico = _crud_FolhaDePagamento.ColetarConvMedico(idConv);
             txtConvenio.Text = dadosConvMedico[0].ToString();
             
@@ -79,8 +79,8 @@ namespace InterfacesDoSistemaDesktop
         {
             if (!string.IsNullOrEmpty(txtRetorno.Text))
             {
-                dadosParaEnviar.Add(txtConvenio.Text.ToString() + "Nome Convênio médico");
-                dadosParaEnviar.Add(txtRetorno.Text.ToString() + "Valor Convênio médico");
+                dadosParaEnviar.Add(txtConvenio.Text.ToString() + " Nome Convênio médico");
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Valor Convênio médico");
             }
             else
             {
@@ -95,7 +95,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void ConvenioOdontologico()
         {
-            Application.Run(new Form_ConvenioOdontologico());
+            Application.Run(new Form_ConvenioOdontologico(dadosParaEnviar));
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

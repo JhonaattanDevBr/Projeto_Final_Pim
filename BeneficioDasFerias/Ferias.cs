@@ -38,7 +38,10 @@ namespace BeneficioDasFerias
         {
             // Ainda preciso terminar esse código
             // Vou precisar passar os valores do INSS e IRRF por parametros.
-            double abonoPecuniarioUmTerco, umTercoSalarioBase, salarioBrutoFerias, inss, irrf, pensao = 300, dependente = 400, salarioLiquidoFerias = 0;
+            double abonoPecuniarioUmTerco, umTercoSalarioBase, salarioBrutoFerias, irrf, pensao = 300, dependente = 400, salarioLiquidoFerias = 0;
+            string inss;
+
+            List<string> dadosInss = new List<string>();
 
             try
             {
@@ -51,11 +54,12 @@ namespace BeneficioDasFerias
                     salarioBrutoFerias = salario + umTercoSalarioBase + AbonoPecuniario + abonoPecuniarioUmTerco;
                     BrutoDeFerias = salarioBrutoFerias;
 
-                    inss = folhaPG.FormulaDoInss(salarioBrutoFerias);
-                    InssFerias = inss;
-                    irrf = folhaPG.FormulaDoIrrf(salarioBrutoFerias, inss, pensao, dependente);
+                    dadosInss = folhaPG.FormulaDoInss(salarioBrutoFerias);
+                    inss = dadosInss[0];
+                    InssFerias = Convert.ToDouble(inss);
+                    irrf = folhaPG.FormulaDoIrrf(salarioBrutoFerias, Convert.ToDouble(inss), pensao, dependente);
                     IrrfFerias = irrf;
-                    salarioLiquidoFerias = salarioBrutoFerias - inss - irrf;
+                    salarioLiquidoFerias = salarioBrutoFerias - Convert.ToDouble(inss) - irrf;
                 }
                 else if (venda == false)
                 {
@@ -63,11 +67,12 @@ namespace BeneficioDasFerias
                     salarioBrutoFerias = salario + umTercoSalarioBase;
                     BrutoDeFerias = salarioBrutoFerias;
 
-                    inss = folhaPG.FormulaDoInss(salarioBrutoFerias);
-                    InssFerias = inss;
-                    irrf = folhaPG.FormulaDoIrrf(salarioBrutoFerias, inss, pensao, dependente);
+                    dadosInss = folhaPG.FormulaDoInss(salarioBrutoFerias);
+                    inss = dadosInss[0];
+                    InssFerias = Convert.ToDouble(inss);
+                    irrf = folhaPG.FormulaDoIrrf(salarioBrutoFerias, Convert.ToDouble(inss), pensao, dependente);
                     IrrfFerias = irrf;
-                    salarioLiquidoFerias = salarioBrutoFerias - inss - irrf;
+                    salarioLiquidoFerias = salarioBrutoFerias - Convert.ToDouble(inss) - irrf;
                 }
                 return salarioLiquidoFerias;
             }

@@ -75,14 +75,15 @@ namespace FolhaDePagamento
             }
         }
 
-        public double CalcularInss(double salarioBase)
+        public List<string> CalcularInss(double salarioBase)
         {
+            List<string> inssFunc = new List<string>();
             try
             {
-                double valorDoInss;
-                valorDoInss = FormulaDoInss(salarioBase);
-                DescontoDoInss = valorDoInss;
-                return valorDoInss;
+                inssFunc = FormulaDoInss(salarioBase);
+                string resultadoInss = inssFunc[0];
+                DescontoDoInss = Convert.ToDouble(resultadoInss);
+                return inssFunc;
             }
             catch (Exception ex)
             {
@@ -90,42 +91,59 @@ namespace FolhaDePagamento
             }
         }
 
-        public double FormulaDoInss(double salario)
+        public List<string> FormulaDoInss(double salario)
         {
             double ValorDeDescontoDoInss, faixa2, faixa3, faixa4, restante;
             double valorPadraoFaixa1 = 99.00;
             double valorPadraoFaixa2 = 112.62;
             double valorPadraoFaixa3 = 154.28;
             double valorPadraoFaixa4 = 511.06;
+            List<string> dadosInss = new List<string>();
+
             try
             {
                 if (salario <= 1320.00)
                 {
                     ValorDeDescontoDoInss = salario * 0.075;
+                    dadosInss.Add(ValorDeDescontoDoInss.ToString());
+                    dadosInss.Add("O salário se estabelece na primeira faixa da tabela.");
+                    dadosInss.Add("Desconto do INSS realizado sobre 7,5%.");
                 }
                 else if (salario <= 2571.29)
                 {
                     restante = salario - 1320.00;
                     faixa2 = restante * 0.09;
                     ValorDeDescontoDoInss = valorPadraoFaixa1 + faixa2;
+                    dadosInss.Add(ValorDeDescontoDoInss.ToString());
+                    dadosInss.Add("O salário se estabelece na segunda faixa da tabela.");
+                    dadosInss.Add("Desconto do INSS realizado sobre 9%");
                 }
                 else if (salario <= 3856.94)
                 {
                     restante = salario - 2571.29;
                     faixa3 = restante * 0.12;
                     ValorDeDescontoDoInss = valorPadraoFaixa1 + valorPadraoFaixa2 + faixa3;
+                    dadosInss.Add(ValorDeDescontoDoInss.ToString());
+                    dadosInss.Add("O salário se estabelece na terceira faixa da tabela.");
+                    dadosInss.Add("Desconto do INSS realizado sobre 12,00%");
                 }
                 else if (salario <= 7507.49)
                 {
                     restante = salario - 3856.94;
                     faixa4 = restante * 0.14;
                     ValorDeDescontoDoInss = valorPadraoFaixa1 + valorPadraoFaixa2 + valorPadraoFaixa3 + faixa4;
+                    dadosInss.Add(ValorDeDescontoDoInss.ToString());
+                    dadosInss.Add("O salário se estabelece na quarta faixa da tabela.");
+                    dadosInss.Add("Desconto do INSS realizado sobre 14,00%");
                 }
                 else
                 {
                     ValorDeDescontoDoInss = valorPadraoFaixa1 + valorPadraoFaixa2 + valorPadraoFaixa3 + valorPadraoFaixa4;
+                    dadosInss.Add(ValorDeDescontoDoInss.ToString());
+                    dadosInss.Add("O salário não se estabelece em nenhuma faixa pois excede o teto do INSS.");
+                    dadosInss.Add("Teto do INSS R$ 876.96");
                 }
-                return ValorDeDescontoDoInss;
+                return dadosInss;
             }
             catch (Exception ex)
             {
@@ -386,10 +404,10 @@ namespace FolhaDePagamento
             return valorDoConvenioMedico;   
         }
 
-        public double CalcularConvenioOdontologico(double salario, double convenio)
+        public double CalcularConvenioOdontologico(double salario, double porcentagem)
         {
-            double valorDoConvenioOdontologico;
-            valorDoConvenioOdontologico = salario - convenio;
+            double percentual = porcentagem / 100;
+            double valorDoConvenioOdontologico = salario * percentual;
             DescontoDoConvenioOdontologico = valorDoConvenioOdontologico;
             return valorDoConvenioOdontologico;
         }

@@ -70,7 +70,7 @@
             // 
             this.txtConvenio.Enabled = false;
             this.txtConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConvenio.Location = new System.Drawing.Point(114, 63);
+            this.txtConvenio.Location = new System.Drawing.Point(114, 67);
             this.txtConvenio.Name = "txtConvenio";
             this.txtConvenio.ReadOnly = true;
             this.txtConvenio.Size = new System.Drawing.Size(150, 21);
@@ -120,7 +120,7 @@
             this.btnLimpar.BackColor = System.Drawing.Color.LightBlue;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnLimpar.Location = new System.Drawing.Point(90, 97);
+            this.btnLimpar.Location = new System.Drawing.Point(90, 98);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 30);
             this.btnLimpar.TabIndex = 7;
@@ -133,7 +133,7 @@
             this.btnCalcular.BackColor = System.Drawing.Color.LightBlue;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCalcular.Location = new System.Drawing.Point(9, 97);
+            this.btnCalcular.Location = new System.Drawing.Point(9, 98);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 30);
             this.btnCalcular.TabIndex = 6;
@@ -145,7 +145,7 @@
             // 
             this.txtRetorno.Enabled = false;
             this.txtRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetorno.Location = new System.Drawing.Point(160, 138);
+            this.txtRetorno.Location = new System.Drawing.Point(160, 142);
             this.txtRetorno.Name = "txtRetorno";
             this.txtRetorno.ReadOnly = true;
             this.txtRetorno.Size = new System.Drawing.Size(100, 21);
@@ -157,7 +157,7 @@
             this.txtSalarioBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSalarioBase.Enabled = false;
             this.txtSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalarioBase.Location = new System.Drawing.Point(88, 34);
+            this.txtSalarioBase.Location = new System.Drawing.Point(88, 33);
             this.txtSalarioBase.Name = "txtSalarioBase";
             this.txtSalarioBase.ReadOnly = true;
             this.txtSalarioBase.Size = new System.Drawing.Size(100, 21);
@@ -167,7 +167,7 @@
             // 
             this.lblRetorno.AutoSize = true;
             this.lblRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblRetorno.Location = new System.Drawing.Point(6, 141);
+            this.lblRetorno.Location = new System.Drawing.Point(6, 142);
             this.lblRetorno.Name = "lblRetorno";
             this.lblRetorno.Size = new System.Drawing.Size(148, 15);
             this.lblRetorno.TabIndex = 2;
