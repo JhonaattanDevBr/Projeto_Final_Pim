@@ -1,4 +1,5 @@
 ﻿using BaseDeDados;
+using BeneficioDasFerias;
 using FolhaDePagamento;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,7 @@ namespace InterfacesDoSistemaDesktop
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             List<string> irrf = new List<string>();
-            try
+            try // ta dando algum erro aqui q eu não sei oq é
             {
                 irrf = _folha.CalcularIrrf(dadosRecebidos[1], dadosRecebidos[19], dadosRecebidos[20], dadosRecebidos[15]);
 
@@ -102,10 +103,33 @@ namespace InterfacesDoSistemaDesktop
             if (!string.IsNullOrEmpty(txtRetorno.Text))
             {
                 dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Valor do IRRF");
-                this.Close();
-                _t1 = new Thread(Decimo);
-                _t1.SetApartmentState(ApartmentState.STA);
-                _t1.Start();
+                DateTime DiaHoraAtual = PegarDiaHoraAtual();
+                string mesDecimo = DiaHoraAtual.ToString();
+                mesDecimo = mesDecimo.Replace("/", " ");
+                string[] mes = mesDecimo.Split(' ');
+                string diaAtual = mes[0].ToString();
+                string mesAtual = mes[1].ToString();
+
+                if (mesAtual != "11")
+                {
+                    dadosParaEnviar.Add("Não possui décimo terceiro");
+                    MessageBox.Show("O décimo terceiro não será disponibilizado como benefício de calculo." +
+                                    "\nNOTA: O décimo terceiro é pago apenas nos mêses 11/NOVEMBRO e 12/DEZEMBRO, " +
+                                    "exceto esses dois períodos, ele só é pago na existência de férias, " +
+                                    "onde é possivel calcular a primeira parcela.", "ATENÇÃO", 
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    _t1 = new Thread(Ferias);
+                    _t1.SetApartmentState(ApartmentState.STA);
+                    _t1.Start();
+                }
+                else
+                {
+                    this.Close();
+                    _t1 = new Thread(Decimo);
+                    _t1.SetApartmentState(ApartmentState.STA);
+                    _t1.Start();
+                }
             }
             else
             {
@@ -115,7 +139,12 @@ namespace InterfacesDoSistemaDesktop
 
         private void Decimo()
         {
-            // Aqui vou ter que ver como fazer essa parte
+            Application.Run(new Form_DecimoTerceiro(dadosParaEnviar));
+        }
+
+        private void Ferias()
+        {
+            Application.Run(new Form_CalculosFerias());
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -129,6 +158,12 @@ namespace InterfacesDoSistemaDesktop
         private void Pensao()
         {
             Application.Run(new Form_Pensao(dadosRecebidos));
+        }
+
+        private DateTime PegarDiaHoraAtual()
+        {
+            DateTime dataHoraAtual = DateTime.Now;
+            return dataHoraAtual;
         }
     }
 }
