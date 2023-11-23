@@ -644,5 +644,45 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        public List<string> ColetarFerias(string idFuncionario)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho);
+
+            try
+            {
+                conexaoDb.Open();
+
+                string querry = "SELECT TOP 1 * FROM Agendamento_ferias where Id_funcionario = @idFuncionario ORDER BY Id_agendamento DESC;";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idFuncionario";
+                _pmtId.DbType = DbType.Int32;
+                _pmtId.Value = idFuncionario;
+                cmd.Parameters.Add(_pmtId);
+
+                SqlDataReader _leitor = cmd.ExecuteReader();
+                List<string> ferias = new List<string>();
+
+
+                while (_leitor.Read())
+                {
+                    string mes = _leitor.GetString(01);
+                    string periodo = _leitor.GetInt32(2).ToString();
+                    string diasVendidos = _leitor.GetInt32(8).ToString();
+                    ferias.Add(mes);
+                    ferias.Add(periodo);
+                    ferias.Add(diasVendidos);
+                }
+                conexaoDb.Close();
+                return ferias;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

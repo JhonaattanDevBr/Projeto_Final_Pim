@@ -65,8 +65,6 @@ namespace InterfacesDoSistemaDesktop
             txtIrrf.Text = vetorIrrf[0];
         }
 
-        
-        // Ainda não esta funcionando corretamente precisso arrumar 
         private void rdbSemBeneficio_CheckedChanged(object sender, EventArgs e)
         {
             if (rdbSemBeneficio.Checked)
@@ -132,7 +130,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void Ferias()
         {
-            Application.Run(new Form_CalculosFerias());
+            Application.Run(new Form_CalculosFerias(dadosParaEnviar));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -147,7 +145,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
-            dadosParaEnviar.Add(txtRetorno.Text.ToString() +  "décimo terceiro");
+            dadosParaEnviar.Add(txtRetorno.Text.ToString() +  " décimo terceiro");
             this.Close();
             _t1 = new Thread(Ferias);
             _t1.SetApartmentState(ApartmentState.STA);
@@ -164,7 +162,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void Irrf()
         {
-            Application.Run(new Form_Inss(dadosRecebidos));
+            Application.Run(new Form_Irrf(dadosRecebidos));
         }
     }
 }

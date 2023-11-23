@@ -114,7 +114,7 @@ namespace InterfacesDoSistemaDesktop
                 {
                     dadosParaEnviar.Add("Não possui décimo terceiro");
                     MessageBox.Show("O décimo terceiro não será disponibilizado como benefício de calculo." +
-                                    "\nNOTA: O décimo terceiro é pago apenas nos mêses 11/NOVEMBRO e 12/DEZEMBRO, " +
+                                    "\n\nNOTA: O décimo terceiro é pago apenas nos mêses 11/NOVEMBRO e 12/DEZEMBRO, " +
                                     "exceto esses dois períodos, ele só é pago na existência de férias, " +
                                     "onde é possivel calcular a primeira parcela.", "ATENÇÃO", 
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -144,7 +144,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void Ferias()
         {
-            Application.Run(new Form_CalculosFerias());
+            Application.Run(new Form_CalculosFerias(dadosParaEnviar));
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

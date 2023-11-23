@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CalculosFerias));
             this.gpbCalculoFerias = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConcluir = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.txtRetorno = new System.Windows.Forms.TextBox();
             this.lblRetorno = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -38,8 +42,6 @@
             this.txtAbonoPecuniario = new System.Windows.Forms.TextBox();
             this.txtDiasVendidos = new System.Windows.Forms.TextBox();
             this.lblDiasVendidos = new System.Windows.Forms.Label();
-            this.rdbNao = new System.Windows.Forms.RadioButton();
-            this.rdbSim = new System.Windows.Forms.RadioButton();
             this.lblPerguntaVendaDasFerias = new System.Windows.Forms.Label();
             this.txtDiasPrimeiroPeriodo = new System.Windows.Forms.TextBox();
             this.txtMesPrimeiroPeriodo = new System.Windows.Forms.TextBox();
@@ -47,9 +49,6 @@
             this.lblDias = new System.Windows.Forms.Label();
             this.lblMes = new System.Windows.Forms.Label();
             this.lblSalarioBase = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAvancar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.gpbCalculoFerias.SuspendLayout();
             this.gpbVendaDasFerias.SuspendLayout();
             this.SuspendLayout();
@@ -58,15 +57,13 @@
             // 
             this.gpbCalculoFerias.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.gpbCalculoFerias.Controls.Add(this.btnCancelar);
-            this.gpbCalculoFerias.Controls.Add(this.btnAvancar);
+            this.gpbCalculoFerias.Controls.Add(this.btnConcluir);
             this.gpbCalculoFerias.Controls.Add(this.btnVoltar);
             this.gpbCalculoFerias.Controls.Add(this.txtRetorno);
             this.gpbCalculoFerias.Controls.Add(this.lblRetorno);
             this.gpbCalculoFerias.Controls.Add(this.btnCalcular);
             this.gpbCalculoFerias.Controls.Add(this.btnLimpar);
             this.gpbCalculoFerias.Controls.Add(this.gpbVendaDasFerias);
-            this.gpbCalculoFerias.Controls.Add(this.rdbNao);
-            this.gpbCalculoFerias.Controls.Add(this.rdbSim);
             this.gpbCalculoFerias.Controls.Add(this.lblPerguntaVendaDasFerias);
             this.gpbCalculoFerias.Controls.Add(this.txtDiasPrimeiroPeriodo);
             this.gpbCalculoFerias.Controls.Add(this.txtMesPrimeiroPeriodo);
@@ -82,11 +79,51 @@
             this.gpbCalculoFerias.TabStop = false;
             this.gpbCalculoFerias.Text = "Calculo das férias";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(627, 250);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 52;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnConcluir
+            // 
+            this.btnConcluir.BackColor = System.Drawing.Color.LightBlue;
+            this.btnConcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnConcluir.Location = new System.Drawing.Point(718, 250);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(75, 30);
+            this.btnConcluir.TabIndex = 51;
+            this.btnConcluir.Text = "Concluir";
+            this.btnConcluir.UseVisualStyleBackColor = false;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnVoltar.Location = new System.Drawing.Point(534, 250);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 30);
+            this.btnVoltar.TabIndex = 50;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // txtRetorno
             // 
+            this.txtRetorno.Enabled = false;
             this.txtRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRetorno.Location = new System.Drawing.Point(152, 182);
             this.txtRetorno.Name = "txtRetorno";
+            this.txtRetorno.ReadOnly = true;
             this.txtRetorno.Size = new System.Drawing.Size(100, 21);
             this.txtRetorno.TabIndex = 21;
             // 
@@ -124,6 +161,7 @@
             this.btnLimpar.TabIndex = 18;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // gpbVendaDasFerias
             // 
@@ -132,7 +170,7 @@
             this.gpbVendaDasFerias.Controls.Add(this.txtAbonoPecuniario);
             this.gpbVendaDasFerias.Controls.Add(this.txtDiasVendidos);
             this.gpbVendaDasFerias.Controls.Add(this.lblDiasVendidos);
-            this.gpbVendaDasFerias.Location = new System.Drawing.Point(290, 69);
+            this.gpbVendaDasFerias.Location = new System.Drawing.Point(290, 47);
             this.gpbVendaDasFerias.Name = "gpbVendaDasFerias";
             this.gpbVendaDasFerias.Size = new System.Drawing.Size(242, 93);
             this.gpbVendaDasFerias.TabIndex = 17;
@@ -142,6 +180,7 @@
             // btnCalcularAbono
             // 
             this.btnCalcularAbono.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCalcularAbono.Enabled = false;
             this.btnCalcularAbono.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCalcularAbono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.btnCalcularAbono.Location = new System.Drawing.Point(10, 51);
@@ -155,17 +194,19 @@
             // txtAbonoPecuniario
             // 
             this.txtAbonoPecuniario.Enabled = false;
-            this.txtAbonoPecuniario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold);
+            this.txtAbonoPecuniario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtAbonoPecuniario.Location = new System.Drawing.Point(129, 56);
             this.txtAbonoPecuniario.Name = "txtAbonoPecuniario";
-            this.txtAbonoPecuniario.Size = new System.Drawing.Size(100, 20);
+            this.txtAbonoPecuniario.Size = new System.Drawing.Size(100, 21);
             this.txtAbonoPecuniario.TabIndex = 3;
             // 
             // txtDiasVendidos
             // 
+            this.txtDiasVendidos.Enabled = false;
             this.txtDiasVendidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.txtDiasVendidos.Location = new System.Drawing.Point(98, 22);
             this.txtDiasVendidos.Name = "txtDiasVendidos";
+            this.txtDiasVendidos.ReadOnly = true;
             this.txtDiasVendidos.Size = new System.Drawing.Size(57, 20);
             this.txtDiasVendidos.TabIndex = 2;
             // 
@@ -179,37 +220,15 @@
             this.lblDiasVendidos.TabIndex = 0;
             this.lblDiasVendidos.Text = "Dias vendidos";
             // 
-            // rdbNao
-            // 
-            this.rdbNao.AutoSize = true;
-            this.rdbNao.Checked = true;
-            this.rdbNao.Location = new System.Drawing.Point(348, 37);
-            this.rdbNao.Name = "rdbNao";
-            this.rdbNao.Size = new System.Drawing.Size(55, 21);
-            this.rdbNao.TabIndex = 16;
-            this.rdbNao.TabStop = true;
-            this.rdbNao.Text = "Não";
-            this.rdbNao.UseVisualStyleBackColor = true;
-            // 
-            // rdbSim
-            // 
-            this.rdbSim.AutoSize = true;
-            this.rdbSim.Location = new System.Drawing.Point(290, 37);
-            this.rdbSim.Name = "rdbSim";
-            this.rdbSim.Size = new System.Drawing.Size(52, 21);
-            this.rdbSim.TabIndex = 15;
-            this.rdbSim.Text = "Sim";
-            this.rdbSim.UseVisualStyleBackColor = true;
-            // 
             // lblPerguntaVendaDasFerias
             // 
             this.lblPerguntaVendaDasFerias.AutoSize = true;
             this.lblPerguntaVendaDasFerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.lblPerguntaVendaDasFerias.Location = new System.Drawing.Point(287, 19);
             this.lblPerguntaVendaDasFerias.Name = "lblPerguntaVendaDasFerias";
-            this.lblPerguntaVendaDasFerias.Size = new System.Drawing.Size(232, 15);
+            this.lblPerguntaVendaDasFerias.Size = new System.Drawing.Size(415, 15);
             this.lblPerguntaVendaDasFerias.TabIndex = 14;
-            this.lblPerguntaVendaDasFerias.Text = "O funcionário relizou a venda das férias ?";
+            this.lblPerguntaVendaDasFerias.Text = "Clique em calcular abono caso o funcionário tenha feito a venda des férias.";
             // 
             // txtDiasPrimeiroPeriodo
             // 
@@ -235,9 +254,11 @@
             // 
             this.txtSalarioBase.BackColor = System.Drawing.Color.LightBlue;
             this.txtSalarioBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSalarioBase.Enabled = false;
             this.txtSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalarioBase.Location = new System.Drawing.Point(88, 34);
             this.txtSalarioBase.Name = "txtSalarioBase";
+            this.txtSalarioBase.ReadOnly = true;
             this.txtSalarioBase.Size = new System.Drawing.Size(100, 21);
             this.txtSalarioBase.TabIndex = 3;
             // 
@@ -271,57 +292,20 @@
             this.lblSalarioBase.TabIndex = 0;
             this.lblSalarioBase.Text = "Salário base";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(627, 250);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelar.TabIndex = 52;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnAvancar
-            // 
-            this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAvancar.Location = new System.Drawing.Point(718, 250);
-            this.btnAvancar.Name = "btnAvancar";
-            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
-            this.btnAvancar.TabIndex = 51;
-            this.btnAvancar.Text = "Avançar";
-            this.btnAvancar.UseVisualStyleBackColor = false;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVoltar.Location = new System.Drawing.Point(534, 250);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 30);
-            this.btnVoltar.TabIndex = 50;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            // 
             // Form_CalculosFerias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(823, 310);
-            this.ControlBox = false;
             this.Controls.Add(this.gpbCalculoFerias);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form_CalculosFerias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_CalculosFerias";
+            this.Text = "Calculo de Férias";
             this.gpbCalculoFerias.ResumeLayout(false);
             this.gpbCalculoFerias.PerformLayout();
             this.gpbVendaDasFerias.ResumeLayout(false);
@@ -342,8 +326,6 @@
         private System.Windows.Forms.TextBox txtAbonoPecuniario;
         private System.Windows.Forms.TextBox txtDiasVendidos;
         private System.Windows.Forms.Label lblDiasVendidos;
-        private System.Windows.Forms.RadioButton rdbNao;
-        private System.Windows.Forms.RadioButton rdbSim;
         private System.Windows.Forms.Label lblPerguntaVendaDasFerias;
         private System.Windows.Forms.TextBox txtRetorno;
         private System.Windows.Forms.Label lblRetorno;
@@ -351,7 +333,7 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCalcularAbono;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAvancar;
+        private System.Windows.Forms.Button btnConcluir;
         private System.Windows.Forms.Button btnVoltar;
     }
 }

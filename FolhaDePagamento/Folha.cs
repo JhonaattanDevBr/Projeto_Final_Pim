@@ -158,7 +158,7 @@ namespace FolhaDePagamento
             double valorDoInss = Convert.ToDouble(vlInss[0]);
 
             string[] vlPensao = pensao.Split(' ');
-            double valorDaPensao = Convert.ToDouble(vlPensao[1]);
+            double valorDaPensao = Convert.ToDouble(vlPensao[0]);
 
             string[] vlDependente = dependente.Split(' ');
             double valorDeDependente = Convert.ToDouble(vlDependente[1]);
@@ -253,8 +253,8 @@ namespace FolhaDePagamento
                         valorDeDescontoDoIrrf = 0;
                         dadosInss.Add(valorDeDescontoDoIrrf.ToString());
                         dadosInss.Add("Calculo realizado sobre o desconto simplificado.");
-                        dadosInss.Add("");
-                        dadosInss.Add("");
+                        dadosInss.Add("A base de calculo se estabelece na primeira faixa.");
+                        dadosInss.Add("Funcionário está isento do desconto de IRRF.");
                     }
                     else if (baseDeCalculoDoIrrfDefinitivo <= 2826.65)
                     {
@@ -262,8 +262,8 @@ namespace FolhaDePagamento
                         valorDeDescontoDoIrrf = (baseDeCalculoDoIrrfDefinitivo * percentual) - parcela2;
                         dadosInss.Add(valorDeDescontoDoIrrf.ToString());
                         dadosInss.Add("Calculo realizado sobre o desconto simplificado.");
-                        dadosInss.Add("");
-                        dadosInss.Add("");
+                        dadosInss.Add("A base de calculo se estabelece na segunda faixa.");
+                        dadosInss.Add("Desconto do IRRF realizado sobre 7,5%");
                     }
                     else if (baseDeCalculoDoIrrfDefinitivo <= 3751.05)
                     {
@@ -271,8 +271,8 @@ namespace FolhaDePagamento
                         valorDeDescontoDoIrrf = (baseDeCalculoDoIrrfDefinitivo * percentual) - parcela3;
                         dadosInss.Add(valorDeDescontoDoIrrf.ToString());
                         dadosInss.Add("Calculo realizado sobre o desconto simplificado.");
-                        dadosInss.Add("");
-                        dadosInss.Add("");
+                        dadosInss.Add("A base de calculo se estabelece na terceira faixa.");
+                        dadosInss.Add("Desconto do IRRF realizado sobre 15,00%");
                     }
                     else if (baseDeCalculoDoIrrfDefinitivo <= 4664.68)
                     {
@@ -280,8 +280,8 @@ namespace FolhaDePagamento
                         valorDeDescontoDoIrrf = (baseDeCalculoDoIrrfDefinitivo * percentual) - parcela4;
                         dadosInss.Add(valorDeDescontoDoIrrf.ToString());
                         dadosInss.Add("Calculo realizado sobre o desconto simplificado.");
-                        dadosInss.Add("");
-                        dadosInss.Add("");
+                        dadosInss.Add("A base de calculo se estabelece na quarta faixa.");
+                        dadosInss.Add("Desconto do IRRF realizado sobre 22,50%");
                     }
                     else
                     {
@@ -289,8 +289,8 @@ namespace FolhaDePagamento
                         valorDeDescontoDoIrrf = (baseDeCalculoDoIrrfDefinitivo * percentual) - parcela5;
                         dadosInss.Add(valorDeDescontoDoIrrf.ToString());
                         dadosInss.Add("Calculo realizado sobre o desconto simplificado.");
-                        dadosInss.Add("");
-                        dadosInss.Add(""); ;
+                        dadosInss.Add("A base de calculo se estabelece acima da quarta faixa.");
+                        dadosInss.Add("Desconto do IRRF realizado sobre 27,50%");
                     }
                 }
                 return dadosInss;
