@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AdicionalNotruno));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.gpbAdicionalNotruno = new System.Windows.Forms.GroupBox();
+            this.txtTotalHorasConvertidas = new System.Windows.Forms.TextBox();
+            this.lblTotalHorasConvertidas = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAvancar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -41,8 +43,6 @@
             this.lblTotalHoras = new System.Windows.Forms.Label();
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lblSalarioBase = new System.Windows.Forms.Label();
-            this.txtTotalHorasConvertidas = new System.Windows.Forms.TextBox();
-            this.lblTotalHorasConvertidas = new System.Windows.Forms.Label();
             this.gpbAdicionalNotruno.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVoltar.Location = new System.Drawing.Point(489, 227);
+            this.btnVoltar.Location = new System.Drawing.Point(574, 313);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 30);
             this.btnVoltar.TabIndex = 0;
@@ -78,17 +78,37 @@
             this.gpbAdicionalNotruno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbAdicionalNotruno.Location = new System.Drawing.Point(12, 12);
             this.gpbAdicionalNotruno.Name = "gpbAdicionalNotruno";
-            this.gpbAdicionalNotruno.Size = new System.Drawing.Size(754, 263);
+            this.gpbAdicionalNotruno.Size = new System.Drawing.Size(839, 349);
             this.gpbAdicionalNotruno.TabIndex = 1;
             this.gpbAdicionalNotruno.TabStop = false;
             this.gpbAdicionalNotruno.Text = "Adicional noturno";
+            // 
+            // txtTotalHorasConvertidas
+            // 
+            this.txtTotalHorasConvertidas.Enabled = false;
+            this.txtTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 98);
+            this.txtTotalHorasConvertidas.Name = "txtTotalHorasConvertidas";
+            this.txtTotalHorasConvertidas.ReadOnly = true;
+            this.txtTotalHorasConvertidas.Size = new System.Drawing.Size(100, 21);
+            this.txtTotalHorasConvertidas.TabIndex = 8;
+            // 
+            // lblTotalHorasConvertidas
+            // 
+            this.lblTotalHorasConvertidas.AutoSize = true;
+            this.lblTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.lblTotalHorasConvertidas.Location = new System.Drawing.Point(6, 99);
+            this.lblTotalHorasConvertidas.Name = "lblTotalHorasConvertidas";
+            this.lblTotalHorasConvertidas.Size = new System.Drawing.Size(150, 15);
+            this.lblTotalHorasConvertidas.TabIndex = 7;
+            this.lblTotalHorasConvertidas.Text = "Total de horas convertidas";
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(582, 227);
+            this.btnCancelar.Location = new System.Drawing.Point(667, 313);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 30);
             this.btnCancelar.TabIndex = 13;
@@ -101,7 +121,7 @@
             this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
             this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAvancar.Location = new System.Drawing.Point(673, 227);
+            this.btnAvancar.Location = new System.Drawing.Point(758, 313);
             this.btnAvancar.Name = "btnAvancar";
             this.btnAvancar.Size = new System.Drawing.Size(75, 30);
             this.btnAvancar.TabIndex = 12;
@@ -198,32 +218,12 @@
             this.lblSalarioBase.TabIndex = 1;
             this.lblSalarioBase.Text = "Salário base";
             // 
-            // txtTotalHorasConvertidas
-            // 
-            this.txtTotalHorasConvertidas.Enabled = false;
-            this.txtTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtTotalHorasConvertidas.Location = new System.Drawing.Point(162, 98);
-            this.txtTotalHorasConvertidas.Name = "txtTotalHorasConvertidas";
-            this.txtTotalHorasConvertidas.ReadOnly = true;
-            this.txtTotalHorasConvertidas.Size = new System.Drawing.Size(100, 21);
-            this.txtTotalHorasConvertidas.TabIndex = 8;
-            // 
-            // lblTotalHorasConvertidas
-            // 
-            this.lblTotalHorasConvertidas.AutoSize = true;
-            this.lblTotalHorasConvertidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.lblTotalHorasConvertidas.Location = new System.Drawing.Point(6, 99);
-            this.lblTotalHorasConvertidas.Name = "lblTotalHorasConvertidas";
-            this.lblTotalHorasConvertidas.Size = new System.Drawing.Size(150, 15);
-            this.lblTotalHorasConvertidas.TabIndex = 7;
-            this.lblTotalHorasConvertidas.Text = "Total de horas convertidas";
-            // 
             // Form_AdicionalNotruno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(778, 287);
+            this.ClientSize = new System.Drawing.Size(863, 373);
             this.Controls.Add(this.gpbAdicionalNotruno);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

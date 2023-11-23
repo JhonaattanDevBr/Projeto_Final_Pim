@@ -55,7 +55,7 @@
             this.gpbAdiantamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbAdiantamento.Location = new System.Drawing.Point(12, 12);
             this.gpbAdiantamento.Name = "gpbAdiantamento";
-            this.gpbAdiantamento.Size = new System.Drawing.Size(754, 263);
+            this.gpbAdiantamento.Size = new System.Drawing.Size(839, 349);
             this.gpbAdiantamento.TabIndex = 0;
             this.gpbAdiantamento.TabStop = false;
             this.gpbAdiantamento.Text = "Adiantamento quinzenal";
@@ -65,7 +65,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(582, 227);
+            this.btnCancelar.Location = new System.Drawing.Point(667, 313);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 30);
             this.btnCancelar.TabIndex = 6;
@@ -88,7 +88,7 @@
             this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
             this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAvancar.Location = new System.Drawing.Point(673, 227);
+            this.btnAvancar.Location = new System.Drawing.Point(758, 313);
             this.btnAvancar.Name = "btnAvancar";
             this.btnAvancar.Size = new System.Drawing.Size(75, 30);
             this.btnAvancar.TabIndex = 1;
@@ -159,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(778, 287);
+            this.ClientSize = new System.Drawing.Size(863, 373);
             this.Controls.Add(this.gpbAdiantamento);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

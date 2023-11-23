@@ -67,7 +67,7 @@ namespace InterfacesDoSistemaDesktop
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             List<string> irrf = new List<string>();
-            try // ta dando algum erro aqui q eu não sei oq é
+            try // ta dando um erro de dentro do metodo de calculo, ja arrumei 4x
             {
                 irrf = _folha.CalcularIrrf(dadosRecebidos[1], dadosRecebidos[19], dadosRecebidos[20], dadosRecebidos[15]);
 

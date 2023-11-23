@@ -106,12 +106,22 @@ namespace InterfacesDoSistemaDesktop
             }
         }
 
+        private void btnAvancar_Click(object sender, EventArgs e)
+        {
+            dadosParaEnviar.Add(txtRetorno.Text.ToString());
+            this.Close();
+            _t1 = new Thread(Fgts);
+            _t1.SetApartmentState(ApartmentState.STA);
+            _t1.Start();
+        }
+
+        private void Fgts()
+        {
+            Application.Run(new Form_Fgts(dadosParaEnviar));
+        }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            // Aqui eu tenho que inserir o mesmo codigo da interface de irrf para o sistema voltar
-            // para a interface de decimo caso esteja no periodo ou ir direto para a interface de IRRF
-            // caso naão esteja no periodo.
-
             DateTime DiaHoraAtual = PegarDiaHoraAtual();
             string mesDecimo = DiaHoraAtual.ToString();
             mesDecimo = mesDecimo.Replace("/", " ");
@@ -140,20 +150,21 @@ namespace InterfacesDoSistemaDesktop
             }
         }
 
-        private DateTime PegarDiaHoraAtual()
-        {
-            DateTime dataHoraAtual = DateTime.Now;
-            return dataHoraAtual;
-        }
-
         private void Irrf()
         {
             Application.Run(new Form_Irrf(dadosRecebidos));
         }
 
+
         private void Decimo()
         {
             Application.Run(new Form_DecimoTerceiro(dadosRecebidos));
+        }
+
+        private DateTime PegarDiaHoraAtual()
+        {
+            DateTime dataHoraAtual = DateTime.Now;
+            return dataHoraAtual;
         }
     }
 }

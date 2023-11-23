@@ -18,6 +18,7 @@ namespace InterfacesDoSistemaDesktop
     {
         Funcionarios _funcionarios = new Funcionarios();
         crud_Funcionarios _crudFuncionarios = new crud_Funcionarios();
+        Folha _folha = new Folha();
 
         Thread _t1;
 
@@ -41,7 +42,6 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Folha _folha = new Folha();
             if (!string.IsNullOrEmpty(txtSalarioBase.Text))
             {
                 double retorno = _folha.CalcularAdiantamentoQuinzenal(Convert.ToDouble(txtSalarioBase.Text));

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,8 @@ namespace InterfacesDoSistemaDesktop.Intercafes_Folha
     {
         Crud_FolhaDePagamento _crud_FolhaDePagamento = new Crud_FolhaDePagamento();
         Funcionarios _funcionarios = new Funcionarios();
+
+        Thread _t1;
 
         public string IdEmpresa { get; set; }
         public string IdFuncionario { get; set; }
@@ -102,12 +105,22 @@ namespace InterfacesDoSistemaDesktop.Intercafes_Folha
                 DialogResult agendar = MessageBox.Show("Deseja gerar a folha de pagamento do funcionário? ", "ATENÇÂO!", MessageBoxButtons.YesNo);
                 if (agendar == DialogResult.Yes)
                 {
+                    this.Close();
+                    _t1 = new Thread(AdiantamentoQuinzenal);
+                    _t1.SetApartmentState(ApartmentState.STA);
+                    _t1.Start();
+                    /*
                     Form_AdiantamentoQuinzenal _adiantamentoQuinzenal = new Form_AdiantamentoQuinzenal(IdFuncionario);
                     _adiantamentoQuinzenal.ShowDialog();
-                    AtualizarTabela();
+                    AtualizarTabela();*/
                 }
             }
-            IdFuncionario = "";
+            //IdFuncionario = "";
+        }
+
+        private void AdiantamentoQuinzenal()
+        {
+            Application.Run(new Form_AdiantamentoQuinzenal(IdFuncionario));
         }
     }
 }

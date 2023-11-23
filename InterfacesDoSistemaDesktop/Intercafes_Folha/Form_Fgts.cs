@@ -1,4 +1,5 @@
 ﻿using FolhaDePagamento;
+using InterfacesDoSistemaDesktop.Intercafes_Folha;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,14 +15,42 @@ namespace InterfacesDoSistemaDesktop
 {
     public partial class Form_Fgts : Form
     {
-        public Form_Fgts()
+        Folha _folha = new Folha();
+
+        List<string> dadosRecebidos = new List<string>();
+        List<string> dadosParaEnviar = new List<string>();
+        
+        Thread _t1, _t2;
+
+        public Form_Fgts(List<string> dadosEnviados)
         {
             InitializeComponent();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
+            dadosRecebidos = dadosEnviados;
+            dadosParaEnviar.Add(dadosRecebidos[0]); // Id
+            dadosParaEnviar.Add(dadosRecebidos[1]); // Salario
+            dadosParaEnviar.Add(dadosRecebidos[2]); // Adicional
+            dadosParaEnviar.Add(dadosRecebidos[3]); // Horas Adc. Not
+            dadosParaEnviar.Add(dadosRecebidos[4]); // Adc. Not
+            dadosParaEnviar.Add(dadosRecebidos[5]); // Periculosidade/Insalubridade
+            dadosParaEnviar.Add(dadosRecebidos[6]); // Horas extras
+            dadosParaEnviar.Add(dadosRecebidos[7]); // Vale transporte
+            dadosParaEnviar.Add(dadosRecebidos[8]); // Vale alimentação/refeição
+            dadosParaEnviar.Add(dadosRecebidos[9]); // id Convenio medico
+            dadosParaEnviar.Add(dadosRecebidos[10]); // nome convenio medico
+            dadosParaEnviar.Add(dadosRecebidos[11]); // valor convenio medico
+            dadosParaEnviar.Add(dadosRecebidos[12]); // Id convenio odonto
+            dadosParaEnviar.Add(dadosRecebidos[13]); // nome convenio odonto
+            dadosParaEnviar.Add(dadosRecebidos[14]); // valor convenio odonto
+            dadosParaEnviar.Add(dadosRecebidos[15]); // valor dependentes
+            dadosParaEnviar.Add(dadosRecebidos[16]); // Jornada
+            dadosParaEnviar.Add(dadosRecebidos[17]); // Horas em Atraso
+            dadosParaEnviar.Add(dadosRecebidos[18]); // valor de atraso
+            dadosParaEnviar.Add(dadosRecebidos[19]); // valor do INSS
+            dadosParaEnviar.Add(dadosRecebidos[20]); // valor da pensao
+            dadosParaEnviar.Add(dadosRecebidos[21]); // valor da IRRF
+            dadosParaEnviar.Add(dadosRecebidos[22]); // decimo terceiro
+            dadosParaEnviar.Add(dadosRecebidos[23]); // Ferias
+            txtSalarioBase.Text = dadosRecebidos[1];
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -30,32 +60,39 @@ namespace InterfacesDoSistemaDesktop
             txtRetorno.Text = retorno.ToString();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnConcluir_Click(object sender, EventArgs e)
         {
-            txtSalarioBase.Clear();
-            txtRetorno.Clear();
-            txtSalarioBase.Focus();
-        }
-
-        private void txtSalarioBase_TextChanged(object sender, EventArgs e)
-        {
-            string validacao = txtSalarioBase.Text.Trim();
-            if (string.IsNullOrEmpty(validacao))
+            if (!string.IsNullOrEmpty(txtRetorno.Text))
             {
-                txtSalarioBase.Focus();
-                btnCalcular.Enabled = false;
-                return;
+                MessageBox.Show("Folha de pagamento computada.", "Operação concluída!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Valor do FGTS");
+                this.Close();
+                _t1 = new Thread(SelecionarFuncionaParaGerarFolha);
+                _t1.SetApartmentState(ApartmentState.STA);
+                _t1.Start();
             }
             else
             {
-                btnCalcular.Enabled = true;
+                MessageBox.Show("O calculo do FGTS deve computado, clicque em calcular.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (!int.TryParse(validacao, out int valor))
-            {
-                MessageBox.Show("Este campo não aceita letras ou caracteres.", "ATENÇÃO");
-                txtSalarioBase.Focus();
-                return;
-            }
+        }
+
+        private void SelecionarFuncionaParaGerarFolha()
+        {
+            Application.Run(new Form_SelFuncionarioGerarFolha());
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _t1 = new Thread(Ferias);
+            _t1.SetApartmentState(ApartmentState.STA);
+            _t1.Start();
+        }
+
+        private void Ferias()
+        {
+            Application.Run(new Form_CalculosFerias(dadosRecebidos));
         }
     }
 }

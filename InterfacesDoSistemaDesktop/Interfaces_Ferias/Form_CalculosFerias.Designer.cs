@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CalculosFerias));
             this.gpbCalculoFerias = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnConcluir = new System.Windows.Forms.Button();
+            this.btnAvancar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.txtRetorno = new System.Windows.Forms.TextBox();
             this.lblRetorno = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             // 
             this.gpbCalculoFerias.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.gpbCalculoFerias.Controls.Add(this.btnCancelar);
-            this.gpbCalculoFerias.Controls.Add(this.btnConcluir);
+            this.gpbCalculoFerias.Controls.Add(this.btnAvancar);
             this.gpbCalculoFerias.Controls.Add(this.btnVoltar);
             this.gpbCalculoFerias.Controls.Add(this.txtRetorno);
             this.gpbCalculoFerias.Controls.Add(this.lblRetorno);
@@ -74,7 +74,7 @@
             this.gpbCalculoFerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gpbCalculoFerias.Location = new System.Drawing.Point(12, 12);
             this.gpbCalculoFerias.Name = "gpbCalculoFerias";
-            this.gpbCalculoFerias.Size = new System.Drawing.Size(799, 286);
+            this.gpbCalculoFerias.Size = new System.Drawing.Size(839, 349);
             this.gpbCalculoFerias.TabIndex = 1;
             this.gpbCalculoFerias.TabStop = false;
             this.gpbCalculoFerias.Text = "Calculo das férias";
@@ -84,7 +84,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(627, 250);
+            this.btnCancelar.Location = new System.Drawing.Point(667, 313);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 30);
             this.btnCancelar.TabIndex = 52;
@@ -92,24 +92,25 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnConcluir
+            // btnAvancar
             // 
-            this.btnConcluir.BackColor = System.Drawing.Color.LightBlue;
-            this.btnConcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnConcluir.Location = new System.Drawing.Point(718, 250);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(75, 30);
-            this.btnConcluir.TabIndex = 51;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.UseVisualStyleBackColor = false;
+            this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAvancar.Location = new System.Drawing.Point(758, 313);
+            this.btnAvancar.Name = "btnAvancar";
+            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
+            this.btnAvancar.TabIndex = 51;
+            this.btnAvancar.Text = "Avançar";
+            this.btnAvancar.UseVisualStyleBackColor = false;
+            this.btnAvancar.Click += new System.EventHandler(this.btnAvancar_Click);
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVoltar.Location = new System.Drawing.Point(534, 250);
+            this.btnVoltar.Location = new System.Drawing.Point(574, 313);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 30);
             this.btnVoltar.TabIndex = 50;
@@ -297,7 +298,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(823, 310);
+            this.ClientSize = new System.Drawing.Size(863, 373);
             this.Controls.Add(this.gpbCalculoFerias);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -333,7 +334,7 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCalcularAbono;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnConcluir;
+        private System.Windows.Forms.Button btnAvancar;
         private System.Windows.Forms.Button btnVoltar;
     }
 }
