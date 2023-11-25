@@ -161,7 +161,7 @@ namespace FolhaDePagamento
             double valorDaPensao = Convert.ToDouble(vlPensao[0]);
 
             string[] vlDependente = dependente.Split(' ');
-            double valorDeDependente = Convert.ToDouble(vlDependente[1]);
+            double valorDeDependente = Convert.ToDouble(vlDependente[0]);
 
             double salarioBase = Convert.ToDouble(salario);
             string valorDoIrrf;

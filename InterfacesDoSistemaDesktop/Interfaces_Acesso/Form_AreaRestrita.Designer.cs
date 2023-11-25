@@ -42,11 +42,7 @@
             this.consultarMeusConvêniosOdontológicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarMeusFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarTabelaDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarReciboDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarListaDePagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarFolhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -173,46 +169,15 @@
             // 
             // fériasToolStripMenuItem
             // 
-            this.fériasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarTabelaDeFériasToolStripMenuItem,
-            this.gerarReciboDeFériasToolStripMenuItem});
             this.fériasToolStripMenuItem.Name = "fériasToolStripMenuItem";
             this.fériasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.fériasToolStripMenuItem.Text = "Férias";
             // 
-            // consultarTabelaDeFériasToolStripMenuItem
-            // 
-            this.consultarTabelaDeFériasToolStripMenuItem.Name = "consultarTabelaDeFériasToolStripMenuItem";
-            this.consultarTabelaDeFériasToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.consultarTabelaDeFériasToolStripMenuItem.Text = "Consultar Tabela de Férias";
-            this.consultarTabelaDeFériasToolStripMenuItem.Click += new System.EventHandler(this.consultarTabelaDeFériasToolStripMenuItem_Click);
-            // 
-            // gerarReciboDeFériasToolStripMenuItem
-            // 
-            this.gerarReciboDeFériasToolStripMenuItem.Name = "gerarReciboDeFériasToolStripMenuItem";
-            this.gerarReciboDeFériasToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.gerarReciboDeFériasToolStripMenuItem.Text = "Gerar Recibo de Férias";
-            // 
             // folhaDePagamentoToolStripMenuItem
             // 
-            this.folhaDePagamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarListaDePagamentosToolStripMenuItem,
-            this.gerarFolhaDePagamentoToolStripMenuItem});
             this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
             this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.folhaDePagamentoToolStripMenuItem.Text = "Folha de Pagamento";
-            // 
-            // consultarListaDePagamentosToolStripMenuItem
-            // 
-            this.consultarListaDePagamentosToolStripMenuItem.Name = "consultarListaDePagamentosToolStripMenuItem";
-            this.consultarListaDePagamentosToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.consultarListaDePagamentosToolStripMenuItem.Text = "Consultar Lista de Pagamentos";
-            // 
-            // gerarFolhaDePagamentoToolStripMenuItem
-            // 
-            this.gerarFolhaDePagamentoToolStripMenuItem.Name = "gerarFolhaDePagamentoToolStripMenuItem";
-            this.gerarFolhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.gerarFolhaDePagamentoToolStripMenuItem.Text = "Gerar Folha de Pagamento";
             // 
             // ajudaToolStripMenuItem
             // 
@@ -488,10 +453,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultarMeusConvêniosMédicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarMeusConvêniosOdontológicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarMeusFuncionáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarTabelaDeFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gerarReciboDeFériasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarListaDePagamentosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gerarFolhaDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private System.Windows.Forms.Label lblBoasVindas;

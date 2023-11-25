@@ -684,5 +684,39 @@ namespace BaseDeDados
                 throw;
             }
         }
+
+        public bool ArmazenarFolhaDePagamento(List<string> dadosFolha)
+        {
+            string caminho = _servidores.servidor;
+            SqlConnection conexaoDb = new SqlConnection(caminho); // vou precisar terminar essde código
+
+            try
+            {
+                conexaoDb.Open();
+
+                string salarioBase, vlTransporte, vlAlimentacao, AdiQuinzenal, hTrabalhadas, hExtras, adcionalNot, periculosidade, insalubridade, convMedico, convOdonto, dependentes,
+                       pensao, atrasos, faltas;
+
+                string querry = "INSERT INTO Folha_pagamento (Salario_base, Vl_transporte, Vl_alimentacao, Adiantamento, Horas_trabalhadas, Horas_extras, Adicional_not, " +
+                                "Periculosidade, Insalubridade, Id_planos_saude, \r\nId_planos_odontologicos, Dependentes, Pensao, Atrasos, Faltas, Inss, Irrf, " +
+                                "Id_Decimo_terceiro, Fgts, Vencimentos, Desconto, Salario_liquido, Id_funcionarios, Id_empresas) " +
+                                "VALUES ()";
+                SqlCommand cmd = new SqlCommand(querry, conexaoDb);
+
+
+
+                var _pmtId = cmd.CreateParameter();
+                _pmtId.ParameterName = "@idFuncionario";
+                _pmtId.DbType = DbType.Int32;
+                //_pmtId.Value = idFuncionario;
+                cmd.Parameters.Add(_pmtId);
+
+                return true; // coloquei só pra parar de dar erro
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

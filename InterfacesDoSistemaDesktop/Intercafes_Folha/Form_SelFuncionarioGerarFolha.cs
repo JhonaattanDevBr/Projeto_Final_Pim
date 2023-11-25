@@ -109,10 +109,6 @@ namespace InterfacesDoSistemaDesktop.Intercafes_Folha
                     _t1 = new Thread(AdiantamentoQuinzenal);
                     _t1.SetApartmentState(ApartmentState.STA);
                     _t1.Start();
-                    /*
-                    Form_AdiantamentoQuinzenal _adiantamentoQuinzenal = new Form_AdiantamentoQuinzenal(IdFuncionario);
-                    _adiantamentoQuinzenal.ShowDialog();
-                    AtualizarTabela();*/
                 }
             }
             //IdFuncionario = "";

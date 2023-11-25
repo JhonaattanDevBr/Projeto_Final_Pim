@@ -108,7 +108,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
-            dadosParaEnviar.Add(txtRetorno.Text.ToString());
+            dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Férias");
             this.Close();
             _t1 = new Thread(Fgts);
             _t1.SetApartmentState(ApartmentState.STA);

@@ -37,7 +37,7 @@ namespace BeneficioDasFerias
             double pensao = Convert.ToDouble(vtPensao[0]);
 
             string[] vtDependente = dependenteFunc.Split(' ');
-            double dependente = Convert.ToDouble(vtDependente[1]);
+            double dependente = Convert.ToDouble(vtDependente[0]);
 
             List<string> dadosInss = new List<string>();
             List<string> dadosIrrf = new List<string>();

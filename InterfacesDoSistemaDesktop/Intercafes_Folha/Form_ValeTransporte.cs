@@ -89,7 +89,7 @@ namespace InterfacesDoSistemaDesktop
             }
             else
             {
-                dadosParaEnviar.Add(txtRetorno.Text);
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + "Vale transporte");
             }
             this.Close();
             _t1 = new Thread(ValeRefeicaoAlimentacao);

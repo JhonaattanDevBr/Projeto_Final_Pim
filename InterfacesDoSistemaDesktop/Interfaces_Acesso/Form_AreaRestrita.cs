@@ -12,6 +12,7 @@ using System.Threading;
 using InterfacesDoSistemaDesktop.Interfaces_Formularios;
 using InterfacesDoSistemaDesktop.Interfaces_Views_Delete;
 using InterfacesDoSistemaDesktop.Interfaces_Ferias;
+using InterfacesDoSistemaDesktop.Intercafes_Folha;
 
 namespace InterfacesDoSistemaDesktop
 {
@@ -49,22 +50,14 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnFerias_Click(object sender, EventArgs e)
         {
-            btnBotaoUm.Visible = true;
-            btnBotaoUm.Text = "Consultar Tabela de Férias";
-            btnBotaoDois.Visible = true;
-            btnBotaoDois.Text = "Gerar Recibo de Férias";
-            btnBotaoTres.Visible = false;
-            btnBotaoQuatro.Visible = false;
+            Form_ConsultarTabelaFerias _consultarTabelaFerias = new Form_ConsultarTabelaFerias();
+            _consultarTabelaFerias.ShowDialog();
         }
 
         private void btnFolhaDePagamento_Click(object sender, EventArgs e)
         {
-            btnBotaoUm.Visible = true;
-            btnBotaoUm.Text = "Consultar Lista de Pagamentos";
-            btnBotaoDois.Visible = true;
-            btnBotaoDois.Text = "Gerar Folha de Pagamento";
-            btnBotaoTres.Visible = false;
-            btnBotaoQuatro.Visible = false;
+            Form_SelFuncionarioGerarFolha _SelFuncionarioGerarFolha = new Form_SelFuncionarioGerarFolha();
+            _SelFuncionarioGerarFolha.ShowDialog();
         }
 
         private void btnAjuda_Click(object sender, EventArgs e)
@@ -105,15 +98,6 @@ namespace InterfacesDoSistemaDesktop
                     _viewDeleteEmpresas.ShowDialog();
                     break;
 
-                case "Consultar Tabela de Férias":
-                    Form_ConsultarTabelaFerias _consultarTabelaFerias = new Form_ConsultarTabelaFerias();
-                    _consultarTabelaFerias.ShowDialog();
-                    break;
-
-                case "Consultar Lista de Pagamentos":
-                    MessageBox.Show("Ainda não fiz essa interface", "Atenção");
-                    break;
-
                 default: break;
             }
         }
@@ -130,14 +114,6 @@ namespace InterfacesDoSistemaDesktop
                 case "Consultar Meus Convênios Médicos":
                     Form_ViewDeleteConvenioMedico _viewDeleteConvenioMedico = new Form_ViewDeleteConvenioMedico();
                     _viewDeleteConvenioMedico.ShowDialog();
-                    break;
-
-                case "Gerar Recibo de Férias":
-                    MessageBox.Show("Ainda não fiz essa interface", "Atenção");
-                    break;
-
-                case "Gerar Folha de Pagamento":
-                    MessageBox.Show("Ainda não fiz essa interface", "Atenção");
                     break;
 
                 default: break;
@@ -234,10 +210,6 @@ namespace InterfacesDoSistemaDesktop
             _form_Ajuda.ShowDialog();
         }
 
-        private void consultarTabelaDeFériasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form_ConsultarTabelaFerias _consultarTabelaFerias = new Form_ConsultarTabelaFerias();
-            _consultarTabelaFerias.ShowDialog();
-        }
+       
     }
 }
