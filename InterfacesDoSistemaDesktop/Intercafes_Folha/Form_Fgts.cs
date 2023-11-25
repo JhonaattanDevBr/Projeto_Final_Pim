@@ -43,7 +43,6 @@ namespace InterfacesDoSistemaDesktop
             dadosParaEnviar.Add(dadosRecebidos[14]); // valor convenio odonto
             dadosParaEnviar.Add(dadosRecebidos[15]); // valor dependentes
             dadosParaEnviar.Add(dadosRecebidos[16]); // Jornada
-            dadosParaEnviar.Add(dadosRecebidos[17]); // Horas em Atraso
             dadosParaEnviar.Add(dadosRecebidos[18]); // valor de atraso
             dadosParaEnviar.Add(dadosRecebidos[19]); // valor do INSS
             dadosParaEnviar.Add(dadosRecebidos[20]); // valor da pensao
@@ -60,23 +59,6 @@ namespace InterfacesDoSistemaDesktop
             txtRetorno.Text = retorno.ToString();
         }
 
-        private void btnConcluir_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtRetorno.Text))
-            {
-                MessageBox.Show("Folha de pagamento computada.", "Operação concluída!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Valor do FGTS");
-                this.Close();
-                _t1 = new Thread(SelecionarFuncionaParaGerarFolha);
-                _t1.SetApartmentState(ApartmentState.STA);
-                _t1.Start();
-            }
-            else
-            {
-                MessageBox.Show("O calculo do FGTS deve computado, clicque em calcular.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void SelecionarFuncionaParaGerarFolha()
         {
             Application.Run(new Form_SelFuncionarioGerarFolha());
@@ -88,6 +70,45 @@ namespace InterfacesDoSistemaDesktop
             _t1 = new Thread(Ferias);
             _t1.SetApartmentState(ApartmentState.STA);
             _t1.Start();
+        }
+
+        private void btnConcluir_Click(object sender, EventArgs e)
+        {
+            List<string> valoresNecesarios = new List<string>();
+            List<string> valoresDaFolha = new List<string>();
+
+            valoresNecesarios.Add(dadosRecebidos[2]); // Adicional
+            valoresNecesarios.Add(dadosRecebidos[4]); // Adc. Not
+            valoresNecesarios.Add(dadosRecebidos[5]); // Periculosidade/Insalubridade
+            valoresNecesarios.Add(dadosRecebidos[6]); // Horas extras
+            valoresNecesarios.Add(dadosRecebidos[7]); // Vale transporte
+            valoresNecesarios.Add(dadosRecebidos[8]); // Vale alimentação/refeição
+            valoresNecesarios.Add(dadosRecebidos[10]); // nome convenio medico
+            valoresNecesarios.Add(dadosRecebidos[11]); // valor convenio medico
+            valoresNecesarios.Add(dadosRecebidos[14]); // valor convenio odonto
+            valoresNecesarios.Add(dadosRecebidos[15]); // valor dependentes
+            valoresNecesarios.Add(dadosRecebidos[16]); // Jornada
+            valoresNecesarios.Add(dadosRecebidos[18]); // valor de atraso
+            valoresNecesarios.Add(dadosRecebidos[19]); // valor do INSS
+            valoresNecesarios.Add(dadosRecebidos[20]); // valor da pensao
+            valoresNecesarios.Add(dadosRecebidos[21]); // valor da IRRF
+            valoresNecesarios.Add(dadosRecebidos[22]); // decimo terceiro
+            valoresNecesarios.Add(dadosRecebidos[23]); // Ferias
+            valoresNecesarios.Add(txtRetorno.Text.ToString() + " FGTS");
+
+            //for(int i = 0; i <= 22; i++) { }
+
+            valoresDaFolha.Add(dadosRecebidos[1]);
+
+            foreach (string valores in valoresNecesarios)
+            {
+                string[] vtValores = valores.Split(' ');
+                string valor = vtValores[0];
+                valoresDaFolha.Add(valor);
+                //i++;
+
+            }
+            MessageBox.Show("Folha de pagamento computada.", "Operação concluida com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Ferias()

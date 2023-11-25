@@ -84,7 +84,7 @@ namespace InterfacesDoSistemaDesktop
             }
             else
             {
-                dadosParaEnviar.Add(" 0 Não possui pensão");
+                dadosParaEnviar.Add("0 Não possui pensão");
             }
             this.Close();
             _t1 = new Thread(Irrf);

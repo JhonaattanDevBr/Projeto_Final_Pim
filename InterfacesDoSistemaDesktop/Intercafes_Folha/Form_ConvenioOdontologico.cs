@@ -86,8 +86,8 @@ namespace InterfacesDoSistemaDesktop
             }
             else
             {
-                dadosParaEnviar.Add("Não Possui Convênio odontológico");
-                dadosParaEnviar.Add("Não possui desconto de Convênio odontológico");
+                dadosParaEnviar.Add("0 Não Possui Convênio odontológico");
+                dadosParaEnviar.Add("0 Não possui desconto de Convênio odontológico");
             }
             this.Close();
             _t1 = new Thread(Dependentes);

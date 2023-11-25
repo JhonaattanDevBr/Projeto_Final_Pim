@@ -79,7 +79,7 @@ namespace InterfacesDoSistemaDesktop
             }
             else
             {
-                dadosParaEnviar.Add(" 0 Não possui dependentes");
+                dadosParaEnviar.Add("0 Não possui dependentes");
             }
             this.Close();
             _t1 = new Thread(Atrasos);

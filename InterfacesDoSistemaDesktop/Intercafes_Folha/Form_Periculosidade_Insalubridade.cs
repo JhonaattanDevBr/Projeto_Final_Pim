@@ -147,7 +147,7 @@ namespace InterfacesDoSistemaDesktop
         {
             if (string.IsNullOrEmpty(txtRetornoInsalubridade.Text) && string.IsNullOrEmpty(txtRetornoPericulosidade.Text))
             {
-                dadosParaEnviar.Add("Não possui insalubridade/periculosidade");
+                dadosParaEnviar.Add("0 Não possui insalubridade/periculosidade");
             }
             else if(txtRetornoInsalubridade.Text != "")
             {

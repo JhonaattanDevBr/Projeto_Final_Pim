@@ -116,7 +116,7 @@ namespace InterfacesDoSistemaDesktop
         {
             if (string.IsNullOrEmpty(txtRetorno.Text))
             {
-                dadosParaEnviar.Add("Não possui horas extras");
+                dadosParaEnviar.Add("0 Não possui horas extras");
             }
             else
             {

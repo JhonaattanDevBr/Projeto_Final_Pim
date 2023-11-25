@@ -133,8 +133,8 @@ namespace InterfacesDoSistemaDesktop
         {
             if (string.IsNullOrEmpty(txtRetorno.Text))
             {
-                dadosParaEnviar.Add("Não possui horas de noturno");
-                dadosParaEnviar.Add("Não possui adicional noturno");
+                dadosParaEnviar.Add("0 Não possui horas de noturno");
+                dadosParaEnviar.Add("0 Não possui adicional noturno");
             }
             else
             {

@@ -113,11 +113,11 @@ namespace InterfacesDoSistemaDesktop
         {
             if (!string.IsNullOrEmpty(txtRetorno.Text))
             {
-                dadosParaEnviar.Add(txtRetorno.Text);
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Vale alimentação");
             }
             else
             {
-                dadosParaEnviar.Add("Não possui vale alimentação");
+                dadosParaEnviar.Add("0 Não possui vale alimentação");
             }
             this.Close();
             _t1 = new Thread(ConvenioMedico);

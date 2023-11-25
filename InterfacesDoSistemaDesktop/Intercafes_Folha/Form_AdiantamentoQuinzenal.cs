@@ -76,7 +76,7 @@ namespace InterfacesDoSistemaDesktop
         {
             if (string.IsNullOrEmpty(txtRetorno.Text))
             {
-                dados.Add("Não possui adiantamento");
+                dados.Add("0 Não possui adiantamento");
             }
             else
             {

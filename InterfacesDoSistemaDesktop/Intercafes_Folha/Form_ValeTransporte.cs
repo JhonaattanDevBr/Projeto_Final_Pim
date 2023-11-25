@@ -85,11 +85,11 @@ namespace InterfacesDoSistemaDesktop
         {
             if (string.IsNullOrEmpty(txtRetorno.Text))
             {
-                dadosParaEnviar.Add("Não Possui vale transporte");
+                dadosParaEnviar.Add("0 Não Possui vale transporte");
             }
             else
             {
-                dadosParaEnviar.Add(txtRetorno.Text.ToString() + "Vale transporte");
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Vale transporte");
             }
             this.Close();
             _t1 = new Thread(ValeRefeicaoAlimentacao);

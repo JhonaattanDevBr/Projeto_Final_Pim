@@ -112,7 +112,7 @@ namespace InterfacesDoSistemaDesktop
 
                 if (mesAtual != "11")
                 {
-                    dadosParaEnviar.Add("Não possui décimo terceiro");
+                    dadosParaEnviar.Add("0 Não possui décimo terceiro");
                     MessageBox.Show("O décimo terceiro não será disponibilizado como benefício de calculo." +
                                     "\n\nNOTA: O décimo terceiro é pago apenas nos mêses 11/NOVEMBRO e 12/DEZEMBRO, " +
                                     "exceto esses dois períodos, ele só é pago na existência de férias, " +

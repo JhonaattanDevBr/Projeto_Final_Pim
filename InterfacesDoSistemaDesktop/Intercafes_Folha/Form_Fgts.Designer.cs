@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Fgts));
             this.gpbFgts = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConcluir = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.txtRetorno = new System.Windows.Forms.TextBox();
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lblRetorno = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSalarioBase = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnConcluir = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.gpbFgts.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,44 @@
             this.gpbFgts.TabIndex = 1;
             this.gpbFgts.TabStop = false;
             this.gpbFgts.Text = "FGTS";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(623, 313);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 55;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnConcluir
+            // 
+            this.btnConcluir.BackColor = System.Drawing.Color.LightBlue;
+            this.btnConcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnConcluir.Location = new System.Drawing.Point(714, 313);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(119, 30);
+            this.btnConcluir.TabIndex = 54;
+            this.btnConcluir.Text = "Computar Folha";
+            this.btnConcluir.UseVisualStyleBackColor = false;
+            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnVoltar.Location = new System.Drawing.Point(530, 313);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 30);
+            this.btnVoltar.TabIndex = 53;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // txtRetorno
             // 
@@ -114,44 +152,6 @@
             this.lblSalarioBase.Size = new System.Drawing.Size(76, 15);
             this.lblSalarioBase.TabIndex = 0;
             this.lblSalarioBase.Text = "Salário base";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(667, 313);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelar.TabIndex = 55;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnConcluir
-            // 
-            this.btnConcluir.BackColor = System.Drawing.Color.LightBlue;
-            this.btnConcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnConcluir.Location = new System.Drawing.Point(758, 313);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(75, 30);
-            this.btnConcluir.TabIndex = 54;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.UseVisualStyleBackColor = false;
-            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVoltar.Location = new System.Drawing.Point(574, 313);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 30);
-            this.btnVoltar.TabIndex = 53;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // Form_Fgts
             // 

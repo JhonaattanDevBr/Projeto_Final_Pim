@@ -114,8 +114,8 @@ namespace InterfacesDoSistemaDesktop
             }
             else
             {
-                dadosParaEnviar.Add(" Não possui Horas Em Atraso");
-                dadosParaEnviar.Add(" Não possui Valor do atraso");
+                dadosParaEnviar.Add("0 Não possui Horas Em Atraso");
+                dadosParaEnviar.Add("0 Não possui Valor do atraso");
             }
             this.Close();
             _t1 = new Thread(Inss);

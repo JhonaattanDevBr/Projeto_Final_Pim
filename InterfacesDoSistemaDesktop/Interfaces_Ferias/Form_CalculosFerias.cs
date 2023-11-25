@@ -73,13 +73,13 @@ namespace InterfacesDoSistemaDesktop
             {
                 bool verdadeiro = true;
                 double retorno = Obj_ferias.FormulaCalculoDeFerias(Convert.ToDouble(txtSalarioBase.Text), verdadeiro, Convert.ToInt32(txtDiasVendidos.Text), Convert.ToInt32(txtDiasPrimeiroPeriodo.Text), dadosRecebidos[19], dadosRecebidos[21], dadosRecebidos[20], dadosRecebidos[15]);
-                txtRetorno.Text = $"R$ {retorno:f2}".ToString();
+                txtRetorno.Text = retorno.ToString();
             }
             else
             {
                 bool falso = false;
                 double retorno = Obj_ferias.FormulaCalculoDeFerias(Convert.ToDouble(txtSalarioBase.Text), falso, Convert.ToInt32(txtDiasVendidos.Text), Convert.ToInt32(txtDiasPrimeiroPeriodo.Text), dadosRecebidos[19], dadosRecebidos[21], dadosRecebidos[20], dadosRecebidos[15]);
-                txtRetorno.Text = $"R$ {retorno:f2}".ToString();
+                txtRetorno.Text = retorno.ToString();
             }
             
         }
