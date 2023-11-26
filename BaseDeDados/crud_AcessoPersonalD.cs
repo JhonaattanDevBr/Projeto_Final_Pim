@@ -96,9 +96,14 @@ namespace BaseDeDados
 
                 SqlDataReader _leitor = cmd.ExecuteReader();
 
+                string senha = _personal.Senha;
                 while (_leitor.Read())
                 {
-                    _personal.Senha = _leitor.GetString(0);
+                    if (senha == _leitor.GetString(0))
+                    {
+                        _personal.Senha = _leitor.GetString(0);
+                    }
+                    
                 }
 
                 conexaoDb.Close();
@@ -125,9 +130,14 @@ namespace BaseDeDados
 
                 SqlDataReader _leitor = cmd.ExecuteReader();
 
+                string login = _personal.Usuario;
                 while (_leitor.Read())
                 {
-                    _personal.Usuario = _leitor.GetString(0);
+                    if(login == _leitor.GetString(0))
+                    {
+                        _personal.Usuario = _leitor.GetString(0);
+                    }
+                    
                 }
 
                 conexaoDb.Close();
@@ -140,7 +150,7 @@ namespace BaseDeDados
             }
         }
 
-        public string ColetarNomeFuncionario(Personal _personal)
+        public string ColetarNomeFuncionario(Personal _personal, string nomeUsuario)
         {
             string caminho = _servidores.servidor;
             SqlConnection conexaoDb = new SqlConnection(caminho);
@@ -148,9 +158,15 @@ namespace BaseDeDados
             try
             {
                 conexaoDb.Open();
-                string query = "SELECT Nome FROM Acesso_personalD";
+                string query = "SELECT Nome FROM Acesso_personalD WHERE Usuario = @usuario";
 
                 SqlCommand cmd = new SqlCommand(query, conexaoDb);
+
+                var _pmtUsuario = cmd.CreateParameter();
+                _pmtUsuario.ParameterName = "@usuario";
+                _pmtUsuario.DbType = DbType.String;
+                _pmtUsuario.Value = nomeUsuario;
+                cmd.Parameters.Add(_pmtUsuario);
 
                 SqlDataReader _leitor = cmd.ExecuteReader();
 

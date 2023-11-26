@@ -49,7 +49,7 @@ namespace InterfacesDoSistemaDesktop.Interfaces_Acesso
             string[] informacoesLogin = new string[3];
             informacoesLogin[0] = _crud_AcessoPersonalD.ColetarLogin(_Personal);
             informacoesLogin[1] = _crud_AcessoPersonalD.ColetarSenha(_Personal);
-            informacoesLogin[2] = _crud_AcessoPersonalD.ColetarNomeFuncionario(_Personal);
+            informacoesLogin[2] = _crud_AcessoPersonalD.ColetarNomeFuncionario(_Personal, informacoesLogin[0]);
             _Personal.Usuario = "";
             _Personal.Senha = "";
 
