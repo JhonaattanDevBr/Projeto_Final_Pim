@@ -1,4 +1,5 @@
-﻿using FolhaDePagamento;
+﻿using BaseDeDados;
+using FolhaDePagamento;
 using InterfacesDoSistemaDesktop.Intercafes_Folha;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,17 @@ namespace InterfacesDoSistemaDesktop
     public partial class Form_Fgts : Form
     {
         Folha _folha = new Folha();
+        Crud_FolhaDePagamento _crud_FolhaDePagamento = new Crud_FolhaDePagamento();
 
         List<string> dadosRecebidos = new List<string>();
         List<string> dadosParaEnviar = new List<string>();
-        
+        List<string> decimo = new List<string>();
+        List<string> ferias = new List<string>();
+
+
         Thread _t1, _t2;
 
-        public Form_Fgts(List<string> dadosEnviados)
+        public Form_Fgts(List<string> dadosEnviados, List<string> dadosDoDecimo, List<string> dadosDasFerias)
         {
             InitializeComponent();
             dadosRecebidos = dadosEnviados;
@@ -50,6 +55,26 @@ namespace InterfacesDoSistemaDesktop
             dadosParaEnviar.Add(dadosRecebidos[22]); // decimo terceiro
             dadosParaEnviar.Add(dadosRecebidos[23]); // Ferias
             txtSalarioBase.Text = dadosRecebidos[1];
+
+            decimo.Add(dadosDoDecimo[0]);
+            decimo.Add(dadosDoDecimo[1]);
+            decimo.Add(dadosDoDecimo[2]);
+            decimo.Add(dadosDoDecimo[3]);
+
+            ferias.Add(dadosDasFerias[0]);
+            ferias.Add(dadosDasFerias[1]);
+            ferias.Add(dadosDasFerias[2]);
+            ferias.Add(dadosDasFerias[3]);
+            ferias.Add(dadosDasFerias[4]);
+            ferias.Add(dadosDasFerias[5]);
+            ferias.Add(dadosDasFerias[6]);
+            ferias.Add(dadosDasFerias[7]);
+            ferias.Add(dadosDasFerias[8]);
+            ferias.Add(dadosDasFerias[9]);
+            ferias.Add(dadosDasFerias[10]);
+            ferias.Add(dadosDasFerias[11]);
+
+
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -76,44 +101,167 @@ namespace InterfacesDoSistemaDesktop
         {
             List<string> valoresNecesarios = new List<string>();
             List<string> valoresDaFolha = new List<string>();
+            //List<string> idNecessarios = new List<string>();
+            List<string> listaDeId = new List<string>();
+            List<string> listaDecimoFerias = new List<string>();
+            List<string> valoresDecimmoFerias = new List<string>();
+            //List<string> ferias = new List<string>();
 
-            valoresNecesarios.Add(dadosRecebidos[2]); // Adicional
-            valoresNecesarios.Add(dadosRecebidos[4]); // Adc. Not
-            valoresNecesarios.Add(dadosRecebidos[5]); // Periculosidade/Insalubridade
-            valoresNecesarios.Add(dadosRecebidos[6]); // Horas extras
+            List<string> valoresEntrada = new List<string>();
+            List<string> valoresSaida = new List<string>();
+            string faltas = "0";
+
+            valoresEntrada.Add(dadosRecebidos[2]);
+            valoresEntrada.Add(dadosRecebidos[4]);
+            valoresEntrada.Add(dadosRecebidos[5]);
+            valoresEntrada.Add(dadosRecebidos[6]);
+            valoresEntrada.Add(dadosRecebidos[22]);
+            valoresEntrada.Add(dadosRecebidos[23]);
+
+            valoresSaida.Add(dadosRecebidos[7]);
+            valoresSaida.Add(dadosRecebidos[8]);
+            valoresSaida.Add(dadosRecebidos[11]);
+            valoresSaida.Add(dadosRecebidos[14]);
+            valoresSaida.Add(dadosRecebidos[15]);
+            valoresSaida.Add(dadosRecebidos[18]);
+            valoresSaida.Add(dadosRecebidos[19]);
+            valoresSaida.Add(dadosRecebidos[20]);
+            valoresSaida.Add(dadosRecebidos[21]);
+
+            listaDeId.Add(dadosRecebidos[0]); // id funcionario
+            string idConvMedico = dadosRecebidos[9];
+            string[] medico = idConvMedico.Split(' ');
+
+            string idConvOdonto = dadosRecebidos[12];
+            string[] odonto = idConvOdonto.Split(' ');
+
+            listaDeId.Add(medico[0]); // id convenio medico
+            listaDeId.Add(odonto[0]); // id convenio odontologico
+
+            string retornoEntradas = CalcularEntradas(valoresEntrada);
+            string retornoSaidas = CalcularSaidas(valoresSaida);
+
+            string entradas = retornoEntradas, saidas = retornoSaidas;
+            double salarioLiquido = Convert.ToDouble(entradas) - Convert.ToDouble(saidas);
+
+            valoresNecesarios.Add(dadosRecebidos[1]); // Salario
             valoresNecesarios.Add(dadosRecebidos[7]); // Vale transporte
             valoresNecesarios.Add(dadosRecebidos[8]); // Vale alimentação/refeição
-            valoresNecesarios.Add(dadosRecebidos[10]); // nome convenio medico
-            valoresNecesarios.Add(dadosRecebidos[11]); // valor convenio medico
-            valoresNecesarios.Add(dadosRecebidos[14]); // valor convenio odonto
+            valoresNecesarios.Add(dadosRecebidos[2]); // Adicional
+            // aqui eu preciso colocar as horas trabalhas total
+            valoresNecesarios.Add(dadosRecebidos[6]); // Horas extras
+            valoresNecesarios.Add(dadosRecebidos[4]); // Adc. Not
+            valoresNecesarios.Add(dadosRecebidos[5]); // Periculosidade/Insalubridade
             valoresNecesarios.Add(dadosRecebidos[15]); // valor dependentes
-            valoresNecesarios.Add(dadosRecebidos[16]); // Jornada
-            valoresNecesarios.Add(dadosRecebidos[18]); // valor de atraso
-            valoresNecesarios.Add(dadosRecebidos[19]); // valor do INSS
             valoresNecesarios.Add(dadosRecebidos[20]); // valor da pensao
+            valoresNecesarios.Add(dadosRecebidos[18]); // valor de atraso
+            valoresNecesarios.Add(faltas);
+            valoresNecesarios.Add(dadosRecebidos[19]); // valor do INSS
             valoresNecesarios.Add(dadosRecebidos[21]); // valor da IRRF
-            valoresNecesarios.Add(dadosRecebidos[22]); // decimo terceiro
-            valoresNecesarios.Add(dadosRecebidos[23]); // Ferias
             valoresNecesarios.Add(txtRetorno.Text.ToString() + " FGTS");
-
-            //for(int i = 0; i <= 22; i++) { }
-
-            valoresDaFolha.Add(dadosRecebidos[1]);
+            valoresNecesarios.Add(retornoEntradas); // vencimentos
+            valoresNecesarios.Add(retornoSaidas); // descontos
+            valoresNecesarios.Add(salarioLiquido.ToString()); // liquido
 
             foreach (string valores in valoresNecesarios)
             {
                 string[] vtValores = valores.Split(' ');
                 string valor = vtValores[0];
                 valoresDaFolha.Add(valor);
-                //i++;
-
             }
-            MessageBox.Show("Folha de pagamento computada.", "Operação concluida com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            string horas = "220";
+            valoresDaFolha.Add(horas);
+
+            string idEmpresa = _crud_FolhaDePagamento.ColetarIdEmpresaFUnc(dadosRecebidos[0]);
+            listaDeId.Add(idEmpresa);
+
+            bool[] retornoEtapasFolha = new bool[3];
+
+            retornoEtapasFolha[0] = _crud_FolhaDePagamento.InserirDecimoTerceiro(decimo);
+            retornoEtapasFolha[1] = _crud_FolhaDePagamento.ArmazenarFolhaDePagamento(valoresDaFolha, listaDeId);
+            retornoEtapasFolha[2] = _crud_FolhaDePagamento.ArmazenarFerias(ferias, listaDeId);
+
+            if (retornoEtapasFolha[0])
+            {
+                if (retornoEtapasFolha[1])
+                {
+                    if (retornoEtapasFolha[2])
+                    {
+                        MessageBox.Show("Folha de pagamento computada.", "Operação concluida com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                        _t1 = new Thread(SelecionarFuncionarioParaGerarFolha);
+                        _t1.SetApartmentState(ApartmentState.STA);
+                        _t1.Start();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Folha de pagamento não computada. Falha ao computar féria", "Falha na operação!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Folha de pagamento não computada. Falha ao computar folha de pagamento", "Falha na operação!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Folha de pagamento não computada. Falha ao computar décimo Terceiro", "Falha na operação!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void Ferias()
         {
-            Application.Run(new Form_CalculosFerias(dadosRecebidos));
+            Application.Run(new Form_CalculosFerias(dadosRecebidos, decimo));
+        }
+
+        private string CalcularEntradas(List<string> valoresEntrada)
+        {
+            double entradas = 0;
+            foreach (string valores in valoresEntrada)
+            {
+                string[] vtValores = valores.Split(' ');
+                string valor = vtValores[0];
+                double valorFormatado = Convert.ToDouble(valor);
+                entradas += valorFormatado;
+            }
+            return entradas.ToString();
+        }
+
+        private string CalcularSaidas(List<string> valoresSaida)
+        {
+            double saidas = 0;
+            foreach (string valores in valoresSaida)
+            {
+                string[] vtValores = valores.Split(' ');
+                string valor = vtValores[0];
+                double valorFormatado = Convert.ToDouble(valor);
+                saidas += valorFormatado;
+            }
+            return saidas.ToString();
+        }
+
+        private TimeSpan CalcularHoras(List<TimeSpan> tm)
+        {
+            List<TimeSpan> listaTm = new List<TimeSpan>();
+            listaTm = tm;
+            TimeSpan somaTotal = TimeSpan.Zero;
+            foreach (var tempo in listaTm)
+            {
+                somaTotal += tempo;
+            }
+            return somaTotal;
+        }
+
+        private DateTime PegarDiaHoraAtual()
+        {
+            DateTime dataHoraAtual = DateTime.Now;
+            return dataHoraAtual;
+        }
+
+        private void SelecionarFuncionarioParaGerarFolha()
+        {
+            Application.Run(new Form_SelFuncionarioGerarFolha());
         }
     }
 }

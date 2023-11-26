@@ -23,6 +23,7 @@ namespace InterfacesDoSistemaDesktop
         List<string> dadosRecebidos = new List<string>();
         List<string> dadosParaEnviar = new List<string>();
         List<string> dadosConvOdonto = new List<string>();
+        List<string> dadosDecimo = new List<string>();
 
 
         Thread _t1, _t2;
@@ -105,6 +106,7 @@ namespace InterfacesDoSistemaDesktop
         {
             txtRetorno.Clear();
             txtRetorno.Focus();
+            btnAvancar.Enabled = false;
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -114,11 +116,23 @@ namespace InterfacesDoSistemaDesktop
             {
                 retorno = _decimoTerceiro.CalcularPrimeiraParcelaDoDecimoTerceiro(Convert.ToDouble(txtSalarioBase.Text), Convert.ToInt32(txtMesesTrabalhados.Text));
                 txtRetorno.Text = $"{retorno:f2}".ToString();
+                string segundaParcela = "0";
+                dadosDecimo.Add(dadosRecebidos[0]);
+                dadosDecimo.Add(dadosRecebidos[1]);
+                dadosDecimo.Add(txtRetorno.Text.ToString());
+                dadosDecimo.Add(segundaParcela);
+                btnAvancar.Enabled = true;
             }
             else if (rdbSegundaParcela.Checked)
             {
                 retorno = _decimoTerceiro.CalcularSegundaParcelaDoDecimoTerceiro(Convert.ToDouble(txtSalarioBase.Text), Convert.ToInt32(txtMesesTrabalhados.Text), Convert.ToDouble(txtInss.Text), Convert.ToDouble(txtIrrf.Text));
                 txtRetorno.Text = $"{retorno:f2}".ToString();
+                string primeiraParcela = "0";
+                dadosDecimo.Add(dadosRecebidos[0]);
+                dadosDecimo.Add(dadosRecebidos[1]);
+                dadosDecimo.Add(primeiraParcela);
+                dadosDecimo.Add(txtRetorno.Text.ToString());
+                btnAvancar.Enabled = true;
             }
         }
 
@@ -126,11 +140,6 @@ namespace InterfacesDoSistemaDesktop
         {
             DateTime dataHoraAtual = DateTime.Now;
             return dataHoraAtual;
-        }
-
-        private void Ferias()
-        {
-            Application.Run(new Form_CalculosFerias(dadosParaEnviar));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -145,11 +154,19 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
-            dadosParaEnviar.Add(txtRetorno.Text.ToString() +  " décimo terceiro");
-            this.Close();
-            _t1 = new Thread(Ferias);
-            _t1.SetApartmentState(ApartmentState.STA);
-            _t1.Start();
+            if (btnAvancar.Enabled)
+            {
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " décimo terceiro");
+                this.Close();
+                _t1 = new Thread(Ferias);
+                _t1.SetApartmentState(ApartmentState.STA);
+                _t1.Start();
+            }
+        }
+
+        private void Ferias()
+        {
+            Application.Run(new Form_CalculosFerias(dadosParaEnviar, dadosDecimo));
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

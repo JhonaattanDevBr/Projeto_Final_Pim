@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BaseDeDados;
 using BeneficioDasFerias;
 using FolhaDePagamento;
+using Microsoft.Win32;
 
 namespace InterfacesDoSistemaDesktop
 {
@@ -23,11 +24,14 @@ namespace InterfacesDoSistemaDesktop
         List<string> dadosRecebidos = new List<string>();
         List<string> dadosParaEnviar = new List<string>();
         List<string> dadosFerias = new List<string>();
+        List<string> decimo = new List<string>();
+        List<string> ferias = new List<string>();
+        List<string> retornoFerias = new List<string>();
 
         Thread _t1, _t2;
 
 
-        public Form_CalculosFerias(List<string> dadosEnviados)
+        public Form_CalculosFerias(List<string> dadosEnviados, List<string> dadosDoDecimo)
         {
             InitializeComponent();
             dadosRecebidos = dadosEnviados;
@@ -56,14 +60,27 @@ namespace InterfacesDoSistemaDesktop
             dadosParaEnviar.Add(dadosRecebidos[22]); // decimo terceiro
             txtSalarioBase.Text = dadosRecebidos[1];
 
-            dadosFerias = _crud_FolhaDePagamento.ColetarFerias(dadosRecebidos[0]);
-            txtMesPrimeiroPeriodo.Text = dadosFerias[0];
-            txtDiasPrimeiroPeriodo.Text = dadosFerias[1];
-            txtDiasVendidos.Text = dadosFerias[2];
+            decimo.Add(dadosDoDecimo[0]);
+            decimo.Add(dadosDoDecimo[1]);
+            decimo.Add(dadosDoDecimo[2]);
+            decimo.Add(dadosDoDecimo[3]);
 
-            if(txtDiasVendidos.Text != "0")
+            dadosFerias = _crud_FolhaDePagamento.ColetarFerias(dadosRecebidos[0]);
+
+            if (dadosFerias[0] == "O período aquisitivo não foi cumprido, O funcionário ainda não possui o benefício das férias.")
             {
-                btnCalcularAbono.Enabled = true;
+                btnCalcular.Enabled = false; // vou deixar o bota~de calcular bloqueado caso o funcionario nao tenha o beneficio das férias forçando o ususario avançar sem calcular as férias.
+            }
+            else
+            {
+                txtMesPrimeiroPeriodo.Text = dadosFerias[0];
+                txtDiasPrimeiroPeriodo.Text = dadosFerias[1];
+                txtDiasVendidos.Text = dadosFerias[2];
+
+                if (txtDiasVendidos.Text != "0")
+                {
+                    btnCalcularAbono.Enabled = true;
+                }
             }
         }
 
@@ -72,14 +89,46 @@ namespace InterfacesDoSistemaDesktop
             if(btnCalcularAbono.Enabled == true)
             {
                 bool verdadeiro = true;
-                double retorno = Obj_ferias.FormulaCalculoDeFerias(Convert.ToDouble(txtSalarioBase.Text), verdadeiro, Convert.ToInt32(txtDiasVendidos.Text), Convert.ToInt32(txtDiasPrimeiroPeriodo.Text), dadosRecebidos[19], dadosRecebidos[21], dadosRecebidos[20], dadosRecebidos[15]);
-                txtRetorno.Text = retorno.ToString();
+                retornoFerias = Obj_ferias.FormulaCalculoDeFerias(Convert.ToDouble(txtSalarioBase.Text), verdadeiro, Convert.ToInt32(txtDiasVendidos.Text), Convert.ToInt32(txtDiasPrimeiroPeriodo.Text), dadosRecebidos[19], dadosRecebidos[21], dadosRecebidos[20], dadosRecebidos[15]);
+                double valor = Convert.ToDouble(retornoFerias[4]);
+                txtRetorno.Text = $"{valor:f2}";
+
+                string dataRetorno = "01/12/2023";
+                string dataSaida = "10/11/2023";
+                ferias.Add(dadosFerias[1]); // dias tirados
+                ferias.Add(dataSaida); // ddia q sai de ferias
+                ferias.Add(dataRetorno); // retrono das ferias
+                ferias.Add(dadosFerias[2]); // dias vendidos
+                ferias.Add(retornoFerias[0]); // abono
+                ferias.Add(retornoFerias[1]); // um terco abono
+                ferias.Add(retornoFerias[2]); // INSS
+                ferias.Add(retornoFerias[3]); // IRRF
+                ferias.Add(txtRetorno.Text.ToString()); // bruto
+                ferias.Add(retornoFerias[5]); // liquido
+                ferias.Add(dadosRecebidos[0]); // funcionario
+                ferias.Add(dadosFerias[3]); // if agendamento
+                btnAvancar.Enabled = true;
             }
             else
             {
                 bool falso = false;
-                double retorno = Obj_ferias.FormulaCalculoDeFerias(Convert.ToDouble(txtSalarioBase.Text), falso, Convert.ToInt32(txtDiasVendidos.Text), Convert.ToInt32(txtDiasPrimeiroPeriodo.Text), dadosRecebidos[19], dadosRecebidos[21], dadosRecebidos[20], dadosRecebidos[15]);
-                txtRetorno.Text = retorno.ToString();
+                retornoFerias = Obj_ferias.FormulaCalculoDeFerias(Convert.ToDouble(txtSalarioBase.Text), falso, Convert.ToInt32(txtDiasVendidos.Text), Convert.ToInt32(txtDiasPrimeiroPeriodo.Text), dadosRecebidos[19], dadosRecebidos[21], dadosRecebidos[20], dadosRecebidos[15]);
+                txtRetorno.Text = retornoFerias[4];
+
+                string dataRetorno = "01/12/2023";
+                ferias.Add(dadosFerias[1]); // dias tirados
+                ferias.Add(dadosFerias[0]); // ddia q sai de ferias
+                ferias.Add(dataRetorno); // retrono das ferias
+                ferias.Add(dadosFerias[2]); // dias vendidos
+                ferias.Add(retornoFerias[0]); // abono
+                ferias.Add(retornoFerias[1]); // um terco abono
+                ferias.Add(retornoFerias[2]); // INSS
+                ferias.Add(retornoFerias[3]); // IRRF
+                ferias.Add(retornoFerias[4]); // bruto
+                ferias.Add(retornoFerias[5]); // liquido
+                ferias.Add(dadosRecebidos[0]); // funcionario
+                ferias.Add(dadosFerias[3]); // if agendamento
+                btnAvancar.Enabled = true;
             }
             
         }
@@ -88,6 +137,7 @@ namespace InterfacesDoSistemaDesktop
         {
             txtRetorno.Clear();
             txtRetorno.Focus();
+            btnAvancar.Enabled = false;
         }
 
         private void btnCalcularAbono_Click(object sender, EventArgs e)
@@ -108,16 +158,19 @@ namespace InterfacesDoSistemaDesktop
 
         private void btnAvancar_Click(object sender, EventArgs e)
         {
-            dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Férias");
-            this.Close();
-            _t1 = new Thread(Fgts);
-            _t1.SetApartmentState(ApartmentState.STA);
-            _t1.Start();
+            if (btnAvancar.Enabled)
+            {
+                dadosParaEnviar.Add(txtRetorno.Text.ToString() + " Férias");
+                this.Close();
+                _t1 = new Thread(Fgts);
+                _t1.SetApartmentState(ApartmentState.STA);
+                _t1.Start();
+            }
         }
 
         private void Fgts()
         {
-            Application.Run(new Form_Fgts(dadosParaEnviar));
+            Application.Run(new Form_Fgts(dadosParaEnviar, decimo, ferias));
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

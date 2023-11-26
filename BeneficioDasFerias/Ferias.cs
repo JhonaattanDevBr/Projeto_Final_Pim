@@ -23,7 +23,7 @@ namespace BeneficioDasFerias
         private double InssFerias { get; set; }
         private double IrrfFerias { get; set; }
 
-        public double FormulaCalculoDeFerias(double salario, bool venda, int diasVendidos, int dias, string inssFunc, string irrfFunc, string pensaoFunc, string dependenteFunc)
+        public List<string> FormulaCalculoDeFerias(double salario, bool venda, int diasVendidos, int dias, string inssFunc, string irrfFunc, string pensaoFunc, string dependenteFunc)
         {
             double abonoPecuniarioUmTerco, umTercoSalarioBase, salarioBrutoFerias, salarioLiquidoFerias = 0;
 
@@ -41,6 +41,7 @@ namespace BeneficioDasFerias
 
             List<string> dadosInss = new List<string>();
             List<string> dadosIrrf = new List<string>();
+            List<string> valoresFeiras = new List<string>();
 
             try
             {
@@ -65,6 +66,13 @@ namespace BeneficioDasFerias
                     IrrfFerias = Convert.ToDouble(irrf);
 
                     salarioLiquidoFerias = salarioBrutoFerias - inss - irrf;
+
+                    valoresFeiras.Add(AbonoPecuniario.ToString());
+                    valoresFeiras.Add(abonoPecuniarioUmTerco.ToString());
+                    valoresFeiras.Add(diferencaInss.ToString());
+                    valoresFeiras.Add(diferencaIrrf.ToString());
+                    valoresFeiras.Add(salarioBrutoFerias.ToString());
+                    valoresFeiras.Add(salarioLiquidoFerias.ToString());
                 }
                 else if (venda == false)
                 {
@@ -78,11 +86,18 @@ namespace BeneficioDasFerias
 
                     dadosIrrf = folhaPG.FormulaDoIrrf(salarioBrutoFerias, Convert.ToDouble(inss), pensao, dependente);
                     irrf = Convert.ToDouble(dadosIrrf[0]);
-                    IrrfFerias = Convert.ToDouble(irrf); ;
+                    IrrfFerias = Convert.ToDouble(irrf);
 
-                    salarioLiquidoFerias = salarioBrutoFerias - Convert.ToDouble(inss) - Convert.ToDouble(irrf); ;
+                    salarioLiquidoFerias = salarioBrutoFerias - Convert.ToDouble(inss) - Convert.ToDouble(irrf);
+
+                    valoresFeiras.Add("0");
+                    valoresFeiras.Add("0");
+                    valoresFeiras.Add("0");
+                    valoresFeiras.Add("0");
+                    valoresFeiras.Add(salarioBrutoFerias.ToString());
+                    valoresFeiras.Add(salarioLiquidoFerias.ToString());
                 }
-                return salarioLiquidoFerias;
+                return valoresFeiras;
             }
             catch (Exception)
             {

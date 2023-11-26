@@ -22,7 +22,9 @@ namespace InterfacesDoSistemaDesktop
         List<string> dadosRecebidos = new List<string>();
         List<string> dadosParaEnviar = new List<string>();
         List<string> dadosConvOdonto = new List<string>();
-        
+        List<string> dadosDecimo = new List<string>();
+
+
 
         Thread _t1, _t2;
 
@@ -118,6 +120,12 @@ namespace InterfacesDoSistemaDesktop
                                     "exceto esses dois períodos, ele só é pago na existência de férias, " +
                                     "onde é possivel calcular a primeira parcela.", "ATENÇÃO", 
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dadosDecimo.Add("Não possui décimo terceiro");
+                    dadosDecimo.Add("0");
+                    dadosDecimo.Add("0");
+                    dadosDecimo.Add("0");
+
                     this.Close();
                     _t1 = new Thread(Ferias);
                     _t1.SetApartmentState(ApartmentState.STA);
@@ -144,7 +152,7 @@ namespace InterfacesDoSistemaDesktop
 
         private void Ferias()
         {
-            Application.Run(new Form_CalculosFerias(dadosParaEnviar));
+            Application.Run(new Form_CalculosFerias(dadosParaEnviar, dadosDecimo));
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

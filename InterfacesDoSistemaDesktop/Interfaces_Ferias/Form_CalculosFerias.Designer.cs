@@ -95,6 +95,7 @@
             // btnAvancar
             // 
             this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAvancar.Enabled = false;
             this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.btnAvancar.Location = new System.Drawing.Point(758, 313);
