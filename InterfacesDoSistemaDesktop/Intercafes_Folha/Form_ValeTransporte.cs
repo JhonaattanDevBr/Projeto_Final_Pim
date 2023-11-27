@@ -53,27 +53,6 @@ namespace InterfacesDoSistemaDesktop
             txtRetorno.Clear();
         }
 
-        private void txtDias_TextChanged(object sender, EventArgs e)
-        {
-            // Preciso incluir na verificação para quando ele der focus ele altomaticamente retirar os numeros da caixa pois esta quebrando a funcionalidade da caixa.
-            string validacao = txtDias.Text.Trim();
-            if (string.IsNullOrEmpty(validacao))
-            {
-                txtDias.Focus();return;
-            }
-            if(!int.TryParse(validacao, out int dias))
-            {
-                MessageBox.Show("Este campo não aceita letras ou caracteres.", "ATENÇÃO");
-                txtDias.Focus();
-                return;
-            }
-            if(dias > 22)
-            {
-                MessageBox.Show("Este campo não aceita valores acima de 22.", "ATENÇÃO");
-                txtDias.Focus();
-                return;
-            }
-        }
 
         private DateTime PegarDiaHoraAtual()
         {

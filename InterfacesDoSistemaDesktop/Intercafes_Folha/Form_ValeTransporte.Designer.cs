@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ValeTransporte));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAvancar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblPercentual = new System.Windows.Forms.Label();
@@ -39,9 +42,6 @@
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lblDiasUteis = new System.Windows.Forms.Label();
             this.lblSalarioBase = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAvancar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,45 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vale transporte";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnCancelar.Location = new System.Drawing.Point(667, 313);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.TabIndex = 25;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAvancar
+            // 
+            this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnAvancar.Location = new System.Drawing.Point(758, 313);
+            this.btnAvancar.Name = "btnAvancar";
+            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
+            this.btnAvancar.TabIndex = 24;
+            this.btnAvancar.Text = "Avançar";
+            this.btnAvancar.UseVisualStyleBackColor = false;
+            this.btnAvancar.Click += new System.EventHandler(this.btnAvancar_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnVoltar.Location = new System.Drawing.Point(574, 313);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 30);
+            this.btnVoltar.TabIndex = 23;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnLimpar
             // 
@@ -133,7 +172,6 @@
             this.txtDias.ReadOnly = true;
             this.txtDias.Size = new System.Drawing.Size(56, 21);
             this.txtDias.TabIndex = 5;
-            this.txtDias.TextChanged += new System.EventHandler(this.txtDias_TextChanged);
             // 
             // txtSalarioBase
             // 
@@ -166,45 +204,6 @@
             this.lblSalarioBase.Size = new System.Drawing.Size(77, 15);
             this.lblSalarioBase.TabIndex = 0;
             this.lblSalarioBase.Text = "Salario Base";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnCancelar.Location = new System.Drawing.Point(667, 313);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelar.TabIndex = 25;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAvancar
-            // 
-            this.btnAvancar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAvancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.btnAvancar.Location = new System.Drawing.Point(758, 313);
-            this.btnAvancar.Name = "btnAvancar";
-            this.btnAvancar.Size = new System.Drawing.Size(75, 30);
-            this.btnAvancar.TabIndex = 24;
-            this.btnAvancar.Text = "Avançar";
-            this.btnAvancar.UseVisualStyleBackColor = false;
-            this.btnAvancar.Click += new System.EventHandler(this.btnAvancar_Click);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnVoltar.Location = new System.Drawing.Point(574, 313);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 30);
-            this.btnVoltar.TabIndex = 23;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // Form_ValeTransporte
             // 
